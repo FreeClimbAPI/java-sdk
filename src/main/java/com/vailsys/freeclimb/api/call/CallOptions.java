@@ -6,7 +6,7 @@ package com.vailsys.freeclimb.api.call;
  * The class represents the common optional fields which can be passed in when
  * creating a Call.
  *
- * @see com.vailsys.freeclimb.api.call.CallsRequester#create(String,String,String,CallOptions)
+ * @see com.vailsys.freeclimb.api.call.CallsRequester#create(String,String,CallOptions)
  */
 public class CallOptions {
 	/**
@@ -42,6 +42,12 @@ public class CallOptions {
 	 * callConnectUrl originally assigned in the application or parent call.
 	 */
 	private String callConnectUrl;
+	/**
+	 * The {@code applicationId} for the registered FreeClimb application
+	 * which should handle this call. Required if no `parentCallId` or
+	 * `callConnectUrl` has been provided.
+	 */
+	private String applicationId;
 
 	/**
 	 * Create an empty {@code CallOptions} object. Set only values that are desired
@@ -54,6 +60,7 @@ public class CallOptions {
 		parentCallId = null;
 		privacyMode = null;
 		callConnectUrl = null;
+		applicationId = null;
 	}
 
 	/**
@@ -109,7 +116,16 @@ public class CallOptions {
 	public void setCallConnectUrl(String callConnectUrl) {
 		this.callConnectUrl = callConnectUrl;
 	}
-	
+
+	/**
+	 * Sets the applicationId field.
+	 * 
+	 * @param applicationId Value to set applicationId.
+	 */
+	public void setApplicationId(String applicationId) {
+		this.applicationId = applicationId;
+	}
+
 	/**
 	 * Retrieve the sendDigits value.
 	 * 
@@ -166,4 +182,12 @@ public class CallOptions {
 		return this.callConnectUrl;
 	}
 
+	/**
+	 * Retrieve the applicationId value.
+	 * 
+	 * @return The applicationId value of the object.
+	 */
+	public String getApplicationId() {
+		return this.applicationId;
+	}
 }
