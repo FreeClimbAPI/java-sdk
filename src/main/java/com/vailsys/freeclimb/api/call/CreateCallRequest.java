@@ -16,11 +16,13 @@ import java.util.Map;
 class CreateCallRequest {
 	public String to;
 	public String from;
+
 	public String applicationId;
+
 	public CallOptions options;
 
 	/**
-	 * Setup a new call creation payload.
+	 * Setup a new call creation payload using an applicationId.
 	 *
 	 * @param to            The number to call out to (DNIS). This can be any valid
 	 *                      phone number formatted in E.164 format.
