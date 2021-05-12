@@ -27,8 +27,7 @@ public class CallOptions {
 	 */
 	private Integer timeout;
 	/**
-	 * The callId of the call that created this call (if one exists). Required if no
-	 * `applicationId` or `callConnectUrl` has been provided.
+	 * The callId of the call that created this call (if one exists).
 	 */
 	private String parentCallId;
 	/**
