@@ -14,7 +14,6 @@ public class CreateCallRequestTest {
 
 	String applicationId = null;
 
-
 	CallOptions options = null;
 	String sendDigits = null;
 	IfMachine ifMachine = null;
