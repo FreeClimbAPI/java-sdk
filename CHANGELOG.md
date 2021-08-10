@@ -6,7 +6,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 None
-
+<a name="4.1.2"</a>
+## [3.0.2] 2021-8-3
+### Added
+- 4 new properties for GetSpeechActionCallback
 <a name="4.1.1"></a>
 ## [4.1.1] - 2021-05-11
 ### Added

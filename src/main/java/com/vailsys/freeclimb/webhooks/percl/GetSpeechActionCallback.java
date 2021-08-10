@@ -13,6 +13,10 @@ public class GetSpeechActionCallback extends VoiceRequest {
     private SpeechReason reason;
     private String recognitionResult;
     private Integer confidence;
+    private String completionReason;
+    private String completionCause;
+    private Integer mrcpCode;
+    private String mrcpDiagnostic; 
 
     private GetSpeechActionCallback() {
     }
@@ -35,5 +39,21 @@ public class GetSpeechActionCallback extends VoiceRequest {
 
     public Integer getConfidence() {
         return confidence;
+    }
+
+    public String getCompletionReason() {
+        return completionReason;
+    }
+
+    public String getCompletionCause() {
+        return completionCause;
+    }
+
+    public Integer getMrcpCode() {
+        return mrcpCode;
+    }
+
+    public String getMrcpDiagnostic() {
+        return mrcpDiagnostic;
     }
 }
