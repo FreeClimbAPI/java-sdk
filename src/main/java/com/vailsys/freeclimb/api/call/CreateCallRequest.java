@@ -19,6 +19,8 @@ class CreateCallRequest {
 
 	public String applicationId;
 
+	public String callConnectURL;
+
 	public CallOptions options;
 
 	/**
@@ -31,13 +33,15 @@ class CreateCallRequest {
 	 *                      by the user.
 	 * @param applicationId The {@code applicationId} for the registered FreeClimb
 	 *                      application which should handle this call.
+	 * @param callConnectUrl URL that FreeClimb will request when an outbound call request is complete. 
 	 * @param options       Optional arguments that can be provided when creating a
 	 *                      call. See FreeClimb documentation for details.
 	 */
-	public CreateCallRequest(String to, String from, String applicationId, CallOptions options) {
+	public CreateCallRequest(String to, String from, String applicationId, String callConnectUrl, CallOptions options) {
 		this.to = to;
 		this.from = from;
 		this.applicationId = applicationId;
+		this.callConnectUrl = callConnectUrl;
 		this.options = options;
 	}
 
