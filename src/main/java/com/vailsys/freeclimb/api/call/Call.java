@@ -53,6 +53,10 @@ public class Call extends FreeClimbCommon {
 	 */
 	private String phoneNumberId;
 	/**
+	 * Additional paramter to support queries of active or terminated calls.
+	 */
+	private boolean active;
+	/**
 	 * This represents the current status or state of this call.
 	 * 
 	 * @see com.vailsys.freeclimb.api.call.CallStatus
@@ -165,6 +169,15 @@ public class Call extends FreeClimbCommon {
 	 */
 	public String getPhoneNumberId() {
 		return this.phoneNumberId;
+	}
+
+	/**
+	 * Retrieve the value of the active filter
+	 *
+	 * @return whether the call was active or not
+	 */
+	public String getActive() {
+		return this.active;
 	}
 
 	/**
@@ -325,6 +338,12 @@ public class Call extends FreeClimbCommon {
 			result = result && this.status.equals(that.status);
 		} else {
 			result = result && that.status == null;
+		}
+
+		if (this.active != null) {
+			result = result && this.active.equals(that.active);
+		} else {
+			result = result && that.active == null;
 		}
 
 		if (this.startTime != null) {
