@@ -9,7 +9,7 @@ None
 <a name="4.1.3"</a>
 ## [3.0.3] 2021-11-3
 ### Added
-- 1 new property for CallSearchFilters and Call
+- 1 new property `active` for CallSearchFilters and Call
 <a name="4.1.2"</a>
 ## [3.0.2] 2021-8-3
 ### Added
