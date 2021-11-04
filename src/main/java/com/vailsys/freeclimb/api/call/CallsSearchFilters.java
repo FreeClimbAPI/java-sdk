@@ -43,6 +43,10 @@ public class CallsSearchFilters extends Filters {
 	 * The callId of the call that spawned this one.
 	 */
 	private String parentCallId;
+	/**
+	 * Additional paramter to support queries of active or terminated calls.
+	 */
+	private boolean active;
 
 	/**
 	 * Retrieve the value of the to (DNIS) filter.
@@ -130,6 +134,15 @@ public class CallsSearchFilters extends Filters {
 	}
 
 	/**
+	 * Retrieve the value of the active filter
+	 *
+	 * @return whether the call was active or not
+	 */
+	public String getActive() {
+		return this.active;
+	}
+
+	/**
 	 * Set this to filter for calls that are to the provided number (search by
 	 * DNIS).
 	 * 
@@ -203,5 +216,14 @@ public class CallsSearchFilters extends Filters {
 	 */
 	public void setParentCallId(String parentCallId) {
 		this.parentCallId = parentCallId;
+	}
+
+	/**
+	 * Set the active filter to support queries of active or terminated calls
+	 *
+	 * @param active whether the call was active or not
+	 */
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 }
