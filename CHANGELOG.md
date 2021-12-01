@@ -6,6 +6,19 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 None
+
+<a name="4.1.4"></a>
+
+## [4.1.4] 2021-11-29
+
+### Added
+- properties `country`, `region`, `smsEnabled`, `voiceEnabled` to `AvailablePhoneNumberSearchFilters`
+- properties `applicationId`, `country`, `region`, `smsEnabled`, `voiceEnabled`, `hasApplication` to `IncomingPhoneNumberSearchFilters`
+
+### Removed
+- property `alias` of `AvailablePhoneNumberSearchFilters`
+
+
 <a name="4.1.3"</a>
 ## [4.1.3] 2021-11-3
 ### Added
