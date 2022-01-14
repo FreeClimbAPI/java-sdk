@@ -50,8 +50,6 @@ public class AvailablePhoneNumber extends PhoneNumber {
      * @throws FreeClimbJSONException when the JSON is not valid.
      */
     public static AvailablePhoneNumber fromJson(String json) throws FreeClimbJSONException {
-        System.out.println("__PARSING AVAILABLE NUMBER__");
-        System.out.println(json);
         try {
             return gson.fromJson(json, AvailablePhoneNumber.class);
         } catch (JsonSyntaxException jse) {
