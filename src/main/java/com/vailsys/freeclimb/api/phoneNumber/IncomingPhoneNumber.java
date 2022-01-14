@@ -16,6 +16,18 @@ import static com.vailsys.freeclimb.json.FreeClimbGson.gson;
  */
 public class IncomingPhoneNumber extends PhoneNumber {
     /**
+     * The campaignId of this phone number.
+     */
+    private String campaignId;
+    /**
+     * The provider of this phone number.
+     */
+    private String provider;
+    /**
+     * The capabilities of this phone number.
+     */
+    private PhoneNumberCapabilities capabilities;
+    /**
      * The phoneNumberId for this incoming phone number instance.
      */
     private String phoneNumberId;
@@ -35,14 +47,6 @@ public class IncomingPhoneNumber extends PhoneNumber {
      * The country of this incoming phone number.
      */
     private String country;
-    /**
-     * Whether or not voice is enabled for this incoming phone number.
-     */
-    private boolean voiceEnabled;
-    /**
-     * Whether or not sms is enabled for this incoming phone number.
-     */
-    private boolean smsEnabled;
 
     /**
      * Converts the provided JSON string into an Incoming Phone Number object.
@@ -107,23 +111,30 @@ public class IncomingPhoneNumber extends PhoneNumber {
     }
 
     /**
-     * Retrieve the voiceEnabled setting for this incoming phone number from the
-     * object.
-     *
-     * @return Whether or not voice is enabled for this incoming phone number.
+     * Retrieve the capabilities of the phone number.
+     * 
+     * @return The capabilities of this AvailablePhoneNumber.
      */
-    public boolean isVoiceEnabled() {
-        return voiceEnabled;
+    public PhoneNumberCapabilities getCapabilities() {
+        return capabilities;
     }
 
     /**
-     * Retrieve the smsEnabled setting for this incoming phone number from the
-     * object.
-     *
-     * @return Whether or not sms is enabled for this incoming phone number.
+     * Retrieve the campaignId of the phone number.
+     * 
+     * @return The campaignId of this AvailablePhoneNumber.
      */
-    public boolean isSmsEnabled() {
-        return smsEnabled;
+    public String getCampaignId() {
+        return campaignId;
+    }
+
+    /**
+     * Retrieve the provider of the phone number.
+     * 
+     * @return The provider of this AvailablePhoneNumber.
+     */
+    public String getProvider() {
+        return provider;
     }
 
     /**
@@ -167,8 +178,21 @@ public class IncomingPhoneNumber extends PhoneNumber {
             result = result && that.getCountry() == null;
         }
 
-        result = result && (that.isVoiceEnabled() == this.isVoiceEnabled());
-        result = result && (that.isSmsEnabled() == this.isSmsEnabled());
+        if (this.getProvider() != null) {
+            result = result && that.getProvider().equals(this.getProvider());
+        } else {
+            result = result && that.getProvider() == null;
+        }
+        if (this.getCampaignId() != null) {
+            result = result && that.getCampaignId().equals(this.getCampaignId());
+        } else {
+            result = result && that.getCampaignId() == null;
+        }
+        if (this.getCapabilities() != null) {
+            result = result && that.getCapabilities().equals(this.getCapabilities());
+        } else {
+            result = result && that.getCapabilities() == null;
+        }
 
         return result;
     }

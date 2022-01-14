@@ -20,13 +20,22 @@ public class AvailablePhoneNumberSearchFilters extends Filters {
      */
     private String region;
     /**
-     * Indication of whether the phone number can handle sending and receiving SMS messages.
+     * Campaign ID of the this phone number.
      */
-    private boolean smsEnabled;
+    private String campaignId;
     /**
-     * Indicates whether the phone number can handle calls.
+     * Provider of this phone number.
      */
-    private boolean voiceEnabled;
+    private String provider;
+    /**
+     * Capabilities of this phone number.
+     */
+    private PhoneNumberCapabilities capabilities;
+    /**
+     * Alias of this phone number.
+     */
+    private String alias;
+
 
     /**
      * Retrieve the value of the phoneNumber filter.
@@ -62,7 +71,7 @@ public class AvailablePhoneNumberSearchFilters extends Filters {
      * @param country The value of country to set
      */
     public void setCountry(String country) {
-        this.country = country
+        this.country = country;
     }
 
     /**
@@ -71,7 +80,7 @@ public class AvailablePhoneNumberSearchFilters extends Filters {
      * @return the region filter value
      */
     public String getRegion() {
-        return region
+        return region;
     }
 
     /**
@@ -80,42 +89,78 @@ public class AvailablePhoneNumberSearchFilters extends Filters {
      * @param region The value of region to set
      */
     public void setRegion(String region) {
-        this.region = region
+        this.region = region;
     }
 
     /**
-     * Retrieve the value of the smsEnabled filter
+     * Retrieve the capabilities of the phone number.
      * 
-     * @return the smsEnabled filter value
+     * @return The capabilities of this AvailablePhoneNumber.
      */
-    public boolean getSmsEnabled() {
-        return smsEnabled
+    public PhoneNumberCapabilities getCapabilities() {
+        return capabilities;
     }
 
     /**
-     * Set the smsEnabled filter for available phone numbers.
+     * Set the capabilities filter for available phone numbers.
      * 
-     * @param smsEnabled The value of smsEnabled to set
+     * @param capabilities The value of capabilities to set
      */
-    public void setSmsEnabled(boolean smsEnabled) {
-        this.smsEnabled = smsEnabled
+    public void setCapabilities(PhoneNumberCapabilities capabilities) {
+        this.capabilities = capabilities;
     }
 
     /**
-     * Retrieve the value of the voiceEnabled filter
+     * Retrieve the campaignId of the phone number.
      * 
-     * @return the voiceEnabled filter value
+     * @return The campaignId of this AvailablePhoneNumber.
      */
-    public boolean getVoiceEnabled() {
-        return voiceEnabled
+    public String getCampaignId() {
+        return campaignId;
     }
 
     /**
-     * Set the voiceEnabled filter for available phone numbers.
+     * Set the campaignId filter for available phone numbers.
      * 
-     * @param voiceEnabled The value of voiceEnabled to set
+     * @param campaignId The value of campaignId to set
      */
-    public void setVoiceEnabled(boolean voiceEnabled) {
-        this.voiceEnabled = voiceEnabled
+    public void setCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    /**
+     * Retrieve the provider of the phone number.
+     * 
+     * @return The provider of this AvailablePhoneNumber.
+     */
+    public String getProvider() {
+        return provider;
+    }
+
+    /**
+     * Set the provider filter for available phone numbers.
+     * 
+     * @param provider The value of provider to set
+     */
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    /**
+     * Retrieve the alias of the phone number.
+     * 
+     * @return The alias of this AvailablePhoneNumber.
+     */
+    public String getAlias() {
+        return alias;
+    }
+
+    /**
+     * Set the alias filter for available phone numbers.
+     * 
+     * @param alias The value of alias to set
+     */
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 }

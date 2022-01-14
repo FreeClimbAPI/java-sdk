@@ -30,13 +30,17 @@ public class IncomingPhoneNumberSearchFilters extends Filters {
      */
     private String region;
     /**
-     * Indication of whether the phone number can handle sending and receiving SMS messages.
+     * Campaign ID of the this phone number.
      */
-    private boolean smsEnabled;
+    private String campaignId;
     /**
-     * Indicates whether the phone number can handle calls.
+     * Provider of this phone number.
      */
-    private boolean voiceEnabled;
+    private String provider;
+    /**
+     * Capabilities of this phone number.
+     */
+    private PhoneNumberCapabilities capabilities;
     /**
      * Indicates whether the phone number is associated with an application.
      */
@@ -131,40 +135,59 @@ public class IncomingPhoneNumberSearchFilters extends Filters {
     public void setRegion(String region) {
         this.region = region;
     }
+
     /**
-     * Retrieve the value of the smsEnabled filter.
+     * Retrieve the capabilities of the phone number.
      * 
-     * @return The value of the smsEnabled filter.
+     * @return The capabilities of this AvailablePhoneNumber.
      */
-    public boolean getSmsEnabled() {
-        return smsEnabled;
+    public PhoneNumberCapabilities getCapabilities() {
+        return capabilities;
     }
 
     /**
-     * Set the smsEnabled filter for incoming phone numbers.
+     * Set the capabilities filter for available phone numbers.
      * 
-     * @param smsEnabled The value of smsEnabled to filter by.
+     * @param capabilities The value of capabilities to set
      */
-    public void setSmsEnabled(boolean smsEnabled) {
-        this.smsEnabled = smsEnabled;
+    public void setCapabilities(PhoneNumberCapabilities capabilities) {
+        this.capabilities = capabilities;
     }
 
     /**
-     * Retrieve the value of the voiceEnabled filter.
+     * Retrieve the campaignId of the phone number.
      * 
-     * @return The value of the voiceEnabled filter.
+     * @return The campaignId of this AvailablePhoneNumber.
      */
-    public boolean getVoiceEnabled() {
-        return voiceEnabled;
+    public String getCampaignId() {
+        return campaignId;
     }
 
     /**
-     * Set the voiceEnabled filter for incoming phone numbers.
+     * Set the campaignId filter for available phone numbers.
      * 
-     * @param voiceEnabled The value of voiceEnabled to filter by.
+     * @param campaignId The value of campaignId to set
      */
-    public void setVoiceEnabled(boolean voiceEnabled) {
-        this.voiceEnabled = voiceEnabled;
+    public void setCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    /**
+     * Retrieve the provider of the phone number.
+     * 
+     * @return The provider of this AvailablePhoneNumber.
+     */
+    public String getProvider() {
+        return provider;
+    }
+
+    /**
+     * Set the provider filter for available phone numbers.
+     * 
+     * @param provider The value of provider to set
+     */
+    public void setProvider(String provider) {
+        this.provider = provider;
     }
 
     /**
