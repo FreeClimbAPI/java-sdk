@@ -7,6 +7,22 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 None
 
+<a name="4.1.5"></a>
+
+## [4.1.5] 2022-01-18
+### Changed
+- Fixed typos and build errors
+### Added
+- Add `capabilities`, `campaignId`, and `provider` to `ListIncomingNumbersFilters` interface
+- Add `capabilities`, `campaignId`, and `provider` to `ListAvailableNumbersFilters` interface
+- Add `capabilities`, `campaignId`, and `provider` to `AvailableNumber` interface
+- Add `capabilities`, `campaignId`, and `provider` to `IncomingNumber` interface
+### Removed
+- Remove `smsEnabled` and `voiceEnabled` from `ListAvailableNumbersFilters` interface
+- Remove `smsEnabled` and `voiceEnabled` from `ListIncomingNumbersFilters` interface
+- Remove `smsEnabled` and `voiceEnabled` from `AvailableNumber` interface
+- Remove `smsEnabled` and `voiceEnabled` from `IncomingNumber` interface
+
 <a name="4.1.4"></a>
 
 ## [4.1.4] 2021-11-29
