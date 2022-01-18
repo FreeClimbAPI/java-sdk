@@ -21,13 +21,17 @@ import static com.vailsys.freeclimb.json.FreeClimbGson.gson;
  */
 public class AvailablePhoneNumber extends PhoneNumber {
     /**
-     * The voiceEnabled setting for this phone number.
+     * The campaignId of this phone number.
      */
-    private boolean voiceEnabled;
+    private String campaignId;
     /**
-     * The smsEnabled setting for this phone number.
+     * The provider of this phone number.
      */
-    private boolean smsEnabled;
+    private String provider;
+    /**
+     * The capabilities of this phone number.
+     */
+    private PhoneNumberCapabilities capabilities;
     /**
      * The region of this phone number.
      */
@@ -54,21 +58,30 @@ public class AvailablePhoneNumber extends PhoneNumber {
     }
 
     /**
-     * Retrieve the voiceEnabled setting from the object.
-     *
-     * @return The voiceEnabled for this AvailablePhoneNumber.
+     * Retrieve the capabilities of the phone number.
+     * 
+     * @return The capabilities of this AvailablePhoneNumber.
      */
-    public boolean isVoiceEnabled() {
-        return voiceEnabled;
+    public PhoneNumberCapabilities getCapabilities() {
+        return capabilities;
     }
 
     /**
-     * Retrieve the smsEnabled setting from the object.
-     *
-     * @return The smsEnabled for this AvailablePhoneNumber.
+     * Retrieve the campaignId of the phone number.
+     * 
+     * @return The campaignId of this AvailablePhoneNumber.
      */
-    public boolean isSmsEnabled() {
-        return smsEnabled;
+    public String getCampaignId() {
+        return campaignId;
+    }
+
+    /**
+     * Retrieve the provider of the phone number.
+     * 
+     * @return The provider of this AvailablePhoneNumber.
+     */
+    public String getProvider() {
+        return provider;
     }
 
     /**
@@ -99,14 +112,26 @@ public class AvailablePhoneNumber extends PhoneNumber {
      */
     public boolean equals(AvailablePhoneNumber that) {
         boolean result = super.equals(that);
-        result = result && (this.isVoiceEnabled() == that.isVoiceEnabled());
-        result = result && (this.isSmsEnabled() == that.isSmsEnabled());
+        if (this.getProvider() != null) {
+            result = result && that.getProvider().equals(this.getProvider());
+        } else {
+            result = result && that.getProvider() == null;
+        }
+        if (this.getCampaignId() != null) {
+            result = result && that.getCampaignId().equals(this.getCampaignId());
+        } else {
+            result = result && that.getCampaignId() == null;
+        }
+        if (this.getCapabilities() != null) {
+            result = result && that.getCapabilities().equals(this.getCapabilities());
+        } else {
+            result = result && that.getCapabilities() == null;
+        }
         if (this.getRegion() != null) {
             result = result && that.getRegion().equals(this.getRegion());
         } else {
             result = result && that.getRegion() == null;
         }
-
         if (this.getCountry() != null) {
             result = result && that.getCountry().equals(this.getCountry());
         } else {

@@ -46,7 +46,7 @@ public class CallsSearchFilters extends Filters {
 	/**
 	 * Additional paramter to support queries of active or terminated calls.
 	 */
-	private boolean active;
+	private Boolean active;
 
 	/**
 	 * Retrieve the value of the to (DNIS) filter.
@@ -138,7 +138,7 @@ public class CallsSearchFilters extends Filters {
 	 *
 	 * @return whether the call was active or not
 	 */
-	public String getActive() {
+	public Boolean getActive() {
 		return this.active;
 	}
 

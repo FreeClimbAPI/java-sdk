@@ -55,7 +55,7 @@ public class Call extends FreeClimbCommon {
 	/**
 	 * Additional paramter to support queries of active or terminated calls.
 	 */
-	private boolean active;
+	private Boolean active;
 	/**
 	 * This represents the current status or state of this call.
 	 * 
@@ -176,7 +176,7 @@ public class Call extends FreeClimbCommon {
 	 *
 	 * @return whether the call was active or not
 	 */
-	public String getActive() {
+	public Boolean getActive() {
 		return this.active;
 	}
 
