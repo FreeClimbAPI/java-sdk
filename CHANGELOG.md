@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 None
 
+<a name="5.0.0"></a>
+
+## [5.0.0] 2022-10-27
+### Changed
+- Java SDK no longer hand written - generated from openapi spec
+
 <a name="4.1.5"></a>
 
 ## [4.1.5] 2022-01-18

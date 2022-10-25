@@ -1,24 +1,21 @@
-.gradle
-build/
-out/
+*.class
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# Package Files #
+*.jar
+*.war
+*.ear
 
-# Cache of project
-.gradletasknamecache
+# exclude jar for gradle wrapper
+!gradle/wrapper/*.jar
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
+# build files
+**/target
 target
-/.idea/
-**.iml
-.project
-.settings/
-.DS_Store
-/.DS_Store
-/.vscode
+.gradle
+build
