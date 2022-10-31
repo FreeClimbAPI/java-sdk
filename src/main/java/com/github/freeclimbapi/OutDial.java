@@ -60,7 +60,7 @@ import java.util.concurrent.Callable;
  * The OutDial command is used to call a phone number
  */
 @ApiModel(description = "The OutDial command is used to call a phone number")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T17:12:48.532-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
 public class OutDial extends PerclCommand {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)

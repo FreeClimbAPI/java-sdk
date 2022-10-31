@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;RecordUtterance&#x60; command records the caller&#39;s voice and returns the URL of a file containing the audio recording. &#x60;RecordUtterance&#x60; is blocking and is a terminal command. As such, the &#x60;actionUrl&#x60; property is required, and control of the Call picks up using the PerCL returned in response to the &#x60;actionUrl&#x60;. Recording information is returned in the &#x60;actionUrl&#x60; request.
  */
 @ApiModel(description = "The `RecordUtterance` command records the caller's voice and returns the URL of a file containing the audio recording. `RecordUtterance` is blocking and is a terminal command. As such, the `actionUrl` property is required, and control of the Call picks up using the PerCL returned in response to the `actionUrl`. Recording information is returned in the `actionUrl` request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T17:12:48.532-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
 public class RecordUtterance extends PerclCommand {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
