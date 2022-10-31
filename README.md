@@ -2,7 +2,7 @@
 
 FreeClimb API
 - API version: 1.0.0
-  - Build date: 2022-10-28T17:12:48.532-05:00[America/Chicago]
+  - Build date: 2022-10-31T13:04:20.214-05:00[America/Chicago]
 
 FreeClimb is a cloud-based application programming interface (API) that puts the power of the Vail platform in your hands. FreeClimb simplifies the process of creating applications that can use a full range of telephony features without requiring specialized or on-site telephony equipment. Using the FreeClimb REST API to write applications is easy! You have the option to use the language of your choice or hit the API directly. Your application can execute a command by issuing a RESTful request to the FreeClimb API. The base URL to send HTTP requests to the FreeClimb REST API is: /apiserver. FreeClimb authenticates and processes your request.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.0.0</version>
+  <version>5.0.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.0.0"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.0.1"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.0.0.jar`
+* `target/freeclimb-java-client-5.0.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -124,15 +124,12 @@ PerCL commands are a part of the model schema and can be serialized into JSON li
 
 ```typescript
 import com.github.freeclimbapi.*;
-
-
 public class Example {
   public static void main(String[] args) {
     Say say = new Say().text("Hello FreeClimb!");
     Play play = new Play().file("Example File");
     GetDigits getDigits = new GetDigits().actionUrl("Example Action URL").addPromptsItem(say).addPromptsItem(play);
     PerclScript script = new PerclScript().addCommand(getDigits);
-
     JSON jsonObj = script.build(); // builds the list of PerclCommands needed for the response
     // or
     String jsonStr = script.toJson(); // similar to .build() but returns the serialized string for you.

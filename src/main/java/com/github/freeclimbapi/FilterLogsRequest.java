@@ -32,7 +32,7 @@ import java.util.concurrent.Callable;
 /**
  * FilterLogsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T17:12:48.532-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
 public class FilterLogsRequest {
   public static final String SERIALIZED_NAME_PQL = "pql";
   @SerializedName(SERIALIZED_NAME_PQL)

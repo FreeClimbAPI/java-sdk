@@ -62,7 +62,7 @@ import java.util.concurrent.Callable;
  * The &#x60;GetSpeech&#x60; command enables the Caller to respond to the application using a supported language. Unlike DTMF entry, which implicitly restricts the user to using the available buttons on the phone key pad, speech input allows for flexible audio inputs based on grammar. FreeClimb supports grammars written using GRXML compatible with the Microsoft Speech Platform. &#x60;GetSpeech&#x60; is only supported on a single call leg. It is not supported when there are two or more call legs connected (as in within a Conference).
  */
 @ApiModel(description = "The `GetSpeech` command enables the Caller to respond to the application using a supported language. Unlike DTMF entry, which implicitly restricts the user to using the available buttons on the phone key pad, speech input allows for flexible audio inputs based on grammar. FreeClimb supports grammars written using GRXML compatible with the Microsoft Speech Platform. `GetSpeech` is only supported on a single call leg. It is not supported when there are two or more call legs connected (as in within a Conference).")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T17:12:48.532-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
 public class GetSpeech extends PerclCommand {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)

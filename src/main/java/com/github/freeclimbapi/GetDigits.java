@@ -61,7 +61,7 @@ import java.util.concurrent.Callable;
  * The &#x60;GetDigits&#x60; command collects DTMF inputs from the caller. It is only supported only when there is a single party on the Call. &#x60;GetDigits&#x60; is a Terminal Command — any actions following it are never executed. When the Caller is done entering the digits, FreeClimb submits that data to the provided &#x60;actionUrl&#x60; using an HTTP POST request. Your server will be required to respond to the FreeClimb Webhook with PerCL to continue handling the call.
  */
 @ApiModel(description = "The `GetDigits` command collects DTMF inputs from the caller. It is only supported only when there is a single party on the Call. `GetDigits` is a Terminal Command — any actions following it are never executed. When the Caller is done entering the digits, FreeClimb submits that data to the provided `actionUrl` using an HTTP POST request. Your server will be required to respond to the FreeClimb Webhook with PerCL to continue handling the call.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T17:12:48.532-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
 public class GetDigits extends PerclCommand {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
