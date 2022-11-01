@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.0.1</version>
+  <version>5.0.2</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.0.1"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.0.2"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.0.1.jar`
+* `target/freeclimb-java-client-5.0.2.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

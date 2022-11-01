@@ -7,6 +7,19 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 None
 
+<a name="5.0.2"></a>
+
+## [5.0.2] 2022-11-01
+### Added
+- Add `offnet` property in IncomingNumber resource
+- Add `offnet` query parameter for listIncomingNumbers
+
+<a name="5.0.1"></a>
+
+## [5.0.1] 2022-10-31
+### Changed
+- Updated gson dependency due to security issues
+
 <a name="5.0.0"></a>
 
 ## [5.0.0] 2022-10-27
