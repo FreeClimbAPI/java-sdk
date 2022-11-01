@@ -2177,7 +2177,7 @@ Name | Type | Description  | Notes
 
 <a name="listIncomingNumbers"></a>
 # **listIncomingNumbers**
-> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode)
+> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet)
 
 List Incoming Numbers
 
@@ -2229,8 +2229,10 @@ public class Example {
     
     Boolean capabilitiesShortCode = true; // Boolean | 
     
+    Boolean offnet = true; // Boolean | Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource.
+    
     try {
-      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listIncomingNumbers");
@@ -2260,6 +2262,7 @@ Name | Type | Description  | Notes
  **capabilitiesTollFree** | **Boolean**|  | [optional]
  **capabilitiesTenDLC** | **Boolean**|  | [optional]
  **capabilitiesShortCode** | **Boolean**|  | [optional]
+ **offnet** | **Boolean**| Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. | [optional]
 
 
 ### Return type

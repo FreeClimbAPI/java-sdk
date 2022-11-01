@@ -98,6 +98,10 @@ public class IncomingNumberResult {
   @SerializedName(SERIALIZED_NAME_SMS_ENABLED)
   private Boolean smsEnabled;
 
+  public static final String SERIALIZED_NAME_OFFNET = "offnet";
+  @SerializedName(SERIALIZED_NAME_OFFNET)
+  private Boolean offnet;
+
   public IncomingNumberResult() { 
   }
 
@@ -450,6 +454,29 @@ public class IncomingNumberResult {
   }
 
 
+  public IncomingNumberResult offnet(Boolean offnet) {
+    
+    this.offnet = offnet;
+    return this;
+  }
+
+   /**
+   * The offnet field is a boolean representing whether the number is offnet registered or not. This field will be rendered only for requests to the IncomingPhone number resource.
+   * @return offnet
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The offnet field is a boolean representing whether the number is offnet registered or not. This field will be rendered only for requests to the IncomingPhone number resource.")
+
+  public Boolean getOffnet() {
+    return offnet;
+  }
+
+
+  public void setOffnet(Boolean offnet) {
+    this.offnet = offnet;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -473,7 +500,8 @@ public class IncomingNumberResult {
         Objects.equals(this.region, incomingNumberResult.region) &&
         Objects.equals(this.country, incomingNumberResult.country) &&
         Objects.equals(this.voiceEnabled, incomingNumberResult.voiceEnabled) &&
-        Objects.equals(this.smsEnabled, incomingNumberResult.smsEnabled);
+        Objects.equals(this.smsEnabled, incomingNumberResult.smsEnabled) &&
+        Objects.equals(this.offnet, incomingNumberResult.offnet);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -482,7 +510,7 @@ public class IncomingNumberResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, capabilities, campaignId, phoneNumberId, accountId, applicationId, phoneNumber, alias, region, country, voiceEnabled, smsEnabled);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, capabilities, campaignId, phoneNumberId, accountId, applicationId, phoneNumber, alias, region, country, voiceEnabled, smsEnabled, offnet);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -511,6 +539,7 @@ public class IncomingNumberResult {
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    voiceEnabled: ").append(toIndentedString(voiceEnabled)).append("\n");
     sb.append("    smsEnabled: ").append(toIndentedString(smsEnabled)).append("\n");
+    sb.append("    offnet: ").append(toIndentedString(offnet)).append("\n");
     sb.append("}");
     return sb.toString();
   }

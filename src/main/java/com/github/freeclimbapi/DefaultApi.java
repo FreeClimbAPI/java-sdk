@@ -4111,6 +4111,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4120,7 +4121,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listIncomingNumbersCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listIncomingNumbersCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -4199,6 +4200,10 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.shortCode", capabilitiesShortCode));
         }
 
+        if (offnet != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offnet", offnet));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -4220,10 +4225,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listIncomingNumbersValidateBeforeCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listIncomingNumbersValidateBeforeCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = listIncomingNumbersCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, _callback);
+        okhttp3.Call localVarCall = listIncomingNumbersCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, _callback);
         return localVarCall;
 
     }
@@ -4244,6 +4249,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return IncomingNumberList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4252,8 +4258,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public IncomingNumberList listIncomingNumbers(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode) throws ApiException {
-        ApiResponse<IncomingNumberList> localVarResp = listIncomingNumbersWithHttpInfo(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+    public IncomingNumberList listIncomingNumbers(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet) throws ApiException {
+        ApiResponse<IncomingNumberList> localVarResp = listIncomingNumbersWithHttpInfo(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
         return localVarResp.getData();
     }
 
@@ -4273,6 +4279,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return ApiResponse&lt;IncomingNumberList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4281,8 +4288,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode) throws ApiException {
-        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, null);
+    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet) throws ApiException {
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, null);
         Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -4303,6 +4310,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4312,9 +4320,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listIncomingNumbersAsync(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback<IncomingNumberList> _callback) throws ApiException {
+    public okhttp3.Call listIncomingNumbersAsync(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback<IncomingNumberList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, _callback);
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, _callback);
         Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

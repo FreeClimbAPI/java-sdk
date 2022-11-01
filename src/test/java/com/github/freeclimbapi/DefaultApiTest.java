@@ -621,7 +621,9 @@ public class DefaultApiTest {
         
         Boolean capabilitiesShortCode = null;
         
-                IncomingNumberList response = api.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+        Boolean offnet = null;
+        
+                IncomingNumberList response = api.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
         // TODO: test validations
     }
     
