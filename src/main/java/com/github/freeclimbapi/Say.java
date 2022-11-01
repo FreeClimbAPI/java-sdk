@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;Say&#x60; command provides Text-To-Speech (TTS) support. It converts text to speech and then renders it in a female voice back to the caller. &#x60;Say&#x60; is useful in cases where it&#39;s difficult to pre-record a prompt for any reason. &#x60;Say&#x60; does not allow barge-in unless nested within a &#x60;GetSpeech&#x60; command. The file will always be played to completion unless nested.
  */
 @ApiModel(description = "The `Say` command provides Text-To-Speech (TTS) support. It converts text to speech and then renders it in a female voice back to the caller. `Say` is useful in cases where it's difficult to pre-record a prompt for any reason. `Say` does not allow barge-in unless nested within a `GetSpeech` command. The file will always be played to completion unless nested.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Say extends PerclCommand {
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)

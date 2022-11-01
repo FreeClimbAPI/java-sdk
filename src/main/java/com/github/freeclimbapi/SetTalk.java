@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;SetTalk&#x60; command enables or disables the talk privilege for a Participant in a Conference provided both calls are in the same conference. If &#39;true&#39;, no audio from that Participant is shared with the other Participants of the Conference.
  */
 @ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for a Participant in a Conference provided both calls are in the same conference. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetTalk extends PerclCommand {
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
   @SerializedName(SERIALIZED_NAME_CALL_ID)

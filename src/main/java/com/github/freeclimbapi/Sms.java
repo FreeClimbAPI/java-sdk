@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;Sms&#x60; command can be used to send an SMS message to a phone number during a phone call. International SMS is disabled by default.
  */
 @ApiModel(description = "The `Sms` command can be used to send an SMS message to a phone number during a phone call. International SMS is disabled by default.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Sms extends PerclCommand {
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)

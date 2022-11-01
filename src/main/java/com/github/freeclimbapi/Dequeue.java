@@ -58,7 +58,7 @@ import java.util.concurrent.Callable;
  * The &#x60;Dequeue&#x60; command transfers control of a Call that is in a Queue so that the waiting caller exits the Queue. Execution continues with the first command in the PerCL script returned by the &#x60;actionUrl&#x60; specified in the &#x60;Enqueue&#x60; command.
  */
 @ApiModel(description = "The `Dequeue` command transfers control of a Call that is in a Queue so that the waiting caller exits the Queue. Execution continues with the first command in the PerCL script returned by the `actionUrl` specified in the `Enqueue` command.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Dequeue extends PerclCommand {
   public Dequeue() { 
     this.command = this.getClass().getSimpleName();

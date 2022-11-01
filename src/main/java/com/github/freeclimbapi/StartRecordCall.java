@@ -58,7 +58,7 @@ import java.util.concurrent.Callable;
  * The &#x60;StartRecordCall&#x60; command records the current call and returns the URL of a file containing the audio recording when recording completes. &#x60;StartRecordCall&#x60; is non-blocking. After recording of the current call begins, control of the call moves to the PerCL command that follows &#x60;StartRecordCall&#x60; in the current PerCL script.
  */
 @ApiModel(description = "The `StartRecordCall` command records the current call and returns the URL of a file containing the audio recording when recording completes. `StartRecordCall` is non-blocking. After recording of the current call begins, control of the call moves to the PerCL command that follows `StartRecordCall` in the current PerCL script.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StartRecordCall extends PerclCommand {
   public StartRecordCall() { 
     this.command = this.getClass().getSimpleName();

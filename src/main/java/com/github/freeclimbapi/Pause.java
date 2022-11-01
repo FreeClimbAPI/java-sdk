@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;Pause&#x60; command halts execution of the current PerCL script for a specified number of milliseconds. If &#x60;Pause&#x60; is the first command in a PerCL document, FreeClimb will wait for the specified time to elapse before picking up the call.
  */
 @ApiModel(description = "The `Pause` command halts execution of the current PerCL script for a specified number of milliseconds. If `Pause` is the first command in a PerCL document, FreeClimb will wait for the specified time to elapse before picking up the call.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Pause extends PerclCommand {
   public static final String SERIALIZED_NAME_LENGTH = "length";
   @SerializedName(SERIALIZED_NAME_LENGTH)

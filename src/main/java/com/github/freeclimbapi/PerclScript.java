@@ -36,7 +36,7 @@ import java.util.concurrent.Callable;
  * A PerCL script to be returned to the FreeClimb servers in FreeClimb applications
  */
 @ApiModel(description = "A PerCL script to be returned to the FreeClimb servers in FreeClimb applications")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PerclScript {
   public static final String SERIALIZED_NAME_COMMANDS = "commands";
   @SerializedName(SERIALIZED_NAME_COMMANDS)

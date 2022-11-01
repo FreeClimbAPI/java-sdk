@@ -59,7 +59,7 @@ import java.util.concurrent.Callable;
  * The &#x60;AddToConference&#x60; command adds a Participant to a Conference. If this Participant currently is in another Conference, the Participant is first removed from that Conference. Two Call legs can be bridged together by creating a Conference and adding both Call legs to it via &#x60;AddToConference&#x60;.
  */
 @ApiModel(description = "The `AddToConference` command adds a Participant to a Conference. If this Participant currently is in another Conference, the Participant is first removed from that Conference. Two Call legs can be bridged together by creating a Conference and adding both Call legs to it via `AddToConference`.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-31T13:04:20.214-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddToConference extends PerclCommand {
   public static final String SERIALIZED_NAME_ALLOW_CALL_CONTROL = "allowCallControl";
   @SerializedName(SERIALIZED_NAME_ALLOW_CALL_CONTROL)
