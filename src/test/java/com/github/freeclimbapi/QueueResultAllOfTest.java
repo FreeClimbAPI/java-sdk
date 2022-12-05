@@ -87,21 +87,15 @@ public class QueueResultAllOfTest {
     @Test
     public void currentSizeTest() {
 
-        model.setCurrentSize("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCurrentSize());
-        
         
     }
 
     /**
-     * Test the property 'averageWaitTime'
+     * Test the property 'averageQueueRemovalTime'
      */
     @Test
-    public void averageWaitTimeTest() {
+    public void averageQueueRemovalTimeTest() {
 
-        model.setAverageWaitTime("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAverageWaitTime());
-        
         
     }
 
