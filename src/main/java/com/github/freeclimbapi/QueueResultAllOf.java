@@ -53,11 +53,11 @@ public class QueueResultAllOf {
 
   public static final String SERIALIZED_NAME_CURRENT_SIZE = "currentSize";
   @SerializedName(SERIALIZED_NAME_CURRENT_SIZE)
-  private String currentSize;
+  private Integer currentSize;
 
-  public static final String SERIALIZED_NAME_AVERAGE_WAIT_TIME = "averageWaitTime";
-  @SerializedName(SERIALIZED_NAME_AVERAGE_WAIT_TIME)
-  private String averageWaitTime;
+  public static final String SERIALIZED_NAME_AVERAGE_QUEUE_REMOVAL_TIME = "averageQueueRemovalTime";
+  @SerializedName(SERIALIZED_NAME_AVERAGE_QUEUE_REMOVAL_TIME)
+  private Integer averageQueueRemovalTime;
 
   public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
@@ -158,7 +158,7 @@ public class QueueResultAllOf {
   }
 
 
-  public QueueResultAllOf currentSize(String currentSize) {
+  public QueueResultAllOf currentSize(Integer currentSize) {
     
     this.currentSize = currentSize;
     return this;
@@ -171,36 +171,36 @@ public class QueueResultAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Count of Calls currently in the Queue.")
 
-  public String getCurrentSize() {
+  public Integer getCurrentSize() {
     return currentSize;
   }
 
 
-  public void setCurrentSize(String currentSize) {
+  public void setCurrentSize(Integer currentSize) {
     this.currentSize = currentSize;
   }
 
 
-  public QueueResultAllOf averageWaitTime(String averageWaitTime) {
+  public QueueResultAllOf averageQueueRemovalTime(Integer averageQueueRemovalTime) {
     
-    this.averageWaitTime = averageWaitTime;
+    this.averageQueueRemovalTime = averageQueueRemovalTime;
     return this;
   }
 
    /**
-   * Average wait time (in seconds) of all Calls in the Queue.
-   * @return averageWaitTime
+   * The average amount of time (in seconds) for a call to be removed from the queue.
+   * @return averageQueueRemovalTime
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Average wait time (in seconds) of all Calls in the Queue.")
+  @ApiModelProperty(value = "The average amount of time (in seconds) for a call to be removed from the queue.")
 
-  public String getAverageWaitTime() {
-    return averageWaitTime;
+  public Integer getAverageQueueRemovalTime() {
+    return averageQueueRemovalTime;
   }
 
 
-  public void setAverageWaitTime(String averageWaitTime) {
-    this.averageWaitTime = averageWaitTime;
+  public void setAverageQueueRemovalTime(Integer averageQueueRemovalTime) {
+    this.averageQueueRemovalTime = averageQueueRemovalTime;
   }
 
 
@@ -241,7 +241,7 @@ public class QueueResultAllOf {
         Objects.equals(this.alias, queueResultAllOf.alias) &&
         Objects.equals(this.maxSize, queueResultAllOf.maxSize) &&
         Objects.equals(this.currentSize, queueResultAllOf.currentSize) &&
-        Objects.equals(this.averageWaitTime, queueResultAllOf.averageWaitTime) &&
+        Objects.equals(this.averageQueueRemovalTime, queueResultAllOf.averageQueueRemovalTime) &&
         Objects.equals(this.subresourceUris, queueResultAllOf.subresourceUris);
   }
 
@@ -251,7 +251,7 @@ public class QueueResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, queueId, alias, maxSize, currentSize, averageWaitTime, subresourceUris);
+    return Objects.hash(accountId, queueId, alias, maxSize, currentSize, averageQueueRemovalTime, subresourceUris);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -270,7 +270,7 @@ public class QueueResultAllOf {
     sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
     sb.append("    maxSize: ").append(toIndentedString(maxSize)).append("\n");
     sb.append("    currentSize: ").append(toIndentedString(currentSize)).append("\n");
-    sb.append("    averageWaitTime: ").append(toIndentedString(averageWaitTime)).append("\n");
+    sb.append("    averageQueueRemovalTime: ").append(toIndentedString(averageQueueRemovalTime)).append("\n");
     sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");
     sb.append("}");
     return sb.toString();
