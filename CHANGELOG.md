@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [Unreleased]
 None
 
+<a name="5.0.3"></a>
+## [5.0.3] 2022-12-06
+### Changed
+- Changed QueueResult property currentSize from string to int
+- Renamed QueueResult property averageWaitTime to averageQueueRemovalTime
+
 <a name="5.0.2"></a>
 
 ## [5.0.2] 2022-11-01
