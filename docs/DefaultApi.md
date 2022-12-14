@@ -2044,7 +2044,7 @@ public class Example {
     
     String from = "from_example"; // String | Only show Calls from this phone number.
     
-    String status = "status_example"; // String | Only show Calls currently in this status. May be `queued`, `ringing`, `inProgress`, `canceled`, `completed`, `failed`, `busy`, or `noAnswer`.
+    CallStatus status = CallStatus.fromValue("queued"); // CallStatus | Only show Calls currently in this status. May be `queued`, `ringing`, `inProgress`, `canceled`, `completed`, `failed`, `busy`, or `noAnswer`.
     
     String startTime = "startTime_example"; // String | Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss.
     
@@ -2073,7 +2073,7 @@ Name | Type | Description  | Notes
  **active** | **Boolean**| If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. | [optional] [default to false]
  **to** | **String**| Only show Calls to this phone number. | [optional]
  **from** | **String**| Only show Calls from this phone number. | [optional]
- **status** | **String**| Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. | [optional]
+ **status** | [**CallStatus**](.md)| Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. | [optional] [enum: queued, ringing, inProgress, canceled, completed, failed, busy, noAnswer]
  **startTime** | **String**| Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
  **endTime** | **String**| Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. | [optional]
  **parentCallId** | **String**| Only show Calls spawned by the call with this ID. | [optional]
@@ -2538,7 +2538,7 @@ public class Example {
     
     String endTime = "endTime_example"; // String | Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*..
     
-    String direction = "inbound"; // String | Either `inbound` or `outbound`. Only show Messages that were either *sent from* or *received by* FreeClimb.
+    MessageDirection direction = MessageDirection.fromValue("inbound"); // MessageDirection | Either `inbound` or `outbound`. Only show Messages that were either *sent from* or *received by* FreeClimb.
     
     try {
       MessagesList result = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction);
@@ -2562,7 +2562,7 @@ Name | Type | Description  | Notes
  **from** | **String**| Only show Messages from this phone number. | [optional]
  **beginTime** | **String**| Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. | [optional]
  **endTime** | **String**| Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. | [optional]
- **direction** | **String**| Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. | [optional] [enum: inbound, outbound]
+ **direction** | [**MessageDirection**](.md)| Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. | [optional] [enum: inbound, outbound]
 
 
 ### Return type

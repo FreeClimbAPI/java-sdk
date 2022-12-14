@@ -13,41 +13,6 @@
 
 package com.github.freeclimbapi;
 
-import com.github.freeclimbapi.AddToConference;
-import com.github.freeclimbapi.CreateConference;
-import com.github.freeclimbapi.Dequeue;
-import com.github.freeclimbapi.Enqueue;
-import com.github.freeclimbapi.GetDigits;
-import com.github.freeclimbapi.GetSpeech;
-import com.github.freeclimbapi.Hangup;
-import com.github.freeclimbapi.OutDial;
-import com.github.freeclimbapi.OutDialAllOf;
-import com.github.freeclimbapi.Park;
-import com.github.freeclimbapi.Pause;
-import com.github.freeclimbapi.PerclCommand;
-import com.github.freeclimbapi.Play;
-import com.github.freeclimbapi.PlayEarlyMedia;
-import com.github.freeclimbapi.RecordUtterance;
-import com.github.freeclimbapi.Redirect;
-import com.github.freeclimbapi.Reject;
-import com.github.freeclimbapi.RemoveFromConference;
-import com.github.freeclimbapi.Say;
-import com.github.freeclimbapi.SendDigits;
-import com.github.freeclimbapi.SetListen;
-import com.github.freeclimbapi.SetTalk;
-import com.github.freeclimbapi.Sms;
-import com.github.freeclimbapi.StartRecordCall;
-import com.github.freeclimbapi.TerminateConference;
-import com.github.freeclimbapi.Unpark;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.math.BigDecimal;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -56,7 +21,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.File;
+import java.math.BigDecimal;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 /**
  * Model tests for OutDial
  */
@@ -125,9 +93,6 @@ public class OutDialTest {
     @Test
     public void ifMachineTest() {
 
-        model.setIfMachine("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getIfMachine());
-        
         
     }
 
@@ -193,8 +158,7 @@ public class OutDialTest {
         model.setActionUrl("TEST_STRING");   
         model.setCallConnectUrl("TEST_STRING");    
         model.setCallingNumber(new BigDecimal(1.0));  
-        model.setDestination(new BigDecimal(1.0)); 
-        model.setIfMachine("TEST_STRING");   
+        model.setDestination(new BigDecimal(1.0));   
         model.setIfMachineUrl("TEST_STRING");   
         model.setSendDigits("TEST_STRING");   
         model.setStatusCallbackUrl("TEST_STRING");    

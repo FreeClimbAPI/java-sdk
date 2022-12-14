@@ -14,40 +14,8 @@
 package com.github.freeclimbapi;
 
 import com.github.freeclimbapi.ApiException;
-import com.github.freeclimbapi.AccountRequest;
-import com.github.freeclimbapi.AccountResult;
-import com.github.freeclimbapi.ApplicationList;
-import com.github.freeclimbapi.ApplicationRequest;
-import com.github.freeclimbapi.ApplicationResult;
-import com.github.freeclimbapi.AvailableNumberList;
-import com.github.freeclimbapi.BuyIncomingNumberRequest;
-import com.github.freeclimbapi.CallList;
-import com.github.freeclimbapi.CallResult;
-import com.github.freeclimbapi.ConferenceList;
-import com.github.freeclimbapi.ConferenceParticipantList;
-import com.github.freeclimbapi.ConferenceParticipantResult;
-import com.github.freeclimbapi.ConferenceResult;
-import com.github.freeclimbapi.CreateConferenceRequest;
-import java.io.File;
-import com.github.freeclimbapi.FilterLogsRequest;
-import com.github.freeclimbapi.IncomingNumberList;
-import com.github.freeclimbapi.IncomingNumberRequest;
-import com.github.freeclimbapi.IncomingNumberResult;
-import com.github.freeclimbapi.LogList;
-import com.github.freeclimbapi.MakeCallRequest;
-import com.github.freeclimbapi.MessageRequest;
-import com.github.freeclimbapi.MessageResult;
-import com.github.freeclimbapi.MessagesList;
-import com.github.freeclimbapi.QueueList;
-import com.github.freeclimbapi.QueueMember;
-import com.github.freeclimbapi.QueueMemberList;
-import com.github.freeclimbapi.QueueRequest;
-import com.github.freeclimbapi.QueueResult;
-import com.github.freeclimbapi.RecordingList;
-import com.github.freeclimbapi.RecordingResult;
-import com.github.freeclimbapi.UpdateCallRequest;
-import com.github.freeclimbapi.UpdateConferenceParticipantRequest;
-import com.github.freeclimbapi.UpdateConferenceRequest;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -55,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
 
 /**
  * API tests for DefaultApi
@@ -63,8 +32,6 @@ import java.util.Map;
 public class DefaultApiTest {
 
     private final DefaultApi api = new DefaultApi();
-
-    
     /**
      * Buy a Phone Number
      *
@@ -76,8 +43,7 @@ public class DefaultApiTest {
     public void buyAPhoneNumberTest() throws ApiException {
         
         BuyIncomingNumberRequest buyIncomingNumberRequest = null;
-        
-                IncomingNumberResult response = api.buyAPhoneNumber(buyIncomingNumberRequest);
+        IncomingNumberResult response = api.buyAPhoneNumber(buyIncomingNumberRequest);
         // TODO: test validations
     }
     
@@ -92,8 +58,7 @@ public class DefaultApiTest {
     public void createAConferenceTest() throws ApiException {
         
         CreateConferenceRequest createConferenceRequest = null;
-        
-                ConferenceResult response = api.createAConference(createConferenceRequest);
+        ConferenceResult response = api.createAConference(createConferenceRequest);
         // TODO: test validations
     }
     
@@ -551,7 +516,7 @@ public class DefaultApiTest {
         
         String from = null;
         
-        String status = null;
+        CallStatus status = null;
         
         String startTime = null;
         
@@ -701,7 +666,7 @@ public class DefaultApiTest {
         
         String endTime = null;
         
-        String direction = null;
+        MessageDirection direction = null;
         
                 MessagesList response = api.listSmsMessages(to, from, beginTime, endTime, direction);
         // TODO: test validations

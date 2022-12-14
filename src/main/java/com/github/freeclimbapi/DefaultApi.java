@@ -27,46 +27,15 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.github.freeclimbapi.AccountRequest;
-import com.github.freeclimbapi.AccountResult;
-import com.github.freeclimbapi.ApplicationList;
-import com.github.freeclimbapi.ApplicationRequest;
-import com.github.freeclimbapi.ApplicationResult;
-import com.github.freeclimbapi.AvailableNumberList;
-import com.github.freeclimbapi.BuyIncomingNumberRequest;
-import com.github.freeclimbapi.CallList;
-import com.github.freeclimbapi.CallResult;
-import com.github.freeclimbapi.ConferenceList;
-import com.github.freeclimbapi.ConferenceParticipantList;
-import com.github.freeclimbapi.ConferenceParticipantResult;
-import com.github.freeclimbapi.ConferenceResult;
-import com.github.freeclimbapi.CreateConferenceRequest;
-import java.io.File;
-import com.github.freeclimbapi.FilterLogsRequest;
-import com.github.freeclimbapi.IncomingNumberList;
-import com.github.freeclimbapi.IncomingNumberRequest;
-import com.github.freeclimbapi.IncomingNumberResult;
-import com.github.freeclimbapi.LogList;
-import com.github.freeclimbapi.MakeCallRequest;
-import com.github.freeclimbapi.MessageRequest;
-import com.github.freeclimbapi.MessageResult;
-import com.github.freeclimbapi.MessagesList;
-import com.github.freeclimbapi.QueueList;
-import com.github.freeclimbapi.QueueMember;
-import com.github.freeclimbapi.QueueMemberList;
-import com.github.freeclimbapi.QueueRequest;
-import com.github.freeclimbapi.QueueResult;
-import com.github.freeclimbapi.RecordingList;
-import com.github.freeclimbapi.RecordingResult;
-import com.github.freeclimbapi.UpdateCallRequest;
-import com.github.freeclimbapi.UpdateConferenceParticipantRequest;
-import com.github.freeclimbapi.UpdateConferenceRequest;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
+
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 
 public class DefaultApi {
     private String accountId;
@@ -3788,7 +3757,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listCallsCall(Boolean active, String to, String from, String status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listCallsCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -3864,7 +3833,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listCallsValidateBeforeCall(Boolean active, String to, String from, String status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listCallsValidateBeforeCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
         
 
         okhttp3.Call localVarCall = listCallsCall(active, to, from, status, startTime, endTime, parentCallId, _callback);
@@ -3890,7 +3859,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public CallList listCalls(Boolean active, String to, String from, String status, String startTime, String endTime, String parentCallId) throws ApiException {
+    public CallList listCalls(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId) throws ApiException {
         ApiResponse<CallList> localVarResp = listCallsWithHttpInfo(active, to, from, status, startTime, endTime, parentCallId);
         return localVarResp.getData();
     }
@@ -3913,7 +3882,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CallList> listCallsWithHttpInfo(Boolean active, String to, String from, String status, String startTime, String endTime, String parentCallId) throws ApiException {
+    public ApiResponse<CallList> listCallsWithHttpInfo(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId) throws ApiException {
         okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, null);
         Type localVarReturnType = new TypeToken<CallList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3938,7 +3907,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listCallsAsync(Boolean active, String to, String from, String status, String startTime, String endTime, String parentCallId, final ApiCallback<CallList> _callback) throws ApiException {
+    public okhttp3.Call listCallsAsync(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback<CallList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, _callback);
         Type localVarReturnType = new TypeToken<CallList>(){}.getType();
@@ -4760,7 +4729,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listSmsMessagesCall(String to, String from, String beginTime, String endTime, String direction, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listSmsMessagesCall(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -4828,7 +4797,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listSmsMessagesValidateBeforeCall(String to, String from, String beginTime, String endTime, String direction, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listSmsMessagesValidateBeforeCall(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback _callback) throws ApiException {
         
 
         okhttp3.Call localVarCall = listSmsMessagesCall(to, from, beginTime, endTime, direction, _callback);
@@ -4852,7 +4821,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public MessagesList listSmsMessages(String to, String from, String beginTime, String endTime, String direction) throws ApiException {
+    public MessagesList listSmsMessages(String to, String from, String beginTime, String endTime, MessageDirection direction) throws ApiException {
         ApiResponse<MessagesList> localVarResp = listSmsMessagesWithHttpInfo(to, from, beginTime, endTime, direction);
         return localVarResp.getData();
     }
@@ -4873,7 +4842,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(String to, String from, String beginTime, String endTime, String direction) throws ApiException {
+    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(String to, String from, String beginTime, String endTime, MessageDirection direction) throws ApiException {
         okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, null);
         Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4896,7 +4865,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listSmsMessagesAsync(String to, String from, String beginTime, String endTime, String direction, final ApiCallback<MessagesList> _callback) throws ApiException {
+    public okhttp3.Call listSmsMessagesAsync(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback<MessagesList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, _callback);
         Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
