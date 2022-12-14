@@ -16,13 +16,13 @@ import java.util.Objects;
 import java.util.Arrays;
 import java.util.List;
 import java.math.BigDecimal;
+import java.net.URI;
 import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import com.github.freeclimbapi.JSON;
-import com.github.freeclimbapi.URI;
 
 import java.io.IOException;
 import com.google.gson.TypeAdapter;

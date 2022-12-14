@@ -21,13 +21,13 @@ import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 import java.math.BigDecimal;
+import java.net.URI;
 import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import com.github.freeclimbapi.JSON;
-import java.net.URI;
 
 import java.util.ArrayList;
 import java.util.Map;
