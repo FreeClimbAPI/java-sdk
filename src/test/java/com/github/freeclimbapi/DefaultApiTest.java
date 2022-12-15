@@ -16,11 +16,11 @@ package com.github.freeclimbapi;
 import com.github.freeclimbapi.ApiException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.auth.*;
-import org.junit.Test;
-import org.junit.Ignore;
 import static org.junit.Assert.*;
 import com.github.freeclimbapi.Configuration;
+import org.junit.Test;
+import org.junit.Ignore;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,8 +31,9 @@ import java.io.File;
  * API tests for DefaultApi
  */
 public class DefaultApiTest {
-    public ApiClient client = new ApiClient();
-    public DefaultApi api = new DefaultApi();
+
+    private final DefaultApi api = new DefaultApi();
+
     /**
      * Buy a Phone Number
      *
@@ -46,836 +47,1191 @@ public class DefaultApiTest {
         defaultClient.setBasePath("http://127.0.0.1:4010");
         defaultClient.setAccountId("YOUR_ACCOUNT_ID");
         defaultClient.setApiKey("YOUR_API_KEY");
-       
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
 
-        BuyIncomingNumberRequest request = buyIncomingNumberRequestTestValue();
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
         
-        IncomingNumberResult response = apiInstance.buyAPhoneNumber(request);
+        
+        BuyIncomingNumberRequest buyIncomingNumberRequest = buyIncomingNumberRequestBuyIncomingNumberRequestTestValue();
+        
+        IncomingNumberResult response = apiInstance.buyAPhoneNumber(buyIncomingNumberRequest);
         // TODO: test validations
-        //assertThat(response, instanceof IncomingNumberResult.class);
         assertEquals(response.getClass(), IncomingNumberResult.class);
         
     }
-    
-    // /**
-    //  * Create a Conference
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void createAConferenceTest() throws ApiException {
- 
-    //     CreateConferenceRequest createConferenceRequest = null;
-    //     ConferenceResult response = api.createAConference(createConferenceRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Create a Queue
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void createAQueueTest() throws ApiException {
-        
-    //     QueueRequest queueRequest = null;
-        
-    //             QueueResult response = api.createAQueue(queueRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Create an application
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void createAnApplicationTest() throws ApiException {
-        
-    //     ApplicationRequest applicationRequest = null;
-        
-    //             ApplicationResult response = api.createAnApplication(applicationRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Delete a Recording
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void deleteARecordingTest() throws ApiException {
-        
-    //     String recordingId = null;
-        
-    //             api.deleteARecording(recordingId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Delete an application
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void deleteAnApplicationTest() throws ApiException {
-        
-    //     String applicationId = null;
-        
-    //             api.deleteAnApplication(applicationId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Delete an Incoming Number
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void deleteAnIncomingNumberTest() throws ApiException {
-        
-    //     String phoneNumberId = null;
-        
-    //             api.deleteAnIncomingNumber(phoneNumberId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Dequeue a Member
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void dequeueAMemberTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //     String callId = null;
-        
-    //             QueueMember response = api.dequeueAMember(queueId, callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Dequeue Head Member
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void dequeueHeadMemberTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //             QueueMember response = api.dequeueHeadMember(queueId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Download a Recording File
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void downloadARecordingFileTest() throws ApiException {
-        
-    //     String recordingId = null;
-        
-    //             File response = api.downloadARecordingFile(recordingId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Filter Logs
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void filterLogsTest() throws ApiException {
-        
-    //     FilterLogsRequest filterLogsRequest = null;
-        
-    //             LogList response = api.filterLogs(filterLogsRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Call
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getACallTest() throws ApiException {
-        
-    //     String callId = null;
-        
-    //             CallResult response = api.getACall(callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Conference
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAConferenceTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //             ConferenceResult response = api.getAConference(conferenceId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Member
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAMemberTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //     String callId = null;
-        
-    //             QueueMember response = api.getAMember(queueId, callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Participant
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAParticipantTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //     String callId = null;
-        
-    //             ConferenceParticipantResult response = api.getAParticipant(conferenceId, callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Queue
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAQueueTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //             QueueResult response = api.getAQueue(queueId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get a Recording
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getARecordingTest() throws ApiException {
-        
-    //     String recordingId = null;
-        
-    //             RecordingResult response = api.getARecording(recordingId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get an Account
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAnAccountTest() throws ApiException {
-        
-    //             AccountResult response = api.getAnAccount();
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get an Application
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAnApplicationTest() throws ApiException {
-        
-    //     String applicationId = null;
-        
-    //             ApplicationResult response = api.getAnApplication(applicationId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get an Incoming Number
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAnIncomingNumberTest() throws ApiException {
-        
-    //     String phoneNumberId = null;
-        
-    //             IncomingNumberResult response = api.getAnIncomingNumber(phoneNumberId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get an SMS Message
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getAnSmsMessageTest() throws ApiException {
-        
-    //     String messageId = null;
-        
-    //             MessageResult response = api.getAnSmsMessage(messageId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Get Head Member
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void getHeadMemberTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //             QueueMember response = api.getHeadMember(queueId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Active Queues
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listActiveQueuesTest() throws ApiException {
-        
-    //     String alias = null;
-        
-    //             QueueList response = api.listActiveQueues(alias);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List All Account Logs
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listAllAccountLogsTest() throws ApiException {
-        
-    //             LogList response = api.listAllAccountLogs();
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List applications
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listApplicationsTest() throws ApiException {
-        
-    //     String alias = null;
-        
-    //             ApplicationList response = api.listApplications(alias);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List available numbers
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listAvailableNumbersTest() throws ApiException {
-        
-    //     String phoneNumber = null;
-        
-    //     String region = null;
-        
-    //     String country = null;
-        
-    //     Boolean voiceEnabled = null;
-        
-    //     Boolean smsEnabled = null;
-        
-    //     Boolean capabilitiesVoice = null;
-        
-    //     Boolean capabilitiesSms = null;
-        
-    //     Boolean capabilitiesTollFree = null;
-        
-    //     Boolean capabilitiesTenDLC = null;
-        
-    //     Boolean capabilitiesShortCode = null;
-        
-    //             AvailableNumberList response = api.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Call Logs
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listCallLogsTest() throws ApiException {
-        
-    //     String callId = null;
-        
-    //             LogList response = api.listCallLogs(callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Call Recordings
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listCallRecordingsTest() throws ApiException {
-        
-    //     String callId = null;
-        
-    //     String dateCreated = null;
-        
-    //             RecordingList response = api.listCallRecordings(callId, dateCreated);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Calls
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listCallsTest() throws ApiException {
-        
-    //     Boolean active = null;
-        
-    //     String to = null;
-        
-    //     String from = null;
-        
-    //     CallStatus status = null;
-        
-    //     String startTime = null;
-        
-    //     String endTime = null;
-        
-    //     String parentCallId = null;
-        
-    //             CallList response = api.listCalls(active, to, from, status, startTime, endTime, parentCallId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Conferences
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listConferencesTest() throws ApiException {
-        
-    //     String status = null;
-        
-    //     String alias = null;
-        
-    //     String dateCreated = null;
-        
-    //     String dateUpdated = null;
-        
-    //             ConferenceList response = api.listConferences(status, alias, dateCreated, dateUpdated);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Incoming Numbers
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listIncomingNumbersTest() throws ApiException {
-        
-    //     String phoneNumber = null;
-        
-    //     String alias = null;
-        
-    //     String region = null;
-        
-    //     String country = null;
-        
-    //     String applicationId = null;
-        
-    //     Boolean hasApplication = null;
-        
-    //     Boolean voiceEnabled = null;
-        
-    //     Boolean smsEnabled = null;
-        
-    //     Boolean capabilitiesVoice = null;
-        
-    //     Boolean capabilitiesSms = null;
-        
-    //     Boolean capabilitiesTollFree = null;
-        
-    //     Boolean capabilitiesTenDLC = null;
-        
-    //     Boolean capabilitiesShortCode = null;
-        
-    //     Boolean offnet = null;
-        
-    //             IncomingNumberList response = api.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Members
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listMembersTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //             QueueMemberList response = api.listMembers(queueId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Participants
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listParticipantsTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //     Boolean talk = null;
-        
-    //     Boolean listen = null;
-        
-    //             ConferenceParticipantList response = api.listParticipants(conferenceId, talk, listen);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List Recordings
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listRecordingsTest() throws ApiException {
-        
-    //     String callId = null;
-        
-    //     String conferenceId = null;
-        
-    //     String dateCreated = null;
-        
-    //             RecordingList response = api.listRecordings(callId, conferenceId, dateCreated);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * List SMS Messages
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void listSmsMessagesTest() throws ApiException {
-        
-    //     String to = null;
-        
-    //     String from = null;
-        
-    //     String beginTime = null;
-        
-    //     String endTime = null;
-        
-    //     MessageDirection direction = null;
-        
-    //             MessagesList response = api.listSmsMessages(to, from, beginTime, endTime, direction);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Make a Call
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void makeACallTest() throws ApiException {
-        
-    //     MakeCallRequest makeCallRequest = null;
-        
-    //             CallResult response = api.makeACall(makeCallRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Remove a Participant
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void removeAParticipantTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //     String callId = null;
-        
-    //             api.removeAParticipant(conferenceId, callId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Send an SMS Message
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void sendAnSmsMessageTest() throws ApiException {
-        
-    //     MessageRequest messageRequest = null;
-        
-    //             MessageResult response = api.sendAnSmsMessage(messageRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Stream a Recording File
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void streamARecordingFileTest() throws ApiException {
-        
-    //     String recordingId = null;
-        
-    //             File response = api.streamARecordingFile(recordingId);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update a Conference
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAConferenceTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //     UpdateConferenceRequest updateConferenceRequest = null;
-        
-    //             ConferenceResult response = api.updateAConference(conferenceId, updateConferenceRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update a Live Call
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateALiveCallTest() throws ApiException {
-        
-    //     String callId = null;
-        
-    //     UpdateCallRequest updateCallRequest = null;
-        
-    //             api.updateALiveCall(callId, updateCallRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update a Participant
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAParticipantTest() throws ApiException {
-        
-    //     String conferenceId = null;
-        
-    //     String callId = null;
-        
-    //     UpdateConferenceParticipantRequest updateConferenceParticipantRequest = null;
-        
-    //             ConferenceParticipantResult response = api.updateAParticipant(conferenceId, callId, updateConferenceParticipantRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update a Queue
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAQueueTest() throws ApiException {
-        
-    //     String queueId = null;
-        
-    //     QueueRequest queueRequest = null;
-        
-    //             QueueResult response = api.updateAQueue(queueId, queueRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Manage an account
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAnAccountTest() throws ApiException {
-        
-    //     AccountRequest accountRequest = null;
-        
-    //             api.updateAnAccount(accountRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update an application
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAnApplicationTest() throws ApiException {
-        
-    //     String applicationId = null;
-        
-    //     ApplicationRequest applicationRequest = null;
-        
-    //             ApplicationResult response = api.updateAnApplication(applicationId, applicationRequest);
-    //     // TODO: test validations
-    // }
-    
-    // /**
-    //  * Update an Incoming Number
-    //  *
-    //  * 
-    //  *
-    //  * @throws ApiException if the Api call fails
-    //  */
-    // @Test
-    // public void updateAnIncomingNumberTest() throws ApiException {
-        
-    //     String phoneNumberId = null;
-        
-    //     IncomingNumberRequest incomingNumberRequest = null;
-        
-    //             IncomingNumberResult response = api.updateAnIncomingNumber(phoneNumberId, incomingNumberRequest);
-    //     // TODO: test validations
-    // }
+    /**
+     * Create a Conference
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createAConferenceTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
 
-    private BuyIncomingNumberRequest buyIncomingNumberRequestTestValue() {
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        CreateConferenceRequest createConferenceRequest = createConferenceRequestCreateConferenceRequestTestValue();
+        
+        ConferenceResult response = apiInstance.createAConference(createConferenceRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceResult.class);
+        
+    }
+    /**
+     * Create a Queue
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createAQueueTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        QueueRequest queueRequest = queueRequestQueueRequestTestValue();
+        
+        QueueResult response = apiInstance.createAQueue(queueRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueResult.class);
+        
+    }
+    /**
+     * Create an application
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createAnApplicationTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        ApplicationRequest applicationRequest = applicationRequestApplicationRequestTestValue();
+        
+        ApplicationResult response = apiInstance.createAnApplication(applicationRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ApplicationResult.class);
+        
+    }
+    /**
+     * Delete a Recording
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteARecordingTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String recordingId = recordingIdStringTestValue();
+        
+        apiInstance.deleteARecording(recordingId);
+        // TODO: test validations
+        
+    }
+    /**
+     * Delete an application
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteAnApplicationTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String applicationId = applicationIdStringTestValue();
+        
+        apiInstance.deleteAnApplication(applicationId);
+        // TODO: test validations
+        
+    }
+    /**
+     * Delete an Incoming Number
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteAnIncomingNumberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String phoneNumberId = phoneNumberIdStringTestValue();
+        
+        apiInstance.deleteAnIncomingNumber(phoneNumberId);
+        // TODO: test validations
+        
+    }
+    /**
+     * Dequeue a Member
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dequeueAMemberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        QueueMember response = apiInstance.dequeueAMember(queueId, callId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueMember.class);
+        
+    }
+    /**
+     * Dequeue Head Member
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dequeueHeadMemberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueMember response = apiInstance.dequeueHeadMember(queueId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueMember.class);
+        
+    }
+    /**
+     * Download a Recording File
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void downloadARecordingFileTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String recordingId = recordingIdStringTestValue();
+        
+        File response = apiInstance.downloadARecordingFile(recordingId);
+        // TODO: test validations
+        assertEquals(response.getClass(), File.class);
+        
+    }
+    /**
+     * Filter Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void filterLogsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        FilterLogsRequest filterLogsRequest = filterLogsRequestFilterLogsRequestTestValue();
+        
+        LogList response = apiInstance.filterLogs(filterLogsRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), LogList.class);
+        
+    }
+    /**
+     * Get a Call
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getACallTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String callId = callIdStringTestValue();
+        
+        CallResult response = apiInstance.getACall(callId);
+        // TODO: test validations
+        assertEquals(response.getClass(), CallResult.class);
+        
+    }
+    /**
+     * Get a Conference
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAConferenceTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        ConferenceResult response = apiInstance.getAConference(conferenceId);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceResult.class);
+        
+    }
+    /**
+     * Get a Member
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAMemberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        QueueMember response = apiInstance.getAMember(queueId, callId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueMember.class);
+        
+    }
+    /**
+     * Get a Participant
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAParticipantTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        ConferenceParticipantResult response = apiInstance.getAParticipant(conferenceId, callId);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceParticipantResult.class);
+        
+    }
+    /**
+     * Get a Queue
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAQueueTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueResult response = apiInstance.getAQueue(queueId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueResult.class);
+        
+    }
+    /**
+     * Get a Recording
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getARecordingTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String recordingId = recordingIdStringTestValue();
+        
+        RecordingResult response = apiInstance.getARecording(recordingId);
+        // TODO: test validations
+        assertEquals(response.getClass(), RecordingResult.class);
+        
+    }
+    /**
+     * Get an Account
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAnAccountTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        AccountResult response = apiInstance.getAnAccount();
+        // TODO: test validations
+        assertEquals(response.getClass(), AccountResult.class);
+        
+    }
+    /**
+     * Get an Application
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAnApplicationTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String applicationId = applicationIdStringTestValue();
+        
+        ApplicationResult response = apiInstance.getAnApplication(applicationId);
+        // TODO: test validations
+        assertEquals(response.getClass(), ApplicationResult.class);
+        
+    }
+    /**
+     * Get an Incoming Number
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAnIncomingNumberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String phoneNumberId = phoneNumberIdStringTestValue();
+        
+        IncomingNumberResult response = apiInstance.getAnIncomingNumber(phoneNumberId);
+        // TODO: test validations
+        assertEquals(response.getClass(), IncomingNumberResult.class);
+        
+    }
+    /**
+     * Get an SMS Message
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAnSmsMessageTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String messageId = messageIdStringTestValue();
+        
+        MessageResult response = apiInstance.getAnSmsMessage(messageId);
+        // TODO: test validations
+        assertEquals(response.getClass(), MessageResult.class);
+        
+    }
+    /**
+     * Get Head Member
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getHeadMemberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueMember response = apiInstance.getHeadMember(queueId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueMember.class);
+        
+    }
+    /**
+     * List Active Queues
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listActiveQueuesTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String alias = aliasStringTestValue();
+        
+        QueueList response = apiInstance.listActiveQueues(alias);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueList.class);
+        
+    }
+    /**
+     * List All Account Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listAllAccountLogsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        LogList response = apiInstance.listAllAccountLogs();
+        // TODO: test validations
+        assertEquals(response.getClass(), LogList.class);
+        
+    }
+    /**
+     * List applications
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listApplicationsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String alias = aliasStringTestValue();
+        
+        ApplicationList response = apiInstance.listApplications(alias);
+        // TODO: test validations
+        assertEquals(response.getClass(), ApplicationList.class);
+        
+    }
+    /**
+     * List available numbers
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listAvailableNumbersTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String phoneNumber = phoneNumberStringTestValue();
+        
+        String region = regionStringTestValue();
+        
+        String country = countryStringTestValue();
+        
+        Boolean voiceEnabled = voiceEnabledBooleanTestValue();
+        
+        Boolean smsEnabled = smsEnabledBooleanTestValue();
+        
+        Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
+        
+        Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
+        
+        Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
+        
+        Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
+        
+        Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
+        
+        AvailableNumberList response = apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+        // TODO: test validations
+        assertEquals(response.getClass(), AvailableNumberList.class);
+        
+    }
+    /**
+     * List Call Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listCallLogsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String callId = callIdStringTestValue();
+        
+        LogList response = apiInstance.listCallLogs(callId);
+        // TODO: test validations
+        assertEquals(response.getClass(), LogList.class);
+        
+    }
+    /**
+     * List Call Recordings
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listCallRecordingsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String callId = callIdStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        RecordingList response = apiInstance.listCallRecordings(callId, dateCreated);
+        // TODO: test validations
+        assertEquals(response.getClass(), RecordingList.class);
+        
+    }
+    /**
+     * List Calls
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listCallsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        Boolean active = activeBooleanTestValue();
+        
+        String to = toStringTestValue();
+        
+        String from = fromStringTestValue();
+        
+        CallStatus status = statusCallStatusTestValue();
+        
+        String startTime = startTimeStringTestValue();
+        
+        String endTime = endTimeStringTestValue();
+        
+        String parentCallId = parentCallIdStringTestValue();
+        
+        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId);
+        // TODO: test validations
+        assertEquals(response.getClass(), CallList.class);
+        
+    }
+    /**
+     * List Conferences
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listConferencesTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String status = statusStringTestValue();
+        
+        String alias = aliasStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        String dateUpdated = dateUpdatedStringTestValue();
+        
+        ConferenceList response = apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceList.class);
+        
+    }
+    /**
+     * List Incoming Numbers
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listIncomingNumbersTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String phoneNumber = phoneNumberStringTestValue();
+        
+        String alias = aliasStringTestValue();
+        
+        String region = regionStringTestValue();
+        
+        String country = countryStringTestValue();
+        
+        String applicationId = applicationIdStringTestValue();
+        
+        Boolean hasApplication = hasApplicationBooleanTestValue();
+        
+        Boolean voiceEnabled = voiceEnabledBooleanTestValue();
+        
+        Boolean smsEnabled = smsEnabledBooleanTestValue();
+        
+        Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
+        
+        Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
+        
+        Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
+        
+        Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
+        
+        Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
+        
+        Boolean offnet = offnetBooleanTestValue();
+        
+        IncomingNumberList response = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+        // TODO: test validations
+        assertEquals(response.getClass(), IncomingNumberList.class);
+        
+    }
+    /**
+     * List Members
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listMembersTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueMemberList response = apiInstance.listMembers(queueId);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueMemberList.class);
+        
+    }
+    /**
+     * List Participants
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listParticipantsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        Boolean talk = talkBooleanTestValue();
+        
+        Boolean listen = listenBooleanTestValue();
+        
+        ConferenceParticipantList response = apiInstance.listParticipants(conferenceId, talk, listen);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceParticipantList.class);
+        
+    }
+    /**
+     * List Recordings
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listRecordingsTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String callId = callIdStringTestValue();
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        RecordingList response = apiInstance.listRecordings(callId, conferenceId, dateCreated);
+        // TODO: test validations
+        assertEquals(response.getClass(), RecordingList.class);
+        
+    }
+    /**
+     * List SMS Messages
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listSmsMessagesTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String to = toStringTestValue();
+        
+        String from = fromStringTestValue();
+        
+        String beginTime = beginTimeStringTestValue();
+        
+        String endTime = endTimeStringTestValue();
+        
+        MessageDirection direction = directionMessageDirectionTestValue();
+        
+        MessagesList response = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction);
+        // TODO: test validations
+        assertEquals(response.getClass(), MessagesList.class);
+        
+    }
+    /**
+     * Make a Call
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void makeACallTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        MakeCallRequest makeCallRequest = makeCallRequestMakeCallRequestTestValue();
+        
+        CallResult response = apiInstance.makeACall(makeCallRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), CallResult.class);
+        
+    }
+    /**
+     * Remove a Participant
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void removeAParticipantTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        apiInstance.removeAParticipant(conferenceId, callId);
+        // TODO: test validations
+        
+    }
+    /**
+     * Send an SMS Message
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void sendAnSmsMessageTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        MessageRequest messageRequest = messageRequestMessageRequestTestValue();
+        
+        MessageResult response = apiInstance.sendAnSmsMessage(messageRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), MessageResult.class);
+        
+    }
+    /**
+     * Stream a Recording File
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void streamARecordingFileTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String recordingId = recordingIdStringTestValue();
+        
+        File response = apiInstance.streamARecordingFile(recordingId);
+        // TODO: test validations
+        assertEquals(response.getClass(), File.class);
+        
+    }
+    /**
+     * Update a Conference
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAConferenceTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        UpdateConferenceRequest updateConferenceRequest = updateConferenceRequestUpdateConferenceRequestTestValue();
+        
+        ConferenceResult response = apiInstance.updateAConference(conferenceId, updateConferenceRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceResult.class);
+        
+    }
+    /**
+     * Update a Live Call
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateALiveCallTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String callId = callIdStringTestValue();
+        
+        UpdateCallRequest updateCallRequest = updateCallRequestUpdateCallRequestTestValue();
+        
+        apiInstance.updateALiveCall(callId, updateCallRequest);
+        // TODO: test validations
+        
+    }
+    /**
+     * Update a Participant
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAParticipantTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        UpdateConferenceParticipantRequest updateConferenceParticipantRequest = updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue();
+        
+        ConferenceParticipantResult response = apiInstance.updateAParticipant(conferenceId, callId, updateConferenceParticipantRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ConferenceParticipantResult.class);
+        
+    }
+    /**
+     * Update a Queue
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAQueueTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueRequest queueRequest = queueRequestQueueRequestTestValue();
+        
+        QueueResult response = apiInstance.updateAQueue(queueId, queueRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), QueueResult.class);
+        
+    }
+    /**
+     * Manage an account
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAnAccountTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        AccountRequest accountRequest = accountRequestAccountRequestTestValue();
+        
+        apiInstance.updateAnAccount(accountRequest);
+        // TODO: test validations
+        
+    }
+    /**
+     * Update an application
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAnApplicationTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String applicationId = applicationIdStringTestValue();
+        
+        ApplicationRequest applicationRequest = applicationRequestApplicationRequestTestValue();
+        
+        ApplicationResult response = apiInstance.updateAnApplication(applicationId, applicationRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ApplicationResult.class);
+        
+    }
+    /**
+     * Update an Incoming Number
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateAnIncomingNumberTest() throws ApiException {
+        ApiClient defaultClient = new ApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+
+        DefaultApi apiInstance = new DefaultApi(defaultClient);
+        
+        
+        String phoneNumberId = phoneNumberIdStringTestValue();
+        
+        IncomingNumberRequest incomingNumberRequest = incomingNumberRequestIncomingNumberRequestTestValue();
+        
+        IncomingNumberResult response = apiInstance.updateAnIncomingNumber(phoneNumberId, incomingNumberRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), IncomingNumberResult.class);
+        
+    }
+
+    private BuyIncomingNumberRequest buyIncomingNumberRequestBuyIncomingNumberRequestTestValue() {
         BuyIncomingNumberRequest request = new BuyIncomingNumberRequest();
         request.setPhoneNumber("TEST-PHONE-NUMBER");
         request.setAlias("TEST-ALIAS");
@@ -883,264 +1239,291 @@ public class DefaultApiTest {
         return request;
     }
 
-    private CreateConferenceRequest createConferenceRequestTestValue(){
+    private CreateConferenceRequest createConferenceRequestCreateConferenceRequestTestValue(){
         CreateConferenceRequest request = new CreateConferenceRequest();
-        request.setAlias(null);
-        request.setPlayBeep(null);
-        request.setRecord(null);
-        request.setStatusCallbackUrl(null);
-        request.setWaitUrl(null);
+        request.setAlias("TEST-ALIAS");
+        request.setPlayBeep(PlayBeep.ALWAYS);
+        request.setRecord(true);
+        request.setStatusCallbackUrl("TEST-STATUS-CALLBACK-URL");
+        request.setWaitUrl("TEST-WAIT-URL");
         return request;
     }
     
-    private ApplicationRequest applicationRequestTestValue() {
+    private ApplicationRequest applicationRequestApplicationRequestTestValue() {
         ApplicationRequest request = new ApplicationRequest();
-        request.setAlias(null);
-        request.setCallConnectUrl(null);
-        request.setSmsFallbackUrl(null);
-        request.setSmsUrl(null);
-        request.setStatusCallbackUrl(null);
-        request.setVoiceFallbackUrl(null);
-        request.setVoiceUrl(null);
+        request.setAlias("TEST-ALIAS");
+        request.setCallConnectUrl("TEST-CALL-CONNECT-URL");
+        request.setSmsFallbackUrl("TEST-SMS-FALLBACK-URL");
+        request.setSmsUrl("TEST-SMS-URL");
+        request.setStatusCallbackUrl("TEST-STATUS-CALLBACK-URL");
+        request.setVoiceFallbackUrl("TEST-VOICE-FALLBACK-URL");
+        request.setVoiceUrl("TEST-VOICE-URL");
         return request;
     }
 
-    private FilterLogsRequest filterLogsRequestTestValue() {
+    private FilterLogsRequest filterLogsRequestFilterLogsRequestTestValue() {
         FilterLogsRequest request = new FilterLogsRequest();
-        request.setPql("");
+        request.setPql("pql_example");
         return request;
     }
     
-    private MessageRequest messageRequestTestValue() {
+    private MessageRequest messageRequestMessageRequestTestValue() {
         MessageRequest request = new MessageRequest();
         request.setAccountId("");
         request.setDateCreated("");
         request.setDateUpdated("");
-        request.setFrom("");
+        request.setFrom("_from_example");
         request.setNotificationUrl("");
         request.setRevision(0);
-        request.setTo("");
+        request.setTo("to_example");
+        request.setText("Example Text");
         request.setUri("");
         return request;
     }
 
-    private UpdateConferenceRequest updateConferenceRequestTestValue() {
+    private UpdateConferenceRequest updateConferenceRequestUpdateConferenceRequestTestValue() {
         UpdateConferenceRequest request = new UpdateConferenceRequest();
-        request.setAlias("");
+        request.setAlias("TEST-ALIAS");
         request.setPlayBeep(PlayBeep.ALWAYS);
         request.setStatus(UpdateConferenceRequestStatus.EMPTY);
         return request;
     }
 
-    private QueueRequest queueRequestTestValue() {
+    private QueueRequest queueRequestQueueRequestTestValue() {
         QueueRequest request = new QueueRequest();
-        request.setAlias("");
+        request.setAlias("TEST-ALIAS");
         request.setMaxSize(0);
         return request;
     }
 
-    private MakeCallRequest makeCallRequestTestValue() {
+    private MakeCallRequest makeCallRequestMakeCallRequestTestValue() {
         MakeCallRequest request = new MakeCallRequest();
-        request.setApplicationId("");
-        request.setCallConnectUrl("");
-        request.setFrom("");
-        request.setIfMachine("");
-        request.setIfMachineUrl("");
-        request.setParentCallId("");
-        request.setSendDigits("");
+        request.setApplicationId("applicationId_example");
+        request.setCallConnectUrl("callConnectUrl_example");
+        request.setFrom("_from_example");
+        request.setIfMachine("ifMachine_example");
+        request.setIfMachineUrl("ifMachineUrl_example");
+        request.setParentCallId("parentCallId_example");
+        request.setSendDigits("sendDigits_example");
         request.setPrivacyMode(false);
         request.setTimeout(300);
-        request.setTo("");
+        request.setTo("to_example");
         return request;
     }
 
-    private UpdateCallRequest updateCallRequestTestValue() {
+    private UpdateCallRequest updateCallRequestUpdateCallRequestTestValue() {
         UpdateCallRequest request = new UpdateCallRequest();
         request.setStatus(UpdateCallRequestStatus.COMPLETED);
         return request;
     }
 
-    private UpdateConferenceParticipantRequest updateConferenceParticipantRequest() {
+    private UpdateConferenceParticipantRequest updateConferenceParticipantUpdateConferenceParticipantRequestRequest() {
         UpdateConferenceParticipantRequest request = new UpdateConferenceParticipantRequest(); 
         request.setListen(false);
         request.setTalk(false);
         return request;
     }
 
-    private AccountRequest accountRequestTestValue() {
+    private AccountRequest accountRequestAccountRequestTestValue() {
         AccountRequest request = new AccountRequest();
-        request.setAlias("");
-        request.setLabel("");
+        request.setAlias("TEST-ALIAS");
+        request.setLabel("label_example");
         return request;
     }
 
-    private IncomingNumberRequest incomingNumberRequestTestValue(){
+    private IncomingNumberRequest incomingNumberRequestIncomingNumberRequestTestValue(){
         IncomingNumberRequest request = new IncomingNumberRequest();
-        request.setAlias("");
-        request.setApplicationId("");
+        request.setAlias("TEST-ALIAS");
+        request.setApplicationId("applicationId_example");
         return request;
     }
 
-    private String aliasTestValue() {
-        String alias = "";
+    private String aliasStringTestValue() {
+        String alias = "TEST-ALIAS";
         return alias;
     }
 
-    private String queueIdTestValue() {
-        String queueId = "";
+    private String queueIdStringTestValue() {
+        String queueId = "queueId_example";
         return queueId;
     }
         
-    private String callIdTestValue() {
-        String callId = "";
+    private String callIdStringTestValue() {
+        String callId = "callId_example";
         return callId;
     }
 
-    private String conferenceIdTestValue() {
-        String conferenceId = "";
+    private String conferenceIdStringTestValue() {
+        String conferenceId = "conferenceId_example";
         return conferenceId;
     }
 
-    private String recordingIdTestValue() {
-        String recordingId = "";
+    private String recordingIdStringTestValue() {
+        String recordingId = "recordingId_examples";
         return recordingId;
     }
 
-    private String applicationIdTestValue() {
-        String applicationId = "";
+    private String applicationIdStringTestValue() {
+        String applicationId = "applicationId_example";
         return applicationId;
     }
 
-    private String phoneNumberIdTestValue() {
-        String phoneNumberId = "";
+    private String phoneNumberIdStringTestValue() {
+        String phoneNumberId = "phoneNumberId_example";
         return phoneNumberId;
     }
 
-    private String messageIdTestValue() {
-        String messageId = "";
+    private String messageIdStringTestValue() {
+        String messageId = "messageId_example";
         return messageId;
     }
      
-    private String regionTestValue() {
-        String region = "";
+    private String regionStringTestValue() {
+        String region = "region_example";
         return region;
     }
     
-    private String countryTestValue() {
-        String country = "";
+    private String countryStringTestValue() {
+        String country = "country_example";
         return country;
     }
     
-    private Boolean voiceEnabledTestValue() {
-        Boolean voiceEnabled = null;
+    private Boolean voiceEnabledBooleanTestValue() {
+        Boolean voiceEnabled = true;
         return voiceEnabled;
     }
     
-    private Boolean smsEnabledTestValue() {
-        Boolean smsEnabled = null;
+    private Boolean smsEnabledBooleanTestValue() {
+        Boolean smsEnabled = true;
         return smsEnabled;
     }
     
-    private Boolean capabilitiesVoiceTestValue() {
-        Boolean capabilitiesVoice = null;
+    private Boolean capabilitiesVoiceBooleanTestValue() {
+        Boolean capabilitiesVoice = true;
         return capabilitiesVoice;
 
     }
     
-    private Boolean capabilitiesSmsTestValue() {
-        Boolean capabilitiesSms = null;
+    private Boolean capabilitiesSmsBooleanTestValue() {
+        Boolean capabilitiesSms = true;
         return capabilitiesSms;
     }
     
-    private Boolean capabilitiesTollFreeTestValue() {
-        Boolean capabilitiesTollFree = null;
+    private Boolean capabilitiesTollBooleanFreeTestValue() {
+        Boolean capabilitiesTollFree = true;
         return capabilitiesTollFree;
     }
     
-    private Boolean capabilitiesTenDLCTestValue() {
-        Boolean capabilitiesTenDLC = null;
+    private Boolean capabilitiesTenDLCBooleanTestValue() {
+        Boolean capabilitiesTenDLC = true;
         return capabilitiesTenDLC;
     }
 
-    private Boolean capabilitiesShortCodeTestValue() {
-        Boolean capabilitiesShortCode = null;
+    private Boolean capabilitiesShortCodeBooleanTestValue() {
+        Boolean capabilitiesShortCode = true;
         return capabilitiesShortCode;
     }
  
-    private Boolean offnetTestValue(){
-        Boolean offnet = null;
+    private Boolean offnetBooleanTestValue(){
+        Boolean offnet = true;
         return offnet;
     }
 
-    private String dateCreatedTestValue() {
-        String dateCreated = "";
+    private String dateCreatedStringTestValue() {
+        String dateCreated = "dateCreated_example";
         return dateCreated;
     }
     
-    private String dateUpdatedTestValue() {
-        String dateUpdated = "";
+    private String dateUpdatedStringTestValue() {
+        String dateUpdated = "dateUpdated_example";
         return dateUpdated;
     }
     
-    private String statusTestValue() {
-        String status = "";
+    private String statusStringTestValue() {
+        String status = "status_example";
         return status;
     }
     
-    private Boolean talkTestValue() {
-        Boolean talk = null;
+    private Boolean talkBooleanTestValue() {
+        Boolean talk = true;
         return talk;
     }
 
-    private Boolean listenTestValue() {
-        Boolean listen = null;
+    private Boolean listenBooleanTestValue() {
+        Boolean listen = true;
         return listen;
     }
 
-    private MessageDirection directionTestValue() {
+    private MessageDirection directionMessageDirectionTestValue() {
         MessageDirection direction = MessageDirection.INBOUND;
         return direction;
     }
 
-    private CallStatus statusTestValue2() {
+    private CallStatus statusCallStatusTestValue() {
         CallStatus status = CallStatus.QUEUED;
         return status;
     }
     
-    private Boolean activeTestValue()
+    private Boolean activeBooleanTestValue()
     {
-        Boolean active = null;
+        Boolean active = false;
         return active;
     }
     
-    private String toTestValue()
+    private String toStringTestValue()
     {
-        String to = "";
+        String to = "to_example";
         return to;
     }
     
-    private String fromTestValue()
+    private String fromStringTestValue()
     {
-        String from = "";
+        String from = "_from_example";
         return from;
     }
     
-    private String startTimeTestValue()
+    private String startTimeStringTestValue()
     {
-        String startTime = "";
+        String startTime = "startTime_example";
         return startTime;
     }
 
-    private String endTimeTestValue()
+    private String endTimeStringTestValue()
     {
-        String endTime = "";
+        String endTime = "endTime_example";
         return endTime;
     }
      
-    private String parentCallIdTestValue()
+    private String parentCallIdStringTestValue()
     {
         String parentCallId = null;
         return parentCallId;
     }
-    
+
+    private String phoneNumberStringTestValue(){
+        String phoneNumber = "phoneNumber_example";
+        return phoneNumber;
+    }
+
+    private Boolean hasApplicationBooleanTestValue(){
+        Boolean hasApplication = true;
+        return hasApplication;
+    }
+
+    private String beginTimeStringTestValue(){
+        String beginTime = "beginTime_example";
+        return beginTime;
+    }
+
+    private Boolean capabilitiesTollFreeBooleanTestValue() {
+        Boolean capabilitiesTollFree = true;
+        return capabilitiesTollFree;
+    }
+
+     private UpdateConferenceParticipantRequest updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue() {
+        UpdateConferenceParticipantRequest request = new UpdateConferenceParticipantRequest();
+        request.setListen(true);
+        request.setTalk(true);
+        return request;
+    } 
 }

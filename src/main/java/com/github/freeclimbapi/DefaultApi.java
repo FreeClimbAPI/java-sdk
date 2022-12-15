@@ -130,6 +130,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -258,6 +261,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -380,6 +386,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -504,6 +513,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -627,6 +639,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -753,6 +768,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -877,6 +895,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -1004,6 +1025,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -1142,6 +1166,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1271,6 +1298,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1398,6 +1428,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -1528,6 +1561,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -1656,6 +1692,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -1787,6 +1826,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -1927,6 +1969,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2064,6 +2109,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2193,6 +2241,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2320,6 +2371,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2440,6 +2494,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -2570,6 +2627,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2699,6 +2759,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -2827,6 +2890,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -2960,6 +3026,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3081,6 +3150,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -3205,6 +3277,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -3377,6 +3452,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3528,6 +3606,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3661,6 +3742,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -3827,6 +3911,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -3986,6 +4073,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -4188,6 +4278,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4351,6 +4444,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4489,6 +4585,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -4637,6 +4736,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -4791,6 +4893,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -4926,6 +5031,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5051,6 +5159,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -5184,6 +5295,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5312,6 +5426,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -5442,6 +5559,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -5575,6 +5695,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -5711,6 +5834,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -5853,6 +5979,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -5984,6 +6113,9 @@ public class DefaultApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
 
         String[] localVarAuthNames = new String[] { "fc" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -6104,6 +6236,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
@@ -6237,6 +6372,9 @@ public class DefaultApi {
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
         }
 
         String[] localVarAuthNames = new String[] { "fc" };
