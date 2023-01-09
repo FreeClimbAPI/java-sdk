@@ -15,7 +15,7 @@ None
 
 ### Changed
 
-- Enums have been implemented in the csharp sdk
+- Enums have been implemented in the java sdk
 - Updated README for enum implementation and testing
 
 <a name="5.0.3"></a>
