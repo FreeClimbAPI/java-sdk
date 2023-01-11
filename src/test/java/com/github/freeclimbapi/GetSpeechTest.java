@@ -13,43 +13,6 @@
 
 package com.github.freeclimbapi;
 
-import com.github.freeclimbapi.AddToConference;
-import com.github.freeclimbapi.CreateConference;
-import com.github.freeclimbapi.Dequeue;
-import com.github.freeclimbapi.Enqueue;
-import com.github.freeclimbapi.GetDigits;
-import com.github.freeclimbapi.GetSpeech;
-import com.github.freeclimbapi.GetSpeechAllOf;
-import com.github.freeclimbapi.Hangup;
-import com.github.freeclimbapi.OutDial;
-import com.github.freeclimbapi.Park;
-import com.github.freeclimbapi.Pause;
-import com.github.freeclimbapi.PerclCommand;
-import com.github.freeclimbapi.Play;
-import com.github.freeclimbapi.PlayEarlyMedia;
-import com.github.freeclimbapi.RecordUtterance;
-import com.github.freeclimbapi.Redirect;
-import com.github.freeclimbapi.Reject;
-import com.github.freeclimbapi.RemoveFromConference;
-import com.github.freeclimbapi.Say;
-import com.github.freeclimbapi.SendDigits;
-import com.github.freeclimbapi.SetListen;
-import com.github.freeclimbapi.SetTalk;
-import com.github.freeclimbapi.Sms;
-import com.github.freeclimbapi.StartRecordCall;
-import com.github.freeclimbapi.TerminateConference;
-import com.github.freeclimbapi.Unpark;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -58,7 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 /**
  * Model tests for GetSpeech
  */
@@ -69,7 +37,6 @@ public class GetSpeechTest {
      */
     @Test
     public void commandTest() {
-
         Assert.assertEquals("GetSpeech", model.getCommand());
     }
 
@@ -78,11 +45,13 @@ public class GetSpeechTest {
      */
     @Test
     public void actionUrlTest() {
-
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
+        try {
+            URI variable = new URI("TEST_STRING");
+            model.setActionUrl(variable); 
+            Assert.assertEquals(variable, model.getActionUrl());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } 
     }
 
     /**
@@ -111,8 +80,9 @@ public class GetSpeechTest {
      */
     @Test
     public void grammarRuleTest() {
-        model.setGrammarRule(false);
-        Assert.assertEquals(false, model.getGrammarRule());
+
+        model.setGrammarRule("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
         
     }
@@ -122,9 +92,8 @@ public class GetSpeechTest {
      */
     @Test
     public void playBeepTest() {
-
-        model.setPlayBeep("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPlayBeep());
+        model.setPlayBeep(false);
+        Assert.assertEquals(false, model.getPlayBeep());
         
         
     }
@@ -211,11 +180,15 @@ public class GetSpeechTest {
 
     @Test
     public void buildTest() throws Exception {
-         
-        model.setActionUrl("TEST_STRING");     
-        model.setGrammarFile("TEST_STRING");  
-        model.setGrammarRule(false);   
-        model.setPlayBeep("TEST_STRING");          
+        try {
+            URI variable = new URI("TEST_STRING");
+            model.setActionUrl(variable); 
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }     
+        model.setGrammarFile("TEST_STRING");   
+        model.setGrammarRule("TEST_STRING");  
+        model.setPlayBeep(false);          
         model.setConfidenceThreshold(new BigDecimal(1.0));  
         model.setSensitivityLevel(new BigDecimal(1.0));    
         model.setPrivacyMode(false);  

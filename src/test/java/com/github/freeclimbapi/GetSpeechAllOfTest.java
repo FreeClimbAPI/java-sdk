@@ -13,18 +13,6 @@
 
 package com.github.freeclimbapi;
 
-import com.github.freeclimbapi.PerclCommand;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -33,7 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.File;
+import java.math.BigDecimal;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 /**
  * Model tests for GetSpeechAllOf
  */
@@ -44,11 +37,13 @@ public class GetSpeechAllOfTest {
      */
     @Test
     public void actionUrlTest() {
-
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
+        try {
+            URI variable = new URI("TEST_STRING");
+            model.setActionUrl(variable); 
+            Assert.assertEquals(variable, model.getActionUrl());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }    
     }
 
     /**
@@ -77,8 +72,9 @@ public class GetSpeechAllOfTest {
      */
     @Test
     public void grammarRuleTest() {
-        model.setGrammarRule(false);
-        Assert.assertEquals(false, model.getGrammarRule());
+
+        model.setGrammarRule("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
         
     }
@@ -88,9 +84,8 @@ public class GetSpeechAllOfTest {
      */
     @Test
     public void playBeepTest() {
-
-        model.setPlayBeep("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPlayBeep());
+        model.setPlayBeep(false);
+        Assert.assertEquals(false, model.getPlayBeep());
         
         
     }

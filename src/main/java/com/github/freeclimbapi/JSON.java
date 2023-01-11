@@ -27,7 +27,8 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
 
-import com.github.freeclimbapi.*;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 import okio.ByteString;
 
 import java.io.IOException;
