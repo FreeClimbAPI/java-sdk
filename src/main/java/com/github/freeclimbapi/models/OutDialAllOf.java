@@ -49,11 +49,11 @@ public class OutDialAllOf {
 
   public static final String SERIALIZED_NAME_CALLING_NUMBER = "callingNumber";
   @SerializedName(SERIALIZED_NAME_CALLING_NUMBER)
-  private BigDecimal callingNumber;
+  private String callingNumber;
 
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
   @SerializedName(SERIALIZED_NAME_DESTINATION)
-  private BigDecimal destination;
+  private String destination;
 
   public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
   @SerializedName(SERIALIZED_NAME_IF_MACHINE)
@@ -128,7 +128,7 @@ public class OutDialAllOf {
   }
 
 
-  public OutDialAllOf callingNumber(BigDecimal callingNumber) {
+  public OutDialAllOf callingNumber(String callingNumber) {
     
     this.callingNumber = callingNumber;
     return this;
@@ -141,17 +141,17 @@ public class OutDialAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "he caller ID to show to the called party when FreeClimb calls. This can be one of the following: The To or From number provided in the first Webhook to your webserver. Any phone number you have purchased from FreeClimb.")
 
-  public BigDecimal getCallingNumber() {
+  public String getCallingNumber() {
     return callingNumber;
   }
 
 
-  public void setCallingNumber(BigDecimal callingNumber) {
+  public void setCallingNumber(String callingNumber) {
     this.callingNumber = callingNumber;
   }
 
 
-  public OutDialAllOf destination(BigDecimal destination) {
+  public OutDialAllOf destination(String destination) {
     
     this.destination = destination;
     return this;
@@ -164,12 +164,12 @@ public class OutDialAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "E.164 representation of the phone number to Call. ")
 
-  public BigDecimal getDestination() {
+  public String getDestination() {
     return destination;
   }
 
 
-  public void setDestination(BigDecimal destination) {
+  public void setDestination(String destination) {
     this.destination = destination;
   }
 
