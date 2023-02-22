@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -69,9 +71,9 @@ public class OutDialTest {
     @Test
     public void callingNumberTest() {
 
+        model.setCallingNumber("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallingNumber());
         
-        model.setCallingNumber(new BigDecimal(1.0));
-        Assert.assertEquals(new BigDecimal(1.0), model.getCallingNumber());
         
     }
 
@@ -81,9 +83,9 @@ public class OutDialTest {
     @Test
     public void destinationTest() {
 
+        model.setDestination("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDestination());
         
-        model.setDestination(new BigDecimal(1.0));
-        Assert.assertEquals(new BigDecimal(1.0), model.getDestination());
         
     }
 
@@ -156,9 +158,9 @@ public class OutDialTest {
     public void buildTest() throws Exception {
          
         model.setActionUrl("TEST_STRING");   
-        model.setCallConnectUrl("TEST_STRING");    
-        model.setCallingNumber(new BigDecimal(1.0));  
-        model.setDestination(new BigDecimal(1.0));   
+        model.setCallConnectUrl("TEST_STRING");   
+        model.setCallingNumber("TEST_STRING");   
+        model.setDestination("TEST_STRING");     
         model.setIfMachineUrl("TEST_STRING");   
         model.setSendDigits("TEST_STRING");   
         model.setStatusCallbackUrl("TEST_STRING");    
