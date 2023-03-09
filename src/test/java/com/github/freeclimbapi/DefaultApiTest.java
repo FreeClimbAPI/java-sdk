@@ -748,7 +748,7 @@ public class DefaultApiTest {
         
         String from = fromStringTestValue();
         
-        CallStatus status = statusCallStatusTestValue();
+        CallStatus callStatus = callStatusCallStatusTestValue();
         
         String startTime = startTimeStringTestValue();
         
@@ -756,7 +756,7 @@ public class DefaultApiTest {
         
         String parentCallId = parentCallIdStringTestValue();
         
-        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId);
+        CallList response = apiInstance.listCalls(active, to, from, callStatus, startTime, endTime, parentCallId);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
         
@@ -1459,7 +1459,7 @@ public class DefaultApiTest {
         return direction;
     }
 
-    private CallStatus statusCallStatusTestValue() {
+    private CallStatus callStatusCallStatusTestValue() {
         CallStatus status = CallStatus.QUEUED;
         return status;
     }
