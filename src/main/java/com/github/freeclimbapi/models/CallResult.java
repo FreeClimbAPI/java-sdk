@@ -79,9 +79,9 @@ public class CallResult {
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
   private String phoneNumberId;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
-  private CallStatus status;
+  public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+  @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+  private CallStatus callStatus;
 
   public static final String SERIALIZED_NAME_START_TIME = "startTime";
   @SerializedName(SERIALIZED_NAME_START_TIME)
@@ -348,26 +348,26 @@ public class CallResult {
   }
 
 
-  public CallResult status(CallStatus status) {
+  public CallResult callStatus(CallStatus callStatus) {
     
-    this.status = status;
+    this.callStatus = callStatus;
     return this;
   }
 
    /**
-   * Get status
-   * @return status
+   * Get callStatus
+   * @return callStatus
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public CallStatus getStatus() {
-    return status;
+  public CallStatus getCallStatus() {
+    return callStatus;
   }
 
 
-  public void setStatus(CallStatus status) {
-    this.status = status;
+  public void setCallStatus(CallStatus callStatus) {
+    this.callStatus = callStatus;
   }
 
 
@@ -574,7 +574,7 @@ public class CallResult {
         Objects.equals(this.from, callResult.from) &&
         Objects.equals(this.to, callResult.to) &&
         Objects.equals(this.phoneNumberId, callResult.phoneNumberId) &&
-        Objects.equals(this.status, callResult.status) &&
+        Objects.equals(this.callStatus, callResult.callStatus) &&
         Objects.equals(this.startTime, callResult.startTime) &&
         Objects.equals(this.connectTime, callResult.connectTime) &&
         Objects.equals(this.endTime, callResult.endTime) &&
@@ -591,7 +591,7 @@ public class CallResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, status, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, callStatus, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -615,7 +615,7 @@ public class CallResult {
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    connectTime: ").append(toIndentedString(connectTime)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");

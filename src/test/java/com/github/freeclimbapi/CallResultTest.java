@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -148,10 +150,10 @@ public class CallResultTest {
     }
 
     /**
-     * Test the property 'status'
+     * Test the property 'callStatus'
      */
     @Test
-    public void statusTest() {
+    public void callStatusTest() {
 
         
     }
