@@ -2,6 +2,8 @@ package com.github.freeclimbapi.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.security.NoSuchAlgorithmException;
+import java.security.InvalidKeyException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
@@ -35,21 +37,24 @@ public class SignatureInformation {
         return (requestTimestamp + tolerance) < currentUnixTimestamp;
     }
 
-    public boolean isSignatureSafe(String requestBody, String signingSecret) {
+    public boolean isSignatureSafe(String requestBody, String signingSecret)
+            throws NoSuchAlgorithmException, InvalidKeyException {
         String hashValue = computeHash(requestBody, signingSecret);
         return signatures.contains(hashValue);
     }
 
-    private String computeHash(String requestBody, String signingSecret) {
+    private String computeHash(String requestBody, String signingSecret)
+            throws NoSuchAlgorithmException, InvalidKeyException {
         String hashHexadecimalValue = "";
         String hashSeedString = requestTimestamp + "." + requestBody;
-        try {
-            Mac mac = Mac.getInstance("HmacSHA256");
-            mac.init(new SecretKeySpec(signingSecret.getBytes(), "HmacSHA256"));
-            hashHexadecimalValue = Hex.encodeHexString(mac.doFinal(hashSeedString.getBytes()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Mac mac = Mac.getInstance("HmacSHA256");
+        mac.init(new SecretKeySpec(signingSecret.getBytes(), "HmacSHA256"));
+        hashHexadecimalValue = Hex.encodeHexString(mac.doFinal(hashSeedString.getBytes()));
+        // try {
+
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
         return hashHexadecimalValue;
     }
 

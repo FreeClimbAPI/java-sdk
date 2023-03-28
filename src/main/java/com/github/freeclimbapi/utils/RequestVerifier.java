@@ -1,6 +1,8 @@
 package com.github.freeclimbapi.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.security.InvalidKeyException;
 import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +16,7 @@ import org.apache.commons.codec.binary.Hex;
 public class RequestVerifier {
 
     public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret,
-            Integer tolerance) {
+            Integer tolerance) throws NoSuchAlgorithmException, InvalidKeyException {
         checkRequestBody(requestBody);
         checkRequestHeader(requestHeader);
         checkSigningSecret(signingSecret);
@@ -24,7 +26,8 @@ public class RequestVerifier {
         verifySignature(info, requestBody, signingSecret);
     }
 
-    public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret) {
+    public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret)
+            throws NoSuchAlgorithmException, InvalidKeyException {
         verifyRequestSignature(requestBody, requestHeader, signingSecret, 5 * 60 * 1000);
     }
 
@@ -65,7 +68,8 @@ public class RequestVerifier {
         }
     }
 
-    public void verifySignature(SignatureInformation info, String requestBody, String signingSecret) {
+    public void verifySignature(SignatureInformation info, String requestBody, String signingSecret)
+            throws NoSuchAlgorithmException, InvalidKeyException {
         if (!info.isSignatureSafe(requestBody, signingSecret)) {
             throw new java.lang.RuntimeException(
                     "Unverified signature request, If this request was unexpected, it may be from a bad actor. Please proceed with caution. If the request was exepected, please check any typos or issues with the signingSecret");
