@@ -60,7 +60,7 @@ public class RequestVerifier {
         }
     }
 
-    public void verifyTolerance(SignatureInformation info, int tolerance) {
+    public void verifyTolerance(SignatureInformation info, Integer tolerance) {
         int currentTime = info.getCurrentUnixTime();
         if (!info.isRequestTimeValid(tolerance)) {
             throw new java.lang.RuntimeException(
