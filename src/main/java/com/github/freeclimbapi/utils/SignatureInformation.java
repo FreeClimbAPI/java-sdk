@@ -49,13 +49,11 @@ public class SignatureInformation {
         String hashSeedString = requestTimestamp + "." + requestBody;
         Mac mac = Mac.getInstance("HmacSHA256");
         mac.init(new SecretKeySpec(signingSecret.getBytes(), "HmacSHA256"));
-        hashHexadecimalValue = Hex.encodeHexString(mac.doFinal(hashSeedString.getBytes()));
-        return hashHexadecimalValue;
+        return Hex.encodeHexString(mac.doFinal(hashSeedString.getBytes()));
     }
 
     public Integer getCurrentUnixTime() {
         Long timeCalculation = (System.currentTimeMillis() / 1000L);
-        Integer unixTime = Integer.valueOf(timeCalculation.intValue());
-        return unixTime;
+        return Integer.valueOf(timeCalculation.intValue());
     }
 }
