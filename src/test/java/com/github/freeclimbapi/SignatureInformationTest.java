@@ -18,18 +18,34 @@ public class SignatureInformationTest {
 
     @Test
     public void isRequestTimeValidTest() {
-        int tolerance = 5 * 60;
+        Integer tolerance = 5 * 60;
         Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
         Assert.assertEquals(isRequestTimeValid, true);
     }
 
     @Test
+    public void isRequestTimeValidTest2() {
+        Integer tolerance = 5 * 60 * 1000;
+        Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
+        Assert.assertEquals(isRequestTimeValid, false);
+    }
+
+    @Test
     public void isSignatureSafeTest() {
-        int tolerance = 5 * 60;
+        Integer tolerance = 5 * 60;
         String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
         String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7793";
         Boolean isSignatureSafe = instance.isSignatureSafe(requestBody, signingSecret);
         Assert.assertEquals(isSignatureSafe, true);
+    }
+
+    @Test
+    public void isSignatureSafeTest2() {
+        Integer tolerance = 5 * 60;
+        String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
+        String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7794";
+        Boolean isSignatureSafe = instance.isSignatureSafe(requestBody, signingSecret);
+        Assert.assertEquals(isSignatureSafe, false);
     }
 
 }

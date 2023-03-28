@@ -12,26 +12,26 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Hex;
 
 public class SignatureInformation {
-    public int requestTimestamp;
+    public Integer requestTimestamp;
     public List<String> signatures;
 
     public SignatureInformation(String requestHeader) {
-        List<String> constructorSignatures = new ArrayList<String>();
+        signatures = new ArrayList<String>();
         String[] signatureHeaders = requestHeader.split(",");
         for (String signatureHeader : signatureHeaders) {
-            String headerKey = signatureHeader.split("=")[0];
-            String headerValue = signatureHeader.split("=")[1];
-            if (headerKey.equals("t")) {
-                requestTimestamp = Integer.valueOf(signatureHeader.split("=")[1]);
-            } else if (headerKey.equals("v1")) {
-                constructorSignatures.add(headerValue);
+            String[] split = signatureHeader.split("=");
+            String header = split[0];
+            String value = split[1];
+            if (header.equals("t")) {
+                requestTimestamp = Integer.valueOf(value);
+            } else if (header.equals("v1")) {
+                signatures.add(value);
             }
         }
-        signatures = constructorSignatures;
     }
 
-    public boolean isRequestTimeValid(int tolerance) {
-        int currentUnixTimestamp = getCurrentUnixTime();
+    public boolean isRequestTimeValid(Integer tolerance) {
+        Integer currentUnixTimestamp = getCurrentUnixTime();
         return (requestTimestamp + tolerance) < currentUnixTimestamp;
     }
 
@@ -53,8 +53,8 @@ public class SignatureInformation {
         return hashHexadecimalValue;
     }
 
-    private int getCurrentUnixTime() {
-        int unixTime = (int) (System.currentTimeMillis() / 1000L);
+    public Integer getCurrentUnixTime() {
+        Integer unixTime = (int) (System.currentTimeMillis() / 1000L);
         return unixTime;
     }
 }

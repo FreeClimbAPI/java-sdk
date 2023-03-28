@@ -14,7 +14,7 @@ import org.apache.commons.codec.binary.Hex;
 public class RequestVerifier {
 
     public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret,
-            int tolerance) {
+            Integer tolerance) {
         checkRequestBody(requestBody);
         checkRequestHeader(requestHeader);
         checkSigningSecret(signingSecret);
@@ -24,6 +24,10 @@ public class RequestVerifier {
         verifySignature(info, requestBody, signingSecret);
     }
 
+    public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret) {
+        verifyRequestSignature(requestBody, requestHeader, signingSecret, 5 * 60 * 1000);
+    }
+
     public void checkRequestBody(String requestBody) {
         if (requestBody == "" || requestBody == null) {
             throw new java.lang.RuntimeException("Request Body cannot be empty or null");
@@ -31,12 +35,12 @@ public class RequestVerifier {
     }
 
     public void checkRequestHeader(String requestHeader) {
-        if (!requestHeader.contains("t=") || !requestHeader.contains("v1=")) {
-            throw new java.lang.RuntimeException(
-                    "Error with request header, ether it is null or an empty string or request header does not meet requirements");
-        } else if (requestHeader == "" || requestHeader == null) {
-            throw new java.lang.RuntimeException(
-                    "Error with request header, ether it is null or an empty string or request header does not meet requirements");
+        if (requestHeader == "" || requestHeader == null) {
+            throw new java.lang.RuntimeException("Error with request header, Request header is empty");
+        } else if (!requestHeader.contains("t=")) {
+            throw new java.lang.RuntimeException("Error with request header, timestamp is not present");
+        } else if (!requestHeader.contains("v1=")) {
+            throw new java.lang.RuntimeException("Error with request header, signatures are not present");
         }
     }
 
@@ -47,16 +51,16 @@ public class RequestVerifier {
     }
 
     public void checkTolerance(int tolerance) {
-        if (!(tolerance > 0) || tolerance >= Integer.MAX_VALUE) {
+        if ((tolerance <= 0) || tolerance >= Integer.MAX_VALUE) {
             throw new java.lang.RuntimeException("Tolerance value must be a positive integer");
         }
     }
 
     public void verifyTolerance(SignatureInformation info, int tolerance) {
-        int currentTime = (int) (System.currentTimeMillis() / 1000L);
+        int currentTime = info.getCurrentUnixTime();
         if (!info.isRequestTimeValid(tolerance)) {
             throw new java.lang.RuntimeException(
-                    "Request time exceeded tolerance threshold. Request:" + info.requestTimestamp
+                    "Request time exceeded tolerance threshold. Request: " + info.requestTimestamp
                             + ", CurrentTime: " + Integer.toString(currentTime) + ", tolerance: " + tolerance);
         }
     }
