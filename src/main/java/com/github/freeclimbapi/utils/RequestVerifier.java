@@ -14,6 +14,7 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Hex;
 
 public class RequestVerifier {
+    public static final Integer tolerance = 5 * 60 * 1000;
 
     public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret,
             Integer tolerance) throws NoSuchAlgorithmException, InvalidKeyException {
@@ -28,7 +29,7 @@ public class RequestVerifier {
 
     public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret)
             throws NoSuchAlgorithmException, InvalidKeyException {
-        verifyRequestSignature(requestBody, requestHeader, signingSecret, 5 * 60 * 1000);
+        verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
     }
 
     public void checkRequestBody(String requestBody) {
@@ -53,7 +54,7 @@ public class RequestVerifier {
         }
     }
 
-    public void checkTolerance(int tolerance) {
+    public void checkTolerance(Integer tolerance) {
         if ((tolerance <= 0) || tolerance >= Integer.MAX_VALUE) {
             throw new java.lang.RuntimeException("Tolerance value must be a positive integer");
         }

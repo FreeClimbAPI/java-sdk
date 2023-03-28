@@ -50,16 +50,12 @@ public class SignatureInformation {
         Mac mac = Mac.getInstance("HmacSHA256");
         mac.init(new SecretKeySpec(signingSecret.getBytes(), "HmacSHA256"));
         hashHexadecimalValue = Hex.encodeHexString(mac.doFinal(hashSeedString.getBytes()));
-        // try {
-
-        // } catch (Exception e) {
-        // e.printStackTrace();
-        // }
         return hashHexadecimalValue;
     }
 
     public Integer getCurrentUnixTime() {
-        Integer unixTime = (int) (System.currentTimeMillis() / 1000L);
+        Long timeCalculation = (System.currentTimeMillis() / 1000L);
+        Integer unixTime = Integer.valueOf(timeCalculation.intValue());
         return unixTime;
     }
 }
