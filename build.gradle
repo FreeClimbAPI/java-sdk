@@ -114,6 +114,7 @@ dependencies {
     implementation 'io.gsonfire:gson-fire:1.8.4'
     implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.7'
     implementation 'org.threeten:threetenbp:1.4.3'
     implementation "jakarta.annotation:jakarta.annotation-api:$jakarta_annotation_version"
     testImplementation 'junit:junit:4.13.1'
