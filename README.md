@@ -341,8 +341,6 @@ Authentication schemes defined for the API:
   Example code down below
 
   ```java
-  {
-
     package com.github.freeclimbapi;
 
     import com.github.freeclimbapi.utils.*;
@@ -358,7 +356,6 @@ Authentication schemes defined for the API:
             RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
         }
      }
-  }
   ```
 
 ## Recommendation
