@@ -334,9 +334,11 @@ Authentication schemes defined for the API:
 
 - To verify the request signature, we will need to use the verifyRequestSignature method within the Request Verifier class
 
-  RequestVerifier.verifyRequestSignature()
+  RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance)
 
   This is a method that you can call directly from the request verifier class, it will throw exceptions depending on whether all parts of the request signature is valid otherwise it will throw a specific error message depending on which request signature part is causing issues
+
+  This method requires a requestBody of type String, a requestHeader of type String, a signingSecret of type String, and a tolerance value of type Integer
 
   Example code down below
 
