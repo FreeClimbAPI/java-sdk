@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.1.3</version>
+  <version>5.2.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.1.3"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.2.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.1.3.jar`
+* `target/freeclimb-java-client-5.2.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -328,6 +328,37 @@ Authentication schemes defined for the API:
 
 - **Type**: HTTP basic authentication
 
+<a name="documentation-for-verify-request-signature"></a>
+
+## Documentation for verifying request signature
+
+- To verify the request signature, we will need to use the verifyRequestSignature method within the Request Verifier class
+
+  RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance)
+
+  This is a method that you can call directly from the request verifier class, it will throw exceptions depending on whether all parts of the request signature is valid otherwise it will throw a specific error message depending on which request signature part is causing issues
+
+  This method requires a requestBody of type String, a requestHeader of type String, a signingSecret of type String, and a tolerance value of type Integer
+
+  Example code down below
+
+  ```java
+    package com.github.freeclimbapi;
+
+    import com.github.freeclimbapi.utils.*;
+    import java.security.NoSuchAlgorithmException;
+    import java.security.InvalidKeyException;
+
+    public class Example {
+        public void verifyRequestSignatureExample() throws NoSuchAlgorithmException, InvalidKeyException {
+            String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
+            String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7793";
+            String requestHeader = "t=1679944186,v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+            Integer tolerance = 5 * 60;
+            RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+        }
+     }
+  ```
 
 ## Recommendation
 
@@ -336,4 +367,3 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 ## Author
 
 support@freeclimb.com
-
