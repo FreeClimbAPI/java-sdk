@@ -30,7 +30,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Request Body cannot be empty or null", exception.getMessage());
@@ -46,7 +46,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Error with request header, timestamp is not present", exception.getMessage());
@@ -61,7 +61,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Error with request header, signatures are not present", exception.getMessage());
@@ -76,7 +76,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Error with request header, Request header is empty", exception.getMessage());
@@ -91,7 +91,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Signing secret cannot be empty or null", exception.getMessage());
@@ -106,7 +106,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Tolerance value must be a positive integer", exception.getMessage());
@@ -121,7 +121,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Tolerance value must be a positive integer", exception.getMessage());
@@ -136,7 +136,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Tolerance value must be a positive integer", exception.getMessage());
@@ -152,7 +152,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals("Request time exceeded tolerance threshold. Request: 1900871395, CurrentTime: "
@@ -168,7 +168,7 @@ public class RequestVerifierTest {
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
-                    instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+                    RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
         assertEquals(
@@ -182,6 +182,6 @@ public class RequestVerifierTest {
         String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7793";
         String requestHeader = "t=1679944186,v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
         Integer tolerance = 5 * 60;
-        instance.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
+        RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
     }
 }
