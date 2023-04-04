@@ -28,18 +28,18 @@ public class RequestVerifier {
         verifier.verifySignature(info, requestBody, signingSecret);
     }
 
-    public void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret)
+    private void verifyRequestSignature(String requestBody, String requestHeader, String signingSecret)
             throws NoSuchAlgorithmException, InvalidKeyException {
         verifyRequestSignature(requestBody, requestHeader, signingSecret, DEFAULT_TOLERANCE);
     }
 
-    public void checkRequestBody(String requestBody) {
+    private void checkRequestBody(String requestBody) {
         if (requestBody == "" || requestBody == null) {
             throw new java.lang.RuntimeException("Request Body cannot be empty or null");
         }
     }
 
-    public void checkRequestHeader(String requestHeader) {
+    private void checkRequestHeader(String requestHeader) {
         if (requestHeader == "" || requestHeader == null) {
             throw new java.lang.RuntimeException("Error with request header, Request header is empty");
         } else if (!requestHeader.contains("t=")) {
@@ -49,19 +49,19 @@ public class RequestVerifier {
         }
     }
 
-    public void checkSigningSecret(String signingSecret) {
+    private void checkSigningSecret(String signingSecret) {
         if (signingSecret.equals("") || signingSecret.equals(null)) {
             throw new java.lang.RuntimeException("Signing secret cannot be empty or null");
         }
     }
 
-    public void checkTolerance(Integer tolerance) {
+    private void checkTolerance(Integer tolerance) {
         if ((tolerance <= 0) || tolerance >= Integer.MAX_VALUE) {
             throw new java.lang.RuntimeException("Tolerance value must be a positive integer");
         }
     }
 
-    public void verifyTolerance(SignatureInformation info, Integer tolerance) {
+    private void verifyTolerance(SignatureInformation info, Integer tolerance) {
         int currentTime = info.getCurrentUnixTime();
         if (!info.isRequestTimeValid(tolerance)) {
             throw new java.lang.RuntimeException(
@@ -70,7 +70,7 @@ public class RequestVerifier {
         }
     }
 
-    public void verifySignature(SignatureInformation info, String requestBody, String signingSecret)
+    private void verifySignature(SignatureInformation info, String requestBody, String signingSecret)
             throws NoSuchAlgorithmException, InvalidKeyException {
         if (!info.isSignatureSafe(requestBody, signingSecret)) {
             throw new java.lang.RuntimeException(
