@@ -758,9 +758,7 @@ public class DefaultApiTest {
         
         List<String> applicationId = applicationIdTestArray();
         
-        Boolean hasApplication = hasApplicationBooleanTestValue();
-        
-        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication);
+        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
         
