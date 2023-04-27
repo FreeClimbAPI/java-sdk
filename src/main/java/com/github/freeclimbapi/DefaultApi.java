@@ -3832,6 +3832,8 @@ public class DefaultApi {
      * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
      * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
+     * @param hasApplication Only show calls which are associated with an Application (applicationId !&#x3D; null) (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3841,7 +3843,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listCallsCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listCallsCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, Boolean hasApplication, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -3896,6 +3898,14 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("parentCallId", parentCallId));
         }
 
+        if (applicationId != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "applicationId", applicationId));
+        }
+
+        if (hasApplication != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("hasApplication", hasApplication));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -3920,10 +3930,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listCallsValidateBeforeCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listCallsValidateBeforeCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, Boolean hasApplication, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = listCallsCall(active, to, from, status, startTime, endTime, parentCallId, _callback);
+        okhttp3.Call localVarCall = listCallsCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication, _callback);
         return localVarCall;
 
     }
@@ -3938,6 +3948,8 @@ public class DefaultApi {
      * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
      * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
+     * @param hasApplication Only show calls which are associated with an Application (applicationId !&#x3D; null) (optional)
      * @return CallList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3946,8 +3958,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public CallList listCalls(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId) throws ApiException {
-        ApiResponse<CallList> localVarResp = listCallsWithHttpInfo(active, to, from, status, startTime, endTime, parentCallId);
+    public CallList listCalls(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, Boolean hasApplication) throws ApiException {
+        ApiResponse<CallList> localVarResp = listCallsWithHttpInfo(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication);
         return localVarResp.getData();
     }
 
@@ -3961,6 +3973,8 @@ public class DefaultApi {
      * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
      * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
+     * @param hasApplication Only show calls which are associated with an Application (applicationId !&#x3D; null) (optional)
      * @return ApiResponse&lt;CallList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3969,8 +3983,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CallList> listCallsWithHttpInfo(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId) throws ApiException {
-        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, null);
+    public ApiResponse<CallList> listCallsWithHttpInfo(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, Boolean hasApplication) throws ApiException {
+        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication, null);
         Type localVarReturnType = new TypeToken<CallList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3985,6 +3999,8 @@ public class DefaultApi {
      * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
      * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
+     * @param hasApplication Only show calls which are associated with an Application (applicationId !&#x3D; null) (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3994,9 +4010,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listCallsAsync(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, final ApiCallback<CallList> _callback) throws ApiException {
+    public okhttp3.Call listCallsAsync(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, Boolean hasApplication, final ApiCallback<CallList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, _callback);
+        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication, _callback);
         Type localVarReturnType = new TypeToken<CallList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

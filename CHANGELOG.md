@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.3.0"></a>
+
+## [5.3.0] 2023-04-03
+
+### Changed
+
+- Introduce application ID filtering for list calls method
+
 <a name="5.2.0"></a>
 
 ## [5.2.0] 2023-04-03

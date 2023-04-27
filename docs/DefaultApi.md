@@ -2012,7 +2012,7 @@ Name | Type | Description  | Notes
 
 <a name="listCalls"></a>
 # **listCalls**
-> CallList listCalls(active, to, from, status, startTime, endTime, parentCallId)
+> CallList listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication)
 
 List Calls
 
@@ -2052,8 +2052,12 @@ public class Example {
     
     String parentCallId = "parentCallId_example"; // String | Only show Calls spawned by the call with this ID.
     
+    List<String> applicationId = Arrays.asList(); // List<String> | Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications.
+    
+    Boolean hasApplication = true; // Boolean | Only show calls which are associated with an Application (applicationId != null)
+    
     try {
-      CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId);
+      CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listCalls");
@@ -2077,6 +2081,8 @@ Name | Type | Description  | Notes
  **startTime** | **String**| Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
  **endTime** | **String**| Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. | [optional]
  **parentCallId** | **String**| Only show Calls spawned by the call with this ID. | [optional]
+ **applicationId** | [**List&lt;String&gt;**](String.md)| Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. | [optional]
+ **hasApplication** | **Boolean**| Only show calls which are associated with an Application (applicationId !&#x3D; null) | [optional]
 
 
 ### Return type

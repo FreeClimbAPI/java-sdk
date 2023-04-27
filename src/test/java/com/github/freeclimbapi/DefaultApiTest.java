@@ -756,7 +756,11 @@ public class DefaultApiTest {
         
         String parentCallId = parentCallIdStringTestValue();
         
-        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId);
+        List<String> applicationId = applicationIdTestArray();
+        
+        Boolean hasApplication = hasApplicationBooleanTestValue();
+        
+        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, hasApplication);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
         
@@ -1442,6 +1446,14 @@ public class DefaultApiTest {
     private String statusStringTestValue() {
         String status = "status_example";
         return status;
+    }
+
+     private List<String> applicationIdTestArray() {
+        List<String> applicationIdArray = new ArrayList<String>();
+        applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000001");
+        applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000002");
+        applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000003");
+        return applicationIdArray;
     }
     
     private Boolean talkBooleanTestValue() {
