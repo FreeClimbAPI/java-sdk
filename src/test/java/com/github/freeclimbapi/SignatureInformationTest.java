@@ -28,7 +28,7 @@ public class SignatureInformationTest {
 
     @Test
     public void isRequestTimeValidTest2() {
-        Integer tolerance = 5 * 60 * 10000;
+        Integer tolerance = Integer.MAX_VALUE - 1679944186;
         Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
         Assert.assertEquals(isRequestTimeValid, false);
     }
