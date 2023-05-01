@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.2.0</version>
+  <version>5.3.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.2.0"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.3.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.2.0.jar`
+* `target/freeclimb-java-client-5.3.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -328,6 +328,7 @@ Authentication schemes defined for the API:
 
 - **Type**: HTTP basic authentication
 
+
 <a name="documentation-for-verify-request-signature"></a>
 
 ## Documentation for verifying request signature
@@ -359,7 +360,7 @@ Authentication schemes defined for the API:
         }
      }
   ```
-
+  
 ## Recommendation
 
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
@@ -367,3 +368,4 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 ## Author
 
 support@freeclimb.com
+

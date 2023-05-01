@@ -425,9 +425,20 @@ public class GetSpeechAllOf {
         Objects.equals(this.privacyMode, getSpeechAllOf.privacyMode);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(actionUrl, grammarType, grammarFile, grammarRule, playBeep, prompts, noInputTimeoutMs, recognitionTimeoutMs, confidenceThreshold, sensitivityLevel, speechCompleteTimeoutMs, speechIncompleteTimeoutMs, privacyMode);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
