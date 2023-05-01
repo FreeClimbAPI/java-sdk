@@ -16,7 +16,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.InvalidKeyException;
 
 public class SignatureInformationTest {
-    private String requestHeader = "t=1679944186,v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+    private int timestamp = 1679944186;
+    private String requestHeader = "t=" + Integer.toString(timestamp)
+            + ",v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
     private final SignatureInformation instance = new SignatureInformation(requestHeader);
 
     @Test
@@ -28,7 +30,7 @@ public class SignatureInformationTest {
 
     @Test
     public void isRequestTimeValidTest2() {
-        Integer tolerance = 5 * 60 * 10000;
+        Integer tolerance = Integer.MAX_VALUE - timestamp;
         Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
         Assert.assertEquals(isRequestTimeValid, false);
     }
