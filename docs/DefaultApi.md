@@ -70,16 +70,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     BuyIncomingNumberRequest buyIncomingNumberRequest = new BuyIncomingNumberRequest(); // BuyIncomingNumberRequest | Incoming Number transaction details
     
@@ -140,16 +138,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     CreateConferenceRequest createConferenceRequest = new CreateConferenceRequest(); // CreateConferenceRequest | Conference to create
     
@@ -210,16 +206,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     QueueRequest queueRequest = new QueueRequest(); // QueueRequest | Queue details used to create a queue
     
@@ -280,16 +274,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     ApplicationRequest applicationRequest = new ApplicationRequest(); // ApplicationRequest | Application Details
     
@@ -350,16 +342,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
     
@@ -419,16 +409,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | String that uniquely identifies this application resource.
     
@@ -488,16 +476,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
     
@@ -557,16 +543,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
     
@@ -630,16 +614,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies this queue resource.
     
@@ -700,16 +682,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
     
@@ -770,16 +750,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     FilterLogsRequest filterLogsRequest = new FilterLogsRequest(); // FilterLogsRequest | Filter logs request paramters
     
@@ -840,16 +818,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
     
@@ -910,16 +886,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | A string that uniquely identifies this conference resource.
     
@@ -980,16 +954,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
     
@@ -1053,16 +1025,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
     
@@ -1126,16 +1096,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | A string that uniquely identifies this queue resource.
     
@@ -1196,16 +1164,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
     
@@ -1266,16 +1232,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     try {
       AccountResult result = apiInstance.getAnAccount();
@@ -1331,16 +1295,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | A string that uniquely identifies this application resource.
     
@@ -1401,16 +1363,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
     
@@ -1471,16 +1431,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String messageId = "messageId_example"; // String | String that uniquely identifies this Message resource.
     
@@ -1541,16 +1499,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
     
@@ -1611,16 +1567,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String alias = "alias_example"; // String | Return only the Queue resources with aliases that exactly match this name.
     
@@ -1681,16 +1635,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     try {
       LogList result = apiInstance.listAllAccountLogs();
@@ -1746,16 +1698,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String alias = "alias_example"; // String | Return only applications with aliases that exactly match this value.
     
@@ -1816,16 +1766,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumber = "phoneNumber_example"; // String | PCRE-compatible regular expression to filter against `phoneNumber` field, which is in E.164 format.
     
@@ -1913,16 +1861,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
     
@@ -1983,16 +1929,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
     
@@ -2056,16 +2000,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     Boolean active = false; // Boolean | If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query.
     
@@ -2147,16 +2089,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String status = "status_example"; // String | Only show conferences that currently have the specified status. Valid values: `empty`, `populated`, `inProgress`, or `terminated`.
     
@@ -2226,16 +2166,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumber = "phoneNumber_example"; // String | Only show incoming phone number resources that match this PCRE-compatible regular expression.
     
@@ -2335,16 +2273,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
     
@@ -2405,16 +2341,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
     
@@ -2481,16 +2415,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
     
@@ -2557,16 +2489,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String to = "to_example"; // String | Only show Messages to this phone number.
     
@@ -2639,16 +2569,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     MakeCallRequest makeCallRequest = new MakeCallRequest(); // MakeCallRequest | Call details for making a call
     
@@ -2709,16 +2637,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
     
@@ -2781,16 +2707,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     MessageRequest messageRequest = new MessageRequest(); // MessageRequest | Details to create a message
     
@@ -2851,16 +2775,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
     
@@ -2921,16 +2843,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | String that uniquely identifies this conference resource.
     
@@ -2994,16 +2914,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
     
@@ -3066,16 +2984,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
     
@@ -3142,16 +3058,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | A string that uniquely identifies this Queue resource.
     
@@ -3215,16 +3129,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     AccountRequest accountRequest = new AccountRequest(); // AccountRequest | Account details to update
     
@@ -3284,16 +3196,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | A string that uniquely identifies this application resource.
     
@@ -3357,16 +3267,14 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
-
-    DefaultApi apiInstance = new DefaultApi(fc);
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
     

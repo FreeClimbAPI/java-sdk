@@ -90,13 +90,13 @@ import com.github.freeclimbapi.DefaultApi;
 public class Example {
   public static void main(String[] args) {
     
-    // Configure API Client: fc
-    ApiClient fc = new ApiClient();
-    fc.setBasePath("https://www.freeclimb.com/apiserver");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
+    // Configure API client
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
 
-    DefaultApi apiInstance = new DefaultApi(fc);
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     BuyIncomingNumberRequest buyIncomingNumberRequest = new BuyIncomingNumberRequest(); // BuyIncomingNumberRequest | Incoming Number transaction details
     
