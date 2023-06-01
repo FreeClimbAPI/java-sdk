@@ -15,7 +15,8 @@ None
 
 ### Changed
 
-- Resolve ApiClient class bug for requests
+- Update dependencies related to the ApiClient class
+- Establish standard for connecting to the FreeClimb API Client
 
 <a name="5.3.0"></a>
 
