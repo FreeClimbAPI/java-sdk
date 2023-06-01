@@ -9,6 +9,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.3.2"></a>
+
+## [5.3.2] 2023-06-01
+
+### Changed
+
+- Update dependencies related to the ApiClient class in both build.gradle and pom.xml files
+- Edit github actions to include refreshing dependencies in every build command run
+
 <a name="5.3.1"></a>
 
 ## [5.3.1] 2023-05-25

@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>5.3.1</version>
+    <version>5.3.2</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>
@@ -258,7 +258,7 @@
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>jsr305</artifactId>
-            <version>3.0.2</version>
+            <version>${jsr305-version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -311,7 +311,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>3.12.4</version>
+            <version>${mockito-core-version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -319,9 +319,12 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <jsr305-version>3.0.2</jsr305-version>
+        <swagger-parser-v3-version>2.0.23</swagger-parser-version>
+        <mockito-core-version>3.12.4</mockito-core-version>
         <gson-fire-version>1.8.5</gson-fire-version>
         <swagger-core-version>1.6.3</swagger-core-version>
-        <okhttp-version>4.9.2</okhttp-version>
+        <okhttp-version>4.9.3</okhttp-version>
         <gson-version>2.8.9</gson-version>
         <commons-lang3-version>3.12.0</commons-lang3-version>
         <jackson-databind-nullable-version>0.2.2</jackson-databind-nullable-version>
