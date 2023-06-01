@@ -311,7 +311,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>3.12.4</version>
+            <version>${mockito-core-version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -320,8 +320,8 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <jsr305-version>3.0.2</jsr305-version>
-        <oauth2-version>1.0.1</oauth2-version>
-        <swagger-parser-version>2.0.23</swagger-parser-version>
+        <swagger-parser-v3-version>2.0.23</swagger-parser-version>
+        <mockito-core-version>3.12.4</mockito-core-version>
         <gson-fire-version>1.8.5</gson-fire-version>
         <swagger-core-version>1.6.3</swagger-core-version>
         <okhttp-version>4.9.3</okhttp-version>
