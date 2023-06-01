@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.3.0</version>
+  <version>5.3.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.3.0"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.3.1"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.3.0.jar`
+* `target/freeclimb-java-client-5.3.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -89,13 +89,12 @@ import com.github.freeclimbapi.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
+    
+    // Configure API client
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
-    
-    // Configure HTTP basic authorization: fc
-    HttpBasicAuth fc = (HttpBasicAuth) defaultClient.getAuthentication("fc");
-    fc.setAccountId("YOUR_ACCOUNT_ID");
-    fc.setApiKey("YOUR_API_KEY");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
@@ -368,4 +367,3 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 ## Author
 
 support@freeclimb.com
-

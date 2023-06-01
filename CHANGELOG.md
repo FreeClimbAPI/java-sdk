@@ -9,6 +9,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.3.1"></a>
+
+## [5.3.1] 2023-05-25
+
+### Changed
+
+- Update dependencies related to the ApiClient class
+- Establish standard for connecting to the FreeClimb API Client
+
 <a name="5.3.0"></a>
 
 ## [5.3.0] 2023-04-27

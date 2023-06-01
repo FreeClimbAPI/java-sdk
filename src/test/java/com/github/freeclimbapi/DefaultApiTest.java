@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
 import com.github.freeclimbapi.ApiException;
@@ -18,6 +17,7 @@ import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import static org.junit.Assert.*;
 import com.github.freeclimbapi.Configuration;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -32,7 +32,16 @@ import java.io.File;
  */
 public class DefaultApiTest {
 
-    private final DefaultApi api = new DefaultApi();
+    private DefaultApi apiInstance;
+
+    @Before
+    public void setup() {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://127.0.0.1:4010");
+        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+        defaultClient.setApiKey("YOUR_API_KEY");
+        this.apiInstance = new DefaultApi(defaultClient);
+    }
 
     /**
      * Buy a Phone Number
@@ -43,21 +52,15 @@ public class DefaultApiTest {
      */
     @Test
     public void buyAPhoneNumberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         BuyIncomingNumberRequest buyIncomingNumberRequest = buyIncomingNumberRequestBuyIncomingNumberRequestTestValue();
-        
-        IncomingNumberResult response = apiInstance.buyAPhoneNumber(buyIncomingNumberRequest);
+
+        IncomingNumberResult response = this.apiInstance.buyAPhoneNumber(buyIncomingNumberRequest);
         // TODO: test validations
         assertEquals(response.getClass(), IncomingNumberResult.class);
-        
+
     }
+
     /**
      * Create a Conference
      *
@@ -67,21 +70,15 @@ public class DefaultApiTest {
      */
     @Test
     public void createAConferenceTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         CreateConferenceRequest createConferenceRequest = createConferenceRequestCreateConferenceRequestTestValue();
-        
-        ConferenceResult response = apiInstance.createAConference(createConferenceRequest);
+
+        ConferenceResult response = this.apiInstance.createAConference(createConferenceRequest);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceResult.class);
-        
+
     }
+
     /**
      * Create a Queue
      *
@@ -91,21 +88,15 @@ public class DefaultApiTest {
      */
     @Test
     public void createAQueueTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         QueueRequest queueRequest = queueRequestQueueRequestTestValue();
-        
-        QueueResult response = apiInstance.createAQueue(queueRequest);
+
+        QueueResult response = this.apiInstance.createAQueue(queueRequest);
         // TODO: test validations
         assertEquals(response.getClass(), QueueResult.class);
-        
+
     }
+
     /**
      * Create an application
      *
@@ -115,21 +106,15 @@ public class DefaultApiTest {
      */
     @Test
     public void createAnApplicationTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         ApplicationRequest applicationRequest = applicationRequestApplicationRequestTestValue();
-        
-        ApplicationResult response = apiInstance.createAnApplication(applicationRequest);
+
+        ApplicationResult response = this.apiInstance.createAnApplication(applicationRequest);
         // TODO: test validations
         assertEquals(response.getClass(), ApplicationResult.class);
-        
+
     }
+
     /**
      * Delete a Recording
      *
@@ -139,20 +124,14 @@ public class DefaultApiTest {
      */
     @Test
     public void deleteARecordingTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String recordingId = recordingIdStringTestValue();
-        
-        apiInstance.deleteARecording(recordingId);
+
+        this.apiInstance.deleteARecording(recordingId);
         // TODO: test validations
-        
+
     }
+
     /**
      * Delete an application
      *
@@ -162,20 +141,14 @@ public class DefaultApiTest {
      */
     @Test
     public void deleteAnApplicationTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String applicationId = applicationIdStringTestValue();
-        
-        apiInstance.deleteAnApplication(applicationId);
+
+        this.apiInstance.deleteAnApplication(applicationId);
         // TODO: test validations
-        
+
     }
+
     /**
      * Delete an Incoming Number
      *
@@ -185,20 +158,14 @@ public class DefaultApiTest {
      */
     @Test
     public void deleteAnIncomingNumberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String phoneNumberId = phoneNumberIdStringTestValue();
-        
-        apiInstance.deleteAnIncomingNumber(phoneNumberId);
+
+        this.apiInstance.deleteAnIncomingNumber(phoneNumberId);
         // TODO: test validations
-        
+
     }
+
     /**
      * Dequeue a Member
      *
@@ -208,23 +175,17 @@ public class DefaultApiTest {
      */
     @Test
     public void dequeueAMemberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
+
         String callId = callIdStringTestValue();
-        
-        QueueMember response = apiInstance.dequeueAMember(queueId, callId);
+
+        QueueMember response = this.apiInstance.dequeueAMember(queueId, callId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueMember.class);
-        
+
     }
+
     /**
      * Dequeue Head Member
      *
@@ -234,21 +195,15 @@ public class DefaultApiTest {
      */
     @Test
     public void dequeueHeadMemberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
-        QueueMember response = apiInstance.dequeueHeadMember(queueId);
+
+        QueueMember response = this.apiInstance.dequeueHeadMember(queueId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueMember.class);
-        
+
     }
+
     /**
      * Download a Recording File
      *
@@ -258,21 +213,15 @@ public class DefaultApiTest {
      */
     @Test
     public void downloadARecordingFileTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String recordingId = recordingIdStringTestValue();
-        
-        File response = apiInstance.downloadARecordingFile(recordingId);
+
+        File response = this.apiInstance.downloadARecordingFile(recordingId);
         // TODO: test validations
         assertEquals(response.getClass(), File.class);
-        
+
     }
+
     /**
      * Filter Logs
      *
@@ -282,21 +231,15 @@ public class DefaultApiTest {
      */
     @Test
     public void filterLogsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         FilterLogsRequest filterLogsRequest = filterLogsRequestFilterLogsRequestTestValue();
-        
-        LogList response = apiInstance.filterLogs(filterLogsRequest);
+
+        LogList response = this.apiInstance.filterLogs(filterLogsRequest);
         // TODO: test validations
         assertEquals(response.getClass(), LogList.class);
-        
+
     }
+
     /**
      * Get a Call
      *
@@ -306,21 +249,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getACallTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String callId = callIdStringTestValue();
-        
-        CallResult response = apiInstance.getACall(callId);
+
+        CallResult response = this.apiInstance.getACall(callId);
         // TODO: test validations
         assertEquals(response.getClass(), CallResult.class);
-        
+
     }
+
     /**
      * Get a Conference
      *
@@ -330,21 +267,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getAConferenceTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
-        ConferenceResult response = apiInstance.getAConference(conferenceId);
+
+        ConferenceResult response = this.apiInstance.getAConference(conferenceId);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceResult.class);
-        
+
     }
+
     /**
      * Get a Member
      *
@@ -354,23 +285,17 @@ public class DefaultApiTest {
      */
     @Test
     public void getAMemberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
+
         String callId = callIdStringTestValue();
-        
-        QueueMember response = apiInstance.getAMember(queueId, callId);
+
+        QueueMember response = this.apiInstance.getAMember(queueId, callId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueMember.class);
-        
+
     }
+
     /**
      * Get a Participant
      *
@@ -380,23 +305,17 @@ public class DefaultApiTest {
      */
     @Test
     public void getAParticipantTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
+
         String callId = callIdStringTestValue();
-        
-        ConferenceParticipantResult response = apiInstance.getAParticipant(conferenceId, callId);
+
+        ConferenceParticipantResult response = this.apiInstance.getAParticipant(conferenceId, callId);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceParticipantResult.class);
-        
+
     }
+
     /**
      * Get a Queue
      *
@@ -406,21 +325,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getAQueueTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
-        QueueResult response = apiInstance.getAQueue(queueId);
+
+        QueueResult response = this.apiInstance.getAQueue(queueId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueResult.class);
-        
+
     }
+
     /**
      * Get a Recording
      *
@@ -430,21 +343,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getARecordingTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String recordingId = recordingIdStringTestValue();
-        
-        RecordingResult response = apiInstance.getARecording(recordingId);
+
+        RecordingResult response = this.apiInstance.getARecording(recordingId);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingResult.class);
-        
+
     }
+
     /**
      * Get an Account
      *
@@ -454,19 +361,13 @@ public class DefaultApiTest {
      */
     @Test
     public void getAnAccountTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
-        AccountResult response = apiInstance.getAnAccount();
+        AccountResult response = this.apiInstance.getAnAccount();
         // TODO: test validations
         assertEquals(response.getClass(), AccountResult.class);
-        
+
     }
+
     /**
      * Get an Application
      *
@@ -476,21 +377,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getAnApplicationTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String applicationId = applicationIdStringTestValue();
-        
-        ApplicationResult response = apiInstance.getAnApplication(applicationId);
+
+        ApplicationResult response = this.apiInstance.getAnApplication(applicationId);
         // TODO: test validations
         assertEquals(response.getClass(), ApplicationResult.class);
-        
+
     }
+
     /**
      * Get an Incoming Number
      *
@@ -500,21 +395,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getAnIncomingNumberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String phoneNumberId = phoneNumberIdStringTestValue();
-        
-        IncomingNumberResult response = apiInstance.getAnIncomingNumber(phoneNumberId);
+
+        IncomingNumberResult response = this.apiInstance.getAnIncomingNumber(phoneNumberId);
         // TODO: test validations
         assertEquals(response.getClass(), IncomingNumberResult.class);
-        
+
     }
+
     /**
      * Get an SMS Message
      *
@@ -524,21 +413,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getAnSmsMessageTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String messageId = messageIdStringTestValue();
-        
-        MessageResult response = apiInstance.getAnSmsMessage(messageId);
+
+        MessageResult response = this.apiInstance.getAnSmsMessage(messageId);
         // TODO: test validations
         assertEquals(response.getClass(), MessageResult.class);
-        
+
     }
+
     /**
      * Get Head Member
      *
@@ -548,21 +431,15 @@ public class DefaultApiTest {
      */
     @Test
     public void getHeadMemberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
-        QueueMember response = apiInstance.getHeadMember(queueId);
+
+        QueueMember response = this.apiInstance.getHeadMember(queueId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueMember.class);
-        
+
     }
+
     /**
      * List Active Queues
      *
@@ -572,21 +449,15 @@ public class DefaultApiTest {
      */
     @Test
     public void listActiveQueuesTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String alias = aliasStringTestValue();
-        
-        QueueList response = apiInstance.listActiveQueues(alias);
+
+        QueueList response = this.apiInstance.listActiveQueues(alias);
         // TODO: test validations
         assertEquals(response.getClass(), QueueList.class);
-        
+
     }
+
     /**
      * List All Account Logs
      *
@@ -596,19 +467,13 @@ public class DefaultApiTest {
      */
     @Test
     public void listAllAccountLogsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
-        LogList response = apiInstance.listAllAccountLogs();
+        LogList response = this.apiInstance.listAllAccountLogs();
         // TODO: test validations
         assertEquals(response.getClass(), LogList.class);
-        
+
     }
+
     /**
      * List applications
      *
@@ -618,21 +483,15 @@ public class DefaultApiTest {
      */
     @Test
     public void listApplicationsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String alias = aliasStringTestValue();
-        
-        ApplicationList response = apiInstance.listApplications(alias);
+
+        ApplicationList response = this.apiInstance.listApplications(alias);
         // TODO: test validations
         assertEquals(response.getClass(), ApplicationList.class);
-        
+
     }
+
     /**
      * List available numbers
      *
@@ -642,39 +501,35 @@ public class DefaultApiTest {
      */
     @Test
     public void listAvailableNumbersTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String phoneNumber = phoneNumberStringTestValue();
-        
+
         String region = regionStringTestValue();
-        
+
         String country = countryStringTestValue();
-        
+
         Boolean voiceEnabled = voiceEnabledBooleanTestValue();
-        
+
         Boolean smsEnabled = smsEnabledBooleanTestValue();
-        
+
         Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
-        
+
         Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
-        
+
         Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
-        
+
         Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
-        
+
         Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
-        
-        AvailableNumberList response = apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+
+        AvailableNumberList response = this.apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled,
+                smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC,
+                capabilitiesShortCode);
         // TODO: test validations
         assertEquals(response.getClass(), AvailableNumberList.class);
-        
+
     }
+
     /**
      * List Call Logs
      *
@@ -684,21 +539,15 @@ public class DefaultApiTest {
      */
     @Test
     public void listCallLogsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String callId = callIdStringTestValue();
-        
-        LogList response = apiInstance.listCallLogs(callId);
+
+        LogList response = this.apiInstance.listCallLogs(callId);
         // TODO: test validations
         assertEquals(response.getClass(), LogList.class);
-        
+
     }
+
     /**
      * List Call Recordings
      *
@@ -708,23 +557,17 @@ public class DefaultApiTest {
      */
     @Test
     public void listCallRecordingsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String callId = callIdStringTestValue();
-        
+
         String dateCreated = dateCreatedStringTestValue();
-        
-        RecordingList response = apiInstance.listCallRecordings(callId, dateCreated);
+
+        RecordingList response = this.apiInstance.listCallRecordings(callId, dateCreated);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingList.class);
-        
+
     }
+
     /**
      * List Calls
      *
@@ -734,35 +577,30 @@ public class DefaultApiTest {
      */
     @Test
     public void listCallsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         Boolean active = activeBooleanTestValue();
-        
+
         String to = toStringTestValue();
-        
+
         String from = fromStringTestValue();
-        
+
         CallStatus status = statusCallStatusTestValue();
-        
+
         String startTime = startTimeStringTestValue();
-        
+
         String endTime = endTimeStringTestValue();
-        
+
         String parentCallId = parentCallIdStringTestValue();
-        
+
         List<String> applicationId = applicationIdTestArray();
-        
-        CallList response = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
+
+        CallList response = this.apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId,
+                applicationId);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
-        
+
     }
+
     /**
      * List Conferences
      *
@@ -772,27 +610,21 @@ public class DefaultApiTest {
      */
     @Test
     public void listConferencesTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String status = statusStringTestValue();
-        
+
         String alias = aliasStringTestValue();
-        
+
         String dateCreated = dateCreatedStringTestValue();
-        
+
         String dateUpdated = dateUpdatedStringTestValue();
-        
-        ConferenceList response = apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
+
+        ConferenceList response = this.apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceList.class);
-        
+
     }
+
     /**
      * List Incoming Numbers
      *
@@ -802,47 +634,43 @@ public class DefaultApiTest {
      */
     @Test
     public void listIncomingNumbersTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String phoneNumber = phoneNumberStringTestValue();
-        
+
         String alias = aliasStringTestValue();
-        
+
         String region = regionStringTestValue();
-        
+
         String country = countryStringTestValue();
-        
+
         String applicationId = applicationIdStringTestValue();
-        
+
         Boolean hasApplication = hasApplicationBooleanTestValue();
-        
+
         Boolean voiceEnabled = voiceEnabledBooleanTestValue();
-        
+
         Boolean smsEnabled = smsEnabledBooleanTestValue();
-        
+
         Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
-        
+
         Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
-        
+
         Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
-        
+
         Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
-        
+
         Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
-        
+
         Boolean offnet = offnetBooleanTestValue();
-        
-        IncomingNumberList response = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+
+        IncomingNumberList response = this.apiInstance.listIncomingNumbers(phoneNumber, alias, region, country,
+                applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms,
+                capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
         // TODO: test validations
         assertEquals(response.getClass(), IncomingNumberList.class);
-        
+
     }
+
     /**
      * List Members
      *
@@ -852,21 +680,15 @@ public class DefaultApiTest {
      */
     @Test
     public void listMembersTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
-        QueueMemberList response = apiInstance.listMembers(queueId);
+
+        QueueMemberList response = this.apiInstance.listMembers(queueId);
         // TODO: test validations
         assertEquals(response.getClass(), QueueMemberList.class);
-        
+
     }
+
     /**
      * List Participants
      *
@@ -876,25 +698,19 @@ public class DefaultApiTest {
      */
     @Test
     public void listParticipantsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
+
         Boolean talk = talkBooleanTestValue();
-        
+
         Boolean listen = listenBooleanTestValue();
-        
-        ConferenceParticipantList response = apiInstance.listParticipants(conferenceId, talk, listen);
+
+        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceParticipantList.class);
-        
+
     }
+
     /**
      * List Recordings
      *
@@ -904,25 +720,19 @@ public class DefaultApiTest {
      */
     @Test
     public void listRecordingsTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String callId = callIdStringTestValue();
-        
+
         String conferenceId = conferenceIdStringTestValue();
-        
+
         String dateCreated = dateCreatedStringTestValue();
-        
-        RecordingList response = apiInstance.listRecordings(callId, conferenceId, dateCreated);
+
+        RecordingList response = this.apiInstance.listRecordings(callId, conferenceId, dateCreated);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingList.class);
-        
+
     }
+
     /**
      * List SMS Messages
      *
@@ -932,29 +742,23 @@ public class DefaultApiTest {
      */
     @Test
     public void listSmsMessagesTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String to = toStringTestValue();
-        
+
         String from = fromStringTestValue();
-        
+
         String beginTime = beginTimeStringTestValue();
-        
+
         String endTime = endTimeStringTestValue();
-        
+
         MessageDirection direction = directionMessageDirectionTestValue();
-        
-        MessagesList response = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction);
+
+        MessagesList response = this.apiInstance.listSmsMessages(to, from, beginTime, endTime, direction);
         // TODO: test validations
         assertEquals(response.getClass(), MessagesList.class);
-        
+
     }
+
     /**
      * Make a Call
      *
@@ -964,21 +768,15 @@ public class DefaultApiTest {
      */
     @Test
     public void makeACallTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         MakeCallRequest makeCallRequest = makeCallRequestMakeCallRequestTestValue();
-        
-        CallResult response = apiInstance.makeACall(makeCallRequest);
+
+        CallResult response = this.apiInstance.makeACall(makeCallRequest);
         // TODO: test validations
         assertEquals(response.getClass(), CallResult.class);
-        
+
     }
+
     /**
      * Remove a Participant
      *
@@ -988,22 +786,16 @@ public class DefaultApiTest {
      */
     @Test
     public void removeAParticipantTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
+
         String callId = callIdStringTestValue();
-        
-        apiInstance.removeAParticipant(conferenceId, callId);
+
+        this.apiInstance.removeAParticipant(conferenceId, callId);
         // TODO: test validations
-        
+
     }
+
     /**
      * Send an SMS Message
      *
@@ -1013,21 +805,15 @@ public class DefaultApiTest {
      */
     @Test
     public void sendAnSmsMessageTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         MessageRequest messageRequest = messageRequestMessageRequestTestValue();
-        
-        MessageResult response = apiInstance.sendAnSmsMessage(messageRequest);
+
+        MessageResult response = this.apiInstance.sendAnSmsMessage(messageRequest);
         // TODO: test validations
         assertEquals(response.getClass(), MessageResult.class);
-        
+
     }
+
     /**
      * Stream a Recording File
      *
@@ -1037,21 +823,15 @@ public class DefaultApiTest {
      */
     @Test
     public void streamARecordingFileTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String recordingId = recordingIdStringTestValue();
-        
-        File response = apiInstance.streamARecordingFile(recordingId);
+
+        File response = this.apiInstance.streamARecordingFile(recordingId);
         // TODO: test validations
         assertEquals(response.getClass(), File.class);
-        
+
     }
+
     /**
      * Update a Conference
      *
@@ -1061,23 +841,17 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAConferenceTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
+
         UpdateConferenceRequest updateConferenceRequest = updateConferenceRequestUpdateConferenceRequestTestValue();
-        
-        ConferenceResult response = apiInstance.updateAConference(conferenceId, updateConferenceRequest);
+
+        ConferenceResult response = this.apiInstance.updateAConference(conferenceId, updateConferenceRequest);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceResult.class);
-        
+
     }
+
     /**
      * Update a Live Call
      *
@@ -1087,22 +861,16 @@ public class DefaultApiTest {
      */
     @Test
     public void updateALiveCallTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String callId = callIdStringTestValue();
-        
+
         UpdateCallRequest updateCallRequest = updateCallRequestUpdateCallRequestTestValue();
-        
-        apiInstance.updateALiveCall(callId, updateCallRequest);
+
+        this.apiInstance.updateALiveCall(callId, updateCallRequest);
         // TODO: test validations
-        
+
     }
+
     /**
      * Update a Participant
      *
@@ -1112,25 +880,20 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAParticipantTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String conferenceId = conferenceIdStringTestValue();
-        
+
         String callId = callIdStringTestValue();
-        
+
         UpdateConferenceParticipantRequest updateConferenceParticipantRequest = updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue();
-        
-        ConferenceParticipantResult response = apiInstance.updateAParticipant(conferenceId, callId, updateConferenceParticipantRequest);
+
+        ConferenceParticipantResult response = this.apiInstance.updateAParticipant(conferenceId, callId,
+                updateConferenceParticipantRequest);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceParticipantResult.class);
-        
+
     }
+
     /**
      * Update a Queue
      *
@@ -1140,23 +903,17 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAQueueTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String queueId = queueIdStringTestValue();
-        
+
         QueueRequest queueRequest = queueRequestQueueRequestTestValue();
-        
-        QueueResult response = apiInstance.updateAQueue(queueId, queueRequest);
+
+        QueueResult response = this.apiInstance.updateAQueue(queueId, queueRequest);
         // TODO: test validations
         assertEquals(response.getClass(), QueueResult.class);
-        
+
     }
+
     /**
      * Manage an account
      *
@@ -1166,20 +923,14 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAnAccountTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         AccountRequest accountRequest = accountRequestAccountRequestTestValue();
-        
-        apiInstance.updateAnAccount(accountRequest);
+
+        this.apiInstance.updateAnAccount(accountRequest);
         // TODO: test validations
-        
+
     }
+
     /**
      * Update an application
      *
@@ -1189,23 +940,17 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAnApplicationTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String applicationId = applicationIdStringTestValue();
-        
+
         ApplicationRequest applicationRequest = applicationRequestApplicationRequestTestValue();
-        
-        ApplicationResult response = apiInstance.updateAnApplication(applicationId, applicationRequest);
+
+        ApplicationResult response = this.apiInstance.updateAnApplication(applicationId, applicationRequest);
         // TODO: test validations
         assertEquals(response.getClass(), ApplicationResult.class);
-        
+
     }
+
     /**
      * Update an Incoming Number
      *
@@ -1215,22 +960,15 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAnIncomingNumberTest() throws ApiException {
-        ApiClient defaultClient = new ApiClient();
-        defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("YOUR_ACCOUNT_ID");
-        defaultClient.setApiKey("YOUR_API_KEY");
 
-        DefaultApi apiInstance = new DefaultApi(defaultClient);
-        
-        
         String phoneNumberId = phoneNumberIdStringTestValue();
-        
+
         IncomingNumberRequest incomingNumberRequest = incomingNumberRequestIncomingNumberRequestTestValue();
-        
-        IncomingNumberResult response = apiInstance.updateAnIncomingNumber(phoneNumberId, incomingNumberRequest);
+
+        IncomingNumberResult response = this.apiInstance.updateAnIncomingNumber(phoneNumberId, incomingNumberRequest);
         // TODO: test validations
         assertEquals(response.getClass(), IncomingNumberResult.class);
-        
+
     }
 
     private BuyIncomingNumberRequest buyIncomingNumberRequestBuyIncomingNumberRequestTestValue() {
@@ -1241,7 +979,7 @@ public class DefaultApiTest {
         return request;
     }
 
-    private CreateConferenceRequest createConferenceRequestCreateConferenceRequestTestValue(){
+    private CreateConferenceRequest createConferenceRequestCreateConferenceRequestTestValue() {
         CreateConferenceRequest request = new CreateConferenceRequest();
         request.setAlias("TEST-ALIAS");
         request.setPlayBeep(PlayBeep.ALWAYS);
@@ -1250,7 +988,7 @@ public class DefaultApiTest {
         request.setWaitUrl("TEST-WAIT-URL");
         return request;
     }
-    
+
     private ApplicationRequest applicationRequestApplicationRequestTestValue() {
         ApplicationRequest request = new ApplicationRequest();
         request.setAlias("TEST-ALIAS");
@@ -1268,7 +1006,7 @@ public class DefaultApiTest {
         request.setPql("pql_example");
         return request;
     }
-    
+
     private MessageRequest messageRequestMessageRequestTestValue() {
         MessageRequest request = new MessageRequest();
         request.setAccountId("");
@@ -1320,7 +1058,7 @@ public class DefaultApiTest {
     }
 
     private UpdateConferenceParticipantRequest updateConferenceParticipantUpdateConferenceParticipantRequestRequest() {
-        UpdateConferenceParticipantRequest request = new UpdateConferenceParticipantRequest(); 
+        UpdateConferenceParticipantRequest request = new UpdateConferenceParticipantRequest();
         request.setListen(false);
         request.setTalk(false);
         return request;
@@ -1333,7 +1071,7 @@ public class DefaultApiTest {
         return request;
     }
 
-    private IncomingNumberRequest incomingNumberRequestIncomingNumberRequestTestValue(){
+    private IncomingNumberRequest incomingNumberRequestIncomingNumberRequestTestValue() {
         IncomingNumberRequest request = new IncomingNumberRequest();
         request.setAlias("TEST-ALIAS");
         request.setApplicationId("applicationId_example");
@@ -1349,7 +1087,7 @@ public class DefaultApiTest {
         String queueId = "queueId_example";
         return queueId;
     }
-        
+
     private String callIdStringTestValue() {
         String callId = "callId_example";
         return callId;
@@ -1379,43 +1117,43 @@ public class DefaultApiTest {
         String messageId = "messageId_example";
         return messageId;
     }
-     
+
     private String regionStringTestValue() {
         String region = "region_example";
         return region;
     }
-    
+
     private String countryStringTestValue() {
         String country = "country_example";
         return country;
     }
-    
+
     private Boolean voiceEnabledBooleanTestValue() {
         Boolean voiceEnabled = true;
         return voiceEnabled;
     }
-    
+
     private Boolean smsEnabledBooleanTestValue() {
         Boolean smsEnabled = true;
         return smsEnabled;
     }
-    
+
     private Boolean capabilitiesVoiceBooleanTestValue() {
         Boolean capabilitiesVoice = true;
         return capabilitiesVoice;
 
     }
-    
+
     private Boolean capabilitiesSmsBooleanTestValue() {
         Boolean capabilitiesSms = true;
         return capabilitiesSms;
     }
-    
+
     private Boolean capabilitiesTollBooleanFreeTestValue() {
         Boolean capabilitiesTollFree = true;
         return capabilitiesTollFree;
     }
-    
+
     private Boolean capabilitiesTenDLCBooleanTestValue() {
         Boolean capabilitiesTenDLC = true;
         return capabilitiesTenDLC;
@@ -1425,8 +1163,8 @@ public class DefaultApiTest {
         Boolean capabilitiesShortCode = true;
         return capabilitiesShortCode;
     }
- 
-    private Boolean offnetBooleanTestValue(){
+
+    private Boolean offnetBooleanTestValue() {
         Boolean offnet = true;
         return offnet;
     }
@@ -1435,25 +1173,25 @@ public class DefaultApiTest {
         String dateCreated = "dateCreated_example";
         return dateCreated;
     }
-    
+
     private String dateUpdatedStringTestValue() {
         String dateUpdated = "dateUpdated_example";
         return dateUpdated;
     }
-    
+
     private String statusStringTestValue() {
         String status = "status_example";
         return status;
     }
 
-     private List<String> applicationIdTestArray() {
+    private List<String> applicationIdTestArray() {
         List<String> applicationIdArray = new ArrayList<String>();
         applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000001");
         applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000002");
         applicationIdArray.add("AP0123456789ABCDEFabcedf000000000000000003");
         return applicationIdArray;
     }
-    
+
     private Boolean talkBooleanTestValue() {
         Boolean talk = true;
         return talk;
@@ -1473,54 +1211,48 @@ public class DefaultApiTest {
         CallStatus status = CallStatus.QUEUED;
         return status;
     }
-    
-    private Boolean activeBooleanTestValue()
-    {
+
+    private Boolean activeBooleanTestValue() {
         Boolean active = false;
         return active;
     }
-    
-    private String toStringTestValue()
-    {
+
+    private String toStringTestValue() {
         String to = "to_example";
         return to;
     }
-    
-    private String fromStringTestValue()
-    {
+
+    private String fromStringTestValue() {
         String from = "_from_example";
         return from;
     }
-    
-    private String startTimeStringTestValue()
-    {
+
+    private String startTimeStringTestValue() {
         String startTime = "startTime_example";
         return startTime;
     }
 
-    private String endTimeStringTestValue()
-    {
+    private String endTimeStringTestValue() {
         String endTime = "endTime_example";
         return endTime;
     }
-     
-    private String parentCallIdStringTestValue()
-    {
+
+    private String parentCallIdStringTestValue() {
         String parentCallId = null;
         return parentCallId;
     }
 
-    private String phoneNumberStringTestValue(){
+    private String phoneNumberStringTestValue() {
         String phoneNumber = "phoneNumber_example";
         return phoneNumber;
     }
 
-    private Boolean hasApplicationBooleanTestValue(){
+    private Boolean hasApplicationBooleanTestValue() {
         Boolean hasApplication = true;
         return hasApplication;
     }
 
-    private String beginTimeStringTestValue(){
+    private String beginTimeStringTestValue() {
         String beginTime = "beginTime_example";
         return beginTime;
     }
@@ -1530,10 +1262,10 @@ public class DefaultApiTest {
         return capabilitiesTollFree;
     }
 
-     private UpdateConferenceParticipantRequest updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue() {
+    private UpdateConferenceParticipantRequest updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue() {
         UpdateConferenceParticipantRequest request = new UpdateConferenceParticipantRequest();
         request.setListen(true);
         request.setTalk(true);
         return request;
-    } 
+    }
 }
