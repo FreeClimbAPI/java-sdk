@@ -25,7 +25,13 @@ Method | HTTP request | Description
 [**getAnApplication**](DefaultApi.md#getAnApplication) | **GET** /Accounts/{accountId}/Applications/{applicationId} | Get an Application
 [**getAnIncomingNumber**](DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 [**getAnSmsMessage**](DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
+[**getAnSmsTenDLCBrands**](DefaultApi.md#getAnSmsTenDLCBrands) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands | Get list of SMS 10DLC Brnads
+[**getAnSmsTenDLCCampaigns**](DefaultApi.md#getAnSmsTenDLCCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
+[**getAnSmsTenDLCPartnerCampaigns**](DefaultApi.md#getAnSmsTenDLCPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 [**getHeadMember**](DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
+[**getTenDLCSmsBrand**](DefaultApi.md#getTenDLCSmsBrand) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands/{brandId} | Get a 10DLC SMS Brand
+[**getTenDLCSmsCampaign**](DefaultApi.md#getTenDLCSmsCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns/{campaignId} | Get a 10DLC SMS Campaign
+[**getTenDLCSmsPartnerCampaign**](DefaultApi.md#getTenDLCSmsPartnerCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId} | Get a 10DLC SMS Partner Campaign
 [**listActiveQueues**](DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 [**listAllAccountLogs**](DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 [**listApplications**](DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
@@ -1481,6 +1487,205 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | The specific SMS message that’s been processed by FreeClimb |  -  |
 
+<a name="getAnSmsTenDLCBrands"></a>
+# **getAnSmsTenDLCBrands**
+> SMSTenDLCBrandsListResult getAnSmsTenDLCBrands()
+
+Get list of SMS 10DLC Brnads
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    try {
+      SMSTenDLCBrandsListResult result = apiInstance.getAnSmsTenDLCBrands();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getAnSmsTenDLCBrands");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+
+
+### Return type
+
+[**SMSTenDLCBrandsListResult**](SMSTenDLCBrandsListResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The list SMS 10DLC brands |  -  |
+
+<a name="getAnSmsTenDLCCampaigns"></a>
+# **getAnSmsTenDLCCampaigns**
+> SMSTenDLCCampaignsListResult getAnSmsTenDLCCampaigns(brandId)
+
+Get list of SMS 10DLC Campaigns
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String brandId = "brandId_example"; // String | The unique identifier for a brand
+    
+    try {
+      SMSTenDLCCampaignsListResult result = apiInstance.getAnSmsTenDLCCampaigns(brandId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getAnSmsTenDLCCampaigns");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **brandId** | **String**| The unique identifier for a brand | [optional]
+
+
+### Return type
+
+[**SMSTenDLCCampaignsListResult**](SMSTenDLCCampaignsListResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The list SMS 10DLC campaigns |  -  |
+
+<a name="getAnSmsTenDLCPartnerCampaigns"></a>
+# **getAnSmsTenDLCPartnerCampaigns**
+> SMSTenDLCPartnerCampaignsListResult getAnSmsTenDLCPartnerCampaigns(brandId)
+
+Get list of SMS 10DLC Partner Campaigns
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String brandId = "brandId_example"; // String | The unique identifier for a brand
+    
+    try {
+      SMSTenDLCPartnerCampaignsListResult result = apiInstance.getAnSmsTenDLCPartnerCampaigns(brandId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getAnSmsTenDLCPartnerCampaigns");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **brandId** | **String**| The unique identifier for a brand | [optional]
+
+
+### Return type
+
+[**SMSTenDLCPartnerCampaignsListResult**](SMSTenDLCPartnerCampaignsListResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The list SMS 10DLC partner campaigns |  -  |
+
 <a name="getHeadMember"></a>
 # **getHeadMember**
 > QueueMember getHeadMember(queueId)
@@ -1548,6 +1753,210 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully retrieved queue member |  -  |
+
+<a name="getTenDLCSmsBrand"></a>
+# **getTenDLCSmsBrand**
+> SMSTenDLCBrand getTenDLCSmsBrand(brandId)
+
+Get a 10DLC SMS Brand
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String brandId = "brandId_example"; // String | String that uniquely identifies this brand resource.
+    
+    try {
+      SMSTenDLCBrand result = apiInstance.getTenDLCSmsBrand(brandId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getTenDLCSmsBrand");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **brandId** | **String**| String that uniquely identifies this brand resource. |
+
+
+### Return type
+
+[**SMSTenDLCBrand**](SMSTenDLCBrand.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The specific SMS 10DLC Brand that’s been processed by FreeClimb |  -  |
+
+<a name="getTenDLCSmsCampaign"></a>
+# **getTenDLCSmsCampaign**
+> SMSTenDLCCampaign getTenDLCSmsCampaign(campaignId)
+
+Get a 10DLC SMS Campaign
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String campaignId = "campaignId_example"; // String | String that uniquely identifies this campaign resource.
+    
+    try {
+      SMSTenDLCCampaign result = apiInstance.getTenDLCSmsCampaign(campaignId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getTenDLCSmsCampaign");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **String**| String that uniquely identifies this campaign resource. |
+
+
+### Return type
+
+[**SMSTenDLCCampaign**](SMSTenDLCCampaign.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The specific SMS 10DLC Campaign that’s been processed by FreeClimb |  -  |
+
+<a name="getTenDLCSmsPartnerCampaign"></a>
+# **getTenDLCSmsPartnerCampaign**
+> SMSTenDLCPartnerCampaign getTenDLCSmsPartnerCampaign(campaignId)
+
+Get a 10DLC SMS Partner Campaign
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String campaignId = "campaignId_example"; // String | String that uniquely identifies this campaign resource.
+    
+    try {
+      SMSTenDLCPartnerCampaign result = apiInstance.getTenDLCSmsPartnerCampaign(campaignId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getTenDLCSmsPartnerCampaign");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **String**| String that uniquely identifies this campaign resource. |
+
+
+### Return type
+
+[**SMSTenDLCPartnerCampaign**](SMSTenDLCPartnerCampaign.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb |  -  |
 
 <a name="listActiveQueues"></a>
 # **listActiveQueues**
@@ -2150,7 +2559,7 @@ Name | Type | Description  | Notes
 
 <a name="listIncomingNumbers"></a>
 # **listIncomingNumbers**
-> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet)
+> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet)
 
 List Incoming Numbers
 
@@ -2191,6 +2600,8 @@ public class Example {
     
     Boolean smsEnabled = true; // Boolean | Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers.
     
+    Boolean hasCampaign = true; // Boolean | Indication of whether the phone number has a campaign accociatied with it
+    
     Boolean capabilitiesVoice = true; // Boolean | 
     
     Boolean capabilitiesSms = true; // Boolean | 
@@ -2204,7 +2615,7 @@ public class Example {
     Boolean offnet = true; // Boolean | Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource.
     
     try {
-      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listIncomingNumbers");
@@ -2229,6 +2640,7 @@ Name | Type | Description  | Notes
  **hasApplication** | **Boolean**| Indication of whether the phone number has an application linked to it. | [optional] [default to false]
  **voiceEnabled** | **Boolean**| Indicates whether the phone number can handle Calls. Typically set to true for all numbers. | [optional] [default to true]
  **smsEnabled** | **Boolean**| Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. | [optional] [default to true]
+ **hasCampaign** | **Boolean**| Indication of whether the phone number has a campaign accociatied with it | [optional]
  **capabilitiesVoice** | **Boolean**|  | [optional]
  **capabilitiesSms** | **Boolean**|  | [optional]
  **capabilitiesTollFree** | **Boolean**|  | [optional]

@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.3.3</version>
+  <version>5.4.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.3.3"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.4.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.3.3.jar`
+* `target/freeclimb-java-client-5.4.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -164,7 +164,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getAnApplication**](docs/DefaultApi.md#getAnApplication) | **GET** /Accounts/{accountId}/Applications/{applicationId} | Get an Application
 *DefaultApi* | [**getAnIncomingNumber**](docs/DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 *DefaultApi* | [**getAnSmsMessage**](docs/DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
+*DefaultApi* | [**getAnSmsTenDLCBrands**](docs/DefaultApi.md#getAnSmsTenDLCBrands) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands | Get list of SMS 10DLC Brnads
+*DefaultApi* | [**getAnSmsTenDLCCampaigns**](docs/DefaultApi.md#getAnSmsTenDLCCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
+*DefaultApi* | [**getAnSmsTenDLCPartnerCampaigns**](docs/DefaultApi.md#getAnSmsTenDLCPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 *DefaultApi* | [**getHeadMember**](docs/DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
+*DefaultApi* | [**getTenDLCSmsBrand**](docs/DefaultApi.md#getTenDLCSmsBrand) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands/{brandId} | Get a 10DLC SMS Brand
+*DefaultApi* | [**getTenDLCSmsCampaign**](docs/DefaultApi.md#getTenDLCSmsCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns/{campaignId} | Get a 10DLC SMS Campaign
+*DefaultApi* | [**getTenDLCSmsPartnerCampaign**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId} | Get a 10DLC SMS Partner Campaign
 *DefaultApi* | [**listActiveQueues**](docs/DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 *DefaultApi* | [**listAllAccountLogs**](docs/DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 *DefaultApi* | [**listApplications**](docs/DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
@@ -301,6 +307,16 @@ Class | Method | HTTP request | Description
  - [RemoveFromConference](docs/RemoveFromConference.md)
  - [RemoveFromConferenceAllOf](docs/RemoveFromConferenceAllOf.md)
  - [RequestType](docs/RequestType.md)
+ - [SMSTenDLCBrand](docs/SMSTenDLCBrand.md)
+ - [SMSTenDLCBrandsListResult](docs/SMSTenDLCBrandsListResult.md)
+ - [SMSTenDLCBrandsListResultAllOf](docs/SMSTenDLCBrandsListResultAllOf.md)
+ - [SMSTenDLCCampaign](docs/SMSTenDLCCampaign.md)
+ - [SMSTenDLCCampaignsListResult](docs/SMSTenDLCCampaignsListResult.md)
+ - [SMSTenDLCCampaignsListResultAllOf](docs/SMSTenDLCCampaignsListResultAllOf.md)
+ - [SMSTenDLCPartnerCampaign](docs/SMSTenDLCPartnerCampaign.md)
+ - [SMSTenDLCPartnerCampaignBrand](docs/SMSTenDLCPartnerCampaignBrand.md)
+ - [SMSTenDLCPartnerCampaignsListResult](docs/SMSTenDLCPartnerCampaignsListResult.md)
+ - [SMSTenDLCPartnerCampaignsListResultAllOf](docs/SMSTenDLCPartnerCampaignsListResultAllOf.md)
  - [Say](docs/Say.md)
  - [SayAllOf](docs/SayAllOf.md)
  - [SendDigits](docs/SendDigits.md)
