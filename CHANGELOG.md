@@ -15,7 +15,7 @@ None
 
 ### Changed
 
-- Number management feature for csharp sdk including methods, properties, and testing
+- Number management feature for java sdk including methods, properties, and testing
 
 <a name="5.3.3"></a>
 
