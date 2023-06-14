@@ -14,6 +14,11 @@ package com.github.freeclimbapi.models;
 
 import java.util.Objects;
 import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -67,9 +72,9 @@ public class SMSTenDLCPartnerCampaignsListResult {
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
   private String nextPageUri;
 
-  public static final String SERIALIZED_NAME_QUEUE_MEMBERS = "queueMembers";
-  @SerializedName(SERIALIZED_NAME_QUEUE_MEMBERS)
-  private List<SMSTenDLCPartnerCampaign> queueMembers = null;
+  public static final String SERIALIZED_NAME_PARTNER_CAMPAIGNS = "partnerCampaigns";
+  @SerializedName(SERIALIZED_NAME_PARTNER_CAMPAIGNS)
+  private List<SMSTenDLCPartnerCampaign> partnerCampaigns = null;
 
   public SMSTenDLCPartnerCampaignsListResult() { 
   }
@@ -235,34 +240,34 @@ public class SMSTenDLCPartnerCampaignsListResult {
   }
 
 
-  public SMSTenDLCPartnerCampaignsListResult queueMembers(List<SMSTenDLCPartnerCampaign> queueMembers) {
+  public SMSTenDLCPartnerCampaignsListResult partnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
     
-    this.queueMembers = queueMembers;
+    this.partnerCampaigns = partnerCampaigns;
     return this;
   }
 
-  public SMSTenDLCPartnerCampaignsListResult addQueueMembersItem(SMSTenDLCPartnerCampaign queueMembersItem) {
-    if (this.queueMembers == null) {
-      this.queueMembers = new ArrayList<SMSTenDLCPartnerCampaign>();
+  public SMSTenDLCPartnerCampaignsListResult addPartnerCampaignsItem(SMSTenDLCPartnerCampaign partnerCampaignsItem) {
+    if (this.partnerCampaigns == null) {
+      this.partnerCampaigns = new ArrayList<SMSTenDLCPartnerCampaign>();
     }
-    this.queueMembers.add(queueMembersItem);
+    this.partnerCampaigns.add(partnerCampaignsItem);
     return this;
   }
 
    /**
-   * Get queueMembers
-   * @return queueMembers
+   * Get partnerCampaigns
+   * @return partnerCampaigns
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<SMSTenDLCPartnerCampaign> getQueueMembers() {
-    return queueMembers;
+  public List<SMSTenDLCPartnerCampaign> getPartnerCampaigns() {
+    return partnerCampaigns;
   }
 
 
-  public void setQueueMembers(List<SMSTenDLCPartnerCampaign> queueMembers) {
-    this.queueMembers = queueMembers;
+  public void setPartnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
+    this.partnerCampaigns = partnerCampaigns;
   }
 
 
@@ -282,7 +287,7 @@ public class SMSTenDLCPartnerCampaignsListResult {
         Objects.equals(this.numPages, smSTenDLCPartnerCampaignsListResult.numPages) &&
         Objects.equals(this.pageSize, smSTenDLCPartnerCampaignsListResult.pageSize) &&
         Objects.equals(this.nextPageUri, smSTenDLCPartnerCampaignsListResult.nextPageUri) &&
-        Objects.equals(this.queueMembers, smSTenDLCPartnerCampaignsListResult.queueMembers);
+        Objects.equals(this.partnerCampaigns, smSTenDLCPartnerCampaignsListResult.partnerCampaigns);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -291,7 +296,7 @@ public class SMSTenDLCPartnerCampaignsListResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, queueMembers);
+    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, partnerCampaigns);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -312,7 +317,7 @@ public class SMSTenDLCPartnerCampaignsListResult {
     sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
-    sb.append("    queueMembers: ").append(toIndentedString(queueMembers)).append("\n");
+    sb.append("    partnerCampaigns: ").append(toIndentedString(partnerCampaigns)).append("\n");
     sb.append("}");
     return sb.toString();
   }

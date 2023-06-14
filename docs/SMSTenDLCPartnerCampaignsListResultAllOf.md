@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queueMembers** | [**List&lt;SMSTenDLCPartnerCampaign&gt;**](SMSTenDLCPartnerCampaign.md) |  |  [optional]
+**partnerCampaigns** | [**List&lt;SMSTenDLCPartnerCampaign&gt;**](SMSTenDLCPartnerCampaign.md) |  |  [optional]
 
 
 

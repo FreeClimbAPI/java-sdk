@@ -164,13 +164,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getAnApplication**](docs/DefaultApi.md#getAnApplication) | **GET** /Accounts/{accountId}/Applications/{applicationId} | Get an Application
 *DefaultApi* | [**getAnIncomingNumber**](docs/DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 *DefaultApi* | [**getAnSmsMessage**](docs/DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
-*DefaultApi* | [**getAnSmsTenDLCBrands**](docs/DefaultApi.md#getAnSmsTenDLCBrands) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands | Get list of SMS 10DLC Brnads
-*DefaultApi* | [**getAnSmsTenDLCCampaigns**](docs/DefaultApi.md#getAnSmsTenDLCCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
-*DefaultApi* | [**getAnSmsTenDLCPartnerCampaigns**](docs/DefaultApi.md#getAnSmsTenDLCPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 *DefaultApi* | [**getHeadMember**](docs/DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
 *DefaultApi* | [**getTenDLCSmsBrand**](docs/DefaultApi.md#getTenDLCSmsBrand) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands/{brandId} | Get a 10DLC SMS Brand
+*DefaultApi* | [**getTenDLCSmsBrands**](docs/DefaultApi.md#getTenDLCSmsBrands) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands | Get list of SMS 10DLC Brands
 *DefaultApi* | [**getTenDLCSmsCampaign**](docs/DefaultApi.md#getTenDLCSmsCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns/{campaignId} | Get a 10DLC SMS Campaign
+*DefaultApi* | [**getTenDLCSmsCampaigns**](docs/DefaultApi.md#getTenDLCSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
 *DefaultApi* | [**getTenDLCSmsPartnerCampaign**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId} | Get a 10DLC SMS Partner Campaign
+*DefaultApi* | [**getTenDLCSmsPartnerCampaigns**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 *DefaultApi* | [**listActiveQueues**](docs/DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 *DefaultApi* | [**listAllAccountLogs**](docs/DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 *DefaultApi* | [**listApplications**](docs/DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications

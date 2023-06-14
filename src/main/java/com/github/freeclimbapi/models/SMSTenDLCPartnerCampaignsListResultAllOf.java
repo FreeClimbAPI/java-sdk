@@ -14,6 +14,11 @@ package com.github.freeclimbapi.models;
 
 import java.util.Objects;
 import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -39,41 +44,41 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCPartnerCampaignsListResultAllOf {
-  public static final String SERIALIZED_NAME_QUEUE_MEMBERS = "queueMembers";
-  @SerializedName(SERIALIZED_NAME_QUEUE_MEMBERS)
-  private List<SMSTenDLCPartnerCampaign> queueMembers = null;
+  public static final String SERIALIZED_NAME_PARTNER_CAMPAIGNS = "partnerCampaigns";
+  @SerializedName(SERIALIZED_NAME_PARTNER_CAMPAIGNS)
+  private List<SMSTenDLCPartnerCampaign> partnerCampaigns = null;
 
   public SMSTenDLCPartnerCampaignsListResultAllOf() { 
   }
 
-  public SMSTenDLCPartnerCampaignsListResultAllOf queueMembers(List<SMSTenDLCPartnerCampaign> queueMembers) {
+  public SMSTenDLCPartnerCampaignsListResultAllOf partnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
     
-    this.queueMembers = queueMembers;
+    this.partnerCampaigns = partnerCampaigns;
     return this;
   }
 
-  public SMSTenDLCPartnerCampaignsListResultAllOf addQueueMembersItem(SMSTenDLCPartnerCampaign queueMembersItem) {
-    if (this.queueMembers == null) {
-      this.queueMembers = new ArrayList<SMSTenDLCPartnerCampaign>();
+  public SMSTenDLCPartnerCampaignsListResultAllOf addPartnerCampaignsItem(SMSTenDLCPartnerCampaign partnerCampaignsItem) {
+    if (this.partnerCampaigns == null) {
+      this.partnerCampaigns = new ArrayList<SMSTenDLCPartnerCampaign>();
     }
-    this.queueMembers.add(queueMembersItem);
+    this.partnerCampaigns.add(partnerCampaignsItem);
     return this;
   }
 
    /**
-   * Get queueMembers
-   * @return queueMembers
+   * Get partnerCampaigns
+   * @return partnerCampaigns
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<SMSTenDLCPartnerCampaign> getQueueMembers() {
-    return queueMembers;
+  public List<SMSTenDLCPartnerCampaign> getPartnerCampaigns() {
+    return partnerCampaigns;
   }
 
 
-  public void setQueueMembers(List<SMSTenDLCPartnerCampaign> queueMembers) {
-    this.queueMembers = queueMembers;
+  public void setPartnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
+    this.partnerCampaigns = partnerCampaigns;
   }
 
 
@@ -86,7 +91,7 @@ public class SMSTenDLCPartnerCampaignsListResultAllOf {
       return false;
     }
     SMSTenDLCPartnerCampaignsListResultAllOf smSTenDLCPartnerCampaignsListResultAllOf = (SMSTenDLCPartnerCampaignsListResultAllOf) o;
-    return Objects.equals(this.queueMembers, smSTenDLCPartnerCampaignsListResultAllOf.queueMembers);
+    return Objects.equals(this.partnerCampaigns, smSTenDLCPartnerCampaignsListResultAllOf.partnerCampaigns);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -95,7 +100,7 @@ public class SMSTenDLCPartnerCampaignsListResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(queueMembers);
+    return Objects.hash(partnerCampaigns);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -109,7 +114,7 @@ public class SMSTenDLCPartnerCampaignsListResultAllOf {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SMSTenDLCPartnerCampaignsListResultAllOf {\n");
-    sb.append("    queueMembers: ").append(toIndentedString(queueMembers)).append("\n");
+    sb.append("    partnerCampaigns: ").append(toIndentedString(partnerCampaigns)).append("\n");
     sb.append("}");
     return sb.toString();
   }

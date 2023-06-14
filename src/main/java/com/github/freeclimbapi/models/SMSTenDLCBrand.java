@@ -18,6 +18,7 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
 import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -344,7 +345,7 @@ public class SMSTenDLCBrand {
   private String altBusinessId;
 
   /**
-   * Gets or Sets altBusinessIdType
+   * The type of the Alternative business identifier
    */
   @JsonAdapter(AltBusinessIdTypeEnum.Adapter.class)
   public enum AltBusinessIdTypeEnum {
@@ -1010,12 +1011,12 @@ public class SMSTenDLCBrand {
   }
 
   /**
-   * Get altBusinessIdType
+   * The type of the Alternative business identifier
    * 
    * @return altBusinessIdType
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The type of the Alternative business identifier")
 
   public AltBusinessIdTypeEnum getAltBusinessIdType() {
     return altBusinessIdType;

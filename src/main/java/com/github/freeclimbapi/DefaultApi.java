@@ -2837,388 +2837,6 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
-     * Build call for getAnSmsTenDLCBrands
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCBrandsCall(final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Brands"
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-        else {
-            localVarHeaderParams.put("Content-Type", "");
-        }
-
-        String[] localVarAuthNames = new String[] { "fc" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnSmsTenDLCBrandsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCBrandsCall(_callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Get list of SMS 10DLC Brnads
-     * 
-     * @return SMSTenDLCBrandsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     </table>
-     */
-    public SMSTenDLCBrandsListResult getAnSmsTenDLCBrands() throws ApiException {
-        ApiResponse<SMSTenDLCBrandsListResult> localVarResp = getAnSmsTenDLCBrandsWithHttpInfo();
-        return localVarResp.getData();
-    }
-
-    /**
-     * Get list of SMS 10DLC Brnads
-     * 
-     * @return ApiResponse&lt;SMSTenDLCBrandsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<SMSTenDLCBrandsListResult> getAnSmsTenDLCBrandsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getAnSmsTenDLCBrandsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Get list of SMS 10DLC Brnads (asynchronously)
-     * 
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCBrandsAsync(final ApiCallback<SMSTenDLCBrandsListResult> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCBrandsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getAnSmsTenDLCCampaigns
-     * @param brandId The unique identifier for a brand (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Campaigns"
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (brandId != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
-        }
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-        else {
-            localVarHeaderParams.put("Content-Type", "");
-        }
-
-        String[] localVarAuthNames = new String[] { "fc" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnSmsTenDLCCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCCampaignsCall(brandId, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Get list of SMS 10DLC Campaigns
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @return SMSTenDLCCampaignsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public SMSTenDLCCampaignsListResult getAnSmsTenDLCCampaigns(String brandId) throws ApiException {
-        ApiResponse<SMSTenDLCCampaignsListResult> localVarResp = getAnSmsTenDLCCampaignsWithHttpInfo(brandId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Get list of SMS 10DLC Campaigns
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @return ApiResponse&lt;SMSTenDLCCampaignsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<SMSTenDLCCampaignsListResult> getAnSmsTenDLCCampaignsWithHttpInfo(String brandId) throws ApiException {
-        okhttp3.Call localVarCall = getAnSmsTenDLCCampaignsValidateBeforeCall(brandId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Get list of SMS 10DLC Campaigns (asynchronously)
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCCampaignsListResult> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCCampaignsValidateBeforeCall(brandId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getAnSmsTenDLCPartnerCampaigns
-     * @param brandId The unique identifier for a brand (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCPartnerCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns"
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (brandId != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
-        }
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-        else {
-            localVarHeaderParams.put("Content-Type", "");
-        }
-
-        String[] localVarAuthNames = new String[] { "fc" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnSmsTenDLCPartnerCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
-        
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCPartnerCampaignsCall(brandId, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Get list of SMS 10DLC Partner Campaigns
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @return SMSTenDLCPartnerCampaignsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public SMSTenDLCPartnerCampaignsListResult getAnSmsTenDLCPartnerCampaigns(String brandId) throws ApiException {
-        ApiResponse<SMSTenDLCPartnerCampaignsListResult> localVarResp = getAnSmsTenDLCPartnerCampaignsWithHttpInfo(brandId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Get list of SMS 10DLC Partner Campaigns
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @return ApiResponse&lt;SMSTenDLCPartnerCampaignsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<SMSTenDLCPartnerCampaignsListResult> getAnSmsTenDLCPartnerCampaignsWithHttpInfo(String brandId) throws ApiException {
-        okhttp3.Call localVarCall = getAnSmsTenDLCPartnerCampaignsValidateBeforeCall(brandId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Get list of SMS 10DLC Partner Campaigns (asynchronously)
-     * 
-     * @param brandId The unique identifier for a brand (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getAnSmsTenDLCPartnerCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCPartnerCampaignsListResult> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getAnSmsTenDLCPartnerCampaignsValidateBeforeCall(brandId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
      * Build call for getHeadMember
      * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param _callback Callback for upload/download progress
@@ -3483,6 +3101,128 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
+     * Build call for getTenDLCSmsBrands
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsBrandsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Brands"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTenDLCSmsBrandsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getTenDLCSmsBrandsCall(_callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Brands
+     * 
+     * @return SMSTenDLCBrandsListResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
+     */
+    public SMSTenDLCBrandsListResult getTenDLCSmsBrands() throws ApiException {
+        ApiResponse<SMSTenDLCBrandsListResult> localVarResp = getTenDLCSmsBrandsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get list of SMS 10DLC Brands
+     * 
+     * @return ApiResponse&lt;SMSTenDLCBrandsListResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SMSTenDLCBrandsListResult> getTenDLCSmsBrandsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = getTenDLCSmsBrandsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get list of SMS 10DLC Brands (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsBrandsAsync(final ApiCallback<SMSTenDLCBrandsListResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTenDLCSmsBrandsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getTenDLCSmsCampaign
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback Callback for upload/download progress
@@ -3615,6 +3355,136 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
+     * Build call for getTenDLCSmsCampaigns
+     * @param brandId The unique identifier for a brand (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (brandId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTenDLCSmsCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getTenDLCSmsCampaignsCall(brandId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Campaigns
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @return SMSTenDLCCampaignsListResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public SMSTenDLCCampaignsListResult getTenDLCSmsCampaigns(String brandId) throws ApiException {
+        ApiResponse<SMSTenDLCCampaignsListResult> localVarResp = getTenDLCSmsCampaignsWithHttpInfo(brandId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get list of SMS 10DLC Campaigns
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @return ApiResponse&lt;SMSTenDLCCampaignsListResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SMSTenDLCCampaignsListResult> getTenDLCSmsCampaignsWithHttpInfo(String brandId) throws ApiException {
+        okhttp3.Call localVarCall = getTenDLCSmsCampaignsValidateBeforeCall(brandId, null);
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get list of SMS 10DLC Campaigns (asynchronously)
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCCampaignsListResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTenDLCSmsCampaignsValidateBeforeCall(brandId, _callback);
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getTenDLCSmsPartnerCampaign
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback Callback for upload/download progress
@@ -3743,6 +3613,136 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignValidateBeforeCall(campaignId, _callback);
         Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaign>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getTenDLCSmsPartnerCampaigns
+     * @param brandId The unique identifier for a brand (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsPartnerCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (brandId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTenDLCSmsPartnerCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsCall(brandId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Partner Campaigns
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @return SMSTenDLCPartnerCampaignsListResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public SMSTenDLCPartnerCampaignsListResult getTenDLCSmsPartnerCampaigns(String brandId) throws ApiException {
+        ApiResponse<SMSTenDLCPartnerCampaignsListResult> localVarResp = getTenDLCSmsPartnerCampaignsWithHttpInfo(brandId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get list of SMS 10DLC Partner Campaigns
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @return ApiResponse&lt;SMSTenDLCPartnerCampaignsListResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SMSTenDLCPartnerCampaignsListResult> getTenDLCSmsPartnerCampaignsWithHttpInfo(String brandId) throws ApiException {
+        okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsValidateBeforeCall(brandId, null);
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get list of SMS 10DLC Partner Campaigns (asynchronously)
+     * 
+     * @param brandId The unique identifier for a brand (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTenDLCSmsPartnerCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCPartnerCampaignsListResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsValidateBeforeCall(brandId, _callback);
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4951,7 +4951,7 @@ public class DefaultApi {
      * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
      * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
      * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign accociatied with it (optional)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
      * @param capabilitiesVoice  (optional)
      * @param capabilitiesSms  (optional)
      * @param capabilitiesTollFree  (optional)
@@ -5097,7 +5097,7 @@ public class DefaultApi {
      * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
      * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
      * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign accociatied with it (optional)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
      * @param capabilitiesVoice  (optional)
      * @param capabilitiesSms  (optional)
      * @param capabilitiesTollFree  (optional)
@@ -5128,7 +5128,7 @@ public class DefaultApi {
      * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
      * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
      * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign accociatied with it (optional)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
      * @param capabilitiesVoice  (optional)
      * @param capabilitiesSms  (optional)
      * @param capabilitiesTollFree  (optional)
@@ -5160,7 +5160,7 @@ public class DefaultApi {
      * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
      * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
      * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign accociatied with it (optional)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
      * @param capabilitiesVoice  (optional)
      * @param capabilitiesSms  (optional)
      * @param capabilitiesTollFree  (optional)

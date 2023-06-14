@@ -14,6 +14,11 @@ package com.github.freeclimbapi.models;
 
 import java.util.Objects;
 import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -67,9 +72,9 @@ public class SMSTenDLCBrandsListResult {
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
   private String nextPageUri;
 
-  public static final String SERIALIZED_NAME_QUEUE_MEMBERS = "queueMembers";
-  @SerializedName(SERIALIZED_NAME_QUEUE_MEMBERS)
-  private List<SMSTenDLCBrand> queueMembers = null;
+  public static final String SERIALIZED_NAME_BRANDS = "brands";
+  @SerializedName(SERIALIZED_NAME_BRANDS)
+  private List<SMSTenDLCBrand> brands = null;
 
   public SMSTenDLCBrandsListResult() { 
   }
@@ -235,34 +240,34 @@ public class SMSTenDLCBrandsListResult {
   }
 
 
-  public SMSTenDLCBrandsListResult queueMembers(List<SMSTenDLCBrand> queueMembers) {
+  public SMSTenDLCBrandsListResult brands(List<SMSTenDLCBrand> brands) {
     
-    this.queueMembers = queueMembers;
+    this.brands = brands;
     return this;
   }
 
-  public SMSTenDLCBrandsListResult addQueueMembersItem(SMSTenDLCBrand queueMembersItem) {
-    if (this.queueMembers == null) {
-      this.queueMembers = new ArrayList<SMSTenDLCBrand>();
+  public SMSTenDLCBrandsListResult addBrandsItem(SMSTenDLCBrand brandsItem) {
+    if (this.brands == null) {
+      this.brands = new ArrayList<SMSTenDLCBrand>();
     }
-    this.queueMembers.add(queueMembersItem);
+    this.brands.add(brandsItem);
     return this;
   }
 
    /**
-   * Get queueMembers
-   * @return queueMembers
+   * Get brands
+   * @return brands
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<SMSTenDLCBrand> getQueueMembers() {
-    return queueMembers;
+  public List<SMSTenDLCBrand> getBrands() {
+    return brands;
   }
 
 
-  public void setQueueMembers(List<SMSTenDLCBrand> queueMembers) {
-    this.queueMembers = queueMembers;
+  public void setBrands(List<SMSTenDLCBrand> brands) {
+    this.brands = brands;
   }
 
 
@@ -282,7 +287,7 @@ public class SMSTenDLCBrandsListResult {
         Objects.equals(this.numPages, smSTenDLCBrandsListResult.numPages) &&
         Objects.equals(this.pageSize, smSTenDLCBrandsListResult.pageSize) &&
         Objects.equals(this.nextPageUri, smSTenDLCBrandsListResult.nextPageUri) &&
-        Objects.equals(this.queueMembers, smSTenDLCBrandsListResult.queueMembers);
+        Objects.equals(this.brands, smSTenDLCBrandsListResult.brands);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -291,7 +296,7 @@ public class SMSTenDLCBrandsListResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, queueMembers);
+    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, brands);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -312,7 +317,7 @@ public class SMSTenDLCBrandsListResult {
     sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
-    sb.append("    queueMembers: ").append(toIndentedString(queueMembers)).append("\n");
+    sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("}");
     return sb.toString();
   }

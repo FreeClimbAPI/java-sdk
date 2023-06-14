@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **numPages** | **Integer** | Total number of pages |  [optional]
 **pageSize** | **Integer** | Number of items per page |  [optional]
 **nextPageUri** | **String** | Uri to retrieve the next page of items |  [optional]
-**queueMembers** | [**List&lt;SMSTenDLCCampaign&gt;**](SMSTenDLCCampaign.md) |  |  [optional]
+**campaigns** | [**List&lt;SMSTenDLCCampaign&gt;**](SMSTenDLCCampaign.md) |  |  [optional]
 
 
 

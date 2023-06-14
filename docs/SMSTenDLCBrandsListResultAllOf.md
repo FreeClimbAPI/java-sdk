@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queueMembers** | [**List&lt;SMSTenDLCBrand&gt;**](SMSTenDLCBrand.md) |  |  [optional]
+**brands** | [**List&lt;SMSTenDLCBrand&gt;**](SMSTenDLCBrand.md) |  |  [optional]
 
 
 

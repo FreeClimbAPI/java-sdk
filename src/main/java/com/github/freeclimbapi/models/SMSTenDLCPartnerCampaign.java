@@ -18,6 +18,7 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
 import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -52,13 +53,12 @@ public class SMSTenDLCPartnerCampaign {
   private String campaignId;
 
   /**
-   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created
-   * campaign defaults to ACTIVE status.
+   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. 
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
     ACTIVE("ACTIVE"),
-
+    
     EXPIRED("EXPIRED");
 
     private String value;
@@ -93,7 +93,7 @@ public class SMSTenDLCPartnerCampaign {
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return StatusEnum.fromValue(value);
       }
     }
@@ -207,20 +207,19 @@ public class SMSTenDLCPartnerCampaign {
   @SerializedName(SERIALIZED_NAME_BRAND)
   private SMSTenDLCPartnerCampaignBrand brand;
 
-  public SMSTenDLCPartnerCampaign() {
+  public SMSTenDLCPartnerCampaign() { 
   }
 
   public SMSTenDLCPartnerCampaign accountId(String accountId) {
-
+    
     this.accountId = accountId;
     return this;
   }
 
-  /**
+   /**
    * ID of the account that created this Queue.
-   * 
    * @return accountId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "ID of the account that created this Queue.")
 
@@ -228,22 +227,22 @@ public class SMSTenDLCPartnerCampaign {
     return accountId;
   }
 
+
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
-  public SMSTenDLCPartnerCampaign campaignId(String campaignId) {
 
+  public SMSTenDLCPartnerCampaign campaignId(String campaignId) {
+    
     this.campaignId = campaignId;
     return this;
   }
 
-  /**
-   * Alphanumeric identifier assigned by the registry for a campaign. This
-   * identifier is required by the NetNumber OSR SMS enabling process of 10DLC.
-   * 
+   /**
+   * Alphanumeric identifier assigned by the registry for a campaign. This identifier is required by the NetNumber OSR SMS enabling process of 10DLC.
    * @return campaignId
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Alphanumeric identifier assigned by the registry for a campaign. This identifier is required by the NetNumber OSR SMS enabling process of 10DLC.")
 
@@ -251,22 +250,22 @@ public class SMSTenDLCPartnerCampaign {
     return campaignId;
   }
 
+
   public void setCampaignId(String campaignId) {
     this.campaignId = campaignId;
   }
 
-  public SMSTenDLCPartnerCampaign status(StatusEnum status) {
 
+  public SMSTenDLCPartnerCampaign status(StatusEnum status) {
+    
     this.status = status;
     return this;
   }
 
-  /**
-   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created
-   * campaign defaults to ACTIVE status.
-   * 
+   /**
+   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. 
    * @return status
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ")
 
@@ -274,21 +273,22 @@ public class SMSTenDLCPartnerCampaign {
     return status;
   }
 
+
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
-  public SMSTenDLCPartnerCampaign createDate(OffsetDateTime createDate) {
 
+  public SMSTenDLCPartnerCampaign createDate(OffsetDateTime createDate) {
+    
     this.createDate = createDate;
     return this;
   }
 
-  /**
+   /**
    * Unix timestamp when campaign was created.
-   * 
    * @return createDate
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unix timestamp when campaign was created.")
 
@@ -296,21 +296,22 @@ public class SMSTenDLCPartnerCampaign {
     return createDate;
   }
 
+
   public void setCreateDate(OffsetDateTime createDate) {
     this.createDate = createDate;
   }
 
-  public SMSTenDLCPartnerCampaign brandId(String brandId) {
 
+  public SMSTenDLCPartnerCampaign brandId(String brandId) {
+    
     this.brandId = brandId;
     return this;
   }
 
-  /**
+   /**
    * Alphanumeric identifier of the brand associated with this campaign.
-   * 
    * @return brandId
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Alphanumeric identifier of the brand associated with this campaign.")
 
@@ -318,23 +319,22 @@ public class SMSTenDLCPartnerCampaign {
     return brandId;
   }
 
+
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
-  public SMSTenDLCPartnerCampaign usecase(String usecase) {
 
+  public SMSTenDLCPartnerCampaign usecase(String usecase) {
+    
     this.usecase = usecase;
     return this;
   }
 
-  /**
-   * Campaign usecase. Must be of defined valid types. Use
-   * &#x60;/registry/enum/usecase&#x60; operation to retrieve usecases available
-   * for given brand.
-   * 
+   /**
+   * Campaign usecase. Must be of defined valid types. Use &#x60;/registry/enum/usecase&#x60; operation to retrieve usecases available for given brand.
    * @return usecase
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Campaign usecase. Must be of defined valid types. Use `/registry/enum/usecase` operation to retrieve usecases available for given brand.")
 
@@ -342,21 +342,22 @@ public class SMSTenDLCPartnerCampaign {
     return usecase;
   }
 
+
   public void setUsecase(String usecase) {
     this.usecase = usecase;
   }
 
-  public SMSTenDLCPartnerCampaign description(String description) {
 
+  public SMSTenDLCPartnerCampaign description(String description) {
+    
     this.description = description;
     return this;
   }
 
-  /**
+   /**
    * Summary description of this campaign.
-   * 
    * @return description
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Summary description of this campaign.")
 
@@ -364,21 +365,22 @@ public class SMSTenDLCPartnerCampaign {
     return description;
   }
 
+
   public void setDescription(String description) {
     this.description = description;
   }
 
-  public SMSTenDLCPartnerCampaign embeddedLink(Boolean embeddedLink) {
 
+  public SMSTenDLCPartnerCampaign embeddedLink(Boolean embeddedLink) {
+    
     this.embeddedLink = embeddedLink;
     return this;
   }
 
-  /**
+   /**
    * Does message generated by the campaign include URL link in SMS?
-   * 
    * @return embeddedLink
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does message generated by the campaign include URL link in SMS?")
 
@@ -386,21 +388,22 @@ public class SMSTenDLCPartnerCampaign {
     return embeddedLink;
   }
 
+
   public void setEmbeddedLink(Boolean embeddedLink) {
     this.embeddedLink = embeddedLink;
   }
 
-  public SMSTenDLCPartnerCampaign embeddedPhone(Boolean embeddedPhone) {
 
+  public SMSTenDLCPartnerCampaign embeddedPhone(Boolean embeddedPhone) {
+    
     this.embeddedPhone = embeddedPhone;
     return this;
   }
 
-  /**
+   /**
    * Does message generated by the campaign include phone number in SMS?
-   * 
    * @return embeddedPhone
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does message generated by the campaign include phone number in SMS?")
 
@@ -408,21 +411,22 @@ public class SMSTenDLCPartnerCampaign {
     return embeddedPhone;
   }
 
+
   public void setEmbeddedPhone(Boolean embeddedPhone) {
     this.embeddedPhone = embeddedPhone;
   }
 
-  public SMSTenDLCPartnerCampaign affiliateMarketing(Boolean affiliateMarketing) {
 
+  public SMSTenDLCPartnerCampaign affiliateMarketing(Boolean affiliateMarketing) {
+    
     this.affiliateMarketing = affiliateMarketing;
     return this;
   }
 
-  /**
+   /**
    * Does message content controlled by affiliate marketing other than the brand?
-   * 
    * @return affiliateMarketing
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does message content controlled by affiliate marketing other than the brand?")
 
@@ -430,21 +434,22 @@ public class SMSTenDLCPartnerCampaign {
     return affiliateMarketing;
   }
 
+
   public void setAffiliateMarketing(Boolean affiliateMarketing) {
     this.affiliateMarketing = affiliateMarketing;
   }
 
-  public SMSTenDLCPartnerCampaign numberPool(Boolean numberPool) {
 
+  public SMSTenDLCPartnerCampaign numberPool(Boolean numberPool) {
+    
     this.numberPool = numberPool;
     return this;
   }
 
-  /**
+   /**
    * Does campaign utilize pool of phone nubers?
-   * 
    * @return numberPool
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does campaign utilize pool of phone nubers?")
 
@@ -452,21 +457,22 @@ public class SMSTenDLCPartnerCampaign {
     return numberPool;
   }
 
+
   public void setNumberPool(Boolean numberPool) {
     this.numberPool = numberPool;
   }
 
-  public SMSTenDLCPartnerCampaign ageGated(Boolean ageGated) {
 
+  public SMSTenDLCPartnerCampaign ageGated(Boolean ageGated) {
+    
     this.ageGated = ageGated;
     return this;
   }
 
-  /**
+   /**
    * Age gated content in campaign.
-   * 
    * @return ageGated
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Age gated content in campaign.")
 
@@ -474,21 +480,22 @@ public class SMSTenDLCPartnerCampaign {
     return ageGated;
   }
 
+
   public void setAgeGated(Boolean ageGated) {
     this.ageGated = ageGated;
   }
 
-  public SMSTenDLCPartnerCampaign directLending(Boolean directLending) {
 
+  public SMSTenDLCPartnerCampaign directLending(Boolean directLending) {
+    
     this.directLending = directLending;
     return this;
   }
 
-  /**
+   /**
    * Get directLending
-   * 
    * @return directLending
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -496,21 +503,22 @@ public class SMSTenDLCPartnerCampaign {
     return directLending;
   }
 
+
   public void setDirectLending(Boolean directLending) {
     this.directLending = directLending;
   }
 
-  public SMSTenDLCPartnerCampaign subscriberOptin(Boolean subscriberOptin) {
 
+  public SMSTenDLCPartnerCampaign subscriberOptin(Boolean subscriberOptin) {
+    
     this.subscriberOptin = subscriberOptin;
     return this;
   }
 
-  /**
+   /**
    * Does campaign require subscriber to opt-in before SMS is sent to subscriber?
-   * 
    * @return subscriberOptin
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does campaign require subscriber to opt-in before SMS is sent to subscriber?")
 
@@ -518,21 +526,22 @@ public class SMSTenDLCPartnerCampaign {
     return subscriberOptin;
   }
 
+
   public void setSubscriberOptin(Boolean subscriberOptin) {
     this.subscriberOptin = subscriberOptin;
   }
 
-  public SMSTenDLCPartnerCampaign subscriberOptout(Boolean subscriberOptout) {
 
+  public SMSTenDLCPartnerCampaign subscriberOptout(Boolean subscriberOptout) {
+    
     this.subscriberOptout = subscriberOptout;
     return this;
   }
 
-  /**
+   /**
    * Does campaign support subscriber opt-out keyword(s)?
-   * 
    * @return subscriberOptout
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does campaign support subscriber opt-out keyword(s)?")
 
@@ -540,21 +549,22 @@ public class SMSTenDLCPartnerCampaign {
     return subscriberOptout;
   }
 
+
   public void setSubscriberOptout(Boolean subscriberOptout) {
     this.subscriberOptout = subscriberOptout;
   }
 
-  public SMSTenDLCPartnerCampaign subscriberHelp(Boolean subscriberHelp) {
 
+  public SMSTenDLCPartnerCampaign subscriberHelp(Boolean subscriberHelp) {
+    
     this.subscriberHelp = subscriberHelp;
     return this;
   }
 
-  /**
+   /**
    * Does campaign responds to help keyword(s)?
-   * 
    * @return subscriberHelp
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Does campaign responds to help keyword(s)?")
 
@@ -562,21 +572,22 @@ public class SMSTenDLCPartnerCampaign {
     return subscriberHelp;
   }
 
+
   public void setSubscriberHelp(Boolean subscriberHelp) {
     this.subscriberHelp = subscriberHelp;
   }
 
-  public SMSTenDLCPartnerCampaign sample1(String sample1) {
 
+  public SMSTenDLCPartnerCampaign sample1(String sample1) {
+    
     this.sample1 = sample1;
     return this;
   }
 
-  /**
+   /**
    * Message sample. Some campaign tiers require 1 or more message samples.
-   * 
    * @return sample1
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message sample. Some campaign tiers require 1 or more message samples.")
 
@@ -584,21 +595,22 @@ public class SMSTenDLCPartnerCampaign {
     return sample1;
   }
 
+
   public void setSample1(String sample1) {
     this.sample1 = sample1;
   }
 
-  public SMSTenDLCPartnerCampaign sample2(String sample2) {
 
+  public SMSTenDLCPartnerCampaign sample2(String sample2) {
+    
     this.sample2 = sample2;
     return this;
   }
 
-  /**
+   /**
    * Message sample. Some campaign tiers require 2 or more message samples.
-   * 
    * @return sample2
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message sample. Some campaign tiers require 2 or more message samples.")
 
@@ -606,21 +618,22 @@ public class SMSTenDLCPartnerCampaign {
     return sample2;
   }
 
+
   public void setSample2(String sample2) {
     this.sample2 = sample2;
   }
 
-  public SMSTenDLCPartnerCampaign sample3(String sample3) {
 
+  public SMSTenDLCPartnerCampaign sample3(String sample3) {
+    
     this.sample3 = sample3;
     return this;
   }
 
-  /**
+   /**
    * Message sample. Some campaign tiers require 3 or more message samples.
-   * 
    * @return sample3
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message sample. Some campaign tiers require 3 or more message samples.")
 
@@ -628,21 +641,22 @@ public class SMSTenDLCPartnerCampaign {
     return sample3;
   }
 
+
   public void setSample3(String sample3) {
     this.sample3 = sample3;
   }
 
-  public SMSTenDLCPartnerCampaign sample4(String sample4) {
 
+  public SMSTenDLCPartnerCampaign sample4(String sample4) {
+    
     this.sample4 = sample4;
     return this;
   }
 
-  /**
+   /**
    * Message sample. Some campaign tiers require 4 or more message samples.
-   * 
    * @return sample4
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message sample. Some campaign tiers require 4 or more message samples.")
 
@@ -650,21 +664,22 @@ public class SMSTenDLCPartnerCampaign {
     return sample4;
   }
 
+
   public void setSample4(String sample4) {
     this.sample4 = sample4;
   }
 
-  public SMSTenDLCPartnerCampaign sample5(String sample5) {
 
+  public SMSTenDLCPartnerCampaign sample5(String sample5) {
+    
     this.sample5 = sample5;
     return this;
   }
 
-  /**
+   /**
    * Message sample. Some campaign tiers require 5 or more message samples.
-   * 
    * @return sample5
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message sample. Some campaign tiers require 5 or more message samples.")
 
@@ -672,21 +687,22 @@ public class SMSTenDLCPartnerCampaign {
     return sample5;
   }
 
+
   public void setSample5(String sample5) {
     this.sample5 = sample5;
   }
 
-  public SMSTenDLCPartnerCampaign messageFlow(String messageFlow) {
 
+  public SMSTenDLCPartnerCampaign messageFlow(String messageFlow) {
+    
     this.messageFlow = messageFlow;
     return this;
   }
 
-  /**
+   /**
    * Message flow description.
-   * 
    * @return messageFlow
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Message flow description.")
 
@@ -694,21 +710,22 @@ public class SMSTenDLCPartnerCampaign {
     return messageFlow;
   }
 
+
   public void setMessageFlow(String messageFlow) {
     this.messageFlow = messageFlow;
   }
 
-  public SMSTenDLCPartnerCampaign helpMessage(String helpMessage) {
 
+  public SMSTenDLCPartnerCampaign helpMessage(String helpMessage) {
+    
     this.helpMessage = helpMessage;
     return this;
   }
 
-  /**
+   /**
    * Help message of the campaign.
-   * 
    * @return helpMessage
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Help message of the campaign.")
 
@@ -716,22 +733,22 @@ public class SMSTenDLCPartnerCampaign {
     return helpMessage;
   }
 
+
   public void setHelpMessage(String helpMessage) {
     this.helpMessage = helpMessage;
   }
 
-  public SMSTenDLCPartnerCampaign optinKeywords(String optinKeywords) {
 
+  public SMSTenDLCPartnerCampaign optinKeywords(String optinKeywords) {
+    
     this.optinKeywords = optinKeywords;
     return this;
   }
 
-  /**
-   * Subscriber opt-in keywords. Multiple keywords are comma separated without
-   * space.
-   * 
+   /**
+   * Subscriber opt-in keywords. Multiple keywords are comma separated without space.
    * @return optinKeywords
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Subscriber opt-in keywords. Multiple keywords are comma separated without space.")
 
@@ -739,22 +756,22 @@ public class SMSTenDLCPartnerCampaign {
     return optinKeywords;
   }
 
+
   public void setOptinKeywords(String optinKeywords) {
     this.optinKeywords = optinKeywords;
   }
 
-  public SMSTenDLCPartnerCampaign optoutKeywords(String optoutKeywords) {
 
+  public SMSTenDLCPartnerCampaign optoutKeywords(String optoutKeywords) {
+    
     this.optoutKeywords = optoutKeywords;
     return this;
   }
 
-  /**
-   * Subscriber opt-out keywords. Multiple keywords are comma separated without
-   * space.
-   * 
+   /**
+   * Subscriber opt-out keywords. Multiple keywords are comma separated without space.
    * @return optoutKeywords
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Subscriber opt-out keywords. Multiple keywords are comma separated without space.")
 
@@ -762,22 +779,22 @@ public class SMSTenDLCPartnerCampaign {
     return optoutKeywords;
   }
 
+
   public void setOptoutKeywords(String optoutKeywords) {
     this.optoutKeywords = optoutKeywords;
   }
 
-  public SMSTenDLCPartnerCampaign helpKeywords(String helpKeywords) {
 
+  public SMSTenDLCPartnerCampaign helpKeywords(String helpKeywords) {
+    
     this.helpKeywords = helpKeywords;
     return this;
   }
 
-  /**
-   * Subscriber help keywords. Multiple keywords are comma separated without
-   * space.
-   * 
+   /**
+   * Subscriber help keywords. Multiple keywords are comma separated without space.
    * @return helpKeywords
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Subscriber help keywords. Multiple keywords are comma separated without space.")
 
@@ -785,21 +802,22 @@ public class SMSTenDLCPartnerCampaign {
     return helpKeywords;
   }
 
+
   public void setHelpKeywords(String helpKeywords) {
     this.helpKeywords = helpKeywords;
   }
 
-  public SMSTenDLCPartnerCampaign optinMessage(String optinMessage) {
 
+  public SMSTenDLCPartnerCampaign optinMessage(String optinMessage) {
+    
     this.optinMessage = optinMessage;
     return this;
   }
 
-  /**
+   /**
    * Subscriber opt-in message.
-   * 
    * @return optinMessage
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Subscriber opt-in message.")
 
@@ -807,21 +825,22 @@ public class SMSTenDLCPartnerCampaign {
     return optinMessage;
   }
 
+
   public void setOptinMessage(String optinMessage) {
     this.optinMessage = optinMessage;
   }
 
-  public SMSTenDLCPartnerCampaign optoutMessage(String optoutMessage) {
 
+  public SMSTenDLCPartnerCampaign optoutMessage(String optoutMessage) {
+    
     this.optoutMessage = optoutMessage;
     return this;
   }
 
-  /**
+   /**
    * Subscriber opt-out message.
-   * 
    * @return optoutMessage
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Subscriber opt-out message.")
 
@@ -829,21 +848,22 @@ public class SMSTenDLCPartnerCampaign {
     return optoutMessage;
   }
 
+
   public void setOptoutMessage(String optoutMessage) {
     this.optoutMessage = optoutMessage;
   }
 
-  public SMSTenDLCPartnerCampaign brand(SMSTenDLCPartnerCampaignBrand brand) {
 
+  public SMSTenDLCPartnerCampaign brand(SMSTenDLCPartnerCampaignBrand brand) {
+    
     this.brand = brand;
     return this;
   }
 
-  /**
+   /**
    * Get brand
-   * 
    * @return brand
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -851,9 +871,11 @@ public class SMSTenDLCPartnerCampaign {
     return brand;
   }
 
+
   public void setBrand(SMSTenDLCPartnerCampaignBrand brand) {
     this.brand = brand;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -901,17 +923,14 @@ public class SMSTenDLCPartnerCampaign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, campaignId, status, createDate, brandId, usecase, description, embeddedLink,
-        embeddedPhone, affiliateMarketing, numberPool, ageGated, directLending, subscriberOptin, subscriberOptout,
-        subscriberHelp, sample1, sample2, sample3, sample4, sample5, messageFlow, helpMessage, optinKeywords,
-        optoutKeywords, helpKeywords, optinMessage, optoutMessage, brand);
+    return Objects.hash(accountId, campaignId, status, createDate, brandId, usecase, description, embeddedLink, embeddedPhone, affiliateMarketing, numberPool, ageGated, directLending, subscriberOptin, subscriberOptout, subscriberHelp, sample1, sample2, sample3, sample4, sample5, messageFlow, helpMessage, optinKeywords, optoutKeywords, helpKeywords, optinMessage, optoutMessage, brand);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[] { a.get() }) : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -951,6 +970,7 @@ public class SMSTenDLCPartnerCampaign {
     return sb.toString();
   }
 
+
   /**
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
@@ -963,3 +983,4 @@ public class SMSTenDLCPartnerCampaign {
   }
 
 }
+

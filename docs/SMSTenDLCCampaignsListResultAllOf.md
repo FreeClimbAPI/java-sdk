@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queueMembers** | [**List&lt;SMSTenDLCCampaign&gt;**](SMSTenDLCCampaign.md) |  |  [optional]
+**campaigns** | [**List&lt;SMSTenDLCCampaign&gt;**](SMSTenDLCCampaign.md) |  |  [optional]
 
 
 

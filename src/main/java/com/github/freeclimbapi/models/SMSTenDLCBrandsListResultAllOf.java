@@ -14,6 +14,11 @@ package com.github.freeclimbapi.models;
 
 import java.util.Objects;
 import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -39,41 +44,41 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCBrandsListResultAllOf {
-  public static final String SERIALIZED_NAME_QUEUE_MEMBERS = "queueMembers";
-  @SerializedName(SERIALIZED_NAME_QUEUE_MEMBERS)
-  private List<SMSTenDLCBrand> queueMembers = null;
+  public static final String SERIALIZED_NAME_BRANDS = "brands";
+  @SerializedName(SERIALIZED_NAME_BRANDS)
+  private List<SMSTenDLCBrand> brands = null;
 
   public SMSTenDLCBrandsListResultAllOf() { 
   }
 
-  public SMSTenDLCBrandsListResultAllOf queueMembers(List<SMSTenDLCBrand> queueMembers) {
+  public SMSTenDLCBrandsListResultAllOf brands(List<SMSTenDLCBrand> brands) {
     
-    this.queueMembers = queueMembers;
+    this.brands = brands;
     return this;
   }
 
-  public SMSTenDLCBrandsListResultAllOf addQueueMembersItem(SMSTenDLCBrand queueMembersItem) {
-    if (this.queueMembers == null) {
-      this.queueMembers = new ArrayList<SMSTenDLCBrand>();
+  public SMSTenDLCBrandsListResultAllOf addBrandsItem(SMSTenDLCBrand brandsItem) {
+    if (this.brands == null) {
+      this.brands = new ArrayList<SMSTenDLCBrand>();
     }
-    this.queueMembers.add(queueMembersItem);
+    this.brands.add(brandsItem);
     return this;
   }
 
    /**
-   * Get queueMembers
-   * @return queueMembers
+   * Get brands
+   * @return brands
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<SMSTenDLCBrand> getQueueMembers() {
-    return queueMembers;
+  public List<SMSTenDLCBrand> getBrands() {
+    return brands;
   }
 
 
-  public void setQueueMembers(List<SMSTenDLCBrand> queueMembers) {
-    this.queueMembers = queueMembers;
+  public void setBrands(List<SMSTenDLCBrand> brands) {
+    this.brands = brands;
   }
 
 
@@ -86,7 +91,7 @@ public class SMSTenDLCBrandsListResultAllOf {
       return false;
     }
     SMSTenDLCBrandsListResultAllOf smSTenDLCBrandsListResultAllOf = (SMSTenDLCBrandsListResultAllOf) o;
-    return Objects.equals(this.queueMembers, smSTenDLCBrandsListResultAllOf.queueMembers);
+    return Objects.equals(this.brands, smSTenDLCBrandsListResultAllOf.brands);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -95,7 +100,7 @@ public class SMSTenDLCBrandsListResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(queueMembers);
+    return Objects.hash(brands);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -109,7 +114,7 @@ public class SMSTenDLCBrandsListResultAllOf {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SMSTenDLCBrandsListResultAllOf {\n");
-    sb.append("    queueMembers: ").append(toIndentedString(queueMembers)).append("\n");
+    sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("}");
     return sb.toString();
   }

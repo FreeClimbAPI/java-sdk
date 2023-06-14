@@ -14,6 +14,11 @@ package com.github.freeclimbapi.models;
 
 import java.util.Objects;
 import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -39,41 +44,41 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCCampaignsListResultAllOf {
-  public static final String SERIALIZED_NAME_QUEUE_MEMBERS = "queueMembers";
-  @SerializedName(SERIALIZED_NAME_QUEUE_MEMBERS)
-  private List<SMSTenDLCCampaign> queueMembers = null;
+  public static final String SERIALIZED_NAME_CAMPAIGNS = "campaigns";
+  @SerializedName(SERIALIZED_NAME_CAMPAIGNS)
+  private List<SMSTenDLCCampaign> campaigns = null;
 
   public SMSTenDLCCampaignsListResultAllOf() { 
   }
 
-  public SMSTenDLCCampaignsListResultAllOf queueMembers(List<SMSTenDLCCampaign> queueMembers) {
+  public SMSTenDLCCampaignsListResultAllOf campaigns(List<SMSTenDLCCampaign> campaigns) {
     
-    this.queueMembers = queueMembers;
+    this.campaigns = campaigns;
     return this;
   }
 
-  public SMSTenDLCCampaignsListResultAllOf addQueueMembersItem(SMSTenDLCCampaign queueMembersItem) {
-    if (this.queueMembers == null) {
-      this.queueMembers = new ArrayList<SMSTenDLCCampaign>();
+  public SMSTenDLCCampaignsListResultAllOf addCampaignsItem(SMSTenDLCCampaign campaignsItem) {
+    if (this.campaigns == null) {
+      this.campaigns = new ArrayList<SMSTenDLCCampaign>();
     }
-    this.queueMembers.add(queueMembersItem);
+    this.campaigns.add(campaignsItem);
     return this;
   }
 
    /**
-   * Get queueMembers
-   * @return queueMembers
+   * Get campaigns
+   * @return campaigns
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<SMSTenDLCCampaign> getQueueMembers() {
-    return queueMembers;
+  public List<SMSTenDLCCampaign> getCampaigns() {
+    return campaigns;
   }
 
 
-  public void setQueueMembers(List<SMSTenDLCCampaign> queueMembers) {
-    this.queueMembers = queueMembers;
+  public void setCampaigns(List<SMSTenDLCCampaign> campaigns) {
+    this.campaigns = campaigns;
   }
 
 
@@ -86,7 +91,7 @@ public class SMSTenDLCCampaignsListResultAllOf {
       return false;
     }
     SMSTenDLCCampaignsListResultAllOf smSTenDLCCampaignsListResultAllOf = (SMSTenDLCCampaignsListResultAllOf) o;
-    return Objects.equals(this.queueMembers, smSTenDLCCampaignsListResultAllOf.queueMembers);
+    return Objects.equals(this.campaigns, smSTenDLCCampaignsListResultAllOf.campaigns);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -95,7 +100,7 @@ public class SMSTenDLCCampaignsListResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(queueMembers);
+    return Objects.hash(campaigns);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -109,7 +114,7 @@ public class SMSTenDLCCampaignsListResultAllOf {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SMSTenDLCCampaignsListResultAllOf {\n");
-    sb.append("    queueMembers: ").append(toIndentedString(queueMembers)).append("\n");
+    sb.append("    campaigns: ").append(toIndentedString(campaigns)).append("\n");
     sb.append("}");
     return sb.toString();
   }
