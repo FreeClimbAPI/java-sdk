@@ -13,7 +13,7 @@ None
 
 ## [5.4.0] 2023-06-06
 
-### Changed
+### Added
 
 - Number management feature for java sdk including methods, properties, and testing
 
