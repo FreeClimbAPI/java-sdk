@@ -441,6 +441,112 @@ public class DefaultApiTest {
     }
 
     /**
+     * Get a 10DLC SMS Brand
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsBrandTest() throws ApiException {
+
+        String brandId = brandIdStringTestValue();
+
+        SMSTenDLCBrand response = this.apiInstance.getTenDLCSmsBrand(brandId);
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCBrand.class);
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Brands
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsBrandsTest() throws ApiException {
+
+        SMSTenDLCBrandsListResult response = this.apiInstance.getTenDLCSmsBrands();
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCBrandsListResult.class);
+
+    }
+
+    /**
+     * Get a 10DLC SMS Campaign
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsCampaignTest() throws ApiException {
+
+        String campaignId = campaignIdStringTestValue();
+
+        SMSTenDLCCampaign response = this.apiInstance.getTenDLCSmsCampaign(campaignId);
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCCampaign.class);
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Campaigns
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsCampaignsTest() throws ApiException {
+
+        String brandId = brandIdStringTestValue();
+
+        SMSTenDLCCampaignsListResult response = this.apiInstance.getTenDLCSmsCampaigns(brandId);
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCCampaignsListResult.class);
+
+    }
+
+    /**
+     * Get a 10DLC SMS Partner Campaign
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsPartnerCampaignTest() throws ApiException {
+
+        String campaignId = campaignIdStringTestValue();
+
+        SMSTenDLCPartnerCampaign response = this.apiInstance.getTenDLCSmsPartnerCampaign(campaignId);
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCPartnerCampaign.class);
+
+    }
+
+    /**
+     * Get list of SMS 10DLC Partner Campaigns
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTenDLCSmsPartnerCampaignsTest() throws ApiException {
+
+        String brandId = brandIdStringTestValue();
+
+        SMSTenDLCPartnerCampaignsListResult response = this.apiInstance.getTenDLCSmsPartnerCampaigns(brandId);
+        // TODO: test validations
+        assertEquals(response.getClass(), SMSTenDLCPartnerCampaignsListResult.class);
+
+    }
+
+    /**
      * List Active Queues
      *
      * 
@@ -651,6 +757,8 @@ public class DefaultApiTest {
 
         Boolean smsEnabled = smsEnabledBooleanTestValue();
 
+        Boolean hasCampaign = hasCampaignBooleanTestValue();
+
         Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
 
         Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
@@ -664,8 +772,8 @@ public class DefaultApiTest {
         Boolean offnet = offnetBooleanTestValue();
 
         IncomingNumberList response = this.apiInstance.listIncomingNumbers(phoneNumber, alias, region, country,
-                applicationId, hasApplication, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms,
-                capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+                applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice,
+                capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
         // TODO: test validations
         assertEquals(response.getClass(), IncomingNumberList.class);
 
@@ -960,7 +1068,6 @@ public class DefaultApiTest {
      */
     @Test
     public void updateAnIncomingNumberTest() throws ApiException {
-
         String phoneNumberId = phoneNumberIdStringTestValue();
 
         IncomingNumberRequest incomingNumberRequest = incomingNumberRequestIncomingNumberRequestTestValue();
@@ -1260,6 +1367,18 @@ public class DefaultApiTest {
     private Boolean capabilitiesTollFreeBooleanTestValue() {
         Boolean capabilitiesTollFree = true;
         return capabilitiesTollFree;
+    }
+
+    private String brandIdStringTestValue() {
+        return "BX56XX4";
+    }
+
+    private String campaignIdStringTestValue() {
+        return "CX56XX4";
+    }
+
+    private Boolean hasCampaignBooleanTestValue() {
+        return true;
     }
 
     private UpdateConferenceParticipantRequest updateConferenceParticipantRequestUpdateConferenceParticipantRequestTestValue() {

@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.4.0"></a>
+
+## [5.4.0] 2023-06-06
+
+### Added
+
+- Number management feature for java sdk including methods, properties, and testing
+
 <a name="5.3.3"></a>
 
 ## [5.3.3] 2023-06-01
