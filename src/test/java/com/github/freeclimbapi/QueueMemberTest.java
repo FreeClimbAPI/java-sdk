@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class QueueMemberTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class QueueMemberTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -61,6 +67,8 @@ public class QueueMemberTest {
     public void waitTimeTest() {
 
         
+
+
     }
 
     /**
@@ -70,6 +78,8 @@ public class QueueMemberTest {
     public void positionTest() {
 
         
+
+
     }
 
     /**
@@ -82,6 +92,8 @@ public class QueueMemberTest {
         Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
         
         
+
+
     }
 
 }

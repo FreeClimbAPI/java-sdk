@@ -42,6 +42,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
         
+
+
     }
 
     /**
@@ -66,6 +70,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -78,6 +84,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
         
+
+
     }
 
     /**
@@ -90,6 +98,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getTo());
         
         
+
+
     }
 
     /**
@@ -102,6 +112,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
         
+
+
     }
 
     /**
@@ -111,6 +123,24 @@ public class CallResultAllOfTest {
     public void callStatusTest() {
 
         
+
+        model.setCallStatus(CallStatus.QUEUED);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+        model.setCallStatus(CallStatus.RINGING);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+        model.setCallStatus(CallStatus.IN_PROGRESS);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+        model.setCallStatus(CallStatus.CANCELED);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+        model.setCallStatus(CallStatus.COMPLETED);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+        model.setCallStatus(CallStatus.FAILED);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+        model.setCallStatus(CallStatus.BUSY);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+        model.setCallStatus(CallStatus.NO_ANSWER);
+        Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+
     }
 
     /**
@@ -123,6 +153,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getStartTime());
         
         
+
+
     }
 
     /**
@@ -135,6 +167,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getConnectTime());
         
         
+
+
     }
 
     /**
@@ -147,6 +181,8 @@ public class CallResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getEndTime());
         
         
+
+
     }
 
     /**
@@ -156,6 +192,8 @@ public class CallResultAllOfTest {
     public void durationTest() {
 
         
+
+
     }
 
     /**
@@ -165,6 +203,8 @@ public class CallResultAllOfTest {
     public void connectDurationTest() {
 
         
+
+
     }
 
     /**
@@ -174,6 +214,14 @@ public class CallResultAllOfTest {
     public void directionTest() {
 
         
+
+        model.setDirection(CallDirection.INBOUND);
+        Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+        model.setDirection(CallDirection.OUTBOUND_API);
+        Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+        model.setDirection(CallDirection.OUTBOUND_DIAL);
+        Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+
     }
 
     /**
@@ -183,6 +231,12 @@ public class CallResultAllOfTest {
     public void answeredByTest() {
 
         
+
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
+        model.setAnsweredBy(AnsweredBy.MACHINE);
+        Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
+
     }
 
     /**
@@ -192,6 +246,8 @@ public class CallResultAllOfTest {
     public void subresourceUrisTest() {
 
         
+
+
     }
 
 }

@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class ConferenceResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -85,6 +95,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -118,6 +134,16 @@ public class ConferenceResultTest {
     public void playBeepTest() {
 
         
+
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+        model.setPlayBeep(PlayBeep.NEVER);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+        model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+        model.setPlayBeep(PlayBeep.EXIT_ONLY);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+
     }
 
     /**
@@ -129,6 +155,8 @@ public class ConferenceResultTest {
         Assert.assertEquals(false, model.getRecord());
         
         
+
+
     }
 
     /**
@@ -138,6 +166,16 @@ public class ConferenceResultTest {
     public void statusTest() {
 
         
+
+        model.setStatus(ConferenceStatus.EMPTY);
+        Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
+        model.setStatus(ConferenceStatus.POPULATED);
+        Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
+        model.setStatus(ConferenceStatus.IN_PROGRESS);
+        Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
+        model.setStatus(ConferenceStatus.TERMINATED);
+        Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
+
     }
 
     /**
@@ -150,6 +188,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
         
+
+
     }
 
     /**
@@ -162,6 +202,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
         
+
+
     }
 
     /**
@@ -174,6 +216,8 @@ public class ConferenceResultTest {
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
         
+
+
     }
 
     /**
@@ -183,6 +227,8 @@ public class ConferenceResultTest {
     public void subresourceUrisTest() {
 
         
+
+
     }
 
 }

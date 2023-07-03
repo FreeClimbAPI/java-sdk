@@ -33,12 +33,14 @@ import com.github.freeclimbapi.models.*;
 public class SMSTenDLCCampaignsListResultAllOfTest {
     private final SMSTenDLCCampaignsListResultAllOf model = new SMSTenDLCCampaignsListResultAllOf();
     /**
-     * Test the property 'queueMembers'
+     * Test the property 'campaigns'
      */
     @Test
-    public void queueMembersTest() {
+    public void campaignsTest() {
 
         
+
+
     }
 
 }

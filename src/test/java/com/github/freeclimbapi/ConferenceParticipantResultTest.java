@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class ConferenceParticipantResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -85,6 +95,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -120,6 +136,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals(false, model.getTalk());
         
         
+
+
     }
 
     /**
@@ -131,6 +149,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals(false, model.getListen());
         
         
+
+
     }
 
     /**
@@ -142,6 +162,8 @@ public class ConferenceParticipantResultTest {
         Assert.assertEquals(false, model.getStartConfOnEnter());
         
         
+
+
     }
 
 }

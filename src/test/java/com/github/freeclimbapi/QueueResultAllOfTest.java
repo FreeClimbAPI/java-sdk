@@ -42,6 +42,8 @@ public class QueueResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class QueueResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getQueueId());
         
         
+
+
     }
 
     /**
@@ -66,6 +70,8 @@ public class QueueResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -75,6 +81,8 @@ public class QueueResultAllOfTest {
     public void maxSizeTest() {
 
         
+
+
     }
 
     /**
@@ -84,6 +92,8 @@ public class QueueResultAllOfTest {
     public void currentSizeTest() {
 
         
+
+
     }
 
     /**
@@ -93,6 +103,8 @@ public class QueueResultAllOfTest {
     public void averageQueueRemovalTimeTest() {
 
         
+
+
     }
 
     /**
@@ -102,6 +114,8 @@ public class QueueResultAllOfTest {
     public void subresourceUrisTest() {
 
         
+
+
     }
 
 }

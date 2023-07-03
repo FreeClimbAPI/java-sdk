@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class LogResultTest {
     public void timestampTest() {
 
         
+
+
     }
 
     /**
@@ -46,6 +50,14 @@ public class LogResultTest {
     public void levelTest() {
 
         
+
+        model.setLevel(LogLevel.INFO);
+        Assert.assertEquals(model.getLevel(),LogLevel.INFO);
+        model.setLevel(LogLevel.WARNING);
+        Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
+        model.setLevel(LogLevel.ERROR);
+        Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
+
     }
 
     /**
@@ -58,6 +70,8 @@ public class LogResultTest {
         Assert.assertEquals("TEST_STRING", model.getRequestId());
         
         
+
+
     }
 
     /**
@@ -70,6 +84,8 @@ public class LogResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -82,6 +98,8 @@ public class LogResultTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -94,6 +112,8 @@ public class LogResultTest {
         Assert.assertEquals("TEST_STRING", model.getMessage());
         
         
+
+
     }
 
     /**
@@ -103,6 +123,8 @@ public class LogResultTest {
     public void metadataTest() {
 
         
+
+
     }
 
 }

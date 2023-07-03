@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class PlayEarlyMediaTest {
     public void commandTest() {
 
         Assert.assertEquals("PlayEarlyMedia", model.getCommand());
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class PlayEarlyMediaTest {
         Assert.assertEquals("TEST_STRING", model.getFile());
         
         
+
+
     }
 
     @Test

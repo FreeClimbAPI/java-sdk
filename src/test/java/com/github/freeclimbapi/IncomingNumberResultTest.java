@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class IncomingNumberResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -82,6 +92,8 @@ public class IncomingNumberResultTest {
     public void capabilitiesTest() {
 
         
+
+
     }
 
     /**
@@ -94,6 +106,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
         
+
+
     }
 
     /**
@@ -106,6 +120,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
         
+
+
     }
 
     /**
@@ -118,6 +134,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -130,6 +148,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
         
+
+
     }
 
     /**
@@ -142,6 +162,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
         
+
+
     }
 
     /**
@@ -154,6 +176,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -166,6 +190,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getRegion());
         
         
+
+
     }
 
     /**
@@ -178,6 +204,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
         
+
+
     }
 
     /**
@@ -189,6 +217,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals(false, model.getVoiceEnabled());
         
         
+
+
     }
 
     /**
@@ -200,6 +230,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals(false, model.getSmsEnabled());
         
         
+
+
     }
 
     /**
@@ -211,6 +243,8 @@ public class IncomingNumberResultTest {
         Assert.assertEquals(false, model.getOffnet());
         
         
+
+
     }
 
 }

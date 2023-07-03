@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class AddToConferenceTest {
     public void commandTest() {
 
         Assert.assertEquals("AddToConference", model.getCommand());
+
+
     }
 
     /**
@@ -48,6 +52,8 @@ public class AddToConferenceTest {
         Assert.assertEquals(false, model.getAllowCallControl());
         
         
+
+
     }
 
     /**
@@ -60,6 +66,8 @@ public class AddToConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
         
         
+
+
     }
 
     /**
@@ -72,6 +80,8 @@ public class AddToConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
         
         
+
+
     }
 
     /**
@@ -84,6 +94,8 @@ public class AddToConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
         
+
+
     }
 
     /**
@@ -95,6 +107,8 @@ public class AddToConferenceTest {
         Assert.assertEquals(false, model.getCallId());
         
         
+
+
     }
 
     /**
@@ -107,6 +121,8 @@ public class AddToConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
         
         
+
+
     }
 
     /**
@@ -118,6 +134,8 @@ public class AddToConferenceTest {
         Assert.assertEquals(false, model.getListen());
         
         
+
+
     }
 
     /**
@@ -130,6 +148,8 @@ public class AddToConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
         
+
+
     }
 
     /**
@@ -141,6 +161,8 @@ public class AddToConferenceTest {
         Assert.assertEquals(false, model.getStartConfOnEnter());
         
         
+
+
     }
 
     /**
@@ -152,6 +174,8 @@ public class AddToConferenceTest {
         Assert.assertEquals(false, model.getTalk());
         
         
+
+
     }
 
     @Test

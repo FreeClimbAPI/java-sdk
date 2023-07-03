@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getTo());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
         
+
+
     }
 
     /**
@@ -76,6 +84,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
         
         
+
+
     }
 
     /**
@@ -88,6 +98,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getIfMachine());
         
         
+
+
     }
 
     /**
@@ -100,6 +112,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class MakeCallRequestTest {
     public void timeoutTest() {
 
         
+
+
     }
 
     /**
@@ -121,6 +137,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
         
+
+
     }
 
     /**
@@ -132,6 +150,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
     /**
@@ -144,6 +164,8 @@ public class MakeCallRequestTest {
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
         
+
+
     }
 
 }

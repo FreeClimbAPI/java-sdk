@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 /**
  * Model tests for GetSpeechAllOf
  */
@@ -37,13 +37,13 @@ public class GetSpeechAllOfTest {
      */
     @Test
     public void actionUrlTest() {
-        try {
-            URI variable = new URI("TEST_STRING");
-            model.setActionUrl(variable); 
-            Assert.assertEquals(variable, model.getActionUrl());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }    
+
+        model.setActionUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        
+
+
     }
 
     /**
@@ -53,6 +53,12 @@ public class GetSpeechAllOfTest {
     public void grammarTypeTest() {
 
         
+
+        model.setGrammarType(GrammarType.URL);
+        Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
+        model.setGrammarType(GrammarType.BUILT_IN);
+        Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
+
     }
 
     /**
@@ -65,6 +71,8 @@ public class GetSpeechAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getGrammarFile());
         
         
+
+
     }
 
     /**
@@ -77,6 +85,8 @@ public class GetSpeechAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
         
+
+
     }
 
     /**
@@ -88,6 +98,8 @@ public class GetSpeechAllOfTest {
         Assert.assertEquals(false, model.getPlayBeep());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class GetSpeechAllOfTest {
     public void promptsTest() {
 
         
+
+
     }
 
     /**
@@ -106,6 +120,8 @@ public class GetSpeechAllOfTest {
     public void noInputTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -115,6 +131,8 @@ public class GetSpeechAllOfTest {
     public void recognitionTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -127,6 +145,8 @@ public class GetSpeechAllOfTest {
         model.setConfidenceThreshold(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
         
+
+
     }
 
     /**
@@ -139,6 +159,8 @@ public class GetSpeechAllOfTest {
         model.setSensitivityLevel(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
         
+
+
     }
 
     /**
@@ -148,6 +170,8 @@ public class GetSpeechAllOfTest {
     public void speechCompleteTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -157,6 +181,8 @@ public class GetSpeechAllOfTest {
     public void speechIncompleteTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -168,6 +194,8 @@ public class GetSpeechAllOfTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
 }

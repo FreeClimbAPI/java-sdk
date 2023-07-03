@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
         
         
+
+
     }
 
     /**
@@ -76,6 +84,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
         
+
+
     }
 
     /**
@@ -88,6 +98,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
         
+
+
     }
 
     /**
@@ -100,6 +112,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getSmsUrl());
         
         
+
+
     }
 
     /**
@@ -112,6 +126,8 @@ public class ApplicationRequestTest {
         Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
         
         
+
+
     }
 
 }

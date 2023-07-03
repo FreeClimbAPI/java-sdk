@@ -42,6 +42,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -66,6 +70,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -75,6 +81,8 @@ public class QueueResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -87,6 +95,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -99,6 +109,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getQueueId());
         
         
+
+
     }
 
     /**
@@ -111,6 +123,8 @@ public class QueueResultTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -120,6 +134,8 @@ public class QueueResultTest {
     public void maxSizeTest() {
 
         
+
+
     }
 
     /**
@@ -129,6 +145,8 @@ public class QueueResultTest {
     public void currentSizeTest() {
 
         
+
+
     }
 
     /**
@@ -138,6 +156,8 @@ public class QueueResultTest {
     public void averageQueueRemovalTimeTest() {
 
         
+
+
     }
 
     /**
@@ -147,6 +167,8 @@ public class QueueResultTest {
     public void subresourceUrisTest() {
 
         
+
+
     }
 
 }

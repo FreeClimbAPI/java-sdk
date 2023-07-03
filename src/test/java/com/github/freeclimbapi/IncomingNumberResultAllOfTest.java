@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class IncomingNumberResultAllOfTest {
     public void capabilitiesTest() {
 
         
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
         
+
+
     }
 
     /**
@@ -61,6 +67,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -85,6 +95,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -121,6 +137,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getRegion());
         
         
+
+
     }
 
     /**
@@ -133,6 +151,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
         
+
+
     }
 
     /**
@@ -144,6 +164,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals(false, model.getVoiceEnabled());
         
         
+
+
     }
 
     /**
@@ -155,6 +177,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals(false, model.getSmsEnabled());
         
         
+
+
     }
 
     /**
@@ -166,6 +190,8 @@ public class IncomingNumberResultAllOfTest {
         Assert.assertEquals(false, model.getOffnet());
         
         
+
+
     }
 
 }

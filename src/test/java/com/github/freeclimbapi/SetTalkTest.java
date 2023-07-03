@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class SetTalkTest {
     public void commandTest() {
 
         Assert.assertEquals("SetTalk", model.getCommand());
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class SetTalkTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -60,6 +66,8 @@ public class SetTalkTest {
         Assert.assertEquals(false, model.getTalk());
         
         
+
+
     }
 
     @Test

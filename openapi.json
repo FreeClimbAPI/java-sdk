@@ -85,6 +85,7 @@
         "type": "string",
         "enum": ["closed", "suspended", "active"],
         "x-enum-varnames": ["CLOSED", "SUSPENDED", "ACTIVE"],
+        "x-enum": true,
         "description": "The status of this account. It is one of: active, suspended, or closed.",
         "nullable": true
       },
@@ -93,6 +94,7 @@
         "description": "The type of this account. It is one of: trial or full.",
         "enum": ["trial", "full"],
         "x-enum-varnames": ["TRIAL", "FULL"],
+        "x-enum": true,
         "nullable": true
       },
       "AnsweredBy": {
@@ -100,6 +102,7 @@
         "nullable": true,
         "enum": ["human", "machine"],
         "x-enum-varnames": ["HUMAN", "MACHINE"],
+        "x-enum": true,
         "description": "If this Call was initiated with answering machine detection, either `human` or `machine`. Empty otherwise."
       },
       "CallDirection": {
@@ -107,6 +110,7 @@
         "nullable": true,
         "enum": ["inbound", "outboundAPI", "outboundDial"],
         "x-enum-varnames": ["INBOUND", "OUTBOUND_API", "OUTBOUND_DIAL"],
+        "x-enum": true,
         "description": "Direction of the Call. `inbound` for Calls into FreeClimb, `outboundAPI` for Calls initiated via the REST API,  `outboundDial` for Calls initiated by the `OutDial` PerCL command."
       },
       "CallStatus": {
@@ -132,6 +136,7 @@
           "BUSY",
           "NO_ANSWER"
         ],
+        "x-enum": true,
         "description": "* `queued` &ndash; Call is ready and waiting in line before going out. * `ringing` &ndash; Call is currently ringing. * `inProgress` &ndash; Call was answered and is currently in progress. * `canceled` &ndash; Call was hung up while it was queued or ringing. * `completed` &ndash; Call was answered and has ended normally. * `busy` &ndash; Caller received a busy signal. * `failed` &ndash; Call could not be completed as dialed, most likely because the phone number was non-existent. * `noAnswer` &ndash; Call ended without being answered."
       },
       "ConferenceStatus": {
@@ -139,6 +144,7 @@
         "nullable": true,
         "enum": ["empty", "populated", "inProgress", "terminated"],
         "x-enum-varnames": ["EMPTY", "POPULATED", "IN_PROGRESS", "TERMINATED"],
+        "x-enum": true,
         "description": "The status of the Conference. One of: creating, empty, populated, inProgress, or terminated."
       },
       "GetSpeechReason": {
@@ -158,7 +164,8 @@
           "NO_INPUT",
           "NO_MATCH",
           "RECOGNITION"
-        ]
+        ],
+        "x-enum": true
       },
       "GrammarFileBuiltIn": {
         "type": "string",
@@ -195,19 +202,22 @@
           "DIG11",
           "UP_TO_20_DIGIT_SEQUENCE",
           "VERSAY_YESNO"
-        ]
+        ],
+        "x-enum": true
       },
       "GrammarType": {
         "type": "string",
         "enum": ["URL", "BUILTIN"],
         "nullable": true,
         "x-enum-varnames": ["URL", "BUILT_IN"],
+        "x-enum": true,
         "description": "The grammar file type to use for speech recognition. A value of 'URL' indicates the grammarFile attribute specifies a URL that points to the grammar file. A value of `BUILTIN` indicates the grammarFile attribute specifies the name of one of the platform built-in grammar files."
       },
       "IfMachine": {
         "type": "string",
         "enum": ["redirect", "hangup"],
         "x-enum-varnames": ["REDIRECT", "HANGUP"],
+        "x-enum": true,
         "description": "Specifies how FreeClimb should handle this OutDial if an answering machine answers the Call. Valid values: `redirect` invokes the ifMachineUrl for instructions. `hangup` hangs up the Call. The ifMachineUrl will not be invoked."
       },
       "Language": {
@@ -267,24 +277,28 @@
           "CHINESE_CN",
           "CHINESE_HK",
           "CHINESE_TW"
-        ]
+        ],
+        "x-enum": true
       },
       "LogLevel": {
         "type": "string",
         "enum": ["info", "warning", "error"],
         "nullable": true,
         "x-enum-varnames": ["INFO", "WARNING", "ERROR"],
+        "x-enum": true,
         "description": "Level of the log. Possible values are info, warning, and error."
       },
       "MachineType": {
         "type": "string",
         "enum": ["answeringMachine", "faxMachine"],
-        "x-enum-varnames": ["ANSWERING_MACHINE", "FAX_MACHINE"]
+        "x-enum-varnames": ["ANSWERING_MACHINE", "FAX_MACHINE"],
+        "x-enum": true
       },
       "MessageDirection": {
         "type": "string",
         "enum": ["inbound", "outbound"],
-        "x-enum-varnames": ["INBOUND", "OUTBOUND"]
+        "x-enum-varnames": ["INBOUND", "OUTBOUND"],
+        "x-enum": true
       },
       "MessageStatus": {
         "type": "string",
@@ -315,13 +329,15 @@
           "EXPIRED",
           "DELETED",
           "UNKNOWN"
-        ]
+        ],
+        "x-enum": true
       },
       "PlayBeep": {
         "type": "string",
         "nullable": true,
         "enum": ["always", "never", "entryOnly", "exitOnly"],
         "x-enum-varnames": ["ALWAYS", "NEVER", "ENTRY_ONLY", "EXIT_ONLY"],
+        "x-enum": true,
         "description": "Indicates whether to play a beep when a Participant enters or leaves the Conference. either `always`, `never`, `entryOnly`, or `exitOnly`. Leaving this unset will make conference default to `always` ",
         "default": "always",
         "x-enum-default-attr": "ALWAYS"
@@ -329,12 +345,14 @@
       "QueueResultStatus": {
         "type": "string",
         "enum": ["queueFull", "dequeued", "hangup", "systemError"],
-        "x-enum-varnames": ["QUEUE_FULL", "DEQUEUED", "HANGUP", "SYSTEM_ERROR"]
+        "x-enum-varnames": ["QUEUE_FULL", "DEQUEUED", "HANGUP", "SYSTEM_ERROR"],
+        "x-enum": true
       },
       "RecordUtteranceTermReason": {
         "type": "string",
         "enum": ["finishKey", "timeout", "hangup", "maxLength"],
-        "x-enum-varnames": ["FINISH_KEY", "TIMEOUT", "HANGUP", "MAX_LENGTH"]
+        "x-enum-varnames": ["FINISH_KEY", "TIMEOUT", "HANGUP", "MAX_LENGTH"],
+        "x-enum": true
       },
       "RequestType": {
         "type": "string",
@@ -387,18 +405,21 @@
           "CONFERENCE_CALL_CONTROL",
           "MESSAGE_DELIVERY",
           "MESSAGE_STATUS"
-        ]
+        ],
+        "x-enum": true
       },
       "UpdateCallRequestStatus": {
         "type": "string",
         "enum": ["canceled", "completed"],
         "x-enum-varnames": ["CANCELED", "COMPLETED"],
+        "x-enum": true,
         "description": "Either `canceled` or `completed`.  Specifying `canceled` attempts to hang up calls that are queued without affecting calls already in progress. Specifying `completed` attempts to hang up a call already in progress."
       },
       "UpdateConferenceRequestStatus": {
         "type": "string",
         "enum": ["empty", "terminated"],
         "x-enum-varnames": ["EMPTY", "TERMINATED"],
+        "x-enum": true,
         "description": "New status of the conference. Valid values: `empty` or `terminated`. For more information, see **Status Parameter** below.**"
       },
       "PerclScript": {
@@ -2377,10 +2398,7 @@
           "status": {
             "type": "string",
             "description": "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ",
-            "enum": [
-              "ACTIVE",
-              "EXPIRED"
-            ]
+            "enum": ["ACTIVE", "EXPIRED"]
           },
           "createDate": {
             "type": "string",
@@ -2416,7 +2434,7 @@
               "description": "Campaign sub-usecases. Must be of defined valid sub-usecase types. Use `/registry/enum/usecase` operation to retrieve list of valid sub-usecases"
             }
           },
-            "description": {
+          "description": {
             "maxLength": 4096,
             "type": "string",
             "description": "Summary description of this campaign."
@@ -2520,8 +2538,7 @@
             "format": "date",
             "example": "2000-01-01"
           }
-        }
-        ,
+        },
         "example": {
           "campaignId": "CX56XX4",
           "accountId": "ACe39970fb7c31c747c67148900b4d9da60a41e532",
@@ -2576,12 +2593,7 @@
         ]
       },
       "SMSTenDLCPartnerCampaign": {
-        "required": [
-          "brandId",
-          "campaignId",
-          "description",
-          "usecase"
-        ],
+        "required": ["brandId", "campaignId", "description", "usecase"],
         "type": "object",
         "properties": {
           "accountId": {
@@ -2596,10 +2608,7 @@
           "status": {
             "type": "string",
             "description": "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ",
-            "enum": [
-              "ACTIVE",
-              "EXPIRED"
-            ]
+            "enum": ["ACTIVE", "EXPIRED"]
           },
           "createDate": {
             "type": "string",
@@ -2775,11 +2784,8 @@
           }
         }
       },
-      "SMSTenDLCPartnerCampaignBrand":{
-        "required": [
-          "email",
-          "phone"
-        ],
+      "SMSTenDLCPartnerCampaignBrand": {
+        "required": ["email", "phone"],
         "type": "object",
         "properties": {
           "accountId": {
@@ -2866,7 +2872,7 @@
           }
         ]
       },
-      "SMSTenDLCBrand":{
+      "SMSTenDLCBrand": {
         "required": [
           "brandRelationship",
           "country",
@@ -3058,12 +3064,7 @@
           },
           "altBusinessIdType": {
             "type": "string",
-            "enum": [
-              "NONE",
-              "DUNS",
-              "GIIN",
-              "LEI"
-            ],
+            "enum": ["NONE", "DUNS", "GIIN", "LEI"],
             "description": "The type of the Alternative business identifier"
           },
           "universalEin": {

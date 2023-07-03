@@ -42,6 +42,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
         
+
+
     }
 
     /**
@@ -63,6 +67,8 @@ public class SMSTenDLCPartnerCampaignTest {
     public void statusTest() {
 
         
+
+
     }
 
     /**
@@ -72,6 +78,8 @@ public class SMSTenDLCPartnerCampaignTest {
     public void createDateTest() {
 
         
+
+
     }
 
     /**
@@ -84,6 +92,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
         
+
+
     }
 
     /**
@@ -96,6 +106,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getUsecase());
         
         
+
+
     }
 
     /**
@@ -108,6 +120,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getDescription());
         
         
+
+
     }
 
     /**
@@ -119,6 +133,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getEmbeddedLink());
         
         
+
+
     }
 
     /**
@@ -130,6 +146,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getEmbeddedPhone());
         
         
+
+
     }
 
     /**
@@ -141,6 +159,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getAffiliateMarketing());
         
         
+
+
     }
 
     /**
@@ -152,6 +172,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getNumberPool());
         
         
+
+
     }
 
     /**
@@ -163,6 +185,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getAgeGated());
         
         
+
+
     }
 
     /**
@@ -174,6 +198,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getDirectLending());
         
         
+
+
     }
 
     /**
@@ -185,6 +211,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getSubscriberOptin());
         
         
+
+
     }
 
     /**
@@ -196,6 +224,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getSubscriberOptout());
         
         
+
+
     }
 
     /**
@@ -207,6 +237,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals(false, model.getSubscriberHelp());
         
         
+
+
     }
 
     /**
@@ -219,6 +251,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample1());
         
         
+
+
     }
 
     /**
@@ -231,6 +265,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample2());
         
         
+
+
     }
 
     /**
@@ -243,6 +279,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample3());
         
         
+
+
     }
 
     /**
@@ -255,6 +293,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample4());
         
         
+
+
     }
 
     /**
@@ -267,6 +307,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample5());
         
         
+
+
     }
 
     /**
@@ -279,6 +321,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getMessageFlow());
         
         
+
+
     }
 
     /**
@@ -291,6 +335,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getHelpMessage());
         
         
+
+
     }
 
     /**
@@ -303,6 +349,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getOptinKeywords());
         
         
+
+
     }
 
     /**
@@ -315,6 +363,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getOptoutKeywords());
         
         
+
+
     }
 
     /**
@@ -327,6 +377,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getHelpKeywords());
         
         
+
+
     }
 
     /**
@@ -339,6 +391,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getOptinMessage());
         
         
+
+
     }
 
     /**
@@ -351,6 +405,8 @@ public class SMSTenDLCPartnerCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getOptoutMessage());
         
         
+
+
     }
 
     /**
@@ -360,6 +416,8 @@ public class SMSTenDLCPartnerCampaignTest {
     public void brandTest() {
 
         
+
+
     }
 
 }

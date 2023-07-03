@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class RecordUtteranceTest {
     public void commandTest() {
 
         Assert.assertEquals("RecordUtterance", model.getCommand());
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class RecordUtteranceTest {
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
         
+
+
     }
 
     /**
@@ -58,6 +64,8 @@ public class RecordUtteranceTest {
     public void silenceTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -70,6 +78,8 @@ public class RecordUtteranceTest {
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
         
+
+
     }
 
     /**
@@ -79,6 +89,8 @@ public class RecordUtteranceTest {
     public void maxLengthSecTest() {
 
         
+
+
     }
 
     /**
@@ -90,6 +102,8 @@ public class RecordUtteranceTest {
         Assert.assertEquals(false, model.getPlayBeep());
         
         
+
+
     }
 
     /**
@@ -101,6 +115,8 @@ public class RecordUtteranceTest {
         Assert.assertEquals(false, model.getAutoStart());
         
         
+
+
     }
 
     /**
@@ -112,6 +128,8 @@ public class RecordUtteranceTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
     @Test

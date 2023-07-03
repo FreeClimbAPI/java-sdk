@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class AccountResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -85,6 +95,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getApiKey());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
         
+
+
     }
 
     /**
@@ -121,6 +137,8 @@ public class AccountResultTest {
         Assert.assertEquals("TEST_STRING", model.getLabel());
         
         
+
+
     }
 
     /**
@@ -130,6 +148,12 @@ public class AccountResultTest {
     public void typeTest() {
 
         
+
+        model.setType(AccountType.TRIAL);
+        Assert.assertEquals(model.getType(),AccountType.TRIAL);
+        model.setType(AccountType.FULL);
+        Assert.assertEquals(model.getType(),AccountType.FULL);
+
     }
 
     /**
@@ -139,6 +163,14 @@ public class AccountResultTest {
     public void statusTest() {
 
         
+
+        model.setStatus(AccountStatus.CLOSED);
+        Assert.assertEquals(model.getStatus(),AccountStatus.CLOSED);
+        model.setStatus(AccountStatus.SUSPENDED);
+        Assert.assertEquals(model.getStatus(),AccountStatus.SUSPENDED);
+        model.setStatus(AccountStatus.ACTIVE);
+        Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
+
     }
 
     /**
@@ -148,6 +180,8 @@ public class AccountResultTest {
     public void subresourceUrisTest() {
 
         
+
+
     }
 
 }

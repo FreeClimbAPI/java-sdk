@@ -39,6 +39,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void totalTest() {
 
         
+
+
     }
 
     /**
@@ -48,6 +50,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void startTest() {
 
         
+
+
     }
 
     /**
@@ -57,6 +61,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void endTest() {
 
         
+
+
     }
 
     /**
@@ -66,6 +72,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void pageTest() {
 
         
+
+
     }
 
     /**
@@ -75,6 +83,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void numPagesTest() {
 
         
+
+
     }
 
     /**
@@ -84,6 +94,8 @@ public class SMSTenDLCBrandsListResultTest {
     public void pageSizeTest() {
 
         
+
+
     }
 
     /**
@@ -96,15 +108,19 @@ public class SMSTenDLCBrandsListResultTest {
         Assert.assertEquals("TEST_STRING", model.getNextPageUri());
         
         
+
+
     }
 
     /**
-     * Test the property 'queueMembers'
+     * Test the property 'brands'
      */
     @Test
-    public void queueMembersTest() {
+    public void brandsTest() {
 
         
+
+
     }
 
 }

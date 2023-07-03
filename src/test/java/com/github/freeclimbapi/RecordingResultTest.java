@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getUri());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
         
+
+
     }
 
     /**
@@ -64,6 +70,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
         
+
+
     }
 
     /**
@@ -73,6 +81,8 @@ public class RecordingResultTest {
     public void revisionTest() {
 
         
+
+
     }
 
     /**
@@ -85,6 +95,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getRecordingId());
         
         
+
+
     }
 
     /**
@@ -97,6 +109,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
         
+
+
     }
 
     /**
@@ -118,6 +134,8 @@ public class RecordingResultTest {
     public void durationSecTest() {
 
         
+
+
     }
 
     /**
@@ -130,6 +148,8 @@ public class RecordingResultTest {
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
         
+
+
     }
 
 }

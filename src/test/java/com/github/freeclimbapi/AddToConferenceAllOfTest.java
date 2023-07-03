@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -39,6 +41,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals(false, model.getAllowCallControl());
         
         
+
+
     }
 
     /**
@@ -51,6 +55,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
         
         
+
+
     }
 
     /**
@@ -63,6 +69,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
         
         
+
+
     }
 
     /**
@@ -75,6 +83,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
         
+
+
     }
 
     /**
@@ -86,6 +96,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals(false, model.getCallId());
         
         
+
+
     }
 
     /**
@@ -98,6 +110,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
         
         
+
+
     }
 
     /**
@@ -109,6 +123,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals(false, model.getListen());
         
         
+
+
     }
 
     /**
@@ -121,6 +137,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
         
+
+
     }
 
     /**
@@ -132,6 +150,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals(false, model.getStartConfOnEnter());
         
         
+
+
     }
 
     /**
@@ -143,6 +163,8 @@ public class AddToConferenceAllOfTest {
         Assert.assertEquals(false, model.getTalk());
         
         
+
+
     }
 
 }

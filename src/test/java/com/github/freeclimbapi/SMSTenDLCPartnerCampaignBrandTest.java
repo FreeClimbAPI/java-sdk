@@ -42,6 +42,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
         
+
+
     }
 
     /**
@@ -66,6 +70,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
         
+
+
     }
 
     /**
@@ -78,6 +84,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
         
+
+
     }
 
     /**
@@ -90,6 +98,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
         
+
+
     }
 
     /**
@@ -102,6 +112,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
         
+
+
     }
 
     /**
@@ -114,6 +126,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
         
+
+
     }
 
     /**
@@ -126,6 +140,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
         
+
+
     }
 
     /**
@@ -138,6 +154,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
         
+
+
     }
 
     /**
@@ -147,6 +165,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
     public void optionalAttributesTest() {
 
         
+
+
     }
 
     /**
@@ -156,6 +176,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
     public void evpVettingScoreTest() {
 
         
+
+
     }
 
 }

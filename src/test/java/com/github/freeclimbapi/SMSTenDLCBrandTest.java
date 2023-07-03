@@ -42,6 +42,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -51,6 +53,8 @@ public class SMSTenDLCBrandTest {
     public void entityTypeTest() {
 
         
+
+
     }
 
     /**
@@ -63,6 +67,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
         
+
+
     }
 
     /**
@@ -75,6 +81,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
         
+
+
     }
 
     /**
@@ -87,6 +95,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
         
+
+
     }
 
     /**
@@ -99,6 +109,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
         
+
+
     }
 
     /**
@@ -111,6 +123,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
         
+
+
     }
 
     /**
@@ -123,6 +137,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
         
+
+
     }
 
     /**
@@ -135,6 +151,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getEin());
         
         
+
+
     }
 
     /**
@@ -147,6 +165,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getEinIssuingCountry());
         
         
+
+
     }
 
     /**
@@ -159,6 +179,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
         
+
+
     }
 
     /**
@@ -171,6 +193,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getStreet());
         
         
+
+
     }
 
     /**
@@ -183,6 +207,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getCity());
         
         
+
+
     }
 
     /**
@@ -195,6 +221,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getState());
         
         
+
+
     }
 
     /**
@@ -207,6 +235,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getPostalCode());
         
         
+
+
     }
 
     /**
@@ -219,6 +249,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
         
+
+
     }
 
     /**
@@ -231,6 +263,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
         
+
+
     }
 
     /**
@@ -243,6 +277,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getStockSymbol());
         
         
+
+
     }
 
     /**
@@ -252,6 +288,8 @@ public class SMSTenDLCBrandTest {
     public void stockExchangeTest() {
 
         
+
+
     }
 
     /**
@@ -264,6 +302,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getIpAddress());
         
         
+
+
     }
 
     /**
@@ -276,6 +316,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
         
+
+
     }
 
     /**
@@ -285,6 +327,8 @@ public class SMSTenDLCBrandTest {
     public void brandRelationshipTest() {
 
         
+
+
     }
 
     /**
@@ -297,6 +341,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getVertical());
         
         
+
+
     }
 
     /**
@@ -309,6 +355,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getAltBusinessId());
         
         
+
+
     }
 
     /**
@@ -318,6 +366,8 @@ public class SMSTenDLCBrandTest {
     public void altBusinessIdTypeTest() {
 
         
+
+
     }
 
     /**
@@ -330,6 +380,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getUniversalEin());
         
         
+
+
     }
 
     /**
@@ -342,6 +394,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
         
+
+
     }
 
     /**
@@ -351,6 +405,8 @@ public class SMSTenDLCBrandTest {
     public void optionalAttributesTest() {
 
         
+
+
     }
 
     /**
@@ -362,6 +418,8 @@ public class SMSTenDLCBrandTest {
         Assert.assertEquals(false, model.getMock());
         
         
+
+
     }
 
     /**
@@ -371,6 +429,8 @@ public class SMSTenDLCBrandTest {
     public void identityStatusTest() {
 
         
+
+
     }
 
     /**
@@ -380,6 +440,8 @@ public class SMSTenDLCBrandTest {
     public void createDateTest() {
 
         
+
+
     }
 
 }

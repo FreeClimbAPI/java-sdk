@@ -33,12 +33,14 @@ import com.github.freeclimbapi.models.*;
 public class SMSTenDLCBrandsListResultAllOfTest {
     private final SMSTenDLCBrandsListResultAllOf model = new SMSTenDLCBrandsListResultAllOf();
     /**
-     * Test the property 'queueMembers'
+     * Test the property 'brands'
      */
     @Test
-    public void queueMembersTest() {
+    public void brandsTest() {
 
         
+
+
     }
 
 }

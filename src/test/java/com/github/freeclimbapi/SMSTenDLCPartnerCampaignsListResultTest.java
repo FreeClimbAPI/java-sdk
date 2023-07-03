@@ -39,6 +39,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void totalTest() {
 
         
+
+
     }
 
     /**
@@ -48,6 +50,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void startTest() {
 
         
+
+
     }
 
     /**
@@ -57,6 +61,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void endTest() {
 
         
+
+
     }
 
     /**
@@ -66,6 +72,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void pageTest() {
 
         
+
+
     }
 
     /**
@@ -75,6 +83,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void numPagesTest() {
 
         
+
+
     }
 
     /**
@@ -84,6 +94,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void pageSizeTest() {
 
         
+
+
     }
 
     /**
@@ -96,15 +108,19 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         Assert.assertEquals("TEST_STRING", model.getNextPageUri());
         
         
+
+
     }
 
     /**
-     * Test the property 'queueMembers'
+     * Test the property 'partnerCampaigns'
      */
     @Test
-    public void queueMembersTest() {
+    public void partnerCampaignsTest() {
 
         
+
+
     }
 
 }

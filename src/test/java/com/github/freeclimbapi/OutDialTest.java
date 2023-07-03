@@ -39,6 +39,8 @@ public class OutDialTest {
     public void commandTest() {
 
         Assert.assertEquals("OutDial", model.getCommand());
+
+
     }
 
     /**
@@ -51,6 +53,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
         
+
+
     }
 
     /**
@@ -63,6 +67,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
         
+
+
     }
 
     /**
@@ -75,6 +81,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getCallingNumber());
         
         
+
+
     }
 
     /**
@@ -87,6 +95,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getDestination());
         
         
+
+
     }
 
     /**
@@ -96,6 +106,12 @@ public class OutDialTest {
     public void ifMachineTest() {
 
         
+
+        model.setIfMachine(IfMachine.REDIRECT);
+        Assert.assertEquals(model.getIfMachine(),IfMachine.REDIRECT);
+        model.setIfMachine(IfMachine.HANGUP);
+        Assert.assertEquals(model.getIfMachine(),IfMachine.HANGUP);
+
     }
 
     /**
@@ -108,6 +124,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
         
         
+
+
     }
 
     /**
@@ -120,6 +138,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
         
         
+
+
     }
 
     /**
@@ -132,6 +152,8 @@ public class OutDialTest {
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
         
+
+
     }
 
     /**
@@ -141,6 +163,8 @@ public class OutDialTest {
     public void timeoutTest() {
 
         
+
+
     }
 
     /**
@@ -152,6 +176,8 @@ public class OutDialTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
     @Test

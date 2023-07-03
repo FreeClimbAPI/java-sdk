@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -40,6 +42,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -52,6 +56,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getMessageId());
         
         
+
+
     }
 
     /**
@@ -61,6 +67,30 @@ public class MessageResultAllOfTest {
     public void statusTest() {
 
         
+
+        model.setStatus(MessageStatus.NEW);
+        Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
+        model.setStatus(MessageStatus.QUEUED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
+        model.setStatus(MessageStatus.REJECTED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
+        model.setStatus(MessageStatus.SENDING);
+        Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
+        model.setStatus(MessageStatus.SENT);
+        Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
+        model.setStatus(MessageStatus.FAILED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
+        model.setStatus(MessageStatus.RECEIVED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
+        model.setStatus(MessageStatus.UNDELIVERED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
+        model.setStatus(MessageStatus.EXPIRED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
+        model.setStatus(MessageStatus.DELETED);
+        Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
+        model.setStatus(MessageStatus.UNKNOWN);
+        Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
+
     }
 
     /**
@@ -73,6 +103,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
         
+
+
     }
 
     /**
@@ -85,6 +117,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getTo());
         
         
+
+
     }
 
     /**
@@ -97,6 +131,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getText());
         
         
+
+
     }
 
     /**
@@ -109,6 +145,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getDirection());
         
         
+
+
     }
 
     /**
@@ -121,6 +159,8 @@ public class MessageResultAllOfTest {
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
         
+
+
     }
 
 }

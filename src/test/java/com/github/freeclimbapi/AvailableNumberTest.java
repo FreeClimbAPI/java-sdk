@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class AvailableNumberTest {
     public void capabilitiesTest() {
 
         
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
         
+
+
     }
 
     /**
@@ -61,6 +67,8 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
         
+
+
     }
 
     /**
@@ -72,6 +80,8 @@ public class AvailableNumberTest {
         Assert.assertEquals(false, model.getVoiceEnabled());
         
         
+
+
     }
 
     /**
@@ -83,6 +93,8 @@ public class AvailableNumberTest {
         Assert.assertEquals(false, model.getSmsEnabled());
         
         
+
+
     }
 
     /**
@@ -95,6 +107,8 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getRegion());
         
         
+
+
     }
 
     /**
@@ -107,6 +121,8 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
         
+
+
     }
 
 }

@@ -42,6 +42,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
         
+
+
     }
 
     /**
@@ -54,6 +56,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
         
+
+
     }
 
     /**
@@ -66,6 +70,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
         
+
+
     }
 
     /**
@@ -78,6 +84,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getResellerId());
         
         
+
+
     }
 
     /**
@@ -87,6 +95,8 @@ public class SMSTenDLCCampaignTest {
     public void statusTest() {
 
         
+
+
     }
 
     /**
@@ -96,6 +106,8 @@ public class SMSTenDLCCampaignTest {
     public void createDateTest() {
 
         
+
+
     }
 
     /**
@@ -107,6 +119,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getAutoRenewal());
         
         
+
+
     }
 
     /**
@@ -116,6 +130,8 @@ public class SMSTenDLCCampaignTest {
     public void billedDateTest() {
 
         
+
+
     }
 
     /**
@@ -128,6 +144,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
         
+
+
     }
 
     /**
@@ -140,6 +158,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getUsecase());
         
         
+
+
     }
 
     /**
@@ -149,6 +169,8 @@ public class SMSTenDLCCampaignTest {
     public void subUsecasesTest() {
 
         
+
+
     }
 
     /**
@@ -161,6 +183,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getDescription());
         
         
+
+
     }
 
     /**
@@ -172,6 +196,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getEmbeddedLink());
         
         
+
+
     }
 
     /**
@@ -183,6 +209,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getEmbeddedPhone());
         
         
+
+
     }
 
     /**
@@ -194,6 +222,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getAffiliateMarketing());
         
         
+
+
     }
 
     /**
@@ -205,6 +235,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getNumberPool());
         
         
+
+
     }
 
     /**
@@ -216,6 +248,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getAgeGated());
         
         
+
+
     }
 
     /**
@@ -227,6 +261,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getDirectLending());
         
         
+
+
     }
 
     /**
@@ -238,6 +274,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getSubscriberOptin());
         
         
+
+
     }
 
     /**
@@ -249,6 +287,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getSubscriberOptout());
         
         
+
+
     }
 
     /**
@@ -260,6 +300,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getSubscriberHelp());
         
         
+
+
     }
 
     /**
@@ -272,6 +314,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample1());
         
         
+
+
     }
 
     /**
@@ -284,6 +328,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample2());
         
         
+
+
     }
 
     /**
@@ -296,6 +342,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample3());
         
         
+
+
     }
 
     /**
@@ -308,6 +356,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample4());
         
         
+
+
     }
 
     /**
@@ -320,6 +370,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getSample5());
         
         
+
+
     }
 
     /**
@@ -332,6 +384,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getMessageFlow());
         
         
+
+
     }
 
     /**
@@ -344,6 +398,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getHelpMessage());
         
         
+
+
     }
 
     /**
@@ -356,6 +412,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
         
+
+
     }
 
     /**
@@ -367,6 +425,8 @@ public class SMSTenDLCCampaignTest {
         Assert.assertEquals(false, model.getMock());
         
         
+
+
     }
 
     /**
@@ -376,6 +436,8 @@ public class SMSTenDLCCampaignTest {
     public void nextRenewalOrExpirationDateTest() {
 
         
+
+
     }
 
 }

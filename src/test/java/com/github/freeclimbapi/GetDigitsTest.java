@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class GetDigitsTest {
     public void commandTest() {
 
         Assert.assertEquals("GetDigits", model.getCommand());
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class GetDigitsTest {
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
         
+
+
     }
 
     /**
@@ -58,6 +64,8 @@ public class GetDigitsTest {
     public void digitTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -70,6 +78,8 @@ public class GetDigitsTest {
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
         
+
+
     }
 
     /**
@@ -81,6 +91,8 @@ public class GetDigitsTest {
         Assert.assertEquals(false, model.getFlushBuffer());
         
         
+
+
     }
 
     /**
@@ -93,6 +105,8 @@ public class GetDigitsTest {
         Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
         
         
+
+
     }
 
     /**
@@ -102,6 +116,8 @@ public class GetDigitsTest {
     public void maxDigitsTest() {
 
         
+
+
     }
 
     /**
@@ -111,6 +127,8 @@ public class GetDigitsTest {
     public void minDigitsTest() {
 
         
+
+
     }
 
     /**
@@ -120,6 +138,8 @@ public class GetDigitsTest {
     public void promptsTest() {
 
         
+
+
     }
 
     /**
@@ -131,6 +151,8 @@ public class GetDigitsTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
     @Test

@@ -37,7 +37,10 @@ public class GetSpeechTest {
      */
     @Test
     public void commandTest() {
+
         Assert.assertEquals("GetSpeech", model.getCommand());
+
+
     }
 
     /**
@@ -45,13 +48,13 @@ public class GetSpeechTest {
      */
     @Test
     public void actionUrlTest() {
-        try {
-            URI variable = new URI("TEST_STRING");
-            model.setActionUrl(variable); 
-            Assert.assertEquals(variable, model.getActionUrl());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } 
+
+        model.setActionUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        
+
+
     }
 
     /**
@@ -61,6 +64,12 @@ public class GetSpeechTest {
     public void grammarTypeTest() {
 
         
+
+        model.setGrammarType(GrammarType.URL);
+        Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
+        model.setGrammarType(GrammarType.BUILT_IN);
+        Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
+
     }
 
     /**
@@ -73,6 +82,8 @@ public class GetSpeechTest {
         Assert.assertEquals("TEST_STRING", model.getGrammarFile());
         
         
+
+
     }
 
     /**
@@ -85,6 +96,8 @@ public class GetSpeechTest {
         Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
         
+
+
     }
 
     /**
@@ -96,6 +109,8 @@ public class GetSpeechTest {
         Assert.assertEquals(false, model.getPlayBeep());
         
         
+
+
     }
 
     /**
@@ -105,6 +120,8 @@ public class GetSpeechTest {
     public void promptsTest() {
 
         
+
+
     }
 
     /**
@@ -114,6 +131,8 @@ public class GetSpeechTest {
     public void noInputTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -123,6 +142,8 @@ public class GetSpeechTest {
     public void recognitionTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -135,6 +156,8 @@ public class GetSpeechTest {
         model.setConfidenceThreshold(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
         
+
+
     }
 
     /**
@@ -147,6 +170,8 @@ public class GetSpeechTest {
         model.setSensitivityLevel(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
         
+
+
     }
 
     /**
@@ -156,6 +181,8 @@ public class GetSpeechTest {
     public void speechCompleteTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -165,6 +192,8 @@ public class GetSpeechTest {
     public void speechIncompleteTimeoutMsTest() {
 
         
+
+
     }
 
     /**
@@ -176,16 +205,14 @@ public class GetSpeechTest {
         Assert.assertEquals(false, model.getPrivacyMode());
         
         
+
+
     }
 
     @Test
     public void buildTest() throws Exception {
-        try {
-            URI variable = new URI("TEST_STRING");
-            model.setActionUrl(variable); 
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }     
+         
+        model.setActionUrl("TEST_STRING");     
         model.setGrammarFile("TEST_STRING");   
         model.setGrammarRule("TEST_STRING");  
         model.setPlayBeep(false);          

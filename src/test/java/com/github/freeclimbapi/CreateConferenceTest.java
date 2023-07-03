@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 /**
@@ -37,6 +39,8 @@ public class CreateConferenceTest {
     public void commandTest() {
 
         Assert.assertEquals("CreateConference", model.getCommand());
+
+
     }
 
     /**
@@ -49,6 +53,8 @@ public class CreateConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
         
+
+
     }
 
     /**
@@ -60,6 +66,8 @@ public class CreateConferenceTest {
         Assert.assertEquals(false, model.getAlias());
         
         
+
+
     }
 
     /**
@@ -69,6 +77,16 @@ public class CreateConferenceTest {
     public void playBeepTest() {
 
         
+
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+        model.setPlayBeep(PlayBeep.NEVER);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+        model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+        model.setPlayBeep(PlayBeep.EXIT_ONLY);
+        Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+
     }
 
     /**
@@ -80,6 +98,8 @@ public class CreateConferenceTest {
         Assert.assertEquals(false, model.getRecord());
         
         
+
+
     }
 
     /**
@@ -92,6 +112,8 @@ public class CreateConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
         
+
+
     }
 
     /**
@@ -104,6 +126,8 @@ public class CreateConferenceTest {
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
         
+
+
     }
 
     @Test
