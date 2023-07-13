@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<ConferenceResult> testList;
+    List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
     model.setConferences(testList);
     Assert.assertEquals(testList, model.getConferences()); 
 

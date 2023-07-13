@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<RecordingResult> testList;
+    List<RecordingResult> testList = new ArrayList<RecordingResult>();
     model.setRecordings(testList);
     Assert.assertEquals(testList, model.getRecordings()); 
 

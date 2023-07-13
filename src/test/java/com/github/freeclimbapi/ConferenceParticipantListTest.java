@@ -201,7 +201,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<ConferenceParticipantResult> testList;
+    List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
     model.setParticipants(testList);
     Assert.assertEquals(testList, model.getParticipants()); 
 

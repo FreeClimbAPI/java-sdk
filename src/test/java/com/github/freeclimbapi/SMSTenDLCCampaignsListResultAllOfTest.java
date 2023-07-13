@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<SMSTenDLCCampaign> testList;
+    List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
     model.setCampaigns(testList);
     Assert.assertEquals(testList, model.getCampaigns()); 
 

@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<LogResult> testList;
+    List<LogResult> testList = new ArrayList<LogResult>();
     model.setLogs(testList);
     Assert.assertEquals(testList, model.getLogs()); 
 

@@ -201,7 +201,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<AvailableNumber> testList;
+    List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
     model.setAvailablePhoneNumbers(testList);
     Assert.assertEquals(testList, model.getAvailablePhoneNumbers()); 
 

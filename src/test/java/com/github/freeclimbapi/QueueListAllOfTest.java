@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<QueueResult> testList;
+    List<QueueResult> testList = new ArrayList<QueueResult>();
     model.setQueues(testList);
     Assert.assertEquals(testList, model.getQueues()); 
 

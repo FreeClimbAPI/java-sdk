@@ -265,9 +265,9 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    Set<String> testList;
-    model.setSubUsecases(testList);
-    Assert.assertEquals(testList, model.getSubUsecases()); 
+    Set<String> testSet = new HashSet<String>();
+    model.setSubUsecases(testSet);
+    Assert.assertEquals(testSet, model.getSubUsecases()); 
 
   }
 

@@ -201,7 +201,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<ApplicationResult> testList;
+    List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
     model.setApplications(testList);
     Assert.assertEquals(testList, model.getApplications()); 
 

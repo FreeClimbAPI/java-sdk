@@ -2453,7 +2453,7 @@
           },
           "subUsecases": {
             "uniqueItems": true,
-            "x-is-list": true,
+            "x-is-set": true,
             "type": "array",
             "description": "Campaign sub-usecases. Must be of defined valid sub-usecase types. Use `/registry/enum/usecase` operation to retrieve list of valid sub-usecases",
             "items": {

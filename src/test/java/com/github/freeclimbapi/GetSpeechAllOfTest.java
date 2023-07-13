@@ -53,9 +53,13 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    URI uri = new URI("TEST_STRING");
-    model.setActionUrl(uri);
-    Assert.assertEquals(uri, model.getActionUrl());
+    try {
+      URI uri = new URI("TEST_STRING");
+      model.setActionUrl(uri);
+      Assert.assertEquals(uri, model.getActionUrl());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
   }
 
@@ -155,7 +159,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<PerclCommand> testList;
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
     model.setPrompts(testList);
     Assert.assertEquals(testList, model.getPrompts()); 
 

@@ -53,7 +53,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<MessageResult> testList;
+    List<MessageResult> testList = new ArrayList<MessageResult>();
     model.setMessages(testList);
     Assert.assertEquals(testList, model.getMessages()); 
 

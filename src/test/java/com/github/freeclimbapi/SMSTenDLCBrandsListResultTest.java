@@ -201,7 +201,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    List<SMSTenDLCBrand> testList;
+    List<SMSTenDLCBrand> testList = new ArrayList<SMSTenDLCBrand>();
     model.setBrands(testList);
     Assert.assertEquals(testList, model.getBrands()); 
 

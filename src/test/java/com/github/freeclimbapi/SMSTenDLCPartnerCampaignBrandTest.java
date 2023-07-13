@@ -251,7 +251,7 @@ import com.github.freeclimbapi.models.*;
 
       
   
-    Map<String, Object> testMap;
+    Map<String, Object> testMap = new HashMap();
     model.setOptionalAttributes(testMap);
     Assert.assertEquals(testMap, model.getOptionalAttributes()); 
 
