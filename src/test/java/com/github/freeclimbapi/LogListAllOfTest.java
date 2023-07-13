@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,20 +31,36 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for LogListAllOf
  */
-public class LogListAllOfTest {
+ public class LogListAllOfTest {
     private final LogListAllOf model = new LogListAllOf();
+
     /**
      * Test the property 'logs'
      */
     @Test
     public void logsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    List<LogResult> testList;
+    model.setLogs(testList);
+    Assert.assertEquals(testList, model.getLogs()); 
 
-}
+  }
+
+
+
+
+
+ }

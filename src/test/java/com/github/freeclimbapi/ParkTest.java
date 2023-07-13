@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,74 +31,105 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Park
  */
-public class ParkTest {
+ public class ParkTest {
     private final Park model = new Park();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("Park", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
-
+      
+        
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-
+      
+        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+          
+        model.setWaitUrl("TEST_STRING");
+          
+        
          
-        model.setWaitUrl("TEST_STRING");   
-        model.setActionUrl("TEST_STRING");   
-        model.setNotificationUrl("TEST_STRING");  
+          
+        model.setActionUrl("TEST_STRING");
+          
+        
+         
+          
+        model.setNotificationUrl("TEST_STRING");
+          
+        
+         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
+
     }
-}
+ }

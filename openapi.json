@@ -93,8 +93,8 @@
         "type": "string",
         "description": "The type of this account. It is one of: trial or full.",
         "enum": ["trial", "full"],
-        "x-enum-varnames": ["TRIAL", "FULL"],
         "x-enum": true,
+        "x-enum-varnames": ["TRIAL", "FULL"],
         "nullable": true
       },
       "AnsweredBy": {
@@ -430,6 +430,7 @@
           "commands": {
             "type": "array",
             "description": "A JSON array of PerCL commands",
+            "x-is-list": true,
             "items": {
               "$ref": "#/components/schemas/PerclCommand"
             }
@@ -572,6 +573,7 @@
       "Dequeue": {
         "description": "The `Dequeue` command transfers control of a Call that is in a Queue so that the waiting caller exits the Queue. Execution continues with the first command in the PerCL script returned by the `actionUrl` specified in the `Enqueue` command.",
         "x-percl-command": true,
+        "x-no-properties": true,
         "allOf": [
           {
             "$ref": "#/components/schemas/PerclCommand"
@@ -654,6 +656,7 @@
               "prompts": {
                 "description": "JSON array of PerCL commands to nest within the `GetDigits` command. The `Say`, `Play`, and `Pause` commands can be used. The nested actions are executed while FreeClimb is waiting for input from the Caller.",
                 "type": "array",
+                "x-is-list": true,
                 "items": {
                   "$ref": "#/components/schemas/PerclCommand"
                 }
@@ -680,7 +683,8 @@
               "actionUrl": {
                 "description": "When the caller has finished speaking or the command has timed out, FreeClimb will make a POST request to this URL. A PerCL response is expected to continue handling the call.",
                 "type": "string",
-                "format": "uri"
+                "format": "uri",
+                "x-is-uri": true
               },
               "grammarType": {
                 "$ref": "#/components/schemas/GrammarType"
@@ -702,7 +706,8 @@
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/PerclCommand"
-                }
+                },
+                "x-is-list": true
               },
               "noInputTimeoutMs": {
                 "description": "When recognition is started and there is no speech detected for `noInputTimeoutMs` milliseconds, the recognizer will terminate the recognition operation.",
@@ -1151,6 +1156,7 @@
       "StartRecordCall": {
         "description": "The `StartRecordCall` command records the current call and returns the URL of a file containing the audio recording when recording completes. `StartRecordCall` is non-blocking. After recording of the current call begins, control of the call moves to the PerCL command that follows `StartRecordCall` in the current PerCL script.",
         "x-percl-command": true,
+        "x-no-properties": true,
         "allOf": [
           {
             "$ref": "#/components/schemas/PerclCommand"
@@ -1182,6 +1188,7 @@
       "Unpark": {
         "description": "The `Unpark` command resumes a parked call.  Execution continues with the first command in the PerCL scripted returned by the actionUrl specified in the Park command as long as the call is still in progress.  If the call is no longer in progress, any returned PerCL will not be executed. Unpark is a terminal command -- any commands following it in the same script are not executed.",
         "x-percl-command": true,
+        "x-no-properties": true,
         "allOf": [
           {
             "$ref": "#/components/schemas/PerclCommand"
@@ -1256,6 +1263,7 @@
         "description": "Details for which features this number may be used.",
         "type": "object",
         "required": ["voice", "sms", "tollFree", "tenDLC", "shortCode"],
+        "x-is-object": true,
         "properties": {
           "voice": {
             "description": "Indicates whether a number can be used for voice calls. Replaces voiceEnabled.",
@@ -1449,7 +1457,8 @@
                 "items": {
                   "$ref": "#/components/schemas/ApplicationResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1508,7 +1517,8 @@
                 "items": {
                   "$ref": "#/components/schemas/AvailableNumber"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1617,7 +1627,8 @@
                 "items": {
                   "$ref": "#/components/schemas/IncomingNumberResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1792,7 +1803,8 @@
                 "items": {
                   "$ref": "#/components/schemas/CallResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1848,7 +1860,8 @@
                 "items": {
                   "$ref": "#/components/schemas/RecordingResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1905,7 +1918,8 @@
                 "items": {
                   "$ref": "#/components/schemas/LogResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -1984,7 +1998,8 @@
                 "items": {
                   "$ref": "#/components/schemas/MessageResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2036,7 +2051,8 @@
                 "items": {
                   "$ref": "#/components/schemas/ConferenceResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2199,7 +2215,8 @@
                 "items": {
                   "$ref": "#/components/schemas/ConferenceParticipantResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2280,7 +2297,8 @@
                 "items": {
                   "$ref": "#/components/schemas/QueueResult"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2329,7 +2347,8 @@
                 "items": {
                   "$ref": "#/components/schemas/QueueMember"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2358,7 +2377,8 @@
                 "items": {
                   "$ref": "#/components/schemas/SMSTenDLCCampaign"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2391,19 +2411,23 @@
           },
           "resellerId": {
             "maxLength": 8,
+            "x-max-length-8": true,
             "type": "string",
             "nullable": true,
             "description": "Alphanumeric identifier of the reseller that you want to associate with this campaign."
           },
           "status": {
             "type": "string",
+            "x-has-writer": true,
             "description": "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ",
-            "enum": ["ACTIVE", "EXPIRED"]
+            "enum": ["ACTIVE", "EXPIRED"],
+            "x-enum-varnames": ["ACTIVE", "EXPIRED"]
           },
           "createDate": {
             "type": "string",
             "description": "Unix timestamp when campaign was created.",
-            "format": "date-time"
+            "format": "date-time",
+            "x-is-date-time": true
           },
           "autoRenewal": {
             "type": "boolean",
@@ -2413,10 +2437,12 @@
             "type": "string",
             "description": "Campaign recent billed date.",
             "format": "date-time",
+            "x-is-date-time": true,
             "nullable": true
           },
           "brandId": {
             "maxLength": 8,
+            "x-max-length-8": true,
             "type": "string",
             "description": "Alphanumeric identifier of the brand associated with this campaign."
           },
@@ -2427,6 +2453,7 @@
           },
           "subUsecases": {
             "uniqueItems": true,
+            "x-is-list": true,
             "type": "array",
             "description": "Campaign sub-usecases. Must be of defined valid sub-usecase types. Use `/registry/enum/usecase` operation to retrieve list of valid sub-usecases",
             "items": {
@@ -2536,6 +2563,7 @@
             "nullable": true,
             "description": "When the campaign would be due for its next renew/bill date.",
             "format": "date",
+            "x-is-date": true,
             "example": "2000-01-01"
           }
         },
@@ -2586,7 +2614,8 @@
                 "items": {
                   "$ref": "#/components/schemas/SMSTenDLCPartnerCampaign"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2607,16 +2636,20 @@
           },
           "status": {
             "type": "string",
+            "x-has-writer": true,
             "description": "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ",
-            "enum": ["ACTIVE", "EXPIRED"]
+            "enum": ["ACTIVE", "EXPIRED"],
+            "x-enum-varnames": ["ACTIVE", "EXPIRED"]
           },
           "createDate": {
             "type": "string",
             "description": "Unix timestamp when campaign was created.",
-            "format": "date-time"
+            "format": "date-time",
+            "x-is-date-time": true
           },
           "brandId": {
             "maxLength": 8,
+            "x-max-length-8": true,
             "type": "string",
             "description": "Alphanumeric identifier of the brand associated with this campaign."
           },
@@ -2738,7 +2771,8 @@
             "description": "Subscriber opt-out message."
           },
           "brand": {
-            "$ref": "#/components/schemas/SMSTenDLCPartnerCampaignBrand"
+            "$ref": "#/components/schemas/SMSTenDLCPartnerCampaignBrand",
+            "x-partner-campaign-brand": true
           }
         },
         "example": {
@@ -2787,6 +2821,7 @@
       "SMSTenDLCPartnerCampaignBrand": {
         "required": ["email", "phone"],
         "type": "object",
+        "x-is-object": true,
         "properties": {
           "accountId": {
             "type": "string",
@@ -2840,7 +2875,9 @@
             "example": "http://www.abcmobile.com"
           },
           "optionalAttributes": {
+            "x-is-map": true,
             "type": "object",
+            "x-is-hash": true,
             "additionalProperties": {
               "type": "object",
               "description": "Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names."
@@ -2866,7 +2903,8 @@
                 "items": {
                   "$ref": "#/components/schemas/SMSTenDLCBrand"
                 },
-                "nullable": true
+                "nullable": true,
+                "x-is-list": true
               }
             }
           }
@@ -2894,8 +2932,16 @@
           "entityType": {
             "maxLength": 20,
             "type": "string",
+            "x-has-writer": true,
             "description": "Entity type behind the brand. This is the form of business establishment.",
             "enum": [
+              "PRIVATE_PROFIT",
+              "PUBLIC_PROFIT",
+              "NON_PROFIT",
+              "GOVERNMENT",
+              "SOLE_PROPRIETOR"
+            ],
+            "x-enum-varnames": [
               "PRIVATE_PROFIT",
               "PUBLIC_PROFIT",
               "NON_PROFIT",
@@ -2947,7 +2993,8 @@
             "maxLength": 2,
             "type": "string",
             "description": "ISO2 2 characters country code. Example: US - United States",
-            "example": "US"
+            "example": "US",
+            "x-max-length-2": true
           },
           "phone": {
             "maxLength": 20,
@@ -2975,12 +3022,15 @@
           },
           "postalCode": {
             "maxLength": 10,
+            "x-max-length-10": true,
             "type": "string",
             "description": "Postal codes. Use 5 digit zipcode for United States",
-            "example": "10001"
+            "example": "10001",
+            "x-char-len-2": true
           },
           "country": {
             "maxLength": 2,
+            "x-max-length-2": true,
             "type": "string",
             "description": "ISO2 2 characters country code. Example: US - United States",
             "example": "US"
@@ -2992,15 +3042,46 @@
           },
           "stockSymbol": {
             "maxLength": 10,
+            "x-max-length-10": true,
             "type": "string",
             "description": "(Required for public company) stock symbol.",
             "example": "ABC"
           },
           "stockExchange": {
             "type": "string",
+            "x-has-writer": true,
             "description": "(Required for public company) stock exchange.",
             "example": "NASDAQ",
             "enum": [
+              "NONE",
+              "NASDAQ",
+              "NYSE",
+              "AMEX",
+              "AMX",
+              "ASX",
+              "B3",
+              "BME",
+              "BSE",
+              "FRA",
+              "ICEX",
+              "JPX",
+              "JSE",
+              "KRX",
+              "LON",
+              "NSE",
+              "OMX",
+              "SEHK",
+              "SGX",
+              "SSE",
+              "STO",
+              "SWX",
+              "SZSE",
+              "TSX",
+              "TWSE",
+              "VSE",
+              "OTHER"
+            ],
+            "x-enum-varnames": [
               "NONE",
               "NASDAQ",
               "NYSE",
@@ -3043,8 +3124,16 @@
           },
           "brandRelationship": {
             "type": "string",
+            "x-has-writer": true,
             "description": "Brand relationship to the CSP",
             "enum": [
+              "BASIC_ACCOUNT",
+              "SMALL_ACCOUNT",
+              "MEDIUM_ACCOUNT",
+              "LARGE_ACCOUNT",
+              "KEY_ACCOUNT"
+            ],
+            "x-enum-varnames": [
               "BASIC_ACCOUNT",
               "SMALL_ACCOUNT",
               "MEDIUM_ACCOUNT",
@@ -3064,7 +3153,9 @@
           },
           "altBusinessIdType": {
             "type": "string",
+            "x-has-writer": true,
             "enum": ["NONE", "DUNS", "GIIN", "LEI"],
+            "x-enum-varnames": ["NONE", "DUNS", "GIIN", "LEI"],
             "description": "The type of the Alternative business identifier"
           },
           "universalEin": {
@@ -3078,7 +3169,9 @@
             "description": "Caller supplied brand reference ID. If supplied, the value must be unique across all submitted brands. Can be used to prevent duplicate brand registrations."
           },
           "optionalAttributes": {
+            "x-is-map": true,
             "type": "object",
+            "x-is-hash": true,
             "additionalProperties": {
               "type": "object",
               "description": "Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names."
@@ -3091,8 +3184,15 @@
           },
           "identityStatus": {
             "type": "string",
+            "x-has-writer": true,
             "description": "TCR assessment of the brand identification status.",
             "enum": [
+              "SELF_DECLARED",
+              "UNVERIFIED",
+              "VERIFIED",
+              "VETTED_VERIFIED"
+            ],
+            "x-enum-varnames": [
               "SELF_DECLARED",
               "UNVERIFIED",
               "VERIFIED",
@@ -3102,7 +3202,8 @@
           "createDate": {
             "type": "string",
             "description": "Unix timestamp when brand was created.",
-            "format": "date-time"
+            "format": "date-time",
+            "x-is-date-time": true
           }
         },
         "description": "A brand is a business identity behind the campaign.",

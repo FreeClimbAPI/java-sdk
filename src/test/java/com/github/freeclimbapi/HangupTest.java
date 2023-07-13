@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,42 +31,49 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Hangup
  */
-public class HangupTest {
+ public class HangupTest {
     private final Hangup model = new Hangup();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("Hangup", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'reason'
      */
     @Test
     public void reasonTest() {
-
+      
+        
         model.setReason("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReason());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+          
+        model.setReason("TEST_STRING");
+          
+        
          
-        model.setReason("TEST_STRING");  
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("reason"), model.getReason());
+
     }
-}
+ }

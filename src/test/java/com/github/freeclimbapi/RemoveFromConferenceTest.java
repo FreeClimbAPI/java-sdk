@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,42 +31,49 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RemoveFromConference
  */
-public class RemoveFromConferenceTest {
+ public class RemoveFromConferenceTest {
     private final RemoveFromConference model = new RemoveFromConference();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("RemoveFromConference", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
+      
+        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+          
+        model.setCallId("TEST_STRING");
+          
+        
          
-        model.setCallId("TEST_STRING");  
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("callId"), model.getCallId());
+
     }
-}
+ }

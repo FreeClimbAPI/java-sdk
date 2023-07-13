@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,108 +31,157 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AccountResultAllOf
  */
-public class AccountResultAllOfTest {
+ public class AccountResultAllOfTest {
     private final AccountResultAllOf model = new AccountResultAllOf();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'apiKey'
      */
     @Test
     public void apiKeyTest() {
-
+      
+        
         model.setApiKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApiKey());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'label'
      */
     @Test
     public void labelTest() {
-
+      
+        
         model.setLabel("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLabel());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'type'
      */
     @Test
     public void typeTest() {
+      
+      model.setType(AccountType.TRIAL);
+      Assert.assertEquals(model.getType(),AccountType.TRIAL);
+      model.setType(AccountType.FULL);
+      Assert.assertEquals(model.getType(),AccountType.FULL);
+  
 
-        
+  }
 
-        model.setType(AccountType.TRIAL);
-        Assert.assertEquals(model.getType(),AccountType.TRIAL);
-        model.setType(AccountType.FULL);
-        Assert.assertEquals(model.getType(),AccountType.FULL);
-
-    }
 
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
+      
+      model.setStatus(AccountStatus.CLOSED);
+      Assert.assertEquals(model.getStatus(),AccountStatus.CLOSED);
+      model.setStatus(AccountStatus.SUSPENDED);
+      Assert.assertEquals(model.getStatus(),AccountStatus.SUSPENDED);
+      model.setStatus(AccountStatus.ACTIVE);
+      Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
+  
 
-        
+  }
 
-        model.setStatus(AccountStatus.CLOSED);
-        Assert.assertEquals(model.getStatus(),AccountStatus.CLOSED);
-        model.setStatus(AccountStatus.SUSPENDED);
-        Assert.assertEquals(model.getStatus(),AccountStatus.SUSPENDED);
-        model.setStatus(AccountStatus.ACTIVE);
-        Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
-
-    }
 
     /**
      * Test the property 'subresourceUris'
      */
     @Test
     public void subresourceUrisTest() {
-
+      
         
 
+        
+        
+        
+        
+          Object testObject = new Object();
+          model.setSubresourceUris(testObject);
+          Assert.assertEquals(testObject, model.getSubresourceUris());
+        
 
-    }
+      
+  
 
-}
+  }
+
+
+
+
+
+ }

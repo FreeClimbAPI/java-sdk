@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,65 +31,102 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SmsAllOf
  */
-public class SmsAllOfTest {
+ public class SmsAllOfTest {
     private final SmsAllOf model = new SmsAllOf();
+
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-
+      
+        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-
+      
+        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
-
+      
+        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-
+      
+        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

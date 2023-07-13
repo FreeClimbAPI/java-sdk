@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,21 +31,37 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for PerclScript
  */
-public class PerclScriptTest {
+ public class PerclScriptTest {
     private final PerclScript model = new PerclScript();
+
     /**
      * Test the property 'commands'
      */
     @Test
     public void commandsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    List<PerclCommand> testList;
+    model.setCommands(testList);
+    Assert.assertEquals(testList, model.getCommands()); 
+
+  }
+
+
+
+
 
     @Test
     public void toJsonTest() throws Exception {
@@ -59,4 +79,4 @@ public class PerclScriptTest {
 
         Assert.assertEquals(json, jsonWriter.serialize(listResult));
     }
-}
+ }

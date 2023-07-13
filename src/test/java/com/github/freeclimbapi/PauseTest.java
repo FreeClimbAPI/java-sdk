@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,38 +31,46 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Pause
  */
-public class PauseTest {
+ public class PauseTest {
     private final Pause model = new Pause();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("Pause", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'length'
      */
     @Test
     public void lengthTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setLength(1);
+      Assert.assertEquals(1, (int) model.getLength());
+
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
-          
+        
+         
+        
+         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("length"), model.getLength());
+
     }
-}
+ }

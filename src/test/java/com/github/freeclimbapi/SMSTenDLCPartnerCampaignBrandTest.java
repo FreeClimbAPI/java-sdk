@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,157 +31,255 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SMSTenDLCPartnerCampaignBrand
  */
-public class SMSTenDLCPartnerCampaignBrandTest {
+ public class SMSTenDLCPartnerCampaignBrandTest {
     private final SMSTenDLCPartnerCampaignBrand model = new SMSTenDLCPartnerCampaignBrand();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'brandId'
      */
     @Test
     public void brandIdTest() {
-
+      
+        
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'firstName'
      */
     @Test
     public void firstNameTest() {
-
+      
+        
         model.setFirstName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'lastName'
      */
     @Test
     public void lastNameTest() {
-
+      
+        
         model.setLastName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'displayName'
      */
     @Test
     public void displayNameTest() {
-
+      
+        
         model.setDisplayName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'companyName'
      */
     @Test
     public void companyNameTest() {
-
+      
+        
         model.setCompanyName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phone'
      */
     @Test
     public void phoneTest() {
-
+      
+        
         model.setPhone("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'email'
      */
     @Test
     public void emailTest() {
-
+      
+        
         model.setEmail("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'website'
      */
     @Test
     public void websiteTest() {
-
+      
+        
         model.setWebsite("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'optionalAttributes'
      */
     @Test
     public void optionalAttributesTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    Map<String, Object> testMap;
+    model.setOptionalAttributes(testMap);
+    Assert.assertEquals(testMap, model.getOptionalAttributes()); 
+
+  }
+
 
     /**
      * Test the property 'evpVettingScore'
      */
     @Test
     public void evpVettingScoreTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setEvpVettingScore(1);
+      Assert.assertEquals(1, (int) model.getEvpVettingScore());
 
-}
+  }
+
+
+
+
+
+ }

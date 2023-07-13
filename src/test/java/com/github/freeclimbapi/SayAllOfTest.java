@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,75 +31,122 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SayAllOf
  */
-public class SayAllOfTest {
+ public class SayAllOfTest {
     private final SayAllOf model = new SayAllOf();
+
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
-
+      
+        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'language'
      */
     @Test
     public void languageTest() {
-
+      
+        
         model.setLanguage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLanguage());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'loop'
      */
     @Test
     public void loopTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setLoop(1);
+      Assert.assertEquals(1, (int) model.getLoop());
+
+  }
+
 
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-
+      
+        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

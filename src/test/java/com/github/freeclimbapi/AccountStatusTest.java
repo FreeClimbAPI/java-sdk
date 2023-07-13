@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,84 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AccountStatus
  */
-public class AccountStatusTest {
-}
+ public class AccountStatusTest {
+
+
+  @Test
+    public void testCLOSEDShouldWork() {
+
+        AccountStatus test = AccountStatus.CLOSED;
+         Assert.assertEquals(test.getClass(), AccountStatus.class);
+    }
+
+    @Test 
+    public void testCLOSEDShouldSerializeToEnum() {
+    
+        AccountStatus expectedValue = AccountStatus.CLOSED;
+        AccountStatus calculatedValue = AccountStatus.fromValue("closed");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testCLOSEDShouldDeserializeToString() {
+     AccountStatus test = AccountStatus.CLOSED;
+      String expectedValue = "closed";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testSUSPENDEDShouldWork() {
+
+        AccountStatus test = AccountStatus.SUSPENDED;
+         Assert.assertEquals(test.getClass(), AccountStatus.class);
+    }
+
+    @Test 
+    public void testSUSPENDEDShouldSerializeToEnum() {
+    
+        AccountStatus expectedValue = AccountStatus.SUSPENDED;
+        AccountStatus calculatedValue = AccountStatus.fromValue("suspended");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testSUSPENDEDShouldDeserializeToString() {
+     AccountStatus test = AccountStatus.SUSPENDED;
+      String expectedValue = "suspended";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testACTIVEShouldWork() {
+
+        AccountStatus test = AccountStatus.ACTIVE;
+         Assert.assertEquals(test.getClass(), AccountStatus.class);
+    }
+
+    @Test 
+    public void testACTIVEShouldSerializeToEnum() {
+    
+        AccountStatus expectedValue = AccountStatus.ACTIVE;
+        AccountStatus calculatedValue = AccountStatus.fromValue("active");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testACTIVEShouldDeserializeToString() {
+     AccountStatus test = AccountStatus.ACTIVE;
+      String expectedValue = "active";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,84 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for LogLevel
  */
-public class LogLevelTest {
-}
+ public class LogLevelTest {
+
+
+  @Test
+    public void testINFOShouldWork() {
+
+        LogLevel test = LogLevel.INFO;
+         Assert.assertEquals(test.getClass(), LogLevel.class);
+    }
+
+    @Test 
+    public void testINFOShouldSerializeToEnum() {
+    
+        LogLevel expectedValue = LogLevel.INFO;
+        LogLevel calculatedValue = LogLevel.fromValue("info");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testINFOShouldDeserializeToString() {
+     LogLevel test = LogLevel.INFO;
+      String expectedValue = "info";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testWARNINGShouldWork() {
+
+        LogLevel test = LogLevel.WARNING;
+         Assert.assertEquals(test.getClass(), LogLevel.class);
+    }
+
+    @Test 
+    public void testWARNINGShouldSerializeToEnum() {
+    
+        LogLevel expectedValue = LogLevel.WARNING;
+        LogLevel calculatedValue = LogLevel.fromValue("warning");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testWARNINGShouldDeserializeToString() {
+     LogLevel test = LogLevel.WARNING;
+      String expectedValue = "warning";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testERRORShouldWork() {
+
+        LogLevel test = LogLevel.ERROR;
+         Assert.assertEquals(test.getClass(), LogLevel.class);
+    }
+
+    @Test 
+    public void testERRORShouldSerializeToEnum() {
+    
+        LogLevel expectedValue = LogLevel.ERROR;
+        LogLevel calculatedValue = LogLevel.fromValue("error");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testERRORShouldDeserializeToString() {
+     LogLevel test = LogLevel.ERROR;
+      String expectedValue = "error";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

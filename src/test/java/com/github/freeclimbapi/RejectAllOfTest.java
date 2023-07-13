@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,23 +31,36 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RejectAllOf
  */
-public class RejectAllOfTest {
+ public class RejectAllOfTest {
     private final RejectAllOf model = new RejectAllOf();
+
     /**
      * Test the property 'reason'
      */
     @Test
     public void reasonTest() {
-
+      
+        
         model.setReason("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReason());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

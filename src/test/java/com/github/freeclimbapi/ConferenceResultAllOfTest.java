@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,155 +31,228 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ConferenceResultAllOf
  */
-public class ConferenceResultAllOfTest {
+ public class ConferenceResultAllOfTest {
     private final ConferenceResultAllOf model = new ConferenceResultAllOf();
+
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-
+      
+        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
+      
+      model.setPlayBeep(PlayBeep.ALWAYS);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+      model.setPlayBeep(PlayBeep.NEVER);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+      model.setPlayBeep(PlayBeep.EXIT_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+  
 
-        
+  }
 
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-        model.setPlayBeep(PlayBeep.NEVER);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-        model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-        model.setPlayBeep(PlayBeep.EXIT_ONLY);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
-
-    }
 
     /**
      * Test the property 'record'
      */
     @Test
     public void recordTest() {
+      
         model.setRecord(false);
-        Assert.assertEquals(false, model.getRecord());
+        Assert.assertEquals(false, model.getRecord());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
+      
+      model.setStatus(ConferenceStatus.EMPTY);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
+      model.setStatus(ConferenceStatus.POPULATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
+      model.setStatus(ConferenceStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
+      model.setStatus(ConferenceStatus.TERMINATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
+  
 
-        
+  }
 
-        model.setStatus(ConferenceStatus.EMPTY);
-        Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
-        model.setStatus(ConferenceStatus.POPULATED);
-        Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
-        model.setStatus(ConferenceStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
-        model.setStatus(ConferenceStatus.TERMINATED);
-        Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
-
-    }
 
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
-
+      
+        
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
-
+      
+        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'subresourceUris'
      */
     @Test
     public void subresourceUrisTest() {
-
+      
         
 
+        
+        
+        
+        
+          Object testObject = new Object();
+          model.setSubresourceUris(testObject);
+          Assert.assertEquals(testObject, model.getSubresourceUris());
+        
 
-    }
+      
+  
 
-}
+  }
+
+
+
+
+
+ }

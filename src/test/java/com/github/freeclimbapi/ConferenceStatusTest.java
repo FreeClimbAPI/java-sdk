@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,108 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ConferenceStatus
  */
-public class ConferenceStatusTest {
-}
+ public class ConferenceStatusTest {
+
+
+  @Test
+    public void testEMPTYShouldWork() {
+
+        ConferenceStatus test = ConferenceStatus.EMPTY;
+         Assert.assertEquals(test.getClass(), ConferenceStatus.class);
+    }
+
+    @Test 
+    public void testEMPTYShouldSerializeToEnum() {
+    
+        ConferenceStatus expectedValue = ConferenceStatus.EMPTY;
+        ConferenceStatus calculatedValue = ConferenceStatus.fromValue("empty");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testEMPTYShouldDeserializeToString() {
+     ConferenceStatus test = ConferenceStatus.EMPTY;
+      String expectedValue = "empty";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testPOPULATEDShouldWork() {
+
+        ConferenceStatus test = ConferenceStatus.POPULATED;
+         Assert.assertEquals(test.getClass(), ConferenceStatus.class);
+    }
+
+    @Test 
+    public void testPOPULATEDShouldSerializeToEnum() {
+    
+        ConferenceStatus expectedValue = ConferenceStatus.POPULATED;
+        ConferenceStatus calculatedValue = ConferenceStatus.fromValue("populated");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testPOPULATEDShouldDeserializeToString() {
+     ConferenceStatus test = ConferenceStatus.POPULATED;
+      String expectedValue = "populated";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testIN_PROGRESSShouldWork() {
+
+        ConferenceStatus test = ConferenceStatus.IN_PROGRESS;
+         Assert.assertEquals(test.getClass(), ConferenceStatus.class);
+    }
+
+    @Test 
+    public void testIN_PROGRESSShouldSerializeToEnum() {
+    
+        ConferenceStatus expectedValue = ConferenceStatus.IN_PROGRESS;
+        ConferenceStatus calculatedValue = ConferenceStatus.fromValue("inProgress");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testIN_PROGRESSShouldDeserializeToString() {
+     ConferenceStatus test = ConferenceStatus.IN_PROGRESS;
+      String expectedValue = "inProgress";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testTERMINATEDShouldWork() {
+
+        ConferenceStatus test = ConferenceStatus.TERMINATED;
+         Assert.assertEquals(test.getClass(), ConferenceStatus.class);
+    }
+
+    @Test 
+    public void testTERMINATEDShouldSerializeToEnum() {
+    
+        ConferenceStatus expectedValue = ConferenceStatus.TERMINATED;
+        ConferenceStatus calculatedValue = ConferenceStatus.fromValue("terminated");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testTERMINATEDShouldDeserializeToString() {
+     ConferenceStatus test = ConferenceStatus.TERMINATED;
+      String expectedValue = "terminated";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

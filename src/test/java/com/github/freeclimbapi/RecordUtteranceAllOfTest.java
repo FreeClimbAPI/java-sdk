@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,98 +31,163 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordUtteranceAllOf
  */
-public class RecordUtteranceAllOfTest {
+ public class RecordUtteranceAllOfTest {
     private final RecordUtteranceAllOf model = new RecordUtteranceAllOf();
+
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'silenceTimeoutMs'
      */
     @Test
     public void silenceTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setSilenceTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'finishOnKey'
      */
     @Test
     public void finishOnKeyTest() {
-
+      
+        
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'maxLengthSec'
      */
     @Test
     public void maxLengthSecTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setMaxLengthSec(1);
+      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+
+  }
+
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
+      
         model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());
+        Assert.assertEquals(false, model.getPlayBeep());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'autoStart'
      */
     @Test
     public void autoStartTest() {
+      
         model.setAutoStart(false);
-        Assert.assertEquals(false, model.getAutoStart());
+        Assert.assertEquals(false, model.getAutoStart());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

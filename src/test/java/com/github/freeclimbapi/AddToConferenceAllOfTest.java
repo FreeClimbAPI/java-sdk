@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,144 +31,229 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AddToConferenceAllOf
  */
-public class AddToConferenceAllOfTest {
+ public class AddToConferenceAllOfTest {
     private final AddToConferenceAllOf model = new AddToConferenceAllOf();
+
     /**
      * Test the property 'allowCallControl'
      */
     @Test
     public void allowCallControlTest() {
+      
         model.setAllowCallControl(false);
-        Assert.assertEquals(false, model.getAllowCallControl());
+        Assert.assertEquals(false, model.getAllowCallControl());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callControlSequence'
      */
     @Test
     public void callControlSequenceTest() {
-
+      
+        
         model.setCallControlSequence("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callControlUrl'
      */
     @Test
     public void callControlUrlTest() {
-
+      
+        
         model.setCallControlUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-
+      
+        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
+      
         model.setCallId(false);
-        Assert.assertEquals(false, model.getCallId());
+        Assert.assertEquals(false, model.getCallId());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'leaveConferenceUrl'
      */
     @Test
     public void leaveConferenceUrlTest() {
-
+      
+        
         model.setLeaveConferenceUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'listen'
      */
     @Test
     public void listenTest() {
+      
         model.setListen(false);
-        Assert.assertEquals(false, model.getListen());
+        Assert.assertEquals(false, model.getListen());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-
+      
+        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'startConfOnEnter'
      */
     @Test
     public void startConfOnEnterTest() {
+      
         model.setStartConfOnEnter(false);
-        Assert.assertEquals(false, model.getStartConfOnEnter());
+        Assert.assertEquals(false, model.getStartConfOnEnter());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'talk'
      */
     @Test
     public void talkTest() {
+      
         model.setTalk(false);
-        Assert.assertEquals(false, model.getTalk());
+        Assert.assertEquals(false, model.getTalk());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

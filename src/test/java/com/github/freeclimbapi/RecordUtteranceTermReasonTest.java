@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,108 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordUtteranceTermReason
  */
-public class RecordUtteranceTermReasonTest {
-}
+ public class RecordUtteranceTermReasonTest {
+
+
+  @Test
+    public void testFINISH_KEYShouldWork() {
+
+        RecordUtteranceTermReason test = RecordUtteranceTermReason.FINISH_KEY;
+         Assert.assertEquals(test.getClass(), RecordUtteranceTermReason.class);
+    }
+
+    @Test 
+    public void testFINISH_KEYShouldSerializeToEnum() {
+    
+        RecordUtteranceTermReason expectedValue = RecordUtteranceTermReason.FINISH_KEY;
+        RecordUtteranceTermReason calculatedValue = RecordUtteranceTermReason.fromValue("finishKey");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testFINISH_KEYShouldDeserializeToString() {
+     RecordUtteranceTermReason test = RecordUtteranceTermReason.FINISH_KEY;
+      String expectedValue = "finishKey";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testTIMEOUTShouldWork() {
+
+        RecordUtteranceTermReason test = RecordUtteranceTermReason.TIMEOUT;
+         Assert.assertEquals(test.getClass(), RecordUtteranceTermReason.class);
+    }
+
+    @Test 
+    public void testTIMEOUTShouldSerializeToEnum() {
+    
+        RecordUtteranceTermReason expectedValue = RecordUtteranceTermReason.TIMEOUT;
+        RecordUtteranceTermReason calculatedValue = RecordUtteranceTermReason.fromValue("timeout");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testTIMEOUTShouldDeserializeToString() {
+     RecordUtteranceTermReason test = RecordUtteranceTermReason.TIMEOUT;
+      String expectedValue = "timeout";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testHANGUPShouldWork() {
+
+        RecordUtteranceTermReason test = RecordUtteranceTermReason.HANGUP;
+         Assert.assertEquals(test.getClass(), RecordUtteranceTermReason.class);
+    }
+
+    @Test 
+    public void testHANGUPShouldSerializeToEnum() {
+    
+        RecordUtteranceTermReason expectedValue = RecordUtteranceTermReason.HANGUP;
+        RecordUtteranceTermReason calculatedValue = RecordUtteranceTermReason.fromValue("hangup");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testHANGUPShouldDeserializeToString() {
+     RecordUtteranceTermReason test = RecordUtteranceTermReason.HANGUP;
+      String expectedValue = "hangup";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testMAX_LENGTHShouldWork() {
+
+        RecordUtteranceTermReason test = RecordUtteranceTermReason.MAX_LENGTH;
+         Assert.assertEquals(test.getClass(), RecordUtteranceTermReason.class);
+    }
+
+    @Test 
+    public void testMAX_LENGTHShouldSerializeToEnum() {
+    
+        RecordUtteranceTermReason expectedValue = RecordUtteranceTermReason.MAX_LENGTH;
+        RecordUtteranceTermReason calculatedValue = RecordUtteranceTermReason.fromValue("maxLength");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testMAX_LENGTHShouldDeserializeToString() {
+     RecordUtteranceTermReason test = RecordUtteranceTermReason.MAX_LENGTH;
+      String expectedValue = "maxLength";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

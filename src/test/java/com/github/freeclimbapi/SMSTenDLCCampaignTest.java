@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,417 +31,677 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SMSTenDLCCampaign
  */
-public class SMSTenDLCCampaignTest {
+ public class SMSTenDLCCampaignTest {
     private final SMSTenDLCCampaign model = new SMSTenDLCCampaign();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
-
+      
+        
         model.setCampaignId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'cspId'
      */
     @Test
     public void cspIdTest() {
-
+      
+        
         model.setCspId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'resellerId'
      */
     @Test
     public void resellerIdTest() {
-
+      
+        
         model.setResellerId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getResellerId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
+      
+  
+    model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+    Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.ACTIVE);
+  
+    model.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
+    Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'createDate'
      */
     @Test
     public void createDateTest() {
+      
+        
+          model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+          Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
 
         
+        
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'autoRenewal'
      */
     @Test
     public void autoRenewalTest() {
+      
         model.setAutoRenewal(false);
-        Assert.assertEquals(false, model.getAutoRenewal());
+        Assert.assertEquals(false, model.getAutoRenewal());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'billedDate'
      */
     @Test
     public void billedDateTest() {
+      
+        
+          model.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+          Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getBilledDate());
 
         
+        
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'brandId'
      */
     @Test
     public void brandIdTest() {
-
+      
+        
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'usecase'
      */
     @Test
     public void usecaseTest() {
-
+      
+        
         model.setUsecase("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUsecase());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'subUsecases'
      */
     @Test
     public void subUsecasesTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    Set<String> testList;
+    model.setSubUsecases(testList);
+    Assert.assertEquals(testList, model.getSubUsecases()); 
+
+  }
+
 
     /**
      * Test the property 'description'
      */
     @Test
     public void descriptionTest() {
-
+      
+        
         model.setDescription("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDescription());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'embeddedLink'
      */
     @Test
     public void embeddedLinkTest() {
+      
         model.setEmbeddedLink(false);
-        Assert.assertEquals(false, model.getEmbeddedLink());
+        Assert.assertEquals(false, model.getEmbeddedLink());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'embeddedPhone'
      */
     @Test
     public void embeddedPhoneTest() {
+      
         model.setEmbeddedPhone(false);
-        Assert.assertEquals(false, model.getEmbeddedPhone());
+        Assert.assertEquals(false, model.getEmbeddedPhone());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'affiliateMarketing'
      */
     @Test
     public void affiliateMarketingTest() {
+      
         model.setAffiliateMarketing(false);
-        Assert.assertEquals(false, model.getAffiliateMarketing());
+        Assert.assertEquals(false, model.getAffiliateMarketing());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'numberPool'
      */
     @Test
     public void numberPoolTest() {
+      
         model.setNumberPool(false);
-        Assert.assertEquals(false, model.getNumberPool());
+        Assert.assertEquals(false, model.getNumberPool());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'ageGated'
      */
     @Test
     public void ageGatedTest() {
+      
         model.setAgeGated(false);
-        Assert.assertEquals(false, model.getAgeGated());
+        Assert.assertEquals(false, model.getAgeGated());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'directLending'
      */
     @Test
     public void directLendingTest() {
+      
         model.setDirectLending(false);
-        Assert.assertEquals(false, model.getDirectLending());
+        Assert.assertEquals(false, model.getDirectLending());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'subscriberOptin'
      */
     @Test
     public void subscriberOptinTest() {
+      
         model.setSubscriberOptin(false);
-        Assert.assertEquals(false, model.getSubscriberOptin());
+        Assert.assertEquals(false, model.getSubscriberOptin());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'subscriberOptout'
      */
     @Test
     public void subscriberOptoutTest() {
+      
         model.setSubscriberOptout(false);
-        Assert.assertEquals(false, model.getSubscriberOptout());
+        Assert.assertEquals(false, model.getSubscriberOptout());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'subscriberHelp'
      */
     @Test
     public void subscriberHelpTest() {
+      
         model.setSubscriberHelp(false);
-        Assert.assertEquals(false, model.getSubscriberHelp());
+        Assert.assertEquals(false, model.getSubscriberHelp());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sample1'
      */
     @Test
     public void sample1Test() {
-
+      
+        
         model.setSample1("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample1());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sample2'
      */
     @Test
     public void sample2Test() {
-
+      
+        
         model.setSample2("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample2());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sample3'
      */
     @Test
     public void sample3Test() {
-
+      
+        
         model.setSample3("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample3());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sample4'
      */
     @Test
     public void sample4Test() {
-
+      
+        
         model.setSample4("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample4());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sample5'
      */
     @Test
     public void sample5Test() {
-
+      
+        
         model.setSample5("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample5());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'messageFlow'
      */
     @Test
     public void messageFlowTest() {
-
+      
+        
         model.setMessageFlow("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageFlow());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'helpMessage'
      */
     @Test
     public void helpMessageTest() {
-
+      
+        
         model.setHelpMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getHelpMessage());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'referenceId'
      */
     @Test
     public void referenceIdTest() {
-
+      
+        
         model.setReferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'mock'
      */
     @Test
     public void mockTest() {
+      
         model.setMock(false);
-        Assert.assertEquals(false, model.getMock());
+        Assert.assertEquals(false, model.getMock());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'nextRenewalOrExpirationDate'
      */
     @Test
     public void nextRenewalOrExpirationDateTest() {
+      
+        
+          model.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+          Assert.assertEquals(LocalDate.parse("2000-01-01"), model.getNextRenewalOrExpirationDate()); 
 
         
+        
+        
+        
+
+      
+  
+
+  }
 
 
-    }
 
-}
+
+
+ }

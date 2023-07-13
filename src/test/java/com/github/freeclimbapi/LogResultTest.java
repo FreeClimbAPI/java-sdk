@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,104 +31,163 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for LogResult
  */
-public class LogResultTest {
+ public class LogResultTest {
     private final LogResult model = new LogResult();
+
     /**
      * Test the property 'timestamp'
      */
     @Test
     public void timestampTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setTimestamp(1);
+      Assert.assertEquals(1, (int) model.getTimestamp());
+
+  }
+
 
     /**
      * Test the property 'level'
      */
     @Test
     public void levelTest() {
+      
+      model.setLevel(LogLevel.INFO);
+      Assert.assertEquals(model.getLevel(),LogLevel.INFO);
+      model.setLevel(LogLevel.WARNING);
+      Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
+      model.setLevel(LogLevel.ERROR);
+      Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
+  
 
-        
+  }
 
-        model.setLevel(LogLevel.INFO);
-        Assert.assertEquals(model.getLevel(),LogLevel.INFO);
-        model.setLevel(LogLevel.WARNING);
-        Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
-        model.setLevel(LogLevel.ERROR);
-        Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
-
-    }
 
     /**
      * Test the property 'requestId'
      */
     @Test
     public void requestIdTest() {
-
+      
+        
         model.setRequestId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRequestId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
+      
+        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'message'
      */
     @Test
     public void messageTest() {
-
+      
+        
         model.setMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessage());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'metadata'
      */
     @Test
     public void metadataTest() {
-
+      
         
 
+        
+        
+        
+        
+          Object testObject = new Object();
+          model.setMetadata(testObject);
+          Assert.assertEquals(testObject, model.getMetadata());
+        
 
-    }
+      
+  
 
-}
+  }
+
+
+
+
+
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,60 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for GrammarType
  */
-public class GrammarTypeTest {
-}
+ public class GrammarTypeTest {
+
+
+  @Test
+    public void testURLShouldWork() {
+
+        GrammarType test = GrammarType.URL;
+         Assert.assertEquals(test.getClass(), GrammarType.class);
+    }
+
+    @Test 
+    public void testURLShouldSerializeToEnum() {
+    
+        GrammarType expectedValue = GrammarType.URL;
+        GrammarType calculatedValue = GrammarType.fromValue("URL");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testURLShouldDeserializeToString() {
+     GrammarType test = GrammarType.URL;
+      String expectedValue = "URL";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testBUILT_INShouldWork() {
+
+        GrammarType test = GrammarType.BUILT_IN;
+         Assert.assertEquals(test.getClass(), GrammarType.class);
+    }
+
+    @Test 
+    public void testBUILT_INShouldSerializeToEnum() {
+    
+        GrammarType expectedValue = GrammarType.BUILT_IN;
+        GrammarType calculatedValue = GrammarType.fromValue("BUILTIN");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testBUILT_INShouldDeserializeToString() {
+     GrammarType test = GrammarType.BUILT_IN;
+      String expectedValue = "BUILTIN";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,100 +31,184 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SMSTenDLCCampaignsListResult
  */
-public class SMSTenDLCCampaignsListResultTest {
+ public class SMSTenDLCCampaignsListResultTest {
     private final SMSTenDLCCampaignsListResult model = new SMSTenDLCCampaignsListResult();
+
     /**
      * Test the property 'total'
      */
     @Test
     public void totalTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setTotal(1);
+      Assert.assertEquals(1, (int) model.getTotal());
+
+  }
+
 
     /**
      * Test the property 'start'
      */
     @Test
     public void startTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setStart(1);
+      Assert.assertEquals(1, (int) model.getStart());
+
+  }
+
 
     /**
      * Test the property 'end'
      */
     @Test
     public void endTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setEnd(1);
+      Assert.assertEquals(1, (int) model.getEnd());
+
+  }
+
 
     /**
      * Test the property 'page'
      */
     @Test
     public void pageTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setPage(1);
+      Assert.assertEquals(1, (int) model.getPage());
+
+  }
+
 
     /**
      * Test the property 'numPages'
      */
     @Test
     public void numPagesTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setNumPages(1);
+      Assert.assertEquals(1, (int) model.getNumPages());
+
+  }
+
 
     /**
      * Test the property 'pageSize'
      */
     @Test
     public void pageSizeTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setPageSize(1);
+      Assert.assertEquals(1, (int) model.getPageSize());
+
+  }
+
 
     /**
      * Test the property 'nextPageUri'
      */
     @Test
     public void nextPageUriTest() {
-
+      
+        
         model.setNextPageUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNextPageUri());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'campaigns'
      */
     @Test
     public void campaignsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    List<SMSTenDLCCampaign> testList;
+    model.setCampaigns(testList);
+    Assert.assertEquals(testList, model.getCampaigns()); 
 
-}
+  }
+
+
+
+
+
+ }

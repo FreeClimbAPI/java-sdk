@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,60 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for MachineType
  */
-public class MachineTypeTest {
-}
+ public class MachineTypeTest {
+
+
+  @Test
+    public void testANSWERING_MACHINEShouldWork() {
+
+        MachineType test = MachineType.ANSWERING_MACHINE;
+         Assert.assertEquals(test.getClass(), MachineType.class);
+    }
+
+    @Test 
+    public void testANSWERING_MACHINEShouldSerializeToEnum() {
+    
+        MachineType expectedValue = MachineType.ANSWERING_MACHINE;
+        MachineType calculatedValue = MachineType.fromValue("answeringMachine");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testANSWERING_MACHINEShouldDeserializeToString() {
+     MachineType test = MachineType.ANSWERING_MACHINE;
+      String expectedValue = "answeringMachine";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testFAX_MACHINEShouldWork() {
+
+        MachineType test = MachineType.FAX_MACHINE;
+         Assert.assertEquals(test.getClass(), MachineType.class);
+    }
+
+    @Test 
+    public void testFAX_MACHINEShouldSerializeToEnum() {
+    
+        MachineType expectedValue = MachineType.FAX_MACHINE;
+        MachineType calculatedValue = MachineType.fromValue("faxMachine");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testFAX_MACHINEShouldDeserializeToString() {
+     MachineType test = MachineType.FAX_MACHINE;
+      String expectedValue = "faxMachine";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

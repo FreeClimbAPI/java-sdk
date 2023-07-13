@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,73 +31,122 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for QueueMember
  */
-public class QueueMemberTest {
+ public class QueueMemberTest {
     private final QueueMember model = new QueueMember();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
+      
+        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
+      
+        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'waitTime'
      */
     @Test
     public void waitTimeTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setWaitTime(1);
+      Assert.assertEquals(1, (int) model.getWaitTime());
+
+  }
+
 
     /**
      * Test the property 'position'
      */
     @Test
     public void positionTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setPosition(1);
+      Assert.assertEquals(1, (int) model.getPosition());
+
+  }
+
 
     /**
      * Test the property 'dateEnqueued'
      */
     @Test
     public void dateEnqueuedTest() {
-
+      
+        
         model.setDateEnqueued("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

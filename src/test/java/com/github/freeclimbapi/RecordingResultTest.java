@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,129 +31,210 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordingResult
  */
-public class RecordingResultTest {
+ public class RecordingResultTest {
     private final RecordingResult model = new RecordingResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
+      
+        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
-
+      
+        
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
-
+      
+        
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'revision'
      */
     @Test
     public void revisionTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
+
+  }
+
 
     /**
      * Test the property 'recordingId'
      */
     @Test
     public void recordingIdTest() {
-
+      
+        
         model.setRecordingId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRecordingId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
+      
+        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'durationSec'
      */
     @Test
     public void durationSecTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setDurationSec(1);
+      Assert.assertEquals(1, (int) model.getDurationSec());
+
+  }
+
 
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-
+      
+        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

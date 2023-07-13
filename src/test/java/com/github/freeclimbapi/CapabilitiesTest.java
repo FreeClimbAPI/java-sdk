@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,74 +31,119 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Capabilities
  */
-public class CapabilitiesTest {
+ public class CapabilitiesTest {
     private final Capabilities model = new Capabilities();
+
     /**
      * Test the property 'voice'
      */
     @Test
     public void voiceTest() {
+      
         model.setVoice(false);
-        Assert.assertEquals(false, model.getVoice());
+        Assert.assertEquals(false, model.getVoice());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sms'
      */
     @Test
     public void smsTest() {
+      
         model.setSms(false);
-        Assert.assertEquals(false, model.getSms());
+        Assert.assertEquals(false, model.getSms());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'tollFree'
      */
     @Test
     public void tollFreeTest() {
+      
         model.setTollFree(false);
-        Assert.assertEquals(false, model.getTollFree());
+        Assert.assertEquals(false, model.getTollFree());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'tenDLC'
      */
     @Test
     public void tenDLCTest() {
+      
         model.setTenDLC(false);
-        Assert.assertEquals(false, model.getTenDLC());
+        Assert.assertEquals(false, model.getTenDLC());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'shortCode'
      */
     @Test
     public void shortCodeTest() {
+      
         model.setShortCode(false);
-        Assert.assertEquals(false, model.getShortCode());
+        Assert.assertEquals(false, model.getShortCode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

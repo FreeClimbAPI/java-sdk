@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,51 +31,80 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for BuyIncomingNumberRequest
  */
-public class BuyIncomingNumberRequestTest {
+ public class BuyIncomingNumberRequestTest {
     private final BuyIncomingNumberRequest model = new BuyIncomingNumberRequest();
+
     /**
      * Test the property 'phoneNumber'
      */
     @Test
     public void phoneNumberTest() {
-
+      
+        
         model.setPhoneNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'applicationId'
      */
     @Test
     public void applicationIdTest() {
-
+      
+        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

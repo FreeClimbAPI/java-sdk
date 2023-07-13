@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,117 +31,172 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for CreateConference
  */
-public class CreateConferenceTest {
+ public class CreateConferenceTest {
     private final CreateConference model = new CreateConference();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("CreateConference", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
         model.setAlias(false);
-        Assert.assertEquals(false, model.getAlias());
+        Assert.assertEquals(false, model.getAlias());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
+      
+      model.setPlayBeep(PlayBeep.ALWAYS);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+      model.setPlayBeep(PlayBeep.NEVER);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+      model.setPlayBeep(PlayBeep.EXIT_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+  
 
-        
+  }
 
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-        model.setPlayBeep(PlayBeep.NEVER);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-        model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-        model.setPlayBeep(PlayBeep.EXIT_ONLY);
-        Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
-
-    }
 
     /**
      * Test the property 'record'
      */
     @Test
     public void recordTest() {
+      
         model.setRecord(false);
-        Assert.assertEquals(false, model.getRecord());
+        Assert.assertEquals(false, model.getRecord());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
-
+      
+        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
-
+      
+        
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+          
+        model.setActionUrl("TEST_STRING");
+          
+        
          
-        model.setActionUrl("TEST_STRING");  
-        model.setAlias(false);    
-        model.setRecord(false);   
-        model.setStatusCallbackUrl("TEST_STRING");   
-        model.setWaitUrl("TEST_STRING");  
+        model.setAlias(false);
+         
+        
+         
+         
+        
+         
+        model.setRecord(false);
+         
+        
+         
+          
+        model.setStatusCallbackUrl("TEST_STRING");
+          
+        
+         
+          
+        model.setWaitUrl("TEST_STRING");
+          
+        
+         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -146,5 +205,6 @@ public class CreateConferenceTest {
         Assert.assertEquals(attributes.get("record"), model.getRecord());
         Assert.assertEquals(attributes.get("statusCallbackUrl"), model.getStatusCallbackUrl());
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
+
     }
-}
+ }

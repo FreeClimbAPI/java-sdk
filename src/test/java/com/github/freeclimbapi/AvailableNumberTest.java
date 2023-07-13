@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,102 +31,166 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AvailableNumber
  */
-public class AvailableNumberTest {
+ public class AvailableNumberTest {
     private final AvailableNumber model = new AvailableNumber();
+
     /**
      * Test the property 'capabilities'
      */
     @Test
     public void capabilitiesTest() {
+      
+        
+        Capabilities object = new Capabilities();
+          model.setCapabilities(object);
+          Assert.assertEquals(object.getClass(), Capabilities.class);
 
         
+        
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
-
+      
+        
         model.setCampaignId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phoneNumber'
      */
     @Test
     public void phoneNumberTest() {
-
+      
+        
         model.setPhoneNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'voiceEnabled'
      */
     @Test
     public void voiceEnabledTest() {
+      
         model.setVoiceEnabled(false);
-        Assert.assertEquals(false, model.getVoiceEnabled());
+        Assert.assertEquals(false, model.getVoiceEnabled());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'smsEnabled'
      */
     @Test
     public void smsEnabledTest() {
+      
         model.setSmsEnabled(false);
-        Assert.assertEquals(false, model.getSmsEnabled());
+        Assert.assertEquals(false, model.getSmsEnabled());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'region'
      */
     @Test
     public void regionTest() {
-
+      
+        
         model.setRegion("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRegion());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
-
+      
+        
         model.setCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

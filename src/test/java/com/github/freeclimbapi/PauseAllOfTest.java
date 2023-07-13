@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,20 +31,35 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for PauseAllOf
  */
-public class PauseAllOfTest {
+ public class PauseAllOfTest {
     private final PauseAllOf model = new PauseAllOf();
+
     /**
      * Test the property 'length'
      */
     @Test
     public void lengthTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setLength(1);
+      Assert.assertEquals(1, (int) model.getLength());
 
-}
+  }
+
+
+
+
+
+ }

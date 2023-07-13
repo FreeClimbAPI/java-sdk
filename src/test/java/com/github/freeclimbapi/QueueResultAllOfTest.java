@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,95 +31,166 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for QueueResultAllOf
  */
-public class QueueResultAllOfTest {
+ public class QueueResultAllOfTest {
     private final QueueResultAllOf model = new QueueResultAllOf();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'queueId'
      */
     @Test
     public void queueIdTest() {
-
+      
+        
         model.setQueueId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getQueueId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'maxSize'
      */
     @Test
     public void maxSizeTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setMaxSize(1);
+      Assert.assertEquals(1, (int) model.getMaxSize());
+
+  }
+
 
     /**
      * Test the property 'currentSize'
      */
     @Test
     public void currentSizeTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setCurrentSize(1);
+      Assert.assertEquals(1, (int) model.getCurrentSize());
+
+  }
+
 
     /**
      * Test the property 'averageQueueRemovalTime'
      */
     @Test
     public void averageQueueRemovalTimeTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setAverageQueueRemovalTime(1);
+      Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
+
+  }
+
 
     /**
      * Test the property 'subresourceUris'
      */
     @Test
     public void subresourceUrisTest() {
-
+      
         
 
+        
+        
+        
+        
+          Object testObject = new Object();
+          model.setSubresourceUris(testObject);
+          Assert.assertEquals(testObject, model.getSubresourceUris());
+        
 
-    }
+      
+  
 
-}
+  }
+
+
+
+
+
+ }

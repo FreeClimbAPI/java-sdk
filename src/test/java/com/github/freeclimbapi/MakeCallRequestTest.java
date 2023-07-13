@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,145 +31,232 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for MakeCallRequest
  */
-public class MakeCallRequestTest {
+ public class MakeCallRequestTest {
     private final MakeCallRequest model = new MakeCallRequest();
+
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-
+      
+        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-
+      
+        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'applicationId'
      */
     @Test
     public void applicationIdTest() {
-
+      
+        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sendDigits'
      */
     @Test
     public void sendDigitsTest() {
-
+      
+        
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'ifMachine'
      */
     @Test
     public void ifMachineTest() {
-
+      
+        
         model.setIfMachine("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachine());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'ifMachineUrl'
      */
     @Test
     public void ifMachineUrlTest() {
-
+      
+        
         model.setIfMachineUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'timeout'
      */
     @Test
     public void timeoutTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setTimeout(1);
+      Assert.assertEquals(1, (int) model.getTimeout());
+
+  }
+
 
     /**
      * Test the property 'parentCallId'
      */
     @Test
     public void parentCallIdTest() {
-
+      
+        
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callConnectUrl'
      */
     @Test
     public void callConnectUrlTest() {
-
+      
+        
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,421 +31,774 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SMSTenDLCBrand
  */
-public class SMSTenDLCBrandTest {
+ public class SMSTenDLCBrandTest {
     private final SMSTenDLCBrand model = new SMSTenDLCBrand();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'entityType'
      */
     @Test
     public void entityTypeTest() {
+      
+  
+    model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+    Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+  
+    model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
+    Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
+  
+    model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.NON_PROFIT);
+    Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.NON_PROFIT);
+  
+    model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.GOVERNMENT);
+    Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.GOVERNMENT);
+  
+    model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
+    Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'cspId'
      */
     @Test
     public void cspIdTest() {
-
+      
+        
         model.setCspId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'brandId'
      */
     @Test
     public void brandIdTest() {
-
+      
+        
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'firstName'
      */
     @Test
     public void firstNameTest() {
-
+      
+        
         model.setFirstName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'lastName'
      */
     @Test
     public void lastNameTest() {
-
+      
+        
         model.setLastName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'displayName'
      */
     @Test
     public void displayNameTest() {
-
+      
+        
         model.setDisplayName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'companyName'
      */
     @Test
     public void companyNameTest() {
-
+      
+        
         model.setCompanyName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'ein'
      */
     @Test
     public void einTest() {
-
+      
+        
         model.setEin("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEin());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'einIssuingCountry'
      */
     @Test
     public void einIssuingCountryTest() {
-
+      
+        
         model.setEinIssuingCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEinIssuingCountry());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phone'
      */
     @Test
     public void phoneTest() {
-
+      
+        
         model.setPhone("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'street'
      */
     @Test
     public void streetTest() {
-
+      
+        
         model.setStreet("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStreet());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'city'
      */
     @Test
     public void cityTest() {
-
+      
+        
         model.setCity("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCity());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'state'
      */
     @Test
     public void stateTest() {
-
+      
+        
         model.setState("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getState());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'postalCode'
      */
     @Test
     public void postalCodeTest() {
-
+      
+        
         model.setPostalCode("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPostalCode());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
-
+      
+        
         model.setCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'email'
      */
     @Test
     public void emailTest() {
-
+      
+        
         model.setEmail("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'stockSymbol'
      */
     @Test
     public void stockSymbolTest() {
-
+      
+        
         model.setStockSymbol("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStockSymbol());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'stockExchange'
      */
     @Test
     public void stockExchangeTest() {
+      
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NONE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NYSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NYSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.AMEX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.AMEX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.AMX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.AMX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.ASX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.ASX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.B3);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.B3);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.BME);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.BME);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.BSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.BSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.FRA);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.FRA);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.ICEX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.ICEX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.JPX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.JPX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.JSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.JSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.KRX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.KRX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.LON);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.LON);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.OMX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.OMX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SEHK);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SEHK);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SGX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SGX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.STO);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.STO);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SWX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SWX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SZSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SZSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.TSX);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.TSX);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.TWSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.TWSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.VSE);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.VSE);
+  
+    model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.OTHER);
+    Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.OTHER);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'ipAddress'
      */
     @Test
     public void ipAddressTest() {
-
+      
+        
         model.setIpAddress("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIpAddress());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'website'
      */
     @Test
     public void websiteTest() {
-
+      
+        
         model.setWebsite("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'brandRelationship'
      */
     @Test
     public void brandRelationshipTest() {
+      
+  
+    model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+    Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+  
+    model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
+    Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
+  
+    model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.MEDIUM_ACCOUNT);
+    Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.MEDIUM_ACCOUNT);
+  
+    model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.LARGE_ACCOUNT);
+    Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.LARGE_ACCOUNT);
+  
+    model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
+    Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'vertical'
      */
     @Test
     public void verticalTest() {
-
+      
+        
         model.setVertical("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVertical());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'altBusinessId'
      */
     @Test
     public void altBusinessIdTest() {
-
+      
+        
         model.setAltBusinessId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAltBusinessId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'altBusinessIdType'
      */
     @Test
     public void altBusinessIdTypeTest() {
+      
+  
+    model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+    Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+  
+    model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
+    Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
+  
+    model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.GIIN);
+    Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.GIIN);
+  
+    model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
+    Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'universalEin'
      */
     @Test
     public void universalEinTest() {
-
+      
+        
         model.setUniversalEin("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUniversalEin());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'referenceId'
      */
     @Test
     public void referenceIdTest() {
-
+      
+        
         model.setReferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'optionalAttributes'
      */
     @Test
     public void optionalAttributesTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    Map<String, Object> testMap;
+    model.setOptionalAttributes(testMap);
+    Assert.assertEquals(testMap, model.getOptionalAttributes()); 
+
+  }
+
 
     /**
      * Test the property 'mock'
      */
     @Test
     public void mockTest() {
+      
         model.setMock(false);
-        Assert.assertEquals(false, model.getMock());
+        Assert.assertEquals(false, model.getMock());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'identityStatus'
      */
     @Test
     public void identityStatusTest() {
+      
+  
+    model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+    Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+  
+    model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
+    Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
+  
+    model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.VERIFIED);
+    Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.VERIFIED);
+  
+    model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
+    Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
+  
 
-        
+  }
 
-
-    }
 
     /**
      * Test the property 'createDate'
      */
     @Test
     public void createDateTest() {
+      
+        
+          model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+          Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
 
         
+        
+        
+        
+
+      
+  
+
+  }
 
 
-    }
 
-}
+
+
+ }

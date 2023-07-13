@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,140 +31,201 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for MessageResultAllOf
  */
-public class MessageResultAllOfTest {
+ public class MessageResultAllOfTest {
     private final MessageResultAllOf model = new MessageResultAllOf();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'messageId'
      */
     @Test
     public void messageIdTest() {
-
+      
+        
         model.setMessageId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
+      
+      model.setStatus(MessageStatus.NEW);
+      Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
+      model.setStatus(MessageStatus.QUEUED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
+      model.setStatus(MessageStatus.REJECTED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
+      model.setStatus(MessageStatus.SENDING);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
+      model.setStatus(MessageStatus.SENT);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
+      model.setStatus(MessageStatus.FAILED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
+      model.setStatus(MessageStatus.RECEIVED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
+      model.setStatus(MessageStatus.UNDELIVERED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
+      model.setStatus(MessageStatus.EXPIRED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
+      model.setStatus(MessageStatus.DELETED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
+      model.setStatus(MessageStatus.UNKNOWN);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
+  
 
-        
+  }
 
-        model.setStatus(MessageStatus.NEW);
-        Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
-        model.setStatus(MessageStatus.QUEUED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
-        model.setStatus(MessageStatus.REJECTED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
-        model.setStatus(MessageStatus.SENDING);
-        Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
-        model.setStatus(MessageStatus.SENT);
-        Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
-        model.setStatus(MessageStatus.FAILED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
-        model.setStatus(MessageStatus.RECEIVED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
-        model.setStatus(MessageStatus.UNDELIVERED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
-        model.setStatus(MessageStatus.EXPIRED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
-        model.setStatus(MessageStatus.DELETED);
-        Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
-        model.setStatus(MessageStatus.UNKNOWN);
-        Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
-
-    }
 
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-
+      
+        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-
+      
+        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
-
+      
+        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'direction'
      */
     @Test
     public void directionTest() {
-
+      
+        
         model.setDirection("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDirection());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-
+      
+        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

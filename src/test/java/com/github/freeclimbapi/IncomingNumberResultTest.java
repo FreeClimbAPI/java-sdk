@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,224 +31,362 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for IncomingNumberResult
  */
-public class IncomingNumberResultTest {
+ public class IncomingNumberResultTest {
     private final IncomingNumberResult model = new IncomingNumberResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
+      
+        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
-
+      
+        
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
-
+      
+        
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'revision'
      */
     @Test
     public void revisionTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
+
+  }
+
 
     /**
      * Test the property 'capabilities'
      */
     @Test
     public void capabilitiesTest() {
+      
+        
+        Capabilities object = new Capabilities();
+          model.setCapabilities(object);
+          Assert.assertEquals(object.getClass(), Capabilities.class);
 
         
+        
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
-
+      
+        
         model.setCampaignId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phoneNumberId'
      */
     @Test
     public void phoneNumberIdTest() {
-
+      
+        
         model.setPhoneNumberId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'applicationId'
      */
     @Test
     public void applicationIdTest() {
-
+      
+        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phoneNumber'
      */
     @Test
     public void phoneNumberTest() {
-
+      
+        
         model.setPhoneNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'region'
      */
     @Test
     public void regionTest() {
-
+      
+        
         model.setRegion("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRegion());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
-
+      
+        
         model.setCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'voiceEnabled'
      */
     @Test
     public void voiceEnabledTest() {
+      
         model.setVoiceEnabled(false);
-        Assert.assertEquals(false, model.getVoiceEnabled());
+        Assert.assertEquals(false, model.getVoiceEnabled());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'smsEnabled'
      */
     @Test
     public void smsEnabledTest() {
+      
         model.setSmsEnabled(false);
-        Assert.assertEquals(false, model.getSmsEnabled());
+        Assert.assertEquals(false, model.getSmsEnabled());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'offnet'
      */
     @Test
     public void offnetTest() {
+      
         model.setOffnet(false);
-        Assert.assertEquals(false, model.getOffnet());
+        Assert.assertEquals(false, model.getOffnet());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

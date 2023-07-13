@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,119 +31,196 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordUtterance
  */
-public class RecordUtteranceTest {
+ public class RecordUtteranceTest {
     private final RecordUtterance model = new RecordUtterance();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("RecordUtterance", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'silenceTimeoutMs'
      */
     @Test
     public void silenceTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setSilenceTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'finishOnKey'
      */
     @Test
     public void finishOnKeyTest() {
-
+      
+        
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'maxLengthSec'
      */
     @Test
     public void maxLengthSecTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setMaxLengthSec(1);
+      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+
+  }
+
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
+      
         model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());
+        Assert.assertEquals(false, model.getPlayBeep());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'autoStart'
      */
     @Test
     public void autoStartTest() {
+      
         model.setAutoStart(false);
-        Assert.assertEquals(false, model.getAutoStart());
+        Assert.assertEquals(false, model.getAutoStart());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+          
+        model.setActionUrl("TEST_STRING");
+          
+        
          
-        model.setActionUrl("TEST_STRING");     
-        model.setFinishOnKey("TEST_STRING");    
-        model.setPlayBeep(false);  
-        model.setAutoStart(false);  
-        model.setPrivacyMode(false);  
+         
+        
+         
+          
+        model.setFinishOnKey("TEST_STRING");
+          
+        
+         
+         
+        
+         
+        model.setPlayBeep(false);
+         
+        
+         
+        model.setAutoStart(false);
+         
+        
+         
+        model.setPrivacyMode(false);
+         
+        
+         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -149,5 +230,6 @@ public class RecordUtteranceTest {
         Assert.assertEquals(attributes.get("playBeep"), model.getPlayBeep());
         Assert.assertEquals(attributes.get("autoStart"), model.getAutoStart());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+
     }
-}
+ }

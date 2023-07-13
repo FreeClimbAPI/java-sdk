@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,280 +31,423 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for CallResult
  */
-public class CallResultTest {
+ public class CallResultTest {
     private final CallResult model = new CallResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
+      
+        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
-
+      
+        
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
-
+      
+        
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'revision'
      */
     @Test
     public void revisionTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
+
+  }
+
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
+      
+        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'parentCallId'
      */
     @Test
     public void parentCallIdTest() {
-
+      
+        
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-
+      
+        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-
+      
+        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'phoneNumberId'
      */
     @Test
     public void phoneNumberIdTest() {
-
+      
+        
         model.setPhoneNumberId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callStatus'
      */
     @Test
     public void callStatusTest() {
+      
+      model.setCallStatus(CallStatus.QUEUED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+      model.setCallStatus(CallStatus.RINGING);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+      model.setCallStatus(CallStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+      model.setCallStatus(CallStatus.CANCELED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+      model.setCallStatus(CallStatus.COMPLETED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+      model.setCallStatus(CallStatus.FAILED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+      model.setCallStatus(CallStatus.BUSY);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+      model.setCallStatus(CallStatus.NO_ANSWER);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+  
 
-        
+  }
 
-        model.setCallStatus(CallStatus.QUEUED);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
-        model.setCallStatus(CallStatus.RINGING);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
-        model.setCallStatus(CallStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
-        model.setCallStatus(CallStatus.CANCELED);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
-        model.setCallStatus(CallStatus.COMPLETED);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
-        model.setCallStatus(CallStatus.FAILED);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
-        model.setCallStatus(CallStatus.BUSY);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
-        model.setCallStatus(CallStatus.NO_ANSWER);
-        Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
-
-    }
 
     /**
      * Test the property 'startTime'
      */
     @Test
     public void startTimeTest() {
-
+      
+        
         model.setStartTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStartTime());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'connectTime'
      */
     @Test
     public void connectTimeTest() {
-
+      
+        
         model.setConnectTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConnectTime());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'endTime'
      */
     @Test
     public void endTimeTest() {
-
+      
+        
         model.setEndTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEndTime());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'duration'
      */
     @Test
     public void durationTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setDuration(1);
+      Assert.assertEquals(1, (int) model.getDuration());
+
+  }
+
 
     /**
      * Test the property 'connectDuration'
      */
     @Test
     public void connectDurationTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setConnectDuration(1);
+      Assert.assertEquals(1, (int) model.getConnectDuration());
+
+  }
+
 
     /**
      * Test the property 'direction'
      */
     @Test
     public void directionTest() {
+      
+      model.setDirection(CallDirection.INBOUND);
+      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+      model.setDirection(CallDirection.OUTBOUND_API);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+      model.setDirection(CallDirection.OUTBOUND_DIAL);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+  
 
-        
+  }
 
-        model.setDirection(CallDirection.INBOUND);
-        Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
-        model.setDirection(CallDirection.OUTBOUND_API);
-        Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
-        model.setDirection(CallDirection.OUTBOUND_DIAL);
-        Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
-
-    }
 
     /**
      * Test the property 'answeredBy'
      */
     @Test
     public void answeredByTest() {
+      
+      model.setAnsweredBy(AnsweredBy.HUMAN);
+      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
+      model.setAnsweredBy(AnsweredBy.MACHINE);
+      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
+  
 
-        
+  }
 
-        model.setAnsweredBy(AnsweredBy.HUMAN);
-        Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
-        model.setAnsweredBy(AnsweredBy.MACHINE);
-        Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
-
-    }
 
     /**
      * Test the property 'subresourceUris'
      */
     @Test
     public void subresourceUrisTest() {
-
+      
         
 
+        
+        
+        
+        
+          Object testObject = new Object();
+          model.setSubresourceUris(testObject);
+          Assert.assertEquals(testObject, model.getSubresourceUris());
+        
 
-    }
+      
+  
 
-}
+  }
+
+
+
+
+
+ }

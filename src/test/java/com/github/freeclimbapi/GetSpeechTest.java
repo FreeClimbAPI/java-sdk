@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,198 +31,339 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for GetSpeech
  */
-public class GetSpeechTest {
+ public class GetSpeechTest {
     private final GetSpeech model = new GetSpeech();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("GetSpeech", model.getCommand());
-
-
-    }
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
+      
+        
 
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        
         
         
 
+      
+  
+    URI uri = new URI("TEST_STRING");
+    model.setActionUrl(uri);
+    Assert.assertEquals(uri, model.getActionUrl());
 
-    }
+  }
+
 
     /**
      * Test the property 'grammarType'
      */
     @Test
     public void grammarTypeTest() {
+      
+      model.setGrammarType(GrammarType.URL);
+      Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
+      model.setGrammarType(GrammarType.BUILT_IN);
+      Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
+  
 
-        
+  }
 
-        model.setGrammarType(GrammarType.URL);
-        Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
-        model.setGrammarType(GrammarType.BUILT_IN);
-        Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
-
-    }
 
     /**
      * Test the property 'grammarFile'
      */
     @Test
     public void grammarFileTest() {
-
+      
+        
         model.setGrammarFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarFile());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'grammarRule'
      */
     @Test
     public void grammarRuleTest() {
-
+      
+        
         model.setGrammarRule("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
+      
         model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());
+        Assert.assertEquals(false, model.getPlayBeep());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'prompts'
      */
     @Test
     public void promptsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    List<PerclCommand> testList;
+    model.setPrompts(testList);
+    Assert.assertEquals(testList, model.getPrompts()); 
+
+  }
+
 
     /**
      * Test the property 'noInputTimeoutMs'
      */
     @Test
     public void noInputTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setNoInputTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'recognitionTimeoutMs'
      */
     @Test
     public void recognitionTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setRecognitionTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'confidenceThreshold'
      */
     @Test
     public void confidenceThresholdTest() {
+      
+        
 
+        
         
         model.setConfidenceThreshold(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
         
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'sensitivityLevel'
      */
     @Test
     public void sensitivityLevelTest() {
+      
+        
 
+        
         
         model.setSensitivityLevel(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
         
+        
+        
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'speechCompleteTimeoutMs'
      */
     @Test
     public void speechCompleteTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setSpeechCompleteTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'speechIncompleteTimeoutMs'
      */
     @Test
     public void speechIncompleteTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setSpeechIncompleteTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
+
+
+
 
     @Test
     public void buildTest() throws Exception {
+        
+           
+        
          
-        model.setActionUrl("TEST_STRING");     
-        model.setGrammarFile("TEST_STRING");   
-        model.setGrammarRule("TEST_STRING");  
-        model.setPlayBeep(false);          
-        model.setConfidenceThreshold(new BigDecimal(1.0));  
-        model.setSensitivityLevel(new BigDecimal(1.0));    
-        model.setPrivacyMode(false);  
+         
+        
+         
+          
+        model.setGrammarFile("TEST_STRING");
+          
+        
+         
+          
+        model.setGrammarRule("TEST_STRING");
+          
+        
+         
+        model.setPlayBeep(false);
+         
+        
+         
+         
+        
+         
+         
+        
+         
+         
+        
+         
+         
+        
+         
+        model.setConfidenceThreshold(new BigDecimal(1.0));
+         
+        
+         
+        model.setSensitivityLevel(new BigDecimal(1.0));
+         
+        
+         
+         
+        
+         
+        model.setPrivacyMode(false);
+         
+        
+         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -234,5 +379,6 @@ public class GetSpeechTest {
         Assert.assertEquals(attributes.get("speechCompleteTimeoutMs"), model.getSpeechCompleteTimeoutMs());
         Assert.assertEquals(attributes.get("speechIncompleteTimeoutMs"), model.getSpeechIncompleteTimeoutMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+
     }
-}
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,60 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AnsweredBy
  */
-public class AnsweredByTest {
-}
+ public class AnsweredByTest {
+
+
+  @Test
+    public void testHUMANShouldWork() {
+
+        AnsweredBy test = AnsweredBy.HUMAN;
+         Assert.assertEquals(test.getClass(), AnsweredBy.class);
+    }
+
+    @Test 
+    public void testHUMANShouldSerializeToEnum() {
+    
+        AnsweredBy expectedValue = AnsweredBy.HUMAN;
+        AnsweredBy calculatedValue = AnsweredBy.fromValue("human");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testHUMANShouldDeserializeToString() {
+     AnsweredBy test = AnsweredBy.HUMAN;
+      String expectedValue = "human";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testMACHINEShouldWork() {
+
+        AnsweredBy test = AnsweredBy.MACHINE;
+         Assert.assertEquals(test.getClass(), AnsweredBy.class);
+    }
+
+    @Test 
+    public void testMACHINEShouldSerializeToEnum() {
+    
+        AnsweredBy expectedValue = AnsweredBy.MACHINE;
+        AnsweredBy calculatedValue = AnsweredBy.fromValue("machine");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testMACHINEShouldDeserializeToString() {
+     AnsweredBy test = AnsweredBy.MACHINE;
+      String expectedValue = "machine";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

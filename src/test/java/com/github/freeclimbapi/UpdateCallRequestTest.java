@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,24 +31,29 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for UpdateCallRequest
  */
-public class UpdateCallRequestTest {
+ public class UpdateCallRequestTest {
     private final UpdateCallRequest model = new UpdateCallRequest();
+
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
+      
+      model.setStatus(UpdateCallRequestStatus.CANCELED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
+      model.setStatus(UpdateCallRequestStatus.COMPLETED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
+  
 
-        
+  }
 
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
-        Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
-        model.setStatus(UpdateCallRequestStatus.COMPLETED);
-        Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
 
-    }
 
-}
+
+
+ }

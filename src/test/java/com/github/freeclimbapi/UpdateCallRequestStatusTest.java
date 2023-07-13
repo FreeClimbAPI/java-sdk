@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +31,60 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for UpdateCallRequestStatus
  */
-public class UpdateCallRequestStatusTest {
-}
+ public class UpdateCallRequestStatusTest {
+
+
+  @Test
+    public void testCANCELEDShouldWork() {
+
+        UpdateCallRequestStatus test = UpdateCallRequestStatus.CANCELED;
+         Assert.assertEquals(test.getClass(), UpdateCallRequestStatus.class);
+    }
+
+    @Test 
+    public void testCANCELEDShouldSerializeToEnum() {
+    
+        UpdateCallRequestStatus expectedValue = UpdateCallRequestStatus.CANCELED;
+        UpdateCallRequestStatus calculatedValue = UpdateCallRequestStatus.fromValue("canceled");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testCANCELEDShouldDeserializeToString() {
+     UpdateCallRequestStatus test = UpdateCallRequestStatus.CANCELED;
+      String expectedValue = "canceled";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+  @Test
+    public void testCOMPLETEDShouldWork() {
+
+        UpdateCallRequestStatus test = UpdateCallRequestStatus.COMPLETED;
+         Assert.assertEquals(test.getClass(), UpdateCallRequestStatus.class);
+    }
+
+    @Test 
+    public void testCOMPLETEDShouldSerializeToEnum() {
+    
+        UpdateCallRequestStatus expectedValue = UpdateCallRequestStatus.COMPLETED;
+        UpdateCallRequestStatus calculatedValue = UpdateCallRequestStatus.fromValue("completed");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testCOMPLETEDShouldDeserializeToString() {
+     UpdateCallRequestStatus test = UpdateCallRequestStatus.COMPLETED;
+      String expectedValue = "completed";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+
+
+ }

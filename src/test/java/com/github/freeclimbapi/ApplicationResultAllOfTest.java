@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,135 +31,212 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ApplicationResultAllOf
  */
-public class ApplicationResultAllOfTest {
+ public class ApplicationResultAllOfTest {
     private final ApplicationResultAllOf model = new ApplicationResultAllOf();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
+      
+        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'applicationId'
      */
     @Test
     public void applicationIdTest() {
-
+      
+        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
+      
+        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'voiceUrl'
      */
     @Test
     public void voiceUrlTest() {
-
+      
+        
         model.setVoiceUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'voiceFallbackUrl'
      */
     @Test
     public void voiceFallbackUrlTest() {
-
+      
+        
         model.setVoiceFallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'callConnectUrl'
      */
     @Test
     public void callConnectUrlTest() {
-
+      
+        
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
-
+      
+        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'smsUrl'
      */
     @Test
     public void smsUrlTest() {
-
+      
+        
         model.setSmsUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSmsUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'smsFallbackUrl'
      */
     @Test
     public void smsFallbackUrlTest() {
-
+      
+        
         model.setSmsFallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }

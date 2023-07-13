@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,121 +31,207 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for GetDigitsAllOf
  */
-public class GetDigitsAllOfTest {
+ public class GetDigitsAllOfTest {
     private final GetDigitsAllOf model = new GetDigitsAllOf();
+
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
+      
+        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'digitTimeoutMs'
      */
     @Test
     public void digitTimeoutMsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setDigitTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
+
+  }
+
 
     /**
      * Test the property 'finishOnKey'
      */
     @Test
     public void finishOnKeyTest() {
-
+      
+        
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'flushBuffer'
      */
     @Test
     public void flushBufferTest() {
+      
         model.setFlushBuffer(false);
-        Assert.assertEquals(false, model.getFlushBuffer());
+        Assert.assertEquals(false, model.getFlushBuffer());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'initialTimeoutMs'
      */
     @Test
     public void initialTimeoutMsTest() {
-
+      
+        
         model.setInitialTimeoutMs("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
         
+
+        
+        
+        
         
 
+      
+  
 
-    }
+  }
+
 
     /**
      * Test the property 'maxDigits'
      */
     @Test
     public void maxDigitsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setMaxDigits(1);
+      Assert.assertEquals(1, (int) model.getMaxDigits());
+
+  }
+
 
     /**
      * Test the property 'minDigits'
      */
     @Test
     public void minDigitsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+      model.setMinDigits(1);
+      Assert.assertEquals(1, (int) model.getMinDigits());
+
+  }
+
 
     /**
      * Test the property 'prompts'
      */
     @Test
     public void promptsTest() {
-
+      
         
 
+        
+        
+        
+        
 
-    }
+      
+  
+    List<PerclCommand> testList;
+    model.setPrompts(testList);
+    Assert.assertEquals(testList, model.getPrompts()); 
+
+  }
+
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
+      
         model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+        Assert.assertEquals(false, model.getPrivacyMode());       
+        
+
+        
+        
         
         
 
+      
+  
 
-    }
+  }
 
-}
+
+
+
+
+ }
