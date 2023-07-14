@@ -542,7 +542,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -1039,7 +1039,7 @@ import com.github.freeclimbapi.models.*;
         
         
        QueueResult test2 = new QueueResult();
-        test2.setUri("TS");
+        test2.setUri("tS");
         
         
         
@@ -1053,7 +1053,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateCreated("TS");
+        test2.setDateCreated("tS");
         
         
         
@@ -1067,7 +1067,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateUpdated("TS");
+        test2.setDateUpdated("tS");
         
         
         
@@ -1083,7 +1083,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setRevision(1);
+        test2.setRevision(0);
         
         
         
@@ -1095,7 +1095,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAccountId("TS");
+        test2.setAccountId("tS");
         
         
         
@@ -1109,7 +1109,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setQueueId("TS");
+        test2.setQueueId("tS");
         
         
         
@@ -1123,7 +1123,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAlias("TS");
+        test2.setAlias("tS");
         
         
         
@@ -1139,7 +1139,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setMaxSize(1);
+        test2.setMaxSize(0);
         
         
         
@@ -1153,7 +1153,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setCurrentSize(1);
+        test2.setCurrentSize(0);
         
         
         
@@ -1167,7 +1167,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAverageQueueRemovalTime(1);
+        test2.setAverageQueueRemovalTime(0);
         
         
         

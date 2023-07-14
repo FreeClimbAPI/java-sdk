@@ -358,7 +358,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setMetadata(testObject2);
         
         
@@ -689,7 +689,7 @@ import com.github.freeclimbapi.models.*;
        LogResult test2 = new LogResult();
         
         
-        test2.setTimestamp(1);
+        test2.setTimestamp(0);
         
         
         
@@ -715,7 +715,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setRequestId("TS");
+        test2.setRequestId("tS");
         
         
         
@@ -729,7 +729,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAccountId("TS");
+        test2.setAccountId("tS");
         
         
         
@@ -743,7 +743,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setCallId("TS");
+        test2.setCallId("tS");
         
         
         
@@ -757,7 +757,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setMessage("TS");
+        test2.setMessage("tS");
         
         
         

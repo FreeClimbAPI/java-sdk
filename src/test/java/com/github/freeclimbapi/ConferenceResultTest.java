@@ -680,7 +680,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -1303,7 +1303,7 @@ import com.github.freeclimbapi.models.*;
         
         
        ConferenceResult test2 = new ConferenceResult();
-        test2.setUri("TS");
+        test2.setUri("tS");
         
         
         
@@ -1317,7 +1317,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateCreated("TS");
+        test2.setDateCreated("tS");
         
         
         
@@ -1331,7 +1331,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateUpdated("TS");
+        test2.setDateUpdated("tS");
         
         
         
@@ -1347,7 +1347,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setRevision(1);
+        test2.setRevision(0);
         
         
         
@@ -1359,7 +1359,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setConferenceId("TS");
+        test2.setConferenceId("tS");
         
         
         
@@ -1373,7 +1373,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAccountId("TS");
+        test2.setAccountId("tS");
         
         
         
@@ -1387,7 +1387,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAlias("TS");
+        test2.setAlias("tS");
         
         
         
@@ -1416,7 +1416,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setRecord(true);
+        test2.setRecord(false);
         
         
         
@@ -1443,7 +1443,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setWaitUrl("TS");
+        test2.setWaitUrl("tS");
         
         
         
@@ -1457,7 +1457,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setActionUrl("TS");
+        test2.setActionUrl("tS");
         
         
         
@@ -1471,7 +1471,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setStatusCallbackUrl("TS");
+        test2.setStatusCallbackUrl("tS");
         
         
         

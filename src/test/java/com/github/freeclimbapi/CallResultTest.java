@@ -910,7 +910,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -1743,7 +1743,7 @@ import com.github.freeclimbapi.models.*;
         
         
        CallResult test2 = new CallResult();
-        test2.setUri("TS");
+        test2.setUri("tS");
         
         
         
@@ -1757,7 +1757,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateCreated("TS");
+        test2.setDateCreated("tS");
         
         
         
@@ -1771,7 +1771,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDateUpdated("TS");
+        test2.setDateUpdated("tS");
         
         
         
@@ -1787,7 +1787,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setRevision(1);
+        test2.setRevision(0);
         
         
         
@@ -1799,7 +1799,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setCallId("TS");
+        test2.setCallId("tS");
         
         
         
@@ -1813,7 +1813,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setParentCallId("TS");
+        test2.setParentCallId("tS");
         
         
         
@@ -1827,7 +1827,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setAccountId("TS");
+        test2.setAccountId("tS");
         
         
         
@@ -1841,7 +1841,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setFrom("TS");
+        test2.setFrom("tS");
         
         
         
@@ -1855,7 +1855,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setTo("TS");
+        test2.setTo("tS");
         
         
         
@@ -1869,7 +1869,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setPhoneNumberId("TS");
+        test2.setPhoneNumberId("tS");
         
         
         
@@ -1897,7 +1897,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setStartTime("TS");
+        test2.setStartTime("tS");
         
         
         
@@ -1911,7 +1911,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setConnectTime("TS");
+        test2.setConnectTime("tS");
         
         
         
@@ -1925,7 +1925,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setEndTime("TS");
+        test2.setEndTime("tS");
         
         
         
@@ -1941,7 +1941,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setDuration(1);
+        test2.setDuration(0);
         
         
         
@@ -1955,7 +1955,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        test2.setConnectDuration(1);
+        test2.setConnectDuration(0);
         
         
         
