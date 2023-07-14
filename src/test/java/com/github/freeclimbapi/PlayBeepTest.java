@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class PlayBeepTest {
 
-
   @Test
     public void testALWAYSShouldWork() {
 
@@ -60,7 +59,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testNEVERShouldWork() {
@@ -85,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testENTRY_ONLYShouldWork() {
 
@@ -109,7 +106,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testEXIT_ONLYShouldWork() {
 
@@ -132,7 +128,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }

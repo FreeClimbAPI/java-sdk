@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class AnsweredByTest {
 
-
   @Test
     public void testHUMANShouldWork() {
 
@@ -61,7 +60,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testMACHINEShouldWork() {
 
@@ -84,7 +82,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }

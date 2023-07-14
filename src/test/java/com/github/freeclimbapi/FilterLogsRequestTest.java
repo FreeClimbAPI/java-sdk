@@ -48,19 +48,228 @@ import com.github.freeclimbapi.models.*;
         model.setPql("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPql());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        test2.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        test2.setPql("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       FilterLogsRequest test2 = new FilterLogsRequest();
+        test2.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        test2.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        test1.setPql("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

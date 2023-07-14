@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'campaignId'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setCampaignId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'cspId'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setCspId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'resellerId'
@@ -114,17 +102,13 @@ import com.github.freeclimbapi.models.*;
         model.setResellerId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getResellerId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'status'
@@ -139,9 +123,7 @@ import com.github.freeclimbapi.models.*;
     model.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
     Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
   
-
   }
-
 
     /**
      * Test the property 'createDate'
@@ -152,17 +134,13 @@ import com.github.freeclimbapi.models.*;
         
           model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
           Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'autoRenewal'
@@ -173,17 +151,13 @@ import com.github.freeclimbapi.models.*;
         model.setAutoRenewal(false);
         Assert.assertEquals(false, model.getAutoRenewal());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'billedDate'
@@ -194,17 +168,13 @@ import com.github.freeclimbapi.models.*;
         
           model.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
           Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getBilledDate());
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'brandId'
@@ -216,17 +186,13 @@ import com.github.freeclimbapi.models.*;
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'usecase'
@@ -238,17 +204,13 @@ import com.github.freeclimbapi.models.*;
         model.setUsecase("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUsecase());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'subUsecases'
@@ -257,20 +219,16 @@ import com.github.freeclimbapi.models.*;
     public void subUsecasesTest() {
       
         
-
         
         
         
         
-
       
   
     Set<String> testSet = new HashSet<String>();
     model.setSubUsecases(testSet);
     Assert.assertEquals(testSet, model.getSubUsecases()); 
-
   }
-
 
     /**
      * Test the property 'description'
@@ -282,17 +240,13 @@ import com.github.freeclimbapi.models.*;
         model.setDescription("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDescription());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'embeddedLink'
@@ -303,17 +257,13 @@ import com.github.freeclimbapi.models.*;
         model.setEmbeddedLink(false);
         Assert.assertEquals(false, model.getEmbeddedLink());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'embeddedPhone'
@@ -324,17 +274,13 @@ import com.github.freeclimbapi.models.*;
         model.setEmbeddedPhone(false);
         Assert.assertEquals(false, model.getEmbeddedPhone());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'affiliateMarketing'
@@ -345,17 +291,13 @@ import com.github.freeclimbapi.models.*;
         model.setAffiliateMarketing(false);
         Assert.assertEquals(false, model.getAffiliateMarketing());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'numberPool'
@@ -366,17 +308,13 @@ import com.github.freeclimbapi.models.*;
         model.setNumberPool(false);
         Assert.assertEquals(false, model.getNumberPool());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'ageGated'
@@ -387,17 +325,13 @@ import com.github.freeclimbapi.models.*;
         model.setAgeGated(false);
         Assert.assertEquals(false, model.getAgeGated());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'directLending'
@@ -408,17 +342,13 @@ import com.github.freeclimbapi.models.*;
         model.setDirectLending(false);
         Assert.assertEquals(false, model.getDirectLending());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'subscriberOptin'
@@ -429,17 +359,13 @@ import com.github.freeclimbapi.models.*;
         model.setSubscriberOptin(false);
         Assert.assertEquals(false, model.getSubscriberOptin());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'subscriberOptout'
@@ -450,17 +376,13 @@ import com.github.freeclimbapi.models.*;
         model.setSubscriberOptout(false);
         Assert.assertEquals(false, model.getSubscriberOptout());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'subscriberHelp'
@@ -471,17 +393,13 @@ import com.github.freeclimbapi.models.*;
         model.setSubscriberHelp(false);
         Assert.assertEquals(false, model.getSubscriberHelp());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sample1'
@@ -493,17 +411,13 @@ import com.github.freeclimbapi.models.*;
         model.setSample1("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample1());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sample2'
@@ -515,17 +429,13 @@ import com.github.freeclimbapi.models.*;
         model.setSample2("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample2());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sample3'
@@ -537,17 +447,13 @@ import com.github.freeclimbapi.models.*;
         model.setSample3("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample3());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sample4'
@@ -559,17 +465,13 @@ import com.github.freeclimbapi.models.*;
         model.setSample4("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample4());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sample5'
@@ -581,17 +483,13 @@ import com.github.freeclimbapi.models.*;
         model.setSample5("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample5());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'messageFlow'
@@ -603,17 +501,13 @@ import com.github.freeclimbapi.models.*;
         model.setMessageFlow("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageFlow());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'helpMessage'
@@ -625,17 +519,13 @@ import com.github.freeclimbapi.models.*;
         model.setHelpMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getHelpMessage());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'referenceId'
@@ -647,17 +537,13 @@ import com.github.freeclimbapi.models.*;
         model.setReferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'mock'
@@ -668,17 +554,13 @@ import com.github.freeclimbapi.models.*;
         model.setMock(false);
         Assert.assertEquals(false, model.getMock());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'nextRenewalOrExpirationDate'
@@ -689,19 +571,4438 @@ import com.github.freeclimbapi.models.*;
         
           model.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
           Assert.assertEquals(LocalDate.parse("2000-01-01"), model.getNextRenewalOrExpirationDate()); 
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test2.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet2 = new HashSet<String>();
+        test2.setSubUsecases(testSet2);
+        test2.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCampaignId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setResellerId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test2.setAutoRenewal(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test2.setBrandId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUsecase("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet2 = new HashSet<String>();
+        test2.setSubUsecases(testSet2);
+        test2.setDescription("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedLink(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedPhone(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAffiliateMarketing(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumberPool(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAgeGated(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirectLending(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptin(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptout(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberHelp(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample1("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample2("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample3("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample4("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample5("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageFlow("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setHelpMessage("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test2.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet2 = new HashSet<String>();
+        test2.setSubUsecases(testSet2);
+        test2.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test2.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet2 = new HashSet<String>();
+        test2.setSubUsecases(testSet2);
+        test2.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCampaignId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setResellerId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+        test1.setAutoRenewal(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUsecase("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Set<String> testSet = new HashSet<String>();
+        test1.setSubUsecases(testSet);
+        test1.setDescription("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedLink(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmbeddedPhone(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAffiliateMarketing(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumberPool(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAgeGated(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirectLending(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptin(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberOptout(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSubscriberHelp(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample1("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample2("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample3("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample4("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSample5("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageFlow("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setHelpMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

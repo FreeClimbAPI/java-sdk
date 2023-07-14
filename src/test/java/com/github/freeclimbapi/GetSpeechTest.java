@@ -45,12 +45,10 @@ import com.github.freeclimbapi.models.*;
     public void actionUrlTest() {
       
         
-
         
         
         
         
-
       
   
     try {
@@ -60,9 +58,7 @@ import com.github.freeclimbapi.models.*;
     } catch (Exception e) {
       e.printStackTrace();
     }
-
   }
-
 
     /**
      * Test the property 'grammarType'
@@ -75,9 +71,7 @@ import com.github.freeclimbapi.models.*;
       model.setGrammarType(GrammarType.BUILT_IN);
       Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
   
-
   }
-
 
     /**
      * Test the property 'grammarFile'
@@ -89,17 +83,13 @@ import com.github.freeclimbapi.models.*;
         model.setGrammarFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarFile());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'grammarRule'
@@ -111,17 +101,13 @@ import com.github.freeclimbapi.models.*;
         model.setGrammarRule("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarRule());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'playBeep'
@@ -132,17 +118,13 @@ import com.github.freeclimbapi.models.*;
         model.setPlayBeep(false);
         Assert.assertEquals(false, model.getPlayBeep());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'prompts'
@@ -151,20 +133,16 @@ import com.github.freeclimbapi.models.*;
     public void promptsTest() {
       
         
-
         
         
         
         
-
       
   
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
     model.setPrompts(testList);
     Assert.assertEquals(testList, model.getPrompts()); 
-
   }
-
 
     /**
      * Test the property 'noInputTimeoutMs'
@@ -173,19 +151,15 @@ import com.github.freeclimbapi.models.*;
     public void noInputTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setNoInputTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'recognitionTimeoutMs'
@@ -194,19 +168,15 @@ import com.github.freeclimbapi.models.*;
     public void recognitionTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRecognitionTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'confidenceThreshold'
@@ -215,7 +185,6 @@ import com.github.freeclimbapi.models.*;
     public void confidenceThresholdTest() {
       
         
-
         
         
         model.setConfidenceThreshold(new BigDecimal(1.0));
@@ -223,12 +192,9 @@ import com.github.freeclimbapi.models.*;
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sensitivityLevel'
@@ -237,7 +203,6 @@ import com.github.freeclimbapi.models.*;
     public void sensitivityLevelTest() {
       
         
-
         
         
         model.setSensitivityLevel(new BigDecimal(1.0));
@@ -245,12 +210,9 @@ import com.github.freeclimbapi.models.*;
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'speechCompleteTimeoutMs'
@@ -259,19 +221,15 @@ import com.github.freeclimbapi.models.*;
     public void speechCompleteTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setSpeechCompleteTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'speechIncompleteTimeoutMs'
@@ -280,19 +238,15 @@ import com.github.freeclimbapi.models.*;
     public void speechIncompleteTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setSpeechIncompleteTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -303,70 +257,2016 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetSpeech test2 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test2.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        test2.setPrompts(testList2);
+        
+        
+        
+        test2.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.BUILT_IN);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetSpeech test2 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test2.setGrammarFile("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setGrammarRule("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        test2.setPrompts(testList2);
+        
+        
+        
+        test2.setNoInputTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRecognitionTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechCompleteTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechIncompleteTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       GetSpeech test2 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test2.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        test2.setPrompts(testList2);
+        
+        
+        
+        test2.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetSpeech test2 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test2.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        test2.setPrompts(testList2);
+        
+        
+        
+        test2.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      GetSpeech test1 = new GetSpeech();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setGrammarType(GrammarType.URL);
+        
+        
+        
+        
+        
+        test1.setGrammarFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setGrammarRule("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        
+        test1.setNoInputTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRecognitionTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechCompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSpeechIncompleteTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
         
            
-        
          
          
-        
          
           
         model.setGrammarFile("TEST_STRING");
           
-        
          
           
         model.setGrammarRule("TEST_STRING");
           
-        
          
         model.setPlayBeep(false);
          
-        
          
          
-        
          
          
-        
          
          
-        
          
          
-        
          
         model.setConfidenceThreshold(new BigDecimal(1.0));
          
-        
          
         model.setSensitivityLevel(new BigDecimal(1.0));
          
-        
          
          
-        
          
         model.setPrivacyMode(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -383,6 +2283,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("speechCompleteTimeoutMs"), model.getSpeechCompleteTimeoutMs());
         Assert.assertEquals(attributes.get("speechIncompleteTimeoutMs"), model.getSpeechIncompleteTimeoutMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-
     }
  }

@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'playBeep'
@@ -75,9 +71,7 @@ import com.github.freeclimbapi.models.*;
       model.setPlayBeep(PlayBeep.EXIT_ONLY);
       Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
   
-
   }
-
 
     /**
      * Test the property 'status'
@@ -90,11 +84,502 @@ import com.github.freeclimbapi.models.*;
       model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
       Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.TERMINATED);
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+      UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.NEVER);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+        
+        
+        
+        
+        
+      UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        test2.setAlias("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+      UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

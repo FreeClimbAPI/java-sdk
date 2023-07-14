@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'entityType'
@@ -82,9 +78,7 @@ import com.github.freeclimbapi.models.*;
     model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
     Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
   
-
   }
-
 
     /**
      * Test the property 'cspId'
@@ -96,17 +90,13 @@ import com.github.freeclimbapi.models.*;
         model.setCspId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCspId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'brandId'
@@ -118,17 +108,13 @@ import com.github.freeclimbapi.models.*;
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'firstName'
@@ -140,17 +126,13 @@ import com.github.freeclimbapi.models.*;
         model.setFirstName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'lastName'
@@ -162,17 +144,13 @@ import com.github.freeclimbapi.models.*;
         model.setLastName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'displayName'
@@ -184,17 +162,13 @@ import com.github.freeclimbapi.models.*;
         model.setDisplayName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'companyName'
@@ -206,17 +180,13 @@ import com.github.freeclimbapi.models.*;
         model.setCompanyName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'ein'
@@ -228,17 +198,13 @@ import com.github.freeclimbapi.models.*;
         model.setEin("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEin());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'einIssuingCountry'
@@ -250,17 +216,13 @@ import com.github.freeclimbapi.models.*;
         model.setEinIssuingCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEinIssuingCountry());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'phone'
@@ -272,17 +234,13 @@ import com.github.freeclimbapi.models.*;
         model.setPhone("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'street'
@@ -294,17 +252,13 @@ import com.github.freeclimbapi.models.*;
         model.setStreet("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStreet());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'city'
@@ -316,17 +270,13 @@ import com.github.freeclimbapi.models.*;
         model.setCity("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCity());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'state'
@@ -338,17 +288,13 @@ import com.github.freeclimbapi.models.*;
         model.setState("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getState());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'postalCode'
@@ -360,17 +306,13 @@ import com.github.freeclimbapi.models.*;
         model.setPostalCode("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPostalCode());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'country'
@@ -382,17 +324,13 @@ import com.github.freeclimbapi.models.*;
         model.setCountry("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCountry());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'email'
@@ -404,17 +342,13 @@ import com.github.freeclimbapi.models.*;
         model.setEmail("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'stockSymbol'
@@ -426,17 +360,13 @@ import com.github.freeclimbapi.models.*;
         model.setStockSymbol("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStockSymbol());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'stockExchange'
@@ -526,9 +456,7 @@ import com.github.freeclimbapi.models.*;
     model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.OTHER);
     Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.OTHER);
   
-
   }
-
 
     /**
      * Test the property 'ipAddress'
@@ -540,17 +468,13 @@ import com.github.freeclimbapi.models.*;
         model.setIpAddress("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIpAddress());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'website'
@@ -562,17 +486,13 @@ import com.github.freeclimbapi.models.*;
         model.setWebsite("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'brandRelationship'
@@ -596,9 +516,7 @@ import com.github.freeclimbapi.models.*;
     model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
     Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
   
-
   }
-
 
     /**
      * Test the property 'vertical'
@@ -610,17 +528,13 @@ import com.github.freeclimbapi.models.*;
         model.setVertical("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVertical());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'altBusinessId'
@@ -632,17 +546,13 @@ import com.github.freeclimbapi.models.*;
         model.setAltBusinessId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAltBusinessId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'altBusinessIdType'
@@ -663,9 +573,7 @@ import com.github.freeclimbapi.models.*;
     model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
     Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
   
-
   }
-
 
     /**
      * Test the property 'universalEin'
@@ -677,17 +585,13 @@ import com.github.freeclimbapi.models.*;
         model.setUniversalEin("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUniversalEin());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'referenceId'
@@ -699,17 +603,13 @@ import com.github.freeclimbapi.models.*;
         model.setReferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'optionalAttributes'
@@ -718,20 +618,16 @@ import com.github.freeclimbapi.models.*;
     public void optionalAttributesTest() {
       
         
-
         
         
         
         
-
       
   
     Map<String, Object> testMap = new HashMap();
     model.setOptionalAttributes(testMap);
     Assert.assertEquals(testMap, model.getOptionalAttributes()); 
-
   }
-
 
     /**
      * Test the property 'mock'
@@ -742,17 +638,13 @@ import com.github.freeclimbapi.models.*;
         model.setMock(false);
         Assert.assertEquals(false, model.getMock());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'identityStatus'
@@ -773,9 +665,7 @@ import com.github.freeclimbapi.models.*;
     model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
     Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
   
-
   }
-
 
     /**
      * Test the property 'createDate'
@@ -786,19 +676,4428 @@ import com.github.freeclimbapi.models.*;
         
           model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
           Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+      SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+      SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEin("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEinIssuingCountry("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStreet("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCity("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setState("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPostalCode("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCountry("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStockSymbol("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIpAddress("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setVertical("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAltBusinessId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUniversalEin("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+      SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        test2.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCspId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEinIssuingCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStreet("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCity("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setState("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPostalCode("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCountry("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStockSymbol("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIpAddress("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setVertical("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAltBusinessId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setUniversalEin("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setReferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        test1.setMock(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

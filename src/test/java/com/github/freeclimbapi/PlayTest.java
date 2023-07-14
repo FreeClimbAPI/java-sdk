@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFile());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'loop'
@@ -67,19 +63,15 @@ import com.github.freeclimbapi.models.*;
     public void loopTest() {
       
         
-
         
         
         
         
-
       
   
       model.setLoop(1);
       Assert.assertEquals(1, (int) model.getLoop());
-
   }
-
 
     /**
      * Test the property 'conferenceId'
@@ -91,17 +83,13 @@ import com.github.freeclimbapi.models.*;
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -112,20 +100,649 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Play test2 = new Play();
+        test2.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Play test2 = new Play();
+        test2.setFile("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLoop(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       Play test2 = new Play();
+        test2.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Play test2 = new Play();
+        test2.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      Play test1 = new Play();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLoop(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -133,19 +750,15 @@ import com.github.freeclimbapi.models.*;
           
         model.setFile("TEST_STRING");
           
-        
          
          
-        
          
           
         model.setConferenceId("TEST_STRING");
           
-        
          
         model.setPrivacyMode(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -153,6 +766,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("loop"), model.getLoop());
         Assert.assertEquals(attributes.get("conferenceId"), model.getConferenceId());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-
     }
  }

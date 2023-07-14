@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'to'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'applicationId'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sendDigits'
@@ -114,17 +102,13 @@ import com.github.freeclimbapi.models.*;
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'ifMachine'
@@ -136,17 +120,13 @@ import com.github.freeclimbapi.models.*;
         model.setIfMachine("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachine());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'ifMachineUrl'
@@ -158,17 +138,13 @@ import com.github.freeclimbapi.models.*;
         model.setIfMachineUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'timeout'
@@ -177,19 +153,15 @@ import com.github.freeclimbapi.models.*;
     public void timeoutTest() {
       
         
-
         
         
         
         
-
       
   
       model.setTimeout(1);
       Assert.assertEquals(1, (int) model.getTimeout());
-
   }
-
 
     /**
      * Test the property 'parentCallId'
@@ -201,17 +173,13 @@ import com.github.freeclimbapi.models.*;
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -222,17 +190,13 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callConnectUrl'
@@ -244,19 +208,1488 @@ import com.github.freeclimbapi.models.*;
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MakeCallRequest test2 = new MakeCallRequest();
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MakeCallRequest test2 = new MakeCallRequest();
+        test2.setFrom("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApplicationId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachine("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       MakeCallRequest test2 = new MakeCallRequest();
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MakeCallRequest test2 = new MakeCallRequest();
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      MakeCallRequest test1 = new MakeCallRequest();
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApplicationId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachine("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

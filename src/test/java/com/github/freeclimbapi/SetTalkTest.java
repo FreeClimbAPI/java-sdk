@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'talk'
@@ -69,20 +65,369 @@ import com.github.freeclimbapi.models.*;
         model.setTalk(false);
         Assert.assertEquals(false, model.getTalk());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SetTalk test2 = new SetTalk();
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SetTalk test2 = new SetTalk();
+        test2.setCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTalk(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       SetTalk test2 = new SetTalk();
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SetTalk test2 = new SetTalk();
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SetTalk test1 = new SetTalk();
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -90,16 +435,13 @@ import com.github.freeclimbapi.models.*;
           
         model.setCallId("TEST_STRING");
           
-        
          
         model.setTalk(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("callId"), model.getCallId());
         Assert.assertEquals(attributes.get("talk"), model.getTalk());
-
     }
  }

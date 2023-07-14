@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateCreated'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateUpdated'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'revision'
@@ -111,19 +99,15 @@ import com.github.freeclimbapi.models.*;
     public void revisionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
-
   }
-
 
     /**
      * Test the property 'callId'
@@ -135,17 +119,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'parentCallId'
@@ -157,17 +137,13 @@ import com.github.freeclimbapi.models.*;
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'accountId'
@@ -179,17 +155,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'from'
@@ -201,17 +173,13 @@ import com.github.freeclimbapi.models.*;
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'to'
@@ -223,17 +191,13 @@ import com.github.freeclimbapi.models.*;
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'phoneNumberId'
@@ -245,17 +209,13 @@ import com.github.freeclimbapi.models.*;
         model.setPhoneNumberId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callStatus'
@@ -280,9 +240,7 @@ import com.github.freeclimbapi.models.*;
       model.setCallStatus(CallStatus.NO_ANSWER);
       Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
   
-
   }
-
 
     /**
      * Test the property 'startTime'
@@ -294,17 +252,13 @@ import com.github.freeclimbapi.models.*;
         model.setStartTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStartTime());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'connectTime'
@@ -316,17 +270,13 @@ import com.github.freeclimbapi.models.*;
         model.setConnectTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConnectTime());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'endTime'
@@ -338,17 +288,13 @@ import com.github.freeclimbapi.models.*;
         model.setEndTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEndTime());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'duration'
@@ -357,19 +303,15 @@ import com.github.freeclimbapi.models.*;
     public void durationTest() {
       
         
-
         
         
         
         
-
       
   
       model.setDuration(1);
       Assert.assertEquals(1, (int) model.getDuration());
-
   }
-
 
     /**
      * Test the property 'connectDuration'
@@ -378,19 +320,15 @@ import com.github.freeclimbapi.models.*;
     public void connectDurationTest() {
       
         
-
         
         
         
         
-
       
   
       model.setConnectDuration(1);
       Assert.assertEquals(1, (int) model.getConnectDuration());
-
   }
-
 
     /**
      * Test the property 'direction'
@@ -405,9 +343,7 @@ import com.github.freeclimbapi.models.*;
       model.setDirection(CallDirection.OUTBOUND_DIAL);
       Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
   
-
   }
-
 
     /**
      * Test the property 'answeredBy'
@@ -420,9 +356,7 @@ import com.github.freeclimbapi.models.*;
       model.setAnsweredBy(AnsweredBy.MACHINE);
       Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
   
-
   }
-
 
     /**
      * Test the property 'subresourceUris'
@@ -431,7 +365,6 @@ import com.github.freeclimbapi.models.*;
     public void subresourceUrisTest() {
       
         
-
         
         
         
@@ -440,14 +373,2754 @@ import com.github.freeclimbapi.models.*;
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      CallResult test2 = new CallResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test2.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.RINGING);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.OUTBOUND_API);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.MACHINE);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      CallResult test2 = new CallResult();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFrom("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhoneNumberId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test2.setStartTime("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectTime("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEndTime("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDuration(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectDuration(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+       CallResult test2 = new CallResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test2.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      CallResult test2 = new CallResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test2.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      CallResult test1 = new CallResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setParentCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhoneNumberId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setCallStatus(CallStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setStartTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEndTime("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConnectDuration(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setDirection(CallDirection.INBOUND);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setAnsweredBy(AnsweredBy.HUMAN);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

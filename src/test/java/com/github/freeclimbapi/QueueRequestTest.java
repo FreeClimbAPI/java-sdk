@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'maxSize'
@@ -67,21 +63,370 @@ import com.github.freeclimbapi.models.*;
     public void maxSizeTest() {
       
         
-
         
         
         
         
-
       
   
       model.setMaxSize(1);
       Assert.assertEquals(1, (int) model.getMaxSize());
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueRequest test2 = new QueueRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueRequest test2 = new QueueRequest();
+        test2.setAlias("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxSize(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       QueueRequest test2 = new QueueRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueRequest test2 = new QueueRequest();
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      QueueRequest test1 = new QueueRequest();
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

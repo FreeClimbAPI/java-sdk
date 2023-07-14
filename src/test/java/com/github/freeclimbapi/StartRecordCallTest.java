@@ -38,13 +38,10 @@ import com.github.freeclimbapi.models.*;
  public class StartRecordCallTest {
     private final StartRecordCall model = new StartRecordCall();
 
-
-
     @Test
     public void buildTest() throws Exception {
         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
-
     }
  }

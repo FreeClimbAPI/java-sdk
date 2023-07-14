@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callId'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'waitTime'
@@ -89,19 +81,15 @@ import com.github.freeclimbapi.models.*;
     public void waitTimeTest() {
       
         
-
         
         
         
         
-
       
   
       model.setWaitTime(1);
       Assert.assertEquals(1, (int) model.getWaitTime());
-
   }
-
 
     /**
      * Test the property 'position'
@@ -110,19 +98,15 @@ import com.github.freeclimbapi.models.*;
     public void positionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setPosition(1);
       Assert.assertEquals(1, (int) model.getPosition());
-
   }
-
 
     /**
      * Test the property 'dateEnqueued'
@@ -134,19 +118,788 @@ import com.github.freeclimbapi.models.*;
         model.setDateEnqueued("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueMember test2 = new QueueMember();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueMember test2 = new QueueMember();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitTime(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPosition(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateEnqueued("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       QueueMember test2 = new QueueMember();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      QueueMember test2 = new QueueMember();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      QueueMember test1 = new QueueMember();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitTime(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPosition(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateEnqueued("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

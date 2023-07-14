@@ -38,13 +38,10 @@ import com.github.freeclimbapi.models.*;
  public class UnparkTest {
     private final Unpark model = new Unpark();
 
-
-
     @Test
     public void buildTest() throws Exception {
         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
-
     }
  }

@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'actionUrl'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'notificationUrl'
@@ -92,20 +84,509 @@ import com.github.freeclimbapi.models.*;
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Park test2 = new Park();
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Park test2 = new Park();
+        test2.setWaitUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       Park test2 = new Park();
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Park test2 = new Park();
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      Park test1 = new Park();
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -113,23 +594,19 @@ import com.github.freeclimbapi.models.*;
           
         model.setWaitUrl("TEST_STRING");
           
-        
          
           
         model.setActionUrl("TEST_STRING");
           
-        
          
           
         model.setNotificationUrl("TEST_STRING");
           
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
-
     }
  }

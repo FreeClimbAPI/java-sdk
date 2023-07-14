@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class CallDirectionTest {
 
-
   @Test
     public void testINBOUNDShouldWork() {
 
@@ -60,7 +59,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testOUTBOUND_APIShouldWork() {
@@ -85,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testOUTBOUND_DIALShouldWork() {
 
@@ -108,7 +105,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }

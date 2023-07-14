@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateCreated'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateUpdated'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'revision'
@@ -111,19 +99,15 @@ import com.github.freeclimbapi.models.*;
     public void revisionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
-
   }
-
 
     /**
      * Test the property 'accountId'
@@ -135,17 +119,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'messageId'
@@ -157,17 +137,13 @@ import com.github.freeclimbapi.models.*;
         model.setMessageId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'status'
@@ -198,9 +174,7 @@ import com.github.freeclimbapi.models.*;
       model.setStatus(MessageStatus.UNKNOWN);
       Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
   
-
   }
-
 
     /**
      * Test the property 'from'
@@ -212,17 +186,13 @@ import com.github.freeclimbapi.models.*;
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'to'
@@ -234,17 +204,13 @@ import com.github.freeclimbapi.models.*;
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'text'
@@ -256,17 +222,13 @@ import com.github.freeclimbapi.models.*;
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'direction'
@@ -278,17 +240,13 @@ import com.github.freeclimbapi.models.*;
         model.setDirection("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDirection());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'notificationUrl'
@@ -300,19 +258,1768 @@ import com.github.freeclimbapi.models.*;
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MessageResult test2 = new MessageResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.QUEUED);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MessageResult test2 = new MessageResult();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test2.setFrom("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setText("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirection("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       MessageResult test2 = new MessageResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MessageResult test2 = new MessageResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test2.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      MessageResult test1 = new MessageResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessageId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(MessageStatus.NEW);
+        
+        
+        
+        
+        
+        test1.setFrom("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTo("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setText("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDirection("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

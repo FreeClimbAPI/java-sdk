@@ -49,11 +49,222 @@ import com.github.freeclimbapi.models.*;
       model.setStatus(UpdateCallRequestStatus.COMPLETED);
       Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+      UpdateCallRequest test2 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.COMPLETED);
+        
+        
+        
+        
+        
+      UpdateCallRequest test2 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+       UpdateCallRequest test2 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+      UpdateCallRequest test2 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

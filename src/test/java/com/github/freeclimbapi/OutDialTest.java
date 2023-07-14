@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callConnectUrl'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callingNumber'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallingNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallingNumber());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'destination'
@@ -114,17 +102,13 @@ import com.github.freeclimbapi.models.*;
         model.setDestination("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDestination());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'ifMachine'
@@ -137,9 +121,7 @@ import com.github.freeclimbapi.models.*;
       model.setIfMachine(IfMachine.HANGUP);
       Assert.assertEquals(model.getIfMachine(),IfMachine.HANGUP);
   
-
   }
-
 
     /**
      * Test the property 'ifMachineUrl'
@@ -151,17 +133,13 @@ import com.github.freeclimbapi.models.*;
         model.setIfMachineUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'sendDigits'
@@ -173,17 +151,13 @@ import com.github.freeclimbapi.models.*;
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'statusCallbackUrl'
@@ -195,17 +169,13 @@ import com.github.freeclimbapi.models.*;
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'timeout'
@@ -214,19 +184,15 @@ import com.github.freeclimbapi.models.*;
     public void timeoutTest() {
       
         
-
         
         
         
         
-
       
   
       model.setTimeout(1);
       Assert.assertEquals(1, (int) model.getTimeout());
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -237,20 +203,1489 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      OutDial test2 = new OutDial();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.HANGUP);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      OutDial test2 = new OutDial();
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallingNumber("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDestination("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       OutDial test2 = new OutDial();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      OutDial test2 = new OutDial();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test2.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      OutDial test1 = new OutDial();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallConnectUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallingNumber("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDestination("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setIfMachine(IfMachine.REDIRECT);
+        
+        
+        
+        
+        
+        test1.setIfMachineUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSendDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setTimeout(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -258,47 +1693,37 @@ import com.github.freeclimbapi.models.*;
           
         model.setActionUrl("TEST_STRING");
           
-        
          
           
         model.setCallConnectUrl("TEST_STRING");
           
-        
          
           
         model.setCallingNumber("TEST_STRING");
           
-        
          
           
         model.setDestination("TEST_STRING");
           
-        
          
          
-        
          
           
         model.setIfMachineUrl("TEST_STRING");
           
-        
          
           
         model.setSendDigits("TEST_STRING");
           
-        
          
           
         model.setStatusCallbackUrl("TEST_STRING");
           
-        
          
          
-        
          
         model.setPrivacyMode(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -312,6 +1737,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("statusCallbackUrl"), model.getStatusCallbackUrl());
         Assert.assertEquals(attributes.get("timeout"), model.getTimeout());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-
     }
  }

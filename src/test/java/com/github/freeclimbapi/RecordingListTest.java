@@ -45,19 +45,15 @@ import com.github.freeclimbapi.models.*;
     public void totalTest() {
       
         
-
         
         
         
         
-
       
   
       model.setTotal(1);
       Assert.assertEquals(1, (int) model.getTotal());
-
   }
-
 
     /**
      * Test the property 'start'
@@ -66,19 +62,15 @@ import com.github.freeclimbapi.models.*;
     public void startTest() {
       
         
-
         
         
         
         
-
       
   
       model.setStart(1);
       Assert.assertEquals(1, (int) model.getStart());
-
   }
-
 
     /**
      * Test the property 'end'
@@ -87,19 +79,15 @@ import com.github.freeclimbapi.models.*;
     public void endTest() {
       
         
-
         
         
         
         
-
       
   
       model.setEnd(1);
       Assert.assertEquals(1, (int) model.getEnd());
-
   }
-
 
     /**
      * Test the property 'page'
@@ -108,19 +96,15 @@ import com.github.freeclimbapi.models.*;
     public void pageTest() {
       
         
-
         
         
         
         
-
       
   
       model.setPage(1);
       Assert.assertEquals(1, (int) model.getPage());
-
   }
-
 
     /**
      * Test the property 'numPages'
@@ -129,19 +113,15 @@ import com.github.freeclimbapi.models.*;
     public void numPagesTest() {
       
         
-
         
         
         
         
-
       
   
       model.setNumPages(1);
       Assert.assertEquals(1, (int) model.getNumPages());
-
   }
-
 
     /**
      * Test the property 'pageSize'
@@ -150,19 +130,15 @@ import com.github.freeclimbapi.models.*;
     public void pageSizeTest() {
       
         
-
         
         
         
         
-
       
   
       model.setPageSize(1);
       Assert.assertEquals(1, (int) model.getPageSize());
-
   }
-
 
     /**
      * Test the property 'nextPageUri'
@@ -174,17 +150,13 @@ import com.github.freeclimbapi.models.*;
         model.setNextPageUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNextPageUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'recordings'
@@ -193,22 +165,1221 @@ import com.github.freeclimbapi.models.*;
     public void recordingsTest() {
       
         
-
         
         
         
         
-
       
   
     List<RecordingResult> testList = new ArrayList<RecordingResult>();
     model.setRecordings(testList);
     Assert.assertEquals(testList, model.getRecordings()); 
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingList test2 = new RecordingList();
+        
+        
+        test2.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = new ArrayList<RecordingResult>();
+        test2.setRecordings(testList2);
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingList test2 = new RecordingList();
+        
+        
+        test2.setTotal(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStart(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEnd(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPage(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumPages(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPageSize(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextPageUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = new ArrayList<RecordingResult>();
+        test2.setRecordings(testList2);
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+       RecordingList test2 = new RecordingList();
+        
+        
+        test2.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = new ArrayList<RecordingResult>();
+        test2.setRecordings(testList2);
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingList test2 = new RecordingList();
+        
+        
+        test2.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = new ArrayList<RecordingResult>();
+        test2.setRecordings(testList2);
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RecordingList test1 = new RecordingList();
+        
+        
+        test1.setTotal(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStart(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEnd(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPage(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNumPages(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPageSize(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setNextPageUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

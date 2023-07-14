@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class CallStatusTest {
 
-
   @Test
     public void testQUEUEDShouldWork() {
 
@@ -60,7 +59,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testRINGINGShouldWork() {
@@ -85,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testIN_PROGRESSShouldWork() {
 
@@ -108,7 +105,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testCANCELEDShouldWork() {
@@ -133,7 +129,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testCOMPLETEDShouldWork() {
 
@@ -156,7 +151,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testFAILEDShouldWork() {
@@ -181,7 +175,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testBUSYShouldWork() {
 
@@ -205,7 +198,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testNO_ANSWERShouldWork() {
 
@@ -228,7 +220,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }

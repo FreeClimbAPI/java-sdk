@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'brandId'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'firstName'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setFirstName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFirstName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'lastName'
@@ -114,17 +102,13 @@ import com.github.freeclimbapi.models.*;
         model.setLastName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLastName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'displayName'
@@ -136,17 +120,13 @@ import com.github.freeclimbapi.models.*;
         model.setDisplayName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'companyName'
@@ -158,17 +138,13 @@ import com.github.freeclimbapi.models.*;
         model.setCompanyName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'phone'
@@ -180,17 +156,13 @@ import com.github.freeclimbapi.models.*;
         model.setPhone("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhone());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'email'
@@ -202,17 +174,13 @@ import com.github.freeclimbapi.models.*;
         model.setEmail("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEmail());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'website'
@@ -224,17 +192,13 @@ import com.github.freeclimbapi.models.*;
         model.setWebsite("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWebsite());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'optionalAttributes'
@@ -243,20 +207,16 @@ import com.github.freeclimbapi.models.*;
     public void optionalAttributesTest() {
       
         
-
         
         
         
         
-
       
   
     Map<String, Object> testMap = new HashMap();
     model.setOptionalAttributes(testMap);
     Assert.assertEquals(testMap, model.getOptionalAttributes()); 
-
   }
-
 
     /**
      * Test the property 'evpVettingScore'
@@ -265,21 +225,1630 @@ import com.github.freeclimbapi.models.*;
     public void evpVettingScoreTest() {
       
         
-
         
         
         
         
-
       
   
       model.setEvpVettingScore(1);
       Assert.assertEquals(1, (int) model.getEvpVettingScore());
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEvpVettingScore(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap2 = new HashMap();test2.setOptionalAttributes(testMap2);
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setBrandId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFirstName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLastName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDisplayName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCompanyName("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPhone("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEmail("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWebsite("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Map<String, Object> testMap = new HashMap();test1.setOptionalAttributes(testMap);
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setEvpVettingScore(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

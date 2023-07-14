@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateCreated'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateUpdated'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'revision'
@@ -111,19 +99,15 @@ import com.github.freeclimbapi.models.*;
     public void revisionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
-
   }
-
 
     /**
      * Test the property 'conferenceId'
@@ -135,17 +119,13 @@ import com.github.freeclimbapi.models.*;
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'accountId'
@@ -157,17 +137,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'alias'
@@ -179,17 +155,13 @@ import com.github.freeclimbapi.models.*;
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'playBeep'
@@ -206,9 +178,7 @@ import com.github.freeclimbapi.models.*;
       model.setPlayBeep(PlayBeep.EXIT_ONLY);
       Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
   
-
   }
-
 
     /**
      * Test the property 'record'
@@ -219,17 +189,13 @@ import com.github.freeclimbapi.models.*;
         model.setRecord(false);
         Assert.assertEquals(false, model.getRecord());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'status'
@@ -246,9 +212,7 @@ import com.github.freeclimbapi.models.*;
       model.setStatus(ConferenceStatus.TERMINATED);
       Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
   
-
   }
-
 
     /**
      * Test the property 'waitUrl'
@@ -260,17 +224,13 @@ import com.github.freeclimbapi.models.*;
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'actionUrl'
@@ -282,17 +242,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'statusCallbackUrl'
@@ -304,17 +260,13 @@ import com.github.freeclimbapi.models.*;
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'subresourceUris'
@@ -323,7 +275,6 @@ import com.github.freeclimbapi.models.*;
     public void subresourceUrisTest() {
       
         
-
         
         
         
@@ -332,14 +283,2054 @@ import com.github.freeclimbapi.models.*;
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      ConferenceResult test2 = new ConferenceResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.NEVER);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.POPULATED);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      ConferenceResult test2 = new ConferenceResult();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test2.setWaitUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+       ConferenceResult test2 = new ConferenceResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      ConferenceResult test2 = new ConferenceResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      ConferenceResult test1 = new ConferenceResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setConferenceId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(ConferenceStatus.EMPTY);
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

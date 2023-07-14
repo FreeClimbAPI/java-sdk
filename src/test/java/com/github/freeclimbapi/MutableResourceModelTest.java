@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateCreated'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateUpdated'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'revision'
@@ -111,21 +99,650 @@ import com.github.freeclimbapi.models.*;
     public void revisionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MutableResourceModel test2 = new MutableResourceModel();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MutableResourceModel test2 = new MutableResourceModel();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       MutableResourceModel test2 = new MutableResourceModel();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      MutableResourceModel test2 = new MutableResourceModel();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      MutableResourceModel test1 = new MutableResourceModel();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

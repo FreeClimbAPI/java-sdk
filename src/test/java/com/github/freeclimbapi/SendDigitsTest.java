@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDigits());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'pauseMs'
@@ -67,19 +63,15 @@ import com.github.freeclimbapi.models.*;
     public void pauseMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setPauseMs(1);
       Assert.assertEquals(1, (int) model.getPauseMs());
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -90,20 +82,509 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SendDigits test2 = new SendDigits();
+        test2.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SendDigits test2 = new SendDigits();
+        test2.setDigits("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPauseMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       SendDigits test2 = new SendDigits();
+        test2.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      SendDigits test2 = new SendDigits();
+        test2.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SendDigits test1 = new SendDigits();
+        test1.setDigits("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPauseMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -111,20 +592,16 @@ import com.github.freeclimbapi.models.*;
           
         model.setDigits("TEST_STRING");
           
-        
          
          
-        
          
         model.setPrivacyMode(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("digits"), model.getDigits());
         Assert.assertEquals(attributes.get("pauseMs"), model.getPauseMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-
     }
  }

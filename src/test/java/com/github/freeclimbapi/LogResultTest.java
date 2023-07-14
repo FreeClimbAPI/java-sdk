@@ -45,19 +45,15 @@ import com.github.freeclimbapi.models.*;
     public void timestampTest() {
       
         
-
         
         
         
         
-
       
   
       model.setTimestamp(1);
       Assert.assertEquals(1, (int) model.getTimestamp());
-
   }
-
 
     /**
      * Test the property 'level'
@@ -72,9 +68,7 @@ import com.github.freeclimbapi.models.*;
       model.setLevel(LogLevel.ERROR);
       Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
   
-
   }
-
 
     /**
      * Test the property 'requestId'
@@ -86,17 +80,13 @@ import com.github.freeclimbapi.models.*;
         model.setRequestId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRequestId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'accountId'
@@ -108,17 +98,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'callId'
@@ -130,17 +116,13 @@ import com.github.freeclimbapi.models.*;
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'message'
@@ -152,17 +134,13 @@ import com.github.freeclimbapi.models.*;
         model.setMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessage());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'metadata'
@@ -171,7 +149,6 @@ import com.github.freeclimbapi.models.*;
     public void metadataTest() {
       
         
-
         
         
         
@@ -180,14 +157,1074 @@ import com.github.freeclimbapi.models.*;
           model.setMetadata(testObject);
           Assert.assertEquals(testObject, model.getMetadata());
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+      LogResult test2 = new LogResult();
+        
+        
+        test2.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test2.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.WARNING);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+      LogResult test2 = new LogResult();
+        
+        
+        test2.setTimestamp(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test2.setRequestId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessage("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+       LogResult test2 = new LogResult();
+        
+        
+        test2.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test2.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+      LogResult test2 = new LogResult();
+        
+        
+        test2.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test2.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      LogResult test1 = new LogResult();
+        
+        
+        test1.setTimestamp(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setLevel(LogLevel.INFO);
+        
+        
+        
+        
+        
+        test1.setRequestId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setCallId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMessage("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

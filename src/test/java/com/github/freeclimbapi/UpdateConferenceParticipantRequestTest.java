@@ -47,17 +47,13 @@ import com.github.freeclimbapi.models.*;
         model.setTalk(false);
         Assert.assertEquals(false, model.getTalk());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'listen'
@@ -68,19 +64,368 @@ import com.github.freeclimbapi.models.*;
         model.setListen(false);
         Assert.assertEquals(false, model.getListen());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        
+        test2.setTalk(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setListen(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        
+        test2.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        
+        test1.setTalk(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setListen(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

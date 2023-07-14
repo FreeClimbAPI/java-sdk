@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateCreated'
@@ -70,17 +66,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'dateUpdated'
@@ -92,17 +84,13 @@ import com.github.freeclimbapi.models.*;
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'revision'
@@ -111,19 +99,15 @@ import com.github.freeclimbapi.models.*;
     public void revisionTest() {
       
         
-
         
         
         
         
-
       
   
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
-
   }
-
 
     /**
      * Test the property 'accountId'
@@ -135,17 +119,13 @@ import com.github.freeclimbapi.models.*;
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'apiKey'
@@ -157,17 +137,13 @@ import com.github.freeclimbapi.models.*;
         model.setApiKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApiKey());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'alias'
@@ -179,17 +155,13 @@ import com.github.freeclimbapi.models.*;
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'label'
@@ -201,17 +173,13 @@ import com.github.freeclimbapi.models.*;
         model.setLabel("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLabel());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'type'
@@ -224,9 +192,7 @@ import com.github.freeclimbapi.models.*;
       model.setType(AccountType.FULL);
       Assert.assertEquals(model.getType(),AccountType.FULL);
   
-
   }
-
 
     /**
      * Test the property 'status'
@@ -241,9 +207,7 @@ import com.github.freeclimbapi.models.*;
       model.setStatus(AccountStatus.ACTIVE);
       Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
   
-
   }
-
 
     /**
      * Test the property 'subresourceUris'
@@ -252,7 +216,6 @@ import com.github.freeclimbapi.models.*;
     public void subresourceUrisTest() {
       
         
-
         
         
         
@@ -261,14 +224,1634 @@ import com.github.freeclimbapi.models.*;
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      AccountResult test2 = new AccountResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.FULL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.SUSPENDED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      AccountResult test2 = new AccountResult();
+        test2.setUri("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApiKey("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLabel("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+       AccountResult test2 = new AccountResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+      AccountResult test2 = new AccountResult();
+        test2.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject2 = new Object();
+        test2.setSubresourceUris(testObject2);
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      AccountResult test1 = new AccountResult();
+        test1.setUri("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateCreated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDateUpdated("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setRevision(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAccountId("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setApiKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setLabel("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setType(AccountType.TRIAL);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        model.setStatus(AccountStatus.CLOSED);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        Object testObject = new Object();
+        test1.setSubresourceUris(testObject);
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

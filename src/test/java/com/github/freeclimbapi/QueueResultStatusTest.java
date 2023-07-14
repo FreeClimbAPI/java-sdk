@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class QueueResultStatusTest {
 
-
   @Test
     public void testQUEUE_FULLShouldWork() {
 
@@ -60,7 +59,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testDEQUEUEDShouldWork() {
@@ -85,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testHANGUPShouldWork() {
 
@@ -109,7 +106,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testSYSTEM_ERRORShouldWork() {
 
@@ -132,7 +128,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }

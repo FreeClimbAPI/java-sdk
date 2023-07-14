@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'silenceTimeoutMs'
@@ -67,19 +63,15 @@ import com.github.freeclimbapi.models.*;
     public void silenceTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setSilenceTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'finishOnKey'
@@ -91,17 +83,13 @@ import com.github.freeclimbapi.models.*;
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'maxLengthSec'
@@ -110,19 +98,15 @@ import com.github.freeclimbapi.models.*;
     public void maxLengthSecTest() {
       
         
-
         
         
         
         
-
       
   
       model.setMaxLengthSec(1);
       Assert.assertEquals(1, (int) model.getMaxLengthSec());
-
   }
-
 
     /**
      * Test the property 'playBeep'
@@ -133,17 +117,13 @@ import com.github.freeclimbapi.models.*;
         model.setPlayBeep(false);
         Assert.assertEquals(false, model.getPlayBeep());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'autoStart'
@@ -154,17 +134,13 @@ import com.github.freeclimbapi.models.*;
         model.setAutoStart(false);
         Assert.assertEquals(false, model.getAutoStart());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -175,20 +151,1069 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      RecordUtterance test2 = new RecordUtterance();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      RecordUtterance test2 = new RecordUtterance();
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSilenceTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxLengthSec(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAutoStart(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'hashEquals'
+     */
+
+     @Test
+    public void hashEqualsTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       RecordUtterance test2 = new RecordUtterance();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        int hashCode1 = test1.hashCode();
+        int hashCode2 = test2.hashCode();
+
+      Assert.assertEquals(hashCode1, hashCode2);
+     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      RecordUtterance test2 = new RecordUtterance();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RecordUtterance test1 = new RecordUtterance();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setSilenceTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxLengthSec(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAutoStart(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
     @Test
     public void buildTest() throws Exception {
@@ -196,30 +1221,23 @@ import com.github.freeclimbapi.models.*;
           
         model.setActionUrl("TEST_STRING");
           
-        
          
          
-        
          
           
         model.setFinishOnKey("TEST_STRING");
           
-        
          
          
-        
          
         model.setPlayBeep(false);
          
-        
          
         model.setAutoStart(false);
          
-        
          
         model.setPrivacyMode(false);
          
-        
          
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -230,6 +1248,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("playBeep"), model.getPlayBeep());
         Assert.assertEquals(attributes.get("autoStart"), model.getAutoStart());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-
     }
  }

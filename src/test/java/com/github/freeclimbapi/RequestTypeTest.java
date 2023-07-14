@@ -37,7 +37,6 @@ import com.github.freeclimbapi.models.*;
  */
  public class RequestTypeTest {
 
-
   @Test
     public void testINBOUND_CALLShouldWork() {
 
@@ -60,7 +59,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testRECORDShouldWork() {
@@ -85,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testGET_DIGITSShouldWork() {
 
@@ -108,7 +105,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testGET_SPEECHShouldWork() {
@@ -133,7 +129,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testREDIRECTShouldWork() {
 
@@ -156,7 +151,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testPAUSEShouldWork() {
@@ -181,7 +175,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testOUT_DIAL_STARTShouldWork() {
 
@@ -204,7 +197,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testOUT_DIAL_CONNECTShouldWork() {
@@ -229,7 +221,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testOUT_DIAL_API_CONNECTShouldWork() {
 
@@ -252,7 +243,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testMACHINE_DETECTEDShouldWork() {
@@ -277,7 +267,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testDEQUEUEShouldWork() {
 
@@ -300,7 +289,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testQUEUE_WAITShouldWork() {
@@ -325,7 +313,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testADD_TO_QUEUE_NOTIFICATIONShouldWork() {
 
@@ -348,7 +335,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testREMOVE_FROM_QUEUE_NOTIFICATIONShouldWork() {
@@ -373,7 +359,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testCALL_STATUSShouldWork() {
 
@@ -396,7 +381,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testCREATE_CONFERENCEShouldWork() {
@@ -421,7 +405,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testCONFERENCE_STATUSShouldWork() {
 
@@ -444,7 +427,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testLEAVE_CONFERENCEShouldWork() {
@@ -469,7 +451,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testADD_TO_CONFERENCE_NOTIFICATIONShouldWork() {
 
@@ -492,7 +473,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testCONFERENCE_RECORDING_STATUSShouldWork() {
@@ -517,7 +497,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testCONFERENCE_CALL_CONTROLShouldWork() {
 
@@ -540,7 +519,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
 
   @Test
     public void testMESSAGE_DELIVERYShouldWork() {
@@ -565,7 +543,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
 
-
   @Test
     public void testMESSAGE_STATUSShouldWork() {
 
@@ -588,7 +565,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-
 
  }
