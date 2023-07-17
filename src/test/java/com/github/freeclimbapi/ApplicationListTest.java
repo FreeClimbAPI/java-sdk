@@ -229,7 +229,7 @@ import com.github.freeclimbapi.models.*;
         test2.setNumPages(0);
         test2.setPageSize(0);
         test2.setNextPageUri("tS");
-        List<ApplicationResult> testList2 = null;
+        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
         test2.setApplications(testList2);
 
       Assert.assertFalse(test1.equals(test2));
