@@ -63,37 +63,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       QueueListAllOf test1 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList = new ArrayList<QueueResult>();
         test1.setQueues(testList);
-        
       QueueListAllOf test2 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList2 = testList;
         test2.setQueues(testList2);
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,37 +78,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       QueueListAllOf test1 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList = new ArrayList<QueueResult>();
         test1.setQueues(testList);
-        
       QueueListAllOf test2 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList2 = null;
         test2.setQueues(testList2);
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -146,21 +94,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       QueueListAllOf test1 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList = new ArrayList<QueueResult>();
         test1.setQueues(testList);
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -172,42 +107,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       QueueListAllOf test1 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList = new ArrayList<QueueResult>();
         test1.setQueues(testList);
-        
       QueueListAllOf test2 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList2 = testList;
         test2.setQueues(testList2);
         
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -217,21 +125,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       QueueListAllOf test1 = new QueueListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<QueueResult> testList = new ArrayList<QueueResult>();
         test1.setQueues(testList);
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

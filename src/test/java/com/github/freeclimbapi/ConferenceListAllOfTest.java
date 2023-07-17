@@ -63,37 +63,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       ConferenceListAllOf test1 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
         test1.setConferences(testList);
-        
       ConferenceListAllOf test2 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList2 = testList;
         test2.setConferences(testList2);
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,37 +78,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       ConferenceListAllOf test1 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
         test1.setConferences(testList);
-        
       ConferenceListAllOf test2 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList2 = null;
         test2.setConferences(testList2);
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -146,21 +94,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       ConferenceListAllOf test1 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
         test1.setConferences(testList);
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -172,42 +107,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       ConferenceListAllOf test1 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
         test1.setConferences(testList);
-        
       ConferenceListAllOf test2 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList2 = testList;
         test2.setConferences(testList2);
         
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -217,21 +125,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       ConferenceListAllOf test1 = new ConferenceListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<ConferenceResult> testList = new ArrayList<ConferenceResult>();
         test1.setConferences(testList);
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

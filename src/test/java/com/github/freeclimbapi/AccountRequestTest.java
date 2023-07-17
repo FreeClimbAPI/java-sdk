@@ -82,62 +82,10 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       AccountRequest test1 = new AccountRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       AccountRequest test2 = new AccountRequest();
         test2.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -149,62 +97,10 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       AccountRequest test1 = new AccountRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       AccountRequest test2 = new AccountRequest();
         test2.setAlias("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setLabel("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -217,33 +113,7 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       AccountRequest test1 = new AccountRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -256,67 +126,14 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       AccountRequest test1 = new AccountRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       AccountRequest test2 = new AccountRequest();
         test2.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -327,33 +144,7 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       AccountRequest test1 = new AccountRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

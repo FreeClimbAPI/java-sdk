@@ -64,34 +64,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       TerminateConference test1 = new TerminateConference();
         test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       TerminateConference test2 = new TerminateConference();
         test2.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -103,34 +77,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       TerminateConference test1 = new TerminateConference();
         test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       TerminateConference test2 = new TerminateConference();
         test2.setConferenceId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -143,19 +91,6 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       TerminateConference test1 = new TerminateConference();
         test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -168,39 +103,12 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       TerminateConference test1 = new TerminateConference();
         test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       TerminateConference test2 = new TerminateConference();
         test2.setConferenceId("TS");
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -211,19 +119,6 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       TerminateConference test1 = new TerminateConference();
         test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

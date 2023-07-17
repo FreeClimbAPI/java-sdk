@@ -64,34 +64,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       Redirect test1 = new Redirect();
         test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Redirect test2 = new Redirect();
         test2.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -103,34 +77,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       Redirect test1 = new Redirect();
         test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Redirect test2 = new Redirect();
         test2.setActionUrl("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -143,19 +91,6 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       Redirect test1 = new Redirect();
         test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -168,39 +103,12 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       Redirect test1 = new Redirect();
         test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Redirect test2 = new Redirect();
         test2.setActionUrl("TS");
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -211,19 +119,6 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       Redirect test1 = new Redirect();
         test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

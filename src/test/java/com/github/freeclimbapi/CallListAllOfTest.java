@@ -63,37 +63,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       CallListAllOf test1 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList = new ArrayList<CallResult>();
         test1.setCalls(testList);
-        
       CallListAllOf test2 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList2 = testList;
         test2.setCalls(testList2);
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,37 +78,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       CallListAllOf test1 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList = new ArrayList<CallResult>();
         test1.setCalls(testList);
-        
       CallListAllOf test2 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList2 = null;
         test2.setCalls(testList2);
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -146,21 +94,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       CallListAllOf test1 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList = new ArrayList<CallResult>();
         test1.setCalls(testList);
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -172,42 +107,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       CallListAllOf test1 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList = new ArrayList<CallResult>();
         test1.setCalls(testList);
-        
       CallListAllOf test2 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList2 = testList;
         test2.setCalls(testList2);
         
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -217,21 +125,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       CallListAllOf test1 = new CallListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<CallResult> testList = new ArrayList<CallResult>();
         test1.setCalls(testList);
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

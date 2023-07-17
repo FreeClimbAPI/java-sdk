@@ -63,37 +63,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       RecordingListAllOf test1 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList = new ArrayList<RecordingResult>();
         test1.setRecordings(testList);
-        
       RecordingListAllOf test2 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList2 = testList;
         test2.setRecordings(testList2);
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,37 +78,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       RecordingListAllOf test1 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList = new ArrayList<RecordingResult>();
         test1.setRecordings(testList);
-        
       RecordingListAllOf test2 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList2 = null;
         test2.setRecordings(testList2);
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -146,21 +94,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       RecordingListAllOf test1 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList = new ArrayList<RecordingResult>();
         test1.setRecordings(testList);
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -172,42 +107,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       RecordingListAllOf test1 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList = new ArrayList<RecordingResult>();
         test1.setRecordings(testList);
-        
       RecordingListAllOf test2 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList2 = testList;
         test2.setRecordings(testList2);
         
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -217,21 +125,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       RecordingListAllOf test1 = new RecordingListAllOf();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         List<RecordingResult> testList = new ArrayList<RecordingResult>();
         test1.setRecordings(testList);
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

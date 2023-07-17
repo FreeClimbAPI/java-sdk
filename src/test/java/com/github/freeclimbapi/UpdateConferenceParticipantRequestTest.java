@@ -79,63 +79,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-        
         test1.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-        
         test2.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -146,63 +94,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-        
         test1.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-        
         test2.setTalk(false);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setListen(false);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -214,34 +110,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-        
         test1.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -253,68 +123,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-        
         test1.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-        
         test2.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -324,34 +141,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-        
         test1.setTalk(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setListen(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

@@ -64,34 +64,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       Hangup test1 = new Hangup();
         test1.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Hangup test2 = new Hangup();
         test2.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -103,34 +77,8 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       Hangup test1 = new Hangup();
         test1.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Hangup test2 = new Hangup();
         test2.setReason("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -143,19 +91,6 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       Hangup test1 = new Hangup();
         test1.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -168,39 +103,12 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       Hangup test1 = new Hangup();
         test1.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Hangup test2 = new Hangup();
         test2.setReason("TS");
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -211,19 +119,6 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       Hangup test1 = new Hangup();
         test1.setReason("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

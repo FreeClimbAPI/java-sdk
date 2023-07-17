@@ -81,62 +81,10 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       QueueRequest test1 = new QueueRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       QueueRequest test2 = new QueueRequest();
         test2.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -148,62 +96,10 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       QueueRequest test1 = new QueueRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       QueueRequest test2 = new QueueRequest();
         test2.setAlias("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setMaxSize(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -216,33 +112,7 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       QueueRequest test1 = new QueueRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -255,67 +125,14 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       QueueRequest test1 = new QueueRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       QueueRequest test2 = new QueueRequest();
         test2.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test2.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
        String toString1 = test1.toString();
        String toString2 = test2.toString();
-        
-        Assert.assertEquals(toString1, toString2);
+       Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -326,33 +143,7 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       QueueRequest test1 = new QueueRequest();
         test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         test1.setMaxSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
