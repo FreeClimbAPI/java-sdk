@@ -300,7 +300,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test1.setGrammarType(GrammarType.URL);
         
         
         
@@ -490,7 +490,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test2.setGrammarType(GrammarType.URL);
         
         
         
@@ -550,7 +550,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         
         
@@ -689,7 +689,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.BUILT_IN);
+        test1.setGrammarType(GrammarType.BUILT_IN);
         
         
         
@@ -879,7 +879,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test2.setGrammarType(GrammarType.URL);
         
         
         
@@ -939,7 +939,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         
         
@@ -1043,399 +1043,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      GetSpeech test1 = new GetSpeech();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setGrammarType(GrammarType.URL);
-        
-        
-        
-        
-        
-        test1.setGrammarFile("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setGrammarRule("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPlayBeep(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
-        
-        
-        
-        test1.setNoInputTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setRecognitionTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setSpeechCompleteTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setSpeechIncompleteTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       GetSpeech test2 = new GetSpeech();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setGrammarType(GrammarType.URL);
-        
-        
-        
-        
-        
-        test2.setGrammarFile("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setGrammarRule("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPlayBeep(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
-        test2.setPrompts(testList2);
-        
-        
-        
-        test2.setNoInputTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setRecognitionTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setSpeechCompleteTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setSpeechIncompleteTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1472,7 +1079,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test1.setGrammarType(GrammarType.URL);
         
         
         
@@ -1672,7 +1279,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test1.setGrammarType(GrammarType.URL);
         
         
         
@@ -1862,7 +1469,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test2.setGrammarType(GrammarType.URL);
         
         
         
@@ -1922,7 +1529,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         
         
@@ -2065,7 +1672,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setGrammarType(GrammarType.URL);
+        test1.setGrammarType(GrammarType.URL);
         
         
         

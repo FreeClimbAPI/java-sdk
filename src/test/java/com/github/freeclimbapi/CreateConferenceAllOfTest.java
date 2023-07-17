@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'alias'
@@ -69,17 +65,13 @@ import com.github.freeclimbapi.models.*;
         model.setAlias(false);
         Assert.assertEquals(false, model.getAlias());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'playBeep'
@@ -96,9 +88,7 @@ import com.github.freeclimbapi.models.*;
       model.setPlayBeep(PlayBeep.EXIT_ONLY);
       Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
   
-
   }
-
 
     /**
      * Test the property 'record'
@@ -109,17 +99,13 @@ import com.github.freeclimbapi.models.*;
         model.setRecord(false);
         Assert.assertEquals(false, model.getRecord());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'statusCallbackUrl'
@@ -131,17 +117,13 @@ import com.github.freeclimbapi.models.*;
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'waitUrl'
@@ -153,19 +135,745 @@ import com.github.freeclimbapi.models.*;
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      CreateConferenceAllOf test1 = new CreateConferenceAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      CreateConferenceAllOf test2 = new CreateConferenceAllOf();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      CreateConferenceAllOf test1 = new CreateConferenceAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(PlayBeep.NEVER);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      CreateConferenceAllOf test2 = new CreateConferenceAllOf();
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      CreateConferenceAllOf test1 = new CreateConferenceAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      CreateConferenceAllOf test1 = new CreateConferenceAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      CreateConferenceAllOf test2 = new CreateConferenceAllOf();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test2.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      CreateConferenceAllOf test1 = new CreateConferenceAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setAlias(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setPlayBeep(PlayBeep.ALWAYS);
+        
+        
+        
+        
+        
+        
+        test1.setRecord(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setStatusCallbackUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setWaitUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

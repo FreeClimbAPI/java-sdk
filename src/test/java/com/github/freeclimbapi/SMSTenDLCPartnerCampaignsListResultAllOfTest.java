@@ -45,22 +45,196 @@ import com.github.freeclimbapi.models.*;
     public void partnerCampaignsTest() {
       
         
-
         
         
         
         
-
       
   
     List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
     model.setPartnerCampaigns(testList);
     Assert.assertEquals(testList, model.getPartnerCampaigns()); 
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      SMSTenDLCPartnerCampaignsListResultAllOf test1 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testList);
+        
+      SMSTenDLCPartnerCampaignsListResultAllOf test2 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList2 = testList;
+        test2.setPartnerCampaigns(testList2);
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      SMSTenDLCPartnerCampaignsListResultAllOf test1 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testList);
+        
+      SMSTenDLCPartnerCampaignsListResultAllOf test2 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList2 = null;
+        test2.setPartnerCampaigns(testList2);
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SMSTenDLCPartnerCampaignsListResultAllOf test1 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testList);
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SMSTenDLCPartnerCampaignsListResultAllOf test1 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testList);
+        
+      SMSTenDLCPartnerCampaignsListResultAllOf test2 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList2 = testList;
+        test2.setPartnerCampaigns(testList2);
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SMSTenDLCPartnerCampaignsListResultAllOf test1 = new SMSTenDLCPartnerCampaignsListResultAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testList);
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

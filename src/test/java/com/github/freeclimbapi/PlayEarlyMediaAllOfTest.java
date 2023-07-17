@@ -48,19 +48,185 @@ import com.github.freeclimbapi.models.*;
         model.setFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFile());
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      PlayEarlyMediaAllOf test2 = new PlayEarlyMediaAllOf();
+        test2.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      PlayEarlyMediaAllOf test2 = new PlayEarlyMediaAllOf();
+        test2.setFile("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      PlayEarlyMediaAllOf test2 = new PlayEarlyMediaAllOf();
+        test2.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+        test1.setFile("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

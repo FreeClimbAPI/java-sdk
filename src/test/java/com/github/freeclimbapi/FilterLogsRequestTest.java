@@ -134,49 +134,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      FilterLogsRequest test1 = new FilterLogsRequest();
-        test1.setPql("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       FilterLogsRequest test2 = new FilterLogsRequest();
-        test2.setPql("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'

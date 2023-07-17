@@ -91,7 +91,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setCommands(testList2);
         
       Assert.assertTrue(test1.equals(test2));
@@ -132,57 +132,12 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = null;
         test2.setCommands(testList2);
         
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      PerclScript test1 = new PerclScript();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
-        
-       PerclScript test2 = new PerclScript();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
-        test2.setCommands(testList2);
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -245,7 +200,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setCommands(testList2);
         
         

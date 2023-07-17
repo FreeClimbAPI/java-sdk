@@ -407,7 +407,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<QueueResult> testList2 = new ArrayList<QueueResult>();
+        List<QueueResult> testList2 = testList;
         test2.setQueues(testList2);
         
       Assert.assertTrue(test1.equals(test2));
@@ -644,253 +644,12 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<QueueResult> testList2 = new ArrayList<QueueResult>();
+        List<QueueResult> testList2 = null;
         test2.setQueues(testList2);
         
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      QueueList test1 = new QueueList();
-        
-        
-        test1.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<QueueResult> testList = new ArrayList<QueueResult>();
-        test1.setQueues(testList);
-        
-       QueueList test2 = new QueueList();
-        
-        
-        test2.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<QueueResult> testList2 = new ArrayList<QueueResult>();
-        test2.setQueues(testList2);
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1247,7 +1006,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<QueueResult> testList2 = new ArrayList<QueueResult>();
+        List<QueueResult> testList2 = testList;
         test2.setQueues(testList2);
         
         

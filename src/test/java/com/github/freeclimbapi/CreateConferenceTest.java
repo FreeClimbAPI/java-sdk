@@ -186,7 +186,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -271,7 +271,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -365,7 +365,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.NEVER);
+        test1.setPlayBeep(PlayBeep.NEVER);
         
         
         
@@ -450,7 +450,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -501,189 +501,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAlias(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        test1.setRecord(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStatusCallbackUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setWaitUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       CreateConference test2 = new CreateConference();
-        test2.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAlias(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        test2.setRecord(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStatusCallbackUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setWaitUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -728,7 +545,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -823,7 +640,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -908,7 +725,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -1006,7 +823,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         

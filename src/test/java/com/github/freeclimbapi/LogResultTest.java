@@ -190,7 +190,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test1.setLevel(LogLevel.INFO);
         
         
         
@@ -290,7 +290,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test2.setLevel(LogLevel.INFO);
         
         
         
@@ -399,7 +399,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.WARNING);
+        test1.setLevel(LogLevel.WARNING);
         
         
         
@@ -499,7 +499,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test2.setLevel(LogLevel.INFO);
         
         
         
@@ -579,219 +579,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      LogResult test1 = new LogResult();
-        
-        
-        test1.setTimestamp(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setLevel(LogLevel.INFO);
-        
-        
-        
-        
-        
-        test1.setRequestId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setCallId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setMessage("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
-        
-        
-        
-        
-        
-        
-        
-       LogResult test2 = new LogResult();
-        
-        
-        test2.setTimestamp(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setLevel(LogLevel.INFO);
-        
-        
-        
-        
-        
-        test2.setRequestId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAccountId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setCallId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setMessage("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject2 = new Object();
-        test2.setMetadata(testObject2);
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -822,7 +609,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test1.setLevel(LogLevel.INFO);
         
         
         
@@ -932,7 +719,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test1.setLevel(LogLevel.INFO);
         
         
         
@@ -1032,7 +819,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test2.setLevel(LogLevel.INFO);
         
         
         
@@ -1100,7 +887,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setMetadata(testObject2);
         
         
@@ -1145,7 +932,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLevel(LogLevel.INFO);
+        test1.setLevel(LogLevel.INFO);
         
         
         

@@ -407,7 +407,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<SMSTenDLCCampaign> testList2 = new ArrayList<SMSTenDLCCampaign>();
+        List<SMSTenDLCCampaign> testList2 = testList;
         test2.setCampaigns(testList2);
         
       Assert.assertTrue(test1.equals(test2));
@@ -644,253 +644,12 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<SMSTenDLCCampaign> testList2 = new ArrayList<SMSTenDLCCampaign>();
+        List<SMSTenDLCCampaign> testList2 = null;
         test2.setCampaigns(testList2);
         
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        
-        
-        test1.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
-        
-       SMSTenDLCCampaignsListResult test2 = new SMSTenDLCCampaignsListResult();
-        
-        
-        test2.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<SMSTenDLCCampaign> testList2 = new ArrayList<SMSTenDLCCampaign>();
-        test2.setCampaigns(testList2);
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1247,7 +1006,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<SMSTenDLCCampaign> testList2 = new ArrayList<SMSTenDLCCampaign>();
+        List<SMSTenDLCCampaign> testList2 = testList;
         test2.setCampaigns(testList2);
         
         

@@ -45,22 +45,196 @@ import com.github.freeclimbapi.models.*;
     public void applicationsTest() {
       
         
-
         
         
         
         
-
       
   
     List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
     model.setApplications(testList);
     Assert.assertEquals(testList, model.getApplications()); 
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      ApplicationListAllOf test1 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+        test1.setApplications(testList);
+        
+      ApplicationListAllOf test2 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList2 = testList;
+        test2.setApplications(testList2);
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      ApplicationListAllOf test1 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+        test1.setApplications(testList);
+        
+      ApplicationListAllOf test2 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList2 = null;
+        test2.setApplications(testList2);
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      ApplicationListAllOf test1 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+        test1.setApplications(testList);
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      ApplicationListAllOf test1 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+        test1.setApplications(testList);
+        
+      ApplicationListAllOf test2 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList2 = testList;
+        test2.setApplications(testList2);
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      ApplicationListAllOf test1 = new ApplicationListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+        test1.setApplications(testList);
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

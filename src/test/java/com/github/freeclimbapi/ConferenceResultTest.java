@@ -400,7 +400,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -428,7 +428,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test1.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -598,7 +598,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -626,7 +626,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test2.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -805,7 +805,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.NEVER);
+        test1.setPlayBeep(PlayBeep.NEVER);
         
         
         
@@ -833,7 +833,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.POPULATED);
+        test1.setStatus(ConferenceStatus.POPULATED);
         
         
         
@@ -1003,7 +1003,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -1031,7 +1031,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test2.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -1097,415 +1097,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      ConferenceResult test1 = new ConferenceResult();
-        test1.setUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateCreated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateUpdated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setRevision(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setConferenceId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        test1.setRecord(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(ConferenceStatus.EMPTY);
-        
-        
-        
-        
-        
-        test1.setWaitUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStatusCallbackUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
-        
-        
-        
-        
-        
-        
-        
-       ConferenceResult test2 = new ConferenceResult();
-        test2.setUri("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateCreated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateUpdated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setRevision(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setConferenceId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAccountId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAlias("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        test2.setRecord(false);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(ConferenceStatus.EMPTY);
-        
-        
-        
-        
-        
-        test2.setWaitUrl("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setActionUrl("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStatusCallbackUrl("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1620,7 +1211,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -1648,7 +1239,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test1.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -1828,7 +1419,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -1856,7 +1447,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test1.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -2026,7 +1617,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -2054,7 +1645,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test2.setStatus(ConferenceStatus.EMPTY);
         
         
         
@@ -2108,7 +1699,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -2237,7 +1828,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -2265,7 +1856,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(ConferenceStatus.EMPTY);
+        test1.setStatus(ConferenceStatus.EMPTY);
         
         
         

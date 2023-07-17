@@ -532,7 +532,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test1.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -616,7 +616,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test1.setDirection(CallDirection.INBOUND);
         
         
         
@@ -630,7 +630,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test1.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -800,7 +800,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test2.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -884,7 +884,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test2.setDirection(CallDirection.INBOUND);
         
         
         
@@ -898,7 +898,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test2.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -1077,7 +1077,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.RINGING);
+        test1.setCallStatus(CallStatus.RINGING);
         
         
         
@@ -1161,7 +1161,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.OUTBOUND_API);
+        test1.setDirection(CallDirection.OUTBOUND_API);
         
         
         
@@ -1175,7 +1175,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.MACHINE);
+        test1.setAnsweredBy(AnsweredBy.MACHINE);
         
         
         
@@ -1345,7 +1345,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test2.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -1429,7 +1429,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test2.setDirection(CallDirection.INBOUND);
         
         
         
@@ -1443,7 +1443,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test2.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -1467,555 +1467,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      CallResult test1 = new CallResult();
-        test1.setUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateCreated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateUpdated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setRevision(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setCallId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setParentCallId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setFrom("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setTo("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPhoneNumberId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setCallStatus(CallStatus.QUEUED);
-        
-        
-        
-        
-        
-        test1.setStartTime("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setConnectTime("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setEndTime("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDuration(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setConnectDuration(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setDirection(CallDirection.INBOUND);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setAnsweredBy(AnsweredBy.HUMAN);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
-        
-        
-        
-        
-        
-        
-        
-       CallResult test2 = new CallResult();
-        test2.setUri("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateCreated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateUpdated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setRevision(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setCallId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setParentCallId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAccountId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setFrom("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setTo("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPhoneNumberId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setCallStatus(CallStatus.QUEUED);
-        
-        
-        
-        
-        
-        test2.setStartTime("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setConnectTime("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setEndTime("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDuration(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setConnectDuration(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setDirection(CallDirection.INBOUND);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setAnsweredBy(AnsweredBy.HUMAN);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -2172,7 +1623,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test1.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -2256,7 +1707,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test1.setDirection(CallDirection.INBOUND);
         
         
         
@@ -2270,7 +1721,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test1.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -2450,7 +1901,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test1.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -2534,7 +1985,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test1.setDirection(CallDirection.INBOUND);
         
         
         
@@ -2548,7 +1999,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test1.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -2718,7 +2169,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test2.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -2802,7 +2253,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test2.setDirection(CallDirection.INBOUND);
         
         
         
@@ -2816,7 +2267,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test2.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         
@@ -2828,7 +2279,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -2999,7 +2450,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallStatus(CallStatus.QUEUED);
+        test1.setCallStatus(CallStatus.QUEUED);
         
         
         
@@ -3083,7 +2534,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setDirection(CallDirection.INBOUND);
+        test1.setDirection(CallDirection.INBOUND);
         
         
         
@@ -3097,7 +2548,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setAnsweredBy(AnsweredBy.HUMAN);
+        test1.setAnsweredBy(AnsweredBy.HUMAN);
         
         
         

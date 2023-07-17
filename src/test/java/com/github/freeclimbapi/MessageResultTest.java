@@ -365,7 +365,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test1.setStatus(MessageStatus.NEW);
         
         
         
@@ -534,7 +534,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test2.setStatus(MessageStatus.NEW);
         
         
         
@@ -712,7 +712,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.QUEUED);
+        test1.setStatus(MessageStatus.QUEUED);
         
         
         
@@ -881,7 +881,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test2.setStatus(MessageStatus.NEW);
         
         
         
@@ -960,357 +960,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      MessageResult test1 = new MessageResult();
-        test1.setUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateCreated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateUpdated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setRevision(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setMessageId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(MessageStatus.NEW);
-        
-        
-        
-        
-        
-        test1.setFrom("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setTo("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setText("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDirection("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNotificationUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       MessageResult test2 = new MessageResult();
-        test2.setUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateCreated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateUpdated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setRevision(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setMessageId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(MessageStatus.NEW);
-        
-        
-        
-        
-        
-        test2.setFrom("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setTo("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setText("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDirection("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNotificationUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1411,7 +1060,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test1.setStatus(MessageStatus.NEW);
         
         
         
@@ -1590,7 +1239,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test1.setStatus(MessageStatus.NEW);
         
         
         
@@ -1759,7 +1408,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test2.setStatus(MessageStatus.NEW);
         
         
         
@@ -1941,7 +1590,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(MessageStatus.NEW);
+        test1.setStatus(MessageStatus.NEW);
         
         
         

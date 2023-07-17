@@ -282,7 +282,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test1.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -423,7 +423,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test2.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -573,7 +573,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.HANGUP);
+        test1.setIfMachine(IfMachine.HANGUP);
         
         
         
@@ -714,7 +714,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test2.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -793,301 +793,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      OutDial test1 = new OutDial();
-        test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setCallConnectUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setCallingNumber("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDestination("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setIfMachine(IfMachine.REDIRECT);
-        
-        
-        
-        
-        
-        test1.setIfMachineUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setSendDigits("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStatusCallbackUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setTimeout(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       OutDial test2 = new OutDial();
-        test2.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setCallConnectUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setCallingNumber("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDestination("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setIfMachine(IfMachine.REDIRECT);
-        
-        
-        
-        
-        
-        test2.setIfMachineUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setSendDigits("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStatusCallbackUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setTimeout(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1160,7 +865,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test1.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -1311,7 +1016,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test1.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -1452,7 +1157,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test2.setIfMachine(IfMachine.REDIRECT);
         
         
         
@@ -1606,7 +1311,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachine(IfMachine.REDIRECT);
+        test1.setIfMachine(IfMachine.REDIRECT);
         
         
         

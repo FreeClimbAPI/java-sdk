@@ -440,7 +440,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         
         
@@ -705,7 +705,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         
         
@@ -725,275 +725,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      GetDigits test1 = new GetDigits();
-        test1.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDigitTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setFinishOnKey("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setFlushBuffer(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setInitialTimeoutMs("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setMaxDigits(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setMinDigits(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
-        
-        
-        test1.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       GetDigits test2 = new GetDigits();
-        test2.setActionUrl("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDigitTimeoutMs(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setFinishOnKey("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setFlushBuffer(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setInitialTimeoutMs("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setMaxDigits(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setMinDigits(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
-        test2.setPrompts(testList2);
-        
-        
-        test2.setPrivacyMode(true);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1378,7 +1109,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<PerclCommand> testList2 = new ArrayList<PerclCommand>();
+        List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         
         

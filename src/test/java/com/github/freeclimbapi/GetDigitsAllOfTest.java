@@ -48,17 +48,13 @@ import com.github.freeclimbapi.models.*;
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'digitTimeoutMs'
@@ -67,19 +63,15 @@ import com.github.freeclimbapi.models.*;
     public void digitTimeoutMsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setDigitTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
-
   }
-
 
     /**
      * Test the property 'finishOnKey'
@@ -91,17 +83,13 @@ import com.github.freeclimbapi.models.*;
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'flushBuffer'
@@ -112,17 +100,13 @@ import com.github.freeclimbapi.models.*;
         model.setFlushBuffer(false);
         Assert.assertEquals(false, model.getFlushBuffer());       
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'initialTimeoutMs'
@@ -134,17 +118,13 @@ import com.github.freeclimbapi.models.*;
         model.setInitialTimeoutMs("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
         
-
         
         
         
         
-
       
   
-
   }
-
 
     /**
      * Test the property 'maxDigits'
@@ -153,19 +133,15 @@ import com.github.freeclimbapi.models.*;
     public void maxDigitsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setMaxDigits(1);
       Assert.assertEquals(1, (int) model.getMaxDigits());
-
   }
-
 
     /**
      * Test the property 'minDigits'
@@ -174,19 +150,15 @@ import com.github.freeclimbapi.models.*;
     public void minDigitsTest() {
       
         
-
         
         
         
         
-
       
   
       model.setMinDigits(1);
       Assert.assertEquals(1, (int) model.getMinDigits());
-
   }
-
 
     /**
      * Test the property 'prompts'
@@ -195,20 +167,16 @@ import com.github.freeclimbapi.models.*;
     public void promptsTest() {
       
         
-
         
         
         
         
-
       
   
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
     model.setPrompts(testList);
     Assert.assertEquals(testList, model.getPrompts()); 
-
   }
-
 
     /**
      * Test the property 'privacyMode'
@@ -219,19 +187,1089 @@ import com.github.freeclimbapi.models.*;
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
         
-
         
         
         
         
-
       
   
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      GetDigitsAllOf test1 = new GetDigitsAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetDigitsAllOf test2 = new GetDigitsAllOf();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = testList;
+        test2.setPrompts(testList2);
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      GetDigitsAllOf test1 = new GetDigitsAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetDigitsAllOf test2 = new GetDigitsAllOf();
+        test2.setActionUrl("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDigitTimeoutMs(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFlushBuffer(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setInitialTimeoutMs("tS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxDigits(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMinDigits(0);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = null;
+        test2.setPrompts(testList2);
+        
+        
+        test2.setPrivacyMode(false);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      GetDigitsAllOf test1 = new GetDigitsAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      GetDigitsAllOf test1 = new GetDigitsAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      GetDigitsAllOf test2 = new GetDigitsAllOf();
+        test2.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test2.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList2 = testList;
+        test2.setPrompts(testList2);
+        
+        
+        test2.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      GetDigitsAllOf test1 = new GetDigitsAllOf();
+        test1.setActionUrl("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setDigitTimeoutMs(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFinishOnKey("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setFlushBuffer(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setInitialTimeoutMs("TS");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMaxDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        test1.setMinDigits(1);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        
+        
+        test1.setPrivacyMode(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

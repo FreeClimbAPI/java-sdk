@@ -115,7 +115,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -129,7 +129,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -158,7 +158,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -172,7 +172,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -210,7 +210,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.NEVER);
+        test1.setPlayBeep(PlayBeep.NEVER);
         
         
         
@@ -224,7 +224,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+        test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
         
         
         
@@ -253,7 +253,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -267,7 +267,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -276,105 +276,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
-        
-        
-        
-        
-        
-       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-        test2.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setPlayBeep(PlayBeep.ALWAYS);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -405,7 +306,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -419,7 +320,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -458,7 +359,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -472,7 +373,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -501,7 +402,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test2.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -515,7 +416,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         
@@ -557,7 +458,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setPlayBeep(PlayBeep.ALWAYS);
+        test1.setPlayBeep(PlayBeep.ALWAYS);
         
         
         
@@ -571,7 +472,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
         
         

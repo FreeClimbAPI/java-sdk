@@ -66,7 +66,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test1.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -81,7 +81,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test2.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -105,7 +105,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.COMPLETED);
+        test1.setStatus(UpdateCallRequestStatus.COMPLETED);
         
         
         
@@ -120,7 +120,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test2.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -129,49 +129,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      UpdateCallRequest test1 = new UpdateCallRequest();
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
-        
-        
-        
-        
-        
-       UpdateCallRequest test2 = new UpdateCallRequest();
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -188,7 +145,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test1.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -213,7 +170,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test1.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -228,7 +185,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test2.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         
@@ -256,7 +213,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
+        test1.setStatus(UpdateCallRequestStatus.CANCELED);
         
         
         

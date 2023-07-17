@@ -45,22 +45,196 @@ import com.github.freeclimbapi.models.*;
     public void recordingsTest() {
       
         
-
         
         
         
         
-
       
   
     List<RecordingResult> testList = new ArrayList<RecordingResult>();
     model.setRecordings(testList);
     Assert.assertEquals(testList, model.getRecordings()); 
-
   }
 
+  /**
+     * Test the method 'equalsTrue'
+     */
 
+     @Test
+    public void equalsTrueTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingListAllOf test2 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = testList;
+        test2.setRecordings(testList2);
+        
+      Assert.assertTrue(test1.equals(test2));
+    }
 
+    /**
+     * Test the method 'equalsFalse'
+     */
 
+     @Test
+    public void equalsFalseTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingListAllOf test2 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = null;
+        test2.setRecordings(testList2);
+        
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+      RecordingListAllOf test2 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList2 = testList;
+        test2.setRecordings(testList2);
+        
+        
+       String toString1 = test1.toString();
+       String toString2 = test2.toString();
+        
+        Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        List<RecordingResult> testList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testList);
+        
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
  }

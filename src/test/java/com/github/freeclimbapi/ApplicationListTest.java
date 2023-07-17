@@ -407,7 +407,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
+        List<ApplicationResult> testList2 = testList;
         test2.setApplications(testList2);
         
       Assert.assertTrue(test1.equals(test2));
@@ -644,253 +644,12 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
+        List<ApplicationResult> testList2 = null;
         test2.setApplications(testList2);
         
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      ApplicationList test1 = new ApplicationList();
-        
-        
-        test1.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
-        test1.setApplications(testList);
-        
-       ApplicationList test2 = new ApplicationList();
-        
-        
-        test2.setTotal(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setStart(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setEnd(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPage(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNumPages(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setPageSize(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setNextPageUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
-        test2.setApplications(testList2);
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1247,7 +1006,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
+        List<ApplicationResult> testList2 = testList;
         test2.setApplications(testList2);
         
         

@@ -355,7 +355,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test1.setType(AccountType.TRIAL);
         
         
         
@@ -369,7 +369,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test1.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -511,7 +511,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test2.setType(AccountType.TRIAL);
         
         
         
@@ -525,7 +525,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test2.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -676,7 +676,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.FULL);
+        test1.setType(AccountType.FULL);
         
         
         
@@ -690,7 +690,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.SUSPENDED);
+        test1.setStatus(AccountStatus.SUSPENDED);
         
         
         
@@ -832,7 +832,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test2.setType(AccountType.TRIAL);
         
         
         
@@ -846,7 +846,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test2.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -870,331 +870,6 @@ import com.github.freeclimbapi.models.*;
 
       Assert.assertFalse(test1.equals(test2));
     }
-
-    /**
-     * Test the method 'hashEquals'
-     */
-
-     @Test
-    public void hashEqualsTest() {
-      AccountResult test1 = new AccountResult();
-        test1.setUri("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateCreated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setDateUpdated("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setRevision(1);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAccountId("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setApiKey("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setAlias("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test1.setLabel("TS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setType(AccountType.TRIAL);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(AccountStatus.CLOSED);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
-        
-        
-        
-        
-        
-        
-        
-       AccountResult test2 = new AccountResult();
-        test2.setUri("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateCreated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setDateUpdated("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setRevision(0);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAccountId("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setApiKey("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setAlias("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        test2.setLabel("tS");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setType(AccountType.TRIAL);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        model.setStatus(AccountStatus.CLOSED);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
-        
-        
-        
-        
-        
-        
-        
-
-        int hashCode1 = test1.hashCode();
-        int hashCode2 = test2.hashCode();
-
-      Assert.assertEquals(hashCode1, hashCode2);
-     }
     
     /**
      * Test the method 'hashCodeType'
@@ -1323,7 +998,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test1.setType(AccountType.TRIAL);
         
         
         
@@ -1337,7 +1012,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test1.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -1489,7 +1164,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test1.setType(AccountType.TRIAL);
         
         
         
@@ -1503,7 +1178,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test1.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -1645,7 +1320,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test2.setType(AccountType.TRIAL);
         
         
         
@@ -1659,7 +1334,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test2.setStatus(AccountStatus.CLOSED);
         
         
         
@@ -1671,7 +1346,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        Object testObject2 = new Object();
+        Object testObject2 = testObject;
         test2.setSubresourceUris(testObject2);
         
         
@@ -1814,7 +1489,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setType(AccountType.TRIAL);
+        test1.setType(AccountType.TRIAL);
         
         
         
@@ -1828,7 +1503,7 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatus(AccountStatus.CLOSED);
+        test1.setStatus(AccountStatus.CLOSED);
         
         
         
