@@ -49,7 +49,7 @@ import com.github.freeclimbapi.models.*;
     model.setActionUrl(uri);
     Assert.assertEquals(uri, model.getActionUrl());
   } catch (Exception e) {
-     e.printStackTrace();
+    e.printStackTrace();
   }
   }
 

@@ -36,7 +36,6 @@ import com.github.freeclimbapi.models.*;
  * Model tests for LogLevel
  */
  public class LogLevelTest {
-
   @Test
     public void testINFOShouldWork() {
 
@@ -59,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
   @Test
     public void testWARNINGShouldWork() {
 
@@ -82,7 +80,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
   @Test
     public void testERRORShouldWork() {
 

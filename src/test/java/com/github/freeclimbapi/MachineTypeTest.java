@@ -36,7 +36,6 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MachineType
  */
  public class MachineTypeTest {
-
   @Test
     public void testANSWERING_MACHINEShouldWork() {
 
@@ -59,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
   @Test
     public void testFAX_MACHINEShouldWork() {
 

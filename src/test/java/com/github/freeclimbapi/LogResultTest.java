@@ -107,9 +107,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void metadataTest() {
-          Object testObject = new Object();
-          model.setMetadata(testObject);
-          Assert.assertEquals(testObject, model.getMetadata());
+        Object testObject = new Object();
+        model.setMetadata(testObject);
+        Assert.assertEquals(testObject, model.getMetadata());
   
   }
 

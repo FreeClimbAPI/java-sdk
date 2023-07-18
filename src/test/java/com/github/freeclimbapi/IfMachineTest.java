@@ -36,7 +36,6 @@ import com.github.freeclimbapi.models.*;
  * Model tests for IfMachine
  */
  public class IfMachineTest {
-
   @Test
     public void testREDIRECTShouldWork() {
 
@@ -59,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
   @Test
     public void testHANGUPShouldWork() {
 

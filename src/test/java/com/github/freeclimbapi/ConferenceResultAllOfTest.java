@@ -145,9 +145,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-          Object testObject = new Object();
-          model.setSubresourceUris(testObject);
-          Assert.assertEquals(testObject, model.getSubresourceUris());
+        Object testObject = new Object();
+        model.setSubresourceUris(testObject);
+        Assert.assertEquals(testObject, model.getSubresourceUris());
   
   }
 
