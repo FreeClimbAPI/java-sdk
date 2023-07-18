@@ -43,87 +43,88 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-  
-  }
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
+    }
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-        model.setAlias(false);
-        Assert.assertEquals(false, model.getAlias());       
-  
-  }
+      model.setAlias(false);
+      Assert.assertEquals(false, model.getAlias());       
+      
+    }
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
-    model.setPlayBeep(PlayBeep.ALWAYS);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-    model.setPlayBeep(PlayBeep.NEVER);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-    model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-    model.setPlayBeep(PlayBeep.EXIT_ONLY);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
-  
-  }
+      model.setPlayBeep(PlayBeep.ALWAYS);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+      model.setPlayBeep(PlayBeep.NEVER);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+      model.setPlayBeep(PlayBeep.EXIT_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+      
+    }
 
     /**
      * Test the property 'record'
      */
     @Test
     public void recordTest() {
-        model.setRecord(false);
-        Assert.assertEquals(false, model.getRecord());       
-  
-  }
+      model.setRecord(false);
+      Assert.assertEquals(false, model.getRecord());       
+      
+    }
 
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-  
-  }
+      model.setStatusCallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
+      
+    }
 
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
-        model.setWaitUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-  
-  }
+      model.setWaitUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        test1.setAlias(true);
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setRecord(true);
-        test1.setStatusCallbackUrl("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setAlias(true);
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatusCallbackUrl("TS");
+      test1.setWaitUrl("TS");
       CreateConference test2 = new CreateConference();
-        test2.setActionUrl("TS");
-        test2.setAlias(true);
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setRecord(true);
-        test2.setStatusCallbackUrl("TS");
-        test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setAlias(true);
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(true);
+      test2.setStatusCallbackUrl("TS");
+      test2.setWaitUrl("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -134,19 +135,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        test1.setAlias(true);
-        test1.setPlayBeep(PlayBeep.NEVER);
-        test1.setRecord(true);
-        test1.setStatusCallbackUrl("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setAlias(true);
+      test1.setPlayBeep(PlayBeep.NEVER);
+      test1.setRecord(true);
+      test1.setStatusCallbackUrl("TS");
+      test1.setWaitUrl("TS");
       CreateConference test2 = new CreateConference();
-        test2.setActionUrl("tS");
-        test2.setAlias(false);
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setRecord(false);
-        test2.setStatusCallbackUrl("tS");
-        test2.setWaitUrl("tS");
+      test2.setActionUrl("tS");
+      test2.setAlias(false);
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(false);
+      test2.setStatusCallbackUrl("tS");
+      test2.setWaitUrl("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -158,12 +159,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        test1.setAlias(true);
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setRecord(true);
-        test1.setStatusCallbackUrl("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setAlias(true);
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatusCallbackUrl("TS");
+      test1.setWaitUrl("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -175,23 +177,23 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        test1.setAlias(true);
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setRecord(true);
-        test1.setStatusCallbackUrl("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setAlias(true);
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatusCallbackUrl("TS");
+      test1.setWaitUrl("TS");
       CreateConference test2 = new CreateConference();
-        test2.setActionUrl("TS");
-        test2.setAlias(true);
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setRecord(true);
-        test2.setStatusCallbackUrl("TS");
-        test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setAlias(true);
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(true);
+      test2.setStatusCallbackUrl("TS");
+      test2.setWaitUrl("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -201,15 +203,20 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       CreateConference test1 = new CreateConference();
-        test1.setActionUrl("TS");
-        test1.setAlias(true);
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setRecord(true);
-        test1.setStatusCallbackUrl("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setAlias(true);
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatusCallbackUrl("TS");
+      test1.setWaitUrl("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("CreateConference", model.getCommand());
     }
 
     @Test

@@ -43,117 +43,118 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void uriTest() {
-        model.setUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUri());
-  
-  }
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
+    }
 
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
-        model.setDateCreated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateCreated());
-  
-  }
+      model.setDateCreated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateCreated());
+      
+    }
 
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
-        model.setDateUpdated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-  
-  }
+      model.setDateUpdated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
+      
+    }
 
     /**
      * Test the property 'revision'
      */
     @Test
     public void revisionTest() {
-  
-    model.setRevision(1);
-    Assert.assertEquals(1, (int) model.getRevision());
-  }
+      
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
+    }
 
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
-  
-  }
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+    }
 
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
-  
-  }
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+    }
 
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
-        model.setText("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getText());
-  
-  }
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+    }
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-  
-  }
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+    }
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-  
-  }
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       MessageRequest test1 = new MessageRequest();
-        test1.setUri("TS");
-        test1.setDateCreated("TS");
-        test1.setDateUpdated("TS");
-        test1.setRevision(1);
-        test1.setFrom("TS");
-        test1.setTo("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
-        test1.setAccountId("TS");
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      test1.setAccountId("TS");
       MessageRequest test2 = new MessageRequest();
-        test2.setUri("TS");
-        test2.setDateCreated("TS");
-        test2.setDateUpdated("TS");
-        test2.setRevision(1);
-        test2.setFrom("TS");
-        test2.setTo("TS");
-        test2.setText("TS");
-        test2.setNotificationUrl("TS");
-        test2.setAccountId("TS");
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
+      test2.setAccountId("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -164,25 +165,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       MessageRequest test1 = new MessageRequest();
-        test1.setUri("TS");
-        test1.setDateCreated("TS");
-        test1.setDateUpdated("TS");
-        test1.setRevision(1);
-        test1.setFrom("TS");
-        test1.setTo("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
-        test1.setAccountId("TS");
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      test1.setAccountId("TS");
       MessageRequest test2 = new MessageRequest();
-        test2.setUri("tS");
-        test2.setDateCreated("tS");
-        test2.setDateUpdated("tS");
-        test2.setRevision(0);
-        test2.setFrom("tS");
-        test2.setTo("tS");
-        test2.setText("tS");
-        test2.setNotificationUrl("tS");
-        test2.setAccountId("tS");
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setFrom("tS");
+      test2.setTo("tS");
+      test2.setText("tS");
+      test2.setNotificationUrl("tS");
+      test2.setAccountId("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -194,15 +195,16 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       MessageRequest test1 = new MessageRequest();
-        test1.setUri("TS");
-        test1.setDateCreated("TS");
-        test1.setDateUpdated("TS");
-        test1.setRevision(1);
-        test1.setFrom("TS");
-        test1.setTo("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
-        test1.setAccountId("TS");
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      test1.setAccountId("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -214,29 +216,29 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       MessageRequest test1 = new MessageRequest();
-        test1.setUri("TS");
-        test1.setDateCreated("TS");
-        test1.setDateUpdated("TS");
-        test1.setRevision(1);
-        test1.setFrom("TS");
-        test1.setTo("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
-        test1.setAccountId("TS");
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      test1.setAccountId("TS");
       MessageRequest test2 = new MessageRequest();
-        test2.setUri("TS");
-        test2.setDateCreated("TS");
-        test2.setDateUpdated("TS");
-        test2.setRevision(1);
-        test2.setFrom("TS");
-        test2.setTo("TS");
-        test2.setText("TS");
-        test2.setNotificationUrl("TS");
-        test2.setAccountId("TS");
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
+      test2.setAccountId("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -246,15 +248,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       MessageRequest test1 = new MessageRequest();
-        test1.setUri("TS");
-        test1.setDateCreated("TS");
-        test1.setDateUpdated("TS");
-        test1.setRevision(1);
-        test1.setFrom("TS");
-        test1.setTo("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
-        test1.setAccountId("TS");
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      test1.setAccountId("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

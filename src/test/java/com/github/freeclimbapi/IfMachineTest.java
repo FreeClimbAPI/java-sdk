@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testHANGUPShouldWork() {
 
         IfMachine test = IfMachine.HANGUP;
@@ -80,5 +80,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

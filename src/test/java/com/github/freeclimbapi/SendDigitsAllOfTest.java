@@ -43,45 +43,46 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void digitsTest() {
-        model.setDigits("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDigits());
-  
-  }
+      model.setDigits("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDigits());
+      
+    }
 
     /**
      * Test the property 'pauseMs'
      */
     @Test
     public void pauseMsTest() {
-  
-    model.setPauseMs(1);
-    Assert.assertEquals(1, (int) model.getPauseMs());
-  }
+      
+      model.setPauseMs(1);
+      Assert.assertEquals(1, (int) model.getPauseMs());
+    }
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());       
-  
-  }
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       SendDigitsAllOf test1 = new SendDigitsAllOf();
-        test1.setDigits("TS");
-        test1.setPauseMs(1);
-        test1.setPrivacyMode(true);
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
       SendDigitsAllOf test2 = new SendDigitsAllOf();
-        test2.setDigits("TS");
-        test2.setPauseMs(1);
-        test2.setPrivacyMode(true);
+      test2.setDigits("TS");
+      test2.setPauseMs(1);
+      test2.setPrivacyMode(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -92,13 +93,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SendDigitsAllOf test1 = new SendDigitsAllOf();
-        test1.setDigits("TS");
-        test1.setPauseMs(1);
-        test1.setPrivacyMode(true);
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
       SendDigitsAllOf test2 = new SendDigitsAllOf();
-        test2.setDigits("tS");
-        test2.setPauseMs(0);
-        test2.setPrivacyMode(false);
+      test2.setDigits("tS");
+      test2.setPauseMs(0);
+      test2.setPrivacyMode(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -110,9 +111,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SendDigitsAllOf test1 = new SendDigitsAllOf();
-        test1.setDigits("TS");
-        test1.setPauseMs(1);
-        test1.setPrivacyMode(true);
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -124,17 +126,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SendDigitsAllOf test1 = new SendDigitsAllOf();
-        test1.setDigits("TS");
-        test1.setPauseMs(1);
-        test1.setPrivacyMode(true);
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
       SendDigitsAllOf test2 = new SendDigitsAllOf();
-        test2.setDigits("TS");
-        test2.setPauseMs(1);
-        test2.setPrivacyMode(true);
+      test2.setDigits("TS");
+      test2.setPauseMs(1);
+      test2.setPrivacyMode(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -144,9 +146,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SendDigitsAllOf test1 = new SendDigitsAllOf();
-        test1.setDigits("TS");
-        test1.setPauseMs(1);
-        test1.setPrivacyMode(true);
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

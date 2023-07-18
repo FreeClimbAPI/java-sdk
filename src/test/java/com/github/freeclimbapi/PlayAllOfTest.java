@@ -43,57 +43,58 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void _fileTest() {
-        model.setFile("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFile());
-  
-  }
+      model.setFile("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFile());
+      
+    }
 
     /**
      * Test the property 'loop'
      */
     @Test
     public void loopTest() {
-  
-    model.setLoop(1);
-    Assert.assertEquals(1, (int) model.getLoop());
-  }
+      
+      model.setLoop(1);
+      Assert.assertEquals(1, (int) model.getLoop());
+    }
 
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
-  
-  }
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+    }
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());       
-  
-  }
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       PlayAllOf test1 = new PlayAllOf();
-        test1.setFile("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
-        test2.setFile("TS");
-        test2.setLoop(1);
-        test2.setConferenceId("TS");
-        test2.setPrivacyMode(true);
+      test2.setFile("TS");
+      test2.setLoop(1);
+      test2.setConferenceId("TS");
+      test2.setPrivacyMode(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,15 +105,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PlayAllOf test1 = new PlayAllOf();
-        test1.setFile("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
-        test2.setFile("tS");
-        test2.setLoop(0);
-        test2.setConferenceId("tS");
-        test2.setPrivacyMode(false);
+      test2.setFile("tS");
+      test2.setLoop(0);
+      test2.setConferenceId("tS");
+      test2.setPrivacyMode(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -124,10 +125,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PlayAllOf test1 = new PlayAllOf();
-        test1.setFile("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -139,19 +141,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PlayAllOf test1 = new PlayAllOf();
-        test1.setFile("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
-        test2.setFile("TS");
-        test2.setLoop(1);
-        test2.setConferenceId("TS");
-        test2.setPrivacyMode(true);
+      test2.setFile("TS");
+      test2.setLoop(1);
+      test2.setConferenceId("TS");
+      test2.setPrivacyMode(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -161,10 +163,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PlayAllOf test1 = new PlayAllOf();
-        test1.setFile("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

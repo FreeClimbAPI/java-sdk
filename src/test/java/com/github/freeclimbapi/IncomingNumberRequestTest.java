@@ -43,45 +43,46 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void applicationIdTest() {
-        model.setApplicationId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getApplicationId());
-  
-  }
+      model.setApplicationId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
+    }
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-  
-  }
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
+    }
 
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
-        model.setCampaignId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCampaignId());
-  
-  }
+      model.setCampaignId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       IncomingNumberRequest test1 = new IncomingNumberRequest();
-        test1.setApplicationId("TS");
-        test1.setAlias("TS");
-        test1.setCampaignId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setCampaignId("TS");
       IncomingNumberRequest test2 = new IncomingNumberRequest();
-        test2.setApplicationId("TS");
-        test2.setAlias("TS");
-        test2.setCampaignId("TS");
+      test2.setApplicationId("TS");
+      test2.setAlias("TS");
+      test2.setCampaignId("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -92,13 +93,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       IncomingNumberRequest test1 = new IncomingNumberRequest();
-        test1.setApplicationId("TS");
-        test1.setAlias("TS");
-        test1.setCampaignId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setCampaignId("TS");
       IncomingNumberRequest test2 = new IncomingNumberRequest();
-        test2.setApplicationId("tS");
-        test2.setAlias("tS");
-        test2.setCampaignId("tS");
+      test2.setApplicationId("tS");
+      test2.setAlias("tS");
+      test2.setCampaignId("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -110,9 +111,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       IncomingNumberRequest test1 = new IncomingNumberRequest();
-        test1.setApplicationId("TS");
-        test1.setAlias("TS");
-        test1.setCampaignId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setCampaignId("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -124,17 +126,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       IncomingNumberRequest test1 = new IncomingNumberRequest();
-        test1.setApplicationId("TS");
-        test1.setAlias("TS");
-        test1.setCampaignId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setCampaignId("TS");
       IncomingNumberRequest test2 = new IncomingNumberRequest();
-        test2.setApplicationId("TS");
-        test2.setAlias("TS");
-        test2.setCampaignId("TS");
+      test2.setApplicationId("TS");
+      test2.setAlias("TS");
+      test2.setCampaignId("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -144,9 +146,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       IncomingNumberRequest test1 = new IncomingNumberRequest();
-        test1.setApplicationId("TS");
-        test1.setAlias("TS");
-        test1.setCampaignId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setCampaignId("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

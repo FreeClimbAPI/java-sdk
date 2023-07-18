@@ -43,69 +43,70 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void voiceTest() {
-        model.setVoice(false);
-        Assert.assertEquals(false, model.getVoice());       
-  
-  }
+      model.setVoice(false);
+      Assert.assertEquals(false, model.getVoice());       
+      
+    }
 
     /**
      * Test the property 'sms'
      */
     @Test
     public void smsTest() {
-        model.setSms(false);
-        Assert.assertEquals(false, model.getSms());       
-  
-  }
+      model.setSms(false);
+      Assert.assertEquals(false, model.getSms());       
+      
+    }
 
     /**
      * Test the property 'tollFree'
      */
     @Test
     public void tollFreeTest() {
-        model.setTollFree(false);
-        Assert.assertEquals(false, model.getTollFree());       
-  
-  }
+      model.setTollFree(false);
+      Assert.assertEquals(false, model.getTollFree());       
+      
+    }
 
     /**
      * Test the property 'tenDLC'
      */
     @Test
     public void tenDLCTest() {
-        model.setTenDLC(false);
-        Assert.assertEquals(false, model.getTenDLC());       
-  
-  }
+      model.setTenDLC(false);
+      Assert.assertEquals(false, model.getTenDLC());       
+      
+    }
 
     /**
      * Test the property 'shortCode'
      */
     @Test
     public void shortCodeTest() {
-        model.setShortCode(false);
-        Assert.assertEquals(false, model.getShortCode());       
-  
-  }
+      model.setShortCode(false);
+      Assert.assertEquals(false, model.getShortCode());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       Capabilities test1 = new Capabilities();
-        test1.setVoice(true);
-        test1.setSms(true);
-        test1.setTollFree(true);
-        test1.setTenDLC(true);
-        test1.setShortCode(true);
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
       Capabilities test2 = new Capabilities();
-        test2.setVoice(true);
-        test2.setSms(true);
-        test2.setTollFree(true);
-        test2.setTenDLC(true);
-        test2.setShortCode(true);
+      test2.setVoice(true);
+      test2.setSms(true);
+      test2.setTollFree(true);
+      test2.setTenDLC(true);
+      test2.setShortCode(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -116,17 +117,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Capabilities test1 = new Capabilities();
-        test1.setVoice(true);
-        test1.setSms(true);
-        test1.setTollFree(true);
-        test1.setTenDLC(true);
-        test1.setShortCode(true);
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
       Capabilities test2 = new Capabilities();
-        test2.setVoice(false);
-        test2.setSms(false);
-        test2.setTollFree(false);
-        test2.setTenDLC(false);
-        test2.setShortCode(false);
+      test2.setVoice(false);
+      test2.setSms(false);
+      test2.setTollFree(false);
+      test2.setTenDLC(false);
+      test2.setShortCode(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -138,11 +139,12 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Capabilities test1 = new Capabilities();
-        test1.setVoice(true);
-        test1.setSms(true);
-        test1.setTollFree(true);
-        test1.setTenDLC(true);
-        test1.setShortCode(true);
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -154,21 +156,21 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Capabilities test1 = new Capabilities();
-        test1.setVoice(true);
-        test1.setSms(true);
-        test1.setTollFree(true);
-        test1.setTenDLC(true);
-        test1.setShortCode(true);
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
       Capabilities test2 = new Capabilities();
-        test2.setVoice(true);
-        test2.setSms(true);
-        test2.setTollFree(true);
-        test2.setTenDLC(true);
-        test2.setShortCode(true);
+      test2.setVoice(true);
+      test2.setSms(true);
+      test2.setTollFree(true);
+      test2.setTenDLC(true);
+      test2.setShortCode(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -178,11 +180,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Capabilities test1 = new Capabilities();
-        test1.setVoice(true);
-        test1.setSms(true);
-        test1.setTollFree(true);
-        test1.setTenDLC(true);
-        test1.setShortCode(true);
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

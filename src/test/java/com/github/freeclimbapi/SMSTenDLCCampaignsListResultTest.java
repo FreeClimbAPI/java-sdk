@@ -43,108 +43,109 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void totalTest() {
-  
-    model.setTotal(1);
-    Assert.assertEquals(1, (int) model.getTotal());
-  }
+      
+      model.setTotal(1);
+      Assert.assertEquals(1, (int) model.getTotal());
+    }
 
     /**
      * Test the property 'start'
      */
     @Test
     public void startTest() {
-  
-    model.setStart(1);
-    Assert.assertEquals(1, (int) model.getStart());
-  }
+      
+      model.setStart(1);
+      Assert.assertEquals(1, (int) model.getStart());
+    }
 
     /**
      * Test the property 'end'
      */
     @Test
     public void endTest() {
-  
-    model.setEnd(1);
-    Assert.assertEquals(1, (int) model.getEnd());
-  }
+      
+      model.setEnd(1);
+      Assert.assertEquals(1, (int) model.getEnd());
+    }
 
     /**
      * Test the property 'page'
      */
     @Test
     public void pageTest() {
-  
-    model.setPage(1);
-    Assert.assertEquals(1, (int) model.getPage());
-  }
+      
+      model.setPage(1);
+      Assert.assertEquals(1, (int) model.getPage());
+    }
 
     /**
      * Test the property 'numPages'
      */
     @Test
     public void numPagesTest() {
-  
-    model.setNumPages(1);
-    Assert.assertEquals(1, (int) model.getNumPages());
-  }
+      
+      model.setNumPages(1);
+      Assert.assertEquals(1, (int) model.getNumPages());
+    }
 
     /**
      * Test the property 'pageSize'
      */
     @Test
     public void pageSizeTest() {
-  
-    model.setPageSize(1);
-    Assert.assertEquals(1, (int) model.getPageSize());
-  }
+      
+      model.setPageSize(1);
+      Assert.assertEquals(1, (int) model.getPageSize());
+    }
 
     /**
      * Test the property 'nextPageUri'
      */
     @Test
     public void nextPageUriTest() {
-        model.setNextPageUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNextPageUri());
-  
-  }
+      model.setNextPageUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNextPageUri());
+      
+    }
 
     /**
      * Test the property 'campaigns'
      */
     @Test
     public void campaignsTest() {
-  
-  List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-  model.setCampaigns(testList);
-  Assert.assertEquals(testList, model.getCampaigns()); 
-  }
+      
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      model.setCampaigns(testList);
+      Assert.assertEquals(testList, model.getCampaigns()); 
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        test1.setTotal(1);
-        test1.setStart(1);
-        test1.setEnd(1);
-        test1.setPage(1);
-        test1.setNumPages(1);
-        test1.setPageSize(1);
-        test1.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResult test2 = new SMSTenDLCCampaignsListResult();
-        test2.setTotal(1);
-        test2.setStart(1);
-        test2.setEnd(1);
-        test2.setPage(1);
-        test2.setNumPages(1);
-        test2.setPageSize(1);
-        test2.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList2 = testList;
-        test2.setCampaigns(testList2);
+      test2.setTotal(1);
+      test2.setStart(1);
+      test2.setEnd(1);
+      test2.setPage(1);
+      test2.setNumPages(1);
+      test2.setPageSize(1);
+      test2.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList2 = testList;
+      test2.setCampaigns(testList2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -155,25 +156,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        test1.setTotal(1);
-        test1.setStart(1);
-        test1.setEnd(1);
-        test1.setPage(1);
-        test1.setNumPages(1);
-        test1.setPageSize(1);
-        test1.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResult test2 = new SMSTenDLCCampaignsListResult();
-        test2.setTotal(0);
-        test2.setStart(0);
-        test2.setEnd(0);
-        test2.setPage(0);
-        test2.setNumPages(0);
-        test2.setPageSize(0);
-        test2.setNextPageUri("tS");
-        List<SMSTenDLCCampaign> testList2 = null;
-        test2.setCampaigns(testList2);
+      test2.setTotal(0);
+      test2.setStart(0);
+      test2.setEnd(0);
+      test2.setPage(0);
+      test2.setNumPages(0);
+      test2.setPageSize(0);
+      test2.setNextPageUri("tS");
+      List<SMSTenDLCCampaign> testList2 = null;
+      test2.setCampaigns(testList2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -185,15 +186,16 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        test1.setTotal(1);
-        test1.setStart(1);
-        test1.setEnd(1);
-        test1.setPage(1);
-        test1.setNumPages(1);
-        test1.setPageSize(1);
-        test1.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -205,29 +207,29 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        test1.setTotal(1);
-        test1.setStart(1);
-        test1.setEnd(1);
-        test1.setPage(1);
-        test1.setNumPages(1);
-        test1.setPageSize(1);
-        test1.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResult test2 = new SMSTenDLCCampaignsListResult();
-        test2.setTotal(1);
-        test2.setStart(1);
-        test2.setEnd(1);
-        test2.setPage(1);
-        test2.setNumPages(1);
-        test2.setPageSize(1);
-        test2.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList2 = testList;
-        test2.setCampaigns(testList2);
+      test2.setTotal(1);
+      test2.setStart(1);
+      test2.setEnd(1);
+      test2.setPage(1);
+      test2.setNumPages(1);
+      test2.setPageSize(1);
+      test2.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList2 = testList;
+      test2.setCampaigns(testList2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -237,15 +239,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
-        test1.setTotal(1);
-        test1.setStart(1);
-        test1.setEnd(1);
-        test1.setPage(1);
-        test1.setNumPages(1);
-        test1.setPageSize(1);
-        test1.setNextPageUri("TS");
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

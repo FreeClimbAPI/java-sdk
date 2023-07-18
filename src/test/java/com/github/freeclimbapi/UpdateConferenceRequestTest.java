@@ -43,53 +43,54 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-  
-  }
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
+    }
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
-    model.setPlayBeep(PlayBeep.ALWAYS);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-    model.setPlayBeep(PlayBeep.NEVER);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-    model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-    model.setPlayBeep(PlayBeep.EXIT_ONLY);
-    Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
-  
-  }
+      model.setPlayBeep(PlayBeep.ALWAYS);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+      model.setPlayBeep(PlayBeep.NEVER);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+      model.setPlayBeep(PlayBeep.EXIT_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+      
+    }
 
     /**
      * Test the property 'status'
      */
     @Test
     public void statusTest() {
-    model.setStatus(UpdateConferenceRequestStatus.EMPTY);
-    Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.EMPTY);
-    model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
-    Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.TERMINATED);
-  
-  }
+      model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.EMPTY);
+      model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+      Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.TERMINATED);
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-        test2.setAlias("TS");
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test2.setAlias("TS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -100,13 +101,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        test1.setPlayBeep(PlayBeep.NEVER);
-        test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.NEVER);
+      test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-        test2.setAlias("tS");
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test2.setAlias("tS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -118,9 +119,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -132,17 +134,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-        test2.setAlias("TS");
-        test2.setPlayBeep(PlayBeep.ALWAYS);
-        test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test2.setAlias("TS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -152,9 +154,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-        test1.setAlias("TS");
-        test1.setPlayBeep(PlayBeep.ALWAYS);
-        test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

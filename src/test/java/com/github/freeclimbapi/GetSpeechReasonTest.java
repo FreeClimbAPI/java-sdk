@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testHANGUPShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.HANGUP;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIGITShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.DIGIT;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testNO_INPUTShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.NO_INPUT;
@@ -124,7 +124,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testNO_MATCHShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.NO_MATCH;
@@ -146,7 +146,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testRECOGNITIONShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.RECOGNITION;
@@ -168,5 +168,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

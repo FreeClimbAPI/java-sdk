@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testSUSPENDEDShouldWork() {
 
         AccountStatus test = AccountStatus.SUSPENDED;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testACTIVEShouldWork() {
 
         AccountStatus test = AccountStatus.ACTIVE;
@@ -102,5 +102,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

@@ -43,21 +43,22 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void lengthTest() {
-  
-    model.setLength(1);
-    Assert.assertEquals(1, (int) model.getLength());
-  }
+      
+      model.setLength(1);
+      Assert.assertEquals(1, (int) model.getLength());
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       PauseAllOf test1 = new PauseAllOf();
-        test1.setLength(1);
+      test1.setLength(1);
       PauseAllOf test2 = new PauseAllOf();
-        test2.setLength(1);
+      test2.setLength(1);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -68,9 +69,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PauseAllOf test1 = new PauseAllOf();
-        test1.setLength(1);
+      test1.setLength(1);
       PauseAllOf test2 = new PauseAllOf();
-        test2.setLength(0);
+      test2.setLength(0);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -82,7 +83,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PauseAllOf test1 = new PauseAllOf();
-        test1.setLength(1);
+      test1.setLength(1);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -94,13 +96,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PauseAllOf test1 = new PauseAllOf();
-        test1.setLength(1);
+      test1.setLength(1);
       PauseAllOf test2 = new PauseAllOf();
-        test2.setLength(1);
+      test2.setLength(1);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -110,7 +112,7 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PauseAllOf test1 = new PauseAllOf();
-        test1.setLength(1);
+      test1.setLength(1);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

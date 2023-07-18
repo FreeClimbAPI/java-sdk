@@ -43,57 +43,58 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-  
-  }
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
+    }
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-  
-  }
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+    }
 
     /**
      * Test the property 'queueId'
      */
     @Test
     public void queueIdTest() {
-        model.setQueueId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQueueId());
-  
-  }
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+    }
 
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
-        model.setWaitUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-  
-  }
+      model.setWaitUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       Enqueue test1 = new Enqueue();
-        test1.setActionUrl("TS");
-        test1.setNotificationUrl("TS");
-        test1.setQueueId("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setNotificationUrl("TS");
+      test1.setQueueId("TS");
+      test1.setWaitUrl("TS");
       Enqueue test2 = new Enqueue();
-        test2.setActionUrl("TS");
-        test2.setNotificationUrl("TS");
-        test2.setQueueId("TS");
-        test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setNotificationUrl("TS");
+      test2.setQueueId("TS");
+      test2.setWaitUrl("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,15 +105,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Enqueue test1 = new Enqueue();
-        test1.setActionUrl("TS");
-        test1.setNotificationUrl("TS");
-        test1.setQueueId("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setNotificationUrl("TS");
+      test1.setQueueId("TS");
+      test1.setWaitUrl("TS");
       Enqueue test2 = new Enqueue();
-        test2.setActionUrl("tS");
-        test2.setNotificationUrl("tS");
-        test2.setQueueId("tS");
-        test2.setWaitUrl("tS");
+      test2.setActionUrl("tS");
+      test2.setNotificationUrl("tS");
+      test2.setQueueId("tS");
+      test2.setWaitUrl("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -124,10 +125,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Enqueue test1 = new Enqueue();
-        test1.setActionUrl("TS");
-        test1.setNotificationUrl("TS");
-        test1.setQueueId("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setNotificationUrl("TS");
+      test1.setQueueId("TS");
+      test1.setWaitUrl("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -139,19 +141,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Enqueue test1 = new Enqueue();
-        test1.setActionUrl("TS");
-        test1.setNotificationUrl("TS");
-        test1.setQueueId("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setNotificationUrl("TS");
+      test1.setQueueId("TS");
+      test1.setWaitUrl("TS");
       Enqueue test2 = new Enqueue();
-        test2.setActionUrl("TS");
-        test2.setNotificationUrl("TS");
-        test2.setQueueId("TS");
-        test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setNotificationUrl("TS");
+      test2.setQueueId("TS");
+      test2.setWaitUrl("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -161,13 +163,18 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Enqueue test1 = new Enqueue();
-        test1.setActionUrl("TS");
-        test1.setNotificationUrl("TS");
-        test1.setQueueId("TS");
-        test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setNotificationUrl("TS");
+      test1.setQueueId("TS");
+      test1.setWaitUrl("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Enqueue", model.getCommand());
     }
 
     @Test

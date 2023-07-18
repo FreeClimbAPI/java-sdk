@@ -43,23 +43,24 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-    model.setStatus(UpdateCallRequestStatus.CANCELED);
-    Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
-    model.setStatus(UpdateCallRequestStatus.COMPLETED);
-    Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
-  
-  }
+      model.setStatus(UpdateCallRequestStatus.CANCELED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
+      model.setStatus(UpdateCallRequestStatus.COMPLETED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
       UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -70,9 +71,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+      test1.setStatus(UpdateCallRequestStatus.COMPLETED);
       UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -84,7 +85,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -96,13 +98,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
       UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -112,7 +114,7 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

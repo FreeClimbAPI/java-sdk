@@ -43,24 +43,25 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void commandsTest() {
-  
-  List<PerclCommand> testList = new ArrayList<PerclCommand>();
-  model.setCommands(testList);
-  Assert.assertEquals(testList, model.getCommands()); 
-  }
+      
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      model.setCommands(testList);
+      Assert.assertEquals(testList, model.getCommands()); 
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       PerclScript test1 = new PerclScript();
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setCommands(testList);
       PerclScript test2 = new PerclScript();
-        List<PerclCommand> testList2 = testList;
-        test2.setCommands(testList2);
+      List<PerclCommand> testList2 = testList;
+      test2.setCommands(testList2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -71,11 +72,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PerclScript test1 = new PerclScript();
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setCommands(testList);
       PerclScript test2 = new PerclScript();
-        List<PerclCommand> testList2 = null;
-        test2.setCommands(testList2);
+      List<PerclCommand> testList2 = null;
+      test2.setCommands(testList2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -87,8 +88,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PerclScript test1 = new PerclScript();
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setCommands(testList);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -100,15 +102,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PerclScript test1 = new PerclScript();
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setCommands(testList);
       PerclScript test2 = new PerclScript();
-        List<PerclCommand> testList2 = testList;
-        test2.setCommands(testList2);
+      List<PerclCommand> testList2 = testList;
+      test2.setCommands(testList2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -118,8 +120,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PerclScript test1 = new PerclScript();
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setCommands(testList);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setCommands(testList);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

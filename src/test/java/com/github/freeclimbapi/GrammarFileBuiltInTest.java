@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testANY_DIGShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.ANY_DIG;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG1ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG1;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG2ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG2;
@@ -124,7 +124,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG3ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG3;
@@ -146,7 +146,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG4ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG4;
@@ -168,7 +168,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG5ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG5;
@@ -190,7 +190,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG6ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG6;
@@ -212,7 +212,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG7ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG7;
@@ -234,7 +234,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG8ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG8;
@@ -256,7 +256,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG9ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG9;
@@ -278,7 +278,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG10ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG10;
@@ -300,7 +300,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDIG11ShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.DIG11;
@@ -322,7 +322,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testUP_TO_20_DIGIT_SEQUENCEShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.UP_TO_20_DIGIT_SEQUENCE;
@@ -344,7 +344,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testVERSAY_YESNOShouldWork() {
 
         GrammarFileBuiltIn test = GrammarFileBuiltIn.VERSAY_YESNO;
@@ -366,5 +366,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

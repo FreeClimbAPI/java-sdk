@@ -43,93 +43,94 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-  
-  }
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
+    }
 
     /**
      * Test the property 'silenceTimeoutMs'
      */
     @Test
     public void silenceTimeoutMsTest() {
-  
-    model.setSilenceTimeoutMs(1);
-    Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
-  }
+      
+      model.setSilenceTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
+    }
 
     /**
      * Test the property 'finishOnKey'
      */
     @Test
     public void finishOnKeyTest() {
-        model.setFinishOnKey("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-  
-  }
+      model.setFinishOnKey("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
+      
+    }
 
     /**
      * Test the property 'maxLengthSec'
      */
     @Test
     public void maxLengthSecTest() {
-  
-    model.setMaxLengthSec(1);
-    Assert.assertEquals(1, (int) model.getMaxLengthSec());
-  }
+      
+      model.setMaxLengthSec(1);
+      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+    }
 
     /**
      * Test the property 'playBeep'
      */
     @Test
     public void playBeepTest() {
-        model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());       
-  
-  }
+      model.setPlayBeep(false);
+      Assert.assertEquals(false, model.getPlayBeep());       
+      
+    }
 
     /**
      * Test the property 'autoStart'
      */
     @Test
     public void autoStartTest() {
-        model.setAutoStart(false);
-        Assert.assertEquals(false, model.getAutoStart());       
-  
-  }
+      model.setAutoStart(false);
+      Assert.assertEquals(false, model.getAutoStart());       
+      
+    }
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());       
-  
-  }
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       RecordUtterance test1 = new RecordUtterance();
-        test1.setActionUrl("TS");
-        test1.setSilenceTimeoutMs(1);
-        test1.setFinishOnKey("TS");
-        test1.setMaxLengthSec(1);
-        test1.setPlayBeep(true);
-        test1.setAutoStart(true);
-        test1.setPrivacyMode(true);
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
       RecordUtterance test2 = new RecordUtterance();
-        test2.setActionUrl("TS");
-        test2.setSilenceTimeoutMs(1);
-        test2.setFinishOnKey("TS");
-        test2.setMaxLengthSec(1);
-        test2.setPlayBeep(true);
-        test2.setAutoStart(true);
-        test2.setPrivacyMode(true);
+      test2.setActionUrl("TS");
+      test2.setSilenceTimeoutMs(1);
+      test2.setFinishOnKey("TS");
+      test2.setMaxLengthSec(1);
+      test2.setPlayBeep(true);
+      test2.setAutoStart(true);
+      test2.setPrivacyMode(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -140,21 +141,21 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       RecordUtterance test1 = new RecordUtterance();
-        test1.setActionUrl("TS");
-        test1.setSilenceTimeoutMs(1);
-        test1.setFinishOnKey("TS");
-        test1.setMaxLengthSec(1);
-        test1.setPlayBeep(true);
-        test1.setAutoStart(true);
-        test1.setPrivacyMode(true);
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
       RecordUtterance test2 = new RecordUtterance();
-        test2.setActionUrl("tS");
-        test2.setSilenceTimeoutMs(0);
-        test2.setFinishOnKey("tS");
-        test2.setMaxLengthSec(0);
-        test2.setPlayBeep(false);
-        test2.setAutoStart(false);
-        test2.setPrivacyMode(false);
+      test2.setActionUrl("tS");
+      test2.setSilenceTimeoutMs(0);
+      test2.setFinishOnKey("tS");
+      test2.setMaxLengthSec(0);
+      test2.setPlayBeep(false);
+      test2.setAutoStart(false);
+      test2.setPrivacyMode(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -166,13 +167,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       RecordUtterance test1 = new RecordUtterance();
-        test1.setActionUrl("TS");
-        test1.setSilenceTimeoutMs(1);
-        test1.setFinishOnKey("TS");
-        test1.setMaxLengthSec(1);
-        test1.setPlayBeep(true);
-        test1.setAutoStart(true);
-        test1.setPrivacyMode(true);
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -184,25 +186,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       RecordUtterance test1 = new RecordUtterance();
-        test1.setActionUrl("TS");
-        test1.setSilenceTimeoutMs(1);
-        test1.setFinishOnKey("TS");
-        test1.setMaxLengthSec(1);
-        test1.setPlayBeep(true);
-        test1.setAutoStart(true);
-        test1.setPrivacyMode(true);
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
       RecordUtterance test2 = new RecordUtterance();
-        test2.setActionUrl("TS");
-        test2.setSilenceTimeoutMs(1);
-        test2.setFinishOnKey("TS");
-        test2.setMaxLengthSec(1);
-        test2.setPlayBeep(true);
-        test2.setAutoStart(true);
-        test2.setPrivacyMode(true);
+      test2.setActionUrl("TS");
+      test2.setSilenceTimeoutMs(1);
+      test2.setFinishOnKey("TS");
+      test2.setMaxLengthSec(1);
+      test2.setPlayBeep(true);
+      test2.setAutoStart(true);
+      test2.setPrivacyMode(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -212,16 +214,21 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       RecordUtterance test1 = new RecordUtterance();
-        test1.setActionUrl("TS");
-        test1.setSilenceTimeoutMs(1);
-        test1.setFinishOnKey("TS");
-        test1.setMaxLengthSec(1);
-        test1.setPlayBeep(true);
-        test1.setAutoStart(true);
-        test1.setPrivacyMode(true);
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("RecordUtterance", model.getCommand());
     }
 
     @Test

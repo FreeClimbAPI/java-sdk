@@ -43,24 +43,25 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void availablePhoneNumbersTest() {
-  
-  List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-  model.setAvailablePhoneNumbers(testList);
-  Assert.assertEquals(testList, model.getAvailablePhoneNumbers()); 
-  }
+      
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      model.setAvailablePhoneNumbers(testList);
+      Assert.assertEquals(testList, model.getAvailablePhoneNumbers()); 
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       AvailableNumberListAllOf test1 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-        test1.setAvailablePhoneNumbers(testList);
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      test1.setAvailablePhoneNumbers(testList);
       AvailableNumberListAllOf test2 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList2 = testList;
-        test2.setAvailablePhoneNumbers(testList2);
+      List<AvailableNumber> testList2 = testList;
+      test2.setAvailablePhoneNumbers(testList2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -71,11 +72,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       AvailableNumberListAllOf test1 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-        test1.setAvailablePhoneNumbers(testList);
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      test1.setAvailablePhoneNumbers(testList);
       AvailableNumberListAllOf test2 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList2 = null;
-        test2.setAvailablePhoneNumbers(testList2);
+      List<AvailableNumber> testList2 = null;
+      test2.setAvailablePhoneNumbers(testList2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -87,8 +88,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       AvailableNumberListAllOf test1 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-        test1.setAvailablePhoneNumbers(testList);
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      test1.setAvailablePhoneNumbers(testList);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -100,15 +102,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       AvailableNumberListAllOf test1 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-        test1.setAvailablePhoneNumbers(testList);
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      test1.setAvailablePhoneNumbers(testList);
       AvailableNumberListAllOf test2 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList2 = testList;
-        test2.setAvailablePhoneNumbers(testList2);
+      List<AvailableNumber> testList2 = testList;
+      test2.setAvailablePhoneNumbers(testList2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -118,8 +120,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       AvailableNumberListAllOf test1 = new AvailableNumberListAllOf();
-        List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-        test1.setAvailablePhoneNumbers(testList);
+      List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+      test1.setAvailablePhoneNumbers(testList);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

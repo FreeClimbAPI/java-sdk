@@ -43,33 +43,34 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-  
-  }
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+    }
 
     /**
      * Test the property 'talk'
      */
     @Test
     public void talkTest() {
-        model.setTalk(false);
-        Assert.assertEquals(false, model.getTalk());       
-  
-  }
+      model.setTalk(false);
+      Assert.assertEquals(false, model.getTalk());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       SetTalk test1 = new SetTalk();
-        test1.setCallId("TS");
-        test1.setTalk(true);
+      test1.setCallId("TS");
+      test1.setTalk(true);
       SetTalk test2 = new SetTalk();
-        test2.setCallId("TS");
-        test2.setTalk(true);
+      test2.setCallId("TS");
+      test2.setTalk(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -80,11 +81,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SetTalk test1 = new SetTalk();
-        test1.setCallId("TS");
-        test1.setTalk(true);
+      test1.setCallId("TS");
+      test1.setTalk(true);
       SetTalk test2 = new SetTalk();
-        test2.setCallId("tS");
-        test2.setTalk(false);
+      test2.setCallId("tS");
+      test2.setTalk(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -96,8 +97,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SetTalk test1 = new SetTalk();
-        test1.setCallId("TS");
-        test1.setTalk(true);
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -109,15 +111,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SetTalk test1 = new SetTalk();
-        test1.setCallId("TS");
-        test1.setTalk(true);
+      test1.setCallId("TS");
+      test1.setTalk(true);
       SetTalk test2 = new SetTalk();
-        test2.setCallId("TS");
-        test2.setTalk(true);
+      test2.setCallId("TS");
+      test2.setTalk(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -127,11 +129,16 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SetTalk test1 = new SetTalk();
-        test1.setCallId("TS");
-        test1.setTalk(true);
+      test1.setCallId("TS");
+      test1.setTalk(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("SetTalk", model.getCommand());
     }
 
     @Test

@@ -43,144 +43,145 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-  
-  }
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+    }
 
     /**
      * Test the property 'brandId'
      */
     @Test
     public void brandIdTest() {
-        model.setBrandId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getBrandId());
-  
-  }
+      model.setBrandId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getBrandId());
+      
+    }
 
     /**
      * Test the property 'firstName'
      */
     @Test
     public void firstNameTest() {
-        model.setFirstName("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFirstName());
-  
-  }
+      model.setFirstName("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFirstName());
+      
+    }
 
     /**
      * Test the property 'lastName'
      */
     @Test
     public void lastNameTest() {
-        model.setLastName("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getLastName());
-  
-  }
+      model.setLastName("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getLastName());
+      
+    }
 
     /**
      * Test the property 'displayName'
      */
     @Test
     public void displayNameTest() {
-        model.setDisplayName("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDisplayName());
-  
-  }
+      model.setDisplayName("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDisplayName());
+      
+    }
 
     /**
      * Test the property 'companyName'
      */
     @Test
     public void companyNameTest() {
-        model.setCompanyName("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCompanyName());
-  
-  }
+      model.setCompanyName("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCompanyName());
+      
+    }
 
     /**
      * Test the property 'phone'
      */
     @Test
     public void phoneTest() {
-        model.setPhone("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPhone());
-  
-  }
+      model.setPhone("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPhone());
+      
+    }
 
     /**
      * Test the property 'email'
      */
     @Test
     public void emailTest() {
-        model.setEmail("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getEmail());
-  
-  }
+      model.setEmail("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getEmail());
+      
+    }
 
     /**
      * Test the property 'website'
      */
     @Test
     public void websiteTest() {
-        model.setWebsite("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWebsite());
-  
-  }
+      model.setWebsite("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWebsite());
+      
+    }
 
     /**
      * Test the property 'optionalAttributes'
      */
     @Test
     public void optionalAttributesTest() {
-  
-  Map<String, Object> testMap = new HashMap();
-  model.setOptionalAttributes(testMap);
-  Assert.assertEquals(testMap, model.getOptionalAttributes()); 
-  }
+      
+      Map<String, Object> testMap = new HashMap();
+      model.setOptionalAttributes(testMap);
+      Assert.assertEquals(testMap, model.getOptionalAttributes()); 
+    }
 
     /**
      * Test the property 'evpVettingScore'
      */
     @Test
     public void evpVettingScoreTest() {
-  
-    model.setEvpVettingScore(1);
-    Assert.assertEquals(1, (int) model.getEvpVettingScore());
-  }
+      
+      model.setEvpVettingScore(1);
+      Assert.assertEquals(1, (int) model.getEvpVettingScore());
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        test1.setAccountId("TS");
-        test1.setBrandId("TS");
-        test1.setFirstName("TS");
-        test1.setLastName("TS");
-        test1.setDisplayName("TS");
-        test1.setCompanyName("TS");
-        test1.setPhone("TS");
-        test1.setEmail("TS");
-        test1.setWebsite("TS");
+      test1.setAccountId("TS");
+      test1.setBrandId("TS");
+      test1.setFirstName("TS");
+      test1.setLastName("TS");
+      test1.setDisplayName("TS");
+      test1.setCompanyName("TS");
+      test1.setPhone("TS");
+      test1.setEmail("TS");
+      test1.setWebsite("TS");
         Map<String, Object> testMap = new HashMap();
-        test1.setOptionalAttributes(testMap);
-        test1.setEvpVettingScore(1);
+      test1.setOptionalAttributes(testMap);
+      test1.setEvpVettingScore(1);
       SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        test2.setAccountId("TS");
-        test2.setBrandId("TS");
-        test2.setFirstName("TS");
-        test2.setLastName("TS");
-        test2.setDisplayName("TS");
-        test2.setCompanyName("TS");
-        test2.setPhone("TS");
-        test2.setEmail("TS");
-        test2.setWebsite("TS");
-        Map<String, Object> testMap2 = testMap;
-        test2.setOptionalAttributes(testMap);
-        test2.setEvpVettingScore(1);
+      test2.setAccountId("TS");
+      test2.setBrandId("TS");
+      test2.setFirstName("TS");
+      test2.setLastName("TS");
+      test2.setDisplayName("TS");
+      test2.setCompanyName("TS");
+      test2.setPhone("TS");
+      test2.setEmail("TS");
+      test2.setWebsite("TS");
+      Map<String, Object> testMap2 = testMap;
+      test2.setOptionalAttributes(testMap);
+      test2.setEvpVettingScore(1);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -191,31 +192,31 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        test1.setAccountId("TS");
-        test1.setBrandId("TS");
-        test1.setFirstName("TS");
-        test1.setLastName("TS");
-        test1.setDisplayName("TS");
-        test1.setCompanyName("TS");
-        test1.setPhone("TS");
-        test1.setEmail("TS");
-        test1.setWebsite("TS");
-        Map<String, Object> testMap = new HashMap();
-        test1.setOptionalAttributes(testMap);
-        test1.setEvpVettingScore(1);
+      test1.setAccountId("TS");
+      test1.setBrandId("TS");
+      test1.setFirstName("TS");
+      test1.setLastName("TS");
+      test1.setDisplayName("TS");
+      test1.setCompanyName("TS");
+      test1.setPhone("TS");
+      test1.setEmail("TS");
+      test1.setWebsite("TS");
+      Map<String, Object> testMap = new HashMap();
+      test1.setOptionalAttributes(testMap);
+      test1.setEvpVettingScore(1);
       SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        test2.setAccountId("tS");
-        test2.setBrandId("tS");
-        test2.setFirstName("tS");
-        test2.setLastName("tS");
-        test2.setDisplayName("tS");
-        test2.setCompanyName("tS");
-        test2.setPhone("tS");
-        test2.setEmail("tS");
-        test2.setWebsite("tS");
-        Map<String, Object> testMap2 = new HashMap();
-        test2.setOptionalAttributes(testMap2);
-        test2.setEvpVettingScore(0);
+      test2.setAccountId("tS");
+      test2.setBrandId("tS");
+      test2.setFirstName("tS");
+      test2.setLastName("tS");
+      test2.setDisplayName("tS");
+      test2.setCompanyName("tS");
+      test2.setPhone("tS");
+      test2.setEmail("tS");
+      test2.setWebsite("tS");
+      Map<String, Object> testMap2 = new HashMap();
+      test2.setOptionalAttributes(testMap2);
+      test2.setEvpVettingScore(0);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -227,18 +228,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        test1.setAccountId("TS");
-        test1.setBrandId("TS");
-        test1.setFirstName("TS");
-        test1.setLastName("TS");
-        test1.setDisplayName("TS");
-        test1.setCompanyName("TS");
-        test1.setPhone("TS");
-        test1.setEmail("TS");
-        test1.setWebsite("TS");
-        Map<String, Object> testMap = new HashMap();
-        test1.setOptionalAttributes(testMap);
-        test1.setEvpVettingScore(1);
+      test1.setAccountId("TS");
+      test1.setBrandId("TS");
+      test1.setFirstName("TS");
+      test1.setLastName("TS");
+      test1.setDisplayName("TS");
+      test1.setCompanyName("TS");
+      test1.setPhone("TS");
+      test1.setEmail("TS");
+      test1.setWebsite("TS");
+      Map<String, Object> testMap = new HashMap();
+      test1.setOptionalAttributes(testMap);
+      test1.setEvpVettingScore(1);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -250,34 +252,35 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        test1.setAccountId("TS");
-        test1.setBrandId("TS");
-        test1.setFirstName("TS");
-        test1.setLastName("TS");
-        test1.setDisplayName("TS");
-        test1.setCompanyName("TS");
-        test1.setPhone("TS");
-        test1.setEmail("TS");
-        test1.setWebsite("TS");
-        Map<String, Object> testMap = new HashMap();
-        test1.setOptionalAttributes(testMap);
-        test1.setEvpVettingScore(1);
+      test1.setAccountId("TS");
+      test1.setBrandId("TS");
+      test1.setFirstName("TS");
+      test1.setLastName("TS");
+      test1.setDisplayName("TS");
+      test1.setCompanyName("TS");
+      test1.setPhone("TS");
+      test1.setEmail("TS");
+      test1.setWebsite("TS");
+      Map<String, Object> testMap = new HashMap();
+      test1.setOptionalAttributes(testMap);
+      test1.setEvpVettingScore(1);
       SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        test2.setAccountId("TS");
-        test2.setBrandId("TS");
-        test2.setFirstName("TS");
-        test2.setLastName("TS");
-        test2.setDisplayName("TS");
-        test2.setCompanyName("TS");
-        test2.setPhone("TS");
-        test2.setEmail("TS");
-        test2.setWebsite("TS");
-        Map<String, Object> testMap2 = testMap;test2.setOptionalAttributes(testMap2);
-        test2.setEvpVettingScore(1);
+      test2.setAccountId("TS");
+      test2.setBrandId("TS");
+      test2.setFirstName("TS");
+      test2.setLastName("TS");
+      test2.setDisplayName("TS");
+      test2.setCompanyName("TS");
+      test2.setPhone("TS");
+      test2.setEmail("TS");
+      test2.setWebsite("TS");
+        Map<String, Object> testMap2 = testMap;
+      test2.setOptionalAttributes(testMap2);
+      test2.setEvpVettingScore(1);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -287,18 +290,18 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        test1.setAccountId("TS");
-        test1.setBrandId("TS");
-        test1.setFirstName("TS");
-        test1.setLastName("TS");
-        test1.setDisplayName("TS");
-        test1.setCompanyName("TS");
-        test1.setPhone("TS");
-        test1.setEmail("TS");
-        test1.setWebsite("TS");
+      test1.setAccountId("TS");
+      test1.setBrandId("TS");
+      test1.setFirstName("TS");
+      test1.setLastName("TS");
+      test1.setDisplayName("TS");
+      test1.setCompanyName("TS");
+      test1.setPhone("TS");
+      test1.setEmail("TS");
+      test1.setWebsite("TS");
         Map<String, Object> testMap = new HashMap();
-        test1.setOptionalAttributes(testMap);
-        test1.setEvpVettingScore(1);
+      test1.setOptionalAttributes(testMap);
+      test1.setEvpVettingScore(1);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

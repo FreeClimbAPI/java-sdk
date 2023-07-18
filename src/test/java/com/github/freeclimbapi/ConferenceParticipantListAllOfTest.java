@@ -43,24 +43,25 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void participantsTest() {
-  
-  List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-  model.setParticipants(testList);
-  Assert.assertEquals(testList, model.getParticipants()); 
-  }
+      
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      model.setParticipants(testList);
+      Assert.assertEquals(testList, model.getParticipants()); 
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       ConferenceParticipantListAllOf test1 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      test1.setParticipants(testList);
       ConferenceParticipantListAllOf test2 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList2 = testList;
-        test2.setParticipants(testList2);
+      List<ConferenceParticipantResult> testList2 = testList;
+      test2.setParticipants(testList2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -71,11 +72,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       ConferenceParticipantListAllOf test1 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      test1.setParticipants(testList);
       ConferenceParticipantListAllOf test2 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList2 = null;
-        test2.setParticipants(testList2);
+      List<ConferenceParticipantResult> testList2 = null;
+      test2.setParticipants(testList2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -87,8 +88,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       ConferenceParticipantListAllOf test1 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      test1.setParticipants(testList);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -100,15 +102,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       ConferenceParticipantListAllOf test1 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      test1.setParticipants(testList);
       ConferenceParticipantListAllOf test2 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList2 = testList;
-        test2.setParticipants(testList2);
+      List<ConferenceParticipantResult> testList2 = testList;
+      test2.setParticipants(testList2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -118,8 +120,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       ConferenceParticipantListAllOf test1 = new ConferenceParticipantListAllOf();
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+      List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+      test1.setParticipants(testList);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

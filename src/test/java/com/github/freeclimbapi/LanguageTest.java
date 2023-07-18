@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDANISHShouldWork() {
 
         Language test = Language.DANISH;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testGERMANShouldWork() {
 
         Language test = Language.GERMAN;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_AUShouldWork() {
 
         Language test = Language.ENGLISH_AU;
@@ -124,7 +124,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_CAShouldWork() {
 
         Language test = Language.ENGLISH_CA;
@@ -146,7 +146,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_UKShouldWork() {
 
         Language test = Language.ENGLISH_UK;
@@ -168,7 +168,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_INShouldWork() {
 
         Language test = Language.ENGLISH_IN;
@@ -190,7 +190,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_USShouldWork() {
 
         Language test = Language.ENGLISH_US;
@@ -212,7 +212,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_ESShouldWork() {
 
         Language test = Language.ENGLISH_ES;
@@ -234,7 +234,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testENGLISH_MXShouldWork() {
 
         Language test = Language.ENGLISH_MX;
@@ -256,7 +256,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testFINNISHShouldWork() {
 
         Language test = Language.FINNISH;
@@ -278,7 +278,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testFRENCH_CAShouldWork() {
 
         Language test = Language.FRENCH_CA;
@@ -300,7 +300,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testFRENCH_FRShouldWork() {
 
         Language test = Language.FRENCH_FR;
@@ -322,7 +322,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testITALIANShouldWork() {
 
         Language test = Language.ITALIAN;
@@ -344,7 +344,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testJAPANESEShouldWork() {
 
         Language test = Language.JAPANESE;
@@ -366,7 +366,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testKOREANShouldWork() {
 
         Language test = Language.KOREAN;
@@ -388,7 +388,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testNORWEGIANShouldWork() {
 
         Language test = Language.NORWEGIAN;
@@ -410,7 +410,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testDUTCHShouldWork() {
 
         Language test = Language.DUTCH;
@@ -432,7 +432,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testPOLISHShouldWork() {
 
         Language test = Language.POLISH;
@@ -454,7 +454,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testPORTUGESE_BRShouldWork() {
 
         Language test = Language.PORTUGESE_BR;
@@ -476,7 +476,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testPORTUGESE_PTShouldWork() {
 
         Language test = Language.PORTUGESE_PT;
@@ -498,7 +498,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testRUSSIANShouldWork() {
 
         Language test = Language.RUSSIAN;
@@ -520,7 +520,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testSWEDISHShouldWork() {
 
         Language test = Language.SWEDISH;
@@ -542,7 +542,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testCHINESE_CNShouldWork() {
 
         Language test = Language.CHINESE_CN;
@@ -564,7 +564,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testCHINESE_HKShouldWork() {
 
         Language test = Language.CHINESE_HK;
@@ -586,7 +586,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testCHINESE_TWShouldWork() {
 
         Language test = Language.CHINESE_TW;
@@ -608,5 +608,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

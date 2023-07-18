@@ -39,6 +39,11 @@ import com.github.freeclimbapi.models.*;
     private final Unpark model = new Unpark();
 
     @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Unpark", model.getCommand());
+    }
+
+    @Test
     public void buildTest() throws Exception {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());

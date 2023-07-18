@@ -43,100 +43,101 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void timestampTest() {
-  
-    model.setTimestamp(1);
-    Assert.assertEquals(1, (int) model.getTimestamp());
-  }
+      
+      model.setTimestamp(1);
+      Assert.assertEquals(1, (int) model.getTimestamp());
+    }
 
     /**
      * Test the property 'level'
      */
     @Test
     public void levelTest() {
-    model.setLevel(LogLevel.INFO);
-    Assert.assertEquals(model.getLevel(),LogLevel.INFO);
-    model.setLevel(LogLevel.WARNING);
-    Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
-    model.setLevel(LogLevel.ERROR);
-    Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
-  
-  }
+      model.setLevel(LogLevel.INFO);
+      Assert.assertEquals(model.getLevel(),LogLevel.INFO);
+      model.setLevel(LogLevel.WARNING);
+      Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
+      model.setLevel(LogLevel.ERROR);
+      Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
+      
+    }
 
     /**
      * Test the property 'requestId'
      */
     @Test
     public void requestIdTest() {
-        model.setRequestId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRequestId());
-  
-  }
+      model.setRequestId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRequestId());
+      
+    }
 
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-  
-  }
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+    }
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-  
-  }
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+    }
 
     /**
      * Test the property 'message'
      */
     @Test
     public void messageTest() {
-        model.setMessage("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getMessage());
-  
-  }
+      model.setMessage("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getMessage());
+      
+    }
 
     /**
      * Test the property 'metadata'
      */
     @Test
     public void metadataTest() {
-        Object testObject = new Object();
-        model.setMetadata(testObject);
-        Assert.assertEquals(testObject, model.getMetadata());
-  
-  }
+      Object testObject = new Object();
+      model.setMetadata(testObject);
+      Assert.assertEquals(testObject, model.getMetadata());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       LogResult test1 = new LogResult();
-        test1.setTimestamp(1);
-        test1.setLevel(LogLevel.INFO);
-        test1.setRequestId("TS");
-        test1.setAccountId("TS");
-        test1.setCallId("TS");
-        test1.setMessage("TS");
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.INFO);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
       LogResult test2 = new LogResult();
-        test2.setTimestamp(1);
-        test2.setLevel(LogLevel.INFO);
-        test2.setRequestId("TS");
-        test2.setAccountId("TS");
-        test2.setCallId("TS");
-        test2.setMessage("TS");
-        Object testObject2 = testObject;
-        test2.setMetadata(testObject2);
+      test2.setTimestamp(1);
+      test2.setLevel(LogLevel.INFO);
+      test2.setRequestId("TS");
+      test2.setAccountId("TS");
+      test2.setCallId("TS");
+      test2.setMessage("TS");
+      Object testObject2 = testObject;
+      test2.setMetadata(testObject2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -147,23 +148,23 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       LogResult test1 = new LogResult();
-        test1.setTimestamp(1);
-        test1.setLevel(LogLevel.WARNING);
-        test1.setRequestId("TS");
-        test1.setAccountId("TS");
-        test1.setCallId("TS");
-        test1.setMessage("TS");
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.WARNING);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
       LogResult test2 = new LogResult();
-        test2.setTimestamp(0);
-        test2.setLevel(LogLevel.INFO);
-        test2.setRequestId("tS");
-        test2.setAccountId("tS");
-        test2.setCallId("tS");
-        test2.setMessage("tS");
-        Object testObject2 = new Object();
-        test2.setMetadata(testObject2);
+      test2.setTimestamp(0);
+      test2.setLevel(LogLevel.INFO);
+      test2.setRequestId("tS");
+      test2.setAccountId("tS");
+      test2.setCallId("tS");
+      test2.setMessage("tS");
+      Object testObject2 = new Object();
+      test2.setMetadata(testObject2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -175,14 +176,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       LogResult test1 = new LogResult();
-        test1.setTimestamp(1);
-        test1.setLevel(LogLevel.INFO);
-        test1.setRequestId("TS");
-        test1.setAccountId("TS");
-        test1.setCallId("TS");
-        test1.setMessage("TS");
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.INFO);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -194,27 +196,27 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       LogResult test1 = new LogResult();
-        test1.setTimestamp(1);
-        test1.setLevel(LogLevel.INFO);
-        test1.setRequestId("TS");
-        test1.setAccountId("TS");
-        test1.setCallId("TS");
-        test1.setMessage("TS");
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.INFO);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
       LogResult test2 = new LogResult();
-        test2.setTimestamp(1);
-        test2.setLevel(LogLevel.INFO);
-        test2.setRequestId("TS");
-        test2.setAccountId("TS");
-        test2.setCallId("TS");
-        test2.setMessage("TS");
-        Object testObject2 = testObject;
-        test2.setMetadata(testObject2);
+      test2.setTimestamp(1);
+      test2.setLevel(LogLevel.INFO);
+      test2.setRequestId("TS");
+      test2.setAccountId("TS");
+      test2.setCallId("TS");
+      test2.setMessage("TS");
+      Object testObject2 = testObject;
+      test2.setMetadata(testObject2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -224,14 +226,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       LogResult test1 = new LogResult();
-        test1.setTimestamp(1);
-        test1.setLevel(LogLevel.INFO);
-        test1.setRequestId("TS");
-        test1.setAccountId("TS");
-        test1.setCallId("TS");
-        test1.setMessage("TS");
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.INFO);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

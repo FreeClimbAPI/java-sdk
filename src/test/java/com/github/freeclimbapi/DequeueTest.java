@@ -39,6 +39,11 @@ import com.github.freeclimbapi.models.*;
     private final Dequeue model = new Dequeue();
 
     @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Dequeue", model.getCommand());
+    }
+
+    @Test
     public void buildTest() throws Exception {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());

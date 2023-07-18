@@ -43,57 +43,58 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void toTest() {
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
-  
-  }
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+    }
 
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
-  
-  }
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+    }
 
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
-        model.setText("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getText());
-  
-  }
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+    }
 
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-  
-  }
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       Sms test1 = new Sms();
-        test1.setTo("TS");
-        test1.setFrom("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
       Sms test2 = new Sms();
-        test2.setTo("TS");
-        test2.setFrom("TS");
-        test2.setText("TS");
-        test2.setNotificationUrl("TS");
+      test2.setTo("TS");
+      test2.setFrom("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -104,15 +105,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Sms test1 = new Sms();
-        test1.setTo("TS");
-        test1.setFrom("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
       Sms test2 = new Sms();
-        test2.setTo("tS");
-        test2.setFrom("tS");
-        test2.setText("tS");
-        test2.setNotificationUrl("tS");
+      test2.setTo("tS");
+      test2.setFrom("tS");
+      test2.setText("tS");
+      test2.setNotificationUrl("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -124,10 +125,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Sms test1 = new Sms();
-        test1.setTo("TS");
-        test1.setFrom("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -139,19 +141,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Sms test1 = new Sms();
-        test1.setTo("TS");
-        test1.setFrom("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
       Sms test2 = new Sms();
-        test2.setTo("TS");
-        test2.setFrom("TS");
-        test2.setText("TS");
-        test2.setNotificationUrl("TS");
+      test2.setTo("TS");
+      test2.setFrom("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -161,13 +163,18 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Sms test1 = new Sms();
-        test1.setTo("TS");
-        test1.setFrom("TS");
-        test1.setText("TS");
-        test1.setNotificationUrl("TS");
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Sms", model.getCommand());
     }
 
     @Test

@@ -43,96 +43,97 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-  
-  }
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+    }
 
     /**
      * Test the property 'queueId'
      */
     @Test
     public void queueIdTest() {
-        model.setQueueId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQueueId());
-  
-  }
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+    }
 
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-  
-  }
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
+    }
 
     /**
      * Test the property 'maxSize'
      */
     @Test
     public void maxSizeTest() {
-  
-    model.setMaxSize(1);
-    Assert.assertEquals(1, (int) model.getMaxSize());
-  }
+      
+      model.setMaxSize(1);
+      Assert.assertEquals(1, (int) model.getMaxSize());
+    }
 
     /**
      * Test the property 'currentSize'
      */
     @Test
     public void currentSizeTest() {
-  
-    model.setCurrentSize(1);
-    Assert.assertEquals(1, (int) model.getCurrentSize());
-  }
+      
+      model.setCurrentSize(1);
+      Assert.assertEquals(1, (int) model.getCurrentSize());
+    }
 
     /**
      * Test the property 'averageQueueRemovalTime'
      */
     @Test
     public void averageQueueRemovalTimeTest() {
-  
-    model.setAverageQueueRemovalTime(1);
-    Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
-  }
+      
+      model.setAverageQueueRemovalTime(1);
+      Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
+    }
 
     /**
      * Test the property 'subresourceUris'
      */
     @Test
     public void subresourceUrisTest() {
-        Object testObject = new Object();
-        model.setSubresourceUris(testObject);
-        Assert.assertEquals(testObject, model.getSubresourceUris());
-  
-  }
+      Object testObject = new Object();
+      model.setSubresourceUris(testObject);
+      Assert.assertEquals(testObject, model.getSubresourceUris());
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       QueueResultAllOf test1 = new QueueResultAllOf();
-        test1.setAccountId("TS");
-        test1.setQueueId("TS");
-        test1.setAlias("TS");
-        test1.setMaxSize(1);
-        test1.setCurrentSize(1);
-        test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
       QueueResultAllOf test2 = new QueueResultAllOf();
-        test2.setAccountId("TS");
-        test2.setQueueId("TS");
-        test2.setAlias("TS");
-        test2.setMaxSize(1);
-        test2.setCurrentSize(1);
-        test2.setAverageQueueRemovalTime(1);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+      test2.setAccountId("TS");
+      test2.setQueueId("TS");
+      test2.setAlias("TS");
+      test2.setMaxSize(1);
+      test2.setCurrentSize(1);
+      test2.setAverageQueueRemovalTime(1);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -143,23 +144,23 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       QueueResultAllOf test1 = new QueueResultAllOf();
-        test1.setAccountId("TS");
-        test1.setQueueId("TS");
-        test1.setAlias("TS");
-        test1.setMaxSize(1);
-        test1.setCurrentSize(1);
-        test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
       QueueResultAllOf test2 = new QueueResultAllOf();
-        test2.setAccountId("tS");
-        test2.setQueueId("tS");
-        test2.setAlias("tS");
-        test2.setMaxSize(0);
-        test2.setCurrentSize(0);
-        test2.setAverageQueueRemovalTime(0);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+      test2.setAccountId("tS");
+      test2.setQueueId("tS");
+      test2.setAlias("tS");
+      test2.setMaxSize(0);
+      test2.setCurrentSize(0);
+      test2.setAverageQueueRemovalTime(0);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -171,14 +172,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       QueueResultAllOf test1 = new QueueResultAllOf();
-        test1.setAccountId("TS");
-        test1.setQueueId("TS");
-        test1.setAlias("TS");
-        test1.setMaxSize(1);
-        test1.setCurrentSize(1);
-        test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -190,27 +192,27 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       QueueResultAllOf test1 = new QueueResultAllOf();
-        test1.setAccountId("TS");
-        test1.setQueueId("TS");
-        test1.setAlias("TS");
-        test1.setMaxSize(1);
-        test1.setCurrentSize(1);
-        test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
       QueueResultAllOf test2 = new QueueResultAllOf();
-        test2.setAccountId("TS");
-        test2.setQueueId("TS");
-        test2.setAlias("TS");
-        test2.setMaxSize(1);
-        test2.setCurrentSize(1);
-        test2.setAverageQueueRemovalTime(1);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+      test2.setAccountId("TS");
+      test2.setQueueId("TS");
+      test2.setAlias("TS");
+      test2.setMaxSize(1);
+      test2.setCurrentSize(1);
+      test2.setAverageQueueRemovalTime(1);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -220,14 +222,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       QueueResultAllOf test1 = new QueueResultAllOf();
-        test1.setAccountId("TS");
-        test1.setQueueId("TS");
-        test1.setAlias("TS");
-        test1.setMaxSize(1);
-        test1.setCurrentSize(1);
-        test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

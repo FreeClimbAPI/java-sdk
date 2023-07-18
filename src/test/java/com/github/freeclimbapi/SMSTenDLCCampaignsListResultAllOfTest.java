@@ -43,24 +43,25 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void campaignsTest() {
-  
-  List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-  model.setCampaigns(testList);
-  Assert.assertEquals(testList, model.getCampaigns()); 
-  }
+      
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      model.setCampaigns(testList);
+      Assert.assertEquals(testList, model.getCampaigns()); 
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       SMSTenDLCCampaignsListResultAllOf test1 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResultAllOf test2 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList2 = testList;
-        test2.setCampaigns(testList2);
+      List<SMSTenDLCCampaign> testList2 = testList;
+      test2.setCampaigns(testList2);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -71,11 +72,11 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SMSTenDLCCampaignsListResultAllOf test1 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResultAllOf test2 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList2 = null;
-        test2.setCampaigns(testList2);
+      List<SMSTenDLCCampaign> testList2 = null;
+      test2.setCampaigns(testList2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -87,8 +88,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SMSTenDLCCampaignsListResultAllOf test1 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -100,15 +102,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SMSTenDLCCampaignsListResultAllOf test1 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
       SMSTenDLCCampaignsListResultAllOf test2 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList2 = testList;
-        test2.setCampaigns(testList2);
+      List<SMSTenDLCCampaign> testList2 = testList;
+      test2.setCampaigns(testList2);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -118,8 +120,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SMSTenDLCCampaignsListResultAllOf test1 = new SMSTenDLCCampaignsListResultAllOf();
-        List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-        test1.setCampaigns(testList);
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

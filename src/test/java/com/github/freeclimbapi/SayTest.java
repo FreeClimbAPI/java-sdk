@@ -43,69 +43,70 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void textTest() {
-        model.setText("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getText());
-  
-  }
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+    }
 
     /**
      * Test the property 'language'
      */
     @Test
     public void languageTest() {
-        model.setLanguage("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getLanguage());
-  
-  }
+      model.setLanguage("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getLanguage());
+      
+    }
 
     /**
      * Test the property 'loop'
      */
     @Test
     public void loopTest() {
-  
-    model.setLoop(1);
-    Assert.assertEquals(1, (int) model.getLoop());
-  }
+      
+      model.setLoop(1);
+      Assert.assertEquals(1, (int) model.getLoop());
+    }
 
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
-  
-  }
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+    }
 
     /**
      * Test the property 'privacyMode'
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());       
-  
-  }
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       Say test1 = new Say();
-        test1.setText("TS");
-        test1.setLanguage("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setText("TS");
+      test1.setLanguage("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       Say test2 = new Say();
-        test2.setText("TS");
-        test2.setLanguage("TS");
-        test2.setLoop(1);
-        test2.setConferenceId("TS");
-        test2.setPrivacyMode(true);
+      test2.setText("TS");
+      test2.setLanguage("TS");
+      test2.setLoop(1);
+      test2.setConferenceId("TS");
+      test2.setPrivacyMode(true);
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -116,17 +117,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Say test1 = new Say();
-        test1.setText("TS");
-        test1.setLanguage("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setText("TS");
+      test1.setLanguage("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       Say test2 = new Say();
-        test2.setText("tS");
-        test2.setLanguage("tS");
-        test2.setLoop(0);
-        test2.setConferenceId("tS");
-        test2.setPrivacyMode(false);
+      test2.setText("tS");
+      test2.setLanguage("tS");
+      test2.setLoop(0);
+      test2.setConferenceId("tS");
+      test2.setPrivacyMode(false);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -138,11 +139,12 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Say test1 = new Say();
-        test1.setText("TS");
-        test1.setLanguage("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setText("TS");
+      test1.setLanguage("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -154,21 +156,21 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Say test1 = new Say();
-        test1.setText("TS");
-        test1.setLanguage("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setText("TS");
+      test1.setLanguage("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
       Say test2 = new Say();
-        test2.setText("TS");
-        test2.setLanguage("TS");
-        test2.setLoop(1);
-        test2.setConferenceId("TS");
-        test2.setPrivacyMode(true);
+      test2.setText("TS");
+      test2.setLanguage("TS");
+      test2.setLoop(1);
+      test2.setConferenceId("TS");
+      test2.setPrivacyMode(true);
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -178,14 +180,19 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Say test1 = new Say();
-        test1.setText("TS");
-        test1.setLanguage("TS");
-        test1.setLoop(1);
-        test1.setConferenceId("TS");
-        test1.setPrivacyMode(true);
+      test1.setText("TS");
+      test1.setLanguage("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Say", model.getCommand());
     }
 
     @Test

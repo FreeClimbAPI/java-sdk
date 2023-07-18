@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testRINGINGShouldWork() {
 
         CallStatus test = CallStatus.RINGING;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testIN_PROGRESSShouldWork() {
 
         CallStatus test = CallStatus.IN_PROGRESS;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testCANCELEDShouldWork() {
 
         CallStatus test = CallStatus.CANCELED;
@@ -124,7 +124,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testCOMPLETEDShouldWork() {
 
         CallStatus test = CallStatus.COMPLETED;
@@ -146,7 +146,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testFAILEDShouldWork() {
 
         CallStatus test = CallStatus.FAILED;
@@ -168,7 +168,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testBUSYShouldWork() {
 
         CallStatus test = CallStatus.BUSY;
@@ -190,7 +190,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-  @Test
+      @Test
     public void testNO_ANSWERShouldWork() {
 
         CallStatus test = CallStatus.NO_ANSWER;
@@ -212,5 +212,5 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-
+    
  }

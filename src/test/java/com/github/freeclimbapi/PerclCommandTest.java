@@ -43,19 +43,20 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void commandTest() {
-  
-  }
+      
+    }
 
-  /**
+      /**
      * Test the method 'equalsTrue'
      */
 
      @Test
     public void equalsTrueTest() {
       PerclCommand test1 = new PerclCommand();
-        test1.setCommand("TS");
+      test1.setCommand("TS");
       PerclCommand test2 = new PerclCommand();
-        test2.setCommand("TS");
+      test2.setCommand("TS");
+
       Assert.assertTrue(test1.equals(test2));
     }
 
@@ -66,9 +67,9 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PerclCommand test1 = new PerclCommand();
-        test1.setCommand("TS");
+      test1.setCommand("TS");
       PerclCommand test2 = new PerclCommand();
-        test2.setCommand("tS");
+      test2.setCommand("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -80,7 +81,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PerclCommand test1 = new PerclCommand();
-        test1.setCommand("TS");
+      test1.setCommand("TS");
+      
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -92,13 +94,13 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PerclCommand test1 = new PerclCommand();
-        test1.setCommand("TS");
+      test1.setCommand("TS");
       PerclCommand test2 = new PerclCommand();
-        test2.setCommand("TS");
+      test2.setCommand("TS");
         
-       String toString1 = test1.toString();
-       String toString2 = test2.toString();
-       Assert.assertEquals(toString1, toString2);
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
      /**
@@ -108,7 +110,7 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PerclCommand test1 = new PerclCommand();
-        test1.setCommand("TS");
+      test1.setCommand("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
