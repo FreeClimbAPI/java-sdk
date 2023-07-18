@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void queueMembersTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<QueueMember> testList = new ArrayList<QueueMember>();
-    model.setQueueMembers(testList);
-    Assert.assertEquals(testList, model.getQueueMembers()); 
+  List<QueueMember> testList = new ArrayList<QueueMember>();
+  model.setQueueMembers(testList);
+  Assert.assertEquals(testList, model.getQueueMembers()); 
   }
 
   /**

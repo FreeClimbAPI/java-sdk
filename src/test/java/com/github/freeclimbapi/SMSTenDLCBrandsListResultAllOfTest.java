@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void brandsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<SMSTenDLCBrand> testList = new ArrayList<SMSTenDLCBrand>();
-    model.setBrands(testList);
-    Assert.assertEquals(testList, model.getBrands()); 
+  List<SMSTenDLCBrand> testList = new ArrayList<SMSTenDLCBrand>();
+  model.setBrands(testList);
+  Assert.assertEquals(testList, model.getBrands()); 
   }
 
   /**

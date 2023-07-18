@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,15 +53,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void playBeepTest() {
-      
-      model.setPlayBeep(PlayBeep.ALWAYS);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-      model.setPlayBeep(PlayBeep.NEVER);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-      model.setPlayBeep(PlayBeep.EXIT_ONLY);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+    model.setPlayBeep(PlayBeep.ALWAYS);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+    model.setPlayBeep(PlayBeep.NEVER);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+    model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+    model.setPlayBeep(PlayBeep.EXIT_ONLY);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
   
   }
 
@@ -78,11 +69,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(UpdateConferenceRequestStatus.EMPTY);
-      Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.EMPTY);
-      model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
-      Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.TERMINATED);
+    model.setStatus(UpdateConferenceRequestStatus.EMPTY);
+    Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.EMPTY);
+    model.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+    Assert.assertEquals(model.getStatus(),UpdateConferenceRequestStatus.TERMINATED);
   
   }
 

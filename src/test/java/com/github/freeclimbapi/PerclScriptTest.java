@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void commandsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<PerclCommand> testList = new ArrayList<PerclCommand>();
-    model.setCommands(testList);
-    Assert.assertEquals(testList, model.getCommands()); 
+  List<PerclCommand> testList = new ArrayList<PerclCommand>();
+  model.setCommands(testList);
+  Assert.assertEquals(testList, model.getCommands()); 
   }
 
   /**

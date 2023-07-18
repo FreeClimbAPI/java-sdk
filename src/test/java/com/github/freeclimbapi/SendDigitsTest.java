@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void digitsTest() {
-      
-        
         model.setDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDigits());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void pauseMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setPauseMs(1);
-      Assert.assertEquals(1, (int) model.getPauseMs());
+    model.setPauseMs(1);
+    Assert.assertEquals(1, (int) model.getPauseMs());
   }
 
     /**
@@ -78,15 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -176,16 +154,8 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setDigits("TEST_STRING");
-          
-         
-         
-         
         model.setPrivacyMode(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("digits"), model.getDigits());

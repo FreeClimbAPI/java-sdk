@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void _fileTest() {
-      
-        
         model.setFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFile());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void loopTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setLoop(1);
-      Assert.assertEquals(1, (int) model.getLoop());
+    model.setLoop(1);
+    Assert.assertEquals(1, (int) model.getLoop());
   }
 
     /**
@@ -78,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void conferenceIdTest() {
-      
-        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -96,15 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -202,20 +172,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setFile("TEST_STRING");
-          
-         
-         
-         
-          
         model.setConferenceId("TEST_STRING");
-          
-         
         model.setPrivacyMode(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("_file"), model.getFile());

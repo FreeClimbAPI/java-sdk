@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void uriTest() {
-      
-        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void dateCreatedTest() {
-      
-        
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void dateUpdatedTest() {
-      
-        
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void revisionTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setRevision(1);
-      Assert.assertEquals(1, (int) model.getRevision());
+    model.setRevision(1);
+    Assert.assertEquals(1, (int) model.getRevision());
   }
 
     /**
@@ -114,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -132,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void queueIdTest() {
-      
-        
         model.setQueueId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getQueueId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -150,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -168,16 +113,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void maxSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMaxSize(1);
-      Assert.assertEquals(1, (int) model.getMaxSize());
+    model.setMaxSize(1);
+    Assert.assertEquals(1, (int) model.getMaxSize());
   }
 
     /**
@@ -185,16 +123,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void currentSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setCurrentSize(1);
-      Assert.assertEquals(1, (int) model.getCurrentSize());
+    model.setCurrentSize(1);
+    Assert.assertEquals(1, (int) model.getCurrentSize());
   }
 
     /**
@@ -202,16 +133,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void averageQueueRemovalTimeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setAverageQueueRemovalTime(1);
-      Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
+    model.setAverageQueueRemovalTime(1);
+    Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
   }
 
     /**
@@ -219,17 +143,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
-        
-      
   
   }
 

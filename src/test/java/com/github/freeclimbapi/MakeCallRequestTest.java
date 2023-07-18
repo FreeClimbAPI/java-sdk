@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void fromTest() {
-      
-        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void toTest() {
-      
-        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void applicationIdTest() {
-      
-        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sendDigitsTest() {
-      
-        
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void ifMachineTest() {
-      
-        
         model.setIfMachine("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachine());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -133,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void ifMachineUrlTest() {
-      
-        
         model.setIfMachineUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -151,16 +103,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void timeoutTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setTimeout(1);
-      Assert.assertEquals(1, (int) model.getTimeout());
+    model.setTimeout(1);
+    Assert.assertEquals(1, (int) model.getTimeout());
   }
 
     /**
@@ -168,16 +113,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void parentCallIdTest() {
-      
-        
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -186,15 +123,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -203,16 +133,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callConnectUrlTest() {
-      
-        
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
-        
-        
-        
-      
   
   }
 

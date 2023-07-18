@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callConnectUrlTest() {
-      
-        
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callingNumberTest() {
-      
-        
         model.setCallingNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallingNumber());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void destinationTest() {
-      
-        
         model.setDestination("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDestination());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,11 +83,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void ifMachineTest() {
-      
-      model.setIfMachine(IfMachine.REDIRECT);
-      Assert.assertEquals(model.getIfMachine(),IfMachine.REDIRECT);
-      model.setIfMachine(IfMachine.HANGUP);
-      Assert.assertEquals(model.getIfMachine(),IfMachine.HANGUP);
+    model.setIfMachine(IfMachine.REDIRECT);
+    Assert.assertEquals(model.getIfMachine(),IfMachine.REDIRECT);
+    model.setIfMachine(IfMachine.HANGUP);
+    Assert.assertEquals(model.getIfMachine(),IfMachine.HANGUP);
   
   }
 
@@ -128,16 +95,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void ifMachineUrlTest() {
-      
-        
         model.setIfMachineUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -146,16 +105,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sendDigitsTest() {
-      
-        
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -164,16 +115,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusCallbackUrlTest() {
-      
-        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -182,16 +125,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void timeoutTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setTimeout(1);
-      Assert.assertEquals(1, (int) model.getTimeout());
+    model.setTimeout(1);
+    Assert.assertEquals(1, (int) model.getTimeout());
   }
 
     /**
@@ -199,15 +135,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -353,42 +282,14 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setActionUrl("TEST_STRING");
-          
-         
-          
         model.setCallConnectUrl("TEST_STRING");
-          
-         
-          
         model.setCallingNumber("TEST_STRING");
-          
-         
-          
         model.setDestination("TEST_STRING");
-          
-         
-         
-         
-          
         model.setIfMachineUrl("TEST_STRING");
-          
-         
-          
         model.setSendDigits("TEST_STRING");
-          
-         
-          
         model.setStatusCallbackUrl("TEST_STRING");
-          
-         
-         
-         
         model.setPrivacyMode(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());

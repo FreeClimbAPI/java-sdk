@@ -43,21 +43,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    try {
-      URI uri = new URI("TEST_STRING");
-      model.setActionUrl(uri);
-      Assert.assertEquals(uri, model.getActionUrl());
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+  try {
+    URI uri = new URI("TEST_STRING");
+    model.setActionUrl(uri);
+    Assert.assertEquals(uri, model.getActionUrl());
+  } catch (Exception e) {
+     e.printStackTrace();
+  }
   }
 
     /**
@@ -65,11 +58,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void grammarTypeTest() {
-      
-      model.setGrammarType(GrammarType.URL);
-      Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
-      model.setGrammarType(GrammarType.BUILT_IN);
-      Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
+    model.setGrammarType(GrammarType.URL);
+    Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
+    model.setGrammarType(GrammarType.BUILT_IN);
+    Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
   
   }
 
@@ -78,16 +70,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void grammarFileTest() {
-      
-        
         model.setGrammarFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarFile());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -96,16 +80,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void grammarRuleTest() {
-      
-        
         model.setGrammarRule("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getGrammarRule());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -114,15 +90,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void playBeepTest() {
-      
         model.setPlayBeep(false);
         Assert.assertEquals(false, model.getPlayBeep());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -131,17 +100,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void promptsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<PerclCommand> testList = new ArrayList<PerclCommand>();
-    model.setPrompts(testList);
-    Assert.assertEquals(testList, model.getPrompts()); 
+  List<PerclCommand> testList = new ArrayList<PerclCommand>();
+  model.setPrompts(testList);
+  Assert.assertEquals(testList, model.getPrompts()); 
   }
 
     /**
@@ -149,16 +111,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void noInputTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setNoInputTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
+    model.setNoInputTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
   }
 
     /**
@@ -166,16 +121,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void recognitionTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setRecognitionTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
+    model.setRecognitionTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
   }
 
     /**
@@ -183,16 +131,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void confidenceThresholdTest() {
-      
-        
-        
-        
         model.setConfidenceThreshold(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
-        
-        
-        
-      
   
   }
 
@@ -201,16 +141,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sensitivityLevelTest() {
-      
-        
-        
-        
         model.setSensitivityLevel(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
-        
-        
-        
-      
   
   }
 
@@ -219,16 +151,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void speechCompleteTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setSpeechCompleteTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
+    model.setSpeechCompleteTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
   }
 
     /**
@@ -236,16 +161,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void speechIncompleteTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setSpeechIncompleteTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
+    model.setSpeechIncompleteTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
   }
 
     /**
@@ -253,15 +171,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -463,41 +374,12 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-           
-         
-         
-         
-          
         model.setGrammarFile("TEST_STRING");
-          
-         
-          
         model.setGrammarRule("TEST_STRING");
-          
-         
         model.setPlayBeep(false);
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
         model.setConfidenceThreshold(new BigDecimal(1.0));
-         
-         
         model.setSensitivityLevel(new BigDecimal(1.0));
-         
-         
-         
-         
         model.setPrivacyMode(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());

@@ -43,15 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void voiceTest() {
-      
         model.setVoice(false);
         Assert.assertEquals(false, model.getVoice());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -60,15 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void smsTest() {
-      
         model.setSms(false);
         Assert.assertEquals(false, model.getSms());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -77,15 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void tollFreeTest() {
-      
         model.setTollFree(false);
         Assert.assertEquals(false, model.getTollFree());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -94,15 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void tenDLCTest() {
-      
         model.setTenDLC(false);
         Assert.assertEquals(false, model.getTenDLC());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -111,15 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void shortCodeTest() {
-      
         model.setShortCode(false);
         Assert.assertEquals(false, model.getShortCode());       
-        
-        
-        
-        
-        
-      
   
   }
 

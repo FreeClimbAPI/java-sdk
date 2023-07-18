@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void uriTest() {
-      
-        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void waitTimeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setWaitTime(1);
-      Assert.assertEquals(1, (int) model.getWaitTime());
+    model.setWaitTime(1);
+    Assert.assertEquals(1, (int) model.getWaitTime());
   }
 
     /**
@@ -96,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void positionTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setPosition(1);
-      Assert.assertEquals(1, (int) model.getPosition());
+    model.setPosition(1);
+    Assert.assertEquals(1, (int) model.getPosition());
   }
 
     /**
@@ -113,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void dateEnqueuedTest() {
-      
-        
         model.setDateEnqueued("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
-        
-        
-        
-        
-        
-      
   
   }
 

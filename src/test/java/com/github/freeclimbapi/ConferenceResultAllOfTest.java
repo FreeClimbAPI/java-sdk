@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void conferenceIdTest() {
-      
-        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,15 +73,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void playBeepTest() {
-      
-      model.setPlayBeep(PlayBeep.ALWAYS);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
-      model.setPlayBeep(PlayBeep.NEVER);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
-      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
-      model.setPlayBeep(PlayBeep.EXIT_ONLY);
-      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+    model.setPlayBeep(PlayBeep.ALWAYS);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+    model.setPlayBeep(PlayBeep.NEVER);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+    model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+    model.setPlayBeep(PlayBeep.EXIT_ONLY);
+    Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
   
   }
 
@@ -114,15 +89,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void recordTest() {
-      
         model.setRecord(false);
         Assert.assertEquals(false, model.getRecord());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -131,15 +99,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(ConferenceStatus.EMPTY);
-      Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
-      model.setStatus(ConferenceStatus.POPULATED);
-      Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
-      model.setStatus(ConferenceStatus.IN_PROGRESS);
-      Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
-      model.setStatus(ConferenceStatus.TERMINATED);
-      Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
+    model.setStatus(ConferenceStatus.EMPTY);
+    Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
+    model.setStatus(ConferenceStatus.POPULATED);
+    Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
+    model.setStatus(ConferenceStatus.IN_PROGRESS);
+    Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
+    model.setStatus(ConferenceStatus.TERMINATED);
+    Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
   
   }
 
@@ -148,16 +115,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void waitUrlTest() {
-      
-        
         model.setWaitUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -166,16 +125,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -184,16 +135,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusCallbackUrlTest() {
-      
-        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -202,17 +145,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
-        
-      
   
   }
 

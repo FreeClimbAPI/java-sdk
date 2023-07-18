@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -126,11 +118,7 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setActionUrl("TEST_STRING");
-          
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());

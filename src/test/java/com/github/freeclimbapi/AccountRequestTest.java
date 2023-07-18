@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void labelTest() {
-      
-        
         model.setLabel("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLabel());
-        
-        
-        
-        
-        
-      
   
   }
 

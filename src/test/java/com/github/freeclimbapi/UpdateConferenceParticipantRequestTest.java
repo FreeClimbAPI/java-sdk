@@ -43,15 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void talkTest() {
-      
         model.setTalk(false);
         Assert.assertEquals(false, model.getTalk());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -60,15 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void listenTest() {
-      
         model.setListen(false);
         Assert.assertEquals(false, model.getListen());       
-        
-        
-        
-        
-        
-      
   
   }
 

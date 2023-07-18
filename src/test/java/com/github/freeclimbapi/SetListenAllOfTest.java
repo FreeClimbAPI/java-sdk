@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,15 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void listenTest() {
-      
         model.setListen(false);
         Assert.assertEquals(false, model.getListen());       
-        
-        
-        
-        
-        
-      
   
   }
 

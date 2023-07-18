@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void digitTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setDigitTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
+    model.setDigitTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
   }
 
     /**
@@ -78,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void finishOnKeyTest() {
-      
-        
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -96,15 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void flushBufferTest() {
-      
         model.setFlushBuffer(false);
         Assert.assertEquals(false, model.getFlushBuffer());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -113,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void initialTimeoutMsTest() {
-      
-        
         model.setInitialTimeoutMs("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -131,16 +93,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void maxDigitsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMaxDigits(1);
-      Assert.assertEquals(1, (int) model.getMaxDigits());
+    model.setMaxDigits(1);
+    Assert.assertEquals(1, (int) model.getMaxDigits());
   }
 
     /**
@@ -148,16 +103,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void minDigitsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMinDigits(1);
-      Assert.assertEquals(1, (int) model.getMinDigits());
+    model.setMinDigits(1);
+    Assert.assertEquals(1, (int) model.getMinDigits());
   }
 
     /**
@@ -165,17 +113,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void promptsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<PerclCommand> testList = new ArrayList<PerclCommand>();
-    model.setPrompts(testList);
-    Assert.assertEquals(testList, model.getPrompts()); 
+  List<PerclCommand> testList = new ArrayList<PerclCommand>();
+  model.setPrompts(testList);
+  Assert.assertEquals(testList, model.getPrompts()); 
   }
 
     /**
@@ -183,15 +124,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 

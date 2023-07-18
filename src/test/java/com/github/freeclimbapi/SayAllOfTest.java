@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void textTest() {
-      
-        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void languageTest() {
-      
-        
         model.setLanguage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLanguage());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void loopTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setLoop(1);
-      Assert.assertEquals(1, (int) model.getLoop());
+    model.setLoop(1);
+    Assert.assertEquals(1, (int) model.getLoop());
   }
 
     /**
@@ -96,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void conferenceIdTest() {
-      
-        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -114,15 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 

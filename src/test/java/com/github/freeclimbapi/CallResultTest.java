@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void uriTest() {
-      
-        
         model.setUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void dateCreatedTest() {
-      
-        
         model.setDateCreated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateCreated());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void dateUpdatedTest() {
-      
-        
         model.setDateUpdated("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void revisionTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setRevision(1);
-      Assert.assertEquals(1, (int) model.getRevision());
+    model.setRevision(1);
+    Assert.assertEquals(1, (int) model.getRevision());
   }
 
     /**
@@ -114,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -132,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void parentCallIdTest() {
-      
-        
         model.setParentCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getParentCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -150,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -168,16 +113,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void fromTest() {
-      
-        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -186,16 +123,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void toTest() {
-      
-        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -204,16 +133,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void phoneNumberIdTest() {
-      
-        
         model.setPhoneNumberId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -222,23 +143,22 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callStatusTest() {
-      
-      model.setCallStatus(CallStatus.QUEUED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
-      model.setCallStatus(CallStatus.RINGING);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
-      model.setCallStatus(CallStatus.IN_PROGRESS);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
-      model.setCallStatus(CallStatus.CANCELED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
-      model.setCallStatus(CallStatus.COMPLETED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
-      model.setCallStatus(CallStatus.FAILED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
-      model.setCallStatus(CallStatus.BUSY);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
-      model.setCallStatus(CallStatus.NO_ANSWER);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+    model.setCallStatus(CallStatus.QUEUED);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+    model.setCallStatus(CallStatus.RINGING);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+    model.setCallStatus(CallStatus.IN_PROGRESS);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+    model.setCallStatus(CallStatus.CANCELED);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+    model.setCallStatus(CallStatus.COMPLETED);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+    model.setCallStatus(CallStatus.FAILED);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+    model.setCallStatus(CallStatus.BUSY);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+    model.setCallStatus(CallStatus.NO_ANSWER);
+    Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
   
   }
 
@@ -247,16 +167,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void startTimeTest() {
-      
-        
         model.setStartTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStartTime());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -265,16 +177,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void connectTimeTest() {
-      
-        
         model.setConnectTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConnectTime());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -283,16 +187,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void endTimeTest() {
-      
-        
         model.setEndTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEndTime());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -301,16 +197,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void durationTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setDuration(1);
-      Assert.assertEquals(1, (int) model.getDuration());
+    model.setDuration(1);
+    Assert.assertEquals(1, (int) model.getDuration());
   }
 
     /**
@@ -318,16 +207,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void connectDurationTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setConnectDuration(1);
-      Assert.assertEquals(1, (int) model.getConnectDuration());
+    model.setConnectDuration(1);
+    Assert.assertEquals(1, (int) model.getConnectDuration());
   }
 
     /**
@@ -335,13 +217,12 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void directionTest() {
-      
-      model.setDirection(CallDirection.INBOUND);
-      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
-      model.setDirection(CallDirection.OUTBOUND_API);
-      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
-      model.setDirection(CallDirection.OUTBOUND_DIAL);
-      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+    model.setDirection(CallDirection.INBOUND);
+    Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+    model.setDirection(CallDirection.OUTBOUND_API);
+    Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+    model.setDirection(CallDirection.OUTBOUND_DIAL);
+    Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
   
   }
 
@@ -350,11 +231,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void answeredByTest() {
-      
-      model.setAnsweredBy(AnsweredBy.HUMAN);
-      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
-      model.setAnsweredBy(AnsweredBy.MACHINE);
-      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
+    model.setAnsweredBy(AnsweredBy.HUMAN);
+    Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
+    model.setAnsweredBy(AnsweredBy.MACHINE);
+    Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
   
   }
 
@@ -363,17 +243,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
-        
-      
   
   }
 

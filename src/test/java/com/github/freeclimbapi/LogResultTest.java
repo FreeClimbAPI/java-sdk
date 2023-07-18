@@ -43,16 +43,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void timestampTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setTimestamp(1);
-      Assert.assertEquals(1, (int) model.getTimestamp());
+    model.setTimestamp(1);
+    Assert.assertEquals(1, (int) model.getTimestamp());
   }
 
     /**
@@ -60,13 +53,12 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void levelTest() {
-      
-      model.setLevel(LogLevel.INFO);
-      Assert.assertEquals(model.getLevel(),LogLevel.INFO);
-      model.setLevel(LogLevel.WARNING);
-      Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
-      model.setLevel(LogLevel.ERROR);
-      Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
+    model.setLevel(LogLevel.INFO);
+    Assert.assertEquals(model.getLevel(),LogLevel.INFO);
+    model.setLevel(LogLevel.WARNING);
+    Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
+    model.setLevel(LogLevel.ERROR);
+    Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
   
   }
 
@@ -75,16 +67,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void requestIdTest() {
-      
-        
         model.setRequestId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getRequestId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -93,16 +77,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -111,16 +87,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -129,16 +97,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void messageTest() {
-      
-        
         model.setMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessage());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -147,17 +107,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void metadataTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setMetadata(testObject);
           Assert.assertEquals(testObject, model.getMetadata());
-        
-      
   
   }
 

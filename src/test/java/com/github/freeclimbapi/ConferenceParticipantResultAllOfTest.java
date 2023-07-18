@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void conferenceIdTest() {
-      
-        
         model.setConferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,15 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void talkTest() {
-      
         model.setTalk(false);
         Assert.assertEquals(false, model.getTalk());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -114,15 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void listenTest() {
-      
         model.setListen(false);
         Assert.assertEquals(false, model.getListen());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -131,15 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void startConfOnEnterTest() {
-      
         model.setStartConfOnEnter(false);
         Assert.assertEquals(false, model.getStartConfOnEnter());       
-        
-        
-        
-        
-        
-      
   
   }
 

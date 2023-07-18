@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void messagesTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<MessageResult> testList = new ArrayList<MessageResult>();
-    model.setMessages(testList);
-    Assert.assertEquals(testList, model.getMessages()); 
+  List<MessageResult> testList = new ArrayList<MessageResult>();
+  model.setMessages(testList);
+  Assert.assertEquals(testList, model.getMessages()); 
   }
 
   /**

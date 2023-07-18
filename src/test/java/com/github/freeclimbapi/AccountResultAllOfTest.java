@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void apiKeyTest() {
-      
-        
         model.setApiKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApiKey());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void labelTest() {
-      
-        
         model.setLabel("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLabel());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,11 +83,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void typeTest() {
-      
-      model.setType(AccountType.TRIAL);
-      Assert.assertEquals(model.getType(),AccountType.TRIAL);
-      model.setType(AccountType.FULL);
-      Assert.assertEquals(model.getType(),AccountType.FULL);
+    model.setType(AccountType.TRIAL);
+    Assert.assertEquals(model.getType(),AccountType.TRIAL);
+    model.setType(AccountType.FULL);
+    Assert.assertEquals(model.getType(),AccountType.FULL);
   
   }
 
@@ -128,13 +95,12 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(AccountStatus.CLOSED);
-      Assert.assertEquals(model.getStatus(),AccountStatus.CLOSED);
-      model.setStatus(AccountStatus.SUSPENDED);
-      Assert.assertEquals(model.getStatus(),AccountStatus.SUSPENDED);
-      model.setStatus(AccountStatus.ACTIVE);
-      Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
+    model.setStatus(AccountStatus.CLOSED);
+    Assert.assertEquals(model.getStatus(),AccountStatus.CLOSED);
+    model.setStatus(AccountStatus.SUSPENDED);
+    Assert.assertEquals(model.getStatus(),AccountStatus.SUSPENDED);
+    model.setStatus(AccountStatus.ACTIVE);
+    Assert.assertEquals(model.getStatus(),AccountStatus.ACTIVE);
   
   }
 
@@ -143,17 +109,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
-        
-      
   
   }
 

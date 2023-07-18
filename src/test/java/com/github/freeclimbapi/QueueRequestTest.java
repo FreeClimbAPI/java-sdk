@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void maxSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMaxSize(1);
-      Assert.assertEquals(1, (int) model.getMaxSize());
+    model.setMaxSize(1);
+    Assert.assertEquals(1, (int) model.getMaxSize());
   }
 
   /**

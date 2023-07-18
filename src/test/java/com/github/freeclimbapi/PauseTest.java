@@ -43,16 +43,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void lengthTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setLength(1);
-      Assert.assertEquals(1, (int) model.getLength());
+    model.setLength(1);
+    Assert.assertEquals(1, (int) model.getLength());
   }
 
   /**
@@ -125,9 +118,6 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("length"), model.getLength());

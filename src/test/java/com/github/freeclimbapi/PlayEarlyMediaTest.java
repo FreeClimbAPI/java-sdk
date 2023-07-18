@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void _fileTest() {
-      
-        
         model.setFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFile());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -126,11 +118,7 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setFile("TEST_STRING");
-          
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("_file"), model.getFile());

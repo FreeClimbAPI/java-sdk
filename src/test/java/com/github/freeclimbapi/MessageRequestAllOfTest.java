@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void fromTest() {
-      
-        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void toTest() {
-      
-        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void textTest() {
-      
-        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void notificationUrlTest() {
-      
-        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 

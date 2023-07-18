@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void campaignIdTest() {
-      
-        
         model.setCampaignId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCampaignId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void cspIdTest() {
-      
-        
         model.setCspId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCspId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void resellerIdTest() {
-      
-        
         model.setResellerId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getResellerId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,13 +83,12 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
   
-    model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
-    Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.ACTIVE);
+  model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+  Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.ACTIVE);
   
-    model.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
-    Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
+  model.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
+  Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
   
   }
 
@@ -130,15 +97,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void createDateTest() {
-      
-        
           model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
           Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
-        
-        
-        
-        
-      
   
   }
 
@@ -147,15 +107,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void autoRenewalTest() {
-      
         model.setAutoRenewal(false);
         Assert.assertEquals(false, model.getAutoRenewal());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -164,15 +117,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void billedDateTest() {
-      
-        
           model.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
           Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getBilledDate());
-        
-        
-        
-        
-      
   
   }
 
@@ -181,16 +127,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void brandIdTest() {
-      
-        
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -199,16 +137,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void usecaseTest() {
-      
-        
         model.setUsecase("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getUsecase());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -217,17 +147,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subUsecasesTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    Set<String> testSet = new HashSet<String>();
-    model.setSubUsecases(testSet);
-    Assert.assertEquals(testSet, model.getSubUsecases()); 
+  Set<String> testSet = new HashSet<String>();
+  model.setSubUsecases(testSet);
+  Assert.assertEquals(testSet, model.getSubUsecases()); 
   }
 
     /**
@@ -235,16 +158,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void descriptionTest() {
-      
-        
         model.setDescription("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDescription());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -253,15 +168,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void embeddedLinkTest() {
-      
         model.setEmbeddedLink(false);
         Assert.assertEquals(false, model.getEmbeddedLink());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -270,15 +178,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void embeddedPhoneTest() {
-      
         model.setEmbeddedPhone(false);
         Assert.assertEquals(false, model.getEmbeddedPhone());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -287,15 +188,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void affiliateMarketingTest() {
-      
         model.setAffiliateMarketing(false);
         Assert.assertEquals(false, model.getAffiliateMarketing());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -304,15 +198,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void numberPoolTest() {
-      
         model.setNumberPool(false);
         Assert.assertEquals(false, model.getNumberPool());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -321,15 +208,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void ageGatedTest() {
-      
         model.setAgeGated(false);
         Assert.assertEquals(false, model.getAgeGated());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -338,15 +218,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void directLendingTest() {
-      
         model.setDirectLending(false);
         Assert.assertEquals(false, model.getDirectLending());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -355,15 +228,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subscriberOptinTest() {
-      
         model.setSubscriberOptin(false);
         Assert.assertEquals(false, model.getSubscriberOptin());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -372,15 +238,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subscriberOptoutTest() {
-      
         model.setSubscriberOptout(false);
         Assert.assertEquals(false, model.getSubscriberOptout());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -389,15 +248,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subscriberHelpTest() {
-      
         model.setSubscriberHelp(false);
         Assert.assertEquals(false, model.getSubscriberHelp());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -406,16 +258,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sample1Test() {
-      
-        
         model.setSample1("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample1());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -424,16 +268,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sample2Test() {
-      
-        
         model.setSample2("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample2());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -442,16 +278,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sample3Test() {
-      
-        
         model.setSample3("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample3());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -460,16 +288,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sample4Test() {
-      
-        
         model.setSample4("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample4());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -478,16 +298,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void sample5Test() {
-      
-        
         model.setSample5("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSample5());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -496,16 +308,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void messageFlowTest() {
-      
-        
         model.setMessageFlow("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageFlow());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -514,16 +318,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void helpMessageTest() {
-      
-        
         model.setHelpMessage("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getHelpMessage());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -532,16 +328,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void referenceIdTest() {
-      
-        
         model.setReferenceId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReferenceId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -550,15 +338,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void mockTest() {
-      
         model.setMock(false);
         Assert.assertEquals(false, model.getMock());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -567,15 +348,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void nextRenewalOrExpirationDateTest() {
-      
-        
           model.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
           Assert.assertEquals(LocalDate.parse("2000-01-01"), model.getNextRenewalOrExpirationDate()); 
-        
-        
-        
-        
-      
   
   }
 

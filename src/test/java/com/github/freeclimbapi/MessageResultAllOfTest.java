@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void messageIdTest() {
-      
-        
         model.setMessageId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getMessageId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,29 +63,28 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(MessageStatus.NEW);
-      Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
-      model.setStatus(MessageStatus.QUEUED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
-      model.setStatus(MessageStatus.REJECTED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
-      model.setStatus(MessageStatus.SENDING);
-      Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
-      model.setStatus(MessageStatus.SENT);
-      Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
-      model.setStatus(MessageStatus.FAILED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
-      model.setStatus(MessageStatus.RECEIVED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
-      model.setStatus(MessageStatus.UNDELIVERED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
-      model.setStatus(MessageStatus.EXPIRED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
-      model.setStatus(MessageStatus.DELETED);
-      Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
-      model.setStatus(MessageStatus.UNKNOWN);
-      Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
+    model.setStatus(MessageStatus.NEW);
+    Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
+    model.setStatus(MessageStatus.QUEUED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
+    model.setStatus(MessageStatus.REJECTED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
+    model.setStatus(MessageStatus.SENDING);
+    Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
+    model.setStatus(MessageStatus.SENT);
+    Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
+    model.setStatus(MessageStatus.FAILED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
+    model.setStatus(MessageStatus.RECEIVED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
+    model.setStatus(MessageStatus.UNDELIVERED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
+    model.setStatus(MessageStatus.EXPIRED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
+    model.setStatus(MessageStatus.DELETED);
+    Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
+    model.setStatus(MessageStatus.UNKNOWN);
+    Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
   
   }
 
@@ -110,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void fromTest() {
-      
-        
         model.setFrom("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -128,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void toTest() {
-      
-        
         model.setTo("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -146,16 +113,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void textTest() {
-      
-        
         model.setText("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getText());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -164,16 +123,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void directionTest() {
-      
-        
         model.setDirection("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDirection());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -182,16 +133,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void notificationUrlTest() {
-      
-        
         model.setNotificationUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
-        
-        
-        
-        
-      
   
   }
 

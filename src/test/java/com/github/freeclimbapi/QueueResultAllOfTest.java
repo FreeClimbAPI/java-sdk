@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void queueIdTest() {
-      
-        
         model.setQueueId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getQueueId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void maxSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMaxSize(1);
-      Assert.assertEquals(1, (int) model.getMaxSize());
+    model.setMaxSize(1);
+    Assert.assertEquals(1, (int) model.getMaxSize());
   }
 
     /**
@@ -114,16 +83,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void currentSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setCurrentSize(1);
-      Assert.assertEquals(1, (int) model.getCurrentSize());
+    model.setCurrentSize(1);
+    Assert.assertEquals(1, (int) model.getCurrentSize());
   }
 
     /**
@@ -131,16 +93,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void averageQueueRemovalTimeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setAverageQueueRemovalTime(1);
-      Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
+    model.setAverageQueueRemovalTime(1);
+    Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
   }
 
     /**
@@ -148,17 +103,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void subresourceUrisTest() {
-      
-        
-        
-        
-        
-        
           Object testObject = new Object();
           model.setSubresourceUris(testObject);
           Assert.assertEquals(testObject, model.getSubresourceUris());
-        
-      
   
   }
 

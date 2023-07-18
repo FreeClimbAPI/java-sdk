@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void _fileTest() {
-      
-        
         model.setFile("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFile());
-        
-        
-        
-        
-        
-      
   
   }
 

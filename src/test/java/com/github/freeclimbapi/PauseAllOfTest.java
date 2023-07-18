@@ -43,16 +43,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void lengthTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setLength(1);
-      Assert.assertEquals(1, (int) model.getLength());
+    model.setLength(1);
+    Assert.assertEquals(1, (int) model.getLength());
   }
 
   /**

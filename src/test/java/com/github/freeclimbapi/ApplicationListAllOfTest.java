@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void applicationsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
-    model.setApplications(testList);
-    Assert.assertEquals(testList, model.getApplications()); 
+  List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+  model.setApplications(testList);
+  Assert.assertEquals(testList, model.getApplications()); 
   }
 
   /**

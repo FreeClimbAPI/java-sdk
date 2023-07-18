@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void availablePhoneNumbersTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
-    model.setAvailablePhoneNumbers(testList);
-    Assert.assertEquals(testList, model.getAvailablePhoneNumbers()); 
+  List<AvailableNumber> testList = new ArrayList<AvailableNumber>();
+  model.setAvailablePhoneNumbers(testList);
+  Assert.assertEquals(testList, model.getAvailablePhoneNumbers()); 
   }
 
   /**

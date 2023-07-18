@@ -43,11 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(UpdateCallRequestStatus.CANCELED);
-      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
-      model.setStatus(UpdateCallRequestStatus.COMPLETED);
-      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
+    model.setStatus(UpdateCallRequestStatus.CANCELED);
+    Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
+    model.setStatus(UpdateCallRequestStatus.COMPLETED);
+    Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
   
   }
 

@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void pqlTest() {
-      
-        
         model.setPql("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPql());
-        
-        
-        
-        
-        
-      
   
   }
 

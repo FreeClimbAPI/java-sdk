@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void reasonTest() {
-      
-        
         model.setReason("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReason());
-        
-        
-        
-        
-        
-      
   
   }
 

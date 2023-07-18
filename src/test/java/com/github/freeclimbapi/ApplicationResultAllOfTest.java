@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void applicationIdTest() {
-      
-        
         model.setApplicationId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getApplicationId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void aliasTest() {
-      
-        
         model.setAlias("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void voiceUrlTest() {
-      
-        
         model.setVoiceUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void voiceFallbackUrlTest() {
-      
-        
         model.setVoiceFallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -133,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callConnectUrlTest() {
-      
-        
         model.setCallConnectUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -151,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusCallbackUrlTest() {
-      
-        
         model.setStatusCallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -169,16 +113,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void smsUrlTest() {
-      
-        
         model.setSmsUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSmsUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -187,16 +123,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void smsFallbackUrlTest() {
-      
-        
         model.setSmsFallbackUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
-        
-        
-        
-        
-        
-      
   
   }
 

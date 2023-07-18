@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void campaignsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
-    model.setCampaigns(testList);
-    Assert.assertEquals(testList, model.getCampaigns()); 
+  List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+  model.setCampaigns(testList);
+  Assert.assertEquals(testList, model.getCampaigns()); 
   }
 
   /**

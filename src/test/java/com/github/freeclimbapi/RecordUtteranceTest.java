@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void actionUrlTest() {
-      
-        
         model.setActionUrl("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void silenceTimeoutMsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setSilenceTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
+    model.setSilenceTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
   }
 
     /**
@@ -78,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void finishOnKeyTest() {
-      
-        
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -96,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void maxLengthSecTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setMaxLengthSec(1);
-      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+    model.setMaxLengthSec(1);
+    Assert.assertEquals(1, (int) model.getMaxLengthSec());
   }
 
     /**
@@ -113,15 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void playBeepTest() {
-      
         model.setPlayBeep(false);
         Assert.assertEquals(false, model.getPlayBeep());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -130,15 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void autoStartTest() {
-      
         model.setAutoStart(false);
         Assert.assertEquals(false, model.getAutoStart());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -147,15 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void privacyModeTest() {
-      
         model.setPrivacyMode(false);
         Assert.assertEquals(false, model.getPrivacyMode());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -277,28 +226,11 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setActionUrl("TEST_STRING");
-          
-         
-         
-         
-          
         model.setFinishOnKey("TEST_STRING");
-          
-         
-         
-         
         model.setPlayBeep(false);
-         
-         
         model.setAutoStart(false);
-         
-         
         model.setPrivacyMode(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());

@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<CallResult> testList = new ArrayList<CallResult>();
-    model.setCalls(testList);
-    Assert.assertEquals(testList, model.getCalls()); 
+  List<CallResult> testList = new ArrayList<CallResult>();
+  model.setCalls(testList);
+  Assert.assertEquals(testList, model.getCalls()); 
   }
 
   /**

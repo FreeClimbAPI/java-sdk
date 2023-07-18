@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void callIdTest() {
-      
-        
         model.setCallId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,15 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void listenTest() {
-      
         model.setListen(false);
         Assert.assertEquals(false, model.getListen());       
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -151,14 +136,8 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        
-          
         model.setCallId("TEST_STRING");
-          
-         
         model.setListen(false);
-         
-         
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("callId"), model.getCallId());

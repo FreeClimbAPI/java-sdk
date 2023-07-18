@@ -43,16 +43,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void totalTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setTotal(1);
-      Assert.assertEquals(1, (int) model.getTotal());
+    model.setTotal(1);
+    Assert.assertEquals(1, (int) model.getTotal());
   }
 
     /**
@@ -60,16 +53,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void startTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setStart(1);
-      Assert.assertEquals(1, (int) model.getStart());
+    model.setStart(1);
+    Assert.assertEquals(1, (int) model.getStart());
   }
 
     /**
@@ -77,16 +63,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void endTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setEnd(1);
-      Assert.assertEquals(1, (int) model.getEnd());
+    model.setEnd(1);
+    Assert.assertEquals(1, (int) model.getEnd());
   }
 
     /**
@@ -94,16 +73,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void pageTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setPage(1);
-      Assert.assertEquals(1, (int) model.getPage());
+    model.setPage(1);
+    Assert.assertEquals(1, (int) model.getPage());
   }
 
     /**
@@ -111,16 +83,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void numPagesTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setNumPages(1);
-      Assert.assertEquals(1, (int) model.getNumPages());
+    model.setNumPages(1);
+    Assert.assertEquals(1, (int) model.getNumPages());
   }
 
     /**
@@ -128,16 +93,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void pageSizeTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setPageSize(1);
-      Assert.assertEquals(1, (int) model.getPageSize());
+    model.setPageSize(1);
+    Assert.assertEquals(1, (int) model.getPageSize());
   }
 
     /**
@@ -145,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void nextPageUriTest() {
-      
-        
         model.setNextPageUri("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getNextPageUri());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -163,17 +113,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void applicationsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
-    model.setApplications(testList);
-    Assert.assertEquals(testList, model.getApplications()); 
+  List<ApplicationResult> testList = new ArrayList<ApplicationResult>();
+  model.setApplications(testList);
+  Assert.assertEquals(testList, model.getApplications()); 
   }
 
   /**
@@ -229,7 +172,7 @@ import com.github.freeclimbapi.models.*;
         test2.setNumPages(0);
         test2.setPageSize(0);
         test2.setNextPageUri("tS");
-        List<ApplicationResult> testList2 = new ArrayList<ApplicationResult>();
+        List<ApplicationResult> testList2 = null;
         test2.setApplications(testList2);
 
       Assert.assertFalse(test1.equals(test2));

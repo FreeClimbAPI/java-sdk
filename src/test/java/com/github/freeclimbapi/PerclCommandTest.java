@@ -43,8 +43,6 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void commandTest() {
-      
-      
   
   }
 

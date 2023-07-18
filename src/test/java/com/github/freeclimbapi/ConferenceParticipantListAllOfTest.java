@@ -43,17 +43,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void participantsTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-    model.setParticipants(testList);
-    Assert.assertEquals(testList, model.getParticipants()); 
+  List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
+  model.setParticipants(testList);
+  Assert.assertEquals(testList, model.getParticipants()); 
   }
 
   /**

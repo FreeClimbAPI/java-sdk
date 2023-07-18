@@ -43,16 +43,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void accountIdTest() {
-      
-        
         model.setAccountId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -61,16 +53,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void brandIdTest() {
-      
-        
         model.setBrandId("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getBrandId());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -79,16 +63,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void firstNameTest() {
-      
-        
         model.setFirstName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFirstName());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -97,16 +73,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void lastNameTest() {
-      
-        
         model.setLastName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getLastName());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -115,16 +83,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void displayNameTest() {
-      
-        
         model.setDisplayName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDisplayName());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -133,16 +93,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void companyNameTest() {
-      
-        
         model.setCompanyName("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCompanyName());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -151,16 +103,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void phoneTest() {
-      
-        
         model.setPhone("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getPhone());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -169,16 +113,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void emailTest() {
-      
-        
         model.setEmail("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEmail());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -187,16 +123,8 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void websiteTest() {
-      
-        
         model.setWebsite("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getWebsite());
-        
-        
-        
-        
-        
-      
   
   }
 
@@ -205,17 +133,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void optionalAttributesTest() {
-      
-        
-        
-        
-        
-        
-      
   
-    Map<String, Object> testMap = new HashMap();
-    model.setOptionalAttributes(testMap);
-    Assert.assertEquals(testMap, model.getOptionalAttributes()); 
+  Map<String, Object> testMap = new HashMap();
+  model.setOptionalAttributes(testMap);
+  Assert.assertEquals(testMap, model.getOptionalAttributes()); 
   }
 
     /**
@@ -223,16 +144,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void evpVettingScoreTest() {
-      
-        
-        
-        
-        
-        
-      
   
-      model.setEvpVettingScore(1);
-      Assert.assertEquals(1, (int) model.getEvpVettingScore());
+    model.setEvpVettingScore(1);
+    Assert.assertEquals(1, (int) model.getEvpVettingScore());
   }
 
   /**
