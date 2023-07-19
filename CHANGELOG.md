@@ -9,7 +9,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
-<a name="5.4.0"></a>
+<a name="5.4.1"></a>
+
+## [5.4.1] 2023-07-19
+
+### Added
+
+- Updated versioning for the Java SDK
+
+  <a name="5.4.0"></a>
 
 ## [5.4.0] 2023-06-06
 
