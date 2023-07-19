@@ -17,7 +17,7 @@ None
 
 - Updated versioning for the Java SDK
 
-  <a name="5.4.0"></a>
+<a name="5.4.0"></a>
 
 ## [5.4.0] 2023-06-06
 
