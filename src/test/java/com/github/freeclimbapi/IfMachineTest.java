@@ -16,17 +16,69 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for IfMachine
  */
-public class IfMachineTest {
-}
+ public class IfMachineTest {
+  @Test
+    public void testREDIRECTShouldWork() {
+
+        IfMachine test = IfMachine.REDIRECT;
+         Assert.assertEquals(test.getClass(), IfMachine.class);
+    }
+
+    @Test 
+    public void testREDIRECTShouldSerializeToEnum() {
+    
+        IfMachine expectedValue = IfMachine.REDIRECT;
+        IfMachine calculatedValue = IfMachine.fromValue("redirect");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testREDIRECTShouldDeserializeToString() {
+     IfMachine test = IfMachine.REDIRECT;
+      String expectedValue = "redirect";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+      @Test
+    public void testHANGUPShouldWork() {
+
+        IfMachine test = IfMachine.HANGUP;
+         Assert.assertEquals(test.getClass(), IfMachine.class);
+    }
+
+    @Test 
+    public void testHANGUPShouldSerializeToEnum() {
+    
+        IfMachine expectedValue = IfMachine.HANGUP;
+        IfMachine calculatedValue = IfMachine.fromValue("hangup");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testHANGUPShouldDeserializeToString() {
+     IfMachine test = IfMachine.HANGUP;
+      String expectedValue = "hangup";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+    
+ }

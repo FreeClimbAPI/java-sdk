@@ -16,47 +16,118 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Reject
  */
-public class RejectTest {
+ public class RejectTest {
     private final Reject model = new Reject();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("Reject", model.getCommand());
-    }
 
     /**
      * Test the property 'reason'
      */
     @Test
     public void reasonTest() {
+      model.setReason("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getReason());
+      
+    }
 
-        model.setReason("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getReason());
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      Reject test1 = new Reject();
+      test1.setReason("TS");
+      Reject test2 = new Reject();
+      test2.setReason("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      Reject test1 = new Reject();
+      test1.setReason("TS");
+      Reject test2 = new Reject();
+      test2.setReason("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      Reject test1 = new Reject();
+      test1.setReason("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      Reject test1 = new Reject();
+      test1.setReason("TS");
+      Reject test2 = new Reject();
+      test2.setReason("TS");
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      Reject test1 = new Reject();
+      test1.setReason("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Reject", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-         
-        model.setReason("TEST_STRING");  
+        model.setReason("TEST_STRING");
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("reason"), model.getReason());
     }
-}
+ }

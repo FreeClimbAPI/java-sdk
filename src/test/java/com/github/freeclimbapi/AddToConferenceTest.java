@@ -16,38 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AddToConference
  */
-public class AddToConferenceTest {
+ public class AddToConferenceTest {
     private final AddToConference model = new AddToConference();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("AddToConference", model.getCommand());
-    }
 
     /**
      * Test the property 'allowCallControl'
      */
     @Test
     public void allowCallControlTest() {
-        model.setAllowCallControl(false);
-        Assert.assertEquals(false, model.getAllowCallControl());
-        
-        
+      model.setAllowCallControl(false);
+      Assert.assertEquals(false, model.getAllowCallControl());       
+      
     }
 
     /**
@@ -55,11 +53,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void callControlSequenceTest() {
-
-        model.setCallControlSequence("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
-        
-        
+      model.setCallControlSequence("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
+      
     }
 
     /**
@@ -67,11 +63,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void callControlUrlTest() {
-
-        model.setCallControlUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
-        
-        
+      model.setCallControlUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
+      
     }
 
     /**
@@ -79,11 +73,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
     }
 
     /**
@@ -91,10 +83,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void callIdTest() {
-        model.setCallId(false);
-        Assert.assertEquals(false, model.getCallId());
-        
-        
+      model.setCallId(false);
+      Assert.assertEquals(false, model.getCallId());       
+      
     }
 
     /**
@@ -102,11 +93,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void leaveConferenceUrlTest() {
-
-        model.setLeaveConferenceUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
-        
-        
+      model.setLeaveConferenceUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
+      
     }
 
     /**
@@ -114,10 +103,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void listenTest() {
-        model.setListen(false);
-        Assert.assertEquals(false, model.getListen());
-        
-        
+      model.setListen(false);
+      Assert.assertEquals(false, model.getListen());       
+      
     }
 
     /**
@@ -125,11 +113,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void notificationUrlTest() {
-
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
-        
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
     }
 
     /**
@@ -137,10 +123,9 @@ public class AddToConferenceTest {
      */
     @Test
     public void startConfOnEnterTest() {
-        model.setStartConfOnEnter(false);
-        Assert.assertEquals(false, model.getStartConfOnEnter());
-        
-        
+      model.setStartConfOnEnter(false);
+      Assert.assertEquals(false, model.getStartConfOnEnter());       
+      
     }
 
     /**
@@ -148,25 +133,170 @@ public class AddToConferenceTest {
      */
     @Test
     public void talkTest() {
-        model.setTalk(false);
-        Assert.assertEquals(false, model.getTalk());
+      model.setTalk(false);
+      Assert.assertEquals(false, model.getTalk());       
+      
+    }
+
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      AddToConference test1 = new AddToConference();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId(true);
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+      AddToConference test2 = new AddToConference();
+      test2.setAllowCallControl(true);
+      test2.setCallControlSequence("TS");
+      test2.setCallControlUrl("TS");
+      test2.setConferenceId("TS");
+      test2.setCallId(true);
+      test2.setLeaveConferenceUrl("TS");
+      test2.setListen(true);
+      test2.setNotificationUrl("TS");
+      test2.setStartConfOnEnter(true);
+      test2.setTalk(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      AddToConference test1 = new AddToConference();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId(true);
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+      AddToConference test2 = new AddToConference();
+      test2.setAllowCallControl(false);
+      test2.setCallControlSequence("tS");
+      test2.setCallControlUrl("tS");
+      test2.setConferenceId("tS");
+      test2.setCallId(false);
+      test2.setLeaveConferenceUrl("tS");
+      test2.setListen(false);
+      test2.setNotificationUrl("tS");
+      test2.setStartConfOnEnter(false);
+      test2.setTalk(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      AddToConference test1 = new AddToConference();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId(true);
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      AddToConference test1 = new AddToConference();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId(true);
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+      AddToConference test2 = new AddToConference();
+      test2.setAllowCallControl(true);
+      test2.setCallControlSequence("TS");
+      test2.setCallControlUrl("TS");
+      test2.setConferenceId("TS");
+      test2.setCallId(true);
+      test2.setLeaveConferenceUrl("TS");
+      test2.setListen(true);
+      test2.setNotificationUrl("TS");
+      test2.setStartConfOnEnter(true);
+      test2.setTalk(true);
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      AddToConference test1 = new AddToConference();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId(true);
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("AddToConference", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-        
-        model.setAllowCallControl(false);   
-        model.setCallControlSequence("TEST_STRING");   
-        model.setCallControlUrl("TEST_STRING");   
-        model.setConferenceId("TEST_STRING");  
-        model.setCallId(false);   
-        model.setLeaveConferenceUrl("TEST_STRING");  
-        model.setListen(false);   
-        model.setNotificationUrl("TEST_STRING");  
-        model.setStartConfOnEnter(false);  
-        model.setTalk(false);  
+        model.setAllowCallControl(false);
+        model.setCallControlSequence("TEST_STRING");
+        model.setCallControlUrl("TEST_STRING");
+        model.setConferenceId("TEST_STRING");
+        model.setCallId(false);
+        model.setLeaveConferenceUrl("TEST_STRING");
+        model.setListen(false);
+        model.setNotificationUrl("TEST_STRING");
+        model.setStartConfOnEnter(false);
+        model.setTalk(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("allowCallControl"), model.getAllowCallControl());
@@ -180,4 +310,4 @@ public class AddToConferenceTest {
         Assert.assertEquals(attributes.get("startConfOnEnter"), model.getStartConfOnEnter());
         Assert.assertEquals(attributes.get("talk"), model.getTalk());
     }
-}
+ }

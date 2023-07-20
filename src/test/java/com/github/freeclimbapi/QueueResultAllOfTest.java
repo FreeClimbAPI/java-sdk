@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,21 +31,21 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for QueueResultAllOf
  */
-public class QueueResultAllOfTest {
+ public class QueueResultAllOfTest {
     private final QueueResultAllOf model = new QueueResultAllOf();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -49,11 +53,9 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void queueIdTest() {
-
-        model.setQueueId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQueueId());
-        
-        
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
     }
 
     /**
@@ -61,11 +63,9 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -73,8 +73,9 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void maxSizeTest() {
-
-        
+      
+      model.setMaxSize(1);
+      Assert.assertEquals(1, (int) model.getMaxSize());
     }
 
     /**
@@ -82,8 +83,9 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void currentSizeTest() {
-
-        
+      
+      model.setCurrentSize(1);
+      Assert.assertEquals(1, (int) model.getCurrentSize());
     }
 
     /**
@@ -91,8 +93,9 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void averageQueueRemovalTimeTest() {
-
-        
+      
+      model.setAverageQueueRemovalTime(1);
+      Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
     }
 
     /**
@@ -100,8 +103,136 @@ public class QueueResultAllOfTest {
      */
     @Test
     public void subresourceUrisTest() {
-
-        
+      Object testObject = new Object();
+      model.setSubresourceUris(testObject);
+      Assert.assertEquals(testObject, model.getSubresourceUris());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      QueueResultAllOf test2 = new QueueResultAllOf();
+      test2.setAccountId("TS");
+      test2.setQueueId("TS");
+      test2.setAlias("TS");
+      test2.setMaxSize(1);
+      test2.setCurrentSize(1);
+      test2.setAverageQueueRemovalTime(1);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      QueueResultAllOf test2 = new QueueResultAllOf();
+      test2.setAccountId("tS");
+      test2.setQueueId("tS");
+      test2.setAlias("tS");
+      test2.setMaxSize(0);
+      test2.setCurrentSize(0);
+      test2.setAverageQueueRemovalTime(0);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      QueueResultAllOf test2 = new QueueResultAllOf();
+      test2.setAccountId("TS");
+      test2.setQueueId("TS");
+      test2.setAlias("TS");
+      test2.setMaxSize(1);
+      test2.setCurrentSize(1);
+      test2.setAverageQueueRemovalTime(1);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ConferenceResultAllOf
  */
-public class ConferenceResultAllOfTest {
+ public class ConferenceResultAllOfTest {
     private final ConferenceResultAllOf model = new ConferenceResultAllOf();
+
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
     }
 
     /**
@@ -47,11 +53,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -59,11 +63,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -71,8 +73,15 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void playBeepTest() {
-
-        
+      model.setPlayBeep(PlayBeep.ALWAYS);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ALWAYS);
+      model.setPlayBeep(PlayBeep.NEVER);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.NEVER);
+      model.setPlayBeep(PlayBeep.ENTRY_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.ENTRY_ONLY);
+      model.setPlayBeep(PlayBeep.EXIT_ONLY);
+      Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
+      
     }
 
     /**
@@ -80,10 +89,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void recordTest() {
-        model.setRecord(false);
-        Assert.assertEquals(false, model.getRecord());
-        
-        
+      model.setRecord(false);
+      Assert.assertEquals(false, model.getRecord());       
+      
     }
 
     /**
@@ -91,8 +99,15 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void statusTest() {
-
-        
+      model.setStatus(ConferenceStatus.EMPTY);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
+      model.setStatus(ConferenceStatus.POPULATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
+      model.setStatus(ConferenceStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
+      model.setStatus(ConferenceStatus.TERMINATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
+      
     }
 
     /**
@@ -100,11 +115,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void waitUrlTest() {
-
-        model.setWaitUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-        
-        
+      model.setWaitUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+      
     }
 
     /**
@@ -112,11 +125,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void actionUrlTest() {
-
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
     }
 
     /**
@@ -124,11 +135,9 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void statusCallbackUrlTest() {
-
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
+      model.setStatusCallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
+      
     }
 
     /**
@@ -136,8 +145,160 @@ public class ConferenceResultAllOfTest {
      */
     @Test
     public void subresourceUrisTest() {
-
-        
+      Object testObject = new Object();
+      model.setSubresourceUris(testObject);
+      Assert.assertEquals(testObject, model.getSubresourceUris());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      ConferenceResultAllOf test2 = new ConferenceResultAllOf();
+      test2.setConferenceId("TS");
+      test2.setAccountId("TS");
+      test2.setAlias("TS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(true);
+      test2.setStatus(ConferenceStatus.EMPTY);
+      test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.NEVER);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.POPULATED);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      ConferenceResultAllOf test2 = new ConferenceResultAllOf();
+      test2.setConferenceId("tS");
+      test2.setAccountId("tS");
+      test2.setAlias("tS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(false);
+      test2.setStatus(ConferenceStatus.EMPTY);
+      test2.setWaitUrl("tS");
+      test2.setActionUrl("tS");
+      test2.setStatusCallbackUrl("tS");
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      ConferenceResultAllOf test2 = new ConferenceResultAllOf();
+      test2.setConferenceId("TS");
+      test2.setAccountId("TS");
+      test2.setAlias("TS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(true);
+      test2.setStatus(ConferenceStatus.EMPTY);
+      test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

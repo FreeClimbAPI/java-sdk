@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ApplicationRequest
  */
-public class ApplicationRequestTest {
+ public class ApplicationRequestTest {
     private final ApplicationRequest model = new ApplicationRequest();
+
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -47,11 +53,9 @@ public class ApplicationRequestTest {
      */
     @Test
     public void voiceUrlTest() {
-
-        model.setVoiceUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
-        
-        
+      model.setVoiceUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
+      
     }
 
     /**
@@ -59,11 +63,9 @@ public class ApplicationRequestTest {
      */
     @Test
     public void voiceFallbackUrlTest() {
-
-        model.setVoiceFallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
-        
-        
+      model.setVoiceFallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
+      
     }
 
     /**
@@ -71,11 +73,9 @@ public class ApplicationRequestTest {
      */
     @Test
     public void callConnectUrlTest() {
-
-        model.setCallConnectUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
+      model.setCallConnectUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
+      
     }
 
     /**
@@ -83,11 +83,9 @@ public class ApplicationRequestTest {
      */
     @Test
     public void statusCallbackUrlTest() {
-
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
+      model.setStatusCallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
+      
     }
 
     /**
@@ -95,11 +93,9 @@ public class ApplicationRequestTest {
      */
     @Test
     public void smsUrlTest() {
-
-        model.setSmsUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSmsUrl());
-        
-        
+      model.setSmsUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSmsUrl());
+      
     }
 
     /**
@@ -107,11 +103,127 @@ public class ApplicationRequestTest {
      */
     @Test
     public void smsFallbackUrlTest() {
-
-        model.setSmsFallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
-        
-        
+      model.setSmsFallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      ApplicationRequest test1 = new ApplicationRequest();
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationRequest test2 = new ApplicationRequest();
+      test2.setAlias("TS");
+      test2.setVoiceUrl("TS");
+      test2.setVoiceFallbackUrl("TS");
+      test2.setCallConnectUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      test2.setSmsUrl("TS");
+      test2.setSmsFallbackUrl("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      ApplicationRequest test1 = new ApplicationRequest();
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationRequest test2 = new ApplicationRequest();
+      test2.setAlias("tS");
+      test2.setVoiceUrl("tS");
+      test2.setVoiceFallbackUrl("tS");
+      test2.setCallConnectUrl("tS");
+      test2.setStatusCallbackUrl("tS");
+      test2.setSmsUrl("tS");
+      test2.setSmsFallbackUrl("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      ApplicationRequest test1 = new ApplicationRequest();
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      ApplicationRequest test1 = new ApplicationRequest();
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationRequest test2 = new ApplicationRequest();
+      test2.setAlias("TS");
+      test2.setVoiceUrl("TS");
+      test2.setVoiceFallbackUrl("TS");
+      test2.setCallConnectUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      test2.setSmsUrl("TS");
+      test2.setSmsFallbackUrl("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      ApplicationRequest test1 = new ApplicationRequest();
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

@@ -16,27 +16,115 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for IncomingNumberListAllOf
  */
-public class IncomingNumberListAllOfTest {
+ public class IncomingNumberListAllOfTest {
     private final IncomingNumberListAllOf model = new IncomingNumberListAllOf();
+
     /**
      * Test the property 'incomingPhoneNumbers'
      */
     @Test
     public void incomingPhoneNumbersTest() {
-
-        
+      
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      model.setIncomingPhoneNumbers(testList);
+      Assert.assertEquals(testList, model.getIncomingPhoneNumbers()); 
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      IncomingNumberListAllOf test1 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      test1.setIncomingPhoneNumbers(testList);
+      IncomingNumberListAllOf test2 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList2 = testList;
+      test2.setIncomingPhoneNumbers(testList2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      IncomingNumberListAllOf test1 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      test1.setIncomingPhoneNumbers(testList);
+      IncomingNumberListAllOf test2 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList2 = null;
+      test2.setIncomingPhoneNumbers(testList2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      IncomingNumberListAllOf test1 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      test1.setIncomingPhoneNumbers(testList);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      IncomingNumberListAllOf test1 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      test1.setIncomingPhoneNumbers(testList);
+      IncomingNumberListAllOf test2 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList2 = testList;
+      test2.setIncomingPhoneNumbers(testList2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      IncomingNumberListAllOf test1 = new IncomingNumberListAllOf();
+      List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
+      test1.setIncomingPhoneNumbers(testList);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

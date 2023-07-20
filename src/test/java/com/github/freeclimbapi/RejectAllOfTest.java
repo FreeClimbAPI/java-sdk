@@ -16,30 +16,106 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RejectAllOf
  */
-public class RejectAllOfTest {
+ public class RejectAllOfTest {
     private final RejectAllOf model = new RejectAllOf();
+
     /**
      * Test the property 'reason'
      */
     @Test
     public void reasonTest() {
-
-        model.setReason("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getReason());
-        
-        
+      model.setReason("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getReason());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      RejectAllOf test1 = new RejectAllOf();
+      test1.setReason("TS");
+      RejectAllOf test2 = new RejectAllOf();
+      test2.setReason("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      RejectAllOf test1 = new RejectAllOf();
+      test1.setReason("TS");
+      RejectAllOf test2 = new RejectAllOf();
+      test2.setReason("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RejectAllOf test1 = new RejectAllOf();
+      test1.setReason("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RejectAllOf test1 = new RejectAllOf();
+      test1.setReason("TS");
+      RejectAllOf test2 = new RejectAllOf();
+      test2.setReason("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RejectAllOf test1 = new RejectAllOf();
+      test1.setReason("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

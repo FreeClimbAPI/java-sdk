@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for ApplicationResult
  */
-public class ApplicationResultTest {
+ public class ApplicationResultTest {
     private final ApplicationResult model = new ApplicationResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
-        model.setUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
     }
 
     /**
@@ -47,11 +53,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void dateCreatedTest() {
-
-        model.setDateCreated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateCreated());
-        
-        
+      model.setDateCreated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateCreated());
+      
     }
 
     /**
@@ -59,11 +63,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void dateUpdatedTest() {
-
-        model.setDateUpdated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-        
-        
+      model.setDateUpdated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
+      
     }
 
     /**
@@ -71,8 +73,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void revisionTest() {
-
-        
+      
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
     }
 
     /**
@@ -80,11 +83,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -92,11 +93,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void applicationIdTest() {
-
-        model.setApplicationId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getApplicationId());
-        
-        
+      model.setApplicationId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
     }
 
     /**
@@ -104,11 +103,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -116,11 +113,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void voiceUrlTest() {
-
-        model.setVoiceUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
-        
-        
+      model.setVoiceUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
+      
     }
 
     /**
@@ -128,11 +123,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void voiceFallbackUrlTest() {
-
-        model.setVoiceFallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
-        
-        
+      model.setVoiceFallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
+      
     }
 
     /**
@@ -140,11 +133,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void callConnectUrlTest() {
-
-        model.setCallConnectUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
+      model.setCallConnectUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
+      
     }
 
     /**
@@ -152,11 +143,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void statusCallbackUrlTest() {
-
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
-        
+      model.setStatusCallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
+      
     }
 
     /**
@@ -164,11 +153,9 @@ public class ApplicationResultTest {
      */
     @Test
     public void smsUrlTest() {
-
-        model.setSmsUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSmsUrl());
-        
-        
+      model.setSmsUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSmsUrl());
+      
     }
 
     /**
@@ -176,11 +163,175 @@ public class ApplicationResultTest {
      */
     @Test
     public void smsFallbackUrlTest() {
-
-        model.setSmsFallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
-        
-        
+      model.setSmsFallbackUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      ApplicationResult test1 = new ApplicationResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationResult test2 = new ApplicationResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setAccountId("TS");
+      test2.setApplicationId("TS");
+      test2.setAlias("TS");
+      test2.setVoiceUrl("TS");
+      test2.setVoiceFallbackUrl("TS");
+      test2.setCallConnectUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      test2.setSmsUrl("TS");
+      test2.setSmsFallbackUrl("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      ApplicationResult test1 = new ApplicationResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationResult test2 = new ApplicationResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setAccountId("tS");
+      test2.setApplicationId("tS");
+      test2.setAlias("tS");
+      test2.setVoiceUrl("tS");
+      test2.setVoiceFallbackUrl("tS");
+      test2.setCallConnectUrl("tS");
+      test2.setStatusCallbackUrl("tS");
+      test2.setSmsUrl("tS");
+      test2.setSmsFallbackUrl("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      ApplicationResult test1 = new ApplicationResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      ApplicationResult test1 = new ApplicationResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationResult test2 = new ApplicationResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setAccountId("TS");
+      test2.setApplicationId("TS");
+      test2.setAlias("TS");
+      test2.setVoiceUrl("TS");
+      test2.setVoiceFallbackUrl("TS");
+      test2.setCallConnectUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      test2.setSmsUrl("TS");
+      test2.setSmsFallbackUrl("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      ApplicationResult test1 = new ApplicationResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

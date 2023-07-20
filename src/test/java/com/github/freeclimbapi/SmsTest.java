@@ -16,39 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Sms
  */
-public class SmsTest {
+ public class SmsTest {
     private final Sms model = new Sms();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("Sms", model.getCommand());
-    }
 
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
     }
 
     /**
@@ -56,11 +53,9 @@ public class SmsTest {
      */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
     }
 
     /**
@@ -68,11 +63,9 @@ public class SmsTest {
      */
     @Test
     public void textTest() {
-
-        model.setText("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getText());
-        
-        
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
     }
 
     /**
@@ -80,20 +73,116 @@ public class SmsTest {
      */
     @Test
     public void notificationUrlTest() {
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+    }
 
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      Sms test1 = new Sms();
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      Sms test2 = new Sms();
+      test2.setTo("TS");
+      test2.setFrom("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      Sms test1 = new Sms();
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      Sms test2 = new Sms();
+      test2.setTo("tS");
+      test2.setFrom("tS");
+      test2.setText("tS");
+      test2.setNotificationUrl("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      Sms test1 = new Sms();
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      Sms test1 = new Sms();
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+      Sms test2 = new Sms();
+      test2.setTo("TS");
+      test2.setFrom("TS");
+      test2.setText("TS");
+      test2.setNotificationUrl("TS");
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      Sms test1 = new Sms();
+      test1.setTo("TS");
+      test1.setFrom("TS");
+      test1.setText("TS");
+      test1.setNotificationUrl("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Sms", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-         
-        model.setTo("TEST_STRING");   
-        model.setFrom("TEST_STRING");   
-        model.setText("TEST_STRING");   
-        model.setNotificationUrl("TEST_STRING");  
+        model.setTo("TEST_STRING");
+        model.setFrom("TEST_STRING");
+        model.setText("TEST_STRING");
+        model.setNotificationUrl("TEST_STRING");
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("to"), model.getTo());
@@ -101,4 +190,4 @@ public class SmsTest {
         Assert.assertEquals(attributes.get("text"), model.getText());
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
     }
-}
+ }

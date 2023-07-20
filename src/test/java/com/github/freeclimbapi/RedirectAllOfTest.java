@@ -16,30 +16,106 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RedirectAllOf
  */
-public class RedirectAllOfTest {
+ public class RedirectAllOfTest {
     private final RedirectAllOf model = new RedirectAllOf();
+
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      RedirectAllOf test1 = new RedirectAllOf();
+      test1.setActionUrl("TS");
+      RedirectAllOf test2 = new RedirectAllOf();
+      test2.setActionUrl("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      RedirectAllOf test1 = new RedirectAllOf();
+      test1.setActionUrl("TS");
+      RedirectAllOf test2 = new RedirectAllOf();
+      test2.setActionUrl("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RedirectAllOf test1 = new RedirectAllOf();
+      test1.setActionUrl("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RedirectAllOf test1 = new RedirectAllOf();
+      test1.setActionUrl("TS");
+      RedirectAllOf test2 = new RedirectAllOf();
+      test2.setActionUrl("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RedirectAllOf test1 = new RedirectAllOf();
+      test1.setActionUrl("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

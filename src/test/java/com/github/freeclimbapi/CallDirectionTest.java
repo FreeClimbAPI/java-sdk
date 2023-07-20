@@ -16,17 +16,91 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for CallDirection
  */
-public class CallDirectionTest {
-}
+ public class CallDirectionTest {
+  @Test
+    public void testINBOUNDShouldWork() {
+
+        CallDirection test = CallDirection.INBOUND;
+         Assert.assertEquals(test.getClass(), CallDirection.class);
+    }
+
+    @Test 
+    public void testINBOUNDShouldSerializeToEnum() {
+    
+        CallDirection expectedValue = CallDirection.INBOUND;
+        CallDirection calculatedValue = CallDirection.fromValue("inbound");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testINBOUNDShouldDeserializeToString() {
+     CallDirection test = CallDirection.INBOUND;
+      String expectedValue = "inbound";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+      @Test
+    public void testOUTBOUND_APIShouldWork() {
+
+        CallDirection test = CallDirection.OUTBOUND_API;
+         Assert.assertEquals(test.getClass(), CallDirection.class);
+    }
+
+    @Test 
+    public void testOUTBOUND_APIShouldSerializeToEnum() {
+    
+        CallDirection expectedValue = CallDirection.OUTBOUND_API;
+        CallDirection calculatedValue = CallDirection.fromValue("outboundAPI");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testOUTBOUND_APIShouldDeserializeToString() {
+     CallDirection test = CallDirection.OUTBOUND_API;
+      String expectedValue = "outboundAPI";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+      @Test
+    public void testOUTBOUND_DIALShouldWork() {
+
+        CallDirection test = CallDirection.OUTBOUND_DIAL;
+         Assert.assertEquals(test.getClass(), CallDirection.class);
+    }
+
+    @Test 
+    public void testOUTBOUND_DIALShouldSerializeToEnum() {
+    
+        CallDirection expectedValue = CallDirection.OUTBOUND_DIAL;
+        CallDirection calculatedValue = CallDirection.fromValue("outboundDial");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testOUTBOUND_DIALShouldDeserializeToString() {
+     CallDirection test = CallDirection.OUTBOUND_DIAL;
+      String expectedValue = "outboundDial";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+    
+ }

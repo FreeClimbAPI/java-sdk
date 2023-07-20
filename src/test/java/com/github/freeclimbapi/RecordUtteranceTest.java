@@ -16,39 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordUtterance
  */
-public class RecordUtteranceTest {
+ public class RecordUtteranceTest {
     private final RecordUtterance model = new RecordUtterance();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("RecordUtterance", model.getCommand());
-    }
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
     }
 
     /**
@@ -56,8 +53,9 @@ public class RecordUtteranceTest {
      */
     @Test
     public void silenceTimeoutMsTest() {
-
-        
+      
+      model.setSilenceTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
     }
 
     /**
@@ -65,11 +63,9 @@ public class RecordUtteranceTest {
      */
     @Test
     public void finishOnKeyTest() {
-
-        model.setFinishOnKey("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-        
-        
+      model.setFinishOnKey("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
+      
     }
 
     /**
@@ -77,8 +73,9 @@ public class RecordUtteranceTest {
      */
     @Test
     public void maxLengthSecTest() {
-
-        
+      
+      model.setMaxLengthSec(1);
+      Assert.assertEquals(1, (int) model.getMaxLengthSec());
     }
 
     /**
@@ -86,10 +83,9 @@ public class RecordUtteranceTest {
      */
     @Test
     public void playBeepTest() {
-        model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());
-        
-        
+      model.setPlayBeep(false);
+      Assert.assertEquals(false, model.getPlayBeep());       
+      
     }
 
     /**
@@ -97,10 +93,9 @@ public class RecordUtteranceTest {
      */
     @Test
     public void autoStartTest() {
-        model.setAutoStart(false);
-        Assert.assertEquals(false, model.getAutoStart());
-        
-        
+      model.setAutoStart(false);
+      Assert.assertEquals(false, model.getAutoStart());       
+      
     }
 
     /**
@@ -108,20 +103,141 @@ public class RecordUtteranceTest {
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
+
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      RecordUtterance test1 = new RecordUtterance();
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+      RecordUtterance test2 = new RecordUtterance();
+      test2.setActionUrl("TS");
+      test2.setSilenceTimeoutMs(1);
+      test2.setFinishOnKey("TS");
+      test2.setMaxLengthSec(1);
+      test2.setPlayBeep(true);
+      test2.setAutoStart(true);
+      test2.setPrivacyMode(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      RecordUtterance test1 = new RecordUtterance();
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+      RecordUtterance test2 = new RecordUtterance();
+      test2.setActionUrl("tS");
+      test2.setSilenceTimeoutMs(0);
+      test2.setFinishOnKey("tS");
+      test2.setMaxLengthSec(0);
+      test2.setPlayBeep(false);
+      test2.setAutoStart(false);
+      test2.setPrivacyMode(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RecordUtterance test1 = new RecordUtterance();
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RecordUtterance test1 = new RecordUtterance();
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+      RecordUtterance test2 = new RecordUtterance();
+      test2.setActionUrl("TS");
+      test2.setSilenceTimeoutMs(1);
+      test2.setFinishOnKey("TS");
+      test2.setMaxLengthSec(1);
+      test2.setPlayBeep(true);
+      test2.setAutoStart(true);
+      test2.setPrivacyMode(true);
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RecordUtterance test1 = new RecordUtterance();
+      test1.setActionUrl("TS");
+      test1.setSilenceTimeoutMs(1);
+      test1.setFinishOnKey("TS");
+      test1.setMaxLengthSec(1);
+      test1.setPlayBeep(true);
+      test1.setAutoStart(true);
+      test1.setPrivacyMode(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("RecordUtterance", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-         
-        model.setActionUrl("TEST_STRING");     
-        model.setFinishOnKey("TEST_STRING");    
-        model.setPlayBeep(false);  
-        model.setAutoStart(false);  
-        model.setPrivacyMode(false);  
+        model.setActionUrl("TEST_STRING");
+        model.setFinishOnKey("TEST_STRING");
+        model.setPlayBeep(false);
+        model.setAutoStart(false);
+        model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -132,4 +248,4 @@ public class RecordUtteranceTest {
         Assert.assertEquals(attributes.get("autoStart"), model.getAutoStart());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
     }
-}
+ }

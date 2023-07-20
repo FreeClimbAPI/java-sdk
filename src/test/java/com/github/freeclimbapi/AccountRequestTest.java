@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for AccountRequest
  */
-public class AccountRequestTest {
+ public class AccountRequestTest {
     private final AccountRequest model = new AccountRequest();
+
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -47,11 +53,87 @@ public class AccountRequestTest {
      */
     @Test
     public void labelTest() {
-
-        model.setLabel("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getLabel());
-        
-        
+      model.setLabel("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getLabel());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      AccountRequest test1 = new AccountRequest();
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      AccountRequest test2 = new AccountRequest();
+      test2.setAlias("TS");
+      test2.setLabel("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      AccountRequest test1 = new AccountRequest();
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      AccountRequest test2 = new AccountRequest();
+      test2.setAlias("tS");
+      test2.setLabel("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      AccountRequest test1 = new AccountRequest();
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      AccountRequest test1 = new AccountRequest();
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      AccountRequest test2 = new AccountRequest();
+      test2.setAlias("TS");
+      test2.setLabel("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      AccountRequest test1 = new AccountRequest();
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

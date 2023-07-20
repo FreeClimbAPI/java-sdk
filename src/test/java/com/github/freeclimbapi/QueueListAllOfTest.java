@@ -16,27 +16,115 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for QueueListAllOf
  */
-public class QueueListAllOfTest {
+ public class QueueListAllOfTest {
     private final QueueListAllOf model = new QueueListAllOf();
+
     /**
      * Test the property 'queues'
      */
     @Test
     public void queuesTest() {
-
-        
+      
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      model.setQueues(testList);
+      Assert.assertEquals(testList, model.getQueues()); 
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      QueueListAllOf test1 = new QueueListAllOf();
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      QueueListAllOf test2 = new QueueListAllOf();
+      List<QueueResult> testList2 = testList;
+      test2.setQueues(testList2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      QueueListAllOf test1 = new QueueListAllOf();
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      QueueListAllOf test2 = new QueueListAllOf();
+      List<QueueResult> testList2 = null;
+      test2.setQueues(testList2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      QueueListAllOf test1 = new QueueListAllOf();
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      QueueListAllOf test1 = new QueueListAllOf();
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      QueueListAllOf test2 = new QueueListAllOf();
+      List<QueueResult> testList2 = testList;
+      test2.setQueues(testList2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      QueueListAllOf test1 = new QueueListAllOf();
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

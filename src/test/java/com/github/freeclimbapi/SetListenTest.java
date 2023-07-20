@@ -16,39 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SetListen
  */
-public class SetListenTest {
+ public class SetListenTest {
     private final SetListen model = new SetListen();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-
-        Assert.assertEquals("SetListen", model.getCommand());
-    }
 
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
     }
 
     /**
@@ -56,20 +53,101 @@ public class SetListenTest {
      */
     @Test
     public void listenTest() {
-        model.setListen(false);
-        Assert.assertEquals(false, model.getListen());
+      model.setListen(false);
+      Assert.assertEquals(false, model.getListen());       
+      
+    }
+
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      SetListen test1 = new SetListen();
+      test1.setCallId("TS");
+      test1.setListen(true);
+      SetListen test2 = new SetListen();
+      test2.setCallId("TS");
+      test2.setListen(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      SetListen test1 = new SetListen();
+      test1.setCallId("TS");
+      test1.setListen(true);
+      SetListen test2 = new SetListen();
+      test2.setCallId("tS");
+      test2.setListen(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SetListen test1 = new SetListen();
+      test1.setCallId("TS");
+      test1.setListen(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SetListen test1 = new SetListen();
+      test1.setCallId("TS");
+      test1.setListen(true);
+      SetListen test2 = new SetListen();
+      test2.setCallId("TS");
+      test2.setListen(true);
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SetListen test1 = new SetListen();
+      test1.setCallId("TS");
+      test1.setListen(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("SetListen", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-         
-        model.setCallId("TEST_STRING");  
-        model.setListen(false);  
+        model.setCallId("TEST_STRING");
+        model.setListen(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("callId"), model.getCallId());
         Assert.assertEquals(attributes.get("listen"), model.getListen());
     }
-}
+ }

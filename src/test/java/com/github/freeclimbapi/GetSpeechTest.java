@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,31 +31,26 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for GetSpeech
  */
-public class GetSpeechTest {
+ public class GetSpeechTest {
     private final GetSpeech model = new GetSpeech();
-    /**
-     * Test the property 'command'
-     */
-    @Test
-    public void commandTest() {
-        Assert.assertEquals("GetSpeech", model.getCommand());
-    }
 
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
-        try {
-            URI variable = new URI("TEST_STRING");
-            model.setActionUrl(variable); 
-            Assert.assertEquals(variable, model.getActionUrl());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } 
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
 
     /**
@@ -59,8 +58,11 @@ public class GetSpeechTest {
      */
     @Test
     public void grammarTypeTest() {
-
-        
+      model.setGrammarType(GrammarType.URL);
+      Assert.assertEquals(model.getGrammarType(),GrammarType.URL);
+      model.setGrammarType(GrammarType.BUILT_IN);
+      Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
+      
     }
 
     /**
@@ -68,11 +70,9 @@ public class GetSpeechTest {
      */
     @Test
     public void grammarFileTest() {
-
-        model.setGrammarFile("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getGrammarFile());
-        
-        
+      model.setGrammarFile("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getGrammarFile());
+      
     }
 
     /**
@@ -80,11 +80,9 @@ public class GetSpeechTest {
      */
     @Test
     public void grammarRuleTest() {
-
-        model.setGrammarRule("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getGrammarRule());
-        
-        
+      model.setGrammarRule("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getGrammarRule());
+      
     }
 
     /**
@@ -92,10 +90,9 @@ public class GetSpeechTest {
      */
     @Test
     public void playBeepTest() {
-        model.setPlayBeep(false);
-        Assert.assertEquals(false, model.getPlayBeep());
-        
-        
+      model.setPlayBeep(false);
+      Assert.assertEquals(false, model.getPlayBeep());       
+      
     }
 
     /**
@@ -103,8 +100,10 @@ public class GetSpeechTest {
      */
     @Test
     public void promptsTest() {
-
-        
+      
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      model.setPrompts(testList);
+      Assert.assertEquals(testList, model.getPrompts()); 
     }
 
     /**
@@ -112,8 +111,9 @@ public class GetSpeechTest {
      */
     @Test
     public void noInputTimeoutMsTest() {
-
-        
+      
+      model.setNoInputTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
     }
 
     /**
@@ -121,8 +121,9 @@ public class GetSpeechTest {
      */
     @Test
     public void recognitionTimeoutMsTest() {
-
-        
+      
+      model.setRecognitionTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
     }
 
     /**
@@ -130,11 +131,9 @@ public class GetSpeechTest {
      */
     @Test
     public void confidenceThresholdTest() {
-
-        
-        model.setConfidenceThreshold(new BigDecimal(1.0));
-        Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
-        
+      model.setConfidenceThreshold(new BigDecimal(1.0));
+      Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
+      
     }
 
     /**
@@ -142,11 +141,9 @@ public class GetSpeechTest {
      */
     @Test
     public void sensitivityLevelTest() {
-
-        
-        model.setSensitivityLevel(new BigDecimal(1.0));
-        Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
-        
+      model.setSensitivityLevel(new BigDecimal(1.0));
+      Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
+      
     }
 
     /**
@@ -154,8 +151,9 @@ public class GetSpeechTest {
      */
     @Test
     public void speechCompleteTimeoutMsTest() {
-
-        
+      
+      model.setSpeechCompleteTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
     }
 
     /**
@@ -163,8 +161,9 @@ public class GetSpeechTest {
      */
     @Test
     public void speechIncompleteTimeoutMsTest() {
-
-        
+      
+      model.setSpeechIncompleteTimeoutMs(1);
+      Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
     }
 
     /**
@@ -172,26 +171,222 @@ public class GetSpeechTest {
      */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
+    }
+
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+      GetSpeech test2 = new GetSpeech();
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test2.setGrammarType(GrammarType.URL);
+      test2.setGrammarFile("TS");
+      test2.setGrammarRule("TS");
+      test2.setPlayBeep(true);
+      List<PerclCommand> testList2 = testList;
+      test2.setPrompts(testList2);
+      test2.setNoInputTimeoutMs(1);
+      test2.setRecognitionTimeoutMs(1);
+      test2.setSpeechCompleteTimeoutMs(1);
+      test2.setSpeechIncompleteTimeoutMs(1);
+      test2.setPrivacyMode(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.BUILT_IN);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+      GetSpeech test2 = new GetSpeech();
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test2.setGrammarType(GrammarType.URL);
+      test2.setGrammarFile("tS");
+      test2.setGrammarRule("tS");
+      test2.setPlayBeep(false);
+      List<PerclCommand> testList2 = null;
+      test2.setPrompts(testList2);
+      test2.setNoInputTimeoutMs(0);
+      test2.setRecognitionTimeoutMs(0);
+      test2.setSpeechCompleteTimeoutMs(0);
+      test2.setSpeechIncompleteTimeoutMs(0);
+      test2.setPrivacyMode(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+      GetSpeech test2 = new GetSpeech();
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test2.setGrammarType(GrammarType.URL);
+      test2.setGrammarFile("TS");
+      test2.setGrammarRule("TS");
+      test2.setPlayBeep(true);
+      List<PerclCommand> testList2 = testList;
+      test2.setPrompts(testList2);
+      test2.setNoInputTimeoutMs(1);
+      test2.setRecognitionTimeoutMs(1);
+      test2.setSpeechCompleteTimeoutMs(1);
+      test2.setSpeechIncompleteTimeoutMs(1);
+      test2.setPrivacyMode(true);
         
-        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("GetSpeech", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-        try {
-            URI variable = new URI("TEST_STRING");
-            model.setActionUrl(variable); 
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }     
-        model.setGrammarFile("TEST_STRING");   
-        model.setGrammarRule("TEST_STRING");  
-        model.setPlayBeep(false);          
-        model.setConfidenceThreshold(new BigDecimal(1.0));  
-        model.setSensitivityLevel(new BigDecimal(1.0));    
-        model.setPrivacyMode(false);  
+        model.setGrammarFile("TEST_STRING");
+        model.setGrammarRule("TEST_STRING");
+        model.setPlayBeep(false);
+        model.setConfidenceThreshold(new BigDecimal(1.0));
+        model.setSensitivityLevel(new BigDecimal(1.0));
+        model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -208,4 +403,4 @@ public class GetSpeechTest {
         Assert.assertEquals(attributes.get("speechIncompleteTimeoutMs"), model.getSpeechIncompleteTimeoutMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
     }
-}
+ }

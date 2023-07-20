@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,21 +31,21 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for CallResult
  */
-public class CallResultTest {
+ public class CallResultTest {
     private final CallResult model = new CallResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
-        model.setUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
     }
 
     /**
@@ -49,11 +53,9 @@ public class CallResultTest {
      */
     @Test
     public void dateCreatedTest() {
-
-        model.setDateCreated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateCreated());
-        
-        
+      model.setDateCreated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateCreated());
+      
     }
 
     /**
@@ -61,11 +63,9 @@ public class CallResultTest {
      */
     @Test
     public void dateUpdatedTest() {
-
-        model.setDateUpdated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-        
-        
+      model.setDateUpdated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
+      
     }
 
     /**
@@ -73,8 +73,9 @@ public class CallResultTest {
      */
     @Test
     public void revisionTest() {
-
-        
+      
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
     }
 
     /**
@@ -82,11 +83,9 @@ public class CallResultTest {
      */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
     }
 
     /**
@@ -94,11 +93,9 @@ public class CallResultTest {
      */
     @Test
     public void parentCallIdTest() {
-
-        model.setParentCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getParentCallId());
-        
-        
+      model.setParentCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getParentCallId());
+      
     }
 
     /**
@@ -106,11 +103,9 @@ public class CallResultTest {
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -118,11 +113,9 @@ public class CallResultTest {
      */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
-        
-        
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
     }
 
     /**
@@ -130,11 +123,9 @@ public class CallResultTest {
      */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
-        
-        
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
     }
 
     /**
@@ -142,11 +133,9 @@ public class CallResultTest {
      */
     @Test
     public void phoneNumberIdTest() {
-
-        model.setPhoneNumberId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
-        
-        
+      model.setPhoneNumberId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
+      
     }
 
     /**
@@ -154,8 +143,23 @@ public class CallResultTest {
      */
     @Test
     public void callStatusTest() {
-
-        
+      model.setCallStatus(CallStatus.QUEUED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+      model.setCallStatus(CallStatus.RINGING);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+      model.setCallStatus(CallStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+      model.setCallStatus(CallStatus.CANCELED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+      model.setCallStatus(CallStatus.COMPLETED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+      model.setCallStatus(CallStatus.FAILED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+      model.setCallStatus(CallStatus.BUSY);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+      model.setCallStatus(CallStatus.NO_ANSWER);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+      
     }
 
     /**
@@ -163,11 +167,9 @@ public class CallResultTest {
      */
     @Test
     public void startTimeTest() {
-
-        model.setStartTime("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStartTime());
-        
-        
+      model.setStartTime("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getStartTime());
+      
     }
 
     /**
@@ -175,11 +177,9 @@ public class CallResultTest {
      */
     @Test
     public void connectTimeTest() {
-
-        model.setConnectTime("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConnectTime());
-        
-        
+      model.setConnectTime("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConnectTime());
+      
     }
 
     /**
@@ -187,11 +187,9 @@ public class CallResultTest {
      */
     @Test
     public void endTimeTest() {
-
-        model.setEndTime("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getEndTime());
-        
-        
+      model.setEndTime("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getEndTime());
+      
     }
 
     /**
@@ -199,8 +197,9 @@ public class CallResultTest {
      */
     @Test
     public void durationTest() {
-
-        
+      
+      model.setDuration(1);
+      Assert.assertEquals(1, (int) model.getDuration());
     }
 
     /**
@@ -208,8 +207,9 @@ public class CallResultTest {
      */
     @Test
     public void connectDurationTest() {
-
-        
+      
+      model.setConnectDuration(1);
+      Assert.assertEquals(1, (int) model.getConnectDuration());
     }
 
     /**
@@ -217,8 +217,13 @@ public class CallResultTest {
      */
     @Test
     public void directionTest() {
-
-        
+      model.setDirection(CallDirection.INBOUND);
+      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+      model.setDirection(CallDirection.OUTBOUND_API);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+      model.setDirection(CallDirection.OUTBOUND_DIAL);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+      
     }
 
     /**
@@ -226,8 +231,11 @@ public class CallResultTest {
      */
     @Test
     public void answeredByTest() {
-
-        
+      model.setAnsweredBy(AnsweredBy.HUMAN);
+      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.HUMAN);
+      model.setAnsweredBy(AnsweredBy.MACHINE);
+      Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
+      
     }
 
     /**
@@ -235,8 +243,232 @@ public class CallResultTest {
      */
     @Test
     public void subresourceUrisTest() {
-
-        
+      Object testObject = new Object();
+      model.setSubresourceUris(testObject);
+      Assert.assertEquals(testObject, model.getSubresourceUris());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResult test2 = new CallResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setCallId("TS");
+      test2.setParentCallId("TS");
+      test2.setAccountId("TS");
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("TS");
+      test2.setConnectTime("TS");
+      test2.setEndTime("TS");
+      test2.setDuration(1);
+      test2.setConnectDuration(1);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.RINGING);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+      test1.setAnsweredBy(AnsweredBy.MACHINE);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResult test2 = new CallResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setCallId("tS");
+      test2.setParentCallId("tS");
+      test2.setAccountId("tS");
+      test2.setFrom("tS");
+      test2.setTo("tS");
+      test2.setPhoneNumberId("tS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("tS");
+      test2.setConnectTime("tS");
+      test2.setEndTime("tS");
+      test2.setDuration(0);
+      test2.setConnectDuration(0);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResult test2 = new CallResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setCallId("TS");
+      test2.setParentCallId("TS");
+      test2.setAccountId("TS");
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("TS");
+      test2.setConnectTime("TS");
+      test2.setEndTime("TS");
+      test2.setDuration(1);
+      test2.setConnectDuration(1);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

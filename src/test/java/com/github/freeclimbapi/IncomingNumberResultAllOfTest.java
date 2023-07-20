@@ -16,27 +16,37 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for IncomingNumberResultAllOf
  */
-public class IncomingNumberResultAllOfTest {
+ public class IncomingNumberResultAllOfTest {
     private final IncomingNumberResultAllOf model = new IncomingNumberResultAllOf();
+
     /**
      * Test the property 'capabilities'
      */
     @Test
     public void capabilitiesTest() {
-
-        
+      Capabilities object = new Capabilities();
+      model.setCapabilities(object);
+      Assert.assertEquals(object.getClass(), Capabilities.class);
+      
     }
 
     /**
@@ -44,11 +54,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void campaignIdTest() {
-
-        model.setCampaignId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCampaignId());
-        
-        
+      model.setCampaignId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
     }
 
     /**
@@ -56,11 +64,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void phoneNumberIdTest() {
-
-        model.setPhoneNumberId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
-        
-        
+      model.setPhoneNumberId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
+      
     }
 
     /**
@@ -68,11 +74,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -80,11 +84,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void applicationIdTest() {
-
-        model.setApplicationId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getApplicationId());
-        
-        
+      model.setApplicationId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
     }
 
     /**
@@ -92,11 +94,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void phoneNumberTest() {
-
-        model.setPhoneNumber("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
-        
-        
+      model.setPhoneNumber("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
+      
     }
 
     /**
@@ -104,11 +104,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void aliasTest() {
-
-        model.setAlias("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAlias());
-        
-        
+      model.setAlias("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAlias());
+      
     }
 
     /**
@@ -116,11 +114,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void regionTest() {
-
-        model.setRegion("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRegion());
-        
-        
+      model.setRegion("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRegion());
+      
     }
 
     /**
@@ -128,11 +124,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void countryTest() {
-
-        model.setCountry("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCountry());
-        
-        
+      model.setCountry("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCountry());
+      
     }
 
     /**
@@ -140,10 +134,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void voiceEnabledTest() {
-        model.setVoiceEnabled(false);
-        Assert.assertEquals(false, model.getVoiceEnabled());
-        
-        
+      model.setVoiceEnabled(false);
+      Assert.assertEquals(false, model.getVoiceEnabled());       
+      
     }
 
     /**
@@ -151,10 +144,9 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void smsEnabledTest() {
-        model.setSmsEnabled(false);
-        Assert.assertEquals(false, model.getSmsEnabled());
-        
-        
+      model.setSmsEnabled(false);
+      Assert.assertEquals(false, model.getSmsEnabled());       
+      
     }
 
     /**
@@ -162,10 +154,175 @@ public class IncomingNumberResultAllOfTest {
      */
     @Test
     public void offnetTest() {
-        model.setOffnet(false);
-        Assert.assertEquals(false, model.getOffnet());
-        
-        
+      model.setOffnet(false);
+      Assert.assertEquals(false, model.getOffnet());       
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      IncomingNumberResultAllOf test1 = new IncomingNumberResultAllOf();
+      Capabilities object = new Capabilities();
+      test1.setCapabilities(object);
+      test1.setCampaignId("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setPhoneNumber("TS");
+      test1.setAlias("TS");
+      test1.setRegion("TS");
+      test1.setCountry("TS");
+      test1.setVoiceEnabled(true);
+      test1.setSmsEnabled(true);
+      test1.setOffnet(true);
+      IncomingNumberResultAllOf test2 = new IncomingNumberResultAllOf();
+      Capabilities object2 = object;
+      test2.setCapabilities(object2);
+      test2.setCampaignId("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setAccountId("TS");
+      test2.setApplicationId("TS");
+      test2.setPhoneNumber("TS");
+      test2.setAlias("TS");
+      test2.setRegion("TS");
+      test2.setCountry("TS");
+      test2.setVoiceEnabled(true);
+      test2.setSmsEnabled(true);
+      test2.setOffnet(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      IncomingNumberResultAllOf test1 = new IncomingNumberResultAllOf();
+        Capabilities object = new Capabilities();
+      test1.setCapabilities(object);
+      test1.setCampaignId("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setPhoneNumber("TS");
+      test1.setAlias("TS");
+      test1.setRegion("TS");
+      test1.setCountry("TS");
+      test1.setVoiceEnabled(true);
+      test1.setSmsEnabled(true);
+      test1.setOffnet(true);
+      IncomingNumberResultAllOf test2 = new IncomingNumberResultAllOf();
+      Capabilities object2 = new Capabilities();
+      test2.setCapabilities(object2);
+      test2.setCampaignId("tS");
+      test2.setPhoneNumberId("tS");
+      test2.setAccountId("tS");
+      test2.setApplicationId("tS");
+      test2.setPhoneNumber("tS");
+      test2.setAlias("tS");
+      test2.setRegion("tS");
+      test2.setCountry("tS");
+      test2.setVoiceEnabled(false);
+      test2.setSmsEnabled(false);
+      test2.setOffnet(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      IncomingNumberResultAllOf test1 = new IncomingNumberResultAllOf();
+      Capabilities object = new Capabilities();
+      test1.setCapabilities(object);
+      test1.setCampaignId("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setPhoneNumber("TS");
+      test1.setAlias("TS");
+      test1.setRegion("TS");
+      test1.setCountry("TS");
+      test1.setVoiceEnabled(true);
+      test1.setSmsEnabled(true);
+      test1.setOffnet(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      IncomingNumberResultAllOf test1 = new IncomingNumberResultAllOf();
+        Capabilities object = new Capabilities();
+      test1.setCapabilities(object);
+      test1.setCampaignId("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setPhoneNumber("TS");
+      test1.setAlias("TS");
+      test1.setRegion("TS");
+      test1.setCountry("TS");
+      test1.setVoiceEnabled(true);
+      test1.setSmsEnabled(true);
+      test1.setOffnet(true);
+      IncomingNumberResultAllOf test2 = new IncomingNumberResultAllOf();
+      Capabilities object2 = object;
+      test2.setCapabilities(object2);
+      test2.setCampaignId("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setAccountId("TS");
+      test2.setApplicationId("TS");
+      test2.setPhoneNumber("TS");
+      test2.setAlias("TS");
+      test2.setRegion("TS");
+      test2.setCountry("TS");
+      test2.setVoiceEnabled(true);
+      test2.setSmsEnabled(true);
+      test2.setOffnet(true);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      IncomingNumberResultAllOf test1 = new IncomingNumberResultAllOf();
+      Capabilities object = new Capabilities();
+      test1.setCapabilities(object);
+      test1.setCampaignId("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setPhoneNumber("TS");
+      test1.setAlias("TS");
+      test1.setRegion("TS");
+      test1.setCountry("TS");
+      test1.setVoiceEnabled(true);
+      test1.setSmsEnabled(true);
+      test1.setOffnet(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

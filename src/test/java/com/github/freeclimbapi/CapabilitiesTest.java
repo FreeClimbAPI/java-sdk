@@ -16,29 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for Capabilities
  */
-public class CapabilitiesTest {
+ public class CapabilitiesTest {
     private final Capabilities model = new Capabilities();
+
     /**
      * Test the property 'voice'
      */
     @Test
     public void voiceTest() {
-        model.setVoice(false);
-        Assert.assertEquals(false, model.getVoice());
-        
-        
+      model.setVoice(false);
+      Assert.assertEquals(false, model.getVoice());       
+      
     }
 
     /**
@@ -46,10 +53,9 @@ public class CapabilitiesTest {
      */
     @Test
     public void smsTest() {
-        model.setSms(false);
-        Assert.assertEquals(false, model.getSms());
-        
-        
+      model.setSms(false);
+      Assert.assertEquals(false, model.getSms());       
+      
     }
 
     /**
@@ -57,10 +63,9 @@ public class CapabilitiesTest {
      */
     @Test
     public void tollFreeTest() {
-        model.setTollFree(false);
-        Assert.assertEquals(false, model.getTollFree());
-        
-        
+      model.setTollFree(false);
+      Assert.assertEquals(false, model.getTollFree());       
+      
     }
 
     /**
@@ -68,10 +73,9 @@ public class CapabilitiesTest {
      */
     @Test
     public void tenDLCTest() {
-        model.setTenDLC(false);
-        Assert.assertEquals(false, model.getTenDLC());
-        
-        
+      model.setTenDLC(false);
+      Assert.assertEquals(false, model.getTenDLC());       
+      
     }
 
     /**
@@ -79,10 +83,111 @@ public class CapabilitiesTest {
      */
     @Test
     public void shortCodeTest() {
-        model.setShortCode(false);
-        Assert.assertEquals(false, model.getShortCode());
-        
-        
+      model.setShortCode(false);
+      Assert.assertEquals(false, model.getShortCode());       
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      Capabilities test1 = new Capabilities();
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+      Capabilities test2 = new Capabilities();
+      test2.setVoice(true);
+      test2.setSms(true);
+      test2.setTollFree(true);
+      test2.setTenDLC(true);
+      test2.setShortCode(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      Capabilities test1 = new Capabilities();
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+      Capabilities test2 = new Capabilities();
+      test2.setVoice(false);
+      test2.setSms(false);
+      test2.setTollFree(false);
+      test2.setTenDLC(false);
+      test2.setShortCode(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      Capabilities test1 = new Capabilities();
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      Capabilities test1 = new Capabilities();
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+      Capabilities test2 = new Capabilities();
+      test2.setVoice(true);
+      test2.setSms(true);
+      test2.setTollFree(true);
+      test2.setTenDLC(true);
+      test2.setShortCode(true);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      Capabilities test1 = new Capabilities();
+      test1.setVoice(true);
+      test1.setSms(true);
+      test1.setTollFree(true);
+      test1.setTenDLC(true);
+      test1.setShortCode(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

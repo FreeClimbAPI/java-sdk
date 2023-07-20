@@ -16,17 +16,69 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for UpdateConferenceRequestStatus
  */
-public class UpdateConferenceRequestStatusTest {
-}
+ public class UpdateConferenceRequestStatusTest {
+  @Test
+    public void testEMPTYShouldWork() {
+
+        UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.EMPTY;
+         Assert.assertEquals(test.getClass(), UpdateConferenceRequestStatus.class);
+    }
+
+    @Test 
+    public void testEMPTYShouldSerializeToEnum() {
+    
+        UpdateConferenceRequestStatus expectedValue = UpdateConferenceRequestStatus.EMPTY;
+        UpdateConferenceRequestStatus calculatedValue = UpdateConferenceRequestStatus.fromValue("empty");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testEMPTYShouldDeserializeToString() {
+     UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.EMPTY;
+      String expectedValue = "empty";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+      @Test
+    public void testTERMINATEDShouldWork() {
+
+        UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.TERMINATED;
+         Assert.assertEquals(test.getClass(), UpdateConferenceRequestStatus.class);
+    }
+
+    @Test 
+    public void testTERMINATEDShouldSerializeToEnum() {
+    
+        UpdateConferenceRequestStatus expectedValue = UpdateConferenceRequestStatus.TERMINATED;
+        UpdateConferenceRequestStatus calculatedValue = UpdateConferenceRequestStatus.fromValue("terminated");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testTERMINATEDShouldDeserializeToString() {
+     UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.TERMINATED;
+      String expectedValue = "terminated";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
+    }
+    
+ }

@@ -16,7 +16,11 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,21 +31,21 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SMSTenDLCCampaign
  */
-public class SMSTenDLCCampaignTest {
+ public class SMSTenDLCCampaignTest {
     private final SMSTenDLCCampaign model = new SMSTenDLCCampaign();
+
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -49,11 +53,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void campaignIdTest() {
-
-        model.setCampaignId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCampaignId());
-        
-        
+      model.setCampaignId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
     }
 
     /**
@@ -61,11 +63,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void cspIdTest() {
-
-        model.setCspId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCspId());
-        
-        
+      model.setCspId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCspId());
+      
     }
 
     /**
@@ -73,11 +73,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void resellerIdTest() {
-
-        model.setResellerId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getResellerId());
-        
-        
+      model.setResellerId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getResellerId());
+      
     }
 
     /**
@@ -85,8 +83,13 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void statusTest() {
-
-        
+      
+      model.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      
+      model.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
+      Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
+      
     }
 
     /**
@@ -94,8 +97,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void createDateTest() {
-
-        
+      model.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
+      
     }
 
     /**
@@ -103,10 +107,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void autoRenewalTest() {
-        model.setAutoRenewal(false);
-        Assert.assertEquals(false, model.getAutoRenewal());
-        
-        
+      model.setAutoRenewal(false);
+      Assert.assertEquals(false, model.getAutoRenewal());       
+      
     }
 
     /**
@@ -114,8 +117,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void billedDateTest() {
-
-        
+      model.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getBilledDate());
+      
     }
 
     /**
@@ -123,11 +127,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void brandIdTest() {
-
-        model.setBrandId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getBrandId());
-        
-        
+      model.setBrandId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getBrandId());
+      
     }
 
     /**
@@ -135,11 +137,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void usecaseTest() {
-
-        model.setUsecase("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUsecase());
-        
-        
+      model.setUsecase("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUsecase());
+      
     }
 
     /**
@@ -147,8 +147,10 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void subUsecasesTest() {
-
-        
+      
+      Set<String> testSet = new HashSet<String>();
+      model.setSubUsecases(testSet);
+      Assert.assertEquals(testSet, model.getSubUsecases()); 
     }
 
     /**
@@ -156,11 +158,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void descriptionTest() {
-
-        model.setDescription("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDescription());
-        
-        
+      model.setDescription("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDescription());
+      
     }
 
     /**
@@ -168,10 +168,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void embeddedLinkTest() {
-        model.setEmbeddedLink(false);
-        Assert.assertEquals(false, model.getEmbeddedLink());
-        
-        
+      model.setEmbeddedLink(false);
+      Assert.assertEquals(false, model.getEmbeddedLink());       
+      
     }
 
     /**
@@ -179,10 +178,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void embeddedPhoneTest() {
-        model.setEmbeddedPhone(false);
-        Assert.assertEquals(false, model.getEmbeddedPhone());
-        
-        
+      model.setEmbeddedPhone(false);
+      Assert.assertEquals(false, model.getEmbeddedPhone());       
+      
     }
 
     /**
@@ -190,10 +188,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void affiliateMarketingTest() {
-        model.setAffiliateMarketing(false);
-        Assert.assertEquals(false, model.getAffiliateMarketing());
-        
-        
+      model.setAffiliateMarketing(false);
+      Assert.assertEquals(false, model.getAffiliateMarketing());       
+      
     }
 
     /**
@@ -201,10 +198,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void numberPoolTest() {
-        model.setNumberPool(false);
-        Assert.assertEquals(false, model.getNumberPool());
-        
-        
+      model.setNumberPool(false);
+      Assert.assertEquals(false, model.getNumberPool());       
+      
     }
 
     /**
@@ -212,10 +208,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void ageGatedTest() {
-        model.setAgeGated(false);
-        Assert.assertEquals(false, model.getAgeGated());
-        
-        
+      model.setAgeGated(false);
+      Assert.assertEquals(false, model.getAgeGated());       
+      
     }
 
     /**
@@ -223,10 +218,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void directLendingTest() {
-        model.setDirectLending(false);
-        Assert.assertEquals(false, model.getDirectLending());
-        
-        
+      model.setDirectLending(false);
+      Assert.assertEquals(false, model.getDirectLending());       
+      
     }
 
     /**
@@ -234,10 +228,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void subscriberOptinTest() {
-        model.setSubscriberOptin(false);
-        Assert.assertEquals(false, model.getSubscriberOptin());
-        
-        
+      model.setSubscriberOptin(false);
+      Assert.assertEquals(false, model.getSubscriberOptin());       
+      
     }
 
     /**
@@ -245,10 +238,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void subscriberOptoutTest() {
-        model.setSubscriberOptout(false);
-        Assert.assertEquals(false, model.getSubscriberOptout());
-        
-        
+      model.setSubscriberOptout(false);
+      Assert.assertEquals(false, model.getSubscriberOptout());       
+      
     }
 
     /**
@@ -256,10 +248,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void subscriberHelpTest() {
-        model.setSubscriberHelp(false);
-        Assert.assertEquals(false, model.getSubscriberHelp());
-        
-        
+      model.setSubscriberHelp(false);
+      Assert.assertEquals(false, model.getSubscriberHelp());       
+      
     }
 
     /**
@@ -267,11 +258,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void sample1Test() {
-
-        model.setSample1("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSample1());
-        
-        
+      model.setSample1("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSample1());
+      
     }
 
     /**
@@ -279,11 +268,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void sample2Test() {
-
-        model.setSample2("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSample2());
-        
-        
+      model.setSample2("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSample2());
+      
     }
 
     /**
@@ -291,11 +278,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void sample3Test() {
-
-        model.setSample3("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSample3());
-        
-        
+      model.setSample3("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSample3());
+      
     }
 
     /**
@@ -303,11 +288,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void sample4Test() {
-
-        model.setSample4("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSample4());
-        
-        
+      model.setSample4("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSample4());
+      
     }
 
     /**
@@ -315,11 +298,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void sample5Test() {
-
-        model.setSample5("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSample5());
-        
-        
+      model.setSample5("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSample5());
+      
     }
 
     /**
@@ -327,11 +308,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void messageFlowTest() {
-
-        model.setMessageFlow("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getMessageFlow());
-        
-        
+      model.setMessageFlow("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getMessageFlow());
+      
     }
 
     /**
@@ -339,11 +318,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void helpMessageTest() {
-
-        model.setHelpMessage("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getHelpMessage());
-        
-        
+      model.setHelpMessage("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getHelpMessage());
+      
     }
 
     /**
@@ -351,11 +328,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void referenceIdTest() {
-
-        model.setReferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getReferenceId());
-        
-        
+      model.setReferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getReferenceId());
+      
     }
 
     /**
@@ -363,10 +338,9 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void mockTest() {
-        model.setMock(false);
-        Assert.assertEquals(false, model.getMock());
-        
-        
+      model.setMock(false);
+      Assert.assertEquals(false, model.getMock());       
+      
     }
 
     /**
@@ -374,8 +348,327 @@ public class SMSTenDLCCampaignTest {
      */
     @Test
     public void nextRenewalOrExpirationDateTest() {
-
-        
+      model.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      Assert.assertEquals(LocalDate.parse("2000-01-01"), model.getNextRenewalOrExpirationDate()); 
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+      test2.setAccountId("TS");
+      test2.setCampaignId("TS");
+      test2.setCspId("TS");
+      test2.setResellerId("TS");
+      test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test2.setAutoRenewal(true);
+      test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test2.setBrandId("TS");
+      test2.setUsecase("TS");
+        Set<String> testSet2 = testSet;
+      test2.setSubUsecases(testSet2);
+      test2.setDescription("TS");
+      test2.setEmbeddedLink(true);
+      test2.setEmbeddedPhone(true);
+      test2.setAffiliateMarketing(true);
+      test2.setNumberPool(true);
+      test2.setAgeGated(true);
+      test2.setDirectLending(true);
+      test2.setSubscriberOptin(true);
+      test2.setSubscriberOptout(true);
+      test2.setSubscriberHelp(true);
+      test2.setSample1("TS");
+      test2.setSample2("TS");
+      test2.setSample3("TS");
+      test2.setSample4("TS");
+      test2.setSample5("TS");
+      test2.setMessageFlow("TS");
+      test2.setHelpMessage("TS");
+      test2.setReferenceId("TS");
+      test2.setMock(true);
+      test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+      test2.setAccountId("tS");
+      test2.setCampaignId("tS");
+      test2.setCspId("tS");
+      test2.setResellerId("tS");
+      test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+      test2.setAutoRenewal(false);
+      test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+      test2.setBrandId("tS");
+      test2.setUsecase("tS");
+      Set<String> testSet2 = new HashSet<String>();
+      test2.setSubUsecases(testSet2);
+      test2.setDescription("tS");
+      test2.setEmbeddedLink(false);
+      test2.setEmbeddedPhone(false);
+      test2.setAffiliateMarketing(false);
+      test2.setNumberPool(false);
+      test2.setAgeGated(false);
+      test2.setDirectLending(false);
+      test2.setSubscriberOptin(false);
+      test2.setSubscriberOptout(false);
+      test2.setSubscriberHelp(false);
+      test2.setSample1("tS");
+      test2.setSample2("tS");
+      test2.setSample3("tS");
+      test2.setSample4("tS");
+      test2.setSample5("tS");
+      test2.setMessageFlow("tS");
+      test2.setHelpMessage("tS");
+      test2.setReferenceId("tS");
+      test2.setMock(false);
+      test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+        Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+      test2.setAccountId("TS");
+      test2.setCampaignId("TS");
+      test2.setCspId("TS");
+      test2.setResellerId("TS");
+      test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test2.setAutoRenewal(true);
+      test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test2.setBrandId("TS");
+      test2.setUsecase("TS");
+      Set<String> testSet2 = testSet;
+      test2.setSubUsecases(testSet2);
+      test2.setDescription("TS");
+      test2.setEmbeddedLink(true);
+      test2.setEmbeddedPhone(true);
+      test2.setAffiliateMarketing(true);
+      test2.setNumberPool(true);
+      test2.setAgeGated(true);
+      test2.setDirectLending(true);
+      test2.setSubscriberOptin(true);
+      test2.setSubscriberOptout(true);
+      test2.setSubscriberHelp(true);
+      test2.setSample1("TS");
+      test2.setSample2("TS");
+      test2.setSample3("TS");
+      test2.setSample4("TS");
+      test2.setSample5("TS");
+      test2.setMessageFlow("TS");
+      test2.setHelpMessage("TS");
+      test2.setReferenceId("TS");
+      test2.setMock(true);
+      test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

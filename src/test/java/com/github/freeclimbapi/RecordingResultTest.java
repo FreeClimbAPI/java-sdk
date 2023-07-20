@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for RecordingResult
  */
-public class RecordingResultTest {
+ public class RecordingResultTest {
     private final RecordingResult model = new RecordingResult();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
-        model.setUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
     }
 
     /**
@@ -47,11 +53,9 @@ public class RecordingResultTest {
      */
     @Test
     public void dateCreatedTest() {
-
-        model.setDateCreated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateCreated());
-        
-        
+      model.setDateCreated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateCreated());
+      
     }
 
     /**
@@ -59,11 +63,9 @@ public class RecordingResultTest {
      */
     @Test
     public void dateUpdatedTest() {
-
-        model.setDateUpdated("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-        
-        
+      model.setDateUpdated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
+      
     }
 
     /**
@@ -71,8 +73,9 @@ public class RecordingResultTest {
      */
     @Test
     public void revisionTest() {
-
-        
+      
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
     }
 
     /**
@@ -80,11 +83,9 @@ public class RecordingResultTest {
      */
     @Test
     public void recordingIdTest() {
-
-        model.setRecordingId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRecordingId());
-        
-        
+      model.setRecordingId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRecordingId());
+      
     }
 
     /**
@@ -92,11 +93,9 @@ public class RecordingResultTest {
      */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
-        
-        
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
     }
 
     /**
@@ -104,11 +103,9 @@ public class RecordingResultTest {
      */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
     }
 
     /**
@@ -116,8 +113,9 @@ public class RecordingResultTest {
      */
     @Test
     public void durationSecTest() {
-
-        
+      
+      model.setDurationSec(1);
+      Assert.assertEquals(1, (int) model.getDurationSec());
     }
 
     /**
@@ -125,11 +123,143 @@ public class RecordingResultTest {
      */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
-        
-        
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResult test2 = new RecordingResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setRecordingId("TS");
+      test2.setAccountId("TS");
+      test2.setCallId("TS");
+      test2.setDurationSec(1);
+      test2.setConferenceId("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResult test2 = new RecordingResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setRecordingId("tS");
+      test2.setAccountId("tS");
+      test2.setCallId("tS");
+      test2.setDurationSec(0);
+      test2.setConferenceId("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResult test2 = new RecordingResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setRecordingId("TS");
+      test2.setAccountId("TS");
+      test2.setCallId("TS");
+      test2.setDurationSec(1);
+      test2.setConferenceId("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

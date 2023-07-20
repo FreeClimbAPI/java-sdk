@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for QueueMember
  */
-public class QueueMemberTest {
+ public class QueueMemberTest {
     private final QueueMember model = new QueueMember();
+
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
-
-        model.setUri("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getUri());
-        
-        
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
     }
 
     /**
@@ -47,11 +53,9 @@ public class QueueMemberTest {
      */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
     }
 
     /**
@@ -59,8 +63,9 @@ public class QueueMemberTest {
      */
     @Test
     public void waitTimeTest() {
-
-        
+      
+      model.setWaitTime(1);
+      Assert.assertEquals(1, (int) model.getWaitTime());
     }
 
     /**
@@ -68,8 +73,9 @@ public class QueueMemberTest {
      */
     @Test
     public void positionTest() {
-
-        
+      
+      model.setPosition(1);
+      Assert.assertEquals(1, (int) model.getPosition());
     }
 
     /**
@@ -77,11 +83,111 @@ public class QueueMemberTest {
      */
     @Test
     public void dateEnqueuedTest() {
-
-        model.setDateEnqueued("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
-        
-        
+      model.setDateEnqueued("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      QueueMember test1 = new QueueMember();
+      test1.setUri("TS");
+      test1.setCallId("TS");
+      test1.setWaitTime(1);
+      test1.setPosition(1);
+      test1.setDateEnqueued("TS");
+      QueueMember test2 = new QueueMember();
+      test2.setUri("TS");
+      test2.setCallId("TS");
+      test2.setWaitTime(1);
+      test2.setPosition(1);
+      test2.setDateEnqueued("TS");
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      QueueMember test1 = new QueueMember();
+      test1.setUri("TS");
+      test1.setCallId("TS");
+      test1.setWaitTime(1);
+      test1.setPosition(1);
+      test1.setDateEnqueued("TS");
+      QueueMember test2 = new QueueMember();
+      test2.setUri("tS");
+      test2.setCallId("tS");
+      test2.setWaitTime(0);
+      test2.setPosition(0);
+      test2.setDateEnqueued("tS");
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      QueueMember test1 = new QueueMember();
+      test1.setUri("TS");
+      test1.setCallId("TS");
+      test1.setWaitTime(1);
+      test1.setPosition(1);
+      test1.setDateEnqueued("TS");
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      QueueMember test1 = new QueueMember();
+      test1.setUri("TS");
+      test1.setCallId("TS");
+      test1.setWaitTime(1);
+      test1.setPosition(1);
+      test1.setDateEnqueued("TS");
+      QueueMember test2 = new QueueMember();
+      test2.setUri("TS");
+      test2.setCallId("TS");
+      test2.setWaitTime(1);
+      test2.setPosition(1);
+      test2.setDateEnqueued("TS");
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      QueueMember test1 = new QueueMember();
+      test1.setUri("TS");
+      test1.setCallId("TS");
+      test1.setWaitTime(1);
+      test1.setPosition(1);
+      test1.setDateEnqueued("TS");
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

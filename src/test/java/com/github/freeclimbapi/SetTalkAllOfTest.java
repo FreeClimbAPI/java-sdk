@@ -16,30 +16,36 @@ package com.github.freeclimbapi;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
 
+import java.util.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+
 /**
  * Model tests for SetTalkAllOf
  */
-public class SetTalkAllOfTest {
+ public class SetTalkAllOfTest {
     private final SetTalkAllOf model = new SetTalkAllOf();
+
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
-        
-        
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
     }
 
     /**
@@ -47,10 +53,87 @@ public class SetTalkAllOfTest {
      */
     @Test
     public void talkTest() {
-        model.setTalk(false);
-        Assert.assertEquals(false, model.getTalk());
-        
-        
+      model.setTalk(false);
+      Assert.assertEquals(false, model.getTalk());       
+      
     }
 
-}
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
+    public void equalsTrueTest() {
+      SetTalkAllOf test1 = new SetTalkAllOf();
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      SetTalkAllOf test2 = new SetTalkAllOf();
+      test2.setCallId("TS");
+      test2.setTalk(true);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      SetTalkAllOf test1 = new SetTalkAllOf();
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      SetTalkAllOf test2 = new SetTalkAllOf();
+      test2.setCallId("tS");
+      test2.setTalk(false);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      SetTalkAllOf test1 = new SetTalkAllOf();
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      SetTalkAllOf test1 = new SetTalkAllOf();
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      SetTalkAllOf test2 = new SetTalkAllOf();
+      test2.setCallId("TS");
+      test2.setTalk(true);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      SetTalkAllOf test1 = new SetTalkAllOf();
+      test1.setCallId("TS");
+      test1.setTalk(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }
