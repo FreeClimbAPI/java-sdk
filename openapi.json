@@ -506,7 +506,7 @@
               },
               "callId": {
                 "description": "ID of the Call that will be added to the specified Conference. The Call must be in progress or an error will result. If the Call is part of an existing Conference, it is first removed from that Conference and is then moved to the new one.",
-                "type": "boolean"
+                "type": "string"
               },
               "leaveConferenceUrl": {
                 "description": "URL to be invoked when the Participant leaves the Conference. ",

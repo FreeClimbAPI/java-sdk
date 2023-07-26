@@ -63,7 +63,7 @@ public class AddToConference extends PerclCommand {
 
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
   @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private Boolean callId;
+  private String callId;
 
   public static final String SERIALIZED_NAME_LEAVE_CONFERENCE_URL = "leaveConferenceUrl";
   @SerializedName(SERIALIZED_NAME_LEAVE_CONFERENCE_URL)
@@ -181,7 +181,7 @@ public class AddToConference extends PerclCommand {
   }
 
 
-  public AddToConference callId(Boolean callId) {
+  public AddToConference callId(String callId) {
     
     this.callId = callId;
     return this;
@@ -194,12 +194,12 @@ public class AddToConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "ID of the Call that will be added to the specified Conference. The Call must be in progress or an error will result. If the Call is part of an existing Conference, it is first removed from that Conference and is then moved to the new one.")
 
-  public Boolean getCallId() {
+  public String getCallId() {
     return callId;
   }
 
 
-  public void setCallId(Boolean callId) {
+  public void setCallId(String callId) {
     this.callId = callId;
   }
 
