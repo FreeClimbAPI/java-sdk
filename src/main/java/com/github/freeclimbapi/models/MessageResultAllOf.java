@@ -76,6 +76,18 @@ public class MessageResultAllOf {
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
   private String notificationUrl;
 
+  public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  private String brandId;
+
+  public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  private String campaignId;
+
+  public static final String SERIALIZED_NAME_SEGMENT_COUNT = "segmentCount";
+  @SerializedName(SERIALIZED_NAME_SEGMENT_COUNT)
+  private BigDecimal segmentCount;
+
   public MessageResultAllOf() { 
   }
 
@@ -263,6 +275,75 @@ public class MessageResultAllOf {
   }
 
 
+  public MessageResultAllOf brandId(String brandId) {
+    
+    this.brandId = brandId;
+    return this;
+  }
+
+   /**
+   * The unique identifier for the brand associated with the message
+   * @return brandId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The unique identifier for the brand associated with the message")
+
+  public String getBrandId() {
+    return brandId;
+  }
+
+
+  public void setBrandId(String brandId) {
+    this.brandId = brandId;
+  }
+
+
+  public MessageResultAllOf campaignId(String campaignId) {
+    
+    this.campaignId = campaignId;
+    return this;
+  }
+
+   /**
+   * The unique identifier for the campaign associated with the message
+   * @return campaignId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The unique identifier for the campaign associated with the message")
+
+  public String getCampaignId() {
+    return campaignId;
+  }
+
+
+  public void setCampaignId(String campaignId) {
+    this.campaignId = campaignId;
+  }
+
+
+  public MessageResultAllOf segmentCount(BigDecimal segmentCount) {
+    
+    this.segmentCount = segmentCount;
+    return this;
+  }
+
+   /**
+   * The number of segments into which the message was split
+   * @return segmentCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The number of segments into which the message was split")
+
+  public BigDecimal getSegmentCount() {
+    return segmentCount;
+  }
+
+
+  public void setSegmentCount(BigDecimal segmentCount) {
+    this.segmentCount = segmentCount;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -279,7 +360,10 @@ public class MessageResultAllOf {
         Objects.equals(this.to, messageResultAllOf.to) &&
         Objects.equals(this.text, messageResultAllOf.text) &&
         Objects.equals(this.direction, messageResultAllOf.direction) &&
-        Objects.equals(this.notificationUrl, messageResultAllOf.notificationUrl);
+        Objects.equals(this.notificationUrl, messageResultAllOf.notificationUrl) &&
+        Objects.equals(this.brandId, messageResultAllOf.brandId) &&
+        Objects.equals(this.campaignId, messageResultAllOf.campaignId) &&
+        Objects.equals(this.segmentCount, messageResultAllOf.segmentCount);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -288,7 +372,7 @@ public class MessageResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, messageId, status, from, to, text, direction, notificationUrl);
+    return Objects.hash(accountId, messageId, status, from, to, text, direction, notificationUrl, brandId, campaignId, segmentCount);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -310,6 +394,9 @@ public class MessageResultAllOf {
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
+    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
+    sb.append("    segmentCount: ").append(toIndentedString(segmentCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

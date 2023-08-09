@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>5.4.3</version>
+    <version>5.5.0</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>

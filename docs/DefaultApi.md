@@ -2885,7 +2885,7 @@ Name | Type | Description  | Notes
 
 <a name="listSmsMessages"></a>
 # **listSmsMessages**
-> MessagesList listSmsMessages(to, from, beginTime, endTime, direction)
+> MessagesList listSmsMessages(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC)
 
 List SMS Messages
 
@@ -2920,8 +2920,14 @@ public class Example {
     
     MessageDirection direction = MessageDirection.fromValue("inbound"); // MessageDirection | Either `inbound` or `outbound`. Only show Messages that were either *sent from* or *received by* FreeClimb.
     
+    String campaignId = "campaignId_example"; // String | Only show messages associated with this campaign ID.
+    
+    String brandId = "brandId_example"; // String | Only show messages associated with this brand ID
+    
+    Boolean is10DLC = true; // Boolean | Only show messages that were sent as part of a 10DLC campaign.
+    
     try {
-      MessagesList result = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction);
+      MessagesList result = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listSmsMessages");
@@ -2943,6 +2949,9 @@ Name | Type | Description  | Notes
  **beginTime** | **String**| Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. | [optional]
  **endTime** | **String**| Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. | [optional]
  **direction** | [**MessageDirection**](.md)| Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. | [optional] [enum: inbound, outbound]
+ **campaignId** | **String**| Only show messages associated with this campaign ID. | [optional]
+ **brandId** | **String**| Only show messages associated with this brand ID | [optional]
+ **is10DLC** | **Boolean**| Only show messages that were sent as part of a 10DLC campaign. | [optional]
 
 
 ### Return type

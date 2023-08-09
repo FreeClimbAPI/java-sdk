@@ -131,7 +131,11 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
+<<<<<<< HEAD
         setUserAgent("OpenAPI-Generator/5.4.3/java");
+=======
+        setUserAgent("OpenAPI-Generator/5.5.0/java");
+>>>>>>> 2c13fd1 (Include Transcribe Utterance feature into Java SDK)
 
         authentications = new HashMap<String, Authentication>();
     }
