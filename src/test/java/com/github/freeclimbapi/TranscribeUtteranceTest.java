@@ -62,7 +62,9 @@ public class TranscribeUtteranceTest {
    */
   @Test
   public void recordTest() {
-
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    model.setRecord(record);
+    Assert.assertEquals(model.getRecord().getClass(), TranscribeUtteranceRecord.class);
   }
 
   /**
@@ -106,6 +108,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test1 = new TranscribeUtterance();
     test1.setActionUrl("TS");
     test1.setPlayBeep(true);
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    record.saveRecording(false);
+    record.setMaxLengthSec(1);
+    record.setRcrdTerminationSilenceTimeMs(1);
+    test1.setRecord(record);
     test1.setPrivacyForLogging(true);
     test1.setPrivacyForRecording(true);
     Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -114,6 +121,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test2 = new TranscribeUtterance();
     test2.setActionUrl("TS");
     test2.setPlayBeep(true);
+    TranscribeUtteranceRecord record2 = new TranscribeUtteranceRecord();
+    record2.saveRecording(false);
+    record2.setMaxLengthSec(1);
+    record2.setRcrdTerminationSilenceTimeMs(1);
+    test2.setRecord(record2);
     test2.setPrivacyForLogging(true);
     test2.setPrivacyForRecording(true);
     Object[] testArray2 = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -132,6 +144,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test1 = new TranscribeUtterance();
     test1.setActionUrl("TS");
     test1.setPlayBeep(true);
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    record.saveRecording(false);
+    record.setMaxLengthSec(2);
+    record.setRcrdTerminationSilenceTimeMs(2);
+    test1.setRecord(record);
     test1.setPrivacyForLogging(true);
     test1.setPrivacyForRecording(true);
     Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -140,6 +157,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test2 = new TranscribeUtterance();
     test2.setActionUrl("tS");
     test2.setPlayBeep(false);
+    TranscribeUtteranceRecord record2 = new TranscribeUtteranceRecord();
+    record2.saveRecording(false);
+    record2.setMaxLengthSec(1);
+    record2.setRcrdTerminationSilenceTimeMs(1);
+    test2.setRecord(record2);
     test2.setPrivacyForLogging(false);
     test2.setPrivacyForRecording(false);
     Object[] testArray2 = { "ElementFour", "ElementFive", "ElementSix" };
@@ -158,6 +180,7 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test1 = new TranscribeUtterance();
     test1.setActionUrl("TS");
     test1.setPlayBeep(true);
+
     test1.setPrivacyForLogging(true);
     test1.setPrivacyForRecording(true);
     Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -177,6 +200,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test1 = new TranscribeUtterance();
     test1.setActionUrl("TS");
     test1.setPlayBeep(true);
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    record.saveRecording(false);
+    record.setMaxLengthSec(1);
+    record.setRcrdTerminationSilenceTimeMs(1);
+    test1.setRecord(record);
     test1.setPrivacyForLogging(true);
     test1.setPrivacyForRecording(true);
     Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -185,6 +213,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test2 = new TranscribeUtterance();
     test2.setActionUrl("TS");
     test2.setPlayBeep(true);
+    TranscribeUtteranceRecord record2 = new TranscribeUtteranceRecord();
+    record2.saveRecording(false);
+    record2.setMaxLengthSec(1);
+    record2.setRcrdTerminationSilenceTimeMs(1);
+    test2.setRecord(record2);
     test2.setPrivacyForLogging(true);
     test2.setPrivacyForRecording(true);
     Object[] testArray2 = { "ElementOne", "ElementTwo", "ElementThree" };
@@ -205,6 +238,11 @@ public class TranscribeUtteranceTest {
     TranscribeUtterance test1 = new TranscribeUtterance();
     test1.setActionUrl("TS");
     test1.setPlayBeep(true);
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    record.saveRecording(false);
+    record.setMaxLengthSec(1);
+    record.setRcrdTerminationSilenceTimeMs(1);
+    test1.setRecord(record);
     test1.setPrivacyForLogging(true);
     test1.setPrivacyForRecording(true);
     Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
