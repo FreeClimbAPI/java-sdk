@@ -131,7 +131,7 @@ public class SMSTenDLCPartnerCampaignBrand {
     return brandId;
   }
 
-  public void setBrandId(String brandId) {
+  private void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
