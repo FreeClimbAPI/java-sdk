@@ -479,7 +479,7 @@ public class SMSTenDLCBrandTest {
 
   @Test
   public void equalsTrueTest() {
-    SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test1.setAccountId("TS");
     test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test1.setFirstName("TS");
@@ -509,7 +509,7 @@ public class SMSTenDLCBrandTest {
     test1.setMock(true);
     test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
     test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
-    SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test2 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test2.setAccountId("TS");
     test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test2.setFirstName("TS");
@@ -549,7 +549,7 @@ public class SMSTenDLCBrandTest {
 
   @Test
   public void equalsFalseTest() {
-    SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test1.setAccountId("TS");
     test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test1.setFirstName("TS");
@@ -579,7 +579,7 @@ public class SMSTenDLCBrandTest {
     test1.setMock(true);
     test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
     test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
-    SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test2 = new SMSTenDLCBrand("tS", "tS", "tS");
     test2.setAccountId("tS");
     test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test2.setFirstName("tS");
@@ -619,7 +619,7 @@ public class SMSTenDLCBrandTest {
 
   @Test
   public void hashCodeTypeTest() {
-    SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test1.setAccountId("TS");
     test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test1.setFirstName("TS");
@@ -660,7 +660,7 @@ public class SMSTenDLCBrandTest {
 
   @Test
   public void toStringEqualsTest() {
-    SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test1.setAccountId("TS");
     test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test1.setFirstName("TS");
@@ -690,7 +690,7 @@ public class SMSTenDLCBrandTest {
     test1.setMock(true);
     test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
     test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
-    SMSTenDLCBrand test2 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test2 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test2.setAccountId("TS");
     test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test2.setFirstName("TS");
@@ -732,7 +732,7 @@ public class SMSTenDLCBrandTest {
 
   @Test
   public void toStringTypeTest() {
-    SMSTenDLCBrand test1 = new SMSTenDLCBrand();
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
     test1.setAccountId("TS");
     test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
     test1.setFirstName("TS");

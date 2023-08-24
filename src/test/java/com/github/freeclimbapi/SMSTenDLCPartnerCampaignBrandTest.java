@@ -154,7 +154,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
   @Test
   public void equalsTrueTest() {
-    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test1.setAccountId("TS");
     test1.setFirstName("TS");
     test1.setLastName("TS");
@@ -166,7 +166,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
     Map<String, Object> testMap = new HashMap();
     test1.setOptionalAttributes(testMap);
     test1.setEvpVettingScore(1);
-    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test2.setAccountId("TS");
     test2.setFirstName("TS");
     test2.setLastName("TS");
@@ -188,7 +188,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
   @Test
   public void equalsFalseTest() {
-    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test1.setAccountId("TS");
     test1.setFirstName("TS");
     test1.setLastName("TS");
@@ -200,7 +200,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
     Map<String, Object> testMap = new HashMap();
     test1.setOptionalAttributes(testMap);
     test1.setEvpVettingScore(1);
-    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand("tS");
     test2.setAccountId("tS");
     test2.setFirstName("tS");
     test2.setLastName("tS");
@@ -222,7 +222,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
   @Test
   public void hashCodeTypeTest() {
-    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test1.setAccountId("TS");
     test1.setFirstName("TS");
     test1.setLastName("TS");
@@ -245,7 +245,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
   @Test
   public void toStringEqualsTest() {
-    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test1.setAccountId("TS");
     test1.setFirstName("TS");
     test1.setLastName("TS");
@@ -257,7 +257,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
     Map<String, Object> testMap = new HashMap();
     test1.setOptionalAttributes(testMap);
     test1.setEvpVettingScore(1);
-    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test2.setAccountId("TS");
     test2.setFirstName("TS");
     test2.setLastName("TS");
@@ -281,7 +281,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
   @Test
   public void toStringTypeTest() {
-    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
     test1.setAccountId("TS");
     test1.setFirstName("TS");
     test1.setLastName("TS");
