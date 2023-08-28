@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.4.3"></a>
+
+## [5.4.3] 2023-08-28
+
+### Changed
+
+- Changed setters from public to private for specific read-only variables
+
 <a name="5.4.2"></a>
 
 ## [5.4.2] 2023-07-26
