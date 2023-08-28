@@ -543,7 +543,7 @@ public class SMSTenDLCBrand {
     return cspId;
   }
 
-  public void setCspId(String cspId) {
+  private void setCspId(String cspId) {
     this.cspId = cspId;
   }
 
@@ -559,7 +559,7 @@ public class SMSTenDLCBrand {
     return brandId;
   }
 
-  public void setBrandId(String brandId) {
+  private void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
@@ -1038,7 +1038,7 @@ public class SMSTenDLCBrand {
     return universalEin;
   }
 
-  public void setUniversalEin(String universalEin) {
+  private void setUniversalEin(String universalEin) {
     this.universalEin = universalEin;
   }
 
