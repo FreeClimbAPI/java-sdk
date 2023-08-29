@@ -156,6 +156,25 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEquals'
+     */
+
+     @Test
+    public void hashCodeEqualsTest() {
+      Play test1 = new Play();
+      test1.setFile("TS");
+      test1.setLoop(1);
+      test1.setConferenceId("TS");
+      test1.setPrivacyMode(true);
+      Play test2 = new Play();
+      test2.setFile("TS");
+      test2.setLoop(1);
+      test2.setConferenceId("TS");
+      test2.setPrivacyMode(true);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

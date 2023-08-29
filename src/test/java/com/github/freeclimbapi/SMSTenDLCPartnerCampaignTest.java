@@ -593,6 +593,77 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEquals'
+     */
+
+     @Test
+    public void hashCodeEqualsTest() {
+      SMSTenDLCPartnerCampaign test1 = new SMSTenDLCPartnerCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
+        SMSTenDLCPartnerCampaignBrand object = new SMSTenDLCPartnerCampaignBrand();
+      test1.setBrand(object);
+      SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
+      test2.setAccountId("TS");
+      test2.setCampaignId("TS");
+      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test2.setBrandId("TS");
+      test2.setUsecase("TS");
+      test2.setDescription("TS");
+      test2.setEmbeddedLink(true);
+      test2.setEmbeddedPhone(true);
+      test2.setAffiliateMarketing(true);
+      test2.setNumberPool(true);
+      test2.setAgeGated(true);
+      test2.setDirectLending(true);
+      test2.setSubscriberOptin(true);
+      test2.setSubscriberOptout(true);
+      test2.setSubscriberHelp(true);
+      test2.setSample1("TS");
+      test2.setSample2("TS");
+      test2.setSample3("TS");
+      test2.setSample4("TS");
+      test2.setSample5("TS");
+      test2.setMessageFlow("TS");
+      test2.setHelpMessage("TS");
+      test2.setOptinKeywords("TS");
+      test2.setOptoutKeywords("TS");
+      test2.setHelpKeywords("TS");
+      test2.setOptinMessage("TS");
+      test2.setOptoutMessage("TS");
+      SMSTenDLCPartnerCampaignBrand object2 = object;
+      test2.setBrand(object2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

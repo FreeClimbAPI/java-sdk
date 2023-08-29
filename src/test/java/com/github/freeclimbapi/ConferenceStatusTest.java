@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceStatus
  */
  public class ConferenceStatusTest {
-  @Test
+    @Test
     public void testEMPTYShouldWork() {
 
         ConferenceStatus test = ConferenceStatus.EMPTY;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testPOPULATEDShouldWork() {
 
         ConferenceStatus test = ConferenceStatus.POPULATED;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testIN_PROGRESSShouldWork() {
 
         ConferenceStatus test = ConferenceStatus.IN_PROGRESS;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testTERMINATEDShouldWork() {
 
         ConferenceStatus test = ConferenceStatus.TERMINATED;

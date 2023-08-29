@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -35,264 +34,295 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for GetDigits
  */
- public class GetDigitsTest {
-    private final GetDigits model = new GetDigits();
+public class GetDigitsTest {
+  private final GetDigits model = new GetDigits();
 
-    /**
-     * Test the property 'actionUrl'
-     */
-    @Test
-    public void actionUrlTest() {
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
-      
-    }
+  /**
+   * Test the property 'actionUrl'
+   */
+  @Test
+  public void actionUrlTest() {
+    model.setActionUrl("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getActionUrl());
 
-    /**
-     * Test the property 'digitTimeoutMs'
-     */
-    @Test
-    public void digitTimeoutMsTest() {
-      
-      model.setDigitTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
-    }
+  }
 
-    /**
-     * Test the property 'finishOnKey'
-     */
-    @Test
-    public void finishOnKeyTest() {
-      model.setFinishOnKey("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-      
-    }
+  /**
+   * Test the property 'digitTimeoutMs'
+   */
+  @Test
+  public void digitTimeoutMsTest() {
 
-    /**
-     * Test the property 'flushBuffer'
-     */
-    @Test
-    public void flushBufferTest() {
-      model.setFlushBuffer(false);
-      Assert.assertEquals(false, model.getFlushBuffer());       
-      
-    }
+    model.setDigitTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
+  }
 
-    /**
-     * Test the property 'initialTimeoutMs'
-     */
-    @Test
-    public void initialTimeoutMsTest() {
-      model.setInitialTimeoutMs("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
-      
-    }
+  /**
+   * Test the property 'finishOnKey'
+   */
+  @Test
+  public void finishOnKeyTest() {
+    model.setFinishOnKey("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
 
-    /**
-     * Test the property 'maxDigits'
-     */
-    @Test
-    public void maxDigitsTest() {
-      
-      model.setMaxDigits(1);
-      Assert.assertEquals(1, (int) model.getMaxDigits());
-    }
+  }
 
-    /**
-     * Test the property 'minDigits'
-     */
-    @Test
-    public void minDigitsTest() {
-      
-      model.setMinDigits(1);
-      Assert.assertEquals(1, (int) model.getMinDigits());
-    }
+  /**
+   * Test the property 'flushBuffer'
+   */
+  @Test
+  public void flushBufferTest() {
+    model.setFlushBuffer(false);
+    Assert.assertEquals(false, model.getFlushBuffer());
 
-    /**
-     * Test the property 'prompts'
-     */
-    @Test
-    public void promptsTest() {
-      
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      model.setPrompts(testList);
-      Assert.assertEquals(testList, model.getPrompts()); 
-    }
+  }
 
-    /**
-     * Test the property 'privacyMode'
-     */
-    @Test
-    public void privacyModeTest() {
-      model.setPrivacyMode(false);
-      Assert.assertEquals(false, model.getPrivacyMode());       
-      
-    }
+  /**
+   * Test the property 'initialTimeoutMs'
+   */
+  @Test
+  public void initialTimeoutMsTest() {
+    model.setInitialTimeoutMs("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
 
-      /**
-     * Test the method 'equalsTrue'
-     */
+  }
 
-     @Test
-    public void equalsTrueTest() {
-      GetDigits test1 = new GetDigits();
-      test1.setActionUrl("TS");
-      test1.setDigitTimeoutMs(1);
-      test1.setFinishOnKey("TS");
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs("TS");
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-      test2.setActionUrl("TS");
-      test2.setDigitTimeoutMs(1);
-      test2.setFinishOnKey("TS");
-      test2.setFlushBuffer(true);
-      test2.setInitialTimeoutMs("TS");
-      test2.setMaxDigits(1);
-      test2.setMinDigits(1);
-      List<PerclCommand> testList2 = testList;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(true);
+  /**
+   * Test the property 'maxDigits'
+   */
+  @Test
+  public void maxDigitsTest() {
 
-      Assert.assertTrue(test1.equals(test2));
-    }
+    model.setMaxDigits(1);
+    Assert.assertEquals(1, (int) model.getMaxDigits());
+  }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
+  /**
+   * Test the property 'minDigits'
+   */
+  @Test
+  public void minDigitsTest() {
 
-     @Test
-    public void equalsFalseTest() {
-      GetDigits test1 = new GetDigits();
-      test1.setActionUrl("TS");
-      test1.setDigitTimeoutMs(1);
-      test1.setFinishOnKey("TS");
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs("TS");
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-      test2.setActionUrl("tS");
-      test2.setDigitTimeoutMs(0);
-      test2.setFinishOnKey("tS");
-      test2.setFlushBuffer(false);
-      test2.setInitialTimeoutMs("tS");
-      test2.setMaxDigits(0);
-      test2.setMinDigits(0);
-      List<PerclCommand> testList2 = null;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(false);
+    model.setMinDigits(1);
+    Assert.assertEquals(1, (int) model.getMinDigits());
+  }
 
-      Assert.assertFalse(test1.equals(test2));
-    }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
+  /**
+   * Test the property 'prompts'
+   */
+  @Test
+  public void promptsTest() {
 
-     @Test
-    public void hashCodeTypeTest() {
-      GetDigits test1 = new GetDigits();
-      test1.setActionUrl("TS");
-      test1.setDigitTimeoutMs(1);
-      test1.setFinishOnKey("TS");
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs("TS");
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
-    }
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    model.setPrompts(testList);
+    Assert.assertEquals(testList, model.getPrompts());
+  }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
+  /**
+   * Test the property 'privacyMode'
+   */
+  @Test
+  public void privacyModeTest() {
+    model.setPrivacyMode(false);
+    Assert.assertEquals(false, model.getPrivacyMode());
 
-     @Test
-    public void toStringEqualsTest() {
-      GetDigits test1 = new GetDigits();
-      test1.setActionUrl("TS");
-      test1.setDigitTimeoutMs(1);
-      test1.setFinishOnKey("TS");
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs("TS");
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-      test2.setActionUrl("TS");
-      test2.setDigitTimeoutMs(1);
-      test2.setFinishOnKey("TS");
-      test2.setFlushBuffer(true);
-      test2.setInitialTimeoutMs("TS");
-      test2.setMaxDigits(1);
-      test2.setMinDigits(1);
-      List<PerclCommand> testList2 = testList;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(true);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
-    }
+  }
 
-     /**
-     * Test the method 'toStringType'
-     */
+  /**
+   * Test the method 'equalsTrue'
+   */
 
-     @Test
-    public void toStringTypeTest() {
-      GetDigits test1 = new GetDigits();
-      test1.setActionUrl("TS");
-      test1.setDigitTimeoutMs(1);
-      test1.setFinishOnKey("TS");
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs("TS");
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
+  @Test
+  public void equalsTrueTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+    GetDigits test2 = new GetDigits();
+    test2.setActionUrl("TS");
+    test2.setDigitTimeoutMs(1);
+    test2.setFinishOnKey("TS");
+    test2.setFlushBuffer(true);
+    test2.setInitialTimeoutMs("TS");
+    test2.setMaxDigits(1);
+    test2.setMinDigits(1);
+    List<PerclCommand> testList2 = testList;
+    test2.setPrompts(testList2);
+    test2.setPrivacyMode(true);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
-    }
+    Assert.assertTrue(test1.equals(test2));
+  }
 
-    @Test
-    public void commandTest() throws Exception {
-      Assert.assertEquals("GetDigits", model.getCommand());
-    }
+  /**
+   * Test the method 'equalsFalse'
+   */
 
-    @Test
-    public void buildTest() throws Exception {
-        model.setActionUrl("TEST_STRING");
-        model.setFinishOnKey("TEST_STRING");
-        model.setFlushBuffer(false);
-        model.setInitialTimeoutMs("TEST_STRING");
-        model.setPrivacyMode(false);
-        Map<String, Map<String, Object>> build = model.build();
-        Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
-        Assert.assertEquals(attributes.get("digitTimeoutMs"), model.getDigitTimeoutMs());
-        Assert.assertEquals(attributes.get("finishOnKey"), model.getFinishOnKey());
-        Assert.assertEquals(attributes.get("flushBuffer"), model.getFlushBuffer());
-        Assert.assertEquals(attributes.get("initialTimeoutMs"), model.getInitialTimeoutMs());
-        Assert.assertEquals(attributes.get("maxDigits"), model.getMaxDigits());
-        Assert.assertEquals(attributes.get("minDigits"), model.getMinDigits());
-        Assert.assertEquals(attributes.get("prompts"), model.getPrompts());
-        Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-    }
- }
+  @Test
+  public void equalsFalseTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+    GetDigits test2 = new GetDigits();
+    test2.setActionUrl("tS");
+    test2.setDigitTimeoutMs(0);
+    test2.setFinishOnKey("tS");
+    test2.setFlushBuffer(false);
+    test2.setInitialTimeoutMs("tS");
+    test2.setMaxDigits(0);
+    test2.setMinDigits(0);
+    List<PerclCommand> testList2 = null;
+    test2.setPrompts(testList2);
+    test2.setPrivacyMode(false);
+
+    Assert.assertFalse(test1.equals(test2));
+  }
+
+  /**
+   * Test the method 'hashCodeType'
+   */
+
+  @Test
+  public void hashCodeTypeTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+
+    int hashCode1 = test1.hashCode();
+    Assert.assertTrue(Integer.class.isInstance(hashCode1));
+  }
+
+  /**
+   * Test the method 'toStringEquals'
+   */
+
+  @Test
+  public void toStringEqualsTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+    GetDigits test2 = new GetDigits();
+    test2.setActionUrl("TS");
+    test2.setDigitTimeoutMs(1);
+    test2.setFinishOnKey("TS");
+    test2.setFlushBuffer(true);
+    test2.setInitialTimeoutMs("TS");
+    test2.setMaxDigits(1);
+    test2.setMinDigits(1);
+    List<PerclCommand> testList2 = testList;
+    test2.setPrompts(testList2);
+    test2.setPrivacyMode(true);
+
+    String toString1 = test1.toString();
+    String toString2 = test2.toString();
+    Assert.assertEquals(toString1, toString2);
+  }
+
+  /**
+   * Test the method 'hashCodeEquals'
+   */
+
+  @Test
+  public void hashCodeEqualsTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+    GetDigits test2 = new GetDigits();
+    test2.setActionUrl("TS");
+    test2.setDigitTimeoutMs(1);
+    test2.setFinishOnKey("TS");
+    test2.setFlushBuffer(true);
+    test2.setInitialTimeoutMs("TS");
+    test2.setMaxDigits(1);
+    test2.setMinDigits(1);
+    List<PerclCommand> testList2 = testList;
+    test2.setPrompts(testList2);
+    test2.setPrivacyMode(true);
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'toStringType'
+   */
+
+  @Test
+  public void toStringTypeTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+
+    String toString1 = test1.toString();
+    Assert.assertTrue(String.class.isInstance(toString1));
+  }
+
+  @Test
+  public void commandTest() throws Exception {
+    Assert.assertEquals("GetDigits", model.getCommand());
+  }
+
+  @Test
+  public void buildTest() throws Exception {
+    model.setActionUrl("TEST_STRING");
+    model.setFinishOnKey("TEST_STRING");
+    model.setFlushBuffer(false);
+    model.setInitialTimeoutMs("TEST_STRING");
+    model.setPrivacyMode(false);
+    Map<String, Map<String, Object>> build = model.build();
+    Map<String, Object> attributes = build.get(model.getCommand());
+    Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+    Assert.assertEquals(attributes.get("digitTimeoutMs"), model.getDigitTimeoutMs());
+    Assert.assertEquals(attributes.get("finishOnKey"), model.getFinishOnKey());
+    Assert.assertEquals(attributes.get("flushBuffer"), model.getFlushBuffer());
+    Assert.assertEquals(attributes.get("initialTimeoutMs"), model.getInitialTimeoutMs());
+    Assert.assertEquals(attributes.get("maxDigits"), model.getMaxDigits());
+    Assert.assertEquals(attributes.get("minDigits"), model.getMinDigits());
+    Assert.assertEquals(attributes.get("prompts"), model.getPrompts());
+    Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+  }
+}

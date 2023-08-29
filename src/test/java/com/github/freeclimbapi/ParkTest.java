@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -35,139 +34,154 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for Park
  */
- public class ParkTest {
-    private final Park model = new Park();
+public class ParkTest {
+  private final Park model = new Park();
 
-    /**
-     * Test the property 'waitUrl'
-     */
-    @Test
-    public void waitUrlTest() {
-      model.setWaitUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-      
-    }
+  /**
+   * Test the property 'waitUrl'
+   */
+  @Test
+  public void waitUrlTest() {
+    model.setWaitUrl("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+  }
 
-    /**
-     * Test the property 'actionUrl'
-     */
-    @Test
-    public void actionUrlTest() {
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
-      
-    }
+  /**
+   * Test the property 'actionUrl'
+   */
+  @Test
+  public void actionUrlTest() {
+    model.setActionUrl("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getActionUrl());
+  }
 
-    /**
-     * Test the property 'notificationUrl'
-     */
-    @Test
-    public void notificationUrlTest() {
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-      
-    }
+  /**
+   * Test the property 'notificationUrl'
+   */
+  @Test
+  public void notificationUrlTest() {
+    model.setNotificationUrl("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
 
-      /**
-     * Test the method 'equalsTrue'
-     */
+  }
 
-     @Test
-    public void equalsTrueTest() {
-      Park test1 = new Park();
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setNotificationUrl("TS");
-      Park test2 = new Park();
-      test2.setWaitUrl("TS");
-      test2.setActionUrl("TS");
-      test2.setNotificationUrl("TS");
+  /**
+   * Test the method 'equalsTrue'
+   */
 
-      Assert.assertTrue(test1.equals(test2));
-    }
+  @Test
+  public void equalsTrueTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    Park test2 = new Park();
+    test2.setWaitUrl("TS");
+    test2.setActionUrl("TS");
+    test2.setNotificationUrl("TS");
 
-    /**
-     * Test the method 'equalsFalse'
-     */
+    Assert.assertTrue(test1.equals(test2));
+  }
 
-     @Test
-    public void equalsFalseTest() {
-      Park test1 = new Park();
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setNotificationUrl("TS");
-      Park test2 = new Park();
-      test2.setWaitUrl("tS");
-      test2.setActionUrl("tS");
-      test2.setNotificationUrl("tS");
+  /**
+   * Test the method 'equalsFalse'
+   */
 
-      Assert.assertFalse(test1.equals(test2));
-    }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
+  @Test
+  public void equalsFalseTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    Park test2 = new Park();
+    test2.setWaitUrl("tS");
+    test2.setActionUrl("tS");
+    test2.setNotificationUrl("tS");
 
-     @Test
-    public void hashCodeTypeTest() {
-      Park test1 = new Park();
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setNotificationUrl("TS");
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
-    }
+    Assert.assertFalse(test1.equals(test2));
+  }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
+  /**
+   * Test the method 'hashCodeType'
+   */
 
-     @Test
-    public void toStringEqualsTest() {
-      Park test1 = new Park();
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setNotificationUrl("TS");
-      Park test2 = new Park();
-      test2.setWaitUrl("TS");
-      test2.setActionUrl("TS");
-      test2.setNotificationUrl("TS");
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
-    }
+  @Test
+  public void hashCodeTypeTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
 
-     /**
-     * Test the method 'toStringType'
-     */
+    int hashCode1 = test1.hashCode();
+    Assert.assertTrue(Integer.class.isInstance(hashCode1));
+  }
 
-     @Test
-    public void toStringTypeTest() {
-      Park test1 = new Park();
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setNotificationUrl("TS");
+  /**
+   * Test the method 'toStringEquals'
+   */
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
-    }
+  @Test
+  public void toStringEqualsTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    Park test2 = new Park();
+    test2.setWaitUrl("TS");
+    test2.setActionUrl("TS");
+    test2.setNotificationUrl("TS");
 
-    @Test
-    public void commandTest() throws Exception {
-      Assert.assertEquals("Park", model.getCommand());
-    }
+    String toString1 = test1.toString();
+    String toString2 = test2.toString();
+    Assert.assertEquals(toString1, toString2);
+  }
 
-    @Test
-    public void buildTest() throws Exception {
-        model.setWaitUrl("TEST_STRING");
-        model.setActionUrl("TEST_STRING");
-        model.setNotificationUrl("TEST_STRING");
-        Map<String, Map<String, Object>> build = model.build();
-        Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
-        Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
-        Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
-    }
- }
+  /**
+   * Test the method 'hashCodeEquals'
+   */
+
+  @Test
+  public void hashCodeEqualsTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    Park test2 = new Park();
+    test2.setWaitUrl("TS");
+    test2.setActionUrl("TS");
+    test2.setNotificationUrl("TS");
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'toStringType'
+   */
+
+  @Test
+  public void toStringTypeTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+
+    String toString1 = test1.toString();
+    Assert.assertTrue(String.class.isInstance(toString1));
+  }
+
+  @Test
+  public void commandTest() throws Exception {
+    Assert.assertEquals("Park", model.getCommand());
+  }
+
+  @Test
+  public void buildTest() throws Exception {
+    model.setWaitUrl("TEST_STRING");
+    model.setActionUrl("TEST_STRING");
+    model.setNotificationUrl("TEST_STRING");
+    Map<String, Map<String, Object>> build = model.build();
+    Map<String, Object> attributes = build.get(model.getCommand());
+    Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
+    Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+    Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
+  }
+}

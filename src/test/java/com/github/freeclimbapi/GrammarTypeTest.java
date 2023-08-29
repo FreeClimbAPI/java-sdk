@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GrammarType
  */
  public class GrammarTypeTest {
-  @Test
+    @Test
     public void testURLShouldWork() {
 
         GrammarType test = GrammarType.URL;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testBUILT_INShouldWork() {
 
         GrammarType test = GrammarType.BUILT_IN;

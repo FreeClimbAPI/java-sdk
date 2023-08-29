@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AnsweredBy
  */
  public class AnsweredByTest {
-  @Test
+    @Test
     public void testHUMANShouldWork() {
 
         AnsweredBy test = AnsweredBy.HUMAN;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testMACHINEShouldWork() {
 
         AnsweredBy test = AnsweredBy.MACHINE;

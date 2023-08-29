@@ -727,6 +727,75 @@ public class SMSTenDLCBrandTest {
   }
 
   /**
+   * Test the method 'hashCodeEquals'
+   */
+
+  @Test
+  public void hashCodeEqualsTest() {
+    SMSTenDLCBrand test1 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
+    test1.setAccountId("TS");
+    test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+    test1.setFirstName("TS");
+    test1.setLastName("TS");
+    test1.setDisplayName("TS");
+    test1.setCompanyName("TS");
+    test1.setEin("TS");
+    test1.setEinIssuingCountry("TS");
+    test1.setPhone("TS");
+    test1.setStreet("TS");
+    test1.setCity("TS");
+    test1.setState("TS");
+    test1.setPostalCode("TS");
+    test1.setCountry("TS");
+    test1.setEmail("TS");
+    test1.setStockSymbol("TS");
+    test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+    test1.setIpAddress("TS");
+    test1.setWebsite("TS");
+    test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+    test1.setVertical("TS");
+    test1.setAltBusinessId("TS");
+    test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+    test1.setReferenceId("TS");
+    Map<String, Object> testMap = new HashMap();
+    test1.setOptionalAttributes(testMap);
+    test1.setMock(true);
+    test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+    test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+    SMSTenDLCBrand test2 = new SMSTenDLCBrand("TEST_STRING", "TEST_STRING", "TEST_STRING");
+    test2.setAccountId("TS");
+    test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+    test2.setFirstName("TS");
+    test2.setLastName("TS");
+    test2.setDisplayName("TS");
+    test2.setCompanyName("TS");
+    test2.setEin("TS");
+    test2.setEinIssuingCountry("TS");
+    test2.setPhone("TS");
+    test2.setStreet("TS");
+    test2.setCity("TS");
+    test2.setState("TS");
+    test2.setPostalCode("TS");
+    test2.setCountry("TS");
+    test2.setEmail("TS");
+    test2.setStockSymbol("TS");
+    test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+    test2.setIpAddress("TS");
+    test2.setWebsite("TS");
+    test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+    test2.setVertical("TS");
+    test2.setAltBusinessId("TS");
+    test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+    test2.setReferenceId("TS");
+    Map<String, Object> testMap2 = testMap;
+    test2.setOptionalAttributes(testMap2);
+    test2.setMock(true);
+    test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+    test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
    * Test the method 'toStringType'
    */
 

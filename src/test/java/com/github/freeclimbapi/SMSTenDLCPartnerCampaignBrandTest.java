@@ -276,6 +276,39 @@ public class SMSTenDLCPartnerCampaignBrandTest {
   }
 
   /**
+   * Test the method 'hashCodeEquals'
+   */
+
+  @Test
+  public void hashCodeEqualsTest() {
+    SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
+    test1.setAccountId("TS");
+    test1.setFirstName("TS");
+    test1.setLastName("TS");
+    test1.setDisplayName("TS");
+    test1.setCompanyName("TS");
+    test1.setPhone("TS");
+    test1.setEmail("TS");
+    test1.setWebsite("TS");
+    Map<String, Object> testMap = new HashMap();
+    test1.setOptionalAttributes(testMap);
+    test1.setEvpVettingScore(1);
+    SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
+    test2.setAccountId("TS");
+    test2.setFirstName("TS");
+    test2.setLastName("TS");
+    test2.setDisplayName("TS");
+    test2.setCompanyName("TS");
+    test2.setPhone("TS");
+    test2.setEmail("TS");
+    test2.setWebsite("TS");
+    Map<String, Object> testMap2 = testMap;
+    test2.setOptionalAttributes(testMap2);
+    test2.setEvpVettingScore(1);
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
    * Test the method 'toStringType'
    */
 

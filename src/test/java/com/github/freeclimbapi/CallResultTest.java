@@ -439,6 +439,57 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEquals'
+     */
+
+     @Test
+    public void hashCodeEqualsTest() {
+      CallResult test1 = new CallResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResult test2 = new CallResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setCallId("TS");
+      test2.setParentCallId("TS");
+      test2.setAccountId("TS");
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("TS");
+      test2.setConnectTime("TS");
+      test2.setEndTime("TS");
+      test2.setDuration(1);
+      test2.setConnectDuration(1);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

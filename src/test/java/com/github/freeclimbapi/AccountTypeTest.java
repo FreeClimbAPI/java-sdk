@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AccountType
  */
  public class AccountTypeTest {
-  @Test
+    @Test
     public void testTRIALShouldWork() {
 
         AccountType test = AccountType.TRIAL;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testFULLShouldWork() {
 
         AccountType test = AccountType.FULL;

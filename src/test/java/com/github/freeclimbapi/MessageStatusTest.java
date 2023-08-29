@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageStatus
  */
  public class MessageStatusTest {
-  @Test
+    @Test
     public void testNEWShouldWork() {
 
         MessageStatus test = MessageStatus.NEW;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testQUEUEDShouldWork() {
 
         MessageStatus test = MessageStatus.QUEUED;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testREJECTEDShouldWork() {
 
         MessageStatus test = MessageStatus.REJECTED;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testSENDINGShouldWork() {
 
         MessageStatus test = MessageStatus.SENDING;
@@ -124,7 +124,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testSENTShouldWork() {
 
         MessageStatus test = MessageStatus.SENT;
@@ -146,7 +146,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testFAILEDShouldWork() {
 
         MessageStatus test = MessageStatus.FAILED;
@@ -168,7 +168,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testRECEIVEDShouldWork() {
 
         MessageStatus test = MessageStatus.RECEIVED;
@@ -190,7 +190,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testUNDELIVEREDShouldWork() {
 
         MessageStatus test = MessageStatus.UNDELIVERED;
@@ -212,7 +212,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testEXPIREDShouldWork() {
 
         MessageStatus test = MessageStatus.EXPIRED;
@@ -234,7 +234,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testDELETEDShouldWork() {
 
         MessageStatus test = MessageStatus.DELETED;
@@ -256,7 +256,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testUNKNOWNShouldWork() {
 
         MessageStatus test = MessageStatus.UNKNOWN;
