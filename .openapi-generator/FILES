@@ -136,6 +136,8 @@ docs/SmsAllOf.md
 docs/StartRecordCall.md
 docs/TerminateConference.md
 docs/TerminateConferenceAllOf.md
+docs/TranscribeUtterance.md
+docs/TranscribeUtteranceRecord.md
 docs/Unpark.md
 docs/UpdateCallRequest.md
 docs/UpdateCallRequestStatus.md
@@ -296,6 +298,8 @@ src/main/java/com/github/freeclimbapi/StartRecordCall.java
 src/main/java/com/github/freeclimbapi/StringUtil.java
 src/main/java/com/github/freeclimbapi/TerminateConference.java
 src/main/java/com/github/freeclimbapi/TerminateConferenceAllOf.java
+src/main/java/com/github/freeclimbapi/TranscribeUtterance.java
+src/main/java/com/github/freeclimbapi/TranscribeUtteranceRecord.java
 src/main/java/com/github/freeclimbapi/Unpark.java
 src/main/java/com/github/freeclimbapi/UpdateCallRequest.java
 src/main/java/com/github/freeclimbapi/UpdateCallRequestStatus.java
@@ -306,5 +310,3 @@ src/main/java/com/github/freeclimbapi/auth/ApiKeyAuth.java
 src/main/java/com/github/freeclimbapi/auth/Authentication.java
 src/main/java/com/github/freeclimbapi/auth/HttpBasicAuth.java
 src/main/java/com/github/freeclimbapi/auth/HttpBearerAuth.java
-src/test/java/com/github/freeclimbapi/SMSTenDLCBrandTest.java
-src/test/java/com/github/freeclimbapi/SMSTenDLCPartnerCampaignBrandTest.java

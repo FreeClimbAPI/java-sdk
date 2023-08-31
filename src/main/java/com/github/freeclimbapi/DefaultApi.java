@@ -5616,6 +5616,9 @@ public class DefaultApi {
      * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
      * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
      * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
+     * @param campaignId Only show messages associated with this campaign ID. (optional)
+     * @param brandId Only show messages associated with this brand ID (optional)
+     * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5625,7 +5628,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listSmsMessagesCall(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listSmsMessagesCall(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -5672,6 +5675,18 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("direction", direction));
         }
 
+        if (campaignId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("campaignId", campaignId));
+        }
+
+        if (brandId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
+        }
+
+        if (is10DLC != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("is10DLC", is10DLC));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -5696,10 +5711,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listSmsMessagesValidateBeforeCall(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listSmsMessagesValidateBeforeCall(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = listSmsMessagesCall(to, from, beginTime, endTime, direction, _callback);
+        okhttp3.Call localVarCall = listSmsMessagesCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, _callback);
         return localVarCall;
 
     }
@@ -5712,6 +5727,9 @@ public class DefaultApi {
      * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
      * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
      * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
+     * @param campaignId Only show messages associated with this campaign ID. (optional)
+     * @param brandId Only show messages associated with this brand ID (optional)
+     * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @return MessagesList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -5720,8 +5738,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public MessagesList listSmsMessages(String to, String from, String beginTime, String endTime, MessageDirection direction) throws ApiException {
-        ApiResponse<MessagesList> localVarResp = listSmsMessagesWithHttpInfo(to, from, beginTime, endTime, direction);
+    public MessagesList listSmsMessages(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC) throws ApiException {
+        ApiResponse<MessagesList> localVarResp = listSmsMessagesWithHttpInfo(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
         return localVarResp.getData();
     }
 
@@ -5733,6 +5751,9 @@ public class DefaultApi {
      * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
      * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
      * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
+     * @param campaignId Only show messages associated with this campaign ID. (optional)
+     * @param brandId Only show messages associated with this brand ID (optional)
+     * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @return ApiResponse&lt;MessagesList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -5741,8 +5762,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(String to, String from, String beginTime, String endTime, MessageDirection direction) throws ApiException {
-        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, null);
+    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC) throws ApiException {
+        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, null);
         Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -5755,6 +5776,9 @@ public class DefaultApi {
      * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
      * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
      * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
+     * @param campaignId Only show messages associated with this campaign ID. (optional)
+     * @param brandId Only show messages associated with this brand ID (optional)
+     * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -5764,9 +5788,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listSmsMessagesAsync(String to, String from, String beginTime, String endTime, MessageDirection direction, final ApiCallback<MessagesList> _callback) throws ApiException {
+    public okhttp3.Call listSmsMessagesAsync(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback<MessagesList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, _callback);
+        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, _callback);
         Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
