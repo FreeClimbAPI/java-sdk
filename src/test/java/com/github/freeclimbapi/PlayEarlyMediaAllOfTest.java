@@ -106,16 +106,29 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
       test1.setFile("TS");
       PlayEarlyMediaAllOf test2 = new PlayEarlyMediaAllOf();
       test2.setFile("TS");
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      PlayEarlyMediaAllOf test1 = new PlayEarlyMediaAllOf();
+      test1.setFile("TS");
+      PlayEarlyMediaAllOf test2 = new PlayEarlyMediaAllOf();
+      test2.setFile("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

@@ -242,11 +242,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       ApplicationResultAllOf test1 = new ApplicationResultAllOf();
       test1.setAccountId("TS");
       test1.setApplicationId("TS");
@@ -268,6 +268,35 @@ import com.github.freeclimbapi.models.*;
       test2.setSmsUrl("TS");
       test2.setSmsFallbackUrl("TS");
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      ApplicationResultAllOf test1 = new ApplicationResultAllOf();
+      test1.setAccountId("TS");
+      test1.setApplicationId("TS");
+      test1.setAlias("TS");
+      test1.setVoiceUrl("TS");
+      test1.setVoiceFallbackUrl("TS");
+      test1.setCallConnectUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      test1.setSmsUrl("TS");
+      test1.setSmsFallbackUrl("TS");
+      ApplicationResultAllOf test2 = new ApplicationResultAllOf();
+      test2.setAccountId("tS");
+      test2.setApplicationId("tS");
+      test2.setAlias("tS");
+      test2.setVoiceUrl("tS");
+      test2.setVoiceFallbackUrl("tS");
+      test2.setCallConnectUrl("tS");
+      test2.setStatusCallbackUrl("tS");
+      test2.setSmsUrl("tS");
+      test2.setSmsFallbackUrl("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

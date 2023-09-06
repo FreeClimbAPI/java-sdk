@@ -196,11 +196,11 @@ public class CreateConferenceTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     CreateConference test1 = new CreateConference();
     test1.setActionUrl("TS");
     test1.setAlias(true);
@@ -215,8 +215,30 @@ public class CreateConferenceTest {
     test2.setRecord(true);
     test2.setStatusCallbackUrl("TS");
     test2.setWaitUrl("TS");
-    test2.setAlias(true);
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    CreateConference test1 = new CreateConference();
+    test1.setActionUrl("TS");
+    test1.setAlias(true);
+    test1.setPlayBeep(PlayBeep.ALWAYS);
+    test1.setRecord(true);
+    test1.setStatusCallbackUrl("TS");
+    test1.setWaitUrl("TS");
+    CreateConference test2 = new CreateConference();
+    test2.setActionUrl("tS");
+    test2.setAlias(false);
+    test2.setPlayBeep(PlayBeep.ALWAYS);
+    test2.setRecord(false);
+    test2.setStatusCallbackUrl("tS");
+    test2.setWaitUrl("tS");
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

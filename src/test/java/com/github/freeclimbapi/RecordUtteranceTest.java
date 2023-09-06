@@ -207,11 +207,11 @@ public class RecordUtteranceTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     RecordUtterance test1 = new RecordUtterance();
     test1.setActionUrl("TS");
     test1.setSilenceTimeoutMs(1);
@@ -229,6 +229,31 @@ public class RecordUtteranceTest {
     test2.setAutoStart(true);
     test2.setPrivacyMode(true);
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    RecordUtterance test1 = new RecordUtterance();
+    test1.setActionUrl("TS");
+    test1.setSilenceTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setMaxLengthSec(1);
+    test1.setPlayBeep(true);
+    test1.setAutoStart(true);
+    test1.setPrivacyMode(true);
+    RecordUtterance test2 = new RecordUtterance();
+    test2.setActionUrl("tS");
+    test2.setSilenceTimeoutMs(0);
+    test2.setFinishOnKey("tS");
+    test2.setMaxLengthSec(0);
+    test2.setPlayBeep(false);
+    test2.setAutoStart(false);
+    test2.setPrivacyMode(false);
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

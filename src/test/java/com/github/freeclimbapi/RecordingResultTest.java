@@ -242,11 +242,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       RecordingResult test1 = new RecordingResult();
       test1.setUri("TS");
       test1.setDateCreated("TS");
@@ -268,6 +268,35 @@ import com.github.freeclimbapi.models.*;
       test2.setDurationSec(1);
       test2.setConferenceId("TS");
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      RecordingResult test1 = new RecordingResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResult test2 = new RecordingResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setRecordingId("tS");
+      test2.setAccountId("tS");
+      test2.setCallId("tS");
+      test2.setDurationSec(0);
+      test2.setConferenceId("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

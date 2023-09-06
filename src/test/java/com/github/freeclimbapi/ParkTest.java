@@ -137,11 +137,11 @@ public class ParkTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     Park test1 = new Park();
     test1.setWaitUrl("TS");
     test1.setActionUrl("TS");
@@ -151,6 +151,23 @@ public class ParkTest {
     test2.setActionUrl("TS");
     test2.setNotificationUrl("TS");
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    Park test1 = new Park();
+    test1.setWaitUrl("TS");
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    Park test2 = new Park();
+    test2.setWaitUrl("tS");
+    test2.setActionUrl("tS");
+    test2.setNotificationUrl("tS");
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

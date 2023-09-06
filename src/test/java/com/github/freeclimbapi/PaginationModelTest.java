@@ -208,11 +208,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       PaginationModel test1 = new PaginationModel();
       test1.setTotal(1);
       test1.setStart(1);
@@ -230,6 +230,31 @@ import com.github.freeclimbapi.models.*;
       test2.setPageSize(1);
       test2.setNextPageUri("TS");
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      PaginationModel test1 = new PaginationModel();
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      PaginationModel test2 = new PaginationModel();
+      test2.setTotal(0);
+      test2.setStart(0);
+      test2.setEnd(0);
+      test2.setPage(0);
+      test2.setNumPages(0);
+      test2.setPageSize(0);
+      test2.setNextPageUri("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

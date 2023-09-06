@@ -114,11 +114,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       MessagesListAllOf test1 = new MessagesListAllOf();
       List<MessageResult> testList = new ArrayList<MessageResult>();
       test1.setMessages(testList);
@@ -126,6 +126,21 @@ import com.github.freeclimbapi.models.*;
       List<MessageResult> testList2 = testList;
       test2.setMessages(testList2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      MessagesListAllOf test1 = new MessagesListAllOf();
+      List<MessageResult> testList = new ArrayList<MessageResult>();
+      test1.setMessages(testList);
+      MessagesListAllOf test2 = new MessagesListAllOf();
+      List<MessageResult> testList2 = null;
+      test2.setMessages(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

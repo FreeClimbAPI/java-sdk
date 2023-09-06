@@ -260,11 +260,11 @@ public class OutDialTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     OutDial test1 = new OutDial();
     test1.setActionUrl("TS");
     test1.setCallConnectUrl("TS");
@@ -288,6 +288,37 @@ public class OutDialTest {
     test2.setTimeout(1);
     test2.setPrivacyMode(true);
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    OutDial test1 = new OutDial();
+    test1.setActionUrl("TS");
+    test1.setCallConnectUrl("TS");
+    test1.setCallingNumber("TS");
+    test1.setDestination("TS");
+    test1.setIfMachine(IfMachine.REDIRECT);
+    test1.setIfMachineUrl("TS");
+    test1.setSendDigits("TS");
+    test1.setStatusCallbackUrl("TS");
+    test1.setTimeout(1);
+    test1.setPrivacyMode(true);
+    OutDial test2 = new OutDial();
+    test2.setActionUrl("tS");
+    test2.setCallConnectUrl("tS");
+    test2.setCallingNumber("tS");
+    test2.setDestination("tS");
+    test2.setIfMachine(IfMachine.REDIRECT);
+    test2.setIfMachineUrl("tS");
+    test2.setSendDigits("tS");
+    test2.setStatusCallbackUrl("tS");
+    test2.setTimeout(0);
+    test2.setPrivacyMode(false);
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

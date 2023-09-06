@@ -249,11 +249,11 @@ public class GetDigitsTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     GetDigits test1 = new GetDigits();
     test1.setActionUrl("TS");
     test1.setDigitTimeoutMs(1);
@@ -277,6 +277,37 @@ public class GetDigitsTest {
     test2.setPrompts(testList2);
     test2.setPrivacyMode(true);
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    GetDigits test1 = new GetDigits();
+    test1.setActionUrl("TS");
+    test1.setDigitTimeoutMs(1);
+    test1.setFinishOnKey("TS");
+    test1.setFlushBuffer(true);
+    test1.setInitialTimeoutMs("TS");
+    test1.setMaxDigits(1);
+    test1.setMinDigits(1);
+    List<PerclCommand> testList = new ArrayList<PerclCommand>();
+    test1.setPrompts(testList);
+    test1.setPrivacyMode(true);
+    GetDigits test2 = new GetDigits();
+    test2.setActionUrl("tS");
+    test2.setDigitTimeoutMs(0);
+    test2.setFinishOnKey("tS");
+    test2.setFlushBuffer(false);
+    test2.setInitialTimeoutMs("tS");
+    test2.setMaxDigits(0);
+    test2.setMinDigits(0);
+    List<PerclCommand> testList2 = null;
+    test2.setPrompts(testList2);
+    test2.setPrivacyMode(false);
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

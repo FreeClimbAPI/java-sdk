@@ -156,11 +156,11 @@ public class EnqueueTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     Enqueue test1 = new Enqueue();
     test1.setActionUrl("TS");
     test1.setNotificationUrl("TS");
@@ -172,6 +172,25 @@ public class EnqueueTest {
     test2.setQueueId("TS");
     test2.setWaitUrl("TS");
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    Enqueue test1 = new Enqueue();
+    test1.setActionUrl("TS");
+    test1.setNotificationUrl("TS");
+    test1.setQueueId("TS");
+    test1.setWaitUrl("TS");
+    Enqueue test2 = new Enqueue();
+    test2.setActionUrl("tS");
+    test2.setNotificationUrl("tS");
+    test2.setQueueId("tS");
+    test2.setWaitUrl("tS");
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

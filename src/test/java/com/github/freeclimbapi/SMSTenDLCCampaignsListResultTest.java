@@ -233,11 +233,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
       test1.setTotal(1);
       test1.setStart(1);
@@ -259,6 +259,35 @@ import com.github.freeclimbapi.models.*;
       List<SMSTenDLCCampaign> testList2 = testList;
       test2.setCampaigns(testList2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      SMSTenDLCCampaignsListResult test1 = new SMSTenDLCCampaignsListResult();
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<SMSTenDLCCampaign> testList = new ArrayList<SMSTenDLCCampaign>();
+      test1.setCampaigns(testList);
+      SMSTenDLCCampaignsListResult test2 = new SMSTenDLCCampaignsListResult();
+      test2.setTotal(0);
+      test2.setStart(0);
+      test2.setEnd(0);
+      test2.setPage(0);
+      test2.setNumPages(0);
+      test2.setPageSize(0);
+      test2.setNextPageUri("tS");
+      List<SMSTenDLCCampaign> testList2 = null;
+      test2.setCampaigns(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

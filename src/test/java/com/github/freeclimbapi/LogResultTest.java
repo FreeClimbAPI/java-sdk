@@ -220,11 +220,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       LogResult test1 = new LogResult();
       test1.setTimestamp(1);
       test1.setLevel(LogLevel.INFO);
@@ -244,6 +244,33 @@ import com.github.freeclimbapi.models.*;
       Object testObject2 = testObject;
       test2.setMetadata(testObject2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      LogResult test1 = new LogResult();
+      test1.setTimestamp(1);
+      test1.setLevel(LogLevel.INFO);
+      test1.setRequestId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setMessage("TS");
+      Object testObject = new Object();
+      test1.setMetadata(testObject);
+      LogResult test2 = new LogResult();
+      test2.setTimestamp(0);
+      test2.setLevel(LogLevel.INFO);
+      test2.setRequestId("tS");
+      test2.setAccountId("tS");
+      test2.setCallId("tS");
+      test2.setMessage("tS");
+      Object testObject2 = new Object();
+      test2.setMetadata(testObject2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

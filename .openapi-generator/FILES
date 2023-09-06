@@ -346,7 +346,6 @@ src/test/java/com/github/freeclimbapi/ConferenceStatusTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceAllOfTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceRequestTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceTest.java
-src/test/java/com/github/freeclimbapi/DefaultApiTest.java
 src/test/java/com/github/freeclimbapi/DequeueTest.java
 src/test/java/com/github/freeclimbapi/EnqueueAllOfTest.java
 src/test/java/com/github/freeclimbapi/EnqueueTest.java

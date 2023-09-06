@@ -628,11 +628,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
       test1.setAccountId("TS");
       test1.setCampaignId("TS");
@@ -700,6 +700,81 @@ import com.github.freeclimbapi.models.*;
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+      test1.setAccountId("TS");
+      test1.setCampaignId("TS");
+      test1.setCspId("TS");
+      test1.setResellerId("TS");
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setAutoRenewal(true);
+      test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+      test1.setBrandId("TS");
+      test1.setUsecase("TS");
+      Set<String> testSet = new HashSet<String>();
+      test1.setSubUsecases(testSet);
+      test1.setDescription("TS");
+      test1.setEmbeddedLink(true);
+      test1.setEmbeddedPhone(true);
+      test1.setAffiliateMarketing(true);
+      test1.setNumberPool(true);
+      test1.setAgeGated(true);
+      test1.setDirectLending(true);
+      test1.setSubscriberOptin(true);
+      test1.setSubscriberOptout(true);
+      test1.setSubscriberHelp(true);
+      test1.setSample1("TS");
+      test1.setSample2("TS");
+      test1.setSample3("TS");
+      test1.setSample4("TS");
+      test1.setSample5("TS");
+      test1.setMessageFlow("TS");
+      test1.setHelpMessage("TS");
+      test1.setReferenceId("TS");
+      test1.setMock(true);
+      test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+      SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+      test2.setAccountId("tS");
+      test2.setCampaignId("tS");
+      test2.setCspId("tS");
+      test2.setResellerId("tS");
+      test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+      test2.setAutoRenewal(false);
+      test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+      test2.setBrandId("tS");
+      test2.setUsecase("tS");
+      Set<String> testSet2 = new HashSet<String>();
+      test2.setSubUsecases(testSet2);
+      test2.setDescription("tS");
+      test2.setEmbeddedLink(false);
+      test2.setEmbeddedPhone(false);
+      test2.setAffiliateMarketing(false);
+      test2.setNumberPool(false);
+      test2.setAgeGated(false);
+      test2.setDirectLending(false);
+      test2.setSubscriberOptin(false);
+      test2.setSubscriberOptout(false);
+      test2.setSubscriberHelp(false);
+      test2.setSample1("tS");
+      test2.setSample2("tS");
+      test2.setSample3("tS");
+      test2.setSample4("tS");
+      test2.setSample5("tS");
+      test2.setMessageFlow("tS");
+      test2.setHelpMessage("tS");
+      test2.setReferenceId("tS");
+      test2.setMock(false);
+      test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

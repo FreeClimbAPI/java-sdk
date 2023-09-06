@@ -105,16 +105,29 @@ public class RedirectTest {
   }
 
   /**
-   * Test the method 'hashCodeEquals'
+   * Test the method 'hashCodeEqualsTrue'
    */
 
   @Test
-  public void hashCodeEqualsTest() {
+  public void hashCodeEqualsTrueTest() {
     Redirect test1 = new Redirect();
     test1.setActionUrl("TS");
     Redirect test2 = new Redirect();
     test2.setActionUrl("TS");
     Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("tS");
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
   }
 
   /**

@@ -259,11 +259,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       AddToConferenceAllOf test1 = new AddToConferenceAllOf();
       test1.setAllowCallControl(true);
       test1.setCallControlSequence("TS");
@@ -287,6 +287,37 @@ import com.github.freeclimbapi.models.*;
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      AddToConferenceAllOf test1 = new AddToConferenceAllOf();
+      test1.setAllowCallControl(true);
+      test1.setCallControlSequence("TS");
+      test1.setCallControlUrl("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId("TS");
+      test1.setLeaveConferenceUrl("TS");
+      test1.setListen(true);
+      test1.setNotificationUrl("TS");
+      test1.setStartConfOnEnter(true);
+      test1.setTalk(true);
+      AddToConferenceAllOf test2 = new AddToConferenceAllOf();
+      test2.setAllowCallControl(false);
+      test2.setCallControlSequence("tS");
+      test2.setCallControlUrl("tS");
+      test2.setConferenceId("tS");
+      test2.setCallId("tS");
+      test2.setLeaveConferenceUrl("tS");
+      test2.setListen(false);
+      test2.setNotificationUrl("tS");
+      test2.setStartConfOnEnter(false);
+      test2.setTalk(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

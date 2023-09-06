@@ -346,11 +346,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       GetSpeech test1 = new GetSpeech();
          try {
           URI uri1 = new URI("TEST_STRING");
@@ -388,6 +388,51 @@ import com.github.freeclimbapi.models.*;
       test2.setSpeechIncompleteTimeoutMs(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      GetSpeech test1 = new GetSpeech();
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarFile("TS");
+      test1.setGrammarRule("TS");
+      test1.setPlayBeep(true);
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
+      test1.setPrompts(testList);
+      test1.setNoInputTimeoutMs(1);
+      test1.setRecognitionTimeoutMs(1);
+      test1.setSpeechCompleteTimeoutMs(1);
+      test1.setSpeechIncompleteTimeoutMs(1);
+      test1.setPrivacyMode(true);
+      GetSpeech test2 = new GetSpeech();
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
+      test2.setGrammarType(GrammarType.URL);
+      test2.setGrammarFile("tS");
+      test2.setGrammarRule("tS");
+      test2.setPlayBeep(false);
+      List<PerclCommand> testList2 = null;
+      test2.setPrompts(testList2);
+      test2.setNoInputTimeoutMs(0);
+      test2.setRecognitionTimeoutMs(0);
+      test2.setSpeechCompleteTimeoutMs(0);
+      test2.setSpeechIncompleteTimeoutMs(0);
+      test2.setPrivacyMode(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

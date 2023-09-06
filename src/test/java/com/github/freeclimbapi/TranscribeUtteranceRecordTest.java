@@ -140,11 +140,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
@@ -154,6 +154,23 @@ import com.github.freeclimbapi.models.*;
       test2.setMaxLengthSec(1);
       test2.setRcrdTerminationSilenceTimeMs(1);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      test1.setSaveRecording(true);
+      test1.setMaxLengthSec(1);
+      test1.setRcrdTerminationSilenceTimeMs(1);
+      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      test2.setSaveRecording(false);
+      test2.setMaxLengthSec(0);
+      test2.setRcrdTerminationSilenceTimeMs(0);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**

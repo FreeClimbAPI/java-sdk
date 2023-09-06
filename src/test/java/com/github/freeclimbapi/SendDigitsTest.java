@@ -140,11 +140,11 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the method 'hashCodeEquals'
+     * Test the method 'hashCodeEqualsTrue'
      */
 
-     @Test
-    public void hashCodeEqualsTest() {
+    @Test
+    public void hashCodeEqualsTrueTest() {
       SendDigits test1 = new SendDigits();
       test1.setDigits("TS");
       test1.setPauseMs(1);
@@ -154,6 +154,23 @@ import com.github.freeclimbapi.models.*;
       test2.setPauseMs(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      SendDigits test1 = new SendDigits();
+      test1.setDigits("TS");
+      test1.setPauseMs(1);
+      test1.setPrivacyMode(true);
+      SendDigits test2 = new SendDigits();
+      test2.setDigits("tS");
+      test2.setPauseMs(0);
+      test2.setPrivacyMode(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**
