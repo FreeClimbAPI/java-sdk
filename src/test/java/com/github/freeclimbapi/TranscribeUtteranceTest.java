@@ -253,4 +253,29 @@ public class TranscribeUtteranceTest {
     Assert.assertTrue(String.class.isInstance(toString1));
   }
 
+  @Test
+  public void commandTest() throws Exception {
+    Assert.assertEquals("TranscribeUtterance", model.getCommand());
+  }
+
+  @Test
+  public void buildTest() throws Exception {
+    model.setActionUrl("TEST_STRING");
+    model.setPlayBeep(false);
+    TranscribeUtteranceRecord record = new TranscribeUtteranceRecord();
+    record.saveRecording(false);
+    record.setMaxLengthSec(1);
+    record.setRcrdTerminationSilenceTimeMs(1);
+    model.setRecord(record);
+    model.setPrivacyForLogging(false);
+    model.setPrivacyForRecording(false);
+    Map<String, Map<String, Object>> build = model.build();
+    Map<String, Object> attributes = build.get(model.getCommand());
+    Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+    Assert.assertEquals(attributes.get("playBeep"), model.getPlayBeep());
+    Assert.assertEquals(attributes.get("record"), model.getRecord());
+    Assert.assertEquals(attributes.get("privacyForLogging"), model.getPrivacyForLogging());
+    Assert.assertEquals(attributes.get("privacyForRecording"), model.getPrivacyForRecording());
+    Assert.assertEquals(attributes.get("prompts"), model.getPrompts());
+  }
 }

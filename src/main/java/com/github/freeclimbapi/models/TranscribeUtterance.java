@@ -40,11 +40,18 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;TranscribeUtterance&#x60; command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  &#x60;TranscribeUtterance&#x60; is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the &#x60;PerCL&#x60; returned in response of the &#x60;actionUrl&#x60;. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.
+ * The &#x60;TranscribeUtterance&#x60; command transcribes the caller’s voice
+ * and returns transcription of the audio and optionally returns the recording
+ * of the audio transcribed. &#x60;TranscribeUtterance&#x60; is blocking and is
+ * a terminal command. As such, the actionUrl property is required, and control
+ * of the Call picks up using the &#x60;PerCL&#x60; returned in response of the
+ * &#x60;actionUrl&#x60;. Recording and Transcription information is returned in
+ * the actionUrl request. If the reason this command ended was due to the call
+ * hanging up, any PerCL returned will not execute.
  */
 @ApiModel(description = "The `TranscribeUtterance` command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  `TranscribeUtterance` is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the `PerCL` returned in response of the `actionUrl`. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class TranscribeUtterance {
+public class TranscribeUtterance extends PerclCommand {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
   private String actionUrl;
@@ -69,19 +76,20 @@ public class TranscribeUtterance {
   @SerializedName(SERIALIZED_NAME_PROMPTS)
   private List<Object> prompts = null;
 
-  public TranscribeUtterance() { 
+  public TranscribeUtterance() {
   }
 
   public TranscribeUtterance actionUrl(String actionUrl) {
-    
+
     this.actionUrl = actionUrl;
     return this;
   }
 
-   /**
+  /**
    * Get actionUrl
+   * 
    * @return actionUrl
-  **/
+   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
@@ -89,22 +97,21 @@ public class TranscribeUtterance {
     return actionUrl;
   }
 
-
   public void setActionUrl(String actionUrl) {
     this.actionUrl = actionUrl;
   }
 
-
   public TranscribeUtterance playBeep(Boolean playBeep) {
-    
+
     this.playBeep = playBeep;
     return this;
   }
 
-   /**
+  /**
    * Get playBeep
+   * 
    * @return playBeep
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -112,22 +119,21 @@ public class TranscribeUtterance {
     return playBeep;
   }
 
-
   public void setPlayBeep(Boolean playBeep) {
     this.playBeep = playBeep;
   }
 
-
   public TranscribeUtterance record(TranscribeUtteranceRecord record) {
-    
+
     this.record = record;
     return this;
   }
 
-   /**
+  /**
    * Get record
+   * 
    * @return record
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -135,22 +141,21 @@ public class TranscribeUtterance {
     return record;
   }
 
-
   public void setRecord(TranscribeUtteranceRecord record) {
     this.record = record;
   }
 
-
   public TranscribeUtterance privacyForLogging(Boolean privacyForLogging) {
-    
+
     this.privacyForLogging = privacyForLogging;
     return this;
   }
 
-   /**
+  /**
    * Get privacyForLogging
+   * 
    * @return privacyForLogging
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -158,22 +163,21 @@ public class TranscribeUtterance {
     return privacyForLogging;
   }
 
-
   public void setPrivacyForLogging(Boolean privacyForLogging) {
     this.privacyForLogging = privacyForLogging;
   }
 
-
   public TranscribeUtterance privacyForRecording(Boolean privacyForRecording) {
-    
+
     this.privacyForRecording = privacyForRecording;
     return this;
   }
 
-   /**
+  /**
    * Get privacyForRecording
+   * 
    * @return privacyForRecording
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -181,14 +185,12 @@ public class TranscribeUtterance {
     return privacyForRecording;
   }
 
-
   public void setPrivacyForRecording(Boolean privacyForRecording) {
     this.privacyForRecording = privacyForRecording;
   }
 
-
   public TranscribeUtterance prompts(List<Object> prompts) {
-    
+
     this.prompts = prompts;
     return this;
   }
@@ -201,10 +203,11 @@ public class TranscribeUtterance {
     return this;
   }
 
-   /**
+  /**
    * Get prompts
+   * 
    * @return prompts
-  **/
+   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
@@ -212,11 +215,9 @@ public class TranscribeUtterance {
     return prompts;
   }
 
-
   public void setPrompts(List<Object> prompts) {
     this.prompts = prompts;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -254,6 +255,17 @@ public class TranscribeUtterance {
     return sb.toString();
   }
 
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    attributes.put("actionUrl", () -> this.getActionUrl());
+    attributes.put("playBeep", () -> this.getPlayBeep());
+    attributes.put("record", () -> this.getRecord());
+    attributes.put("privacyForLogging", () -> this.getPrivacyForLogging());
+    attributes.put("privacyForRecording", () -> this.getPrivacyForRecording());
+    attributes.put("prompts", () -> this.getPrompts());
+    return attributes;
+  }
 
   /**
    * Convert the given object to string with each line indented by 4 spaces
@@ -267,4 +279,3 @@ public class TranscribeUtterance {
   }
 
 }
-
