@@ -81,6 +81,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("AddToConference", AddToConference.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -114,6 +115,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("CreateConference", CreateConference.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -147,6 +149,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Dequeue", Dequeue.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -180,6 +183,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Enqueue", Enqueue.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -213,6 +217,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("GetDigits", GetDigits.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -246,6 +251,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -279,6 +285,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Hangup", Hangup.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -312,6 +319,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("OutDial", OutDial.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -345,6 +353,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Park", Park.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -378,6 +387,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Pause", Pause.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -411,6 +421,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("PerclCommand", PerclCommand.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -444,6 +455,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Play", Play.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -477,6 +489,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -510,6 +523,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -543,6 +557,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Redirect", Redirect.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -576,6 +591,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Reject", Reject.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -609,6 +625,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -642,6 +659,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -675,6 +693,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -708,6 +727,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -741,6 +761,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -774,6 +795,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -807,6 +829,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -840,6 +863,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
@@ -873,6 +897,7 @@ public class JSON {
                         classByDiscriminatorValue.put("Sms", Sms.class);
                         classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
                         classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
