@@ -77,6 +77,7 @@ public class TranscribeUtterance extends PerclCommand {
   private List<Object> prompts = null;
 
   public TranscribeUtterance() {
+    this.command = this.getClass().getSimpleName();
   }
 
   public TranscribeUtterance actionUrl(String actionUrl) {
