@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageDirection
  */
  public class MessageDirectionTest {
-  @Test
+    @Test
     public void testINBOUNDShouldWork() {
 
         MessageDirection test = MessageDirection.INBOUND;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testOUTBOUNDShouldWork() {
 
         MessageDirection test = MessageDirection.OUTBOUND;

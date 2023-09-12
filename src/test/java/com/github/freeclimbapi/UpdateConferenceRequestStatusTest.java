@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateConferenceRequestStatus
  */
  public class UpdateConferenceRequestStatusTest {
-  @Test
+    @Test
     public void testEMPTYShouldWork() {
 
         UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.EMPTY;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testTERMINATEDShouldWork() {
 
         UpdateConferenceRequestStatus test = UpdateConferenceRequestStatus.TERMINATED;

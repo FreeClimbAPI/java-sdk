@@ -178,6 +178,36 @@ import com.github.freeclimbapi.models.*;
       
     }
 
+    /**
+     * Test the property 'brandId'
+     */
+    @Test
+    public void brandIdTest() {
+      model.setBrandId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getBrandId());
+      
+    }
+
+    /**
+     * Test the property 'campaignId'
+     */
+    @Test
+    public void campaignIdTest() {
+      model.setCampaignId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
+    }
+
+    /**
+     * Test the property 'segmentCount'
+     */
+    @Test
+    public void segmentCountTest() {
+      model.setSegmentCount(new BigDecimal(1.0));
+      Assert.assertEquals(new BigDecimal(1.0), model.getSegmentCount());
+      
+    }
+
       /**
      * Test the method 'equalsTrue'
      */
@@ -197,6 +227,8 @@ import com.github.freeclimbapi.models.*;
       test1.setText("TS");
       test1.setDirection("TS");
       test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
       MessageResult test2 = new MessageResult();
       test2.setUri("TS");
       test2.setDateCreated("TS");
@@ -210,6 +242,8 @@ import com.github.freeclimbapi.models.*;
       test2.setText("TS");
       test2.setDirection("TS");
       test2.setNotificationUrl("TS");
+      test2.setBrandId("TS");
+      test2.setCampaignId("TS");
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -233,6 +267,8 @@ import com.github.freeclimbapi.models.*;
       test1.setText("TS");
       test1.setDirection("TS");
       test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
       MessageResult test2 = new MessageResult();
       test2.setUri("tS");
       test2.setDateCreated("tS");
@@ -246,6 +282,8 @@ import com.github.freeclimbapi.models.*;
       test2.setText("tS");
       test2.setDirection("tS");
       test2.setNotificationUrl("tS");
+      test2.setBrandId("tS");
+      test2.setCampaignId("tS");
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -269,6 +307,8 @@ import com.github.freeclimbapi.models.*;
       test1.setText("TS");
       test1.setDirection("TS");
       test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -293,6 +333,8 @@ import com.github.freeclimbapi.models.*;
       test1.setText("TS");
       test1.setDirection("TS");
       test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
       MessageResult test2 = new MessageResult();
       test2.setUri("TS");
       test2.setDateCreated("TS");
@@ -306,10 +348,90 @@ import com.github.freeclimbapi.models.*;
       test2.setText("TS");
       test2.setDirection("TS");
       test2.setNotificationUrl("TS");
+      test2.setBrandId("TS");
+      test2.setCampaignId("TS");
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
       Assert.assertEquals(toString1, toString2);
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      MessageResult test1 = new MessageResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setMessageId("TS");
+      test1.setStatus(MessageStatus.NEW);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setDirection("TS");
+      test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
+      MessageResult test2 = new MessageResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setAccountId("TS");
+      test2.setMessageId("TS");
+      test2.setStatus(MessageStatus.NEW);
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setText("TS");
+      test2.setDirection("TS");
+      test2.setNotificationUrl("TS");
+      test2.setBrandId("TS");
+      test2.setCampaignId("TS");
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      MessageResult test1 = new MessageResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setMessageId("TS");
+      test1.setStatus(MessageStatus.NEW);
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setText("TS");
+      test1.setDirection("TS");
+      test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
+      MessageResult test2 = new MessageResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setAccountId("tS");
+      test2.setMessageId("tS");
+      test2.setStatus(MessageStatus.NEW);
+      test2.setFrom("tS");
+      test2.setTo("tS");
+      test2.setText("tS");
+      test2.setDirection("tS");
+      test2.setNotificationUrl("tS");
+      test2.setBrandId("tS");
+      test2.setCampaignId("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
      /**
@@ -331,6 +453,8 @@ import com.github.freeclimbapi.models.*;
       test1.setText("TS");
       test1.setDirection("TS");
       test1.setNotificationUrl("TS");
+      test1.setBrandId("TS");
+      test1.setCampaignId("TS");
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

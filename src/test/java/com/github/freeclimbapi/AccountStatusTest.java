@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AccountStatus
  */
  public class AccountStatusTest {
-  @Test
+    @Test
     public void testCLOSEDShouldWork() {
 
         AccountStatus test = AccountStatus.CLOSED;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testSUSPENDEDShouldWork() {
 
         AccountStatus test = AccountStatus.SUSPENDED;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testACTIVEShouldWork() {
 
         AccountStatus test = AccountStatus.ACTIVE;

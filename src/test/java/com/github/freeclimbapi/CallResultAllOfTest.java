@@ -371,6 +371,92 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      CallResultAllOf test1 = new CallResultAllOf();
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResultAllOf test2 = new CallResultAllOf();
+      test2.setCallId("TS");
+      test2.setParentCallId("TS");
+      test2.setAccountId("TS");
+      test2.setFrom("TS");
+      test2.setTo("TS");
+      test2.setPhoneNumberId("TS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("TS");
+      test2.setConnectTime("TS");
+      test2.setEndTime("TS");
+      test2.setDuration(1);
+      test2.setConnectDuration(1);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      CallResultAllOf test1 = new CallResultAllOf();
+      test1.setCallId("TS");
+      test1.setParentCallId("TS");
+      test1.setAccountId("TS");
+      test1.setFrom("TS");
+      test1.setTo("TS");
+      test1.setPhoneNumberId("TS");
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setStartTime("TS");
+      test1.setConnectTime("TS");
+      test1.setEndTime("TS");
+      test1.setDuration(1);
+      test1.setConnectDuration(1);
+      test1.setDirection(CallDirection.INBOUND);
+      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      CallResultAllOf test2 = new CallResultAllOf();
+      test2.setCallId("tS");
+      test2.setParentCallId("tS");
+      test2.setAccountId("tS");
+      test2.setFrom("tS");
+      test2.setTo("tS");
+      test2.setPhoneNumberId("tS");
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setStartTime("tS");
+      test2.setConnectTime("tS");
+      test2.setEndTime("tS");
+      test2.setDuration(0);
+      test2.setConnectDuration(0);
+      test2.setDirection(CallDirection.INBOUND);
+      test2.setAnsweredBy(AnsweredBy.HUMAN);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

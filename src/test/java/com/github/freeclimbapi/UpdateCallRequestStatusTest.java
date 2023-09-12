@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateCallRequestStatus
  */
  public class UpdateCallRequestStatusTest {
-  @Test
+    @Test
     public void testCANCELEDShouldWork() {
 
         UpdateCallRequestStatus test = UpdateCallRequestStatus.CANCELED;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testCOMPLETEDShouldWork() {
 
         UpdateCallRequestStatus test = UpdateCallRequestStatus.COMPLETED;

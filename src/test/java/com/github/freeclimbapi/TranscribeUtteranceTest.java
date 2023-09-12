@@ -230,6 +230,56 @@ public class TranscribeUtteranceTest {
   }
 
   /**
+   * Test the method 'hashCodeEqualsTrue'
+   */
+
+  @Test
+  public void hashCodeEqualsTrueTest() {
+    TranscribeUtterance test1 = new TranscribeUtterance();
+    test1.setActionUrl("TS");
+    test1.setPlayBeep(true);
+    test1.setPrivacyForLogging(true);
+    test1.setPrivacyForRecording(true);
+    Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
+    List<Object> testList = Arrays.asList(testArray);
+    test1.setPrompts(testList);
+    TranscribeUtterance test2 = new TranscribeUtterance();
+    test2.setActionUrl("TS");
+    test2.setPlayBeep(true);
+    test2.setPrivacyForLogging(true);
+    test2.setPrivacyForRecording(true);
+    Object[] testArray2 = { "ElementOne", "ElementTwo", "ElementThree" };
+    List<Object> testList2 = Arrays.asList(testArray2);
+    test2.setPrompts(testList2);
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    TranscribeUtterance test1 = new TranscribeUtterance();
+    test1.setActionUrl("TS");
+    test1.setPlayBeep(true);
+    test1.setPrivacyForLogging(true);
+    test1.setPrivacyForRecording(true);
+    Object[] testArray = { "ElementOne", "ElementTwo", "ElementThree" };
+    List<Object> testList = Arrays.asList(testArray);
+    test1.setPrompts(testList);
+    TranscribeUtterance test2 = new TranscribeUtterance();
+    test2.setActionUrl("tS");
+    test2.setPlayBeep(false);
+    test2.setPrivacyForLogging(false);
+    test2.setPrivacyForRecording(false);
+    Object[] testArray2 = { "ElementFour", "ElementFive", "ElementSix" };
+    List<Object> testList2 = Arrays.asList(testArray2);
+    test1.setPrompts(testList2);
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
    * Test the method 'toStringType'
    */
 

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -35,99 +34,125 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for Redirect
  */
- public class RedirectTest {
-    private final Redirect model = new Redirect();
+public class RedirectTest {
+  private final Redirect model = new Redirect();
 
-    /**
-     * Test the property 'actionUrl'
-     */
-    @Test
-    public void actionUrlTest() {
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
-      
-    }
+  /**
+   * Test the property 'actionUrl'
+   */
+  @Test
+  public void actionUrlTest() {
+    model.setActionUrl("TEST_STRING");
+    Assert.assertEquals("TEST_STRING", model.getActionUrl());
 
-      /**
-     * Test the method 'equalsTrue'
-     */
+  }
 
-     @Test
-    public void equalsTrueTest() {
-      Redirect test1 = new Redirect();
-      test1.setActionUrl("TS");
-      Redirect test2 = new Redirect();
-      test2.setActionUrl("TS");
+  /**
+   * Test the method 'equalsTrue'
+   */
 
-      Assert.assertTrue(test1.equals(test2));
-    }
+  @Test
+  public void equalsTrueTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("TS");
 
-    /**
-     * Test the method 'equalsFalse'
-     */
+    Assert.assertTrue(test1.equals(test2));
+  }
 
-     @Test
-    public void equalsFalseTest() {
-      Redirect test1 = new Redirect();
-      test1.setActionUrl("TS");
-      Redirect test2 = new Redirect();
-      test2.setActionUrl("tS");
+  /**
+   * Test the method 'equalsFalse'
+   */
 
-      Assert.assertFalse(test1.equals(test2));
-    }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
+  @Test
+  public void equalsFalseTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("tS");
 
-     @Test
-    public void hashCodeTypeTest() {
-      Redirect test1 = new Redirect();
-      test1.setActionUrl("TS");
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
-    }
+    Assert.assertFalse(test1.equals(test2));
+  }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
+  /**
+   * Test the method 'hashCodeType'
+   */
 
-     @Test
-    public void toStringEqualsTest() {
-      Redirect test1 = new Redirect();
-      test1.setActionUrl("TS");
-      Redirect test2 = new Redirect();
-      test2.setActionUrl("TS");
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
-    }
+  @Test
+  public void hashCodeTypeTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
 
-     /**
-     * Test the method 'toStringType'
-     */
+    int hashCode1 = test1.hashCode();
+    Assert.assertTrue(Integer.class.isInstance(hashCode1));
+  }
 
-     @Test
-    public void toStringTypeTest() {
-      Redirect test1 = new Redirect();
-      test1.setActionUrl("TS");
+  /**
+   * Test the method 'toStringEquals'
+   */
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
-    }
+  @Test
+  public void toStringEqualsTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("TS");
 
-    @Test
-    public void commandTest() throws Exception {
-      Assert.assertEquals("Redirect", model.getCommand());
-    }
+    String toString1 = test1.toString();
+    String toString2 = test2.toString();
+    Assert.assertEquals(toString1, toString2);
+  }
 
-    @Test
-    public void buildTest() throws Exception {
-        model.setActionUrl("TEST_STRING");
-        Map<String, Map<String, Object>> build = model.build();
-        Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
-    }
- }
+  /**
+   * Test the method 'hashCodeEqualsTrue'
+   */
+
+  @Test
+  public void hashCodeEqualsTrueTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("TS");
+    Assert.assertEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'hashCodeEqualsFalse'
+   */
+
+  @Test
+  public void hashCodeEqualsFalseTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+    Redirect test2 = new Redirect();
+    test2.setActionUrl("tS");
+    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+  }
+
+  /**
+   * Test the method 'toStringType'
+   */
+
+  @Test
+  public void toStringTypeTest() {
+    Redirect test1 = new Redirect();
+    test1.setActionUrl("TS");
+
+    String toString1 = test1.toString();
+    Assert.assertTrue(String.class.isInstance(toString1));
+  }
+
+  @Test
+  public void commandTest() throws Exception {
+    Assert.assertEquals("Redirect", model.getCommand());
+  }
+
+  @Test
+  public void buildTest() throws Exception {
+    model.setActionUrl("TEST_STRING");
+    Map<String, Map<String, Object>> build = model.build();
+    Map<String, Object> attributes = build.get(model.getCommand());
+    Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+  }
+}

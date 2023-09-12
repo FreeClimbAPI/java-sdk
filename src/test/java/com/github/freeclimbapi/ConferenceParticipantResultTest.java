@@ -258,6 +258,68 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      test1.setListen(true);
+      test1.setStartConfOnEnter(true);
+      ConferenceParticipantResult test2 = new ConferenceParticipantResult();
+      test2.setUri("TS");
+      test2.setDateCreated("TS");
+      test2.setDateUpdated("TS");
+      test2.setRevision(1);
+      test2.setAccountId("TS");
+      test2.setConferenceId("TS");
+      test2.setCallId("TS");
+      test2.setTalk(true);
+      test2.setListen(true);
+      test2.setStartConfOnEnter(true);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+      test1.setUri("TS");
+      test1.setDateCreated("TS");
+      test1.setDateUpdated("TS");
+      test1.setRevision(1);
+      test1.setAccountId("TS");
+      test1.setConferenceId("TS");
+      test1.setCallId("TS");
+      test1.setTalk(true);
+      test1.setListen(true);
+      test1.setStartConfOnEnter(true);
+      ConferenceParticipantResult test2 = new ConferenceParticipantResult();
+      test2.setUri("tS");
+      test2.setDateCreated("tS");
+      test2.setDateUpdated("tS");
+      test2.setRevision(0);
+      test2.setAccountId("tS");
+      test2.setConferenceId("tS");
+      test2.setCallId("tS");
+      test2.setTalk(false);
+      test2.setListen(false);
+      test2.setStartConfOnEnter(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

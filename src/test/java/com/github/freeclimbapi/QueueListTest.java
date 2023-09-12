@@ -232,6 +232,64 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      QueueList test1 = new QueueList();
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      QueueList test2 = new QueueList();
+      test2.setTotal(1);
+      test2.setStart(1);
+      test2.setEnd(1);
+      test2.setPage(1);
+      test2.setNumPages(1);
+      test2.setPageSize(1);
+      test2.setNextPageUri("TS");
+      List<QueueResult> testList2 = testList;
+      test2.setQueues(testList2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      QueueList test1 = new QueueList();
+      test1.setTotal(1);
+      test1.setStart(1);
+      test1.setEnd(1);
+      test1.setPage(1);
+      test1.setNumPages(1);
+      test1.setPageSize(1);
+      test1.setNextPageUri("TS");
+      List<QueueResult> testList = new ArrayList<QueueResult>();
+      test1.setQueues(testList);
+      QueueList test2 = new QueueList();
+      test2.setTotal(0);
+      test2.setStart(0);
+      test2.setEnd(0);
+      test2.setPage(0);
+      test2.setNumPages(0);
+      test2.setPageSize(0);
+      test2.setNextPageUri("tS");
+      List<QueueResult> testList2 = null;
+      test2.setQueues(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

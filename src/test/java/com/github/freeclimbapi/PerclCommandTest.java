@@ -103,6 +103,32 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      PerclCommand test1 = new PerclCommand();
+      test1.setCommand("TS");
+      PerclCommand test2 = new PerclCommand();
+      test2.setCommand("TS");
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      PerclCommand test1 = new PerclCommand();
+      test1.setCommand("TS");
+      PerclCommand test2 = new PerclCommand();
+      test2.setCommand("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

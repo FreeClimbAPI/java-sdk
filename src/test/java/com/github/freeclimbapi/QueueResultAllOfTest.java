@@ -215,6 +215,60 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      QueueResultAllOf test2 = new QueueResultAllOf();
+      test2.setAccountId("TS");
+      test2.setQueueId("TS");
+      test2.setAlias("TS");
+      test2.setMaxSize(1);
+      test2.setCurrentSize(1);
+      test2.setAverageQueueRemovalTime(1);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      QueueResultAllOf test1 = new QueueResultAllOf();
+      test1.setAccountId("TS");
+      test1.setQueueId("TS");
+      test1.setAlias("TS");
+      test1.setMaxSize(1);
+      test1.setCurrentSize(1);
+      test1.setAverageQueueRemovalTime(1);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      QueueResultAllOf test2 = new QueueResultAllOf();
+      test2.setAccountId("tS");
+      test2.setQueueId("tS");
+      test2.setAlias("tS");
+      test2.setMaxSize(0);
+      test2.setCurrentSize(0);
+      test2.setAverageQueueRemovalTime(0);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

@@ -173,6 +173,48 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      RecordingResultAllOf test1 = new RecordingResultAllOf();
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResultAllOf test2 = new RecordingResultAllOf();
+      test2.setRecordingId("TS");
+      test2.setAccountId("TS");
+      test2.setCallId("TS");
+      test2.setDurationSec(1);
+      test2.setConferenceId("TS");
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      RecordingResultAllOf test1 = new RecordingResultAllOf();
+      test1.setRecordingId("TS");
+      test1.setAccountId("TS");
+      test1.setCallId("TS");
+      test1.setDurationSec(1);
+      test1.setConferenceId("TS");
+      RecordingResultAllOf test2 = new RecordingResultAllOf();
+      test2.setRecordingId("tS");
+      test2.setAccountId("tS");
+      test2.setCallId("tS");
+      test2.setDurationSec(0);
+      test2.setConferenceId("tS");
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

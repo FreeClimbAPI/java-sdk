@@ -36,7 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordUtteranceTermReason
  */
  public class RecordUtteranceTermReasonTest {
-  @Test
+    @Test
     public void testFINISH_KEYShouldWork() {
 
         RecordUtteranceTermReason test = RecordUtteranceTermReason.FINISH_KEY;
@@ -58,7 +58,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testTIMEOUTShouldWork() {
 
         RecordUtteranceTermReason test = RecordUtteranceTermReason.TIMEOUT;
@@ -80,7 +80,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testHANGUPShouldWork() {
 
         RecordUtteranceTermReason test = RecordUtteranceTermReason.HANGUP;
@@ -102,7 +102,7 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
-      @Test
+        @Test
     public void testMAX_LENGTHShouldWork() {
 
         RecordUtteranceTermReason test = RecordUtteranceTermReason.MAX_LENGTH;

@@ -278,6 +278,72 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      ConferenceResultAllOf test2 = new ConferenceResultAllOf();
+      test2.setConferenceId("TS");
+      test2.setAccountId("TS");
+      test2.setAlias("TS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(true);
+      test2.setStatus(ConferenceStatus.EMPTY);
+      test2.setWaitUrl("TS");
+      test2.setActionUrl("TS");
+      test2.setStatusCallbackUrl("TS");
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      ConferenceResultAllOf test1 = new ConferenceResultAllOf();
+      test1.setConferenceId("TS");
+      test1.setAccountId("TS");
+      test1.setAlias("TS");
+      test1.setPlayBeep(PlayBeep.ALWAYS);
+      test1.setRecord(true);
+      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setWaitUrl("TS");
+      test1.setActionUrl("TS");
+      test1.setStatusCallbackUrl("TS");
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      ConferenceResultAllOf test2 = new ConferenceResultAllOf();
+      test2.setConferenceId("tS");
+      test2.setAccountId("tS");
+      test2.setAlias("tS");
+      test2.setPlayBeep(PlayBeep.ALWAYS);
+      test2.setRecord(false);
+      test2.setStatus(ConferenceStatus.EMPTY);
+      test2.setWaitUrl("tS");
+      test2.setActionUrl("tS");
+      test2.setStatusCallbackUrl("tS");
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

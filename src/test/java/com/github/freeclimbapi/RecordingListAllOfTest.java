@@ -113,6 +113,36 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+      List<RecordingResult> testList = new ArrayList<RecordingResult>();
+      test1.setRecordings(testList);
+      RecordingListAllOf test2 = new RecordingListAllOf();
+      List<RecordingResult> testList2 = testList;
+      test2.setRecordings(testList2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      RecordingListAllOf test1 = new RecordingListAllOf();
+      List<RecordingResult> testList = new ArrayList<RecordingResult>();
+      test1.setRecordings(testList);
+      RecordingListAllOf test2 = new RecordingListAllOf();
+      List<RecordingResult> testList2 = null;
+      test2.setRecordings(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */

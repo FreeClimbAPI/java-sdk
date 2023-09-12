@@ -221,6 +221,60 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(toString1, toString2);
     }
 
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      AccountResultAllOf test1 = new AccountResultAllOf();
+      test1.setAccountId("TS");
+      test1.setApiKey("TS");
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      test1.setType(AccountType.TRIAL);
+      test1.setStatus(AccountStatus.CLOSED);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      AccountResultAllOf test2 = new AccountResultAllOf();
+      test2.setAccountId("TS");
+      test2.setApiKey("TS");
+      test2.setAlias("TS");
+      test2.setLabel("TS");
+      test2.setType(AccountType.TRIAL);
+      test2.setStatus(AccountStatus.CLOSED);
+      Object testObject2 = testObject;
+      test2.setSubresourceUris(testObject2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      AccountResultAllOf test1 = new AccountResultAllOf();
+      test1.setAccountId("TS");
+      test1.setApiKey("TS");
+      test1.setAlias("TS");
+      test1.setLabel("TS");
+      test1.setType(AccountType.TRIAL);
+      test1.setStatus(AccountStatus.CLOSED);
+      Object testObject = new Object();
+      test1.setSubresourceUris(testObject);
+      AccountResultAllOf test2 = new AccountResultAllOf();
+      test2.setAccountId("tS");
+      test2.setApiKey("tS");
+      test2.setAlias("tS");
+      test2.setLabel("tS");
+      test2.setType(AccountType.TRIAL);
+      test2.setStatus(AccountStatus.CLOSED);
+      Object testObject2 = new Object();
+      test2.setSubresourceUris(testObject2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
      /**
      * Test the method 'toStringType'
      */
