@@ -146,25 +146,32 @@ public class RequestVerifierTest {
     public void verifyToleranceTest() {
         String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
         String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7793";
-        String requestHeader = "t=1900871395,v1=1d798c86e977ff734dec3a8b8d67fe8621dcc1df46ef4212e0bfe2e122b01bfd,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
-        Integer tolerance = 5 * 60;
         Integer currentTime = (int) (System.currentTimeMillis() / 1000L);
+        Integer timeCalcuation = currentTime - (6 * 60 * 1000);
+        String requestHeader = "t=" + timeCalcuation.toString()
+                + ",v1=1d798c86e977ff734dec3a8b8d67fe8621dcc1df46ef4212e0bfe2e122b01bfd,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+        Integer tolerance = 5 * 60 * 1000;
+
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
                     RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
                 });
 
-        assertEquals("Request time exceeded tolerance threshold. Request: 1900871395, CurrentTime: "
-                + Integer.toString(currentTime) + ", tolerance: " + tolerance, exception.getMessage());
+        assertEquals(
+                "Request time exceeded tolerance threshold. Request: " + timeCalcuation.toString() + ", CurrentTime: "
+                        + Integer.toString(currentTime) + ", tolerance: " + tolerance,
+                exception.getMessage());
     }
 
     @Test
     public void verifySignatureTest() {
         String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
         String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7794";
-        String requestHeader = "t=1679944186,v1=1d798c86e977ff734dec3a8b8d67fe8621dcc1df46ef4212e0bfe2e122b01bfd,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
-        Integer tolerance = 5 * 60;
+        Integer currentTime = (int) (System.currentTimeMillis() / 1000L);
+        String requestHeader = "t=" + currentTime.toString()
+                + ",v1=1d798c86e977ff734dec3a8b8d67fe8621dcc1df46ef4212e0bfe2e122b01bfd,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+        Integer tolerance = 5 * 60 * 1000;
         RuntimeException exception = assertThrows(
                 RuntimeException.class,
                 () -> {
@@ -180,8 +187,8 @@ public class RequestVerifierTest {
     public void verifyRequestSignatureTest() throws NoSuchAlgorithmException, InvalidKeyException {
         String requestBody = "{\"accountId\":\"AC1334ffb694cd8d969f51cddf5f7c9b478546d50c\",\"callId\":\"CAccb0b00506553cda09b51c5477f672a49e0b2213\",\"callStatus\":\"ringing\",\"conferenceId\":null,\"direction\":\"inbound\",\"from\":\"+13121000109\",\"parentCallId\":null,\"queueId\":null,\"requestType\":\"inboundCall\",\"to\":\"+13121000096\"}";
         String signingSecret = "sigsec_ead6d3b6904196c60835d039e91b3341c77a7793";
-        String requestHeader = "t=1679944186,v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
-        Integer tolerance = 5 * 60;
+        String requestHeader = "t=2130000000,v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=6835006e70c9b9f610e8fb3a8b36b52b3f28c12d0a2dab75091c46ca7ec11b20";
+        Integer tolerance = 5 * 60 * 1000;
         RequestVerifier.verifyRequestSignature(requestBody, requestHeader, signingSecret, tolerance);
     }
 }

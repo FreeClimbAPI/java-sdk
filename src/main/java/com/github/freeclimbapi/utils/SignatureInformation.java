@@ -34,7 +34,7 @@ public class SignatureInformation {
 
     public boolean isRequestTimeValid(Integer tolerance) {
         Integer currentUnixTimestamp = getCurrentUnixTime();
-        return (requestTimestamp + tolerance) < currentUnixTimestamp;
+        return currentUnixTimestamp < (requestTimestamp + tolerance);
     }
 
     public boolean isSignatureSafe(String requestBody, String signingSecret)

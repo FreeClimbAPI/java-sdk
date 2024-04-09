@@ -23,14 +23,25 @@ public class SignatureInformationTest {
 
     @Test
     public void isRequestTimeValidTest() {
-        Integer tolerance = 5 * 60;
+        Long timeCalcuation = (System.currentTimeMillis() / 1000L);
+        Integer currentTime = Integer.valueOf(timeCalcuation.intValue());
+        String requestHeader = "t=" + Integer.toString(currentTime)
+                + ",v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+        SignatureInformation instance = new SignatureInformation(requestHeader);
+        Integer tolerance = 5 * 60 * 1000;
         Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
         Assert.assertEquals(isRequestTimeValid, true);
     }
 
     @Test
     public void isRequestTimeValidTest2() {
-        Integer tolerance = Integer.MAX_VALUE - timestamp;
+        Long timeCalcuation = (System.currentTimeMillis() - (600 * 60 * 1000) / 1000L);
+        Integer currentTime = Integer.valueOf(timeCalcuation.intValue());
+        // Integer tolerance = Integer.MAX_VALUE - timestamp;
+        Integer tolerance = 500 * 60 * 1000;
+        String requestHeader = "t=" + Integer.toString(currentTime)
+                + ",v1=c3957749baf61df4b1506802579cc69a74c77a1ae21447b930e5a704f9ec4120,v1=1ba18712726898fbbe48cd862dd096a709f7ad761a5bab14bda9ac24d963a6a8";
+        SignatureInformation instance = new SignatureInformation(requestHeader);
         Boolean isRequestTimeValid = instance.isRequestTimeValid(tolerance);
         Assert.assertEquals(isRequestTimeValid, false);
     }
