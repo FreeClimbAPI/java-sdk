@@ -203,6 +203,26 @@ public class SMSTenDLCCampaign {
   @SerializedName(SERIALIZED_NAME_HELP_MESSAGE)
   private String helpMessage;
 
+  public static final String SERIALIZED_NAME_OPTIN_KEYWORDS = "optinKeywords";
+  @SerializedName(SERIALIZED_NAME_OPTIN_KEYWORDS)
+  private String optinKeywords;
+
+  public static final String SERIALIZED_NAME_OPTOUT_KEYWORDS = "optoutKeywords";
+  @SerializedName(SERIALIZED_NAME_OPTOUT_KEYWORDS)
+  private String optoutKeywords;
+
+  public static final String SERIALIZED_NAME_HELP_KEYWORDS = "helpKeywords";
+  @SerializedName(SERIALIZED_NAME_HELP_KEYWORDS)
+  private String helpKeywords;
+
+  public static final String SERIALIZED_NAME_OPTIN_MESSAGE = "optinMessage";
+  @SerializedName(SERIALIZED_NAME_OPTIN_MESSAGE)
+  private String optinMessage;
+
+  public static final String SERIALIZED_NAME_OPTOUT_MESSAGE = "optoutMessage";
+  @SerializedName(SERIALIZED_NAME_OPTOUT_MESSAGE)
+  private String optoutMessage;
+
   public static final String SERIALIZED_NAME_REFERENCE_ID = "referenceId";
   @SerializedName(SERIALIZED_NAME_REFERENCE_ID)
   private String referenceId;
@@ -867,6 +887,121 @@ public class SMSTenDLCCampaign {
   }
 
 
+  public SMSTenDLCCampaign optinKeywords(String optinKeywords) {
+    
+    this.optinKeywords = optinKeywords;
+    return this;
+  }
+
+   /**
+   * Subscriber opt-in keywords. Multiple keywords are comma separated without space.
+   * @return optinKeywords
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Subscriber opt-in keywords. Multiple keywords are comma separated without space.")
+
+  public String getOptinKeywords() {
+    return optinKeywords;
+  }
+
+
+  public void setOptinKeywords(String optinKeywords) {
+    this.optinKeywords = optinKeywords;
+  }
+
+
+  public SMSTenDLCCampaign optoutKeywords(String optoutKeywords) {
+    
+    this.optoutKeywords = optoutKeywords;
+    return this;
+  }
+
+   /**
+   * Subscriber opt-out keywords. Multiple keywords are comma separated without space.
+   * @return optoutKeywords
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Subscriber opt-out keywords. Multiple keywords are comma separated without space.")
+
+  public String getOptoutKeywords() {
+    return optoutKeywords;
+  }
+
+
+  public void setOptoutKeywords(String optoutKeywords) {
+    this.optoutKeywords = optoutKeywords;
+  }
+
+
+  public SMSTenDLCCampaign helpKeywords(String helpKeywords) {
+    
+    this.helpKeywords = helpKeywords;
+    return this;
+  }
+
+   /**
+   * Subscriber help keywords. Multiple keywords are comma separated without space.
+   * @return helpKeywords
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Subscriber help keywords. Multiple keywords are comma separated without space.")
+
+  public String getHelpKeywords() {
+    return helpKeywords;
+  }
+
+
+  public void setHelpKeywords(String helpKeywords) {
+    this.helpKeywords = helpKeywords;
+  }
+
+
+  public SMSTenDLCCampaign optinMessage(String optinMessage) {
+    
+    this.optinMessage = optinMessage;
+    return this;
+  }
+
+   /**
+   * Subscriber opt-in message.
+   * @return optinMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Subscriber opt-in message.")
+
+  public String getOptinMessage() {
+    return optinMessage;
+  }
+
+
+  public void setOptinMessage(String optinMessage) {
+    this.optinMessage = optinMessage;
+  }
+
+
+  public SMSTenDLCCampaign optoutMessage(String optoutMessage) {
+    
+    this.optoutMessage = optoutMessage;
+    return this;
+  }
+
+   /**
+   * Subscriber opt-out message.
+   * @return optoutMessage
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Subscriber opt-out message.")
+
+  public String getOptoutMessage() {
+    return optoutMessage;
+  }
+
+
+  public void setOptoutMessage(String optoutMessage) {
+    this.optoutMessage = optoutMessage;
+  }
+
+
   public SMSTenDLCCampaign referenceId(String referenceId) {
     
     this.referenceId = referenceId;
@@ -973,6 +1108,11 @@ public class SMSTenDLCCampaign {
         Objects.equals(this.sample5, smSTenDLCCampaign.sample5) &&
         Objects.equals(this.messageFlow, smSTenDLCCampaign.messageFlow) &&
         Objects.equals(this.helpMessage, smSTenDLCCampaign.helpMessage) &&
+        Objects.equals(this.optinKeywords, smSTenDLCCampaign.optinKeywords) &&
+        Objects.equals(this.optoutKeywords, smSTenDLCCampaign.optoutKeywords) &&
+        Objects.equals(this.helpKeywords, smSTenDLCCampaign.helpKeywords) &&
+        Objects.equals(this.optinMessage, smSTenDLCCampaign.optinMessage) &&
+        Objects.equals(this.optoutMessage, smSTenDLCCampaign.optoutMessage) &&
         Objects.equals(this.referenceId, smSTenDLCCampaign.referenceId) &&
         Objects.equals(this.mock, smSTenDLCCampaign.mock) &&
         Objects.equals(this.nextRenewalOrExpirationDate, smSTenDLCCampaign.nextRenewalOrExpirationDate);
@@ -984,7 +1124,7 @@ public class SMSTenDLCCampaign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, campaignId, cspId, resellerId, status, createDate, autoRenewal, billedDate, brandId, usecase, subUsecases, description, embeddedLink, embeddedPhone, affiliateMarketing, numberPool, ageGated, directLending, subscriberOptin, subscriberOptout, subscriberHelp, sample1, sample2, sample3, sample4, sample5, messageFlow, helpMessage, referenceId, mock, nextRenewalOrExpirationDate);
+    return Objects.hash(accountId, campaignId, cspId, resellerId, status, createDate, autoRenewal, billedDate, brandId, usecase, subUsecases, description, embeddedLink, embeddedPhone, affiliateMarketing, numberPool, ageGated, directLending, subscriberOptin, subscriberOptout, subscriberHelp, sample1, sample2, sample3, sample4, sample5, messageFlow, helpMessage, optinKeywords, optoutKeywords, helpKeywords, optinMessage, optoutMessage, referenceId, mock, nextRenewalOrExpirationDate);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1026,6 +1166,11 @@ public class SMSTenDLCCampaign {
     sb.append("    sample5: ").append(toIndentedString(sample5)).append("\n");
     sb.append("    messageFlow: ").append(toIndentedString(messageFlow)).append("\n");
     sb.append("    helpMessage: ").append(toIndentedString(helpMessage)).append("\n");
+    sb.append("    optinKeywords: ").append(toIndentedString(optinKeywords)).append("\n");
+    sb.append("    optoutKeywords: ").append(toIndentedString(optoutKeywords)).append("\n");
+    sb.append("    helpKeywords: ").append(toIndentedString(helpKeywords)).append("\n");
+    sb.append("    optinMessage: ").append(toIndentedString(optinMessage)).append("\n");
+    sb.append("    optoutMessage: ").append(toIndentedString(optoutMessage)).append("\n");
     sb.append("    referenceId: ").append(toIndentedString(referenceId)).append("\n");
     sb.append("    mock: ").append(toIndentedString(mock)).append("\n");
     sb.append("    nextRenewalOrExpirationDate: ").append(toIndentedString(nextRenewalOrExpirationDate)).append("\n");

@@ -45,36 +45,9 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `RemoveFromConference` command removes a Participant from a Conference but does not hang up. Instead, the Call is simply unbridged and what happens next with the Call is determined by the PerCL returned in response to the `leaveConferenceUrl` attribute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RemoveFromConference extends PerclCommand {
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public RemoveFromConference() { 
     this.command = this.getClass().getSimpleName();
   }
-
-  public RemoveFromConference callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the Call leg to be removed from the Conference. The Call must be in a Conference or an error will be triggered.
-   * @return callId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the Call leg to be removed from the Conference. The Call must be in a Conference or an error will be triggered.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -84,14 +57,12 @@ public class RemoveFromConference extends PerclCommand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RemoveFromConference removeFromConference = (RemoveFromConference) o;
-    return Objects.equals(this.callId, removeFromConference.callId) &&
-        super.equals(o);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callId, super.hashCode());
+    return Objects.hash(super.hashCode());
   }
 
   @Override
@@ -99,7 +70,6 @@ public class RemoveFromConference extends PerclCommand {
     StringBuilder sb = new StringBuilder();
     sb.append("class RemoveFromConference {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,7 +77,6 @@ public class RemoveFromConference extends PerclCommand {
   @Override
   public Map<String, Callable<Object>> attributeTypeMap() {
     Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("callId", () -> this.getCallId());
     return attributes;
   }
 

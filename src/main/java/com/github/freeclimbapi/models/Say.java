@@ -57,10 +57,6 @@ public class Say extends PerclCommand {
   @SerializedName(SERIALIZED_NAME_LOOP)
   private Integer loop = 1;
 
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  private String conferenceId;
-
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
   private Boolean privacyMode;
@@ -138,29 +134,6 @@ public class Say extends PerclCommand {
   }
 
 
-  public Say conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * D of the Conference the speech should be rendered to. If this is not specified, the speech is by default rendered to the Caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "D of the Conference the speech should be rendered to. If this is not specified, the speech is by default rendered to the Caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
   public Say privacyMode(Boolean privacyMode) {
     
     this.privacyMode = privacyMode;
@@ -196,14 +169,13 @@ public class Say extends PerclCommand {
     return Objects.equals(this.text, say.text) &&
         Objects.equals(this.language, say.language) &&
         Objects.equals(this.loop, say.loop) &&
-        Objects.equals(this.conferenceId, say.conferenceId) &&
         Objects.equals(this.privacyMode, say.privacyMode) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, language, loop, conferenceId, privacyMode, super.hashCode());
+    return Objects.hash(text, language, loop, privacyMode, super.hashCode());
   }
 
   @Override
@@ -214,7 +186,6 @@ public class Say extends PerclCommand {
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
     sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -226,7 +197,6 @@ public class Say extends PerclCommand {
     attributes.put("text", () -> this.getText());
     attributes.put("language", () -> this.getLanguage());
     attributes.put("loop", () -> this.getLoop());
-    attributes.put("conferenceId", () -> this.getConferenceId());
     attributes.put("privacyMode", () -> this.getPrivacyMode());
     return attributes;
   }

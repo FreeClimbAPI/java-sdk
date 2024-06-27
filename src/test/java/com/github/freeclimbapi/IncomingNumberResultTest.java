@@ -199,6 +199,17 @@ import com.github.freeclimbapi.models.*;
       
     }
 
+    /**
+     * Test the property 'tfn'
+     */
+    @Test
+    public void tfnTest() {
+      TFN object = new TFN();
+      model.setTfn(object);
+      Assert.assertEquals(object.getClass(), TFN.class);
+      
+    }
+
       /**
      * Test the method 'equalsTrue'
      */
@@ -210,8 +221,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -223,13 +234,15 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+      TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
       test2.setUri("TS");
       test2.setDateCreated("TS");
       test2.setDateUpdated("TS");
       test2.setRevision(1);
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
       test2.setCampaignId("TS");
       test2.setPhoneNumberId("TS");
       test2.setAccountId("TS");
@@ -241,6 +254,8 @@ import com.github.freeclimbapi.models.*;
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
+      TFN TFNobject2 = TFNobject;
+      test2.setTfn(TFNobject2);
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -256,8 +271,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -269,13 +284,15 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+        TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
       test2.setUri("tS");
       test2.setDateCreated("tS");
       test2.setDateUpdated("tS");
       test2.setRevision(0);
-      Capabilities object2 = new Capabilities();
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = new Capabilities();
+      test2.setCapabilities(Capabilitiesobject2);
       test2.setCampaignId("tS");
       test2.setPhoneNumberId("tS");
       test2.setAccountId("tS");
@@ -287,6 +304,8 @@ import com.github.freeclimbapi.models.*;
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
       test2.setOffnet(false);
+      TFN TFNobject2 = new TFN();
+      test2.setTfn(TFNobject2);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -302,8 +321,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -315,6 +334,8 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+      TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -331,8 +352,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -344,13 +365,15 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+        TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
       test2.setUri("TS");
       test2.setDateCreated("TS");
       test2.setDateUpdated("TS");
       test2.setRevision(1);
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
       test2.setCampaignId("TS");
       test2.setPhoneNumberId("TS");
       test2.setAccountId("TS");
@@ -362,6 +385,8 @@ import com.github.freeclimbapi.models.*;
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
+      TFN TFNobject2 = TFNobject;
+      test2.setTfn(TFNobject2);
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -379,8 +404,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -392,13 +417,15 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+        TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
       test2.setUri("TS");
       test2.setDateCreated("TS");
       test2.setDateUpdated("TS");
       test2.setRevision(1);
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
       test2.setCampaignId("TS");
       test2.setPhoneNumberId("TS");
       test2.setAccountId("TS");
@@ -410,6 +437,8 @@ import com.github.freeclimbapi.models.*;
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
+      TFN TFNobject2 = TFNobject;
+      test2.setTfn(TFNobject2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -424,8 +453,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -437,13 +466,15 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+        TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
       test2.setUri("tS");
       test2.setDateCreated("tS");
       test2.setDateUpdated("tS");
       test2.setRevision(0);
-      Capabilities object2 = new Capabilities();
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = new Capabilities();
+      test2.setCapabilities(Capabilitiesobject2);
       test2.setCampaignId("tS");
       test2.setPhoneNumberId("tS");
       test2.setAccountId("tS");
@@ -455,6 +486,8 @@ import com.github.freeclimbapi.models.*;
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
       test2.setOffnet(false);
+      TFN TFNobject2 = new TFN();
+      test2.setTfn(TFNobject2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -469,8 +502,8 @@ import com.github.freeclimbapi.models.*;
       test1.setDateCreated("TS");
       test1.setDateUpdated("TS");
       test1.setRevision(1);
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
       test1.setCampaignId("TS");
       test1.setPhoneNumberId("TS");
       test1.setAccountId("TS");
@@ -482,6 +515,8 @@ import com.github.freeclimbapi.models.*;
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
+      TFN TFNobject = new TFN();
+      test1.setTfn(TFNobject);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

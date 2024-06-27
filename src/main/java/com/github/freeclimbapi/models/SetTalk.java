@@ -45,10 +45,6 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for a Participant in a Conference provided both calls are in the same conference. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetTalk extends PerclCommand {
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public static final String SERIALIZED_NAME_TALK = "talk";
   @SerializedName(SERIALIZED_NAME_TALK)
   private Boolean talk;
@@ -56,29 +52,6 @@ public class SetTalk extends PerclCommand {
   public SetTalk() { 
     this.command = this.getClass().getSimpleName();
   }
-
-  public SetTalk callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the call leg that is to be muted or unmuted. The Call must be in a Conference or an error will be triggered.
-   * @return callId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the call leg that is to be muted or unmuted. The Call must be in a Conference or an error will be triggered.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
 
   public SetTalk talk(Boolean talk) {
     
@@ -112,14 +85,13 @@ public class SetTalk extends PerclCommand {
       return false;
     }
     SetTalk setTalk = (SetTalk) o;
-    return Objects.equals(this.callId, setTalk.callId) &&
-        Objects.equals(this.talk, setTalk.talk) &&
+    return Objects.equals(this.talk, setTalk.talk) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callId, talk, super.hashCode());
+    return Objects.hash(talk, super.hashCode());
   }
 
   @Override
@@ -127,7 +99,6 @@ public class SetTalk extends PerclCommand {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetTalk {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -136,7 +107,6 @@ public class SetTalk extends PerclCommand {
   @Override
   public Map<String, Callable<Object>> attributeTypeMap() {
     Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("callId", () -> this.getCallId());
     attributes.put("talk", () -> this.getTalk());
     return attributes;
   }

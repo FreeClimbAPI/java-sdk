@@ -44,39 +44,12 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetTalkAllOf {
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public static final String SERIALIZED_NAME_TALK = "talk";
   @SerializedName(SERIALIZED_NAME_TALK)
   private Boolean talk;
 
   public SetTalkAllOf() { 
   }
-
-  public SetTalkAllOf callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the call leg that is to be muted or unmuted. The Call must be in a Conference or an error will be triggered.
-   * @return callId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the call leg that is to be muted or unmuted. The Call must be in a Conference or an error will be triggered.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
 
   public SetTalkAllOf talk(Boolean talk) {
     
@@ -110,20 +83,18 @@ public class SetTalkAllOf {
       return false;
     }
     SetTalkAllOf setTalkAllOf = (SetTalkAllOf) o;
-    return Objects.equals(this.callId, setTalkAllOf.callId) &&
-        Objects.equals(this.talk, setTalkAllOf.talk);
+    return Objects.equals(this.talk, setTalkAllOf.talk);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callId, talk);
+    return Objects.hash(talk);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetTalkAllOf {\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
     sb.append("}");
     return sb.toString();

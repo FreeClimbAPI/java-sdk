@@ -3747,6 +3747,260 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
+     * Build call for getTollFreeSmsCampaign
+     * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTollFreeSmsCampaignCall(String campaignId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "campaignId" + "\\}", localVarApiClient.escapeString(campaignId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTollFreeSmsCampaignValidateBeforeCall(String campaignId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'campaignId' is set
+        if (campaignId == null) {
+            throw new ApiException("Missing the required parameter 'campaignId' when calling getTollFreeSmsCampaign(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignCall(campaignId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get a TollFree SMS Campaign
+     * 
+     * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
+     * @return SMSTollFreeCampaign
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
+     */
+    public SMSTollFreeCampaign getTollFreeSmsCampaign(String campaignId) throws ApiException {
+        ApiResponse<SMSTollFreeCampaign> localVarResp = getTollFreeSmsCampaignWithHttpInfo(campaignId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get a TollFree SMS Campaign
+     * 
+     * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
+     * @return ApiResponse&lt;SMSTollFreeCampaign&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SMSTollFreeCampaign> getTollFreeSmsCampaignWithHttpInfo(String campaignId) throws ApiException {
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignValidateBeforeCall(campaignId, null);
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get a TollFree SMS Campaign (asynchronously)
+     * 
+     * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTollFreeSmsCampaignAsync(String campaignId, final ApiCallback<SMSTollFreeCampaign> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignValidateBeforeCall(campaignId, _callback);
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getTollFreeSmsCampaigns
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTollFreeSmsCampaignsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Messages/TollFree/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTollFreeSmsCampaignsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignsCall(_callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get list of TollFree Campaigns
+     * 
+     * @return SMSTollFreeCampaignsListResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public SMSTollFreeCampaignsListResult getTollFreeSmsCampaigns() throws ApiException {
+        ApiResponse<SMSTollFreeCampaignsListResult> localVarResp = getTollFreeSmsCampaignsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get list of TollFree Campaigns
+     * 
+     * @return ApiResponse&lt;SMSTollFreeCampaignsListResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SMSTollFreeCampaignsListResult> getTollFreeSmsCampaignsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get list of TollFree Campaigns (asynchronously)
+     * 
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTollFreeSmsCampaignsAsync(final ApiCallback<SMSTollFreeCampaignsListResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTollFreeSmsCampaignsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for listActiveQueues
      * @param alias Return only the Queue resources with aliases that exactly match this name. (optional)
      * @param _callback Callback for upload/download progress
@@ -4788,6 +5042,153 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
+     * Build call for listConferenceRecordings
+     * @param callId Show only Recordings made during the Call with this ID. (optional)
+     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listConferenceRecordingsCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+	    .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (callId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("callId", callId));
+        }
+
+        if (conferenceId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("conferenceId", conferenceId));
+        }
+
+        if (dateCreated != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateCreated", dateCreated));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call listConferenceRecordingsValidateBeforeCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = listConferenceRecordingsCall(callId, conferenceId, dateCreated, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * List Conference Recordings
+     * 
+     * @param callId Show only Recordings made during the Call with this ID. (optional)
+     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
+     * @return RecordingList
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
+     */
+    public RecordingList listConferenceRecordings(String callId, String conferenceId, String dateCreated) throws ApiException {
+        ApiResponse<RecordingList> localVarResp = listConferenceRecordingsWithHttpInfo(callId, conferenceId, dateCreated);
+        return localVarResp.getData();
+    }
+
+    /**
+     * List Conference Recordings
+     * 
+     * @param callId Show only Recordings made during the Call with this ID. (optional)
+     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
+     * @return ApiResponse&lt;RecordingList&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(String callId, String conferenceId, String dateCreated) throws ApiException {
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, null);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List Conference Recordings (asynchronously)
+     * 
+     * @param callId Show only Recordings made during the Call with this ID. (optional)
+     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listConferenceRecordingsAsync(String callId, String conferenceId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, _callback);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for listConferences
      * @param status Only show conferences that currently have the specified status. Valid values: &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or &#x60;terminated&#x60;. (optional)
      * @param alias List Conferences whose alias exactly matches this string. (optional)
@@ -4957,6 +5358,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
      * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -4967,7 +5369,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listIncomingNumbersCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listIncomingNumbersCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -5050,6 +5452,10 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.shortCode", capabilitiesShortCode));
         }
 
+        if (tfnCampaignId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("tfn.campaignId", tfnCampaignId));
+        }
+
         if (offnet != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offnet", offnet));
         }
@@ -5078,10 +5484,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listIncomingNumbersValidateBeforeCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listIncomingNumbersValidateBeforeCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = listIncomingNumbersCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, _callback);
+        okhttp3.Call localVarCall = listIncomingNumbersCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, _callback);
         return localVarCall;
 
     }
@@ -5103,6 +5509,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
      * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return IncomingNumberList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -5112,8 +5519,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public IncomingNumberList listIncomingNumbers(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet) throws ApiException {
-        ApiResponse<IncomingNumberList> localVarResp = listIncomingNumbersWithHttpInfo(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+    public IncomingNumberList listIncomingNumbers(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet) throws ApiException {
+        ApiResponse<IncomingNumberList> localVarResp = listIncomingNumbersWithHttpInfo(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
         return localVarResp.getData();
     }
 
@@ -5134,6 +5541,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
      * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return ApiResponse&lt;IncomingNumberList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -5143,8 +5551,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet) throws ApiException {
-        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, null);
+    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet) throws ApiException {
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, null);
         Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -5166,6 +5574,7 @@ public class DefaultApi {
      * @param capabilitiesTollFree  (optional)
      * @param capabilitiesTenDLC  (optional)
      * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
      * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -5176,9 +5585,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listIncomingNumbersAsync(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, Boolean offnet, final ApiCallback<IncomingNumberList> _callback) throws ApiException {
+    public okhttp3.Call listIncomingNumbersAsync(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback<IncomingNumberList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet, _callback);
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, _callback);
         Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -5918,6 +6327,137 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = makeACallValidateBeforeCall(makeCallRequest, _callback);
         Type localVarReturnType = new TypeToken<CallResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for makeAWebrtcJwt
+     * @param inlineObject  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call makeAWebrtcJwtCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = inlineObject;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/Calls/WebRTC/Token"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call makeAWebrtcJwtValidateBeforeCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'inlineObject' is set
+        if (inlineObject == null) {
+            throw new ApiException("Missing the required parameter 'inlineObject' when calling makeAWebrtcJwt(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = makeAWebrtcJwtCall(inlineObject, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Make a JWT for WebRTC calling
+     * Make a JWT for WebRTC calling
+     * @param inlineObject  (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
+     */
+    public String makeAWebrtcJwt(InlineObject inlineObject) throws ApiException {
+        ApiResponse<String> localVarResp = makeAWebrtcJwtWithHttpInfo(inlineObject);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Make a JWT for WebRTC calling
+     * Make a JWT for WebRTC calling
+     * @param inlineObject  (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> makeAWebrtcJwtWithHttpInfo(InlineObject inlineObject) throws ApiException {
+        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(inlineObject, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Make a JWT for WebRTC calling (asynchronously)
+     * Make a JWT for WebRTC calling
+     * @param inlineObject  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call makeAWebrtcJwtAsync(InlineObject inlineObject, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(inlineObject, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

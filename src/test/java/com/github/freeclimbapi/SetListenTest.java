@@ -39,16 +39,6 @@ import com.github.freeclimbapi.models.*;
     private final SetListen model = new SetListen();
 
     /**
-     * Test the property 'callId'
-     */
-    @Test
-    public void callIdTest() {
-      model.setCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallId());
-      
-    }
-
-    /**
      * Test the property 'listen'
      */
     @Test
@@ -65,10 +55,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       SetListen test2 = new SetListen();
-      test2.setCallId("TS");
       test2.setListen(true);
 
       Assert.assertTrue(test1.equals(test2));
@@ -81,10 +69,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       SetListen test2 = new SetListen();
-      test2.setCallId("tS");
       test2.setListen(false);
 
       Assert.assertFalse(test1.equals(test2));
@@ -97,7 +83,6 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       
       int hashCode1 = test1.hashCode();
@@ -111,10 +96,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       SetListen test2 = new SetListen();
-      test2.setCallId("TS");
       test2.setListen(true);
         
       String toString1 = test1.toString();
@@ -129,10 +112,8 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       SetListen test2 = new SetListen();
-      test2.setCallId("TS");
       test2.setListen(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -144,10 +125,8 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
       SetListen test2 = new SetListen();
-      test2.setCallId("tS");
       test2.setListen(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -159,7 +138,6 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SetListen test1 = new SetListen();
-      test1.setCallId("TS");
       test1.setListen(true);
 
       String toString1 = test1.toString();
@@ -173,11 +151,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
-        model.setCallId("TEST_STRING");
         model.setListen(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("callId"), model.getCallId());
         Assert.assertEquals(attributes.get("listen"), model.getListen());
     }
  }

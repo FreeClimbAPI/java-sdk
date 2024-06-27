@@ -61,10 +61,6 @@ public class AddToConference extends PerclCommand {
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
   private String conferenceId;
 
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public static final String SERIALIZED_NAME_LEAVE_CONFERENCE_URL = "leaveConferenceUrl";
   @SerializedName(SERIALIZED_NAME_LEAVE_CONFERENCE_URL)
   private String leaveConferenceUrl;
@@ -178,29 +174,6 @@ public class AddToConference extends PerclCommand {
 
   public void setConferenceId(String conferenceId) {
     this.conferenceId = conferenceId;
-  }
-
-
-  public AddToConference callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the Call that will be added to the specified Conference. The Call must be in progress or an error will result. If the Call is part of an existing Conference, it is first removed from that Conference and is then moved to the new one.
-   * @return callId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Call that will be added to the specified Conference. The Call must be in progress or an error will result. If the Call is part of an existing Conference, it is first removed from that Conference and is then moved to the new one.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
   }
 
 
@@ -332,7 +305,6 @@ public class AddToConference extends PerclCommand {
         Objects.equals(this.callControlSequence, addToConference.callControlSequence) &&
         Objects.equals(this.callControlUrl, addToConference.callControlUrl) &&
         Objects.equals(this.conferenceId, addToConference.conferenceId) &&
-        Objects.equals(this.callId, addToConference.callId) &&
         Objects.equals(this.leaveConferenceUrl, addToConference.leaveConferenceUrl) &&
         Objects.equals(this.listen, addToConference.listen) &&
         Objects.equals(this.notificationUrl, addToConference.notificationUrl) &&
@@ -343,7 +315,7 @@ public class AddToConference extends PerclCommand {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, callId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk, super.hashCode());
+    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk, super.hashCode());
   }
 
   @Override
@@ -355,7 +327,6 @@ public class AddToConference extends PerclCommand {
     sb.append("    callControlSequence: ").append(toIndentedString(callControlSequence)).append("\n");
     sb.append("    callControlUrl: ").append(toIndentedString(callControlUrl)).append("\n");
     sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    leaveConferenceUrl: ").append(toIndentedString(leaveConferenceUrl)).append("\n");
     sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
     sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
@@ -372,7 +343,6 @@ public class AddToConference extends PerclCommand {
     attributes.put("callControlSequence", () -> this.getCallControlSequence());
     attributes.put("callControlUrl", () -> this.getCallControlUrl());
     attributes.put("conferenceId", () -> this.getConferenceId());
-    attributes.put("callId", () -> this.getCallId());
     attributes.put("leaveConferenceUrl", () -> this.getLeaveConferenceUrl());
     attributes.put("listen", () -> this.getListen());
     attributes.put("notificationUrl", () -> this.getNotificationUrl());

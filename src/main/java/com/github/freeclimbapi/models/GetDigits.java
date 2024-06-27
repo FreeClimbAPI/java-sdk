@@ -63,7 +63,7 @@ public class GetDigits extends PerclCommand {
 
   public static final String SERIALIZED_NAME_INITIAL_TIMEOUT_MS = "initialTimeoutMs";
   @SerializedName(SERIALIZED_NAME_INITIAL_TIMEOUT_MS)
-  private String initialTimeoutMs;
+  private Integer initialTimeoutMs;
 
   public static final String SERIALIZED_NAME_MAX_DIGITS = "maxDigits";
   @SerializedName(SERIALIZED_NAME_MAX_DIGITS)
@@ -177,7 +177,7 @@ public class GetDigits extends PerclCommand {
   }
 
 
-  public GetDigits initialTimeoutMs(String initialTimeoutMs) {
+  public GetDigits initialTimeoutMs(Integer initialTimeoutMs) {
     
     this.initialTimeoutMs = initialTimeoutMs;
     return this;
@@ -190,12 +190,12 @@ public class GetDigits extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Maximum time in milliseconds that FreeClimb will wait for the Caller to press the first digit before making a determination that a `timeout` has occurred and moving on to make the request to the `actionUrl` to submit the results of the `GetDigits` command. This timeout interval begins when all nested commands have been fully executed.")
 
-  public String getInitialTimeoutMs() {
+  public Integer getInitialTimeoutMs() {
     return initialTimeoutMs;
   }
 
 
-  public void setInitialTimeoutMs(String initialTimeoutMs) {
+  public void setInitialTimeoutMs(Integer initialTimeoutMs) {
     this.initialTimeoutMs = initialTimeoutMs;
   }
 

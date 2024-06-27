@@ -59,16 +59,6 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the property 'conferenceId'
-     */
-    @Test
-    public void conferenceIdTest() {
-      model.setConferenceId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getConferenceId());
-      
-    }
-
-    /**
      * Test the property 'privacyMode'
      */
     @Test
@@ -87,12 +77,10 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
       test2.setFile("TS");
       test2.setLoop(1);
-      test2.setConferenceId("TS");
       test2.setPrivacyMode(true);
 
       Assert.assertTrue(test1.equals(test2));
@@ -107,12 +95,10 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
       test2.setFile("tS");
       test2.setLoop(0);
-      test2.setConferenceId("tS");
       test2.setPrivacyMode(false);
 
       Assert.assertFalse(test1.equals(test2));
@@ -127,7 +113,6 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       
       int hashCode1 = test1.hashCode();
@@ -143,12 +128,10 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
       test2.setFile("TS");
       test2.setLoop(1);
-      test2.setConferenceId("TS");
       test2.setPrivacyMode(true);
         
       String toString1 = test1.toString();
@@ -165,12 +148,10 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
       test2.setFile("TS");
       test2.setLoop(1);
-      test2.setConferenceId("TS");
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -184,12 +165,10 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
       test2.setFile("tS");
       test2.setLoop(0);
-      test2.setConferenceId("tS");
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -203,7 +182,6 @@ import com.github.freeclimbapi.models.*;
       PlayAllOf test1 = new PlayAllOf();
       test1.setFile("TS");
       test1.setLoop(1);
-      test1.setConferenceId("TS");
       test1.setPrivacyMode(true);
 
       String toString1 = test1.toString();
