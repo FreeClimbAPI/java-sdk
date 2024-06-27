@@ -45,36 +45,9 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `TerminateConference` command terminates an existing Conference. Any active participants are hung up on by FreeClimb. If this is not the desired behavior, use the `RemoveFromConference` command to unbridge Calls that should not be hung up. Note: The Call requesting TerminateConference must be on the same Conference for this command to execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TerminateConference extends PerclCommand {
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  private String conferenceId;
-
   public TerminateConference() { 
     this.command = this.getClass().getSimpleName();
   }
-
-  public TerminateConference conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * ID of the conference to terminate.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the conference to terminate.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -84,14 +57,12 @@ public class TerminateConference extends PerclCommand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TerminateConference terminateConference = (TerminateConference) o;
-    return Objects.equals(this.conferenceId, terminateConference.conferenceId) &&
-        super.equals(o);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conferenceId, super.hashCode());
+    return Objects.hash(super.hashCode());
   }
 
   @Override
@@ -99,7 +70,6 @@ public class TerminateConference extends PerclCommand {
     StringBuilder sb = new StringBuilder();
     sb.append("class TerminateConference {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,7 +77,6 @@ public class TerminateConference extends PerclCommand {
   @Override
   public Map<String, Callable<Object>> attributeTypeMap() {
     Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("conferenceId", () -> this.getConferenceId());
     return attributes;
   }
 

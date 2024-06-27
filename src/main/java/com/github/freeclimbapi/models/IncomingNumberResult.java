@@ -108,6 +108,10 @@ public class IncomingNumberResult {
   @SerializedName(SERIALIZED_NAME_OFFNET)
   private Boolean offnet;
 
+  public static final String SERIALIZED_NAME_TFN = "tfn";
+  @SerializedName(SERIALIZED_NAME_TFN)
+  private TFN tfn;
+
   public IncomingNumberResult() { 
   }
 
@@ -483,6 +487,29 @@ public class IncomingNumberResult {
   }
 
 
+  public IncomingNumberResult tfn(TFN tfn) {
+    
+    this.tfn = tfn;
+    return this;
+  }
+
+   /**
+   * Get tfn
+   * @return tfn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public TFN getTfn() {
+    return tfn;
+  }
+
+
+  public void setTfn(TFN tfn) {
+    this.tfn = tfn;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -507,7 +534,8 @@ public class IncomingNumberResult {
         Objects.equals(this.country, incomingNumberResult.country) &&
         Objects.equals(this.voiceEnabled, incomingNumberResult.voiceEnabled) &&
         Objects.equals(this.smsEnabled, incomingNumberResult.smsEnabled) &&
-        Objects.equals(this.offnet, incomingNumberResult.offnet);
+        Objects.equals(this.offnet, incomingNumberResult.offnet) &&
+        Objects.equals(this.tfn, incomingNumberResult.tfn);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -516,7 +544,7 @@ public class IncomingNumberResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, capabilities, campaignId, phoneNumberId, accountId, applicationId, phoneNumber, alias, region, country, voiceEnabled, smsEnabled, offnet);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, capabilities, campaignId, phoneNumberId, accountId, applicationId, phoneNumber, alias, region, country, voiceEnabled, smsEnabled, offnet, tfn);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -546,6 +574,7 @@ public class IncomingNumberResult {
     sb.append("    voiceEnabled: ").append(toIndentedString(voiceEnabled)).append("\n");
     sb.append("    smsEnabled: ").append(toIndentedString(smsEnabled)).append("\n");
     sb.append("    offnet: ").append(toIndentedString(offnet)).append("\n");
+    sb.append("    tfn: ").append(toIndentedString(tfn)).append("\n");
     sb.append("}");
     return sb.toString();
   }

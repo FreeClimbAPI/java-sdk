@@ -39,16 +39,6 @@ import com.github.freeclimbapi.models.*;
     private final SetTalkAllOf model = new SetTalkAllOf();
 
     /**
-     * Test the property 'callId'
-     */
-    @Test
-    public void callIdTest() {
-      model.setCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallId());
-      
-    }
-
-    /**
      * Test the property 'talk'
      */
     @Test
@@ -65,10 +55,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       SetTalkAllOf test2 = new SetTalkAllOf();
-      test2.setCallId("TS");
       test2.setTalk(true);
 
       Assert.assertTrue(test1.equals(test2));
@@ -81,10 +69,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       SetTalkAllOf test2 = new SetTalkAllOf();
-      test2.setCallId("tS");
       test2.setTalk(false);
 
       Assert.assertFalse(test1.equals(test2));
@@ -97,7 +83,6 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       
       int hashCode1 = test1.hashCode();
@@ -111,10 +96,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       SetTalkAllOf test2 = new SetTalkAllOf();
-      test2.setCallId("TS");
       test2.setTalk(true);
         
       String toString1 = test1.toString();
@@ -129,10 +112,8 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       SetTalkAllOf test2 = new SetTalkAllOf();
-      test2.setCallId("TS");
       test2.setTalk(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -144,10 +125,8 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
       SetTalkAllOf test2 = new SetTalkAllOf();
-      test2.setCallId("tS");
       test2.setTalk(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -159,7 +138,6 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SetTalkAllOf test1 = new SetTalkAllOf();
-      test1.setCallId("TS");
       test1.setTalk(true);
 
       String toString1 = test1.toString();

@@ -82,9 +82,9 @@ public class GetDigitsTest {
    */
   @Test
   public void initialTimeoutMsTest() {
-    model.setInitialTimeoutMs("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getInitialTimeoutMs());
 
+    model.setInitialTimeoutMs(1);
+    Assert.assertEquals(1, (int) model.getInitialTimeoutMs());
   }
 
   /**
@@ -139,7 +139,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -150,7 +150,7 @@ public class GetDigitsTest {
     test2.setDigitTimeoutMs(1);
     test2.setFinishOnKey("TS");
     test2.setFlushBuffer(true);
-    test2.setInitialTimeoutMs("TS");
+    test2.setInitialTimeoutMs(1);
     test2.setMaxDigits(1);
     test2.setMinDigits(1);
     List<PerclCommand> testList2 = testList;
@@ -171,7 +171,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -182,7 +182,7 @@ public class GetDigitsTest {
     test2.setDigitTimeoutMs(0);
     test2.setFinishOnKey("tS");
     test2.setFlushBuffer(false);
-    test2.setInitialTimeoutMs("tS");
+    test2.setInitialTimeoutMs(0);
     test2.setMaxDigits(0);
     test2.setMinDigits(0);
     List<PerclCommand> testList2 = null;
@@ -203,7 +203,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -225,7 +225,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -236,7 +236,7 @@ public class GetDigitsTest {
     test2.setDigitTimeoutMs(1);
     test2.setFinishOnKey("TS");
     test2.setFlushBuffer(true);
-    test2.setInitialTimeoutMs("TS");
+    test2.setInitialTimeoutMs(1);
     test2.setMaxDigits(1);
     test2.setMinDigits(1);
     List<PerclCommand> testList2 = testList;
@@ -259,7 +259,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -270,7 +270,7 @@ public class GetDigitsTest {
     test2.setDigitTimeoutMs(1);
     test2.setFinishOnKey("TS");
     test2.setFlushBuffer(true);
-    test2.setInitialTimeoutMs("TS");
+    test2.setInitialTimeoutMs(1);
     test2.setMaxDigits(1);
     test2.setMinDigits(1);
     List<PerclCommand> testList2 = testList;
@@ -290,7 +290,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -301,7 +301,7 @@ public class GetDigitsTest {
     test2.setDigitTimeoutMs(0);
     test2.setFinishOnKey("tS");
     test2.setFlushBuffer(false);
-    test2.setInitialTimeoutMs("tS");
+    test2.setInitialTimeoutMs(0);
     test2.setMaxDigits(0);
     test2.setMinDigits(0);
     List<PerclCommand> testList2 = null;
@@ -321,7 +321,7 @@ public class GetDigitsTest {
     test1.setDigitTimeoutMs(1);
     test1.setFinishOnKey("TS");
     test1.setFlushBuffer(true);
-    test1.setInitialTimeoutMs("TS");
+    test1.setInitialTimeoutMs(1);
     test1.setMaxDigits(1);
     test1.setMinDigits(1);
     List<PerclCommand> testList = new ArrayList<PerclCommand>();
@@ -342,7 +342,7 @@ public class GetDigitsTest {
     model.setActionUrl("TEST_STRING");
     model.setFinishOnKey("TEST_STRING");
     model.setFlushBuffer(false);
-    model.setInitialTimeoutMs("TEST_STRING");
+    model.setInitialTimeoutMs(1);
     model.setPrivacyMode(false);
     Map<String, Map<String, Object>> build = model.build();
     Map<String, Object> attributes = build.get(model.getCommand());

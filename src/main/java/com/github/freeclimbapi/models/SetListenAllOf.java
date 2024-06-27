@@ -44,39 +44,12 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetListenAllOf {
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public static final String SERIALIZED_NAME_LISTEN = "listen";
   @SerializedName(SERIALIZED_NAME_LISTEN)
   private Boolean listen;
 
   public SetListenAllOf() { 
   }
-
-  public SetListenAllOf callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the call leg that is to be assigned the listen privilege. The Call must be in a Conference or an error will be triggered.
-   * @return callId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the call leg that is to be assigned the listen privilege. The Call must be in a Conference or an error will be triggered.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
 
   public SetListenAllOf listen(Boolean listen) {
     
@@ -110,20 +83,18 @@ public class SetListenAllOf {
       return false;
     }
     SetListenAllOf setListenAllOf = (SetListenAllOf) o;
-    return Objects.equals(this.callId, setListenAllOf.callId) &&
-        Objects.equals(this.listen, setListenAllOf.listen);
+    return Objects.equals(this.listen, setListenAllOf.listen);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callId, listen);
+    return Objects.hash(listen);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetListenAllOf {\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
     sb.append("}");
     return sb.toString();

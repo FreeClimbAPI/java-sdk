@@ -324,6 +324,56 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
+     * Test the property 'optinKeywords'
+     */
+    @Test
+    public void optinKeywordsTest() {
+      model.setOptinKeywords("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getOptinKeywords());
+      
+    }
+
+    /**
+     * Test the property 'optoutKeywords'
+     */
+    @Test
+    public void optoutKeywordsTest() {
+      model.setOptoutKeywords("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getOptoutKeywords());
+      
+    }
+
+    /**
+     * Test the property 'helpKeywords'
+     */
+    @Test
+    public void helpKeywordsTest() {
+      model.setHelpKeywords("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getHelpKeywords());
+      
+    }
+
+    /**
+     * Test the property 'optinMessage'
+     */
+    @Test
+    public void optinMessageTest() {
+      model.setOptinMessage("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getOptinMessage());
+      
+    }
+
+    /**
+     * Test the property 'optoutMessage'
+     */
+    @Test
+    public void optoutMessageTest() {
+      model.setOptoutMessage("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getOptoutMessage());
+      
+    }
+
+    /**
      * Test the property 'referenceId'
      */
     @Test
@@ -389,6 +439,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -422,6 +477,11 @@ import com.github.freeclimbapi.models.*;
       test2.setSample5("TS");
       test2.setMessageFlow("TS");
       test2.setHelpMessage("TS");
+      test2.setOptinKeywords("TS");
+      test2.setOptoutKeywords("TS");
+      test2.setHelpKeywords("TS");
+      test2.setOptinMessage("TS");
+      test2.setOptoutMessage("TS");
       test2.setReferenceId("TS");
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -465,6 +525,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -498,6 +563,11 @@ import com.github.freeclimbapi.models.*;
       test2.setSample5("tS");
       test2.setMessageFlow("tS");
       test2.setHelpMessage("tS");
+      test2.setOptinKeywords("tS");
+      test2.setOptoutKeywords("tS");
+      test2.setHelpKeywords("tS");
+      test2.setOptinMessage("tS");
+      test2.setOptoutMessage("tS");
       test2.setReferenceId("tS");
       test2.setMock(false);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
@@ -541,6 +611,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -585,6 +660,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -618,6 +698,11 @@ import com.github.freeclimbapi.models.*;
       test2.setSample5("TS");
       test2.setMessageFlow("TS");
       test2.setHelpMessage("TS");
+      test2.setOptinKeywords("TS");
+      test2.setOptoutKeywords("TS");
+      test2.setHelpKeywords("TS");
+      test2.setOptinMessage("TS");
+      test2.setOptoutMessage("TS");
       test2.setReferenceId("TS");
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -663,6 +748,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -696,6 +786,11 @@ import com.github.freeclimbapi.models.*;
       test2.setSample5("TS");
       test2.setMessageFlow("TS");
       test2.setHelpMessage("TS");
+      test2.setOptinKeywords("TS");
+      test2.setOptoutKeywords("TS");
+      test2.setHelpKeywords("TS");
+      test2.setOptinMessage("TS");
+      test2.setOptoutMessage("TS");
       test2.setReferenceId("TS");
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -738,6 +833,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
@@ -771,6 +871,11 @@ import com.github.freeclimbapi.models.*;
       test2.setSample5("tS");
       test2.setMessageFlow("tS");
       test2.setHelpMessage("tS");
+      test2.setOptinKeywords("tS");
+      test2.setOptoutKeywords("tS");
+      test2.setHelpKeywords("tS");
+      test2.setOptinMessage("tS");
+      test2.setOptoutMessage("tS");
       test2.setReferenceId("tS");
       test2.setMock(false);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
@@ -813,6 +918,11 @@ import com.github.freeclimbapi.models.*;
       test1.setSample5("TS");
       test1.setMessageFlow("TS");
       test1.setHelpMessage("TS");
+      test1.setOptinKeywords("TS");
+      test1.setOptoutKeywords("TS");
+      test1.setHelpKeywords("TS");
+      test1.setOptinMessage("TS");
+      test1.setOptoutMessage("TS");
       test1.setReferenceId("TS");
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));

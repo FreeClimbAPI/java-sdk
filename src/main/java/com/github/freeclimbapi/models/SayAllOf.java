@@ -56,10 +56,6 @@ public class SayAllOf {
   @SerializedName(SERIALIZED_NAME_LOOP)
   private Integer loop = 1;
 
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  private String conferenceId;
-
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
   private Boolean privacyMode;
@@ -136,29 +132,6 @@ public class SayAllOf {
   }
 
 
-  public SayAllOf conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * D of the Conference the speech should be rendered to. If this is not specified, the speech is by default rendered to the Caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "D of the Conference the speech should be rendered to. If this is not specified, the speech is by default rendered to the Caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
   public SayAllOf privacyMode(Boolean privacyMode) {
     
     this.privacyMode = privacyMode;
@@ -194,13 +167,12 @@ public class SayAllOf {
     return Objects.equals(this.text, sayAllOf.text) &&
         Objects.equals(this.language, sayAllOf.language) &&
         Objects.equals(this.loop, sayAllOf.loop) &&
-        Objects.equals(this.conferenceId, sayAllOf.conferenceId) &&
         Objects.equals(this.privacyMode, sayAllOf.privacyMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, language, loop, conferenceId, privacyMode);
+    return Objects.hash(text, language, loop, privacyMode);
   }
 
   @Override
@@ -210,7 +182,6 @@ public class SayAllOf {
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
     sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
     sb.append("}");
     return sb.toString();

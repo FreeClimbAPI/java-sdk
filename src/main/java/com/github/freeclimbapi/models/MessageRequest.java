@@ -76,9 +76,9 @@ public class MessageRequest {
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
   private String notificationUrl;
 
-  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-  private String accountId;
+  public static final String SERIALIZED_NAME_MEDIA_URLS = "mediaUrls";
+  @SerializedName(SERIALIZED_NAME_MEDIA_URLS)
+  private List<URI> mediaUrls = null;
 
   public MessageRequest() { 
   }
@@ -267,26 +267,34 @@ public class MessageRequest {
   }
 
 
-  public MessageRequest accountId(String accountId) {
+  public MessageRequest mediaUrls(List<URI> mediaUrls) {
     
-    this.accountId = accountId;
+    this.mediaUrls = mediaUrls;
+    return this;
+  }
+
+  public MessageRequest addMediaUrlsItem(URI mediaUrlsItem) {
+    if (this.mediaUrls == null) {
+      this.mediaUrls = new ArrayList<URI>();
+    }
+    this.mediaUrls.add(mediaUrlsItem);
     return this;
   }
 
    /**
-   * String that uniquely identifies this account resource.
-   * @return accountId
+   * an array of HTTP URLs which are to be used as attachments to the message. This will force the message into being an MMS message and must be done using a from number which is MMS capabile.
+   * @return mediaUrls
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "String that uniquely identifies this account resource.")
+  @ApiModelProperty(value = "an array of HTTP URLs which are to be used as attachments to the message. This will force the message into being an MMS message and must be done using a from number which is MMS capabile.")
 
-  public String getAccountId() {
-    return accountId;
+  public List<URI> getMediaUrls() {
+    return mediaUrls;
   }
 
 
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
+  public void setMediaUrls(List<URI> mediaUrls) {
+    this.mediaUrls = mediaUrls;
   }
 
 
@@ -307,12 +315,12 @@ public class MessageRequest {
         Objects.equals(this.to, messageRequest.to) &&
         Objects.equals(this.text, messageRequest.text) &&
         Objects.equals(this.notificationUrl, messageRequest.notificationUrl) &&
-        Objects.equals(this.accountId, messageRequest.accountId);
+        Objects.equals(this.mediaUrls, messageRequest.mediaUrls);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, from, to, text, notificationUrl, accountId);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, from, to, text, notificationUrl, mediaUrls);
   }
 
   @Override
@@ -327,7 +335,7 @@ public class MessageRequest {
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
     sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    mediaUrls: ").append(toIndentedString(mediaUrls)).append("\n");
     sb.append("}");
     return sb.toString();
   }

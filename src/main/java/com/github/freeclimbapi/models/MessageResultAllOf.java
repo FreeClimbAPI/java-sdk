@@ -88,6 +88,10 @@ public class MessageResultAllOf {
   @SerializedName(SERIALIZED_NAME_SEGMENT_COUNT)
   private BigDecimal segmentCount;
 
+  public static final String SERIALIZED_NAME_MEDIA_URLS = "mediaUrls";
+  @SerializedName(SERIALIZED_NAME_MEDIA_URLS)
+  private List<URI> mediaUrls = null;
+
   public MessageResultAllOf() { 
   }
 
@@ -344,6 +348,37 @@ public class MessageResultAllOf {
   }
 
 
+  public MessageResultAllOf mediaUrls(List<URI> mediaUrls) {
+    
+    this.mediaUrls = mediaUrls;
+    return this;
+  }
+
+  public MessageResultAllOf addMediaUrlsItem(URI mediaUrlsItem) {
+    if (this.mediaUrls == null) {
+      this.mediaUrls = new ArrayList<URI>();
+    }
+    this.mediaUrls.add(mediaUrlsItem);
+    return this;
+  }
+
+   /**
+   * an array of HTTP URLs which were attached this this message
+   * @return mediaUrls
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "an array of HTTP URLs which were attached this this message")
+
+  public List<URI> getMediaUrls() {
+    return mediaUrls;
+  }
+
+
+  public void setMediaUrls(List<URI> mediaUrls) {
+    this.mediaUrls = mediaUrls;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -363,7 +398,8 @@ public class MessageResultAllOf {
         Objects.equals(this.notificationUrl, messageResultAllOf.notificationUrl) &&
         Objects.equals(this.brandId, messageResultAllOf.brandId) &&
         Objects.equals(this.campaignId, messageResultAllOf.campaignId) &&
-        Objects.equals(this.segmentCount, messageResultAllOf.segmentCount);
+        Objects.equals(this.segmentCount, messageResultAllOf.segmentCount) &&
+        Objects.equals(this.mediaUrls, messageResultAllOf.mediaUrls);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -372,7 +408,7 @@ public class MessageResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, messageId, status, from, to, text, direction, notificationUrl, brandId, campaignId, segmentCount);
+    return Objects.hash(accountId, messageId, status, from, to, text, direction, notificationUrl, brandId, campaignId, segmentCount, mediaUrls);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -397,6 +433,7 @@ public class MessageResultAllOf {
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    segmentCount: ").append(toIndentedString(segmentCount)).append("\n");
+    sb.append("    mediaUrls: ").append(toIndentedString(mediaUrls)).append("\n");
     sb.append("}");
     return sb.toString();
   }

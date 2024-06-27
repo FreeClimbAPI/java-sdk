@@ -53,10 +53,6 @@ public class Play extends PerclCommand {
   @SerializedName(SERIALIZED_NAME_LOOP)
   private Integer loop;
 
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  private String conferenceId;
-
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
   private Boolean privacyMode;
@@ -111,29 +107,6 @@ public class Play extends PerclCommand {
   }
 
 
-  public Play conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * ID of the Conference the audio should be rendered to. If this is not specified, the audio is by default rendered to the caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Conference the audio should be rendered to. If this is not specified, the audio is by default rendered to the caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
   public Play privacyMode(Boolean privacyMode) {
     
     this.privacyMode = privacyMode;
@@ -168,14 +141,13 @@ public class Play extends PerclCommand {
     Play play = (Play) o;
     return Objects.equals(this._file, play._file) &&
         Objects.equals(this.loop, play.loop) &&
-        Objects.equals(this.conferenceId, play.conferenceId) &&
         Objects.equals(this.privacyMode, play.privacyMode) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(_file, loop, conferenceId, privacyMode, super.hashCode());
+    return Objects.hash(_file, loop, privacyMode, super.hashCode());
   }
 
   @Override
@@ -185,7 +157,6 @@ public class Play extends PerclCommand {
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
     sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -196,7 +167,6 @@ public class Play extends PerclCommand {
     Map<String, Callable<Object>> attributes = new HashMap();
     attributes.put("_file", () -> this.getFile());
     attributes.put("loop", () -> this.getLoop());
-    attributes.put("conferenceId", () -> this.getConferenceId());
     attributes.put("privacyMode", () -> this.getPrivacyMode());
     return attributes;
   }

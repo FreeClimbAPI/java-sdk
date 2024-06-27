@@ -45,10 +45,6 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SetListen` command enables or disables the listen privilege for a Conference Participant provided both calls are in the same conference. The Participant can hear what the other participants are saying only if this privilege is enabled.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetListen extends PerclCommand {
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  private String callId;
-
   public static final String SERIALIZED_NAME_LISTEN = "listen";
   @SerializedName(SERIALIZED_NAME_LISTEN)
   private Boolean listen;
@@ -56,29 +52,6 @@ public class SetListen extends PerclCommand {
   public SetListen() { 
     this.command = this.getClass().getSimpleName();
   }
-
-  public SetListen callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the call leg that is to be assigned the listen privilege. The Call must be in a Conference or an error will be triggered.
-   * @return callId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "ID of the call leg that is to be assigned the listen privilege. The Call must be in a Conference or an error will be triggered.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
 
   public SetListen listen(Boolean listen) {
     
@@ -112,14 +85,13 @@ public class SetListen extends PerclCommand {
       return false;
     }
     SetListen setListen = (SetListen) o;
-    return Objects.equals(this.callId, setListen.callId) &&
-        Objects.equals(this.listen, setListen.listen) &&
+    return Objects.equals(this.listen, setListen.listen) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callId, listen, super.hashCode());
+    return Objects.hash(listen, super.hashCode());
   }
 
   @Override
@@ -127,7 +99,6 @@ public class SetListen extends PerclCommand {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetListen {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -136,7 +107,6 @@ public class SetListen extends PerclCommand {
   @Override
   public Map<String, Callable<Object>> attributeTypeMap() {
     Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("callId", () -> this.getCallId());
     attributes.put("listen", () -> this.getListen());
     return attributes;
   }

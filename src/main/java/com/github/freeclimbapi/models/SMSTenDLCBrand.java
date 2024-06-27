@@ -55,13 +55,13 @@ public class SMSTenDLCBrand {
   @JsonAdapter(EntityTypeEnum.Adapter.class)
   public enum EntityTypeEnum {
     PRIVATE_PROFIT("PRIVATE_PROFIT"),
-
+    
     PUBLIC_PROFIT("PUBLIC_PROFIT"),
-
+    
     NON_PROFIT("NON_PROFIT"),
-
+    
     GOVERNMENT("GOVERNMENT"),
-
+    
     SOLE_PROPRIETOR("SOLE_PROPRIETOR");
 
     private String value;
@@ -96,7 +96,7 @@ public class SMSTenDLCBrand {
 
       @Override
       public EntityTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return EntityTypeEnum.fromValue(value);
       }
     }
@@ -176,57 +176,57 @@ public class SMSTenDLCBrand {
   @JsonAdapter(StockExchangeEnum.Adapter.class)
   public enum StockExchangeEnum {
     NONE("NONE"),
-
+    
     NASDAQ("NASDAQ"),
-
+    
     NYSE("NYSE"),
-
+    
     AMEX("AMEX"),
-
+    
     AMX("AMX"),
-
+    
     ASX("ASX"),
-
+    
     B3("B3"),
-
+    
     BME("BME"),
-
+    
     BSE("BSE"),
-
+    
     FRA("FRA"),
-
+    
     ICEX("ICEX"),
-
+    
     JPX("JPX"),
-
+    
     JSE("JSE"),
-
+    
     KRX("KRX"),
-
+    
     LON("LON"),
-
+    
     NSE("NSE"),
-
+    
     OMX("OMX"),
-
+    
     SEHK("SEHK"),
-
+    
     SGX("SGX"),
-
+    
     SSE("SSE"),
-
+    
     STO("STO"),
-
+    
     SWX("SWX"),
-
+    
     SZSE("SZSE"),
-
+    
     TSX("TSX"),
-
+    
     TWSE("TWSE"),
-
+    
     VSE("VSE"),
-
+    
     OTHER("OTHER");
 
     private String value;
@@ -261,7 +261,7 @@ public class SMSTenDLCBrand {
 
       @Override
       public StockExchangeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return StockExchangeEnum.fromValue(value);
       }
     }
@@ -285,13 +285,13 @@ public class SMSTenDLCBrand {
   @JsonAdapter(BrandRelationshipEnum.Adapter.class)
   public enum BrandRelationshipEnum {
     BASIC_ACCOUNT("BASIC_ACCOUNT"),
-
+    
     SMALL_ACCOUNT("SMALL_ACCOUNT"),
-
+    
     MEDIUM_ACCOUNT("MEDIUM_ACCOUNT"),
-
+    
     LARGE_ACCOUNT("LARGE_ACCOUNT"),
-
+    
     KEY_ACCOUNT("KEY_ACCOUNT");
 
     private String value;
@@ -326,7 +326,7 @@ public class SMSTenDLCBrand {
 
       @Override
       public BrandRelationshipEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return BrandRelationshipEnum.fromValue(value);
       }
     }
@@ -350,11 +350,11 @@ public class SMSTenDLCBrand {
   @JsonAdapter(AltBusinessIdTypeEnum.Adapter.class)
   public enum AltBusinessIdTypeEnum {
     NONE("NONE"),
-
+    
     DUNS("DUNS"),
-
+    
     GIIN("GIIN"),
-
+    
     LEI("LEI");
 
     private String value;
@@ -389,7 +389,7 @@ public class SMSTenDLCBrand {
 
       @Override
       public AltBusinessIdTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return AltBusinessIdTypeEnum.fromValue(value);
       }
     }
@@ -421,11 +421,11 @@ public class SMSTenDLCBrand {
   @JsonAdapter(IdentityStatusEnum.Adapter.class)
   public enum IdentityStatusEnum {
     SELF_DECLARED("SELF_DECLARED"),
-
+    
     UNVERIFIED("UNVERIFIED"),
-
+    
     VERIFIED("VERIFIED"),
-
+    
     VETTED_VERIFIED("VETTED_VERIFIED");
 
     private String value;
@@ -460,7 +460,7 @@ public class SMSTenDLCBrand {
 
       @Override
       public IdentityStatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
+        String value =  jsonReader.nextString();
         return IdentityStatusEnum.fromValue(value);
       }
     }
@@ -474,13 +474,15 @@ public class SMSTenDLCBrand {
   @SerializedName(SERIALIZED_NAME_CREATE_DATE)
   private OffsetDateTime createDate;
 
-  public SMSTenDLCBrand() {
+  public SMSTenDLCBrand() { 
   }
 
+  
   public SMSTenDLCBrand(
-      String cspId,
-      String brandId,
-      String universalEin) {
+     String cspId, 
+     String brandId, 
+     String universalEin
+  ) {
     this();
     this.cspId = cspId;
     this.brandId = brandId;
@@ -488,16 +490,15 @@ public class SMSTenDLCBrand {
   }
 
   public SMSTenDLCBrand accountId(String accountId) {
-
+    
     this.accountId = accountId;
     return this;
   }
 
-  /**
+   /**
    * ID of the account that created this Queue.
-   * 
    * @return accountId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "ID of the account that created this Queue.")
 
@@ -505,21 +506,22 @@ public class SMSTenDLCBrand {
     return accountId;
   }
 
+
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
-  public SMSTenDLCBrand entityType(EntityTypeEnum entityType) {
 
+  public SMSTenDLCBrand entityType(EntityTypeEnum entityType) {
+    
     this.entityType = entityType;
     return this;
   }
 
-  /**
+   /**
    * Entity type behind the brand. This is the form of business establishment.
-   * 
    * @return entityType
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Entity type behind the brand. This is the form of business establishment.")
 
@@ -527,15 +529,16 @@ public class SMSTenDLCBrand {
     return entityType;
   }
 
+
   public void setEntityType(EntityTypeEnum entityType) {
     this.entityType = entityType;
   }
 
-  /**
+
+   /**
    * Unique identifier assigned to the csp by the registry.
-   * 
    * @return cspId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unique identifier assigned to the csp by the registry.")
 
@@ -543,15 +546,16 @@ public class SMSTenDLCBrand {
     return cspId;
   }
 
+
   private void setCspId(String cspId) {
     this.cspId = cspId;
   }
 
-  /**
+
+   /**
    * Unique identifier assigned to the brand by the registry.
-   * 
    * @return brandId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unique identifier assigned to the brand by the registry.")
 
@@ -559,21 +563,22 @@ public class SMSTenDLCBrand {
     return brandId;
   }
 
+
   private void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
-  public SMSTenDLCBrand firstName(String firstName) {
 
+  public SMSTenDLCBrand firstName(String firstName) {
+    
     this.firstName = firstName;
     return this;
   }
 
-  /**
-   * First or given name.
-   * 
+   /**
+   * First or given name. 
    * @return firstName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "John", value = "First or given name. ")
 
@@ -581,21 +586,22 @@ public class SMSTenDLCBrand {
     return firstName;
   }
 
+
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
-  public SMSTenDLCBrand lastName(String lastName) {
 
+  public SMSTenDLCBrand lastName(String lastName) {
+    
     this.lastName = lastName;
     return this;
   }
 
-  /**
+   /**
    * Last or Surname.
-   * 
    * @return lastName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "Doe", value = "Last or Surname.")
 
@@ -603,21 +609,22 @@ public class SMSTenDLCBrand {
     return lastName;
   }
 
+
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
-  public SMSTenDLCBrand displayName(String displayName) {
 
+  public SMSTenDLCBrand displayName(String displayName) {
+    
     this.displayName = displayName;
     return this;
   }
 
-  /**
+   /**
    * Display or marketing name of the brand.
-   * 
    * @return displayName
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(example = "ABC Mobile", required = true, value = "Display or marketing name of the brand.")
 
@@ -625,21 +632,22 @@ public class SMSTenDLCBrand {
     return displayName;
   }
 
+
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
-  public SMSTenDLCBrand companyName(String companyName) {
 
+  public SMSTenDLCBrand companyName(String companyName) {
+    
     this.companyName = companyName;
     return this;
   }
 
-  /**
+   /**
    * (Required for Non-profit/private/public) Legal company name.
-   * 
    * @return companyName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "ABC Inc.", value = "(Required for Non-profit/private/public) Legal company name.")
 
@@ -647,22 +655,22 @@ public class SMSTenDLCBrand {
     return companyName;
   }
 
+
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
 
-  public SMSTenDLCBrand ein(String ein) {
 
+  public SMSTenDLCBrand ein(String ein) {
+    
     this.ein = ein;
     return this;
   }
 
-  /**
-   * (Required for Non-profit) Government assigned corporate tax ID. EIN is
-   * 9-digits in U.S.
-   * 
+   /**
+   * (Required for Non-profit) Government assigned corporate tax ID. EIN is 9-digits in U.S.
    * @return ein
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "111111111", value = "(Required for Non-profit) Government assigned corporate tax ID. EIN is 9-digits in U.S.")
 
@@ -670,21 +678,22 @@ public class SMSTenDLCBrand {
     return ein;
   }
 
+
   public void setEin(String ein) {
     this.ein = ein;
   }
 
-  public SMSTenDLCBrand einIssuingCountry(String einIssuingCountry) {
 
+  public SMSTenDLCBrand einIssuingCountry(String einIssuingCountry) {
+    
     this.einIssuingCountry = einIssuingCountry;
     return this;
   }
 
-  /**
+   /**
    * ISO2 2 characters country code. Example: US - United States
-   * 
    * @return einIssuingCountry
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "US", value = "ISO2 2 characters country code. Example: US - United States")
 
@@ -692,21 +701,22 @@ public class SMSTenDLCBrand {
     return einIssuingCountry;
   }
 
+
   public void setEinIssuingCountry(String einIssuingCountry) {
     this.einIssuingCountry = einIssuingCountry;
   }
 
-  public SMSTenDLCBrand phone(String phone) {
 
+  public SMSTenDLCBrand phone(String phone) {
+    
     this.phone = phone;
     return this;
   }
 
-  /**
+   /**
    * Valid phone number in e.164 international format.
-   * 
    * @return phone
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(example = "+12024567890", required = true, value = "Valid phone number in e.164 international format.")
 
@@ -714,21 +724,22 @@ public class SMSTenDLCBrand {
     return phone;
   }
 
+
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
-  public SMSTenDLCBrand street(String street) {
 
+  public SMSTenDLCBrand street(String street) {
+    
     this.street = street;
     return this;
   }
 
-  /**
+   /**
    * Street number and name.
-   * 
    * @return street
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "123 6th Ave", value = "Street number and name.")
 
@@ -736,21 +747,22 @@ public class SMSTenDLCBrand {
     return street;
   }
 
+
   public void setStreet(String street) {
     this.street = street;
   }
 
-  public SMSTenDLCBrand city(String city) {
 
+  public SMSTenDLCBrand city(String city) {
+    
     this.city = city;
     return this;
   }
 
-  /**
+   /**
    * City name
-   * 
    * @return city
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "New York", value = "City name")
 
@@ -758,21 +770,22 @@ public class SMSTenDLCBrand {
     return city;
   }
 
+
   public void setCity(String city) {
     this.city = city;
   }
 
-  public SMSTenDLCBrand state(String state) {
 
+  public SMSTenDLCBrand state(String state) {
+    
     this.state = state;
     return this;
   }
 
-  /**
+   /**
    * State. Must be 2 letters code for United States.
-   * 
    * @return state
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "NY", value = "State. Must be 2 letters code for United States.")
 
@@ -780,21 +793,22 @@ public class SMSTenDLCBrand {
     return state;
   }
 
+
   public void setState(String state) {
     this.state = state;
   }
 
-  public SMSTenDLCBrand postalCode(String postalCode) {
 
+  public SMSTenDLCBrand postalCode(String postalCode) {
+    
     this.postalCode = postalCode;
     return this;
   }
 
-  /**
+   /**
    * Postal codes. Use 5 digit zipcode for United States
-   * 
    * @return postalCode
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "10001", value = "Postal codes. Use 5 digit zipcode for United States")
 
@@ -802,21 +816,22 @@ public class SMSTenDLCBrand {
     return postalCode;
   }
 
+
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
-  public SMSTenDLCBrand country(String country) {
 
+  public SMSTenDLCBrand country(String country) {
+    
     this.country = country;
     return this;
   }
 
-  /**
+   /**
    * ISO2 2 characters country code. Example: US - United States
-   * 
    * @return country
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(example = "US", required = true, value = "ISO2 2 characters country code. Example: US - United States")
 
@@ -824,21 +839,22 @@ public class SMSTenDLCBrand {
     return country;
   }
 
+
   public void setCountry(String country) {
     this.country = country;
   }
 
-  public SMSTenDLCBrand email(String email) {
 
+  public SMSTenDLCBrand email(String email) {
+    
     this.email = email;
     return this;
   }
 
-  /**
+   /**
    * Valid email address of brand support contact.
-   * 
    * @return email
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Valid email address of brand support contact.")
 
@@ -846,21 +862,22 @@ public class SMSTenDLCBrand {
     return email;
   }
 
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  public SMSTenDLCBrand stockSymbol(String stockSymbol) {
 
+  public SMSTenDLCBrand stockSymbol(String stockSymbol) {
+    
     this.stockSymbol = stockSymbol;
     return this;
   }
 
-  /**
+   /**
    * (Required for public company) stock symbol.
-   * 
    * @return stockSymbol
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "ABC", value = "(Required for public company) stock symbol.")
 
@@ -868,21 +885,22 @@ public class SMSTenDLCBrand {
     return stockSymbol;
   }
 
+
   public void setStockSymbol(String stockSymbol) {
     this.stockSymbol = stockSymbol;
   }
 
-  public SMSTenDLCBrand stockExchange(StockExchangeEnum stockExchange) {
 
+  public SMSTenDLCBrand stockExchange(StockExchangeEnum stockExchange) {
+    
     this.stockExchange = stockExchange;
     return this;
   }
 
-  /**
+   /**
    * (Required for public company) stock exchange.
-   * 
    * @return stockExchange
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "NASDAQ", value = "(Required for public company) stock exchange.")
 
@@ -890,21 +908,22 @@ public class SMSTenDLCBrand {
     return stockExchange;
   }
 
+
   public void setStockExchange(StockExchangeEnum stockExchange) {
     this.stockExchange = stockExchange;
   }
 
-  public SMSTenDLCBrand ipAddress(String ipAddress) {
 
+  public SMSTenDLCBrand ipAddress(String ipAddress) {
+    
     this.ipAddress = ipAddress;
     return this;
   }
 
-  /**
+   /**
    * IP address of the browser requesting to create brand identity.
-   * 
    * @return ipAddress
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "IP address of the browser requesting to create brand identity.")
 
@@ -912,21 +931,22 @@ public class SMSTenDLCBrand {
     return ipAddress;
   }
 
+
   public void setIpAddress(String ipAddress) {
     this.ipAddress = ipAddress;
   }
 
-  public SMSTenDLCBrand website(String website) {
 
+  public SMSTenDLCBrand website(String website) {
+    
     this.website = website;
     return this;
   }
 
-  /**
+   /**
    * Brand website URL.
-   * 
    * @return website
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "http://www.abcmobile.com", value = "Brand website URL.")
 
@@ -934,21 +954,22 @@ public class SMSTenDLCBrand {
     return website;
   }
 
+
   public void setWebsite(String website) {
     this.website = website;
   }
 
-  public SMSTenDLCBrand brandRelationship(BrandRelationshipEnum brandRelationship) {
 
+  public SMSTenDLCBrand brandRelationship(BrandRelationshipEnum brandRelationship) {
+    
     this.brandRelationship = brandRelationship;
     return this;
   }
 
-  /**
+   /**
    * Brand relationship to the CSP
-   * 
    * @return brandRelationship
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Brand relationship to the CSP")
 
@@ -956,21 +977,22 @@ public class SMSTenDLCBrand {
     return brandRelationship;
   }
 
+
   public void setBrandRelationship(BrandRelationshipEnum brandRelationship) {
     this.brandRelationship = brandRelationship;
   }
 
-  public SMSTenDLCBrand vertical(String vertical) {
 
+  public SMSTenDLCBrand vertical(String vertical) {
+    
     this.vertical = vertical;
     return this;
   }
 
-  /**
+   /**
    * Vertical or industry segment of the brand.
-   * 
    * @return vertical
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Vertical or industry segment of the brand.")
 
@@ -978,21 +1000,22 @@ public class SMSTenDLCBrand {
     return vertical;
   }
 
+
   public void setVertical(String vertical) {
     this.vertical = vertical;
   }
 
-  public SMSTenDLCBrand altBusinessId(String altBusinessId) {
 
+  public SMSTenDLCBrand altBusinessId(String altBusinessId) {
+    
     this.altBusinessId = altBusinessId;
     return this;
   }
 
-  /**
+   /**
    * Alternate business identifier such as DUNS, LEI, or GIIN
-   * 
    * @return altBusinessId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Alternate business identifier such as DUNS, LEI, or GIIN")
 
@@ -1000,21 +1023,22 @@ public class SMSTenDLCBrand {
     return altBusinessId;
   }
 
+
   public void setAltBusinessId(String altBusinessId) {
     this.altBusinessId = altBusinessId;
   }
 
-  public SMSTenDLCBrand altBusinessIdType(AltBusinessIdTypeEnum altBusinessIdType) {
 
+  public SMSTenDLCBrand altBusinessIdType(AltBusinessIdTypeEnum altBusinessIdType) {
+    
     this.altBusinessIdType = altBusinessIdType;
     return this;
   }
 
-  /**
+   /**
    * The type of the Alternative business identifier
-   * 
    * @return altBusinessIdType
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The type of the Alternative business identifier")
 
@@ -1022,15 +1046,16 @@ public class SMSTenDLCBrand {
     return altBusinessIdType;
   }
 
+
   public void setAltBusinessIdType(AltBusinessIdTypeEnum altBusinessIdType) {
     this.altBusinessIdType = altBusinessIdType;
   }
 
-  /**
+
+   /**
    * Universal EIN of Brand, Read Only.
-   * 
    * @return universalEin
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Universal EIN of Brand, Read Only.")
 
@@ -1038,23 +1063,22 @@ public class SMSTenDLCBrand {
     return universalEin;
   }
 
+
   private void setUniversalEin(String universalEin) {
     this.universalEin = universalEin;
   }
 
-  public SMSTenDLCBrand referenceId(String referenceId) {
 
+  public SMSTenDLCBrand referenceId(String referenceId) {
+    
     this.referenceId = referenceId;
     return this;
   }
 
-  /**
-   * Caller supplied brand reference ID. If supplied, the value must be unique
-   * across all submitted brands. Can be used to prevent duplicate brand
-   * registrations.
-   * 
+   /**
+   * Caller supplied brand reference ID. If supplied, the value must be unique across all submitted brands. Can be used to prevent duplicate brand registrations.
    * @return referenceId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Caller supplied brand reference ID. If supplied, the value must be unique across all submitted brands. Can be used to prevent duplicate brand registrations.")
 
@@ -1062,12 +1086,14 @@ public class SMSTenDLCBrand {
     return referenceId;
   }
 
+
   public void setReferenceId(String referenceId) {
     this.referenceId = referenceId;
   }
 
-  public SMSTenDLCBrand optionalAttributes(Map<String, Object> optionalAttributes) {
 
+  public SMSTenDLCBrand optionalAttributes(Map<String, Object> optionalAttributes) {
+    
     this.optionalAttributes = optionalAttributes;
     return this;
   }
@@ -1080,12 +1106,10 @@ public class SMSTenDLCBrand {
     return this;
   }
 
-  /**
-   * Optional brand attributes. Please refer to GET /enum/optionalAttributeNames
-   * for dictionary of optional attribute names.
-   * 
+   /**
+   * Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names.
    * @return optionalAttributes
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names.")
 
@@ -1093,21 +1117,22 @@ public class SMSTenDLCBrand {
     return optionalAttributes;
   }
 
+
   public void setOptionalAttributes(Map<String, Object> optionalAttributes) {
     this.optionalAttributes = optionalAttributes;
   }
 
-  public SMSTenDLCBrand mock(Boolean mock) {
 
+  public SMSTenDLCBrand mock(Boolean mock) {
+    
     this.mock = mock;
     return this;
   }
 
-  /**
+   /**
    * Test brand.
-   * 
    * @return mock
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Test brand.")
 
@@ -1115,21 +1140,22 @@ public class SMSTenDLCBrand {
     return mock;
   }
 
+
   public void setMock(Boolean mock) {
     this.mock = mock;
   }
 
-  public SMSTenDLCBrand identityStatus(IdentityStatusEnum identityStatus) {
 
+  public SMSTenDLCBrand identityStatus(IdentityStatusEnum identityStatus) {
+    
     this.identityStatus = identityStatus;
     return this;
   }
 
-  /**
+   /**
    * TCR assessment of the brand identification status.
-   * 
    * @return identityStatus
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "TCR assessment of the brand identification status.")
 
@@ -1137,21 +1163,22 @@ public class SMSTenDLCBrand {
     return identityStatus;
   }
 
+
   public void setIdentityStatus(IdentityStatusEnum identityStatus) {
     this.identityStatus = identityStatus;
   }
 
-  public SMSTenDLCBrand createDate(OffsetDateTime createDate) {
 
+  public SMSTenDLCBrand createDate(OffsetDateTime createDate) {
+    
     this.createDate = createDate;
     return this;
   }
 
-  /**
+   /**
    * Unix timestamp when brand was created.
-   * 
    * @return createDate
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unix timestamp when brand was created.")
 
@@ -1159,9 +1186,11 @@ public class SMSTenDLCBrand {
     return createDate;
   }
 
+
   public void setCreateDate(OffsetDateTime createDate) {
     this.createDate = createDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -1211,17 +1240,14 @@ public class SMSTenDLCBrand {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, entityType, cspId, brandId, firstName, lastName, displayName, companyName, ein,
-        einIssuingCountry, phone, street, city, state, postalCode, country, email, stockSymbol, stockExchange,
-        ipAddress, website, brandRelationship, vertical, altBusinessId, altBusinessIdType, universalEin, referenceId,
-        optionalAttributes, mock, identityStatus, createDate);
+    return Objects.hash(accountId, entityType, cspId, brandId, firstName, lastName, displayName, companyName, ein, einIssuingCountry, phone, street, city, state, postalCode, country, email, stockSymbol, stockExchange, ipAddress, website, brandRelationship, vertical, altBusinessId, altBusinessIdType, universalEin, referenceId, optionalAttributes, mock, identityStatus, createDate);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[] { a.get() }) : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -1263,6 +1289,7 @@ public class SMSTenDLCBrand {
     return sb.toString();
   }
 
+
   /**
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
@@ -1275,3 +1302,4 @@ public class SMSTenDLCBrand {
   }
 
 }
+

@@ -52,10 +52,6 @@ public class PlayAllOf {
   @SerializedName(SERIALIZED_NAME_LOOP)
   private Integer loop;
 
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  private String conferenceId;
-
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
   private Boolean privacyMode;
@@ -109,29 +105,6 @@ public class PlayAllOf {
   }
 
 
-  public PlayAllOf conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * ID of the Conference the audio should be rendered to. If this is not specified, the audio is by default rendered to the caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Conference the audio should be rendered to. If this is not specified, the audio is by default rendered to the caller associated with the call leg that corresponds to the current PerCL execution context. The call leg associated with this command must be in the specified Conference or the command will return an error.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
   public PlayAllOf privacyMode(Boolean privacyMode) {
     
     this.privacyMode = privacyMode;
@@ -166,13 +139,12 @@ public class PlayAllOf {
     PlayAllOf playAllOf = (PlayAllOf) o;
     return Objects.equals(this._file, playAllOf._file) &&
         Objects.equals(this.loop, playAllOf.loop) &&
-        Objects.equals(this.conferenceId, playAllOf.conferenceId) &&
         Objects.equals(this.privacyMode, playAllOf.privacyMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(_file, loop, conferenceId, privacyMode);
+    return Objects.hash(_file, loop, privacyMode);
   }
 
   @Override
@@ -181,7 +153,6 @@ public class PlayAllOf {
     sb.append("class PlayAllOf {\n");
     sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
     sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
     sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
     sb.append("}");
     return sb.toString();
