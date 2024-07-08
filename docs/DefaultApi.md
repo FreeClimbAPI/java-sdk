@@ -3254,7 +3254,7 @@ Name | Type | Description  | Notes
 
 <a name="makeAWebrtcJwt"></a>
 # **makeAWebrtcJwt**
-> String makeAWebrtcJwt(inlineObject)
+> String makeAWebrtcJwt(createWebRTCToken)
 
 Make a JWT for WebRTC calling
 
@@ -3281,10 +3281,10 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    InlineObject inlineObject = new InlineObject(); // InlineObject | 
+    CreateWebRTCToken createWebRTCToken = new CreateWebRTCToken(); // CreateWebRTCToken | Information needed to craft a JWT compatible with the platforms WebRTC APIs
     
     try {
-      String result = apiInstance.makeAWebrtcJwt(inlineObject);
+      String result = apiInstance.makeAWebrtcJwt(createWebRTCToken);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#makeAWebrtcJwt");
@@ -3301,7 +3301,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**InlineObject**](InlineObject.md)|  |
+ **createWebRTCToken** | [**CreateWebRTCToken**](CreateWebRTCToken.md)| Information needed to craft a JWT compatible with the platforms WebRTC APIs |
 
 
 ### Return type
@@ -3530,7 +3530,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAConference"></a>
 # **updateAConference**
-> ConferenceResult updateAConference(conferenceId, updateConferenceRequest)
+> updateAConference(conferenceId, updateConferenceRequest)
 
 Update a Conference
 
@@ -3560,8 +3560,7 @@ public class Example {
     UpdateConferenceRequest updateConferenceRequest = new UpdateConferenceRequest(); // UpdateConferenceRequest | Conference Details to update
     
     try {
-      ConferenceResult result = apiInstance.updateAConference(conferenceId, updateConferenceRequest);
-      System.out.println(result);
+      apiInstance.updateAConference(conferenceId, updateConferenceRequest);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#updateAConference");
       System.err.println("Status code: " + e.getCode());
@@ -3583,7 +3582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ConferenceResult**](ConferenceResult.md)
+null (empty response body)
 
 ### Authorization
 
@@ -3592,12 +3591,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Conference Details to Update |  -  |
+**204** | Successful conference details update |  -  |
 
 <a name="updateALiveCall"></a>
 # **updateALiveCall**

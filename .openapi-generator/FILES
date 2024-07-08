@@ -40,6 +40,7 @@ docs/ConferenceStatus.md
 docs/CreateConference.md
 docs/CreateConferenceAllOf.md
 docs/CreateConferenceRequest.md
+docs/CreateWebRTCToken.md
 docs/DefaultApi.md
 docs/Dequeue.md
 docs/Enqueue.md
@@ -60,7 +61,6 @@ docs/IncomingNumberListAllOf.md
 docs/IncomingNumberRequest.md
 docs/IncomingNumberResult.md
 docs/IncomingNumberResultAllOf.md
-docs/InlineObject.md
 docs/Language.md
 docs/LogLevel.md
 docs/LogList.md
@@ -197,6 +197,7 @@ src/main/java/com/github/freeclimbapi/Configuration.java
 src/main/java/com/github/freeclimbapi/CreateConference.java
 src/main/java/com/github/freeclimbapi/CreateConferenceAllOf.java
 src/main/java/com/github/freeclimbapi/CreateConferenceRequest.java
+src/main/java/com/github/freeclimbapi/CreateWebRTCToken.java
 src/main/java/com/github/freeclimbapi/DefaultApi.java
 src/main/java/com/github/freeclimbapi/Dequeue.java
 src/main/java/com/github/freeclimbapi/Enqueue.java
@@ -218,7 +219,6 @@ src/main/java/com/github/freeclimbapi/IncomingNumberListAllOf.java
 src/main/java/com/github/freeclimbapi/IncomingNumberRequest.java
 src/main/java/com/github/freeclimbapi/IncomingNumberResult.java
 src/main/java/com/github/freeclimbapi/IncomingNumberResultAllOf.java
-src/main/java/com/github/freeclimbapi/InlineObject.java
 src/main/java/com/github/freeclimbapi/JSON.java
 src/main/java/com/github/freeclimbapi/Language.java
 src/main/java/com/github/freeclimbapi/LogLevel.java

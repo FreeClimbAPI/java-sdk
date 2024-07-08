@@ -962,9 +962,9 @@ public class DefaultApiTest {
     @Test
     public void makeAWebrtcJwtTest() throws ApiException {
 
-        InlineObject inlineObject = inlineObjectInlineObjectTestValue();
+        CreateWebRTCToken createWebRTCToken = createWebRTCTokenCreateWebRTCTokenTestValue();
 
-        String response = this.apiInstance.makeAWebrtcJwt(inlineObject);
+        String response = this.apiInstance.makeAWebrtcJwt(createWebRTCToken);
         // TODO: test validations
         assertEquals(response.getClass(), String.class);
 
@@ -1039,9 +1039,8 @@ public class DefaultApiTest {
 
         UpdateConferenceRequest updateConferenceRequest = updateConferenceRequestUpdateConferenceRequestTestValue();
 
-        ConferenceResult response = this.apiInstance.updateAConference(conferenceId, updateConferenceRequest);
+        this.apiInstance.updateAConference(conferenceId, updateConferenceRequest);
         // TODO: test validations
-        assertEquals(response.getClass(), ConferenceResult.class);
 
     }
 
@@ -1284,12 +1283,12 @@ public class DefaultApiTest {
     }
 
     private String callIdStringTestValue() {
-        String callId = "CA0000000000000000000000000000000000000000";
+        String callId = "callId_example";
         return callId;
     }
 
     private String conferenceIdStringTestValue() {
-        String conferenceId = "CN0000000000000000000000000000000000000000";
+        String conferenceId = "conferenceId_example";
         return conferenceId;
     }
 
@@ -1365,7 +1364,7 @@ public class DefaultApiTest {
     }
 
     private String dateCreatedStringTestValue() {
-        String dateCreated = "Mon, 15 Jun 2020 20:20:20 GMT";
+        String dateCreated = "dateCreated_example";
         return dateCreated;
     }
 
@@ -1480,8 +1479,8 @@ public class DefaultApiTest {
         return true;
     }
 
-    private InlineObject inlineObjectInlineObjectTestValue() {
-        InlineObject object = new InlineObject();
+    private CreateWebRTCToken createWebRTCTokenCreateWebRTCTokenTestValue() {
+        CreateWebRTCToken object = new CreateWebRTCToken();
         object.setTo("to_example");
         object.setFrom("from_example");
         object.setUses(1);

@@ -6332,7 +6332,7 @@ public class DefaultApi {
     }
     /**
      * Build call for makeAWebrtcJwt
-     * @param inlineObject  (required)
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6342,7 +6342,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call makeAWebrtcJwtCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call makeAWebrtcJwtCall(CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -6357,7 +6357,7 @@ public class DefaultApi {
             basePath = null;
         }
 
-        Object localVarPostBody = inlineObject;
+        Object localVarPostBody = createWebRTCToken;
 
         // create path and map variables
         String localVarPath = "/Accounts/{accountId}/Calls/WebRTC/Token"
@@ -6393,15 +6393,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call makeAWebrtcJwtValidateBeforeCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call makeAWebrtcJwtValidateBeforeCall(CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'inlineObject' is set
-        if (inlineObject == null) {
-            throw new ApiException("Missing the required parameter 'inlineObject' when calling makeAWebrtcJwt(Async)");
+        // verify the required parameter 'createWebRTCToken' is set
+        if (createWebRTCToken == null) {
+            throw new ApiException("Missing the required parameter 'createWebRTCToken' when calling makeAWebrtcJwt(Async)");
         }
         
 
-        okhttp3.Call localVarCall = makeAWebrtcJwtCall(inlineObject, _callback);
+        okhttp3.Call localVarCall = makeAWebrtcJwtCall(createWebRTCToken, _callback);
         return localVarCall;
 
     }
@@ -6409,7 +6409,7 @@ public class DefaultApi {
     /**
      * Make a JWT for WebRTC calling
      * Make a JWT for WebRTC calling
-     * @param inlineObject  (required)
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -6418,15 +6418,15 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
      </table>
      */
-    public String makeAWebrtcJwt(InlineObject inlineObject) throws ApiException {
-        ApiResponse<String> localVarResp = makeAWebrtcJwtWithHttpInfo(inlineObject);
+    public String makeAWebrtcJwt(CreateWebRTCToken createWebRTCToken) throws ApiException {
+        ApiResponse<String> localVarResp = makeAWebrtcJwtWithHttpInfo(createWebRTCToken);
         return localVarResp.getData();
     }
 
     /**
      * Make a JWT for WebRTC calling
      * Make a JWT for WebRTC calling
-     * @param inlineObject  (required)
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -6435,8 +6435,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> makeAWebrtcJwtWithHttpInfo(InlineObject inlineObject) throws ApiException {
-        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(inlineObject, null);
+    public ApiResponse<String> makeAWebrtcJwtWithHttpInfo(CreateWebRTCToken createWebRTCToken) throws ApiException {
+        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(createWebRTCToken, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -6444,7 +6444,7 @@ public class DefaultApi {
     /**
      * Make a JWT for WebRTC calling (asynchronously)
      * Make a JWT for WebRTC calling
-     * @param inlineObject  (required)
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -6454,9 +6454,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call makeAWebrtcJwtAsync(InlineObject inlineObject, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call makeAWebrtcJwtAsync(CreateWebRTCToken createWebRTCToken, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(inlineObject, _callback);
+        okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(createWebRTCToken, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -6872,7 +6872,7 @@ public class DefaultApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Conference Details to Update </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call updateAConferenceCall(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback _callback) throws ApiException {
@@ -6904,7 +6904,7 @@ public class DefaultApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -6945,17 +6945,15 @@ public class DefaultApi {
      * 
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
-     * @return ConferenceResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Conference Details to Update </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
      </table>
      */
-    public ConferenceResult updateAConference(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
-        ApiResponse<ConferenceResult> localVarResp = updateAConferenceWithHttpInfo(conferenceId, updateConferenceRequest);
-        return localVarResp.getData();
+    public void updateAConference(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
+        updateAConferenceWithHttpInfo(conferenceId, updateConferenceRequest);
     }
 
     /**
@@ -6963,18 +6961,17 @@ public class DefaultApi {
      * 
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
-     * @return ApiResponse&lt;ConferenceResult&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Conference Details to Update </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ConferenceResult> updateAConferenceWithHttpInfo(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
+    public ApiResponse<Void> updateAConferenceWithHttpInfo(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
         okhttp3.Call localVarCall = updateAConferenceValidateBeforeCall(conferenceId, updateConferenceRequest, null);
-        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
@@ -6988,14 +6985,13 @@ public class DefaultApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Conference Details to Update </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateAConferenceAsync(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback<ConferenceResult> _callback) throws ApiException {
+    public okhttp3.Call updateAConferenceAsync(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateAConferenceValidateBeforeCall(conferenceId, updateConferenceRequest, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**

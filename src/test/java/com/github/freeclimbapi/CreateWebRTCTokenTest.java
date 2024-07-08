@@ -33,10 +33,10 @@ import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 
 /**
- * Model tests for InlineObject
+ * Model tests for CreateWebRTCToken
  */
- public class InlineObjectTest {
-    private final InlineObject model = new InlineObject();
+ public class CreateWebRTCTokenTest {
+    private final CreateWebRTCToken model = new CreateWebRTCToken();
 
     /**
      * Test the property 'to'
@@ -74,11 +74,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsTrueTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
-      InlineObject test2 = new InlineObject();
+      CreateWebRTCToken test2 = new CreateWebRTCToken();
       test2.setTo("TS");
       test2.setFrom("TS");
       test2.setUses(1);
@@ -92,11 +92,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsFalseTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
-      InlineObject test2 = new InlineObject();
+      CreateWebRTCToken test2 = new CreateWebRTCToken();
       test2.setTo("tS");
       test2.setFrom("tS");
       test2.setUses(0);
@@ -110,7 +110,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void hashCodeTypeTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
@@ -125,11 +125,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringEqualsTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
-      InlineObject test2 = new InlineObject();
+      CreateWebRTCToken test2 = new CreateWebRTCToken();
       test2.setTo("TS");
       test2.setFrom("TS");
       test2.setUses(1);
@@ -145,11 +145,11 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsTrueTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
-      InlineObject test2 = new InlineObject();
+      CreateWebRTCToken test2 = new CreateWebRTCToken();
       test2.setTo("TS");
       test2.setFrom("TS");
       test2.setUses(1);
@@ -162,11 +162,11 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsFalseTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);
-      InlineObject test2 = new InlineObject();
+      CreateWebRTCToken test2 = new CreateWebRTCToken();
       test2.setTo("tS");
       test2.setFrom("tS");
       test2.setUses(0);
@@ -179,7 +179,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringTypeTest() {
-      InlineObject test1 = new InlineObject();
+      CreateWebRTCToken test1 = new CreateWebRTCToken();
       test1.setTo("TS");
       test1.setFrom("TS");
       test1.setUses(1);

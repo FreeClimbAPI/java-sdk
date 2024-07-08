@@ -40,10 +40,10 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * InlineObject
+ * CreateWebRTCToken
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class InlineObject {
+public class CreateWebRTCToken {
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
   private String to;
@@ -56,10 +56,10 @@ public class InlineObject {
   @SerializedName(SERIALIZED_NAME_USES)
   private Integer uses;
 
-  public InlineObject() { 
+  public CreateWebRTCToken() { 
   }
 
-  public InlineObject to(String to) {
+  public CreateWebRTCToken to(String to) {
     
     this.to = to;
     return this;
@@ -82,7 +82,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject from(String from) {
+  public CreateWebRTCToken from(String from) {
     
     this.from = from;
     return this;
@@ -105,7 +105,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject uses(Integer uses) {
+  public CreateWebRTCToken uses(Integer uses) {
     
     this.uses = uses;
     return this;
@@ -137,10 +137,10 @@ public class InlineObject {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineObject inlineObject = (InlineObject) o;
-    return Objects.equals(this.to, inlineObject.to) &&
-        Objects.equals(this.from, inlineObject.from) &&
-        Objects.equals(this.uses, inlineObject.uses);
+    CreateWebRTCToken createWebRTCToken = (CreateWebRTCToken) o;
+    return Objects.equals(this.to, createWebRTCToken.to) &&
+        Objects.equals(this.from, createWebRTCToken.from) &&
+        Objects.equals(this.uses, createWebRTCToken.uses);
   }
 
   @Override
@@ -151,7 +151,7 @@ public class InlineObject {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineObject {\n");
+    sb.append("class CreateWebRTCToken {\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    uses: ").append(toIndentedString(uses)).append("\n");
