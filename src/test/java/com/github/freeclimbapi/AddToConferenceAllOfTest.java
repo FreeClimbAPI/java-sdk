@@ -79,16 +79,6 @@ import com.github.freeclimbapi.models.*;
     }
 
     /**
-     * Test the property 'callId'
-     */
-    @Test
-    public void callIdTest() {
-      model.setCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallId());
-      
-    }
-
-    /**
      * Test the property 'leaveConferenceUrl'
      */
     @Test
@@ -149,7 +139,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -160,7 +149,6 @@ import com.github.freeclimbapi.models.*;
       test2.setCallControlSequence("TS");
       test2.setCallControlUrl("TS");
       test2.setConferenceId("TS");
-      test2.setCallId("TS");
       test2.setLeaveConferenceUrl("TS");
       test2.setListen(true);
       test2.setNotificationUrl("TS");
@@ -181,7 +169,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -192,7 +179,6 @@ import com.github.freeclimbapi.models.*;
       test2.setCallControlSequence("tS");
       test2.setCallControlUrl("tS");
       test2.setConferenceId("tS");
-      test2.setCallId("tS");
       test2.setLeaveConferenceUrl("tS");
       test2.setListen(false);
       test2.setNotificationUrl("tS");
@@ -213,7 +199,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -235,7 +220,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -246,7 +230,6 @@ import com.github.freeclimbapi.models.*;
       test2.setCallControlSequence("TS");
       test2.setCallControlUrl("TS");
       test2.setConferenceId("TS");
-      test2.setCallId("TS");
       test2.setLeaveConferenceUrl("TS");
       test2.setListen(true);
       test2.setNotificationUrl("TS");
@@ -269,7 +252,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -280,7 +262,6 @@ import com.github.freeclimbapi.models.*;
       test2.setCallControlSequence("TS");
       test2.setCallControlUrl("TS");
       test2.setConferenceId("TS");
-      test2.setCallId("TS");
       test2.setLeaveConferenceUrl("TS");
       test2.setListen(true);
       test2.setNotificationUrl("TS");
@@ -300,7 +281,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");
@@ -311,7 +291,6 @@ import com.github.freeclimbapi.models.*;
       test2.setCallControlSequence("tS");
       test2.setCallControlUrl("tS");
       test2.setConferenceId("tS");
-      test2.setCallId("tS");
       test2.setLeaveConferenceUrl("tS");
       test2.setListen(false);
       test2.setNotificationUrl("tS");
@@ -331,7 +310,6 @@ import com.github.freeclimbapi.models.*;
       test1.setCallControlSequence("TS");
       test1.setCallControlUrl("TS");
       test1.setConferenceId("TS");
-      test1.setCallId("TS");
       test1.setLeaveConferenceUrl("TS");
       test1.setListen(true);
       test1.setNotificationUrl("TS");

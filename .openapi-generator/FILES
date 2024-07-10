@@ -40,6 +40,7 @@ docs/ConferenceStatus.md
 docs/CreateConference.md
 docs/CreateConferenceAllOf.md
 docs/CreateConferenceRequest.md
+docs/CreateWebRTCToken.md
 docs/DefaultApi.md
 docs/Dequeue.md
 docs/Enqueue.md
@@ -111,7 +112,6 @@ docs/RedirectAllOf.md
 docs/Reject.md
 docs/RejectAllOf.md
 docs/RemoveFromConference.md
-docs/RemoveFromConferenceAllOf.md
 docs/RequestType.md
 docs/SMSTenDLCBrand.md
 docs/SMSTenDLCBrandsListResult.md
@@ -123,6 +123,9 @@ docs/SMSTenDLCPartnerCampaign.md
 docs/SMSTenDLCPartnerCampaignBrand.md
 docs/SMSTenDLCPartnerCampaignsListResult.md
 docs/SMSTenDLCPartnerCampaignsListResultAllOf.md
+docs/SMSTollFreeCampaign.md
+docs/SMSTollFreeCampaignsListResult.md
+docs/SMSTollFreeCampaignsListResultAllOf.md
 docs/Say.md
 docs/SayAllOf.md
 docs/SendDigits.md
@@ -134,8 +137,8 @@ docs/SetTalkAllOf.md
 docs/Sms.md
 docs/SmsAllOf.md
 docs/StartRecordCall.md
+docs/TFN.md
 docs/TerminateConference.md
-docs/TerminateConferenceAllOf.md
 docs/TranscribeUtterance.md
 docs/TranscribeUtteranceRecord.md
 docs/Unpark.md
@@ -194,6 +197,7 @@ src/main/java/com/github/freeclimbapi/Configuration.java
 src/main/java/com/github/freeclimbapi/CreateConference.java
 src/main/java/com/github/freeclimbapi/CreateConferenceAllOf.java
 src/main/java/com/github/freeclimbapi/CreateConferenceRequest.java
+src/main/java/com/github/freeclimbapi/CreateWebRTCToken.java
 src/main/java/com/github/freeclimbapi/DefaultApi.java
 src/main/java/com/github/freeclimbapi/Dequeue.java
 src/main/java/com/github/freeclimbapi/Enqueue.java
@@ -270,7 +274,6 @@ src/main/java/com/github/freeclimbapi/RedirectAllOf.java
 src/main/java/com/github/freeclimbapi/Reject.java
 src/main/java/com/github/freeclimbapi/RejectAllOf.java
 src/main/java/com/github/freeclimbapi/RemoveFromConference.java
-src/main/java/com/github/freeclimbapi/RemoveFromConferenceAllOf.java
 src/main/java/com/github/freeclimbapi/RequestType.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCBrand.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCBrandsListResult.java
@@ -282,6 +285,9 @@ src/main/java/com/github/freeclimbapi/SMSTenDLCPartnerCampaign.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCPartnerCampaignBrand.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCPartnerCampaignsListResult.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCPartnerCampaignsListResultAllOf.java
+src/main/java/com/github/freeclimbapi/SMSTollFreeCampaign.java
+src/main/java/com/github/freeclimbapi/SMSTollFreeCampaignsListResult.java
+src/main/java/com/github/freeclimbapi/SMSTollFreeCampaignsListResultAllOf.java
 src/main/java/com/github/freeclimbapi/Say.java
 src/main/java/com/github/freeclimbapi/SayAllOf.java
 src/main/java/com/github/freeclimbapi/SendDigits.java
@@ -296,8 +302,8 @@ src/main/java/com/github/freeclimbapi/Sms.java
 src/main/java/com/github/freeclimbapi/SmsAllOf.java
 src/main/java/com/github/freeclimbapi/StartRecordCall.java
 src/main/java/com/github/freeclimbapi/StringUtil.java
+src/main/java/com/github/freeclimbapi/TFN.java
 src/main/java/com/github/freeclimbapi/TerminateConference.java
-src/main/java/com/github/freeclimbapi/TerminateConferenceAllOf.java
 src/main/java/com/github/freeclimbapi/TranscribeUtterance.java
 src/main/java/com/github/freeclimbapi/TranscribeUtteranceRecord.java
 src/main/java/com/github/freeclimbapi/Unpark.java

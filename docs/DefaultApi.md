@@ -32,6 +32,8 @@ Method | HTTP request | Description
 [**getTenDLCSmsCampaigns**](DefaultApi.md#getTenDLCSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
 [**getTenDLCSmsPartnerCampaign**](DefaultApi.md#getTenDLCSmsPartnerCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId} | Get a 10DLC SMS Partner Campaign
 [**getTenDLCSmsPartnerCampaigns**](DefaultApi.md#getTenDLCSmsPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
+[**getTollFreeSmsCampaign**](DefaultApi.md#getTollFreeSmsCampaign) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId} | Get a TollFree SMS Campaign
+[**getTollFreeSmsCampaigns**](DefaultApi.md#getTollFreeSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns | Get list of TollFree Campaigns
 [**listActiveQueues**](DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 [**listAllAccountLogs**](DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 [**listApplications**](DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
@@ -39,6 +41,7 @@ Method | HTTP request | Description
 [**listCallLogs**](DefaultApi.md#listCallLogs) | **GET** /Accounts/{accountId}/Calls/{callId}/Logs | List Call Logs
 [**listCallRecordings**](DefaultApi.md#listCallRecordings) | **GET** /Accounts/{accountId}/Calls/{callId}/Recordings | List Call Recordings
 [**listCalls**](DefaultApi.md#listCalls) | **GET** /Accounts/{accountId}/Calls | List Calls
+[**listConferenceRecordings**](DefaultApi.md#listConferenceRecordings) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Recordings | List Conference Recordings
 [**listConferences**](DefaultApi.md#listConferences) | **GET** /Accounts/{accountId}/Conferences | List Conferences
 [**listIncomingNumbers**](DefaultApi.md#listIncomingNumbers) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers | List Incoming Numbers
 [**listMembers**](DefaultApi.md#listMembers) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members | List Members
@@ -46,6 +49,7 @@ Method | HTTP request | Description
 [**listRecordings**](DefaultApi.md#listRecordings) | **GET** /Accounts/{accountId}/Recordings | List Recordings
 [**listSmsMessages**](DefaultApi.md#listSmsMessages) | **GET** /Accounts/{accountId}/Messages | List SMS Messages
 [**makeACall**](DefaultApi.md#makeACall) | **POST** /Accounts/{accountId}/Calls | Make a Call
+[**makeAWebrtcJwt**](DefaultApi.md#makeAWebrtcJwt) | **POST** /Accounts/{accountId}/Calls/WebRTC/Token | Make a JWT for WebRTC calling
 [**removeAParticipant**](DefaultApi.md#removeAParticipant) | **DELETE** /Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId} | Remove a Participant
 [**sendAnSmsMessage**](DefaultApi.md#sendAnSmsMessage) | **POST** /Accounts/{accountId}/Messages | Send an SMS Message
 [**streamARecordingFile**](DefaultApi.md#streamARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Stream | Stream a Recording File
@@ -1958,6 +1962,137 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | The list SMS 10DLC partner campaigns |  -  |
 
+<a name="getTollFreeSmsCampaign"></a>
+# **getTollFreeSmsCampaign**
+> SMSTollFreeCampaign getTollFreeSmsCampaign(campaignId)
+
+Get a TollFree SMS Campaign
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String campaignId = "campaignId_example"; // String | String that uniquely identifies this TollFree Campaign resource.
+    
+    try {
+      SMSTollFreeCampaign result = apiInstance.getTollFreeSmsCampaign(campaignId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getTollFreeSmsCampaign");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **String**| String that uniquely identifies this TollFree Campaign resource. |
+
+
+### Return type
+
+[**SMSTollFreeCampaign**](SMSTollFreeCampaign.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The specific SMS TollFree Campaign that’s been processed by FreeClimb |  -  |
+
+<a name="getTollFreeSmsCampaigns"></a>
+# **getTollFreeSmsCampaigns**
+> SMSTollFreeCampaignsListResult getTollFreeSmsCampaigns()
+
+Get list of TollFree Campaigns
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    try {
+      SMSTollFreeCampaignsListResult result = apiInstance.getTollFreeSmsCampaigns();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getTollFreeSmsCampaigns");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+
+
+### Return type
+
+[**SMSTollFreeCampaignsListResult**](SMSTollFreeCampaignsListResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The list toll-free campaigns |  -  |
+
 <a name="listActiveQueues"></a>
 # **listActiveQueues**
 > QueueList listActiveQueues(alias)
@@ -2480,6 +2615,80 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Successful retrieved call list |  -  |
 
+<a name="listConferenceRecordings"></a>
+# **listConferenceRecordings**
+> RecordingList listConferenceRecordings(callId, conferenceId, dateCreated)
+
+List Conference Recordings
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
+    
+    String conferenceId = "conferenceId_example"; // String | Show only Recordings made during the conference with this ID.
+    
+    String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
+    
+    try {
+      RecordingList result = apiInstance.listConferenceRecordings(callId, conferenceId, dateCreated);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#listConferenceRecordings");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **callId** | **String**| Show only Recordings made during the Call with this ID. | [optional]
+ **conferenceId** | **String**| Show only Recordings made during the conference with this ID. | [optional]
+ **dateCreated** | **String**| Only show Recordings created on this date, formatted as *YYYY-MM-DD*. | [optional]
+
+
+### Return type
+
+[**RecordingList**](RecordingList.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | List of Recordings |  -  |
+
 <a name="listConferences"></a>
 # **listConferences**
 > ConferenceList listConferences(status, alias, dateCreated, dateUpdated)
@@ -2559,7 +2768,7 @@ Name | Type | Description  | Notes
 
 <a name="listIncomingNumbers"></a>
 # **listIncomingNumbers**
-> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet)
+> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet)
 
 List Incoming Numbers
 
@@ -2612,10 +2821,12 @@ public class Example {
     
     Boolean capabilitiesShortCode = true; // Boolean | 
     
+    String tfnCampaignId = "tfnCampaignId_example"; // String | Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID.
+    
     Boolean offnet = true; // Boolean | Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource.
     
     try {
-      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, offnet);
+      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listIncomingNumbers");
@@ -2646,6 +2857,7 @@ Name | Type | Description  | Notes
  **capabilitiesTollFree** | **Boolean**|  | [optional]
  **capabilitiesTenDLC** | **Boolean**|  | [optional]
  **capabilitiesShortCode** | **Boolean**|  | [optional]
+ **tfnCampaignId** | **String**| Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. | [optional]
  **offnet** | **Boolean**| Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. | [optional]
 
 
@@ -3040,6 +3252,76 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Call that was created |  -  |
 
+<a name="makeAWebrtcJwt"></a>
+# **makeAWebrtcJwt**
+> String makeAWebrtcJwt(createWebRTCToken)
+
+Make a JWT for WebRTC calling
+
+Make a JWT for WebRTC calling
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    CreateWebRTCToken createWebRTCToken = new CreateWebRTCToken(); // CreateWebRTCToken | Information needed to craft a JWT compatible with the platforms WebRTC APIs
+    
+    try {
+      String result = apiInstance.makeAWebrtcJwt(createWebRTCToken);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#makeAWebrtcJwt");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createWebRTCToken** | [**CreateWebRTCToken**](CreateWebRTCToken.md)| Information needed to craft a JWT compatible with the platforms WebRTC APIs |
+
+
+### Return type
+
+**String**
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The created JWT |  -  |
+
 <a name="removeAParticipant"></a>
 # **removeAParticipant**
 > removeAParticipant(conferenceId, callId)
@@ -3248,7 +3530,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAConference"></a>
 # **updateAConference**
-> ConferenceResult updateAConference(conferenceId, updateConferenceRequest)
+> updateAConference(conferenceId, updateConferenceRequest)
 
 Update a Conference
 
@@ -3278,8 +3560,7 @@ public class Example {
     UpdateConferenceRequest updateConferenceRequest = new UpdateConferenceRequest(); // UpdateConferenceRequest | Conference Details to update
     
     try {
-      ConferenceResult result = apiInstance.updateAConference(conferenceId, updateConferenceRequest);
-      System.out.println(result);
+      apiInstance.updateAConference(conferenceId, updateConferenceRequest);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#updateAConference");
       System.err.println("Status code: " + e.getCode());
@@ -3301,7 +3582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ConferenceResult**](ConferenceResult.md)
+null (empty response body)
 
 ### Authorization
 
@@ -3310,12 +3591,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Conference Details to Update |  -  |
+**204** | Successful conference details update |  -  |
 
 <a name="updateALiveCall"></a>
 # **updateALiveCall**

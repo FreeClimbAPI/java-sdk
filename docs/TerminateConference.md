@@ -8,7 +8,6 @@ The `TerminateConference` command terminates an existing Conference. Any active 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conferenceId** | **String** | ID of the conference to terminate. | 
 
 
 

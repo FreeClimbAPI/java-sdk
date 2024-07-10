@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.5.4</version>
+  <version>5.6.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.5.4"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.6.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.5.4.jar`
+* `target/freeclimb-java-client-5.6.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -171,6 +171,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getTenDLCSmsCampaigns**](docs/DefaultApi.md#getTenDLCSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/Campaigns | Get list of SMS 10DLC Campaigns
 *DefaultApi* | [**getTenDLCSmsPartnerCampaign**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaign) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId} | Get a 10DLC SMS Partner Campaign
 *DefaultApi* | [**getTenDLCSmsPartnerCampaigns**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
+*DefaultApi* | [**getTollFreeSmsCampaign**](docs/DefaultApi.md#getTollFreeSmsCampaign) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId} | Get a TollFree SMS Campaign
+*DefaultApi* | [**getTollFreeSmsCampaigns**](docs/DefaultApi.md#getTollFreeSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns | Get list of TollFree Campaigns
 *DefaultApi* | [**listActiveQueues**](docs/DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 *DefaultApi* | [**listAllAccountLogs**](docs/DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 *DefaultApi* | [**listApplications**](docs/DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
@@ -178,6 +180,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**listCallLogs**](docs/DefaultApi.md#listCallLogs) | **GET** /Accounts/{accountId}/Calls/{callId}/Logs | List Call Logs
 *DefaultApi* | [**listCallRecordings**](docs/DefaultApi.md#listCallRecordings) | **GET** /Accounts/{accountId}/Calls/{callId}/Recordings | List Call Recordings
 *DefaultApi* | [**listCalls**](docs/DefaultApi.md#listCalls) | **GET** /Accounts/{accountId}/Calls | List Calls
+*DefaultApi* | [**listConferenceRecordings**](docs/DefaultApi.md#listConferenceRecordings) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Recordings | List Conference Recordings
 *DefaultApi* | [**listConferences**](docs/DefaultApi.md#listConferences) | **GET** /Accounts/{accountId}/Conferences | List Conferences
 *DefaultApi* | [**listIncomingNumbers**](docs/DefaultApi.md#listIncomingNumbers) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers | List Incoming Numbers
 *DefaultApi* | [**listMembers**](docs/DefaultApi.md#listMembers) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members | List Members
@@ -185,6 +188,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**listRecordings**](docs/DefaultApi.md#listRecordings) | **GET** /Accounts/{accountId}/Recordings | List Recordings
 *DefaultApi* | [**listSmsMessages**](docs/DefaultApi.md#listSmsMessages) | **GET** /Accounts/{accountId}/Messages | List SMS Messages
 *DefaultApi* | [**makeACall**](docs/DefaultApi.md#makeACall) | **POST** /Accounts/{accountId}/Calls | Make a Call
+*DefaultApi* | [**makeAWebrtcJwt**](docs/DefaultApi.md#makeAWebrtcJwt) | **POST** /Accounts/{accountId}/Calls/WebRTC/Token | Make a JWT for WebRTC calling
 *DefaultApi* | [**removeAParticipant**](docs/DefaultApi.md#removeAParticipant) | **DELETE** /Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId} | Remove a Participant
 *DefaultApi* | [**sendAnSmsMessage**](docs/DefaultApi.md#sendAnSmsMessage) | **POST** /Accounts/{accountId}/Messages | Send an SMS Message
 *DefaultApi* | [**streamARecordingFile**](docs/DefaultApi.md#streamARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Stream | Stream a Recording File
@@ -235,6 +239,7 @@ Class | Method | HTTP request | Description
  - [CreateConference](docs/CreateConference.md)
  - [CreateConferenceAllOf](docs/CreateConferenceAllOf.md)
  - [CreateConferenceRequest](docs/CreateConferenceRequest.md)
+ - [CreateWebRTCToken](docs/CreateWebRTCToken.md)
  - [Dequeue](docs/Dequeue.md)
  - [Enqueue](docs/Enqueue.md)
  - [EnqueueAllOf](docs/EnqueueAllOf.md)
@@ -305,7 +310,6 @@ Class | Method | HTTP request | Description
  - [Reject](docs/Reject.md)
  - [RejectAllOf](docs/RejectAllOf.md)
  - [RemoveFromConference](docs/RemoveFromConference.md)
- - [RemoveFromConferenceAllOf](docs/RemoveFromConferenceAllOf.md)
  - [RequestType](docs/RequestType.md)
  - [SMSTenDLCBrand](docs/SMSTenDLCBrand.md)
  - [SMSTenDLCBrandsListResult](docs/SMSTenDLCBrandsListResult.md)
@@ -317,6 +321,9 @@ Class | Method | HTTP request | Description
  - [SMSTenDLCPartnerCampaignBrand](docs/SMSTenDLCPartnerCampaignBrand.md)
  - [SMSTenDLCPartnerCampaignsListResult](docs/SMSTenDLCPartnerCampaignsListResult.md)
  - [SMSTenDLCPartnerCampaignsListResultAllOf](docs/SMSTenDLCPartnerCampaignsListResultAllOf.md)
+ - [SMSTollFreeCampaign](docs/SMSTollFreeCampaign.md)
+ - [SMSTollFreeCampaignsListResult](docs/SMSTollFreeCampaignsListResult.md)
+ - [SMSTollFreeCampaignsListResultAllOf](docs/SMSTollFreeCampaignsListResultAllOf.md)
  - [Say](docs/Say.md)
  - [SayAllOf](docs/SayAllOf.md)
  - [SendDigits](docs/SendDigits.md)
@@ -328,8 +335,8 @@ Class | Method | HTTP request | Description
  - [Sms](docs/Sms.md)
  - [SmsAllOf](docs/SmsAllOf.md)
  - [StartRecordCall](docs/StartRecordCall.md)
+ - [TFN](docs/TFN.md)
  - [TerminateConference](docs/TerminateConference.md)
- - [TerminateConferenceAllOf](docs/TerminateConferenceAllOf.md)
  - [TranscribeUtterance](docs/TranscribeUtterance.md)
  - [TranscribeUtteranceRecord](docs/TranscribeUtteranceRecord.md)
  - [Unpark](docs/Unpark.md)

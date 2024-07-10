@@ -88,26 +88,27 @@ public class SMSTenDLCPartnerCampaignBrand {
   @SerializedName(SERIALIZED_NAME_EVP_VETTING_SCORE)
   private Integer evpVettingScore;
 
-  public SMSTenDLCPartnerCampaignBrand() {
+  public SMSTenDLCPartnerCampaignBrand() { 
   }
 
+  
   public SMSTenDLCPartnerCampaignBrand(
-      String brandId) {
+     String brandId
+  ) {
     this();
     this.brandId = brandId;
   }
 
   public SMSTenDLCPartnerCampaignBrand accountId(String accountId) {
-
+    
     this.accountId = accountId;
     return this;
   }
 
-  /**
+   /**
    * ID of the account that created this Queue.
-   * 
    * @return accountId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "ID of the account that created this Queue.")
 
@@ -115,15 +116,16 @@ public class SMSTenDLCPartnerCampaignBrand {
     return accountId;
   }
 
+
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
-  /**
+
+   /**
    * Unique identifier assigned to the brand by the registry.
-   * 
    * @return brandId
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Unique identifier assigned to the brand by the registry.")
 
@@ -131,21 +133,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return brandId;
   }
 
+
   private void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
-  public SMSTenDLCPartnerCampaignBrand firstName(String firstName) {
 
+  public SMSTenDLCPartnerCampaignBrand firstName(String firstName) {
+    
     this.firstName = firstName;
     return this;
   }
 
-  /**
-   * First or given name.
-   * 
+   /**
+   * First or given name. 
    * @return firstName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "John", value = "First or given name. ")
 
@@ -153,21 +156,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return firstName;
   }
 
+
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
-  public SMSTenDLCPartnerCampaignBrand lastName(String lastName) {
 
+  public SMSTenDLCPartnerCampaignBrand lastName(String lastName) {
+    
     this.lastName = lastName;
     return this;
   }
 
-  /**
+   /**
    * Last or Surname.
-   * 
    * @return lastName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "Doe", value = "Last or Surname.")
 
@@ -175,21 +179,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return lastName;
   }
 
+
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
-  public SMSTenDLCPartnerCampaignBrand displayName(String displayName) {
 
+  public SMSTenDLCPartnerCampaignBrand displayName(String displayName) {
+    
     this.displayName = displayName;
     return this;
   }
 
-  /**
+   /**
    * Display or marketing name of the brand.
-   * 
    * @return displayName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "ABC Mobile", value = "Display or marketing name of the brand.")
 
@@ -197,21 +202,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return displayName;
   }
 
+
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
-  public SMSTenDLCPartnerCampaignBrand companyName(String companyName) {
 
+  public SMSTenDLCPartnerCampaignBrand companyName(String companyName) {
+    
     this.companyName = companyName;
     return this;
   }
 
-  /**
+   /**
    * (Required for Non-profit/private/public) Legal company name.
-   * 
    * @return companyName
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "ABC Inc.", value = "(Required for Non-profit/private/public) Legal company name.")
 
@@ -219,21 +225,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return companyName;
   }
 
+
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
 
-  public SMSTenDLCPartnerCampaignBrand phone(String phone) {
 
+  public SMSTenDLCPartnerCampaignBrand phone(String phone) {
+    
     this.phone = phone;
     return this;
   }
 
-  /**
+   /**
    * Valid phone number in e.164 international format.
-   * 
    * @return phone
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(example = "+12024567890", required = true, value = "Valid phone number in e.164 international format.")
 
@@ -241,21 +248,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return phone;
   }
 
+
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
-  public SMSTenDLCPartnerCampaignBrand email(String email) {
 
+  public SMSTenDLCPartnerCampaignBrand email(String email) {
+    
     this.email = email;
     return this;
   }
 
-  /**
+   /**
    * Valid email address of brand support contact.
-   * 
    * @return email
-   **/
+  **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Valid email address of brand support contact.")
 
@@ -263,21 +271,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return email;
   }
 
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  public SMSTenDLCPartnerCampaignBrand website(String website) {
 
+  public SMSTenDLCPartnerCampaignBrand website(String website) {
+    
     this.website = website;
     return this;
   }
 
-  /**
+   /**
    * Brand website URL.
-   * 
    * @return website
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "http://www.abcmobile.com", value = "Brand website URL.")
 
@@ -285,12 +294,14 @@ public class SMSTenDLCPartnerCampaignBrand {
     return website;
   }
 
+
   public void setWebsite(String website) {
     this.website = website;
   }
 
-  public SMSTenDLCPartnerCampaignBrand optionalAttributes(Map<String, Object> optionalAttributes) {
 
+  public SMSTenDLCPartnerCampaignBrand optionalAttributes(Map<String, Object> optionalAttributes) {
+    
     this.optionalAttributes = optionalAttributes;
     return this;
   }
@@ -303,12 +314,10 @@ public class SMSTenDLCPartnerCampaignBrand {
     return this;
   }
 
-  /**
-   * Optional brand attributes. Please refer to GET /enum/optionalAttributeNames
-   * for dictionary of optional attribute names.
-   * 
+   /**
+   * Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names.
    * @return optionalAttributes
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Optional brand attributes. Please refer to GET /enum/optionalAttributeNames for dictionary of optional attribute names.")
 
@@ -316,21 +325,22 @@ public class SMSTenDLCPartnerCampaignBrand {
     return optionalAttributes;
   }
 
+
   public void setOptionalAttributes(Map<String, Object> optionalAttributes) {
     this.optionalAttributes = optionalAttributes;
   }
 
-  public SMSTenDLCPartnerCampaignBrand evpVettingScore(Integer evpVettingScore) {
 
+  public SMSTenDLCPartnerCampaignBrand evpVettingScore(Integer evpVettingScore) {
+    
     this.evpVettingScore = evpVettingScore;
     return this;
   }
 
-  /**
+   /**
    * External vetting score.
-   * 
    * @return evpVettingScore
-   **/
+  **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "External vetting score.")
 
@@ -338,9 +348,11 @@ public class SMSTenDLCPartnerCampaignBrand {
     return evpVettingScore;
   }
 
+
   public void setEvpVettingScore(Integer evpVettingScore) {
     this.evpVettingScore = evpVettingScore;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -370,15 +382,14 @@ public class SMSTenDLCPartnerCampaignBrand {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, brandId, firstName, lastName, displayName, companyName, phone, email, website,
-        optionalAttributes, evpVettingScore);
+    return Objects.hash(accountId, brandId, firstName, lastName, displayName, companyName, phone, email, website, optionalAttributes, evpVettingScore);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[] { a.get() }) : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -400,6 +411,7 @@ public class SMSTenDLCPartnerCampaignBrand {
     return sb.toString();
   }
 
+
   /**
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
@@ -412,3 +424,4 @@ public class SMSTenDLCPartnerCampaignBrand {
   }
 
 }
+
