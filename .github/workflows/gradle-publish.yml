@@ -21,10 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - name: Install Prism
-        run: (yarn global add @stoplight/prism-cli)
       - name: Start Prism Server
-        run: (prism mock -h 127.0.0.1 openapi.json &)
+        run: |
+          yarn install
+          ./node_modules/.bin/prism mock -h 127.0.0.1 openapi.json &
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
