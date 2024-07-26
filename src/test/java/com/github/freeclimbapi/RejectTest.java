@@ -36,15 +36,20 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Reject
  */
  public class RejectTest {
-    private final Reject model = new Reject();
-
+    private final Reject model = new Reject(
+    );
+    
+    
     /**
      * Test the property 'reason'
      */
     @Test
     public void reasonTest() {
+      
+      
       model.setReason("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getReason());
+      
       
     }
 
@@ -55,9 +60,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       Reject test2 = new Reject();
+        
+        
       test2.setReason("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -69,9 +80,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       Reject test2 = new Reject();
-      test2.setReason("tS");
+        
+        
+      test2.setReason("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -83,7 +100,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -96,9 +116,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       Reject test2 = new Reject();
+        
+        
       test2.setReason("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -112,9 +138,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       Reject test2 = new Reject();
+        
+        
       test2.setReason("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -125,9 +157,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       Reject test1 = new Reject();
+        
+        
       test1.setReason("TS");
+      
       Reject test2 = new Reject();
-      test2.setReason("tS");
+        
+        
+      test2.setReason("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -138,7 +176,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Reject test1 = new Reject();
-      test1.setReason("TS");
+        
+        
+        test1.setReason("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -151,9 +192,14 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setReason("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getReason());
+        
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("reason"), model.getReason());
+        
     }
  }

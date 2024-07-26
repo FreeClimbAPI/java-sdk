@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceStatus
  */
  public class ConferenceStatusTest {
+    
+    
     @Test
     public void testEMPTYShouldWork() {
 

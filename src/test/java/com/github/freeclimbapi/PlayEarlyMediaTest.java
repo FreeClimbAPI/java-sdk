@@ -36,15 +36,20 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PlayEarlyMedia
  */
  public class PlayEarlyMediaTest {
-    private final PlayEarlyMedia model = new PlayEarlyMedia();
-
+    private final PlayEarlyMedia model = new PlayEarlyMedia(
+    );
+    
+    
     /**
      * Test the property '_file'
      */
     @Test
     public void _fileTest() {
+      
+      
       model.setFile("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFile());
+      
       
     }
 
@@ -55,9 +60,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       PlayEarlyMedia test2 = new PlayEarlyMedia();
+        
+        
       test2.setFile("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -69,9 +80,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       PlayEarlyMedia test2 = new PlayEarlyMedia();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -83,7 +100,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -96,9 +116,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       PlayEarlyMedia test2 = new PlayEarlyMedia();
+        
+        
       test2.setFile("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -112,9 +138,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       PlayEarlyMedia test2 = new PlayEarlyMedia();
+        
+        
       test2.setFile("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -125,9 +157,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
+        
+        
       test1.setFile("TS");
+      
       PlayEarlyMedia test2 = new PlayEarlyMedia();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -138,7 +176,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PlayEarlyMedia test1 = new PlayEarlyMedia();
-      test1.setFile("TS");
+        
+        
+        test1.setFile("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -151,9 +192,14 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setFile("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFile());
+        
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("_file"), model.getFile());
+        
     }
  }

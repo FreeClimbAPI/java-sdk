@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,197 +35,369 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for Enqueue
  */
-public class EnqueueTest {
-  private final Enqueue model = new Enqueue();
+ public class EnqueueTest {
+    private final Enqueue model = new Enqueue(
+    );
+    
+    
+    /**
+     * Test the property 'actionUrl'
+     */
+    @Test
+    public void actionUrlTest() {
+      
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
+      
+      
+    }
+    /**
+     * Test the property 'notificationUrl'
+     */
+    @Test
+    public void notificationUrlTest() {
+      
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+      
+      
+    }
+    /**
+     * Test the property 'queueId'
+     */
+    @Test
+    public void queueIdTest() {
+      
+      
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
+    }
+    /**
+     * Test the property 'waitUrl'
+     */
+    @Test
+    public void waitUrlTest() {
+      
+      
+      model.setWaitUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+      
+      
+    }
 
-  /**
-   * Test the property 'actionUrl'
-   */
-  @Test
-  public void actionUrlTest() {
-    model.setActionUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-  }
+     @Test
+    public void equalsTrueTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      Enqueue test2 = new Enqueue();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
 
-  /**
-   * Test the property 'notificationUrl'
-   */
-  @Test
-  public void notificationUrlTest() {
-    model.setNotificationUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      Assert.assertTrue(test1.equals(test2));
+    }
 
-  }
+    /**
+     * Test the method 'equalsFalse'
+     */
 
-  /**
-   * Test the property 'queueId'
-   */
-  @Test
-  public void queueIdTest() {
-    model.setQueueId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getQueueId());
+     @Test
+    public void equalsFalseTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      Enqueue test2 = new Enqueue();
+        
+      test2.setActionUrl("TS2");
+        
+        
+        
+      test2.setNotificationUrl("TS2");
+        
+        
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setWaitUrl("TS2");
+      
 
-  }
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-  /**
-   * Test the property 'waitUrl'
-   */
-  @Test
-  public void waitUrlTest() {
-    model.setWaitUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+     @Test
+    public void hashCodeTypeTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
 
-  }
+    /**
+     * Test the method 'toStringEquals'
+     */
 
-  /**
-   * Test the method 'equalsTrue'
-   */
+     @Test
+    public void toStringEqualsTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      Enqueue test2 = new Enqueue();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
 
-  @Test
-  public void equalsTrueTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    Enqueue test2 = new Enqueue();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
 
-    Assert.assertTrue(test1.equals(test2));
-  }
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      Enqueue test2 = new Enqueue();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
 
-  /**
-   * Test the method 'equalsFalse'
-   */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
 
-  @Test
-  public void equalsFalseTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    Enqueue test2 = new Enqueue();
-    test2.setActionUrl("tS");
-    test2.setNotificationUrl("tS");
-    test2.setQueueId("tS");
-    test2.setWaitUrl("tS");
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      Enqueue test2 = new Enqueue();
+        
+      test2.setActionUrl("TS2");
+        
+        
+        
+      test2.setNotificationUrl("TS2");
+        
+        
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setWaitUrl("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
 
-    Assert.assertFalse(test1.equals(test2));
-  }
+     /**
+     * Test the method 'toStringType'
+     */
 
-  /**
-   * Test the method 'hashCodeType'
-   */
+     @Test
+    public void toStringTypeTest() {
+      Enqueue test1 = new Enqueue();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        test1.setQueueId("TS");
+      
+        
+        
+        test1.setWaitUrl("TS");
+      
 
-  @Test
-  public void hashCodeTypeTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("Enqueue", model.getCommand());
+    }
 
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    Enqueue test2 = new Enqueue();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
-
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    Enqueue test2 = new Enqueue();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    Enqueue test2 = new Enqueue();
-    test2.setActionUrl("tS");
-    test2.setNotificationUrl("tS");
-    test2.setQueueId("tS");
-    test2.setWaitUrl("tS");
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    Enqueue test1 = new Enqueue();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
-
-  @Test
-  public void commandTest() throws Exception {
-    Assert.assertEquals("Enqueue", model.getCommand());
-  }
-
-  @Test
-  public void buildTest() throws Exception {
-    model.setActionUrl("TEST_STRING");
-    model.setNotificationUrl("TEST_STRING");
-    model.setQueueId("TEST_STRING");
-    model.setWaitUrl("TEST_STRING");
-    Map<String, Map<String, Object>> build = model.build();
-    Map<String, Object> attributes = build.get(model.getCommand());
-    Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
-    Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
-    Assert.assertEquals(attributes.get("queueId"), model.getQueueId());
-    Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
-  }
-}
+    @Test
+    public void buildTest() throws Exception {
+        
+        model.setActionUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        
+        
+        model.setNotificationUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+        
+        
+        
+        
+        model.setQueueId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getQueueId());
+        
+        
+        
+        model.setWaitUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+        
+        Map<String, Map<String, Object>> build = model.build();
+        Map<String, Object> attributes = build.get(model.getCommand());
+        Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+        Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
+        Assert.assertEquals(attributes.get("queueId"), model.getQueueId());
+        Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
+        
+    }
+ }

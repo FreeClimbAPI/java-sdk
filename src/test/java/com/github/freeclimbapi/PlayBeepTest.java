@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PlayBeep
  */
  public class PlayBeepTest {
+    
+    
     @Test
     public void testALWAYSShouldWork() {
 

@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateCallRequestStatus
  */
  public class UpdateCallRequestStatusTest {
+    
+    
     @Test
     public void testCANCELEDShouldWork() {
 

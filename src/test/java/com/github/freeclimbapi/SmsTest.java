@@ -36,45 +36,56 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Sms
  */
  public class SmsTest {
-    private final Sms model = new Sms();
-
+    private final Sms model = new Sms(
+    );
+    
+    
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
+      
+      
       model.setTo("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getTo());
       
+      
     }
-
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
+      
+      
       model.setFrom("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFrom());
       
+      
     }
-
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
+      
+      
       model.setText("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getText());
       
+      
     }
-
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
+      
+      
       model.setNotificationUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
       
     }
 
@@ -85,15 +96,39 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       Sms test2 = new Sms();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setNotificationUrl("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -105,15 +140,39 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       Sms test2 = new Sms();
-      test2.setTo("tS");
-      test2.setFrom("tS");
-      test2.setText("tS");
-      test2.setNotificationUrl("tS");
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -125,10 +184,22 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -141,15 +212,39 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       Sms test2 = new Sms();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setNotificationUrl("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -163,15 +258,39 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       Sms test2 = new Sms();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setNotificationUrl("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -182,15 +301,39 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       Sms test1 = new Sms();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setNotificationUrl("TS");
+      
       Sms test2 = new Sms();
-      test2.setTo("tS");
-      test2.setFrom("tS");
-      test2.setText("tS");
-      test2.setNotificationUrl("tS");
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -201,10 +344,22 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Sms test1 = new Sms();
-      test1.setTo("TS");
-      test1.setFrom("TS");
-      test1.setText("TS");
-      test1.setNotificationUrl("TS");
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setFrom("TS");
+      
+        
+        
+        test1.setText("TS");
+      
+        
+        
+        test1.setNotificationUrl("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -217,15 +372,32 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setTo("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getTo());
+        
+        
+        
         model.setFrom("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFrom());
+        
+        
+        
         model.setText("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getText());
+        
+        
+        
         model.setNotificationUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+        
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("to"), model.getTo());
         Assert.assertEquals(attributes.get("from"), model.getFrom());
         Assert.assertEquals(attributes.get("text"), model.getText());
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
+        
     }
  }

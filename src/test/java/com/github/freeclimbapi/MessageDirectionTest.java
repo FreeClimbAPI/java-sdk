@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageDirection
  */
  public class MessageDirectionTest {
+    
+    
     @Test
     public void testINBOUNDShouldWork() {
 

@@ -36,28 +36,34 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CreateWebRTCToken
  */
  public class CreateWebRTCTokenTest {
-    private final CreateWebRTCToken model = new CreateWebRTCToken();
-
+    private final CreateWebRTCToken model = new CreateWebRTCToken(
+    );
+    
+    
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
+      
+      
       model.setTo("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getTo());
       
+      
     }
-
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
+      
+      
       model.setFrom("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFrom());
       
+      
     }
-
     /**
      * Test the property 'uses'
      */
@@ -75,12 +81,24 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       CreateWebRTCToken test2 = new CreateWebRTCToken();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
       test2.setUses(1);
 
       Assert.assertTrue(test1.equals(test2));
@@ -93,12 +111,24 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       CreateWebRTCToken test2 = new CreateWebRTCToken();
-      test2.setTo("tS");
-      test2.setFrom("tS");
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
       test2.setUses(0);
 
       Assert.assertFalse(test1.equals(test2));
@@ -111,8 +141,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       
       int hashCode1 = test1.hashCode();
@@ -126,12 +162,24 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       CreateWebRTCToken test2 = new CreateWebRTCToken();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
       test2.setUses(1);
         
       String toString1 = test1.toString();
@@ -146,12 +194,24 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       CreateWebRTCToken test2 = new CreateWebRTCToken();
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
       test2.setUses(1);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -163,12 +223,24 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
       test1.setUses(1);
       CreateWebRTCToken test2 = new CreateWebRTCToken();
-      test2.setTo("tS");
-      test2.setFrom("tS");
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
       test2.setUses(0);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -180,8 +252,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       CreateWebRTCToken test1 = new CreateWebRTCToken();
-      test1.setTo("TS");
-      test1.setFrom("TS");
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setFrom("TS");
+      
       test1.setUses(1);
 
       String toString1 = test1.toString();

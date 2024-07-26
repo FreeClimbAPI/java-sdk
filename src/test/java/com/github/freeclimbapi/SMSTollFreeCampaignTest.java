@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTollFreeCampaign
  */
  public class SMSTollFreeCampaignTest {
-    private final SMSTollFreeCampaign model = new SMSTollFreeCampaign();
-
+    private final SMSTollFreeCampaign model = new SMSTollFreeCampaign(
+    );
+    
+    
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
+      
+      
       model.setCampaignId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCampaignId());
       
+      
     }
-
     /**
      * Test the property 'useCase'
      */
     @Test
     public void useCaseTest() {
+      
+      
       model.setUseCase("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUseCase());
       
+      
     }
-
     /**
      * Test the property 'registrationStatus'
      */
@@ -90,27 +98,30 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.REGISTERED);
       
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -128,20 +139,50 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
+      
       test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setUseCase("TS");
+      
       test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
 
       Assert.assertTrue(test1.equals(test2));
@@ -154,20 +195,50 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      
+      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-      test2.setAccountId("tS");
-      test2.setCampaignId("tS");
-      test2.setUseCase("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setUseCase("TS2");
+      
       test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
 
       Assert.assertFalse(test1.equals(test2));
@@ -180,12 +251,27 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
+      
       test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       
       int hashCode1 = test1.hashCode();
@@ -199,20 +285,50 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
+      
       test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setUseCase("TS");
+      
       test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
         
       String toString1 = test1.toString();
@@ -227,20 +343,50 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
+      
       test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setUseCase("TS");
+      
       test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -252,20 +398,50 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setUseCase("TS");
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      
+      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-      test2.setAccountId("tS");
-      test2.setCampaignId("tS");
-      test2.setUseCase("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setUseCase("TS2");
+      
       test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -277,12 +453,27 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-      test1.setAccountId("TS");
-      test1.setCampaignId("TS");
-      test1.setUseCase("TS");
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setCampaignId("TS");
+      
+        
+        
+        test1.setUseCase("TS");
+      
       test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
 
       String toString1 = test1.toString();

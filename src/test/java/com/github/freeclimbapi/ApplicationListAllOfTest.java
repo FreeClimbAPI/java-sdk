@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ApplicationListAllOf
  */
  public class ApplicationListAllOfTest {
-    private final ApplicationListAllOf model = new ApplicationListAllOf();
-
+    private final ApplicationListAllOf model = new ApplicationListAllOf(
+    );
+    
+    
     /**
      * Test the property 'applications'
      */

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallListAllOf
  */
  public class CallListAllOfTest {
-    private final CallListAllOf model = new CallListAllOf();
-
+    private final CallListAllOf model = new CallListAllOf(
+    );
+    
+    
     /**
      * Test the property 'calls'
      */

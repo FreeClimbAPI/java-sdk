@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,429 +35,718 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for MessageResultAllOf
  */
-public class MessageResultAllOfTest {
-  private final MessageResultAllOf model = new MessageResultAllOf();
-
-  /**
-   * Test the property 'accountId'
-   */
-  @Test
-  public void accountIdTest() {
-    model.setAccountId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getAccountId());
-
-  }
-
-  /**
-   * Test the property 'messageId'
-   */
-  @Test
-  public void messageIdTest() {
-    model.setMessageId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getMessageId());
-
-  }
-
-  /**
-   * Test the property 'status'
-   */
-  @Test
-  public void statusTest() {
-    model.setStatus(MessageStatus.NEW);
-    Assert.assertEquals(model.getStatus(), MessageStatus.NEW);
-    model.setStatus(MessageStatus.QUEUED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.QUEUED);
-    model.setStatus(MessageStatus.REJECTED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.REJECTED);
-    model.setStatus(MessageStatus.SENDING);
-    Assert.assertEquals(model.getStatus(), MessageStatus.SENDING);
-    model.setStatus(MessageStatus.SENT);
-    Assert.assertEquals(model.getStatus(), MessageStatus.SENT);
-    model.setStatus(MessageStatus.FAILED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.FAILED);
-    model.setStatus(MessageStatus.RECEIVED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.RECEIVED);
-    model.setStatus(MessageStatus.UNDELIVERED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.UNDELIVERED);
-    model.setStatus(MessageStatus.EXPIRED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.EXPIRED);
-    model.setStatus(MessageStatus.DELETED);
-    Assert.assertEquals(model.getStatus(), MessageStatus.DELETED);
-    model.setStatus(MessageStatus.UNKNOWN);
-    Assert.assertEquals(model.getStatus(), MessageStatus.UNKNOWN);
-
-  }
-
-  /**
-   * Test the property 'from'
-   */
-  @Test
-  public void fromTest() {
-    model.setFrom("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getFrom());
-
-  }
-
-  /**
-   * Test the property 'to'
-   */
-  @Test
-  public void toTest() {
-    model.setTo("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getTo());
-
-  }
-
-  /**
-   * Test the property 'text'
-   */
-  @Test
-  public void textTest() {
-    model.setText("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getText());
-
-  }
-
-  /**
-   * Test the property 'direction'
-   */
-  @Test
-  public void directionTest() {
-    model.setDirection("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getDirection());
-
-  }
-
-  /**
-   * Test the property 'notificationUrl'
-   */
-  @Test
-  public void notificationUrlTest() {
-    model.setNotificationUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-
-  }
-
-  /**
-   * Test the property 'brandId'
-   */
-  @Test
-  public void brandIdTest() {
-    model.setBrandId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getBrandId());
-
-  }
-
-  /**
-   * Test the property 'campaignId'
-   */
-  @Test
-  public void campaignIdTest() {
-    model.setCampaignId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getCampaignId());
-
-  }
-
-  /**
-   * Test the property 'segmentCount'
-   */
-  @Test
-  public void segmentCountTest() {
-    model.setSegmentCount(new BigDecimal(1.0));
-    Assert.assertEquals(new BigDecimal(1.0), model.getSegmentCount());
-
-  }
-
-  /**
-   * Test the property 'mediaUrls'
-   */
-  @Test
-  public void mediaUrlsTest() {
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      model.setMediaUrls(testArray);
-      Assert.assertEquals(testArray, model.getMediaUrls());
-    } catch (Exception e) {
-      e.printStackTrace();
+ public class MessageResultAllOfTest {
+    private final MessageResultAllOf model = new MessageResultAllOf(
+    );
+    
+    
+    /**
+     * Test the property 'accountId'
+     */
+    @Test
+    public void accountIdTest() {
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-  }
-
-  /**
-   * Test the method 'equalsTrue'
-   */
-
-  @Test
-  public void equalsTrueTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'messageId'
+     */
+    @Test
+    public void messageIdTest() {
+      
+      
+      model.setMessageId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getMessageId());
+      
+      
     }
-    MessageResultAllOf test2 = new MessageResultAllOf();
-    test2.setAccountId("TS");
-    test2.setMessageId("TS");
-    test2.setStatus(MessageStatus.NEW);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setDirection("TS");
-    test2.setNotificationUrl("TS");
-    test2.setBrandId("TS");
-    test2.setCampaignId("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'status'
+     */
+    @Test
+    public void statusTest() {
+      model.setStatus(MessageStatus.NEW);
+      Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
+      model.setStatus(MessageStatus.QUEUED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
+      model.setStatus(MessageStatus.REJECTED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
+      model.setStatus(MessageStatus.SENDING);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
+      model.setStatus(MessageStatus.SENT);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
+      model.setStatus(MessageStatus.FAILED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
+      model.setStatus(MessageStatus.RECEIVED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
+      model.setStatus(MessageStatus.UNDELIVERED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
+      model.setStatus(MessageStatus.EXPIRED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
+      model.setStatus(MessageStatus.DELETED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
+      model.setStatus(MessageStatus.UNKNOWN);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
+      
+    }
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
+    }
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
+    }
+    /**
+     * Test the property 'text'
+     */
+    @Test
+    public void textTest() {
+      
+      
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+      
+    }
+    /**
+     * Test the property 'direction'
+     */
+    @Test
+    public void directionTest() {
+      
+      
+      model.setDirection("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDirection());
+      
+      
+    }
+    /**
+     * Test the property 'notificationUrl'
+     */
+    @Test
+    public void notificationUrlTest() {
+      
+      
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+      
+    }
+    /**
+     * Test the property 'brandId'
+     */
+    @Test
+    public void brandIdTest() {
+      
+      
+      model.setBrandId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getBrandId());
+      
+      
+    }
+    /**
+     * Test the property 'campaignId'
+     */
+    @Test
+    public void campaignIdTest() {
+      
+      
+      model.setCampaignId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
+      
+    }
+    /**
+     * Test the property 'segmentCount'
+     */
+    @Test
+    public void segmentCountTest() {
+      model.setSegmentCount(new BigDecimal(1.0));
+      Assert.assertEquals(new BigDecimal(1.0), model.getSegmentCount());
+      
+    }
+    /**
+     * Test the property 'mediaUrls'
+     */
+    @Test
+    public void mediaUrlsTest() {
+      
+      List<URI> testList = new ArrayList<URI>();
+      model.setMediaUrls(testList);
+      Assert.assertEquals(testList, model.getMediaUrls()); 
     }
 
-    Assert.assertTrue(test1.equals(test2));
-  }
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-  /**
-   * Test the method 'equalsFalse'
-   */
+     @Test
+    public void equalsTrueTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageResultAllOf test2 = new MessageResultAllOf();
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+        
+        
+      test2.setBrandId("TS");
+      
+        
+        
+      test2.setCampaignId("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
 
-  @Test
-  public void equalsFalseTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.QUEUED);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageResultAllOf test2 = new MessageResultAllOf();
-    test2.setAccountId("tS");
-    test2.setMessageId("tS");
-    test2.setStatus(MessageStatus.NEW);
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setDirection("tS");
-    test2.setNotificationUrl("tS");
-    test2.setBrandId("tS");
-    test2.setCampaignId("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    Assert.assertFalse(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'hashCodeType'
-   */
-
-  @Test
-  public void hashCodeTypeTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
-
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageResultAllOf test2 = new MessageResultAllOf();
-    test2.setAccountId("TS");
-    test2.setMessageId("TS");
-    test2.setStatus(MessageStatus.NEW);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setDirection("TS");
-    test2.setNotificationUrl("TS");
-    test2.setBrandId("TS");
-    test2.setCampaignId("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
+    /**
+     * Test the method 'equalsFalse'
+     */
 
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
+     @Test
+    public void equalsFalseTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.QUEUED);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageResultAllOf test2 = new MessageResultAllOf();
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setMessageId("TS2");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setDirection("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+        
+        
+      test2.setBrandId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
 
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+      Assert.assertFalse(test1.equals(test2));
     }
-    MessageResultAllOf test2 = new MessageResultAllOf();
-    test2.setAccountId("TS");
-    test2.setMessageId("TS");
-    test2.setStatus(MessageStatus.NEW);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setDirection("TS");
-    test2.setNotificationUrl("TS");
-    test2.setBrandId("TS");
-    test2.setCampaignId("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
+    /**
+     * Test the method 'toStringEquals'
+     */
 
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+     @Test
+    public void toStringEqualsTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageResultAllOf test2 = new MessageResultAllOf();
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+        
+        
+      test2.setBrandId("TS");
+      
+        
+        
+      test2.setCampaignId("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
-    MessageResultAllOf test2 = new MessageResultAllOf();
-    test2.setAccountId("tS");
-    test2.setMessageId("tS");
-    test2.setStatus(MessageStatus.NEW);
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setDirection("tS");
-    test2.setNotificationUrl("tS");
-    test2.setBrandId("tS");
-    test2.setCampaignId("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageResultAllOf test2 = new MessageResultAllOf();
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+        
+        
+      test2.setBrandId("TS");
+      
+        
+        
+      test2.setCampaignId("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
 
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    MessageResultAllOf test1 = new MessageResultAllOf();
-    test1.setAccountId("TS");
-    test1.setMessageId("TS");
-    test1.setStatus(MessageStatus.NEW);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setDirection("TS");
-    test1.setNotificationUrl("TS");
-    test1.setBrandId("TS");
-    test1.setCampaignId("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.QUEUED);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+        
+        
+      test1.setBrandId("TS");
+      
+        
+        
+      test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageResultAllOf test2 = new MessageResultAllOf();
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setMessageId("TS2");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setDirection("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+        
+        
+      test2.setBrandId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
+     /**
+     * Test the method 'toStringType'
+     */
 
-}
+     @Test
+    public void toStringTypeTest() {
+      MessageResultAllOf test1 = new MessageResultAllOf();
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setMessageId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+        test1.setFrom("TS");
+      
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setText("TS");
+      
+        
+        
+        test1.setDirection("TS");
+      
+        
+        
+        test1.setNotificationUrl("TS");
+      
+        
+        
+        test1.setBrandId("TS");
+      
+        
+        
+        test1.setCampaignId("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

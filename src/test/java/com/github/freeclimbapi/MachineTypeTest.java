@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MachineType
  */
  public class MachineTypeTest {
+    
+    
     @Test
     public void testANSWERING_MACHINEShouldWork() {
 

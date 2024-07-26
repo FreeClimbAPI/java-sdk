@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallResult
  */
  public class CallResultTest {
-    private final CallResult model = new CallResult();
-
+    private final CallResult model = new CallResult(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -77,67 +85,78 @@ import com.github.freeclimbapi.models.*;
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
     }
-
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
+      
+      
       model.setCallId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallId());
       
+      
     }
-
     /**
      * Test the property 'parentCallId'
      */
     @Test
     public void parentCallIdTest() {
+      
+      
       model.setParentCallId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getParentCallId());
       
+      
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'from'
      */
     @Test
     public void fromTest() {
+      
+      
       model.setFrom("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFrom());
       
+      
     }
-
     /**
      * Test the property 'to'
      */
     @Test
     public void toTest() {
+      
+      
       model.setTo("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getTo());
       
+      
     }
-
     /**
      * Test the property 'phoneNumberId'
      */
     @Test
     public void phoneNumberIdTest() {
+      
+      
       model.setPhoneNumberId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
       
+      
     }
-
     /**
      * Test the property 'callStatus'
      */
@@ -161,37 +180,42 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
       
     }
-
     /**
      * Test the property 'startTime'
      */
     @Test
     public void startTimeTest() {
+      
+      
       model.setStartTime("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getStartTime());
       
+      
     }
-
     /**
      * Test the property 'connectTime'
      */
     @Test
     public void connectTimeTest() {
+      
+      
       model.setConnectTime("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getConnectTime());
       
+      
     }
-
     /**
      * Test the property 'endTime'
      */
     @Test
     public void endTimeTest() {
+      
+      
       model.setEndTime("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getEndTime());
       
+      
     }
-
     /**
      * Test the property 'duration'
      */
@@ -201,7 +225,6 @@ import com.github.freeclimbapi.models.*;
       model.setDuration(1);
       Assert.assertEquals(1, (int) model.getDuration());
     }
-
     /**
      * Test the property 'connectDuration'
      */
@@ -211,7 +234,6 @@ import com.github.freeclimbapi.models.*;
       model.setConnectDuration(1);
       Assert.assertEquals(1, (int) model.getConnectDuration());
     }
-
     /**
      * Test the property 'direction'
      */
@@ -225,7 +247,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
       
     }
-
     /**
      * Test the property 'answeredBy'
      */
@@ -237,7 +258,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getAnsweredBy(),AnsweredBy.MACHINE);
       
     }
-
     /**
      * Test the property 'subresourceUris'
      */
@@ -256,20 +276,56 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.QUEUED);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.INBOUND);
@@ -277,20 +333,56 @@ import com.github.freeclimbapi.models.*;
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       CallResult test2 = new CallResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setCallId("TS");
+      
+        
+        
       test2.setParentCallId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
       test2.setCallStatus(CallStatus.QUEUED);
+        
+        
       test2.setStartTime("TS");
+      
+        
+        
       test2.setConnectTime("TS");
+      
+        
+        
       test2.setEndTime("TS");
+      
       test2.setDuration(1);
       test2.setConnectDuration(1);
       test2.setDirection(CallDirection.INBOUND);
@@ -308,20 +400,56 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.RINGING);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.OUTBOUND_API);
@@ -329,20 +457,56 @@ import com.github.freeclimbapi.models.*;
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       CallResult test2 = new CallResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setCallId("tS");
-      test2.setParentCallId("tS");
-      test2.setAccountId("tS");
-      test2.setFrom("tS");
-      test2.setTo("tS");
-      test2.setPhoneNumberId("tS");
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setParentCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
       test2.setCallStatus(CallStatus.QUEUED);
-      test2.setStartTime("tS");
-      test2.setConnectTime("tS");
-      test2.setEndTime("tS");
+        
+        
+      test2.setStartTime("TS2");
+      
+        
+        
+      test2.setConnectTime("TS2");
+      
+        
+        
+      test2.setEndTime("TS2");
+      
       test2.setDuration(0);
       test2.setConnectDuration(0);
       test2.setDirection(CallDirection.INBOUND);
@@ -360,20 +524,56 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.QUEUED);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.INBOUND);
@@ -392,20 +592,56 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.QUEUED);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.INBOUND);
@@ -413,20 +649,56 @@ import com.github.freeclimbapi.models.*;
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       CallResult test2 = new CallResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setCallId("TS");
+      
+        
+        
       test2.setParentCallId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
       test2.setCallStatus(CallStatus.QUEUED);
+        
+        
       test2.setStartTime("TS");
+      
+        
+        
       test2.setConnectTime("TS");
+      
+        
+        
       test2.setEndTime("TS");
+      
       test2.setDuration(1);
       test2.setConnectDuration(1);
       test2.setDirection(CallDirection.INBOUND);
@@ -446,20 +718,56 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.QUEUED);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.INBOUND);
@@ -467,20 +775,56 @@ import com.github.freeclimbapi.models.*;
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       CallResult test2 = new CallResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setCallId("TS");
+      
+        
+        
       test2.setParentCallId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setFrom("TS");
+      
+        
+        
       test2.setTo("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
       test2.setCallStatus(CallStatus.QUEUED);
+        
+        
       test2.setStartTime("TS");
+      
+        
+        
       test2.setConnectTime("TS");
+      
+        
+        
       test2.setEndTime("TS");
+      
       test2.setDuration(1);
       test2.setConnectDuration(1);
       test2.setDirection(CallDirection.INBOUND);
@@ -497,41 +841,113 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       CallResult test1 = new CallResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setCallId("TS");
+      
+        
+        
       test1.setParentCallId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setFrom("TS");
+      
+        
+        
       test1.setTo("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
-      test1.setCallStatus(CallStatus.QUEUED);
+      
+      test1.setCallStatus(CallStatus.RINGING);
+        
+        
       test1.setStartTime("TS");
+      
+        
+        
       test1.setConnectTime("TS");
+      
+        
+        
       test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
-      test1.setDirection(CallDirection.INBOUND);
-      test1.setAnsweredBy(AnsweredBy.HUMAN);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+      test1.setAnsweredBy(AnsweredBy.MACHINE);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       CallResult test2 = new CallResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setCallId("tS");
-      test2.setParentCallId("tS");
-      test2.setAccountId("tS");
-      test2.setFrom("tS");
-      test2.setTo("tS");
-      test2.setPhoneNumberId("tS");
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setParentCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
       test2.setCallStatus(CallStatus.QUEUED);
-      test2.setStartTime("tS");
-      test2.setConnectTime("tS");
-      test2.setEndTime("tS");
+        
+        
+      test2.setStartTime("TS2");
+      
+        
+        
+      test2.setConnectTime("TS2");
+      
+        
+        
+      test2.setEndTime("TS2");
+      
       test2.setDuration(0);
       test2.setConnectDuration(0);
       test2.setDirection(CallDirection.INBOUND);
@@ -548,20 +964,56 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       CallResult test1 = new CallResult();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
-      test1.setCallId("TS");
-      test1.setParentCallId("TS");
-      test1.setAccountId("TS");
-      test1.setFrom("TS");
-      test1.setTo("TS");
-      test1.setPhoneNumberId("TS");
+        
+        
+        test1.setCallId("TS");
+      
+        
+        
+        test1.setParentCallId("TS");
+      
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setFrom("TS");
+      
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setPhoneNumberId("TS");
+      
       test1.setCallStatus(CallStatus.QUEUED);
-      test1.setStartTime("TS");
-      test1.setConnectTime("TS");
-      test1.setEndTime("TS");
+        
+        
+        test1.setStartTime("TS");
+      
+        
+        
+        test1.setConnectTime("TS");
+      
+        
+        
+        test1.setEndTime("TS");
+      
       test1.setDuration(1);
       test1.setConnectDuration(1);
       test1.setDirection(CallDirection.INBOUND);

@@ -40,10 +40,11 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * TranscribeUtterance
+ * The &#x60;TranscribeUtterance&#x60; command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  &#x60;TranscribeUtterance&#x60; is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the &#x60;PerCL&#x60; returned in response of the &#x60;actionUrl&#x60;. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.
  */
+@ApiModel(description = "The `TranscribeUtterance` command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  `TranscribeUtterance` is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the `PerCL` returned in response of the `actionUrl`. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class TranscribeUtterance extends PerclCommand {
+public class TranscribeUtteranceAllOf {
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
   private String actionUrl;
@@ -68,11 +69,10 @@ public class TranscribeUtterance extends PerclCommand {
   @SerializedName(SERIALIZED_NAME_PROMPTS)
   private List<Object> prompts = null;
 
-  public TranscribeUtterance() { 
-    this.command = this.getClass().getSimpleName();
+  public TranscribeUtteranceAllOf() { 
   }
 
-  public TranscribeUtterance actionUrl(String actionUrl) {
+  public TranscribeUtteranceAllOf actionUrl(String actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -95,7 +95,7 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance playBeep(Boolean playBeep) {
+  public TranscribeUtteranceAllOf playBeep(Boolean playBeep) {
     
     this.playBeep = playBeep;
     return this;
@@ -118,7 +118,7 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance record(TranscribeUtteranceAllOfRecord record) {
+  public TranscribeUtteranceAllOf record(TranscribeUtteranceAllOfRecord record) {
     
     this.record = record;
     return this;
@@ -141,7 +141,7 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance privacyForLogging(Boolean privacyForLogging) {
+  public TranscribeUtteranceAllOf privacyForLogging(Boolean privacyForLogging) {
     
     this.privacyForLogging = privacyForLogging;
     return this;
@@ -164,7 +164,7 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance privacyForRecording(Boolean privacyForRecording) {
+  public TranscribeUtteranceAllOf privacyForRecording(Boolean privacyForRecording) {
     
     this.privacyForRecording = privacyForRecording;
     return this;
@@ -187,13 +187,13 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance prompts(List<Object> prompts) {
+  public TranscribeUtteranceAllOf prompts(List<Object> prompts) {
     
     this.prompts = prompts;
     return this;
   }
 
-  public TranscribeUtterance addPromptsItem(Object promptsItem) {
+  public TranscribeUtteranceAllOf addPromptsItem(Object promptsItem) {
     if (this.prompts == null) {
       this.prompts = new ArrayList<Object>();
     }
@@ -226,26 +226,24 @@ public class TranscribeUtterance extends PerclCommand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TranscribeUtterance transcribeUtterance = (TranscribeUtterance) o;
-    return Objects.equals(this.actionUrl, transcribeUtterance.actionUrl) &&
-        Objects.equals(this.playBeep, transcribeUtterance.playBeep) &&
-        Objects.equals(this.record, transcribeUtterance.record) &&
-        Objects.equals(this.privacyForLogging, transcribeUtterance.privacyForLogging) &&
-        Objects.equals(this.privacyForRecording, transcribeUtterance.privacyForRecording) &&
-        Objects.equals(this.prompts, transcribeUtterance.prompts) &&
-        super.equals(o);
+    TranscribeUtteranceAllOf transcribeUtteranceAllOf = (TranscribeUtteranceAllOf) o;
+    return Objects.equals(this.actionUrl, transcribeUtteranceAllOf.actionUrl) &&
+        Objects.equals(this.playBeep, transcribeUtteranceAllOf.playBeep) &&
+        Objects.equals(this.record, transcribeUtteranceAllOf.record) &&
+        Objects.equals(this.privacyForLogging, transcribeUtteranceAllOf.privacyForLogging) &&
+        Objects.equals(this.privacyForRecording, transcribeUtteranceAllOf.privacyForRecording) &&
+        Objects.equals(this.prompts, transcribeUtteranceAllOf.prompts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(actionUrl, playBeep, record, privacyForLogging, privacyForRecording, prompts, super.hashCode());
+    return Objects.hash(actionUrl, playBeep, record, privacyForLogging, privacyForRecording, prompts);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TranscribeUtterance {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("class TranscribeUtteranceAllOf {\n");
     sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
     sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
     sb.append("    record: ").append(toIndentedString(record)).append("\n");
@@ -256,17 +254,6 @@ public class TranscribeUtterance extends PerclCommand {
     return sb.toString();
   }
 
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("actionUrl", () -> this.getActionUrl());
-    attributes.put("playBeep", () -> this.getPlayBeep());
-    attributes.put("record", () -> this.getRecord());
-    attributes.put("privacyForLogging", () -> this.getPrivacyForLogging());
-    attributes.put("privacyForRecording", () -> this.getPrivacyForRecording());
-    attributes.put("prompts", () -> this.getPrompts());
-    return attributes;
-  }
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCCampaignsListResultAllOf
  */
  public class SMSTenDLCCampaignsListResultAllOfTest {
-    private final SMSTenDLCCampaignsListResultAllOf model = new SMSTenDLCCampaignsListResultAllOf();
-
+    private final SMSTenDLCCampaignsListResultAllOf model = new SMSTenDLCCampaignsListResultAllOf(
+    );
+    
+    
     /**
      * Test the property 'campaigns'
      */

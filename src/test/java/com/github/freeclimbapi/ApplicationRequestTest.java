@@ -36,75 +36,92 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ApplicationRequest
  */
  public class ApplicationRequestTest {
-    private final ApplicationRequest model = new ApplicationRequest();
-
+    private final ApplicationRequest model = new ApplicationRequest(
+    );
+    
+    
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
+      
       model.setAlias("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAlias());
       
+      
     }
-
     /**
      * Test the property 'voiceUrl'
      */
     @Test
     public void voiceUrlTest() {
+      
+      
       model.setVoiceUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
       
+      
     }
-
     /**
      * Test the property 'voiceFallbackUrl'
      */
     @Test
     public void voiceFallbackUrlTest() {
+      
+      
       model.setVoiceFallbackUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
       
+      
     }
-
     /**
      * Test the property 'callConnectUrl'
      */
     @Test
     public void callConnectUrlTest() {
+      
+      
       model.setCallConnectUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
       
+      
     }
-
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
+      
+      
       model.setStatusCallbackUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
       
+      
     }
-
     /**
      * Test the property 'smsUrl'
      */
     @Test
     public void smsUrlTest() {
+      
+      
       model.setSmsUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSmsUrl());
       
+      
     }
-
     /**
      * Test the property 'smsFallbackUrl'
      */
     @Test
     public void smsFallbackUrlTest() {
+      
+      
       model.setSmsFallbackUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
+      
       
     }
 
@@ -115,21 +132,63 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       ApplicationRequest test2 = new ApplicationRequest();
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setVoiceUrl("TS");
+      
+        
+        
       test2.setVoiceFallbackUrl("TS");
+      
+        
+        
       test2.setCallConnectUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
+        
+        
       test2.setSmsUrl("TS");
+      
+        
+        
       test2.setSmsFallbackUrl("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -141,21 +200,63 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       ApplicationRequest test2 = new ApplicationRequest();
-      test2.setAlias("tS");
-      test2.setVoiceUrl("tS");
-      test2.setVoiceFallbackUrl("tS");
-      test2.setCallConnectUrl("tS");
-      test2.setStatusCallbackUrl("tS");
-      test2.setSmsUrl("tS");
-      test2.setSmsFallbackUrl("tS");
+        
+        
+      test2.setAlias("TS2");
+      
+        
+        
+      test2.setVoiceUrl("TS2");
+      
+        
+        
+      test2.setVoiceFallbackUrl("TS2");
+      
+        
+        
+      test2.setCallConnectUrl("TS2");
+      
+        
+        
+      test2.setStatusCallbackUrl("TS2");
+      
+        
+        
+      test2.setSmsUrl("TS2");
+      
+        
+        
+      test2.setSmsFallbackUrl("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -167,13 +268,34 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -186,21 +308,63 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       ApplicationRequest test2 = new ApplicationRequest();
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setVoiceUrl("TS");
+      
+        
+        
       test2.setVoiceFallbackUrl("TS");
+      
+        
+        
       test2.setCallConnectUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
+        
+        
       test2.setSmsUrl("TS");
+      
+        
+        
       test2.setSmsFallbackUrl("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -214,21 +378,63 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       ApplicationRequest test2 = new ApplicationRequest();
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setVoiceUrl("TS");
+      
+        
+        
       test2.setVoiceFallbackUrl("TS");
+      
+        
+        
       test2.setCallConnectUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
+        
+        
       test2.setSmsUrl("TS");
+      
+        
+        
       test2.setSmsFallbackUrl("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -239,21 +445,63 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       ApplicationRequest test1 = new ApplicationRequest();
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setVoiceUrl("TS");
+      
+        
+        
       test1.setVoiceFallbackUrl("TS");
+      
+        
+        
       test1.setCallConnectUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
+        
+        
       test1.setSmsUrl("TS");
+      
+        
+        
       test1.setSmsFallbackUrl("TS");
+      
       ApplicationRequest test2 = new ApplicationRequest();
-      test2.setAlias("tS");
-      test2.setVoiceUrl("tS");
-      test2.setVoiceFallbackUrl("tS");
-      test2.setCallConnectUrl("tS");
-      test2.setStatusCallbackUrl("tS");
-      test2.setSmsUrl("tS");
-      test2.setSmsFallbackUrl("tS");
+        
+        
+      test2.setAlias("TS2");
+      
+        
+        
+      test2.setVoiceUrl("TS2");
+      
+        
+        
+      test2.setVoiceFallbackUrl("TS2");
+      
+        
+        
+      test2.setCallConnectUrl("TS2");
+      
+        
+        
+      test2.setStatusCallbackUrl("TS2");
+      
+        
+        
+      test2.setSmsUrl("TS2");
+      
+        
+        
+      test2.setSmsFallbackUrl("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -264,13 +512,34 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       ApplicationRequest test1 = new ApplicationRequest();
-      test1.setAlias("TS");
-      test1.setVoiceUrl("TS");
-      test1.setVoiceFallbackUrl("TS");
-      test1.setCallConnectUrl("TS");
-      test1.setStatusCallbackUrl("TS");
-      test1.setSmsUrl("TS");
-      test1.setSmsFallbackUrl("TS");
+        
+        
+        test1.setAlias("TS");
+      
+        
+        
+        test1.setVoiceUrl("TS");
+      
+        
+        
+        test1.setVoiceFallbackUrl("TS");
+      
+        
+        
+        test1.setCallConnectUrl("TS");
+      
+        
+        
+        test1.setStatusCallbackUrl("TS");
+      
+        
+        
+        test1.setSmsUrl("TS");
+      
+        
+        
+        test1.setSmsFallbackUrl("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

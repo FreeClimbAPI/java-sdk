@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordingResultAllOf
  */
  public class RecordingResultAllOfTest {
-    private final RecordingResultAllOf model = new RecordingResultAllOf();
-
+    private final RecordingResultAllOf model = new RecordingResultAllOf(
+    );
+    
+    
     /**
      * Test the property 'recordingId'
      */
     @Test
     public void recordingIdTest() {
+      
+      
       model.setRecordingId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getRecordingId());
       
+      
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
+      
+      
       model.setCallId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallId());
       
+      
     }
-
     /**
      * Test the property 'durationSec'
      */
@@ -77,14 +85,16 @@ import com.github.freeclimbapi.models.*;
       model.setDurationSec(1);
       Assert.assertEquals(1, (int) model.getDurationSec());
     }
-
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
+      
+      
       model.setConferenceId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
       
     }
 
@@ -95,17 +105,41 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       RecordingResultAllOf test2 = new RecordingResultAllOf();
+        
+        
       test2.setRecordingId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setDurationSec(1);
+        
+        
       test2.setConferenceId("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -117,17 +151,41 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       RecordingResultAllOf test2 = new RecordingResultAllOf();
-      test2.setRecordingId("tS");
-      test2.setAccountId("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setRecordingId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setDurationSec(0);
-      test2.setConferenceId("tS");
+        
+        
+      test2.setConferenceId("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -139,11 +197,23 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -156,17 +226,41 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       RecordingResultAllOf test2 = new RecordingResultAllOf();
+        
+        
       test2.setRecordingId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setDurationSec(1);
+        
+        
       test2.setConferenceId("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -180,17 +274,41 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       RecordingResultAllOf test2 = new RecordingResultAllOf();
+        
+        
       test2.setRecordingId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setDurationSec(1);
+        
+        
       test2.setConferenceId("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -201,17 +319,41 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
+        
+        
       test1.setRecordingId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setDurationSec(1);
+        
+        
       test1.setConferenceId("TS");
+      
       RecordingResultAllOf test2 = new RecordingResultAllOf();
-      test2.setRecordingId("tS");
-      test2.setAccountId("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setRecordingId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setDurationSec(0);
-      test2.setConferenceId("tS");
+        
+        
+      test2.setConferenceId("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -222,11 +364,23 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       RecordingResultAllOf test1 = new RecordingResultAllOf();
-      test1.setRecordingId("TS");
-      test1.setAccountId("TS");
-      test1.setCallId("TS");
+        
+        
+        test1.setRecordingId("TS");
+      
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setCallId("TS");
+      
       test1.setDurationSec(1);
-      test1.setConferenceId("TS");
+        
+        
+        test1.setConferenceId("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

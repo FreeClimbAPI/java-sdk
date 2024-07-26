@@ -36,48 +36,58 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCCampaign
  */
  public class SMSTenDLCCampaignTest {
-    private final SMSTenDLCCampaign model = new SMSTenDLCCampaign();
-
+    private final SMSTenDLCCampaign model = new SMSTenDLCCampaign(
+    );
+    
+    
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
+      
+      
       model.setCampaignId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCampaignId());
       
+      
     }
-
     /**
      * Test the property 'cspId'
      */
     @Test
     public void cspIdTest() {
+      
+      
       model.setCspId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCspId());
       
+      
     }
-
     /**
      * Test the property 'resellerId'
      */
     @Test
     public void resellerIdTest() {
+      
+      
       model.setResellerId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getResellerId());
       
+      
     }
-
     /**
      * Test the property 'status'
      */
@@ -91,7 +101,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getStatus(),SMSTenDLCCampaign.StatusEnum.EXPIRED);
       
     }
-
     /**
      * Test the property 'createDate'
      */
@@ -101,7 +110,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getCreateDate());
       
     }
-
     /**
      * Test the property 'autoRenewal'
      */
@@ -111,7 +119,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getAutoRenewal());       
       
     }
-
     /**
      * Test the property 'billedDate'
      */
@@ -121,27 +128,30 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getBilledDate());
       
     }
-
     /**
      * Test the property 'brandId'
      */
     @Test
     public void brandIdTest() {
+      
+      
       model.setBrandId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getBrandId());
       
+      
     }
-
     /**
      * Test the property 'usecase'
      */
     @Test
     public void usecaseTest() {
+      
+      
       model.setUsecase("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUsecase());
       
+      
     }
-
     /**
      * Test the property 'subUsecases'
      */
@@ -152,17 +162,18 @@ import com.github.freeclimbapi.models.*;
       model.setSubUsecases(testSet);
       Assert.assertEquals(testSet, model.getSubUsecases()); 
     }
-
     /**
      * Test the property 'description'
      */
     @Test
     public void descriptionTest() {
+      
+      
       model.setDescription("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDescription());
       
+      
     }
-
     /**
      * Test the property 'embeddedLink'
      */
@@ -172,7 +183,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getEmbeddedLink());       
       
     }
-
     /**
      * Test the property 'embeddedPhone'
      */
@@ -182,7 +192,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getEmbeddedPhone());       
       
     }
-
     /**
      * Test the property 'affiliateMarketing'
      */
@@ -192,7 +201,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getAffiliateMarketing());       
       
     }
-
     /**
      * Test the property 'numberPool'
      */
@@ -202,7 +210,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getNumberPool());       
       
     }
-
     /**
      * Test the property 'ageGated'
      */
@@ -212,7 +219,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getAgeGated());       
       
     }
-
     /**
      * Test the property 'directLending'
      */
@@ -222,7 +228,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getDirectLending());       
       
     }
-
     /**
      * Test the property 'subscriberOptin'
      */
@@ -232,7 +237,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSubscriberOptin());       
       
     }
-
     /**
      * Test the property 'subscriberOptout'
      */
@@ -242,7 +246,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSubscriberOptout());       
       
     }
-
     /**
      * Test the property 'subscriberHelp'
      */
@@ -252,137 +255,162 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSubscriberHelp());       
       
     }
-
     /**
      * Test the property 'sample1'
      */
     @Test
     public void sample1Test() {
+      
+      
       model.setSample1("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSample1());
       
+      
     }
-
     /**
      * Test the property 'sample2'
      */
     @Test
     public void sample2Test() {
+      
+      
       model.setSample2("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSample2());
       
+      
     }
-
     /**
      * Test the property 'sample3'
      */
     @Test
     public void sample3Test() {
+      
+      
       model.setSample3("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSample3());
       
+      
     }
-
     /**
      * Test the property 'sample4'
      */
     @Test
     public void sample4Test() {
+      
+      
       model.setSample4("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSample4());
       
+      
     }
-
     /**
      * Test the property 'sample5'
      */
     @Test
     public void sample5Test() {
+      
+      
       model.setSample5("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getSample5());
       
+      
     }
-
     /**
      * Test the property 'messageFlow'
      */
     @Test
     public void messageFlowTest() {
+      
+      
       model.setMessageFlow("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getMessageFlow());
       
+      
     }
-
     /**
      * Test the property 'helpMessage'
      */
     @Test
     public void helpMessageTest() {
+      
+      
       model.setHelpMessage("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getHelpMessage());
       
+      
     }
-
     /**
      * Test the property 'optinKeywords'
      */
     @Test
     public void optinKeywordsTest() {
+      
+      
       model.setOptinKeywords("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getOptinKeywords());
       
+      
     }
-
     /**
      * Test the property 'optoutKeywords'
      */
     @Test
     public void optoutKeywordsTest() {
+      
+      
       model.setOptoutKeywords("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getOptoutKeywords());
       
+      
     }
-
     /**
      * Test the property 'helpKeywords'
      */
     @Test
     public void helpKeywordsTest() {
+      
+      
       model.setHelpKeywords("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getHelpKeywords());
       
+      
     }
-
     /**
      * Test the property 'optinMessage'
      */
     @Test
     public void optinMessageTest() {
+      
+      
       model.setOptinMessage("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getOptinMessage());
       
+      
     }
-
     /**
      * Test the property 'optoutMessage'
      */
     @Test
     public void optoutMessageTest() {
+      
+      
       model.setOptoutMessage("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getOptoutMessage());
       
+      
     }
-
     /**
      * Test the property 'referenceId'
      */
     @Test
     public void referenceIdTest() {
+      
+      
       model.setReferenceId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getReferenceId());
       
+      
     }
-
     /**
      * Test the property 'mock'
      */
@@ -392,7 +420,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getMock());       
       
     }
-
     /**
      * Test the property 'nextRenewalOrExpirationDate'
      */
@@ -410,19 +437,40 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
+      
       test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -432,35 +480,95 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setCspId("TS");
+      
+        
+        
       test2.setResellerId("TS");
+      
       test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test2.setAutoRenewal(true);
       test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test2.setBrandId("TS");
+      
+        
+        
       test2.setUsecase("TS");
+      
         Set<String> testSet2 = testSet;
       test2.setSubUsecases(testSet2);
+        
+        
       test2.setDescription("TS");
+      
       test2.setEmbeddedLink(true);
       test2.setEmbeddedPhone(true);
       test2.setAffiliateMarketing(true);
@@ -470,19 +578,58 @@ import com.github.freeclimbapi.models.*;
       test2.setSubscriberOptin(true);
       test2.setSubscriberOptout(true);
       test2.setSubscriberHelp(true);
+        
+        
       test2.setSample1("TS");
+      
+        
+        
       test2.setSample2("TS");
+      
+        
+        
       test2.setSample3("TS");
+      
+        
+        
       test2.setSample4("TS");
+      
+        
+        
       test2.setSample5("TS");
+      
+        
+        
       test2.setMessageFlow("TS");
+      
+        
+        
       test2.setHelpMessage("TS");
+      
+        
+        
       test2.setOptinKeywords("TS");
+      
+        
+        
       test2.setOptoutKeywords("TS");
+      
+        
+        
       test2.setHelpKeywords("TS");
+      
+        
+        
       test2.setOptinMessage("TS");
+      
+        
+        
       test2.setOptoutMessage("TS");
+      
+        
+        
       test2.setReferenceId("TS");
+      
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 
@@ -496,19 +643,40 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
-      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -518,35 +686,95 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
-      test2.setAccountId("tS");
-      test2.setCampaignId("tS");
-      test2.setCspId("tS");
-      test2.setResellerId("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setCspId("TS2");
+      
+        
+        
+      test2.setResellerId("TS2");
+      
       test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
       test2.setAutoRenewal(false);
       test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
-      test2.setBrandId("tS");
-      test2.setUsecase("tS");
+        
+        
+      test2.setBrandId("TS2");
+      
+        
+        
+      test2.setUsecase("TS2");
+      
       Set<String> testSet2 = new HashSet<String>();
       test2.setSubUsecases(testSet2);
-      test2.setDescription("tS");
+        
+        
+      test2.setDescription("TS2");
+      
       test2.setEmbeddedLink(false);
       test2.setEmbeddedPhone(false);
       test2.setAffiliateMarketing(false);
@@ -556,19 +784,58 @@ import com.github.freeclimbapi.models.*;
       test2.setSubscriberOptin(false);
       test2.setSubscriberOptout(false);
       test2.setSubscriberHelp(false);
-      test2.setSample1("tS");
-      test2.setSample2("tS");
-      test2.setSample3("tS");
-      test2.setSample4("tS");
-      test2.setSample5("tS");
-      test2.setMessageFlow("tS");
-      test2.setHelpMessage("tS");
-      test2.setOptinKeywords("tS");
-      test2.setOptoutKeywords("tS");
-      test2.setHelpKeywords("tS");
-      test2.setOptinMessage("tS");
-      test2.setOptoutMessage("tS");
-      test2.setReferenceId("tS");
+        
+        
+      test2.setSample1("TS2");
+      
+        
+        
+      test2.setSample2("TS2");
+      
+        
+        
+      test2.setSample3("TS2");
+      
+        
+        
+      test2.setSample4("TS2");
+      
+        
+        
+      test2.setSample5("TS2");
+      
+        
+        
+      test2.setMessageFlow("TS2");
+      
+        
+        
+      test2.setHelpMessage("TS2");
+      
+        
+        
+      test2.setOptinKeywords("TS2");
+      
+        
+        
+      test2.setOptoutKeywords("TS2");
+      
+        
+        
+      test2.setHelpKeywords("TS2");
+      
+        
+        
+      test2.setOptinMessage("TS2");
+      
+        
+        
+      test2.setOptoutMessage("TS2");
+      
+        
+        
+      test2.setReferenceId("TS2");
+      
       test2.setMock(false);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
 
@@ -582,19 +849,40 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
+      
       test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
         Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -604,19 +892,58 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       
@@ -631,19 +958,40 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
+      
       test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -653,35 +1001,95 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setCspId("TS");
+      
+        
+        
       test2.setResellerId("TS");
+      
       test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test2.setAutoRenewal(true);
       test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test2.setBrandId("TS");
+      
+        
+        
       test2.setUsecase("TS");
+      
       Set<String> testSet2 = testSet;
       test2.setSubUsecases(testSet2);
+        
+        
       test2.setDescription("TS");
+      
       test2.setEmbeddedLink(true);
       test2.setEmbeddedPhone(true);
       test2.setAffiliateMarketing(true);
@@ -691,19 +1099,58 @@ import com.github.freeclimbapi.models.*;
       test2.setSubscriberOptin(true);
       test2.setSubscriberOptout(true);
       test2.setSubscriberHelp(true);
+        
+        
       test2.setSample1("TS");
+      
+        
+        
       test2.setSample2("TS");
+      
+        
+        
       test2.setSample3("TS");
+      
+        
+        
       test2.setSample4("TS");
+      
+        
+        
       test2.setSample5("TS");
+      
+        
+        
       test2.setMessageFlow("TS");
+      
+        
+        
       test2.setHelpMessage("TS");
+      
+        
+        
       test2.setOptinKeywords("TS");
+      
+        
+        
       test2.setOptoutKeywords("TS");
+      
+        
+        
       test2.setHelpKeywords("TS");
+      
+        
+        
       test2.setOptinMessage("TS");
+      
+        
+        
       test2.setOptoutMessage("TS");
+      
+        
+        
       test2.setReferenceId("TS");
+      
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
         
@@ -719,19 +1166,40 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
+      
       test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -741,35 +1209,95 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setCspId("TS");
+      
+        
+        
       test2.setResellerId("TS");
+      
       test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test2.setAutoRenewal(true);
       test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test2.setBrandId("TS");
+      
+        
+        
       test2.setUsecase("TS");
+      
       Set<String> testSet2 = testSet;
       test2.setSubUsecases(testSet2);
+        
+        
       test2.setDescription("TS");
+      
       test2.setEmbeddedLink(true);
       test2.setEmbeddedPhone(true);
       test2.setAffiliateMarketing(true);
@@ -779,19 +1307,58 @@ import com.github.freeclimbapi.models.*;
       test2.setSubscriberOptin(true);
       test2.setSubscriberOptout(true);
       test2.setSubscriberHelp(true);
+        
+        
       test2.setSample1("TS");
+      
+        
+        
       test2.setSample2("TS");
+      
+        
+        
       test2.setSample3("TS");
+      
+        
+        
       test2.setSample4("TS");
+      
+        
+        
       test2.setSample5("TS");
+      
+        
+        
       test2.setMessageFlow("TS");
+      
+        
+        
       test2.setHelpMessage("TS");
+      
+        
+        
       test2.setOptinKeywords("TS");
+      
+        
+        
       test2.setOptoutKeywords("TS");
+      
+        
+        
       test2.setHelpKeywords("TS");
+      
+        
+        
       test2.setOptinMessage("TS");
+      
+        
+        
       test2.setOptoutMessage("TS");
+      
+        
+        
       test2.setReferenceId("TS");
+      
       test2.setMock(true);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -804,19 +1371,40 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setCspId("TS");
+      
+        
+        
       test1.setResellerId("TS");
-      test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
+      
+      test1.setStatus(SMSTenDLCCampaign.StatusEnum.EXPIRED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        
+        
       test1.setBrandId("TS");
+      
+        
+        
       test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
+        
+        
       test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -826,35 +1414,95 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
+        
+        
       test1.setSample1("TS");
+      
+        
+        
       test1.setSample2("TS");
+      
+        
+        
       test1.setSample3("TS");
+      
+        
+        
       test1.setSample4("TS");
+      
+        
+        
       test1.setSample5("TS");
+      
+        
+        
       test1.setMessageFlow("TS");
+      
+        
+        
       test1.setHelpMessage("TS");
+      
+        
+        
       test1.setOptinKeywords("TS");
+      
+        
+        
       test1.setOptoutKeywords("TS");
+      
+        
+        
       test1.setHelpKeywords("TS");
+      
+        
+        
       test1.setOptinMessage("TS");
+      
+        
+        
       test1.setOptoutMessage("TS");
+      
+        
+        
       test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
       SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
-      test2.setAccountId("tS");
-      test2.setCampaignId("tS");
-      test2.setCspId("tS");
-      test2.setResellerId("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setCspId("TS2");
+      
+        
+        
+      test2.setResellerId("TS2");
+      
       test2.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
       test2.setAutoRenewal(false);
       test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
-      test2.setBrandId("tS");
-      test2.setUsecase("tS");
+        
+        
+      test2.setBrandId("TS2");
+      
+        
+        
+      test2.setUsecase("TS2");
+      
       Set<String> testSet2 = new HashSet<String>();
       test2.setSubUsecases(testSet2);
-      test2.setDescription("tS");
+        
+        
+      test2.setDescription("TS2");
+      
       test2.setEmbeddedLink(false);
       test2.setEmbeddedPhone(false);
       test2.setAffiliateMarketing(false);
@@ -864,19 +1512,58 @@ import com.github.freeclimbapi.models.*;
       test2.setSubscriberOptin(false);
       test2.setSubscriberOptout(false);
       test2.setSubscriberHelp(false);
-      test2.setSample1("tS");
-      test2.setSample2("tS");
-      test2.setSample3("tS");
-      test2.setSample4("tS");
-      test2.setSample5("tS");
-      test2.setMessageFlow("tS");
-      test2.setHelpMessage("tS");
-      test2.setOptinKeywords("tS");
-      test2.setOptoutKeywords("tS");
-      test2.setHelpKeywords("tS");
-      test2.setOptinMessage("tS");
-      test2.setOptoutMessage("tS");
-      test2.setReferenceId("tS");
+        
+        
+      test2.setSample1("TS2");
+      
+        
+        
+      test2.setSample2("TS2");
+      
+        
+        
+      test2.setSample3("TS2");
+      
+        
+        
+      test2.setSample4("TS2");
+      
+        
+        
+      test2.setSample5("TS2");
+      
+        
+        
+      test2.setMessageFlow("TS2");
+      
+        
+        
+      test2.setHelpMessage("TS2");
+      
+        
+        
+      test2.setOptinKeywords("TS2");
+      
+        
+        
+      test2.setOptoutKeywords("TS2");
+      
+        
+        
+      test2.setHelpKeywords("TS2");
+      
+        
+        
+      test2.setOptinMessage("TS2");
+      
+        
+        
+      test2.setOptoutMessage("TS2");
+      
+        
+        
+      test2.setReferenceId("TS2");
+      
       test2.setMock(false);
       test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -889,19 +1576,40 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SMSTenDLCCampaign test1 = new SMSTenDLCCampaign();
-      test1.setAccountId("TS");
-      test1.setCampaignId("TS");
-      test1.setCspId("TS");
-      test1.setResellerId("TS");
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setCampaignId("TS");
+      
+        
+        
+        test1.setCspId("TS");
+      
+        
+        
+        test1.setResellerId("TS");
+      
       test1.setStatus(SMSTenDLCCampaign.StatusEnum.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       test1.setAutoRenewal(true);
       test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
-      test1.setBrandId("TS");
-      test1.setUsecase("TS");
+        
+        
+        test1.setBrandId("TS");
+      
+        
+        
+        test1.setUsecase("TS");
+      
       Set<String> testSet = new HashSet<String>();
       test1.setSubUsecases(testSet);
-      test1.setDescription("TS");
+        
+        
+        test1.setDescription("TS");
+      
       test1.setEmbeddedLink(true);
       test1.setEmbeddedPhone(true);
       test1.setAffiliateMarketing(true);
@@ -911,19 +1619,58 @@ import com.github.freeclimbapi.models.*;
       test1.setSubscriberOptin(true);
       test1.setSubscriberOptout(true);
       test1.setSubscriberHelp(true);
-      test1.setSample1("TS");
-      test1.setSample2("TS");
-      test1.setSample3("TS");
-      test1.setSample4("TS");
-      test1.setSample5("TS");
-      test1.setMessageFlow("TS");
-      test1.setHelpMessage("TS");
-      test1.setOptinKeywords("TS");
-      test1.setOptoutKeywords("TS");
-      test1.setHelpKeywords("TS");
-      test1.setOptinMessage("TS");
-      test1.setOptoutMessage("TS");
-      test1.setReferenceId("TS");
+        
+        
+        test1.setSample1("TS");
+      
+        
+        
+        test1.setSample2("TS");
+      
+        
+        
+        test1.setSample3("TS");
+      
+        
+        
+        test1.setSample4("TS");
+      
+        
+        
+        test1.setSample5("TS");
+      
+        
+        
+        test1.setMessageFlow("TS");
+      
+        
+        
+        test1.setHelpMessage("TS");
+      
+        
+        
+        test1.setOptinKeywords("TS");
+      
+        
+        
+        test1.setOptoutKeywords("TS");
+      
+        
+        
+        test1.setHelpKeywords("TS");
+      
+        
+        
+        test1.setOptinMessage("TS");
+      
+        
+        
+        test1.setOptoutMessage("TS");
+      
+        
+        
+        test1.setReferenceId("TS");
+      
       test1.setMock(true);
       test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 

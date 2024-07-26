@@ -36,18 +36,22 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PlayAllOf
  */
  public class PlayAllOfTest {
-    private final PlayAllOf model = new PlayAllOf();
-
+    private final PlayAllOf model = new PlayAllOf(
+    );
+    
+    
     /**
      * Test the property '_file'
      */
     @Test
     public void _fileTest() {
+      
+      
       model.setFile("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFile());
       
+      
     }
-
     /**
      * Test the property 'loop'
      */
@@ -57,7 +61,6 @@ import com.github.freeclimbapi.models.*;
       model.setLoop(1);
       Assert.assertEquals(1, (int) model.getLoop());
     }
-
     /**
      * Test the property 'privacyMode'
      */
@@ -75,11 +78,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
 
@@ -93,11 +102,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
 
@@ -111,7 +126,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       
@@ -126,11 +144,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
         
@@ -146,11 +170,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -163,11 +193,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       PlayAllOf test1 = new PlayAllOf();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       PlayAllOf test2 = new PlayAllOf();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -180,7 +216,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       PlayAllOf test1 = new PlayAllOf();
-      test1.setFile("TS");
+        
+        
+        test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
 

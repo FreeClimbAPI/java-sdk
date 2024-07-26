@@ -36,28 +36,34 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Say
  */
  public class SayTest {
-    private final Say model = new Say();
-
+    private final Say model = new Say(
+    );
+    
+    
     /**
      * Test the property 'text'
      */
     @Test
     public void textTest() {
+      
+      
       model.setText("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getText());
       
+      
     }
-
     /**
      * Test the property 'language'
      */
     @Test
     public void languageTest() {
+      
+      
       model.setLanguage("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getLanguage());
       
+      
     }
-
     /**
      * Test the property 'loop'
      */
@@ -67,7 +73,6 @@ import com.github.freeclimbapi.models.*;
       model.setLoop(1);
       Assert.assertEquals(1, (int) model.getLoop());
     }
-
     /**
      * Test the property 'privacyMode'
      */
@@ -85,13 +90,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Say test2 = new Say();
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setLanguage("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
 
@@ -105,13 +122,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Say test2 = new Say();
-      test2.setText("tS");
-      test2.setLanguage("tS");
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setLanguage("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
 
@@ -125,8 +154,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       
@@ -141,13 +176,25 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Say test2 = new Say();
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setLanguage("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
         
@@ -163,13 +210,25 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Say test2 = new Say();
+        
+        
       test2.setText("TS");
+      
+        
+        
       test2.setLanguage("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -182,13 +241,25 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       Say test1 = new Say();
+        
+        
       test1.setText("TS");
+      
+        
+        
       test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Say test2 = new Say();
-      test2.setText("tS");
-      test2.setLanguage("tS");
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setLanguage("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -201,8 +272,14 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Say test1 = new Say();
-      test1.setText("TS");
-      test1.setLanguage("TS");
+        
+        
+        test1.setText("TS");
+      
+        
+        
+        test1.setLanguage("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
 
@@ -217,8 +294,16 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setText("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getText());
+        
+        
+        
         model.setLanguage("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getLanguage());
+        
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -226,5 +311,6 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("language"), model.getLanguage());
         Assert.assertEquals(attributes.get("loop"), model.getLoop());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+        
     }
  }

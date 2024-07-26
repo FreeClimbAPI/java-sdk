@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueResultStatus
  */
  public class QueueResultStatusTest {
+    
+    
     @Test
     public void testQUEUE_FULLShouldWork() {
 

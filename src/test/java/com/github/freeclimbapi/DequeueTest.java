@@ -36,7 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Dequeue
  */
  public class DequeueTest {
-    private final Dequeue model = new Dequeue();
+    private final Dequeue model = new Dequeue(
+    );
+    
+    
 
     @Test
     public void commandTest() throws Exception {
@@ -47,5 +50,6 @@ import com.github.freeclimbapi.models.*;
     public void buildTest() throws Exception {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
+        
     }
  }

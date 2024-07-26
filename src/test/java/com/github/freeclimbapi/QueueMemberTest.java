@@ -36,28 +36,34 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueMember
  */
  public class QueueMemberTest {
-    private final QueueMember model = new QueueMember();
-
+    private final QueueMember model = new QueueMember(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
+      
+      
       model.setCallId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallId());
       
+      
     }
-
     /**
      * Test the property 'waitTime'
      */
@@ -67,7 +73,6 @@ import com.github.freeclimbapi.models.*;
       model.setWaitTime(1);
       Assert.assertEquals(1, (int) model.getWaitTime());
     }
-
     /**
      * Test the property 'position'
      */
@@ -77,14 +82,16 @@ import com.github.freeclimbapi.models.*;
       model.setPosition(1);
       Assert.assertEquals(1, (int) model.getPosition());
     }
-
     /**
      * Test the property 'dateEnqueued'
      */
     @Test
     public void dateEnqueuedTest() {
+      
+      
       model.setDateEnqueued("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateEnqueued());
+      
       
     }
 
@@ -95,17 +102,35 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       QueueMember test2 = new QueueMember();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setWaitTime(1);
       test2.setPosition(1);
+        
+        
       test2.setDateEnqueued("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -117,17 +142,35 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       QueueMember test2 = new QueueMember();
-      test2.setUri("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setWaitTime(0);
       test2.setPosition(0);
-      test2.setDateEnqueued("tS");
+        
+        
+      test2.setDateEnqueued("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -139,11 +182,20 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -156,17 +208,35 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       QueueMember test2 = new QueueMember();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setWaitTime(1);
       test2.setPosition(1);
+        
+        
       test2.setDateEnqueued("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -180,17 +250,35 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       QueueMember test2 = new QueueMember();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setWaitTime(1);
       test2.setPosition(1);
+        
+        
       test2.setDateEnqueued("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -201,17 +289,35 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       QueueMember test1 = new QueueMember();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
+        
+        
       test1.setDateEnqueued("TS");
+      
       QueueMember test2 = new QueueMember();
-      test2.setUri("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setWaitTime(0);
       test2.setPosition(0);
-      test2.setDateEnqueued("tS");
+        
+        
+      test2.setDateEnqueued("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -222,11 +328,20 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       QueueMember test1 = new QueueMember();
-      test1.setUri("TS");
-      test1.setCallId("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setCallId("TS");
+      
       test1.setWaitTime(1);
       test1.setPosition(1);
-      test1.setDateEnqueued("TS");
+        
+        
+        test1.setDateEnqueued("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

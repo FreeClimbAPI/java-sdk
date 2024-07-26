@@ -40,10 +40,10 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * TranscribeUtteranceRecord
+ * TranscribeUtteranceAllOfRecord
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class TranscribeUtteranceRecord {
+public class TranscribeUtteranceAllOfRecord {
   public static final String SERIALIZED_NAME_SAVE_RECORDING = "saveRecording";
   @SerializedName(SERIALIZED_NAME_SAVE_RECORDING)
   private Boolean saveRecording = false;
@@ -56,10 +56,10 @@ public class TranscribeUtteranceRecord {
   @SerializedName(SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS)
   private Integer rcrdTerminationSilenceTimeMs;
 
-  public TranscribeUtteranceRecord() { 
+  public TranscribeUtteranceAllOfRecord() { 
   }
 
-  public TranscribeUtteranceRecord saveRecording(Boolean saveRecording) {
+  public TranscribeUtteranceAllOfRecord saveRecording(Boolean saveRecording) {
     
     this.saveRecording = saveRecording;
     return this;
@@ -82,7 +82,7 @@ public class TranscribeUtteranceRecord {
   }
 
 
-  public TranscribeUtteranceRecord maxLengthSec(Integer maxLengthSec) {
+  public TranscribeUtteranceAllOfRecord maxLengthSec(Integer maxLengthSec) {
     
     this.maxLengthSec = maxLengthSec;
     return this;
@@ -107,7 +107,7 @@ public class TranscribeUtteranceRecord {
   }
 
 
-  public TranscribeUtteranceRecord rcrdTerminationSilenceTimeMs(Integer rcrdTerminationSilenceTimeMs) {
+  public TranscribeUtteranceAllOfRecord rcrdTerminationSilenceTimeMs(Integer rcrdTerminationSilenceTimeMs) {
     
     this.rcrdTerminationSilenceTimeMs = rcrdTerminationSilenceTimeMs;
     return this;
@@ -140,10 +140,10 @@ public class TranscribeUtteranceRecord {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TranscribeUtteranceRecord transcribeUtteranceRecord = (TranscribeUtteranceRecord) o;
-    return Objects.equals(this.saveRecording, transcribeUtteranceRecord.saveRecording) &&
-        Objects.equals(this.maxLengthSec, transcribeUtteranceRecord.maxLengthSec) &&
-        Objects.equals(this.rcrdTerminationSilenceTimeMs, transcribeUtteranceRecord.rcrdTerminationSilenceTimeMs);
+    TranscribeUtteranceAllOfRecord transcribeUtteranceAllOfRecord = (TranscribeUtteranceAllOfRecord) o;
+    return Objects.equals(this.saveRecording, transcribeUtteranceAllOfRecord.saveRecording) &&
+        Objects.equals(this.maxLengthSec, transcribeUtteranceAllOfRecord.maxLengthSec) &&
+        Objects.equals(this.rcrdTerminationSilenceTimeMs, transcribeUtteranceAllOfRecord.rcrdTerminationSilenceTimeMs);
   }
 
   @Override
@@ -154,7 +154,7 @@ public class TranscribeUtteranceRecord {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TranscribeUtteranceRecord {\n");
+    sb.append("class TranscribeUtteranceAllOfRecord {\n");
     sb.append("    saveRecording: ").append(toIndentedString(saveRecording)).append("\n");
     sb.append("    maxLengthSec: ").append(toIndentedString(maxLengthSec)).append("\n");
     sb.append("    rcrdTerminationSilenceTimeMs: ").append(toIndentedString(rcrdTerminationSilenceTimeMs)).append("\n");

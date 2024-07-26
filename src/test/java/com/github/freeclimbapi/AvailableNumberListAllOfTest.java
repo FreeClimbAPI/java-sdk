@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AvailableNumberListAllOf
  */
  public class AvailableNumberListAllOfTest {
-    private final AvailableNumberListAllOf model = new AvailableNumberListAllOf();
-
+    private final AvailableNumberListAllOf model = new AvailableNumberListAllOf(
+    );
+    
+    
     /**
      * Test the property 'availablePhoneNumbers'
      */

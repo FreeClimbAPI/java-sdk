@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PerclScript
  */
  public class PerclScriptTest {
-    private final PerclScript model = new PerclScript();
-
+    private final PerclScript model = new PerclScript(
+    );
+    
+    
     /**
      * Test the property 'commands'
      */

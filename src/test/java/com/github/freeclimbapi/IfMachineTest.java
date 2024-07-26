@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,17 +35,19 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for IfMachine
  */
-public class IfMachineTest {
+ public class IfMachineTest {
+    
+    
     @Test
     public void testREDIRECTShouldWork() {
 
         IfMachine test = IfMachine.REDIRECT;
-        Assert.assertEquals(test.getClass(), IfMachine.class);
+         Assert.assertEquals(test.getClass(), IfMachine.class);
     }
 
-    @Test
+    @Test 
     public void testREDIRECTShouldSerializeToEnum() {
-
+    
         IfMachine expectedValue = IfMachine.REDIRECT;
         IfMachine calculatedValue = IfMachine.fromValue("redirect");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -52,22 +55,21 @@ public class IfMachineTest {
 
     @Test
     public void testREDIRECTShouldDeserializeToString() {
-        IfMachine test = IfMachine.REDIRECT;
-        String expectedValue = "redirect";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     IfMachine test = IfMachine.REDIRECT;
+      String expectedValue = "redirect";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testHANGUPShouldWork() {
 
         IfMachine test = IfMachine.HANGUP;
-        Assert.assertEquals(test.getClass(), IfMachine.class);
+         Assert.assertEquals(test.getClass(), IfMachine.class);
     }
 
-    @Test
+    @Test 
     public void testHANGUPShouldSerializeToEnum() {
-
+    
         IfMachine expectedValue = IfMachine.HANGUP;
         IfMachine calculatedValue = IfMachine.fromValue("hangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -75,10 +77,10 @@ public class IfMachineTest {
 
     @Test
     public void testHANGUPShouldDeserializeToString() {
-        IfMachine test = IfMachine.HANGUP;
-        String expectedValue = "hangup";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     IfMachine test = IfMachine.HANGUP;
+      String expectedValue = "hangup";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-}
+    
+ }

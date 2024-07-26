@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,101 +35,21 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for RemoveFromConference
  */
-public class RemoveFromConferenceTest {
-  private final RemoveFromConference model = new RemoveFromConference();
+ public class RemoveFromConferenceTest {
+    private final RemoveFromConference model = new RemoveFromConference(
+    );
+    
+    
 
-  /**
-   * Test the method 'equalsTrue'
-   */
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("RemoveFromConference", model.getCommand());
+    }
 
-  @Test
-  public void equalsTrueTest() {
-    RemoveFromConference test1 = new RemoveFromConference();
-    RemoveFromConference test2 = new RemoveFromConference();
-
-    Assert.assertTrue(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'equalsFalse'
-   */
-
-  // @Test
-  // public void equalsFalseTest() {
-  // RemoveFromConference test1 = new RemoveFromConference();
-  // RemoveFromConference test2 = new RemoveFromConference();
-
-  // Assert.assertFalse(test1.equals(test2));
-  // }
-
-  /**
-   * Test the method 'hashCodeType'
-   */
-
-  @Test
-  public void hashCodeTypeTest() {
-    RemoveFromConference test1 = new RemoveFromConference();
-
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
-
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    RemoveFromConference test1 = new RemoveFromConference();
-    RemoveFromConference test2 = new RemoveFromConference();
-
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    RemoveFromConference test1 = new RemoveFromConference();
-    RemoveFromConference test2 = new RemoveFromConference();
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  // @Test
-  // public void hashCodeEqualsFalseTest() {
-  // RemoveFromConference test1 = new RemoveFromConference();
-  // RemoveFromConference test2 = new RemoveFromConference();
-  // Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  // }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    RemoveFromConference test1 = new RemoveFromConference();
-
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
-
-  @Test
-  public void commandTest() throws Exception {
-    Assert.assertEquals("RemoveFromConference", model.getCommand());
-  }
-
-  @Test
-  public void buildTest() throws Exception {
-    Map<String, Map<String, Object>> build = model.build();
-    Map<String, Object> attributes = build.get(model.getCommand());
-  }
-}
+    @Test
+    public void buildTest() throws Exception {
+        Map<String, Map<String, Object>> build = model.build();
+        Map<String, Object> attributes = build.get(model.getCommand());
+        
+    }
+ }

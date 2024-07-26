@@ -35,115 +35,117 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for UpdateCallRequest
  */
-public class UpdateCallRequestTest {
-  private final UpdateCallRequest model = new UpdateCallRequest();
+ public class UpdateCallRequestTest {
+    private final UpdateCallRequest model = new UpdateCallRequest(
+    );
+    
+    
+    /**
+     * Test the property 'status'
+     */
+    @Test
+    public void statusTest() {
+      model.setStatus(UpdateCallRequestStatus.CANCELED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.CANCELED);
+      model.setStatus(UpdateCallRequestStatus.COMPLETED);
+      Assert.assertEquals(model.getStatus(),UpdateCallRequestStatus.COMPLETED);
+      
+    }
 
-  /**
-   * Test the property 'status'
-   */
-  @Test
-  public void statusTest() {
-    model.setStatus(UpdateCallRequestStatus.CANCELED);
-    Assert.assertEquals(model.getStatus(), UpdateCallRequestStatus.CANCELED);
-    model.setStatus(UpdateCallRequestStatus.COMPLETED);
-    Assert.assertEquals(model.getStatus(), UpdateCallRequestStatus.COMPLETED);
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-  }
+     @Test
+    public void equalsTrueTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      UpdateCallRequest test2 = new UpdateCallRequest();
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
-  /**
-   * Test the method 'equalsTrue'
-   */
+      Assert.assertTrue(test1.equals(test2));
+    }
 
-  @Test
-  public void equalsTrueTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.CANCELED);
-    UpdateCallRequest test2 = new UpdateCallRequest();
-    test2.setStatus(UpdateCallRequestStatus.CANCELED);
+    /**
+     * Test the method 'equalsFalse'
+     */
 
-    Assert.assertTrue(test1.equals(test2));
-  }
+     @Test
+    public void equalsFalseTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+      UpdateCallRequest test2 = new UpdateCallRequest();
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
-  /**
-   * Test the method 'equalsFalse'
-   */
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-  @Test
-  public void equalsFalseTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.COMPLETED);
-    UpdateCallRequest test2 = new UpdateCallRequest();
-    test2.setStatus(UpdateCallRequestStatus.CANCELED);
+     @Test
+    public void hashCodeTypeTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
 
-    Assert.assertFalse(test1.equals(test2));
-  }
+    /**
+     * Test the method 'toStringEquals'
+     */
 
-  /**
-   * Test the method 'hashCodeType'
-   */
+     @Test
+    public void toStringEqualsTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      UpdateCallRequest test2 = new UpdateCallRequest();
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
 
-  @Test
-  public void hashCodeTypeTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.CANCELED);
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
 
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
+      UpdateCallRequest test2 = new UpdateCallRequest();
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
 
-  /**
-   * Test the method 'toStringEquals'
-   */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
 
-  @Test
-  public void toStringEqualsTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.CANCELED);
-    UpdateCallRequest test2 = new UpdateCallRequest();
-    test2.setStatus(UpdateCallRequestStatus.CANCELED);
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+      UpdateCallRequest test2 = new UpdateCallRequest();
+      test2.setStatus(UpdateCallRequestStatus.CANCELED);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
 
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
+     /**
+     * Test the method 'toStringType'
+     */
 
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
+     @Test
+    public void toStringTypeTest() {
+      UpdateCallRequest test1 = new UpdateCallRequest();
+      test1.setStatus(UpdateCallRequestStatus.CANCELED);
 
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.CANCELED);
-    UpdateCallRequest test2 = new UpdateCallRequest();
-    test2.setStatus(UpdateCallRequestStatus.CANCELED);
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.COMPLETED);
-    UpdateCallRequest test2 = new UpdateCallRequest();
-    test2.setStatus(UpdateCallRequestStatus.CANCELED);
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    UpdateCallRequest test1 = new UpdateCallRequest();
-    test1.setStatus(UpdateCallRequestStatus.CANCELED);
-
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
-
-}
+ }

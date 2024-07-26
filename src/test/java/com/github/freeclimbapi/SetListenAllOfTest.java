@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SetListenAllOf
  */
  public class SetListenAllOfTest {
-    private final SetListenAllOf model = new SetListenAllOf();
-
+    private final SetListenAllOf model = new SetListenAllOf(
+    );
+    
+    
     /**
      * Test the property 'listen'
      */

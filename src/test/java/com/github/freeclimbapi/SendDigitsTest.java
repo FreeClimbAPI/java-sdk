@@ -36,18 +36,22 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SendDigits
  */
  public class SendDigitsTest {
-    private final SendDigits model = new SendDigits();
-
+    private final SendDigits model = new SendDigits(
+    );
+    
+    
     /**
      * Test the property 'digits'
      */
     @Test
     public void digitsTest() {
+      
+      
       model.setDigits("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDigits());
       
+      
     }
-
     /**
      * Test the property 'pauseMs'
      */
@@ -57,7 +61,6 @@ import com.github.freeclimbapi.models.*;
       model.setPauseMs(1);
       Assert.assertEquals(1, (int) model.getPauseMs());
     }
-
     /**
      * Test the property 'privacyMode'
      */
@@ -75,11 +78,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       SendDigits test2 = new SendDigits();
+        
+        
       test2.setDigits("TS");
+      
       test2.setPauseMs(1);
       test2.setPrivacyMode(true);
 
@@ -93,11 +102,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       SendDigits test2 = new SendDigits();
-      test2.setDigits("tS");
+        
+        
+      test2.setDigits("TS2");
+      
       test2.setPauseMs(0);
       test2.setPrivacyMode(false);
 
@@ -111,7 +126,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       
@@ -126,11 +144,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       SendDigits test2 = new SendDigits();
+        
+        
       test2.setDigits("TS");
+      
       test2.setPauseMs(1);
       test2.setPrivacyMode(true);
         
@@ -146,11 +170,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       SendDigits test2 = new SendDigits();
+        
+        
       test2.setDigits("TS");
+      
       test2.setPauseMs(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -163,11 +193,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       SendDigits test1 = new SendDigits();
+        
+        
       test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
       SendDigits test2 = new SendDigits();
-      test2.setDigits("tS");
+        
+        
+      test2.setDigits("TS2");
+      
       test2.setPauseMs(0);
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -180,7 +216,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       SendDigits test1 = new SendDigits();
-      test1.setDigits("TS");
+        
+        
+        test1.setDigits("TS");
+      
       test1.setPauseMs(1);
       test1.setPrivacyMode(true);
 
@@ -195,12 +234,17 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setDigits("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDigits());
+        
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("digits"), model.getDigits());
         Assert.assertEquals(attributes.get("pauseMs"), model.getPauseMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+        
     }
  }

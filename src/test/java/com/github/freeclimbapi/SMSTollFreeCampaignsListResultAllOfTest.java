@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTollFreeCampaignsListResultAllOf
  */
  public class SMSTollFreeCampaignsListResultAllOfTest {
-    private final SMSTollFreeCampaignsListResultAllOf model = new SMSTollFreeCampaignsListResultAllOf();
-
+    private final SMSTollFreeCampaignsListResultAllOf model = new SMSTollFreeCampaignsListResultAllOf(
+    );
+    
+    
     /**
      * Test the property 'brands'
      */

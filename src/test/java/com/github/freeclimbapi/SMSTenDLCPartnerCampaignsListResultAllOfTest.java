@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCPartnerCampaignsListResultAllOf
  */
  public class SMSTenDLCPartnerCampaignsListResultAllOfTest {
-    private final SMSTenDLCPartnerCampaignsListResultAllOf model = new SMSTenDLCPartnerCampaignsListResultAllOf();
-
+    private final SMSTenDLCPartnerCampaignsListResultAllOf model = new SMSTenDLCPartnerCampaignsListResultAllOf(
+    );
+    
+    
     /**
      * Test the property 'partnerCampaigns'
      */

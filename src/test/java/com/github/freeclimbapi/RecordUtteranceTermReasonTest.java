@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordUtteranceTermReason
  */
  public class RecordUtteranceTermReasonTest {
+    
+    
     @Test
     public void testFINISH_KEYShouldWork() {
 

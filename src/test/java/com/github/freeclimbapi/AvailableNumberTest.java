@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AvailableNumber
  */
  public class AvailableNumberTest {
-    private final AvailableNumber model = new AvailableNumber();
-
+    private final AvailableNumber model = new AvailableNumber(
+    );
+    
+    
     /**
      * Test the property 'capabilities'
      */
@@ -48,27 +50,30 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(object.getClass(), Capabilities.class);
       
     }
-
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
+      
+      
       model.setCampaignId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCampaignId());
       
+      
     }
-
     /**
      * Test the property 'phoneNumber'
      */
     @Test
     public void phoneNumberTest() {
+      
+      
       model.setPhoneNumber("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
       
+      
     }
-
     /**
      * Test the property 'voiceEnabled'
      */
@@ -78,7 +83,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getVoiceEnabled());       
       
     }
-
     /**
      * Test the property 'smsEnabled'
      */
@@ -88,24 +92,28 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSmsEnabled());       
       
     }
-
     /**
      * Test the property 'region'
      */
     @Test
     public void regionTest() {
+      
+      
       model.setRegion("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getRegion());
       
+      
     }
-
     /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
+      
+      
       model.setCountry("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCountry());
+      
       
     }
 
@@ -116,23 +124,47 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       AvailableNumber test1 = new AvailableNumber();
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       AvailableNumber test2 = new AvailableNumber();
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -144,23 +176,47 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       AvailableNumber test1 = new AvailableNumber();
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       AvailableNumber test2 = new AvailableNumber();
-      Capabilities object2 = new Capabilities();
-      test2.setCapabilities(object2);
-      test2.setCampaignId("tS");
-      test2.setPhoneNumber("tS");
+      Capabilities Capabilitiesobject2 = new Capabilities();
+      test2.setCapabilities(Capabilitiesobject2);
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setPhoneNumber("TS2");
+      
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
-      test2.setRegion("tS");
-      test2.setCountry("tS");
+        
+        
+      test2.setRegion("TS2");
+      
+        
+        
+      test2.setCountry("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -172,14 +228,26 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       AvailableNumber test1 = new AvailableNumber();
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -192,23 +260,47 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       AvailableNumber test1 = new AvailableNumber();
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       AvailableNumber test2 = new AvailableNumber();
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -222,23 +314,47 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       AvailableNumber test1 = new AvailableNumber();
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       AvailableNumber test2 = new AvailableNumber();
-      Capabilities object2 = object;
-      test2.setCapabilities(object2);
+      Capabilities Capabilitiesobject2 = Capabilitiesobject;
+      test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -249,23 +365,47 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       AvailableNumber test1 = new AvailableNumber();
-        Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
+        Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       AvailableNumber test2 = new AvailableNumber();
-      Capabilities object2 = new Capabilities();
-      test2.setCapabilities(object2);
-      test2.setCampaignId("tS");
-      test2.setPhoneNumber("tS");
+      Capabilities Capabilitiesobject2 = new Capabilities();
+      test2.setCapabilities(Capabilitiesobject2);
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setPhoneNumber("TS2");
+      
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
-      test2.setRegion("tS");
-      test2.setCountry("tS");
+        
+        
+      test2.setRegion("TS2");
+      
+        
+        
+      test2.setCountry("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -276,14 +416,26 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       AvailableNumber test1 = new AvailableNumber();
-      Capabilities object = new Capabilities();
-      test1.setCapabilities(object);
-      test1.setCampaignId("TS");
-      test1.setPhoneNumber("TS");
+      Capabilities Capabilitiesobject = new Capabilities();
+      test1.setCapabilities(Capabilitiesobject);
+        
+        
+        test1.setCampaignId("TS");
+      
+        
+        
+        test1.setPhoneNumber("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
-      test1.setRegion("TS");
-      test1.setCountry("TS");
+        
+        
+        test1.setRegion("TS");
+      
+        
+        
+        test1.setCountry("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

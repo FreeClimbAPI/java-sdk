@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueMemberListAllOf
  */
  public class QueueMemberListAllOfTest {
-    private final QueueMemberListAllOf model = new QueueMemberListAllOf();
-
+    private final QueueMemberListAllOf model = new QueueMemberListAllOf(
+    );
+    
+    
     /**
      * Test the property 'queueMembers'
      */

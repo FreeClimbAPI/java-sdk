@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AnsweredBy
  */
  public class AnsweredByTest {
+    
+    
     @Test
     public void testHUMANShouldWork() {
 

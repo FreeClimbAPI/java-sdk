@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,101 +35,21 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for TerminateConference
  */
-public class TerminateConferenceTest {
-  private final TerminateConference model = new TerminateConference();
+ public class TerminateConferenceTest {
+    private final TerminateConference model = new TerminateConference(
+    );
+    
+    
 
-  /**
-   * Test the method 'equalsTrue'
-   */
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("TerminateConference", model.getCommand());
+    }
 
-  @Test
-  public void equalsTrueTest() {
-    TerminateConference test1 = new TerminateConference();
-    TerminateConference test2 = new TerminateConference();
-
-    Assert.assertTrue(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'equalsFalse'
-   */
-
-  // @Test
-  // public void equalsFalseTest() {
-  // TerminateConference test1 = new TerminateConference();
-  // TerminateConference test2 = new TerminateConference();
-
-  // Assert.assertFalse(test1.equals(test2));
-  // }
-
-  /**
-   * Test the method 'hashCodeType'
-   */
-
-  @Test
-  public void hashCodeTypeTest() {
-    TerminateConference test1 = new TerminateConference();
-
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
-
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    TerminateConference test1 = new TerminateConference();
-    TerminateConference test2 = new TerminateConference();
-
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    TerminateConference test1 = new TerminateConference();
-    TerminateConference test2 = new TerminateConference();
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  // @Test
-  // public void hashCodeEqualsFalseTest() {
-  // TerminateConference test1 = new TerminateConference();
-  // TerminateConference test2 = new TerminateConference();
-  // Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  // }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    TerminateConference test1 = new TerminateConference();
-
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
-
-  @Test
-  public void commandTest() throws Exception {
-    Assert.assertEquals("TerminateConference", model.getCommand());
-  }
-
-  @Test
-  public void buildTest() throws Exception {
-    Map<String, Map<String, Object>> build = model.build();
-    Map<String, Object> attributes = build.get(model.getCommand());
-  }
-}
+    @Test
+    public void buildTest() throws Exception {
+        Map<String, Map<String, Object>> build = model.build();
+        Map<String, Object> attributes = build.get(model.getCommand());
+        
+    }
+ }

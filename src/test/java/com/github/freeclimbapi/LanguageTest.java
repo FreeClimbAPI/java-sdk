@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Language
  */
  public class LanguageTest {
+    
+    
     @Test
     public void testCATALANShouldWork() {
 

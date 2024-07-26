@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GetSpeechReason
  */
  public class GetSpeechReasonTest {
+    
+    
     @Test
     public void testERRORShouldWork() {
 
