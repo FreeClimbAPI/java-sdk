@@ -15,7 +15,7 @@ None
 
 ### Changed
 
-- File Autogeneration changes
+- Fix test file format and some value updates, also fix SDK file auto-generation issue
 
 <a name="5.6.0"></a>
 
