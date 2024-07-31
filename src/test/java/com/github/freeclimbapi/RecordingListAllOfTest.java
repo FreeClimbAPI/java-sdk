@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordingListAllOf
  */
  public class RecordingListAllOfTest {
-    private final RecordingListAllOf model = new RecordingListAllOf();
-
+    private final RecordingListAllOf model = new RecordingListAllOf(
+    );
+    
+    
     /**
      * Test the property 'recordings'
      */

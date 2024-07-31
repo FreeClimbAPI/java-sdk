@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCBrandsListResultAllOf
  */
  public class SMSTenDLCBrandsListResultAllOfTest {
-    private final SMSTenDLCBrandsListResultAllOf model = new SMSTenDLCBrandsListResultAllOf();
-
+    private final SMSTenDLCBrandsListResultAllOf model = new SMSTenDLCBrandsListResultAllOf(
+    );
+    
+    
     /**
      * Test the property 'brands'
      */

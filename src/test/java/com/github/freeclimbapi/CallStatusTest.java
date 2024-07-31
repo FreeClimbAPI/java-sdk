@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallStatus
  */
  public class CallStatusTest {
+    
+    
     @Test
     public void testQUEUEDShouldWork() {
 

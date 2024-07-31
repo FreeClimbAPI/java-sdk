@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GrammarType
  */
  public class GrammarTypeTest {
+    
+    
     @Test
     public void testURLShouldWork() {
 

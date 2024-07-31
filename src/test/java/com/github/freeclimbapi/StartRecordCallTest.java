@@ -36,7 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for StartRecordCall
  */
  public class StartRecordCallTest {
-    private final StartRecordCall model = new StartRecordCall();
+    private final StartRecordCall model = new StartRecordCall(
+    );
+    
+    
 
     @Test
     public void commandTest() throws Exception {
@@ -47,5 +50,6 @@ import com.github.freeclimbapi.models.*;
     public void buildTest() throws Exception {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
+        
     }
  }

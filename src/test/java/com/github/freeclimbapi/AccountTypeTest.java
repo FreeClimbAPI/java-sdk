@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AccountType
  */
  public class AccountTypeTest {
+    
+    
     @Test
     public void testTRIALShouldWork() {
 

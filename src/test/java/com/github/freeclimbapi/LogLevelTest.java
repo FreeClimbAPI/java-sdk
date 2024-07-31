@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for LogLevel
  */
  public class LogLevelTest {
+    
+    
     @Test
     public void testINFOShouldWork() {
 

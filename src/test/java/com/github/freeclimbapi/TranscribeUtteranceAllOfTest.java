@@ -33,10 +33,10 @@ import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 
 /**
- * Model tests for TranscribeUtterance
+ * Model tests for TranscribeUtteranceAllOf
  */
- public class TranscribeUtteranceTest {
-    private final TranscribeUtterance model = new TranscribeUtterance(
+ public class TranscribeUtteranceAllOfTest {
+    private final TranscribeUtteranceAllOf model = new TranscribeUtteranceAllOf(
     );
     
     
@@ -106,7 +106,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsTrueTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -118,7 +118,7 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyForRecording(true);
       List<Object> testList = new ArrayList<Object>();
       test1.setPrompts(testList);
-      TranscribeUtterance test2 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test2 = new TranscribeUtteranceAllOf();
         
         
       test2.setActionUrl("TS");
@@ -140,7 +140,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsFalseTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -152,7 +152,7 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyForRecording(true);
       List<Object> testList = new ArrayList<Object>();
       test1.setPrompts(testList);
-      TranscribeUtterance test2 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test2 = new TranscribeUtteranceAllOf();
         
         
       test2.setActionUrl("TS2");
@@ -174,7 +174,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void hashCodeTypeTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -197,7 +197,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringEqualsTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -209,7 +209,7 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyForRecording(true);
       List<Object> testList = new ArrayList<Object>();
       test1.setPrompts(testList);
-      TranscribeUtterance test2 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test2 = new TranscribeUtteranceAllOf();
         
         
       test2.setActionUrl("TS");
@@ -233,7 +233,7 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsTrueTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -245,7 +245,7 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyForRecording(true);
       List<Object> testList = new ArrayList<Object>();
       test1.setPrompts(testList);
-      TranscribeUtterance test2 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test2 = new TranscribeUtteranceAllOf();
         
         
       test2.setActionUrl("TS");
@@ -266,7 +266,7 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsFalseTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
       test1.setActionUrl("TS");
@@ -278,7 +278,7 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyForRecording(true);
       List<Object> testList = new ArrayList<Object>();
       test1.setPrompts(testList);
-      TranscribeUtterance test2 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test2 = new TranscribeUtteranceAllOf();
         
         
       test2.setActionUrl("TS2");
@@ -299,7 +299,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringTypeTest() {
-      TranscribeUtterance test1 = new TranscribeUtterance();
+      TranscribeUtteranceAllOf test1 = new TranscribeUtteranceAllOf();
         
         
         test1.setActionUrl("TS");
@@ -316,29 +316,4 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
-    @Test
-    public void commandTest() throws Exception {
-      Assert.assertEquals("TranscribeUtterance", model.getCommand());
-    }
-
-    @Test
-    public void buildTest() throws Exception {
-        
-        
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
-        
-        model.setPlayBeep(false);
-        model.setPrivacyForLogging(false);
-        model.setPrivacyForRecording(false);
-        Map<String, Map<String, Object>> build = model.build();
-        Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
-        Assert.assertEquals(attributes.get("playBeep"), model.getPlayBeep());
-        Assert.assertEquals(attributes.get("record"), model.getRecord());
-        Assert.assertEquals(attributes.get("privacyForLogging"), model.getPrivacyForLogging());
-        Assert.assertEquals(attributes.get("privacyForRecording"), model.getPrivacyForRecording());
-        Assert.assertEquals(attributes.get("prompts"), model.getPrompts());
-        
-    }
  }

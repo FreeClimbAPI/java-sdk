@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateConferenceRequestStatus
  */
  public class UpdateConferenceRequestStatusTest {
+    
+    
     @Test
     public void testEMPTYShouldWork() {
 

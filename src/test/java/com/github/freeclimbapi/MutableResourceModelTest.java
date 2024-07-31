@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MutableResourceModel
  */
  public class MutableResourceModelTest {
-    private final MutableResourceModel model = new MutableResourceModel();
-
+    private final MutableResourceModel model = new MutableResourceModel(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -85,14 +93,32 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       MutableResourceModel test2 = new MutableResourceModel();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
 
       Assert.assertTrue(test1.equals(test2));
@@ -105,14 +131,32 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       MutableResourceModel test2 = new MutableResourceModel();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
 
       Assert.assertFalse(test1.equals(test2));
@@ -125,9 +169,18 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       
       int hashCode1 = test1.hashCode();
@@ -141,14 +194,32 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       MutableResourceModel test2 = new MutableResourceModel();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
         
       String toString1 = test1.toString();
@@ -163,14 +234,32 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       MutableResourceModel test2 = new MutableResourceModel();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -182,14 +271,32 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       MutableResourceModel test1 = new MutableResourceModel();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       MutableResourceModel test2 = new MutableResourceModel();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -201,9 +308,18 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       MutableResourceModel test1 = new MutableResourceModel();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
 
       String toString1 = test1.toString();

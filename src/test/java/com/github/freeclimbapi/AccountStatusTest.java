@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AccountStatus
  */
  public class AccountStatusTest {
+    
+    
     @Test
     public void testCLOSEDShouldWork() {
 

@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceParticipantResult
  */
  public class ConferenceParticipantResultTest {
-    private final ConferenceParticipantResult model = new ConferenceParticipantResult();
-
+    private final ConferenceParticipantResult model = new ConferenceParticipantResult(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -77,37 +85,42 @@ import com.github.freeclimbapi.models.*;
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
+      
+      
       model.setConferenceId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getConferenceId());
       
+      
     }
-
     /**
      * Test the property 'callId'
      */
     @Test
     public void callIdTest() {
+      
+      
       model.setCallId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallId());
       
+      
     }
-
     /**
      * Test the property 'talk'
      */
@@ -117,7 +130,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getTalk());       
       
     }
-
     /**
      * Test the property 'listen'
      */
@@ -127,7 +139,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getListen());       
       
     }
-
     /**
      * Test the property 'startConfOnEnter'
      */
@@ -145,24 +156,60 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResult test2 = new ConferenceParticipantResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setTalk(true);
       test2.setListen(true);
       test2.setStartConfOnEnter(true);
@@ -177,24 +224,60 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResult test2 = new ConferenceParticipantResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setAccountId("tS");
-      test2.setConferenceId("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setTalk(false);
       test2.setListen(false);
       test2.setStartConfOnEnter(false);
@@ -209,13 +292,31 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
@@ -231,24 +332,60 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResult test2 = new ConferenceParticipantResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setTalk(true);
       test2.setListen(true);
       test2.setStartConfOnEnter(true);
@@ -265,24 +402,60 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResult test2 = new ConferenceParticipantResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setCallId("TS");
+      
       test2.setTalk(true);
       test2.setListen(true);
       test2.setStartConfOnEnter(true);
@@ -296,24 +469,60 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResult test2 = new ConferenceParticipantResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setAccountId("tS");
-      test2.setConferenceId("tS");
-      test2.setCallId("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
       test2.setTalk(false);
       test2.setListen(false);
       test2.setStartConfOnEnter(false);
@@ -327,13 +536,31 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       ConferenceParticipantResult test1 = new ConferenceParticipantResult();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
-      test1.setAccountId("TS");
-      test1.setConferenceId("TS");
-      test1.setCallId("TS");
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setConferenceId("TS");
+      
+        
+        
+        test1.setCallId("TS");
+      
       test1.setTalk(true);
       test1.setListen(true);
       test1.setStartConfOnEnter(true);

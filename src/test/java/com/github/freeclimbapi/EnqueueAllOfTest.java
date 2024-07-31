@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,179 +35,334 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for EnqueueAllOf
  */
-public class EnqueueAllOfTest {
-  private final EnqueueAllOf model = new EnqueueAllOf();
+ public class EnqueueAllOfTest {
+    private final EnqueueAllOf model = new EnqueueAllOf(
+    );
+    
+    
+    /**
+     * Test the property 'actionUrl'
+     */
+    @Test
+    public void actionUrlTest() {
+      
+      model.setActionUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      
+      
+      
+    }
+    /**
+     * Test the property 'notificationUrl'
+     */
+    @Test
+    public void notificationUrlTest() {
+      
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+      
+      
+    }
+    /**
+     * Test the property 'queueId'
+     */
+    @Test
+    public void queueIdTest() {
+      
+      
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
+    }
+    /**
+     * Test the property 'waitUrl'
+     */
+    @Test
+    public void waitUrlTest() {
+      
+      
+      model.setWaitUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+      
+      
+    }
 
-  /**
-   * Test the property 'actionUrl'
-   */
-  @Test
-  public void actionUrlTest() {
-    model.setActionUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getActionUrl());
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-  }
+     @Test
+    public void equalsTrueTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      EnqueueAllOf test2 = new EnqueueAllOf();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
 
-  /**
-   * Test the property 'notificationUrl'
-   */
-  @Test
-  public void notificationUrlTest() {
-    model.setNotificationUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      Assert.assertTrue(test1.equals(test2));
+    }
 
-  }
+    /**
+     * Test the method 'equalsFalse'
+     */
 
-  /**
-   * Test the property 'queueId'
-   */
-  @Test
-  public void queueIdTest() {
-    model.setQueueId("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getQueueId());
+     @Test
+    public void equalsFalseTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      EnqueueAllOf test2 = new EnqueueAllOf();
+        
+      test2.setActionUrl("TS2");
+        
+        
+        
+      test2.setNotificationUrl("TS2");
+        
+        
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setWaitUrl("TS2");
+      
 
-  }
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-  /**
-   * Test the property 'waitUrl'
-   */
-  @Test
-  public void waitUrlTest() {
-    model.setWaitUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getWaitUrl());
+     @Test
+    public void hashCodeTypeTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
 
-  }
+    /**
+     * Test the method 'toStringEquals'
+     */
 
-  /**
-   * Test the method 'equalsTrue'
-   */
+     @Test
+    public void toStringEqualsTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      EnqueueAllOf test2 = new EnqueueAllOf();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
 
-  @Test
-  public void equalsTrueTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    EnqueueAllOf test2 = new EnqueueAllOf();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
 
-    Assert.assertTrue(test1.equals(test2));
-  }
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      EnqueueAllOf test2 = new EnqueueAllOf();
+        
+      test2.setActionUrl("TS");
+        
+        
+        
+      test2.setNotificationUrl("TS");
+        
+        
+        
+        
+      test2.setQueueId("TS");
+      
+        
+        
+      test2.setWaitUrl("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
 
-  /**
-   * Test the method 'equalsFalse'
-   */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
 
-  @Test
-  public void equalsFalseTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    EnqueueAllOf test2 = new EnqueueAllOf();
-    test2.setActionUrl("tS");
-    test2.setNotificationUrl("tS");
-    test2.setQueueId("tS");
-    test2.setWaitUrl("tS");
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+      test1.setQueueId("TS");
+      
+        
+        
+      test1.setWaitUrl("TS");
+      
+      EnqueueAllOf test2 = new EnqueueAllOf();
+        
+      test2.setActionUrl("TS2");
+        
+        
+        
+      test2.setNotificationUrl("TS2");
+        
+        
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setWaitUrl("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
 
-    Assert.assertFalse(test1.equals(test2));
-  }
+     /**
+     * Test the method 'toStringType'
+     */
 
-  /**
-   * Test the method 'hashCodeType'
-   */
+     @Test
+    public void toStringTypeTest() {
+      EnqueueAllOf test1 = new EnqueueAllOf();
+        
+      test1.setActionUrl("TS");
+        
+        
+        
+      test1.setNotificationUrl("TS");
+        
+        
+        
+        
+        test1.setQueueId("TS");
+      
+        
+        
+        test1.setWaitUrl("TS");
+      
 
-  @Test
-  public void hashCodeTypeTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
 
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
-
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    EnqueueAllOf test2 = new EnqueueAllOf();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
-
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    EnqueueAllOf test2 = new EnqueueAllOf();
-    test2.setActionUrl("TS");
-    test2.setNotificationUrl("TS");
-    test2.setQueueId("TS");
-    test2.setWaitUrl("TS");
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-    EnqueueAllOf test2 = new EnqueueAllOf();
-    test2.setActionUrl("tS");
-    test2.setNotificationUrl("tS");
-    test2.setQueueId("tS");
-    test2.setWaitUrl("tS");
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    EnqueueAllOf test1 = new EnqueueAllOf();
-    test1.setActionUrl("TS");
-    test1.setNotificationUrl("TS");
-    test1.setQueueId("TS");
-    test1.setWaitUrl("TS");
-
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
-
-}
+ }

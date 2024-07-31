@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceParticipantListAllOf
  */
  public class ConferenceParticipantListAllOfTest {
-    private final ConferenceParticipantListAllOf model = new ConferenceParticipantListAllOf();
-
+    private final ConferenceParticipantListAllOf model = new ConferenceParticipantListAllOf(
+    );
+    
+    
     /**
      * Test the property 'participants'
      */

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PauseAllOf
  */
  public class PauseAllOfTest {
-    private final PauseAllOf model = new PauseAllOf();
-
+    private final PauseAllOf model = new PauseAllOf(
+    );
+    
+    
     /**
      * Test the property 'length'
      */

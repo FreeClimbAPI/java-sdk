@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RequestType
  */
  public class RequestTypeTest {
+    
+    
     @Test
     public void testINBOUND_CALLShouldWork() {
 

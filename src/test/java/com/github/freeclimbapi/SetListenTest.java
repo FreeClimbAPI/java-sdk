@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SetListen
  */
  public class SetListenTest {
-    private final SetListen model = new SetListen();
-
+    private final SetListen model = new SetListen(
+    );
+    
+    
     /**
      * Test the property 'listen'
      */
@@ -155,5 +157,6 @@ import com.github.freeclimbapi.models.*;
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("listen"), model.getListen());
+        
     }
  }

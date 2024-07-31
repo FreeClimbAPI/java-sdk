@@ -36,18 +36,22 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Play
  */
  public class PlayTest {
-    private final Play model = new Play();
-
+    private final Play model = new Play(
+    );
+    
+    
     /**
      * Test the property '_file'
      */
     @Test
     public void _fileTest() {
+      
+      
       model.setFile("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getFile());
       
+      
     }
-
     /**
      * Test the property 'loop'
      */
@@ -57,7 +61,6 @@ import com.github.freeclimbapi.models.*;
       model.setLoop(1);
       Assert.assertEquals(1, (int) model.getLoop());
     }
-
     /**
      * Test the property 'privacyMode'
      */
@@ -75,11 +78,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Play test2 = new Play();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
 
@@ -93,11 +102,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Play test2 = new Play();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
 
@@ -111,7 +126,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       
@@ -126,11 +144,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Play test2 = new Play();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
         
@@ -146,11 +170,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Play test2 = new Play();
+        
+        
       test2.setFile("TS");
+      
       test2.setLoop(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -163,11 +193,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       Play test1 = new Play();
+        
+        
       test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
       Play test2 = new Play();
-      test2.setFile("tS");
+        
+        
+      test2.setFile("TS2");
+      
       test2.setLoop(0);
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -180,7 +216,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       Play test1 = new Play();
-      test1.setFile("TS");
+        
+        
+        test1.setFile("TS");
+      
       test1.setLoop(1);
       test1.setPrivacyMode(true);
 
@@ -195,12 +234,17 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
         model.setFile("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFile());
+        
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("_file"), model.getFile());
         Assert.assertEquals(attributes.get("loop"), model.getLoop());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+        
     }
  }

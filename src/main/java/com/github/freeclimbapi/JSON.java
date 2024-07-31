@@ -870,6 +870,40 @@ public class JSON {
                                 getDiscriminatorValue(readElement, "command"));
                     }
           })
+                .registerTypeSelector(TranscribeUtterance.class, new TypeSelector<TranscribeUtterance>() {
+                    @Override
+                    public Class<? extends TranscribeUtterance> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
+                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
+                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
+                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
+                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
+                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
+                        classByDiscriminatorValue.put("Hangup", Hangup.class);
+                        classByDiscriminatorValue.put("OutDial", OutDial.class);
+                        classByDiscriminatorValue.put("Park", Park.class);
+                        classByDiscriminatorValue.put("Pause", Pause.class);
+                        classByDiscriminatorValue.put("Play", Play.class);
+                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
+                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
+                        classByDiscriminatorValue.put("Redirect", Redirect.class);
+                        classByDiscriminatorValue.put("Reject", Reject.class);
+                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
+                        classByDiscriminatorValue.put("Say", Say.class);
+                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetListen", SetListen.class);
+                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
+                        classByDiscriminatorValue.put("Sms", Sms.class);
+                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
+                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
+                        classByDiscriminatorValue.put("Unpark", Unpark.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "command"));
+                    }
+          })
                 .registerTypeSelector(Unpark.class, new TypeSelector<Unpark>() {
                     @Override
                     public Class<? extends Unpark> getClassForElement(JsonElement readElement) {

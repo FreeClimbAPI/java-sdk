@@ -33,11 +33,13 @@ import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 
 /**
- * Model tests for TranscribeUtteranceRecord
+ * Model tests for TranscribeUtteranceAllOfRecord
  */
- public class TranscribeUtteranceRecordTest {
-    private final TranscribeUtteranceRecord model = new TranscribeUtteranceRecord();
-
+ public class TranscribeUtteranceAllOfRecordTest {
+    private final TranscribeUtteranceAllOfRecord model = new TranscribeUtteranceAllOfRecord(
+    );
+    
+    
     /**
      * Test the property 'saveRecording'
      */
@@ -47,7 +49,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSaveRecording());       
       
     }
-
     /**
      * Test the property 'maxLengthSec'
      */
@@ -57,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       model.setMaxLengthSec(1);
       Assert.assertEquals(1, (int) model.getMaxLengthSec());
     }
-
     /**
      * Test the property 'rcrdTerminationSilenceTimeMs'
      */
@@ -74,11 +74,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsTrueTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test2 = new TranscribeUtteranceAllOfRecord();
       test2.setSaveRecording(true);
       test2.setMaxLengthSec(1);
       test2.setRcrdTerminationSilenceTimeMs(1);
@@ -92,11 +92,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsFalseTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test2 = new TranscribeUtteranceAllOfRecord();
       test2.setSaveRecording(false);
       test2.setMaxLengthSec(0);
       test2.setRcrdTerminationSilenceTimeMs(0);
@@ -110,7 +110,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void hashCodeTypeTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
@@ -125,11 +125,11 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringEqualsTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test2 = new TranscribeUtteranceAllOfRecord();
       test2.setSaveRecording(true);
       test2.setMaxLengthSec(1);
       test2.setRcrdTerminationSilenceTimeMs(1);
@@ -145,11 +145,11 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsTrueTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test2 = new TranscribeUtteranceAllOfRecord();
       test2.setSaveRecording(true);
       test2.setMaxLengthSec(1);
       test2.setRcrdTerminationSilenceTimeMs(1);
@@ -162,11 +162,11 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsFalseTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test2 = new TranscribeUtteranceAllOfRecord();
       test2.setSaveRecording(false);
       test2.setMaxLengthSec(0);
       test2.setRcrdTerminationSilenceTimeMs(0);
@@ -179,7 +179,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringTypeTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+      TranscribeUtteranceAllOfRecord test1 = new TranscribeUtteranceAllOfRecord();
       test1.setSaveRecording(true);
       test1.setMaxLengthSec(1);
       test1.setRcrdTerminationSilenceTimeMs(1);

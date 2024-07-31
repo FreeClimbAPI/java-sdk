@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AddToConference
  */
  public class AddToConferenceTest {
-    private final AddToConference model = new AddToConference();
-
+    private final AddToConference model = new AddToConference(
+    );
+    
+    
     /**
      * Test the property 'allowCallControl'
      */
@@ -47,47 +49,54 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getAllowCallControl());       
       
     }
-
     /**
      * Test the property 'callControlSequence'
      */
     @Test
     public void callControlSequenceTest() {
+      
+      
       model.setCallControlSequence("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
       
+      
     }
-
     /**
      * Test the property 'callControlUrl'
      */
     @Test
     public void callControlUrlTest() {
+      
+      
       model.setCallControlUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
       
+      
     }
-
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
+      
+      
       model.setConferenceId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getConferenceId());
       
+      
     }
-
     /**
      * Test the property 'leaveConferenceUrl'
      */
     @Test
     public void leaveConferenceUrlTest() {
+      
+      
       model.setLeaveConferenceUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
       
+      
     }
-
     /**
      * Test the property 'listen'
      */
@@ -97,17 +106,18 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getListen());       
       
     }
-
     /**
      * Test the property 'notificationUrl'
      */
     @Test
     public void notificationUrlTest() {
+      
+      
       model.setNotificationUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
       
+      
     }
-
     /**
      * Test the property 'startConfOnEnter'
      */
@@ -117,7 +127,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getStartConfOnEnter());       
       
     }
-
     /**
      * Test the property 'talk'
      */
@@ -136,22 +145,52 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       AddToConference test2 = new AddToConference();
       test2.setAllowCallControl(true);
+        
+        
       test2.setCallControlSequence("TS");
+      
+        
+        
       test2.setCallControlUrl("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setLeaveConferenceUrl("TS");
+      
       test2.setListen(true);
+        
+        
       test2.setNotificationUrl("TS");
+      
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
 
@@ -166,22 +205,52 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       AddToConference test2 = new AddToConference();
       test2.setAllowCallControl(false);
-      test2.setCallControlSequence("tS");
-      test2.setCallControlUrl("tS");
-      test2.setConferenceId("tS");
-      test2.setLeaveConferenceUrl("tS");
+        
+        
+      test2.setCallControlSequence("TS2");
+      
+        
+        
+      test2.setCallControlUrl("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setLeaveConferenceUrl("TS2");
+      
       test2.setListen(false);
-      test2.setNotificationUrl("tS");
+        
+        
+      test2.setNotificationUrl("TS2");
+      
       test2.setStartConfOnEnter(false);
       test2.setTalk(false);
 
@@ -196,12 +265,27 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       
@@ -217,22 +301,52 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       AddToConference test2 = new AddToConference();
       test2.setAllowCallControl(true);
+        
+        
       test2.setCallControlSequence("TS");
+      
+        
+        
       test2.setCallControlUrl("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setLeaveConferenceUrl("TS");
+      
       test2.setListen(true);
+        
+        
       test2.setNotificationUrl("TS");
+      
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
         
@@ -249,22 +363,52 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       AddToConference test2 = new AddToConference();
       test2.setAllowCallControl(true);
+        
+        
       test2.setCallControlSequence("TS");
+      
+        
+        
       test2.setCallControlUrl("TS");
+      
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setLeaveConferenceUrl("TS");
+      
       test2.setListen(true);
+        
+        
       test2.setNotificationUrl("TS");
+      
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -278,22 +422,52 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
+        
+        
       test1.setCallControlSequence("TS");
+      
+        
+        
       test1.setCallControlUrl("TS");
+      
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
+        
+        
       test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       AddToConference test2 = new AddToConference();
       test2.setAllowCallControl(false);
-      test2.setCallControlSequence("tS");
-      test2.setCallControlUrl("tS");
-      test2.setConferenceId("tS");
-      test2.setLeaveConferenceUrl("tS");
+        
+        
+      test2.setCallControlSequence("TS2");
+      
+        
+        
+      test2.setCallControlUrl("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setLeaveConferenceUrl("TS2");
+      
       test2.setListen(false);
-      test2.setNotificationUrl("tS");
+        
+        
+      test2.setNotificationUrl("TS2");
+      
       test2.setStartConfOnEnter(false);
       test2.setTalk(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -307,12 +481,27 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       AddToConference test1 = new AddToConference();
       test1.setAllowCallControl(true);
-      test1.setCallControlSequence("TS");
-      test1.setCallControlUrl("TS");
-      test1.setConferenceId("TS");
-      test1.setLeaveConferenceUrl("TS");
+        
+        
+        test1.setCallControlSequence("TS");
+      
+        
+        
+        test1.setCallControlUrl("TS");
+      
+        
+        
+        test1.setConferenceId("TS");
+      
+        
+        
+        test1.setLeaveConferenceUrl("TS");
+      
       test1.setListen(true);
-      test1.setNotificationUrl("TS");
+        
+        
+        test1.setNotificationUrl("TS");
+      
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
 
@@ -328,12 +517,32 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         model.setAllowCallControl(false);
+        
+        
         model.setCallControlSequence("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallControlSequence());
+        
+        
+        
         model.setCallControlUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
+        
+        
+        
         model.setConferenceId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getConferenceId());
+        
+        
+        
         model.setLeaveConferenceUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
+        
         model.setListen(false);
+        
+        
         model.setNotificationUrl("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+        
         model.setStartConfOnEnter(false);
         model.setTalk(false);
         Map<String, Map<String, Object>> build = model.build();
@@ -347,5 +556,6 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
         Assert.assertEquals(attributes.get("startConfOnEnter"), model.getStartConfOnEnter());
         Assert.assertEquals(attributes.get("talk"), model.getTalk());
+        
     }
  }

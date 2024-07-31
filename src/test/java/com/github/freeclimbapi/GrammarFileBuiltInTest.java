@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GrammarFileBuiltIn
  */
  public class GrammarFileBuiltInTest {
+    
+    
     @Test
     public void testALPHNUM6ShouldWork() {
 

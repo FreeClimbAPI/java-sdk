@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for LogListAllOf
  */
  public class LogListAllOfTest {
-    private final LogListAllOf model = new LogListAllOf();
-
+    private final LogListAllOf model = new LogListAllOf(
+    );
+    
+    
     /**
      * Test the property 'logs'
      */

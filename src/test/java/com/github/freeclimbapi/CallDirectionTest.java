@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallDirection
  */
  public class CallDirectionTest {
+    
+    
     @Test
     public void testINBOUNDShouldWork() {
 

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for IncomingNumberListAllOf
  */
  public class IncomingNumberListAllOfTest {
-    private final IncomingNumberListAllOf model = new IncomingNumberListAllOf();
-
+    private final IncomingNumberListAllOf model = new IncomingNumberListAllOf(
+    );
+    
+    
     /**
      * Test the property 'incomingPhoneNumbers'
      */

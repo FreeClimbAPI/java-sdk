@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for IncomingNumberResult
  */
  public class IncomingNumberResultTest {
-    private final IncomingNumberResult model = new IncomingNumberResult();
-
+    private final IncomingNumberResult model = new IncomingNumberResult(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -77,7 +85,6 @@ import com.github.freeclimbapi.models.*;
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
     }
-
     /**
      * Test the property 'capabilities'
      */
@@ -88,87 +95,102 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(object.getClass(), Capabilities.class);
       
     }
-
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
+      
+      
       model.setCampaignId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCampaignId());
       
+      
     }
-
     /**
      * Test the property 'phoneNumberId'
      */
     @Test
     public void phoneNumberIdTest() {
+      
+      
       model.setPhoneNumberId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
       
+      
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'applicationId'
      */
     @Test
     public void applicationIdTest() {
+      
+      
       model.setApplicationId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getApplicationId());
       
+      
     }
-
     /**
      * Test the property 'phoneNumber'
      */
     @Test
     public void phoneNumberTest() {
+      
+      
       model.setPhoneNumber("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
       
+      
     }
-
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
+      
       model.setAlias("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAlias());
       
+      
     }
-
     /**
      * Test the property 'region'
      */
     @Test
     public void regionTest() {
+      
+      
       model.setRegion("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getRegion());
       
+      
     }
-
     /**
      * Test the property 'country'
      */
     @Test
     public void countryTest() {
+      
+      
       model.setCountry("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCountry());
       
+      
     }
-
     /**
      * Test the property 'voiceEnabled'
      */
@@ -178,7 +200,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getVoiceEnabled());       
       
     }
-
     /**
      * Test the property 'smsEnabled'
      */
@@ -188,7 +209,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSmsEnabled());       
       
     }
-
     /**
      * Test the property 'offnet'
      */
@@ -198,7 +218,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getOffnet());       
       
     }
-
     /**
      * Test the property 'tfn'
      */
@@ -217,40 +236,106 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
       TFN TFNobject = new TFN();
       test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
       Capabilities Capabilitiesobject2 = Capabilitiesobject;
       test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setApplicationId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
@@ -267,40 +352,106 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
         Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
         TFN TFNobject = new TFN();
       test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
       Capabilities Capabilitiesobject2 = new Capabilities();
       test2.setCapabilities(Capabilitiesobject2);
-      test2.setCampaignId("tS");
-      test2.setPhoneNumberId("tS");
-      test2.setAccountId("tS");
-      test2.setApplicationId("tS");
-      test2.setPhoneNumber("tS");
-      test2.setAlias("tS");
-      test2.setRegion("tS");
-      test2.setCountry("tS");
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setApplicationId("TS2");
+      
+        
+        
+      test2.setPhoneNumber("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
+        
+        
+      test2.setRegion("TS2");
+      
+        
+        
+      test2.setCountry("TS2");
+      
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
       test2.setOffnet(false);
@@ -317,20 +468,53 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
@@ -348,40 +532,106 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
         Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
         TFN TFNobject = new TFN();
       test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
       Capabilities Capabilitiesobject2 = Capabilitiesobject;
       test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setApplicationId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
@@ -400,40 +650,106 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
         Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
         TFN TFNobject = new TFN();
       test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
       Capabilities Capabilitiesobject2 = Capabilitiesobject;
       test2.setCapabilities(Capabilitiesobject2);
+        
+        
       test2.setCampaignId("TS");
+      
+        
+        
       test2.setPhoneNumberId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setApplicationId("TS");
+      
+        
+        
       test2.setPhoneNumber("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
+        
+        
       test2.setRegion("TS");
+      
+        
+        
       test2.setCountry("TS");
+      
       test2.setVoiceEnabled(true);
       test2.setSmsEnabled(true);
       test2.setOffnet(true);
@@ -449,40 +765,106 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
         Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
+        
+        
       test1.setCampaignId("TS");
+      
+        
+        
       test1.setPhoneNumberId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setApplicationId("TS");
+      
+        
+        
       test1.setPhoneNumber("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
+        
+        
       test1.setRegion("TS");
+      
+        
+        
       test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);
         TFN TFNobject = new TFN();
       test1.setTfn(TFNobject);
       IncomingNumberResult test2 = new IncomingNumberResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
       Capabilities Capabilitiesobject2 = new Capabilities();
       test2.setCapabilities(Capabilitiesobject2);
-      test2.setCampaignId("tS");
-      test2.setPhoneNumberId("tS");
-      test2.setAccountId("tS");
-      test2.setApplicationId("tS");
-      test2.setPhoneNumber("tS");
-      test2.setAlias("tS");
-      test2.setRegion("tS");
-      test2.setCountry("tS");
+        
+        
+      test2.setCampaignId("TS2");
+      
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setApplicationId("TS2");
+      
+        
+        
+      test2.setPhoneNumber("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
+        
+        
+      test2.setRegion("TS2");
+      
+        
+        
+      test2.setCountry("TS2");
+      
       test2.setVoiceEnabled(false);
       test2.setSmsEnabled(false);
       test2.setOffnet(false);
@@ -498,20 +880,53 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       IncomingNumberResult test1 = new IncomingNumberResult();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
       Capabilities Capabilitiesobject = new Capabilities();
       test1.setCapabilities(Capabilitiesobject);
-      test1.setCampaignId("TS");
-      test1.setPhoneNumberId("TS");
-      test1.setAccountId("TS");
-      test1.setApplicationId("TS");
-      test1.setPhoneNumber("TS");
-      test1.setAlias("TS");
-      test1.setRegion("TS");
-      test1.setCountry("TS");
+        
+        
+        test1.setCampaignId("TS");
+      
+        
+        
+        test1.setPhoneNumberId("TS");
+      
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setApplicationId("TS");
+      
+        
+        
+        test1.setPhoneNumber("TS");
+      
+        
+        
+        test1.setAlias("TS");
+      
+        
+        
+        test1.setRegion("TS");
+      
+        
+        
+        test1.setCountry("TS");
+      
       test1.setVoiceEnabled(true);
       test1.setSmsEnabled(true);
       test1.setOffnet(true);

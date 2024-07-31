@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceResult
  */
  public class ConferenceResultTest {
-    private final ConferenceResult model = new ConferenceResult();
-
+    private final ConferenceResult model = new ConferenceResult(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -77,37 +85,42 @@ import com.github.freeclimbapi.models.*;
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
     }
-
     /**
      * Test the property 'conferenceId'
      */
     @Test
     public void conferenceIdTest() {
+      
+      
       model.setConferenceId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getConferenceId());
       
+      
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
+      
       model.setAlias("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAlias());
       
+      
     }
-
     /**
      * Test the property 'playBeep'
      */
@@ -123,7 +136,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
       
     }
-
     /**
      * Test the property 'record'
      */
@@ -133,7 +145,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getRecord());       
       
     }
-
     /**
      * Test the property 'status'
      */
@@ -149,37 +160,42 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
       
     }
-
     /**
      * Test the property 'waitUrl'
      */
     @Test
     public void waitUrlTest() {
+      
+      
       model.setWaitUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getWaitUrl());
       
+      
     }
-
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
+      
+      
       model.setActionUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
+      
     }
-
     /**
      * Test the property 'statusCallbackUrl'
      */
     @Test
     public void statusCallbackUrlTest() {
+      
+      
       model.setStatusCallbackUrl("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
       
+      
     }
-
     /**
      * Test the property 'subresourceUris'
      */
@@ -198,35 +214,89 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
       test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test2.setWaitUrl("TS");
+      
+        
+        
       test2.setActionUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
 
@@ -240,35 +310,89 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.NEVER);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.POPULATED);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setConferenceId("tS");
-      test2.setAccountId("tS");
-      test2.setAlias("tS");
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(false);
       test2.setStatus(ConferenceStatus.EMPTY);
-      test2.setWaitUrl("tS");
-      test2.setActionUrl("tS");
-      test2.setStatusCallbackUrl("tS");
+        
+        
+      test2.setWaitUrl("TS2");
+      
+        
+        
+      test2.setActionUrl("TS2");
+      
+        
+        
+      test2.setStatusCallbackUrl("TS2");
+      
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
 
@@ -282,19 +406,46 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       
@@ -309,35 +460,89 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
       test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test2.setWaitUrl("TS");
+      
+        
+        
       test2.setActionUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
         
@@ -353,35 +558,89 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setConferenceId("TS");
+      
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
       test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
       test2.setWaitUrl("TS");
+      
+        
+        
       test2.setActionUrl("TS");
+      
+        
+        
       test2.setStatusCallbackUrl("TS");
+      
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -394,35 +653,89 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       ConferenceResult test1 = new ConferenceResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setConferenceId("TS");
+      
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setAlias("TS");
-      test1.setPlayBeep(PlayBeep.ALWAYS);
+      
+      test1.setPlayBeep(PlayBeep.NEVER);
       test1.setRecord(true);
-      test1.setStatus(ConferenceStatus.EMPTY);
+      test1.setStatus(ConferenceStatus.POPULATED);
+        
+        
       test1.setWaitUrl("TS");
+      
+        
+        
       test1.setActionUrl("TS");
+      
+        
+        
       test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setConferenceId("tS");
-      test2.setAccountId("tS");
-      test2.setAlias("tS");
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(false);
       test2.setStatus(ConferenceStatus.EMPTY);
-      test2.setWaitUrl("tS");
-      test2.setActionUrl("tS");
-      test2.setStatusCallbackUrl("tS");
+        
+        
+      test2.setWaitUrl("TS2");
+      
+        
+        
+      test2.setActionUrl("TS2");
+      
+        
+        
+      test2.setStatusCallbackUrl("TS2");
+      
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -435,19 +748,46 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       ConferenceResult test1 = new ConferenceResult();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
-      test1.setConferenceId("TS");
-      test1.setAccountId("TS");
-      test1.setAlias("TS");
+        
+        
+        test1.setConferenceId("TS");
+      
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
       test1.setStatus(ConferenceStatus.EMPTY);
-      test1.setWaitUrl("TS");
-      test1.setActionUrl("TS");
-      test1.setStatusCallbackUrl("TS");
+        
+        
+        test1.setWaitUrl("TS");
+      
+        
+        
+        test1.setActionUrl("TS");
+      
+        
+        
+        test1.setStatusCallbackUrl("TS");
+      
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
 

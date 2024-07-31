@@ -36,6 +36,8 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageStatus
  */
  public class MessageStatusTest {
+    
+    
     @Test
     public void testNEWShouldWork() {
 

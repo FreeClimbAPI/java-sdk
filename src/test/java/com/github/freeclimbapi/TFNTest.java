@@ -36,15 +36,20 @@ import com.github.freeclimbapi.models.*;
  * Model tests for TFN
  */
  public class TFNTest {
-    private final TFN model = new TFN();
-
+    private final TFN model = new TFN(
+    );
+    
+    
     /**
      * Test the property 'campaignId'
      */
     @Test
     public void campaignIdTest() {
+      
+      
       model.setCampaignId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getCampaignId());
+      
       
     }
 
@@ -55,9 +60,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       TFN test2 = new TFN();
+        
+        
       test2.setCampaignId("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -69,9 +80,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       TFN test2 = new TFN();
-      test2.setCampaignId("tS");
+        
+        
+      test2.setCampaignId("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -83,7 +100,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -96,9 +116,15 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       TFN test2 = new TFN();
+        
+        
       test2.setCampaignId("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -112,9 +138,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       TFN test2 = new TFN();
+        
+        
       test2.setCampaignId("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -125,9 +157,15 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       TFN test1 = new TFN();
+        
+        
       test1.setCampaignId("TS");
+      
       TFN test2 = new TFN();
-      test2.setCampaignId("tS");
+        
+        
+      test2.setCampaignId("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -138,7 +176,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       TFN test1 = new TFN();
-      test1.setCampaignId("TS");
+        
+        
+        test1.setCampaignId("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

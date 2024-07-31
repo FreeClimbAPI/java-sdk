@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SetTalkAllOf
  */
  public class SetTalkAllOfTest {
-    private final SetTalkAllOf model = new SetTalkAllOf();
-
+    private final SetTalkAllOf model = new SetTalkAllOf(
+    );
+    
+    
     /**
      * Test the property 'talk'
      */

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateConferenceParticipantRequest
  */
  public class UpdateConferenceParticipantRequestTest {
-    private final UpdateConferenceParticipantRequest model = new UpdateConferenceParticipantRequest();
-
+    private final UpdateConferenceParticipantRequest model = new UpdateConferenceParticipantRequest(
+    );
+    
+    
     /**
      * Test the property 'talk'
      */
@@ -47,7 +49,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getTalk());       
       
     }
-
     /**
      * Test the property 'listen'
      */

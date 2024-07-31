@@ -2617,7 +2617,7 @@ Name | Type | Description  | Notes
 
 <a name="listConferenceRecordings"></a>
 # **listConferenceRecordings**
-> RecordingList listConferenceRecordings(callId, conferenceId, dateCreated)
+> RecordingList listConferenceRecordings(conferenceId, callId, dateCreated)
 
 List Conference Recordings
 
@@ -2642,14 +2642,14 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
-    
     String conferenceId = "conferenceId_example"; // String | Show only Recordings made during the conference with this ID.
+    
+    String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
     
     String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
     
     try {
-      RecordingList result = apiInstance.listConferenceRecordings(callId, conferenceId, dateCreated);
+      RecordingList result = apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listConferenceRecordings");
@@ -2666,8 +2666,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **conferenceId** | **String**| Show only Recordings made during the conference with this ID. |
  **callId** | **String**| Show only Recordings made during the Call with this ID. | [optional]
- **conferenceId** | **String**| Show only Recordings made during the conference with this ID. | [optional]
  **dateCreated** | **String**| Only show Recordings created on this date, formatted as *YYYY-MM-DD*. | [optional]
 
 

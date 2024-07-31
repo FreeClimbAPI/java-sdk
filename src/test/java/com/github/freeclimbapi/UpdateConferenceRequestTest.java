@@ -36,18 +36,22 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateConferenceRequest
  */
  public class UpdateConferenceRequestTest {
-    private final UpdateConferenceRequest model = new UpdateConferenceRequest();
-
+    private final UpdateConferenceRequest model = new UpdateConferenceRequest(
+    );
+    
+    
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
+      
       model.setAlias("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAlias());
       
+      
     }
-
     /**
      * Test the property 'playBeep'
      */
@@ -63,7 +67,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getPlayBeep(),PlayBeep.EXIT_ONLY);
       
     }
-
     /**
      * Test the property 'status'
      */
@@ -83,11 +86,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
@@ -101,11 +110,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.NEVER);
       test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-      test2.setAlias("tS");
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
@@ -119,7 +134,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       
@@ -134,11 +152,17 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
         
@@ -154,11 +178,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
+        
+        
       test2.setAlias("TS");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -171,11 +201,17 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
+        
+        
       test1.setAlias("TS");
-      test1.setPlayBeep(PlayBeep.ALWAYS);
-      test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+      
+      test1.setPlayBeep(PlayBeep.NEVER);
+      test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
       UpdateConferenceRequest test2 = new UpdateConferenceRequest();
-      test2.setAlias("tS");
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -188,7 +224,10 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       UpdateConferenceRequest test1 = new UpdateConferenceRequest();
-      test1.setAlias("TS");
+        
+        
+        test1.setAlias("TS");
+      
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
 

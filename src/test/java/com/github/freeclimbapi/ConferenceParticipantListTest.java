@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceParticipantList
  */
  public class ConferenceParticipantListTest {
-    private final ConferenceParticipantList model = new ConferenceParticipantList();
-
+    private final ConferenceParticipantList model = new ConferenceParticipantList(
+    );
+    
+    
     /**
      * Test the property 'total'
      */
@@ -47,7 +49,6 @@ import com.github.freeclimbapi.models.*;
       model.setTotal(1);
       Assert.assertEquals(1, (int) model.getTotal());
     }
-
     /**
      * Test the property 'start'
      */
@@ -57,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       model.setStart(1);
       Assert.assertEquals(1, (int) model.getStart());
     }
-
     /**
      * Test the property 'end'
      */
@@ -67,7 +67,6 @@ import com.github.freeclimbapi.models.*;
       model.setEnd(1);
       Assert.assertEquals(1, (int) model.getEnd());
     }
-
     /**
      * Test the property 'page'
      */
@@ -77,7 +76,6 @@ import com.github.freeclimbapi.models.*;
       model.setPage(1);
       Assert.assertEquals(1, (int) model.getPage());
     }
-
     /**
      * Test the property 'numPages'
      */
@@ -87,7 +85,6 @@ import com.github.freeclimbapi.models.*;
       model.setNumPages(1);
       Assert.assertEquals(1, (int) model.getNumPages());
     }
-
     /**
      * Test the property 'pageSize'
      */
@@ -97,17 +94,18 @@ import com.github.freeclimbapi.models.*;
       model.setPageSize(1);
       Assert.assertEquals(1, (int) model.getPageSize());
     }
-
     /**
      * Test the property 'nextPageUri'
      */
     @Test
     public void nextPageUriTest() {
+      
+      
       model.setNextPageUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getNextPageUri());
       
+      
     }
-
     /**
      * Test the property 'participants'
      */
@@ -132,7 +130,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       ConferenceParticipantList test2 = new ConferenceParticipantList();
@@ -142,7 +143,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList2 = testList;
       test2.setParticipants(testList2);
 
@@ -162,7 +166,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       ConferenceParticipantList test2 = new ConferenceParticipantList();
@@ -172,7 +179,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(0);
       test2.setNumPages(0);
       test2.setPageSize(0);
-      test2.setNextPageUri("tS");
+        
+        
+      test2.setNextPageUri("TS2");
+      
       List<ConferenceParticipantResult> testList2 = null;
       test2.setParticipants(testList2);
 
@@ -192,7 +202,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       
@@ -213,7 +226,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       ConferenceParticipantList test2 = new ConferenceParticipantList();
@@ -223,7 +239,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList2 = testList;
       test2.setParticipants(testList2);
         
@@ -245,7 +264,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       ConferenceParticipantList test2 = new ConferenceParticipantList();
@@ -255,7 +277,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList2 = testList;
       test2.setParticipants(testList2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -274,7 +299,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
       ConferenceParticipantList test2 = new ConferenceParticipantList();
@@ -284,7 +312,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(0);
       test2.setNumPages(0);
       test2.setPageSize(0);
-      test2.setNextPageUri("tS");
+        
+        
+      test2.setNextPageUri("TS2");
+      
       List<ConferenceParticipantResult> testList2 = null;
       test2.setParticipants(testList2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -303,7 +334,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
-      test1.setNextPageUri("TS");
+        
+        
+        test1.setNextPageUri("TS");
+      
       List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
       test1.setParticipants(testList);
 

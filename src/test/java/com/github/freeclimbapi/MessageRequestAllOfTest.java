@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,265 +35,368 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for MessageRequestAllOf
  */
-public class MessageRequestAllOfTest {
-  private final MessageRequestAllOf model = new MessageRequestAllOf();
-
-  /**
-   * Test the property 'from'
-   */
-  @Test
-  public void fromTest() {
-    model.setFrom("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getFrom());
-
-  }
-
-  /**
-   * Test the property 'to'
-   */
-  @Test
-  public void toTest() {
-    model.setTo("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getTo());
-
-  }
-
-  /**
-   * Test the property 'text'
-   */
-  @Test
-  public void textTest() {
-    model.setText("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getText());
-
-  }
-
-  /**
-   * Test the property 'notificationUrl'
-   */
-  @Test
-  public void notificationUrlTest() {
-    model.setNotificationUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-
-  }
-
-  /**
-   * Test the property 'mediaUrls'
-   */
-  @Test
-  public void mediaUrlsTest() {
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      model.setMediaUrls(testArray);
-      Assert.assertEquals(testArray, model.getMediaUrls());
-    } catch (Exception e) {
-      e.printStackTrace();
+ public class MessageRequestAllOfTest {
+    private final MessageRequestAllOf model = new MessageRequestAllOf(
+    );
+    
+    
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-  }
-
-  /**
-   * Test the method 'equalsTrue'
-   */
-
-  @Test
-  public void equalsTrueTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-    MessageRequestAllOf test2 = new MessageRequestAllOf();
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'text'
+     */
+    @Test
+    public void textTest() {
+      
+      
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+      
     }
-    Assert.assertTrue(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'equalsFalse'
-   */
-
-  @Test
-  public void equalsFalseTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'notificationUrl'
+     */
+    @Test
+    public void notificationUrlTest() {
+      
+      
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+      
     }
-    MessageRequestAllOf test2 = new MessageRequestAllOf();
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setNotificationUrl("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'mediaUrls'
+     */
+    @Test
+    public void mediaUrlsTest() {
+      
+      List<URI> testList = new ArrayList<URI>();
+      model.setMediaUrls(testList);
+      Assert.assertEquals(testList, model.getMediaUrls()); 
     }
 
-    Assert.assertFalse(test1.equals(test2));
-  }
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-  /**
-   * Test the method 'hashCodeType'
-   */
+     @Test
+    public void equalsTrueTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequestAllOf test2 = new MessageRequestAllOf();
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
 
-  @Test
-  public void hashCodeTypeTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
+    /**
+     * Test the method 'equalsFalse'
+     */
 
-  /**
-   * Test the method 'toStringEquals'
-   */
+     @Test
+    public void equalsFalseTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequestAllOf test2 = new MessageRequestAllOf();
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
 
-  @Test
-  public void toStringEqualsTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+      Assert.assertFalse(test1.equals(test2));
     }
-    MessageRequestAllOf test2 = new MessageRequestAllOf();
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageRequestAllOf test2 = new MessageRequestAllOf();
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageRequestAllOf test2 = new MessageRequestAllOf();
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setNotificationUrl("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    MessageRequestAllOf test1 = new MessageRequestAllOf();
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+     @Test
+    public void hashCodeTypeTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
+    /**
+     * Test the method 'toStringEquals'
+     */
 
-}
+     @Test
+    public void toStringEqualsTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequestAllOf test2 = new MessageRequestAllOf();
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequestAllOf test2 = new MessageRequestAllOf();
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequestAllOf test2 = new MessageRequestAllOf();
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      MessageRequestAllOf test1 = new MessageRequestAllOf();
+        
+        
+        test1.setFrom("TS");
+      
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setText("TS");
+      
+        
+        
+        test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

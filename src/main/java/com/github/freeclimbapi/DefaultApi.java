@@ -5043,8 +5043,8 @@ public class DefaultApi {
     }
     /**
      * Build call for listConferenceRecordings
+     * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -5055,7 +5055,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listConferenceRecordingsCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listConferenceRecordingsCall(String conferenceId, String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -5075,7 +5075,7 @@ public class DefaultApi {
         // create path and map variables
         String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
             .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
-	    .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5085,10 +5085,6 @@ public class DefaultApi {
 
         if (callId != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("callId", callId));
-        }
-
-        if (conferenceId != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("conferenceId", conferenceId));
         }
 
         if (dateCreated != null) {
@@ -5119,10 +5115,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listConferenceRecordingsValidateBeforeCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listConferenceRecordingsValidateBeforeCall(String conferenceId, String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'conferenceId' is set
+        if (conferenceId == null) {
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling listConferenceRecordings(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = listConferenceRecordingsCall(callId, conferenceId, dateCreated, _callback);
+        okhttp3.Call localVarCall = listConferenceRecordingsCall(conferenceId, callId, dateCreated, _callback);
         return localVarCall;
 
     }
@@ -5130,8 +5131,8 @@ public class DefaultApi {
     /**
      * List Conference Recordings
      * 
+     * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return RecordingList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -5141,16 +5142,16 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
      </table>
      */
-    public RecordingList listConferenceRecordings(String callId, String conferenceId, String dateCreated) throws ApiException {
-        ApiResponse<RecordingList> localVarResp = listConferenceRecordingsWithHttpInfo(callId, conferenceId, dateCreated);
+    public RecordingList listConferenceRecordings(String conferenceId, String callId, String dateCreated) throws ApiException {
+        ApiResponse<RecordingList> localVarResp = listConferenceRecordingsWithHttpInfo(conferenceId, callId, dateCreated);
         return localVarResp.getData();
     }
 
     /**
      * List Conference Recordings
      * 
+     * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -5160,8 +5161,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(String callId, String conferenceId, String dateCreated) throws ApiException {
-        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, null);
+    public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(String conferenceId, String callId, String dateCreated) throws ApiException {
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, null);
         Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -5169,8 +5170,8 @@ public class DefaultApi {
     /**
      * List Conference Recordings (asynchronously)
      * 
+     * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -5181,9 +5182,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listConferenceRecordingsAsync(String callId, String conferenceId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
+    public okhttp3.Call listConferenceRecordingsAsync(String conferenceId, String callId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, _callback);
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, _callback);
         Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

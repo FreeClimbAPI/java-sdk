@@ -36,13 +36,16 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GetSpeech
  */
  public class GetSpeechTest {
-    private final GetSpeech model = new GetSpeech();
-
+    private final GetSpeech model = new GetSpeech(
+    );
+    
+    
     /**
      * Test the property 'actionUrl'
      */
     @Test
     public void actionUrlTest() {
+      
       
       try {
         URI uri = new URI("TEST_STRING");
@@ -51,8 +54,8 @@ import com.github.freeclimbapi.models.*;
       } catch (Exception e) {
         e.printStackTrace();
       }
+      
     }
-
     /**
      * Test the property 'grammarType'
      */
@@ -64,27 +67,30 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getGrammarType(),GrammarType.BUILT_IN);
       
     }
-
     /**
      * Test the property 'grammarFile'
      */
     @Test
     public void grammarFileTest() {
+      
+      
       model.setGrammarFile("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getGrammarFile());
       
+      
     }
-
     /**
      * Test the property 'grammarRule'
      */
     @Test
     public void grammarRuleTest() {
+      
+      
       model.setGrammarRule("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getGrammarRule());
       
+      
     }
-
     /**
      * Test the property 'playBeep'
      */
@@ -94,7 +100,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getPlayBeep());       
       
     }
-
     /**
      * Test the property 'prompts'
      */
@@ -105,7 +110,6 @@ import com.github.freeclimbapi.models.*;
       model.setPrompts(testList);
       Assert.assertEquals(testList, model.getPrompts()); 
     }
-
     /**
      * Test the property 'noInputTimeoutMs'
      */
@@ -115,7 +119,6 @@ import com.github.freeclimbapi.models.*;
       model.setNoInputTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getNoInputTimeoutMs());
     }
-
     /**
      * Test the property 'recognitionTimeoutMs'
      */
@@ -125,7 +128,6 @@ import com.github.freeclimbapi.models.*;
       model.setRecognitionTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getRecognitionTimeoutMs());
     }
-
     /**
      * Test the property 'confidenceThreshold'
      */
@@ -135,7 +137,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
       
     }
-
     /**
      * Test the property 'sensitivityLevel'
      */
@@ -145,7 +146,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
       
     }
-
     /**
      * Test the property 'speechCompleteTimeoutMs'
      */
@@ -155,7 +155,6 @@ import com.github.freeclimbapi.models.*;
       model.setSpeechCompleteTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getSpeechCompleteTimeoutMs());
     }
-
     /**
      * Test the property 'speechIncompleteTimeoutMs'
      */
@@ -165,7 +164,6 @@ import com.github.freeclimbapi.models.*;
       model.setSpeechIncompleteTimeoutMs(1);
       Assert.assertEquals(1, (int) model.getSpeechIncompleteTimeoutMs());
     }
-
     /**
      * Test the property 'privacyMode'
      */
@@ -183,6 +181,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -190,8 +190,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.URL);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -201,6 +207,8 @@ import com.github.freeclimbapi.models.*;
       test1.setSpeechIncompleteTimeoutMs(1);
       test1.setPrivacyMode(true);
       GetSpeech test2 = new GetSpeech();
+        
+        
          try {
           URI uri2 = new URI("TEST_STRING");
           test2.setActionUrl(uri2);
@@ -208,8 +216,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test2.setGrammarType(GrammarType.URL);
+        
+        
       test2.setGrammarFile("TS");
+      
+        
+        
       test2.setGrammarRule("TS");
+      
       test2.setPlayBeep(true);
       List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
@@ -229,6 +243,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -236,8 +252,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.BUILT_IN);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -247,15 +269,23 @@ import com.github.freeclimbapi.models.*;
       test1.setSpeechIncompleteTimeoutMs(1);
       test1.setPrivacyMode(true);
       GetSpeech test2 = new GetSpeech();
+        
+        
          try {
-          URI uri2 = new URI("TEST_STRING");
+          URI uri2 = new URI("TEST_STRING2");
           test2.setActionUrl(uri2);
         } catch (Exception e) {
           e.printStackTrace();
         };
       test2.setGrammarType(GrammarType.URL);
-      test2.setGrammarFile("tS");
-      test2.setGrammarRule("tS");
+        
+        
+      test2.setGrammarFile("TS2");
+      
+        
+        
+      test2.setGrammarRule("TS2");
+      
       test2.setPlayBeep(false);
       List<PerclCommand> testList2 = null;
       test2.setPrompts(testList2);
@@ -275,6 +305,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -282,8 +314,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.URL);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -304,6 +342,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -311,8 +351,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.URL);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -322,6 +368,8 @@ import com.github.freeclimbapi.models.*;
       test1.setSpeechIncompleteTimeoutMs(1);
       test1.setPrivacyMode(true);
       GetSpeech test2 = new GetSpeech();
+        
+        
          try {
           URI uri2 = new URI("TEST_STRING");
           test2.setActionUrl(uri2);
@@ -329,8 +377,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test2.setGrammarType(GrammarType.URL);
+        
+        
       test2.setGrammarFile("TS");
+      
+        
+        
       test2.setGrammarRule("TS");
+      
       test2.setPlayBeep(true);
       List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
@@ -352,6 +406,8 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -359,8 +415,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.URL);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -370,6 +432,8 @@ import com.github.freeclimbapi.models.*;
       test1.setSpeechIncompleteTimeoutMs(1);
       test1.setPrivacyMode(true);
       GetSpeech test2 = new GetSpeech();
+        
+        
          try {
           URI uri2 = new URI("TEST_STRING");
           test2.setActionUrl(uri2);
@@ -377,8 +441,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test2.setGrammarType(GrammarType.URL);
+        
+        
       test2.setGrammarFile("TS");
+      
+        
+        
       test2.setGrammarRule("TS");
+      
       test2.setPlayBeep(true);
       List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
@@ -397,15 +467,23 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
         } catch (Exception e) {
           e.printStackTrace();
         };
-      test1.setGrammarType(GrammarType.URL);
+      test1.setGrammarType(GrammarType.BUILT_IN);
+        
+        
       test1.setGrammarFile("TS");
+      
+        
+        
       test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -415,15 +493,23 @@ import com.github.freeclimbapi.models.*;
       test1.setSpeechIncompleteTimeoutMs(1);
       test1.setPrivacyMode(true);
       GetSpeech test2 = new GetSpeech();
+        
+        
          try {
-          URI uri2 = new URI("TEST_STRING");
+          URI uri2 = new URI("TEST_STRING2");
           test2.setActionUrl(uri2);
         } catch (Exception e) {
           e.printStackTrace();
         };
       test2.setGrammarType(GrammarType.URL);
-      test2.setGrammarFile("tS");
-      test2.setGrammarRule("tS");
+        
+        
+      test2.setGrammarFile("TS2");
+      
+        
+        
+      test2.setGrammarRule("TS2");
+      
       test2.setPlayBeep(false);
       List<PerclCommand> testList2 = null;
       test2.setPrompts(testList2);
@@ -442,6 +528,8 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       GetSpeech test1 = new GetSpeech();
+        
+        
          try {
           URI uri1 = new URI("TEST_STRING");
           test1.setActionUrl(uri1);
@@ -449,8 +537,14 @@ import com.github.freeclimbapi.models.*;
           e.printStackTrace();
         };
       test1.setGrammarType(GrammarType.URL);
-      test1.setGrammarFile("TS");
-      test1.setGrammarRule("TS");
+        
+        
+        test1.setGrammarFile("TS");
+      
+        
+        
+        test1.setGrammarRule("TS");
+      
       test1.setPlayBeep(true);
       List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
@@ -471,8 +565,25 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void buildTest() throws Exception {
+        
+        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+        
+        
         model.setGrammarFile("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getGrammarFile());
+        
+        
+        
         model.setGrammarRule("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getGrammarRule());
+        
         model.setPlayBeep(false);
         model.setConfidenceThreshold(new BigDecimal(1.0));
         model.setSensitivityLevel(new BigDecimal(1.0));
@@ -492,5 +603,6 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("speechCompleteTimeoutMs"), model.getSpeechCompleteTimeoutMs());
         Assert.assertEquals(attributes.get("speechIncompleteTimeoutMs"), model.getSpeechIncompleteTimeoutMs());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+        
     }
  }

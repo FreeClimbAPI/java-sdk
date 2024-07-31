@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Capabilities
  */
  public class CapabilitiesTest {
-    private final Capabilities model = new Capabilities();
-
+    private final Capabilities model = new Capabilities(
+    );
+    
+    
     /**
      * Test the property 'voice'
      */
@@ -47,7 +49,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getVoice());       
       
     }
-
     /**
      * Test the property 'sms'
      */
@@ -57,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getSms());       
       
     }
-
     /**
      * Test the property 'tollFree'
      */
@@ -67,7 +67,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getTollFree());       
       
     }
-
     /**
      * Test the property 'tenDLC'
      */
@@ -77,7 +76,6 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(false, model.getTenDLC());       
       
     }
-
     /**
      * Test the property 'shortCode'
      */

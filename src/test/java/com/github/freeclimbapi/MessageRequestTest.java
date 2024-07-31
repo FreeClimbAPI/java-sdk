@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
 import org.junit.Assert;
@@ -34,349 +35,569 @@ import com.github.freeclimbapi.models.*;
 /**
  * Model tests for MessageRequest
  */
-public class MessageRequestTest {
-  private final MessageRequest model = new MessageRequest();
-
-  /**
-   * Test the property 'uri'
-   */
-  @Test
-  public void uriTest() {
-    model.setUri("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getUri());
-
-  }
-
-  /**
-   * Test the property 'dateCreated'
-   */
-  @Test
-  public void dateCreatedTest() {
-    model.setDateCreated("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getDateCreated());
-
-  }
-
-  /**
-   * Test the property 'dateUpdated'
-   */
-  @Test
-  public void dateUpdatedTest() {
-    model.setDateUpdated("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-
-  }
-
-  /**
-   * Test the property 'revision'
-   */
-  @Test
-  public void revisionTest() {
-
-    model.setRevision(1);
-    Assert.assertEquals(1, (int) model.getRevision());
-  }
-
-  /**
-   * Test the property 'from'
-   */
-  @Test
-  public void fromTest() {
-    model.setFrom("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getFrom());
-
-  }
-
-  /**
-   * Test the property 'to'
-   */
-  @Test
-  public void toTest() {
-    model.setTo("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getTo());
-
-  }
-
-  /**
-   * Test the property 'text'
-   */
-  @Test
-  public void textTest() {
-    model.setText("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getText());
-
-  }
-
-  /**
-   * Test the property 'notificationUrl'
-   */
-  @Test
-  public void notificationUrlTest() {
-    model.setNotificationUrl("TEST_STRING");
-    Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-
-  }
-
-  /**
-   * Test the property 'mediaUrls'
-   */
-  @Test
-  public void mediaUrlsTest() {
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      model.setMediaUrls(testArray);
-      Assert.assertEquals(testArray, model.getMediaUrls());
-    } catch (Exception e) {
-      e.printStackTrace();
+ public class MessageRequestTest {
+    private final MessageRequest model = new MessageRequest(
+    );
+    
+    
+    /**
+     * Test the property 'uri'
+     */
+    @Test
+    public void uriTest() {
+      
+      
+      model.setUri("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getUri());
+      
+      
     }
-  }
-
-  /**
-   * Test the method 'equalsTrue'
-   */
-
-  @Test
-  public void equalsTrueTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'dateCreated'
+     */
+    @Test
+    public void dateCreatedTest() {
+      
+      
+      model.setDateCreated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateCreated());
+      
+      
     }
-    MessageRequest test2 = new MessageRequest();
-    test2.setUri("TS");
-    test2.setDateCreated("TS");
-    test2.setDateUpdated("TS");
-    test2.setRevision(1);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'dateUpdated'
+     */
+    @Test
+    public void dateUpdatedTest() {
+      
+      
+      model.setDateUpdated("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
+      
+      
     }
-    Assert.assertTrue(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'equalsFalse'
-   */
-
-  @Test
-  public void equalsFalseTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'revision'
+     */
+    @Test
+    public void revisionTest() {
+      
+      model.setRevision(1);
+      Assert.assertEquals(1, (int) model.getRevision());
     }
-    MessageRequest test2 = new MessageRequest();
-    test2.setUri("tS");
-    test2.setDateCreated("tS");
-    test2.setDateUpdated("tS");
-    test2.setRevision(0);
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setNotificationUrl("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'from'
+     */
+    @Test
+    public void fromTest() {
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-    Assert.assertFalse(test1.equals(test2));
-  }
-
-  /**
-   * Test the method 'hashCodeType'
-   */
-
-  @Test
-  public void hashCodeTypeTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'to'
+     */
+    @Test
+    public void toTest() {
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-    int hashCode1 = test1.hashCode();
-    Assert.assertTrue(Integer.class.isInstance(hashCode1));
-  }
-
-  /**
-   * Test the method 'toStringEquals'
-   */
-
-  @Test
-  public void toStringEqualsTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'text'
+     */
+    @Test
+    public void textTest() {
+      
+      
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+      
     }
-    MessageRequest test2 = new MessageRequest();
-    test2.setUri("TS");
-    test2.setDateCreated("TS");
-    test2.setDateUpdated("TS");
-    test2.setRevision(1);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'notificationUrl'
+     */
+    @Test
+    public void notificationUrlTest() {
+      
+      
+      model.setNotificationUrl("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
+      
+      
     }
-    String toString1 = test1.toString();
-    String toString2 = test2.toString();
-    Assert.assertEquals(toString1, toString2);
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsTrue'
-   */
-
-  @Test
-  public void hashCodeEqualsTrueTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageRequest test2 = new MessageRequest();
-    test2.setUri("TS");
-    test2.setDateCreated("TS");
-    test2.setDateUpdated("TS");
-    test2.setRevision(1);
-    test2.setFrom("TS");
-    test2.setTo("TS");
-    test2.setText("TS");
-    test2.setNotificationUrl("TS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    Assert.assertEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'hashCodeEqualsFalse'
-   */
-
-  @Test
-  public void hashCodeEqualsFalseTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    MessageRequest test2 = new MessageRequest();
-    test2.setUri("tS");
-    test2.setDateCreated("tS");
-    test2.setDateUpdated("tS");
-    test2.setRevision(0);
-    test2.setFrom("tS");
-    test2.setTo("tS");
-    test2.setText("tS");
-    test2.setNotificationUrl("tS");
-    try {
-      List<URI> testArray2 = Arrays.asList(new URI("ElementFour"), new URI("ElementFive"), new URI("ElementSix"));
-      test2.setMediaUrls(testArray2);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-  }
-
-  /**
-   * Test the method 'toStringType'
-   */
-
-  @Test
-  public void toStringTypeTest() {
-    MessageRequest test1 = new MessageRequest();
-    test1.setUri("TS");
-    test1.setDateCreated("TS");
-    test1.setDateUpdated("TS");
-    test1.setRevision(1);
-    test1.setFrom("TS");
-    test1.setTo("TS");
-    test1.setText("TS");
-    test1.setNotificationUrl("TS");
-    try {
-      List<URI> testArray = Arrays.asList(new URI("ElementOne"), new URI("ElementTwo"), new URI("ElementThree"));
-      test1.setMediaUrls(testArray);
-    } catch (Exception e) {
-      e.printStackTrace();
+    /**
+     * Test the property 'mediaUrls'
+     */
+    @Test
+    public void mediaUrlsTest() {
+      
+      List<URI> testList = new ArrayList<URI>();
+      model.setMediaUrls(testList);
+      Assert.assertEquals(testList, model.getMediaUrls()); 
     }
 
-    String toString1 = test1.toString();
-    Assert.assertTrue(String.class.isInstance(toString1));
-  }
+      /**
+     * Test the method 'equalsTrue'
+     */
 
-}
+     @Test
+    public void equalsTrueTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequest test2 = new MessageRequest();
+        
+        
+      test2.setUri("TS");
+      
+        
+        
+      test2.setDateCreated("TS");
+      
+        
+        
+      test2.setDateUpdated("TS");
+      
+      test2.setRevision(1);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+
+      Assert.assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
+    public void equalsFalseTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequest test2 = new MessageRequest();
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
+      test2.setRevision(0);
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
+
+      Assert.assertFalse(test1.equals(test2));
+    }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
+
+     @Test
+    public void hashCodeTypeTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
+    public void toStringEqualsTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequest test2 = new MessageRequest();
+        
+        
+      test2.setUri("TS");
+      
+        
+        
+      test2.setDateCreated("TS");
+      
+        
+        
+      test2.setDateUpdated("TS");
+      
+      test2.setRevision(1);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
+    @Test
+    public void hashCodeEqualsTrueTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequest test2 = new MessageRequest();
+        
+        
+      test2.setUri("TS");
+      
+        
+        
+      test2.setDateCreated("TS");
+      
+        
+        
+      test2.setDateUpdated("TS");
+      
+      test2.setRevision(1);
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setNotificationUrl("TS");
+      
+      List<URI> testList2 = testList;
+      test2.setMediaUrls(testList2);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+    }
+
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
+    @Test
+    public void hashCodeEqualsFalseTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+      test1.setUri("TS");
+      
+        
+        
+      test1.setDateCreated("TS");
+      
+        
+        
+      test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+      MessageRequest test2 = new MessageRequest();
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
+      test2.setRevision(0);
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setNotificationUrl("TS2");
+      
+      List<URI> testList2 = null;
+      test2.setMediaUrls(testList2);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+    }
+
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
+    public void toStringTypeTest() {
+      MessageRequest test1 = new MessageRequest();
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
+      test1.setRevision(1);
+        
+        
+        test1.setFrom("TS");
+      
+        
+        
+        test1.setTo("TS");
+      
+        
+        
+        test1.setText("TS");
+      
+        
+        
+        test1.setNotificationUrl("TS");
+      
+      List<URI> testList = new ArrayList<URI>();
+      test1.setMediaUrls(testList);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
+    }
+
+ }

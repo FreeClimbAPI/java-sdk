@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessagesListAllOf
  */
  public class MessagesListAllOfTest {
-    private final MessagesListAllOf model = new MessagesListAllOf();
-
+    private final MessagesListAllOf model = new MessagesListAllOf(
+    );
+    
+    
     /**
      * Test the property 'messages'
      */

@@ -36,8 +36,10 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PaginationModel
  */
  public class PaginationModelTest {
-    private final PaginationModel model = new PaginationModel();
-
+    private final PaginationModel model = new PaginationModel(
+    );
+    
+    
     /**
      * Test the property 'total'
      */
@@ -47,7 +49,6 @@ import com.github.freeclimbapi.models.*;
       model.setTotal(1);
       Assert.assertEquals(1, (int) model.getTotal());
     }
-
     /**
      * Test the property 'start'
      */
@@ -57,7 +58,6 @@ import com.github.freeclimbapi.models.*;
       model.setStart(1);
       Assert.assertEquals(1, (int) model.getStart());
     }
-
     /**
      * Test the property 'end'
      */
@@ -67,7 +67,6 @@ import com.github.freeclimbapi.models.*;
       model.setEnd(1);
       Assert.assertEquals(1, (int) model.getEnd());
     }
-
     /**
      * Test the property 'page'
      */
@@ -77,7 +76,6 @@ import com.github.freeclimbapi.models.*;
       model.setPage(1);
       Assert.assertEquals(1, (int) model.getPage());
     }
-
     /**
      * Test the property 'numPages'
      */
@@ -87,7 +85,6 @@ import com.github.freeclimbapi.models.*;
       model.setNumPages(1);
       Assert.assertEquals(1, (int) model.getNumPages());
     }
-
     /**
      * Test the property 'pageSize'
      */
@@ -97,14 +94,16 @@ import com.github.freeclimbapi.models.*;
       model.setPageSize(1);
       Assert.assertEquals(1, (int) model.getPageSize());
     }
-
     /**
      * Test the property 'nextPageUri'
      */
     @Test
     public void nextPageUriTest() {
+      
+      
       model.setNextPageUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getNextPageUri());
+      
       
     }
 
@@ -121,7 +120,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       PaginationModel test2 = new PaginationModel();
       test2.setTotal(1);
       test2.setStart(1);
@@ -129,7 +131,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -147,7 +152,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       PaginationModel test2 = new PaginationModel();
       test2.setTotal(0);
       test2.setStart(0);
@@ -155,7 +163,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(0);
       test2.setNumPages(0);
       test2.setPageSize(0);
-      test2.setNextPageUri("tS");
+        
+        
+      test2.setNextPageUri("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -173,7 +184,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -192,7 +206,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       PaginationModel test2 = new PaginationModel();
       test2.setTotal(1);
       test2.setStart(1);
@@ -200,7 +217,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -220,7 +240,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       PaginationModel test2 = new PaginationModel();
       test2.setTotal(1);
       test2.setStart(1);
@@ -228,7 +251,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(1);
       test2.setNumPages(1);
       test2.setPageSize(1);
+        
+        
       test2.setNextPageUri("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -245,7 +271,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
+        
+        
       test1.setNextPageUri("TS");
+      
       PaginationModel test2 = new PaginationModel();
       test2.setTotal(0);
       test2.setStart(0);
@@ -253,7 +282,10 @@ import com.github.freeclimbapi.models.*;
       test2.setPage(0);
       test2.setNumPages(0);
       test2.setPageSize(0);
-      test2.setNextPageUri("tS");
+        
+        
+      test2.setNextPageUri("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -270,7 +302,10 @@ import com.github.freeclimbapi.models.*;
       test1.setPage(1);
       test1.setNumPages(1);
       test1.setPageSize(1);
-      test1.setNextPageUri("TS");
+        
+        
+        test1.setNextPageUri("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

@@ -36,38 +36,46 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueResult
  */
  public class QueueResultTest {
-    private final QueueResult model = new QueueResult();
-
+    private final QueueResult model = new QueueResult(
+    );
+    
+    
     /**
      * Test the property 'uri'
      */
     @Test
     public void uriTest() {
+      
+      
       model.setUri("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getUri());
       
+      
     }
-
     /**
      * Test the property 'dateCreated'
      */
     @Test
     public void dateCreatedTest() {
+      
+      
       model.setDateCreated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateCreated());
       
+      
     }
-
     /**
      * Test the property 'dateUpdated'
      */
     @Test
     public void dateUpdatedTest() {
+      
+      
       model.setDateUpdated("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getDateUpdated());
       
+      
     }
-
     /**
      * Test the property 'revision'
      */
@@ -77,37 +85,42 @@ import com.github.freeclimbapi.models.*;
       model.setRevision(1);
       Assert.assertEquals(1, (int) model.getRevision());
     }
-
     /**
      * Test the property 'accountId'
      */
     @Test
     public void accountIdTest() {
+      
+      
       model.setAccountId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAccountId());
       
+      
     }
-
     /**
      * Test the property 'queueId'
      */
     @Test
     public void queueIdTest() {
+      
+      
       model.setQueueId("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getQueueId());
       
+      
     }
-
     /**
      * Test the property 'alias'
      */
     @Test
     public void aliasTest() {
+      
+      
       model.setAlias("TEST_STRING");
       Assert.assertEquals("TEST_STRING", model.getAlias());
       
+      
     }
-
     /**
      * Test the property 'maxSize'
      */
@@ -117,7 +130,6 @@ import com.github.freeclimbapi.models.*;
       model.setMaxSize(1);
       Assert.assertEquals(1, (int) model.getMaxSize());
     }
-
     /**
      * Test the property 'currentSize'
      */
@@ -127,7 +139,6 @@ import com.github.freeclimbapi.models.*;
       model.setCurrentSize(1);
       Assert.assertEquals(1, (int) model.getCurrentSize());
     }
-
     /**
      * Test the property 'averageQueueRemovalTime'
      */
@@ -137,7 +148,6 @@ import com.github.freeclimbapi.models.*;
       model.setAverageQueueRemovalTime(1);
       Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
     }
-
     /**
      * Test the property 'subresourceUris'
      */
@@ -156,26 +166,62 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsTrueTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       QueueResult test2 = new QueueResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setQueueId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setMaxSize(1);
       test2.setCurrentSize(1);
       test2.setAverageQueueRemovalTime(1);
@@ -192,26 +238,62 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void equalsFalseTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       QueueResult test2 = new QueueResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setAccountId("tS");
-      test2.setQueueId("tS");
-      test2.setAlias("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setMaxSize(0);
       test2.setCurrentSize(0);
       test2.setAverageQueueRemovalTime(0);
@@ -228,13 +310,31 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void hashCodeTypeTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
@@ -252,26 +352,62 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringEqualsTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       QueueResult test2 = new QueueResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setQueueId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setMaxSize(1);
       test2.setCurrentSize(1);
       test2.setAverageQueueRemovalTime(1);
@@ -290,26 +426,62 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsTrueTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       QueueResult test2 = new QueueResult();
+        
+        
       test2.setUri("TS");
+      
+        
+        
       test2.setDateCreated("TS");
+      
+        
+        
       test2.setDateUpdated("TS");
+      
       test2.setRevision(1);
+        
+        
       test2.setAccountId("TS");
+      
+        
+        
       test2.setQueueId("TS");
+      
+        
+        
       test2.setAlias("TS");
+      
       test2.setMaxSize(1);
       test2.setCurrentSize(1);
       test2.setAverageQueueRemovalTime(1);
@@ -325,26 +497,62 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void hashCodeEqualsFalseTest() {
       QueueResult test1 = new QueueResult();
+        
+        
       test1.setUri("TS");
+      
+        
+        
       test1.setDateCreated("TS");
+      
+        
+        
       test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
+        
+        
       test1.setAccountId("TS");
+      
+        
+        
       test1.setQueueId("TS");
+      
+        
+        
       test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       QueueResult test2 = new QueueResult();
-      test2.setUri("tS");
-      test2.setDateCreated("tS");
-      test2.setDateUpdated("tS");
+        
+        
+      test2.setUri("TS2");
+      
+        
+        
+      test2.setDateCreated("TS2");
+      
+        
+        
+      test2.setDateUpdated("TS2");
+      
       test2.setRevision(0);
-      test2.setAccountId("tS");
-      test2.setQueueId("tS");
-      test2.setAlias("tS");
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
+        
+        
+      test2.setAlias("TS2");
+      
       test2.setMaxSize(0);
       test2.setCurrentSize(0);
       test2.setAverageQueueRemovalTime(0);
@@ -360,13 +568,31 @@ import com.github.freeclimbapi.models.*;
      @Test
     public void toStringTypeTest() {
       QueueResult test1 = new QueueResult();
-      test1.setUri("TS");
-      test1.setDateCreated("TS");
-      test1.setDateUpdated("TS");
+        
+        
+        test1.setUri("TS");
+      
+        
+        
+        test1.setDateCreated("TS");
+      
+        
+        
+        test1.setDateUpdated("TS");
+      
       test1.setRevision(1);
-      test1.setAccountId("TS");
-      test1.setQueueId("TS");
-      test1.setAlias("TS");
+        
+        
+        test1.setAccountId("TS");
+      
+        
+        
+        test1.setQueueId("TS");
+      
+        
+        
+        test1.setAlias("TS");
+      
       test1.setMaxSize(1);
       test1.setCurrentSize(1);
       test1.setAverageQueueRemovalTime(1);
