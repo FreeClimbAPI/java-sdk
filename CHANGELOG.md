@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.6.2"></a>
+
+## [5.6.2] - 2024-07-23
+
+### Changed
+
+- Regenerate SDK files
+
 <a name="5.6.1"></a>
 
 ## [5.6.1] - 2024-07-31
