@@ -3258,8 +3258,6 @@ Name | Type | Description  | Notes
 
 Make a JWT for WebRTC calling
 
-Make a JWT for WebRTC calling
-
 ### Example
 ```java
 // Import classes:
