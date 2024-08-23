@@ -6409,7 +6409,7 @@ public class DefaultApi {
 
     /**
      * Make a JWT for WebRTC calling
-     * Make a JWT for WebRTC calling
+     * 
      * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6426,7 +6426,7 @@ public class DefaultApi {
 
     /**
      * Make a JWT for WebRTC calling
-     * Make a JWT for WebRTC calling
+     * 
      * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6444,7 +6444,7 @@ public class DefaultApi {
 
     /**
      * Make a JWT for WebRTC calling (asynchronously)
-     * Make a JWT for WebRTC calling
+     * 
      * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

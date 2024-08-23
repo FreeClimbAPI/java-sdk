@@ -905,7 +905,7 @@ public class DefaultApiTest {
     /**
      * Make a JWT for WebRTC calling
      *
-     * Make a JWT for WebRTC calling
+     * 
      *
      * @throws ApiException if the Api call fails
      */
