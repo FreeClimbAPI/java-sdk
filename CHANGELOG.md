@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.7.0"></a>
+
+## [5.7.0] - 2024-09-03
+
+### Added
+
+- `getNextPage` method to `DefaultApi` class
+
 <a name="5.6.2"></a>
 
 ## [5.6.2] - 2024-07-23

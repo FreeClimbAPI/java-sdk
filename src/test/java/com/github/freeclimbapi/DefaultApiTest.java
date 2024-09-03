@@ -1102,6 +1102,403 @@ public class DefaultApiTest {
         
     }
 
+    /**
+     * Get Next Page for Get list of SMS 10DLC Brands
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void getTenDLCSmsBrandsGetNextPageTest() throws ApiException {
+        
+        SMSTenDLCBrandsListResult response = this.apiInstance.getTenDLCSmsBrands();
+        SMSTenDLCBrandsListResult nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), SMSTenDLCBrandsListResult.class);
+
+     }
+    /**
+     * Get Next Page for Get list of SMS 10DLC Campaigns
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void getTenDLCSmsCampaignsGetNextPageTest() throws ApiException {
+        
+        String brandId = brandIdStringTestValue();
+        
+        SMSTenDLCCampaignsListResult response = this.apiInstance.getTenDLCSmsCampaigns(brandId);
+        SMSTenDLCCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), SMSTenDLCCampaignsListResult.class);
+
+     }
+    /**
+     * Get Next Page for Get list of SMS 10DLC Partner Campaigns
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void getTenDLCSmsPartnerCampaignsGetNextPageTest() throws ApiException {
+        
+        String brandId = brandIdStringTestValue();
+        
+        SMSTenDLCPartnerCampaignsListResult response = this.apiInstance.getTenDLCSmsPartnerCampaigns(brandId);
+        SMSTenDLCPartnerCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), SMSTenDLCPartnerCampaignsListResult.class);
+
+     }
+    /**
+     * Get Next Page for Get list of TollFree Campaigns
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void getTollFreeSmsCampaignsGetNextPageTest() throws ApiException {
+        
+        SMSTollFreeCampaignsListResult response = this.apiInstance.getTollFreeSmsCampaigns();
+        SMSTollFreeCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), SMSTollFreeCampaignsListResult.class);
+
+     }
+    /**
+     * Get Next Page for List Active Queues
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listActiveQueuesGetNextPageTest() throws ApiException {
+        
+        String alias = aliasStringTestValue();
+        
+        QueueList response = this.apiInstance.listActiveQueues(alias);
+        QueueList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), QueueList.class);
+
+     }
+    /**
+     * Get Next Page for List All Account Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listAllAccountLogsGetNextPageTest() throws ApiException {
+        
+        LogList response = this.apiInstance.listAllAccountLogs();
+        LogList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), LogList.class);
+
+     }
+    /**
+     * Get Next Page for List applications
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listApplicationsGetNextPageTest() throws ApiException {
+        
+        String alias = aliasStringTestValue();
+        
+        ApplicationList response = this.apiInstance.listApplications(alias);
+        ApplicationList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), ApplicationList.class);
+
+     }
+    /**
+     * Get Next Page for List available numbers
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listAvailableNumbersGetNextPageTest() throws ApiException {
+        
+        String phoneNumber = phoneNumberStringTestValue();
+        
+        String region = regionStringTestValue();
+        
+        String country = countryStringTestValue();
+        
+        Boolean voiceEnabled = voiceEnabledBooleanTestValue();
+        
+        Boolean smsEnabled = smsEnabledBooleanTestValue();
+        
+        Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
+        
+        Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
+        
+        Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
+        
+        Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
+        
+        Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
+        
+        AvailableNumberList response = this.apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+        AvailableNumberList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), AvailableNumberList.class);
+
+     }
+    /**
+     * Get Next Page for List Call Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listCallLogsGetNextPageTest() throws ApiException {
+        
+        String callId = callIdStringTestValue();
+        
+        LogList response = this.apiInstance.listCallLogs(callId);
+        LogList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), LogList.class);
+
+     }
+    /**
+     * Get Next Page for List Call Recordings
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listCallRecordingsGetNextPageTest() throws ApiException {
+        
+        String callId = callIdStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        RecordingList response = this.apiInstance.listCallRecordings(callId, dateCreated);
+        RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), RecordingList.class);
+
+     }
+    /**
+     * Get Next Page for List Calls
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listCallsGetNextPageTest() throws ApiException {
+        
+        Boolean active = activeBooleanTestValue();
+        
+        String to = toStringTestValue();
+        
+        String from = fromStringTestValue();
+        
+        CallStatus status = statusCallStatusTestValue();
+        
+        String startTime = startTimeStringTestValue();
+        
+        String endTime = endTimeStringTestValue();
+        
+        String parentCallId = parentCallIdStringTestValue();
+        
+        List<String> applicationId = applicationIdTestArray();
+        
+        CallList response = this.apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
+        CallList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), CallList.class);
+
+     }
+    /**
+     * Get Next Page for List Conference Recordings
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listConferenceRecordingsGetNextPageTest() throws ApiException {
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String callId = callIdStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        RecordingList response = this.apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
+        RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), RecordingList.class);
+
+     }
+    /**
+     * Get Next Page for List Conferences
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listConferencesGetNextPageTest() throws ApiException {
+        
+        String status = statusStringTestValue();
+        
+        String alias = aliasStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        String dateUpdated = dateUpdatedStringTestValue();
+        
+        ConferenceList response = this.apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
+        ConferenceList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), ConferenceList.class);
+
+     }
+    /**
+     * Get Next Page for List Incoming Numbers
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listIncomingNumbersGetNextPageTest() throws ApiException {
+        
+        String phoneNumber = phoneNumberStringTestValue();
+        
+        String alias = aliasStringTestValue();
+        
+        String region = regionStringTestValue();
+        
+        String country = countryStringTestValue();
+        
+        String applicationId = applicationIdStringTestValue();
+        
+        Boolean hasApplication = hasApplicationBooleanTestValue();
+        
+        Boolean voiceEnabled = voiceEnabledBooleanTestValue();
+        
+        Boolean smsEnabled = smsEnabledBooleanTestValue();
+        
+        Boolean hasCampaign = hasCampaignBooleanTestValue();
+        
+        Boolean capabilitiesVoice = capabilitiesVoiceBooleanTestValue();
+        
+        Boolean capabilitiesSms = capabilitiesSmsBooleanTestValue();
+        
+        Boolean capabilitiesTollFree = capabilitiesTollFreeBooleanTestValue();
+        
+        Boolean capabilitiesTenDLC = capabilitiesTenDLCBooleanTestValue();
+        
+        Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
+        
+        String tfnCampaignId = tfnCampaignIdStringTestValue();
+        
+        Boolean offnet = offnetBooleanTestValue();
+        
+        IncomingNumberList response = this.apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
+        IncomingNumberList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), IncomingNumberList.class);
+
+     }
+    /**
+     * Get Next Page for List Members
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listMembersGetNextPageTest() throws ApiException {
+        
+        String queueId = queueIdStringTestValue();
+        
+        QueueMemberList response = this.apiInstance.listMembers(queueId);
+        QueueMemberList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), QueueMemberList.class);
+
+     }
+    /**
+     * Get Next Page for List Participants
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listParticipantsGetNextPageTest() throws ApiException {
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        Boolean talk = talkBooleanTestValue();
+        
+        Boolean listen = listenBooleanTestValue();
+        
+        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen);
+        ConferenceParticipantList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), ConferenceParticipantList.class);
+
+     }
+    /**
+     * Get Next Page for List Recordings
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listRecordingsGetNextPageTest() throws ApiException {
+        
+        String callId = callIdStringTestValue();
+        
+        String conferenceId = conferenceIdStringTestValue();
+        
+        String dateCreated = dateCreatedStringTestValue();
+        
+        RecordingList response = this.apiInstance.listRecordings(callId, conferenceId, dateCreated);
+        RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), RecordingList.class);
+
+     }
+    /**
+     * Get Next Page for List SMS Messages
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void listSmsMessagesGetNextPageTest() throws ApiException {
+        
+        String to = toStringTestValue();
+        
+        String from = fromStringTestValue();
+        
+        String beginTime = beginTimeStringTestValue();
+        
+        String endTime = endTimeStringTestValue();
+        
+        MessageDirection direction = directionMessageDirectionTestValue();
+        
+        String campaignId = campaignIdStringTestValue();
+        
+        String brandId = brandIdStringTestValue();
+        
+        Boolean is10DLC = is10DLCBooleanTestValue();
+        
+        MessagesList response = this.apiInstance.listSmsMessages(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
+        MessagesList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), MessagesList.class);
+
+     }
+
     private BuyIncomingNumberRequest buyIncomingNumberRequestBuyIncomingNumberRequestTestValue() {
         BuyIncomingNumberRequest request = new BuyIncomingNumberRequest();
         request.setPhoneNumber("TEST-PHONE-NUMBER");

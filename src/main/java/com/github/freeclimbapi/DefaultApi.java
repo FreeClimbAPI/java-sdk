@@ -7808,4 +7808,62 @@ public class DefaultApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
+
+    /**
+     * Build call for getNextPage
+     * 
+     * @param response The response from the previous page of data
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public <T extends PaginationModel> okhttp3.Call getNextPageCall(T response) throws ApiException {
+        String nextPageUri = response.getNextPageUri();
+        return localVarApiClient.buildCall(nextPageUri, "GET");
+    }
+
+    @SuppressWarnings("rawtypes")
+    private <T extends PaginationModel> okhttp3.Call getNextPageValidateBeforeCall(T response) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageCall(response);
+        return localVarCall;
+    }
+
+    /**
+     * Get Next Page
+     * 
+     * @param response The respnose from the previous page of data
+     * @return &lt;T extends PaginationModel&gt; ApiResponse&lt;T&gt;
+     * @throws ApiException If fail to call the API
+     */
+    public <T extends PaginationModel> ApiResponse<T> getNextPageWithHttpInfo(T response) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response);
+        Type localVarReturnType = new TypeToken<T>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Next Page
+     * 
+     * @param response The response from the previous page of data
+     * @return The next page of data
+     * @throws ApiException If fail to process the API call
+     */
+    public <T extends PaginationModel> T getNextPage(T response) {
+        ApiResponse<T> localVarResp = getNextPageWithHttpInfo(response);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Next Page (asynchronously)
+     * 
+     * @param response The response from the previous page of data
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call
+     */
+    public <T extends PaginationModel> okhttp3.Call getNextPageAsync(T response, final ApiCallback<T> _callback) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response);
+        Type localVarReturnType = new TypeToken<T>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
 }
