@@ -33,6 +33,7 @@ import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.utils.*;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -43,7 +44,7 @@ import java.util.concurrent.Callable;
  * ConferenceParticipantList
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class ConferenceParticipantList {
+public class ConferenceParticipantList implements Pagination {
   public static final String SERIALIZED_NAME_TOTAL = "total";
   @SerializedName(SERIALIZED_NAME_TOTAL)
   private Integer total;

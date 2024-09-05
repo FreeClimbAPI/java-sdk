@@ -1113,6 +1113,9 @@ public class DefaultApiTest {
      public void getTenDLCSmsBrandsGetNextPageTest() throws ApiException {
         
         SMSTenDLCBrandsListResult response = this.apiInstance.getTenDLCSmsBrands();
+        String localVarNextPageUri = "/Accounts/{accountId}/Messages/10DLC/Brands"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         SMSTenDLCBrandsListResult nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), SMSTenDLCBrandsListResult.class);
 
@@ -1130,6 +1133,9 @@ public class DefaultApiTest {
         String brandId = brandIdStringTestValue();
         
         SMSTenDLCCampaignsListResult response = this.apiInstance.getTenDLCSmsCampaigns(brandId);
+        String localVarNextPageUri = "/Accounts/{accountId}/Messages/10DLC/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         SMSTenDLCCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), SMSTenDLCCampaignsListResult.class);
 
@@ -1147,6 +1153,9 @@ public class DefaultApiTest {
         String brandId = brandIdStringTestValue();
         
         SMSTenDLCPartnerCampaignsListResult response = this.apiInstance.getTenDLCSmsPartnerCampaigns(brandId);
+        String localVarNextPageUri = "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         SMSTenDLCPartnerCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), SMSTenDLCPartnerCampaignsListResult.class);
 
@@ -1162,6 +1171,9 @@ public class DefaultApiTest {
      public void getTollFreeSmsCampaignsGetNextPageTest() throws ApiException {
         
         SMSTollFreeCampaignsListResult response = this.apiInstance.getTollFreeSmsCampaigns();
+        String localVarNextPageUri = "/Accounts/{accountId}/Messages/TollFree/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         SMSTollFreeCampaignsListResult nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), SMSTollFreeCampaignsListResult.class);
 
@@ -1179,6 +1191,9 @@ public class DefaultApiTest {
         String alias = aliasStringTestValue();
         
         QueueList response = this.apiInstance.listActiveQueues(alias);
+        String localVarNextPageUri = "/Accounts/{accountId}/Queues"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         QueueList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), QueueList.class);
 
@@ -1194,6 +1209,9 @@ public class DefaultApiTest {
      public void listAllAccountLogsGetNextPageTest() throws ApiException {
         
         LogList response = this.apiInstance.listAllAccountLogs();
+        String localVarNextPageUri = "/Accounts/{accountId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         LogList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), LogList.class);
 
@@ -1211,6 +1229,9 @@ public class DefaultApiTest {
         String alias = aliasStringTestValue();
         
         ApplicationList response = this.apiInstance.listApplications(alias);
+        String localVarNextPageUri = "/Accounts/{accountId}/Applications"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         ApplicationList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), ApplicationList.class);
 
@@ -1246,6 +1267,8 @@ public class DefaultApiTest {
         Boolean capabilitiesShortCode = capabilitiesShortCodeBooleanTestValue();
         
         AvailableNumberList response = this.apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
+        String localVarNextPageUri = "/AvailablePhoneNumbers";
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         AvailableNumberList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), AvailableNumberList.class);
 
@@ -1263,6 +1286,10 @@ public class DefaultApiTest {
         String callId = callIdStringTestValue();
         
         LogList response = this.apiInstance.listCallLogs(callId);
+        String localVarNextPageUri = "/Accounts/{accountId}/Calls/{callId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK")
+            .replaceAll("\\{" + "callId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         LogList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), LogList.class);
 
@@ -1282,6 +1309,10 @@ public class DefaultApiTest {
         String dateCreated = dateCreatedStringTestValue();
         
         RecordingList response = this.apiInstance.listCallRecordings(callId, dateCreated);
+        String localVarNextPageUri = "/Accounts/{accountId}/Calls/{callId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK")
+            .replaceAll("\\{" + "callId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), RecordingList.class);
 
@@ -1313,6 +1344,9 @@ public class DefaultApiTest {
         List<String> applicationId = applicationIdTestArray();
         
         CallList response = this.apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
+        String localVarNextPageUri = "/Accounts/{accountId}/Calls"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         CallList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), CallList.class);
 
@@ -1334,6 +1368,10 @@ public class DefaultApiTest {
         String dateCreated = dateCreatedStringTestValue();
         
         RecordingList response = this.apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
+        String localVarNextPageUri = "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK")
+            .replaceAll("\\{" + "conferenceId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), RecordingList.class);
 
@@ -1357,6 +1395,9 @@ public class DefaultApiTest {
         String dateUpdated = dateUpdatedStringTestValue();
         
         ConferenceList response = this.apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
+        String localVarNextPageUri = "/Accounts/{accountId}/Conferences"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         ConferenceList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), ConferenceList.class);
 
@@ -1404,6 +1445,9 @@ public class DefaultApiTest {
         Boolean offnet = offnetBooleanTestValue();
         
         IncomingNumberList response = this.apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
+        String localVarNextPageUri = "/Accounts/{accountId}/IncomingPhoneNumbers"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         IncomingNumberList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), IncomingNumberList.class);
 
@@ -1421,6 +1465,10 @@ public class DefaultApiTest {
         String queueId = queueIdStringTestValue();
         
         QueueMemberList response = this.apiInstance.listMembers(queueId);
+        String localVarNextPageUri = "/Accounts/{accountId}/Queues/{queueId}/Members"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK")
+            .replaceAll("\\{" + "queueId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         QueueMemberList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), QueueMemberList.class);
 
@@ -1442,6 +1490,10 @@ public class DefaultApiTest {
         Boolean listen = listenBooleanTestValue();
         
         ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen);
+        String localVarNextPageUri = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK")
+            .replaceAll("\\{" + "conferenceId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         ConferenceParticipantList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), ConferenceParticipantList.class);
 
@@ -1463,6 +1515,9 @@ public class DefaultApiTest {
         String dateCreated = dateCreatedStringTestValue();
         
         RecordingList response = this.apiInstance.listRecordings(callId, conferenceId, dateCreated);
+        String localVarNextPageUri = "/Accounts/{accountId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         RecordingList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), RecordingList.class);
 
@@ -1494,6 +1549,9 @@ public class DefaultApiTest {
         Boolean is10DLC = is10DLCBooleanTestValue();
         
         MessagesList response = this.apiInstance.listSmsMessages(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
+        String localVarNextPageUri = "/Accounts/{accountId}/Messages"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         MessagesList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), MessagesList.class);
 
