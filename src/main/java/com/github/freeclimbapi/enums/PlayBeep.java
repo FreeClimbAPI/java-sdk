@@ -23,7 +23,6 @@ import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import com.github.freeclimbapi.JSON;
-import com.github.freeclimbapi.utils.*;
 
 import java.io.IOException;
 import com.google.gson.TypeAdapter;
