@@ -199,7 +199,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**updateAnAccount**](docs/DefaultApi.md#updateAnAccount) | **POST** /Accounts/{accountId} | Manage an account
 *DefaultApi* | [**updateAnApplication**](docs/DefaultApi.md#updateAnApplication) | **POST** /Accounts/{accountId}/Applications/{applicationId} | Update an application
 *DefaultApi* | [**updateAnIncomingNumber**](docs/DefaultApi.md#updateAnIncomingNumber) | **POST** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Update an Incoming Number
-
+| *DefaultApi* | [**getNextPage**](docs/DefaultApi.md#getNextPage) | **GET** | Get next page of paginated resource 
 
 ## Documentation for Models
 
