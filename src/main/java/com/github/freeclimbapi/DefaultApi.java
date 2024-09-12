@@ -36,6 +36,7 @@ import java.io.File;
 
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.utils.*;
 
 public class DefaultApi {
     private String accountId;
@@ -7805,6 +7806,102 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = updateAnIncomingNumberValidateBeforeCall(phoneNumberId, incomingNumberRequest, _callback);
         Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for getNextPage
+     * 
+     * @param response The response from the previous page of data
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public <T extends Pagination> okhttp3.Call getNextPageCall(T response, final ApiCallback _callback) throws ApiException {
+        String nextPageUri = response.getNextPageUri();
+
+        String basePath = null;
+        // Operation Servers
+        String [] localBasePaths = new String[] { };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Object localVarPostBody = null;
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, nextPageUri, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private <T extends Pagination> okhttp3.Call getNextPageValidateBeforeCall(T response, final ApiCallback _callback) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageCall(response, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Get Next Page
+     * 
+     * @param response The respnose from the previous page of data
+     * @return &lt;T extends PaginationModel&gt; ApiResponse&lt;T&gt;
+     * @throws ApiException If fail to call the API
+     */
+    public <T extends Pagination> ApiResponse<T> getNextPageWithHttpInfo(T response) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response, null);
+        Type localVarReturnType = response.getClass(); 
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Next Page
+     * 
+     * @param response The response from the previous page of data
+     * @return The next page of data
+     * @throws ApiException If fail to process the API call
+     */
+    public <T extends Pagination> T getNextPage(T response) throws ApiException {
+        ApiResponse<T> localVarResp = getNextPageWithHttpInfo(response);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Next Page (asynchronously)
+     * 
+     * @param response The response from the previous page of data
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call
+     */
+    public <T extends Pagination> okhttp3.Call getNextPageAsync(T response, final ApiCallback<T> _callback) throws ApiException {
+        okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response, _callback);
+        Type localVarReturnType = new TypeToken<T>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

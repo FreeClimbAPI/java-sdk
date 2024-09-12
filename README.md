@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.6.2</version>
+  <version>5.7.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.6.2"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.7.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.6.2.jar`
+* `target/freeclimb-java-client-5.7.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -199,7 +199,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**updateAnAccount**](docs/DefaultApi.md#updateAnAccount) | **POST** /Accounts/{accountId} | Manage an account
 *DefaultApi* | [**updateAnApplication**](docs/DefaultApi.md#updateAnApplication) | **POST** /Accounts/{accountId}/Applications/{applicationId} | Update an application
 *DefaultApi* | [**updateAnIncomingNumber**](docs/DefaultApi.md#updateAnIncomingNumber) | **POST** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Update an Incoming Number
-
+| *DefaultApi* | [**getNextPage**](docs/DefaultApi.md#getNextPage) | **GET** | Get next page of paginated resource 
 
 ## Documentation for Models
 

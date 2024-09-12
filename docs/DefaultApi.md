@@ -60,7 +60,7 @@ Method | HTTP request | Description
 [**updateAnAccount**](DefaultApi.md#updateAnAccount) | **POST** /Accounts/{accountId} | Manage an account
 [**updateAnApplication**](DefaultApi.md#updateAnApplication) | **POST** /Accounts/{accountId}/Applications/{applicationId} | Update an application
 [**updateAnIncomingNumber**](DefaultApi.md#updateAnIncomingNumber) | **POST** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Update an Incoming Number
-
+[**getNextPage**](DefaultApi.md#getNextPage) | **GET** | Get next page of paginated resource 
 
 <a name="buyAPhoneNumber"></a>
 # **buyAPhoneNumber**
@@ -4019,4 +4019,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Updated Incoming Phone Number |  -  |
+
+
+<a name="getNextPage"></a>
+# **getNextPage**
+> <T extends Pagination> T getNextPage(T response)
+
+Get next page of paginated resource
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+
+
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+
+    String alias = "alias_example";
+
+    try {
+      ApplicationList result = apiInstance.listApplications(alias);
+      System.out.println(result);
+      ApplicationList nextPageResult = apiInstance.getNextPage(result);
+      System.out.println(nextPageResult);
+    } catch (ApiException e) {
+      System.err.println("Exception")
+      System.err.println("Status code: " + e.getCode());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | T extends Pagination | Previous response from request to get paginated resource |
+
+### Return type
+
+**T**
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200**     | List of paginated resource | - |
 

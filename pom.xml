@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>5.6.2</version>
+    <version>5.7.0</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>
@@ -320,7 +320,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <jsr305-version>3.0.2</jsr305-version>
-        <swagger-parser-v3-version>2.0.23</swagger-parser-version>
+        <swagger-parser-v3-version>2.0.23</swagger-parser-v3-version>
         <mockito-core-version>3.12.4</mockito-core-version>
         <gson-fire-version>1.8.5</gson-fire-version>
         <swagger-core-version>1.6.3</swagger-core-version>
