@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**getTenDLCSmsPartnerCampaigns**](DefaultApi.md#getTenDLCSmsPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 [**getTollFreeSmsCampaign**](DefaultApi.md#getTollFreeSmsCampaign) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId} | Get a TollFree SMS Campaign
 [**getTollFreeSmsCampaigns**](DefaultApi.md#getTollFreeSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns | Get list of TollFree Campaigns
+[**knowledgebaseCompletion**](DefaultApi.md#knowledgebaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 [**listActiveQueues**](DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 [**listAllAccountLogs**](DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 [**listApplications**](DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
@@ -2092,6 +2093,77 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | The list toll-free campaigns |  -  |
+
+<a name="knowledgebaseCompletion"></a>
+# **knowledgebaseCompletion**
+> CompletionResult knowledgebaseCompletion(knowledgeBaseId, completionRequest)
+
+Query the knowledge base
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String knowledgeBaseId = "knowledgeBaseId_example"; // String | A string that uniquely identifies the KnowledgeBase resource.
+    
+    CompletionRequest completionRequest = new CompletionRequest(); // CompletionRequest | Completion request details
+    
+    try {
+      CompletionResult result = apiInstance.knowledgebaseCompletion(knowledgeBaseId, completionRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#knowledgebaseCompletion");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **knowledgeBaseId** | **String**| A string that uniquely identifies the KnowledgeBase resource. |
+ **completionRequest** | [**CompletionRequest**](CompletionRequest.md)| Completion request details | [optional]
+
+
+### Return type
+
+[**CompletionResult**](CompletionResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | KnowledgeaBase completion response |  -  |
 
 <a name="listActiveQueues"></a>
 # **listActiveQueues**
