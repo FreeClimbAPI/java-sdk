@@ -587,6 +587,142 @@ public class DefaultApi {
         return localVarCall;
     }
     /**
+     * Build call for createKnowledgeBaseCompletion
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
+     * @param completionRequest Completion request details (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createKnowledgeBaseCompletionCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = completionRequest;
+
+        // create path and map variables
+        String localVarPath = "/Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "knowledgeBaseId" + "\\}", localVarApiClient.escapeString(knowledgeBaseId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+        else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createKnowledgeBaseCompletionValidateBeforeCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'knowledgeBaseId' is set
+        if (knowledgeBaseId == null) {
+            throw new ApiException("Missing the required parameter 'knowledgeBaseId' when calling createKnowledgeBaseCompletion(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionCall(knowledgeBaseId, completionRequest, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Query the knowledge base
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
+     * @param completionRequest Completion request details (optional)
+     * @return CompletionResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
+     */
+    public CompletionResult createKnowledgeBaseCompletion(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
+        ApiResponse<CompletionResult> localVarResp = createKnowledgeBaseCompletionWithHttpInfo(knowledgeBaseId, completionRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Query the knowledge base
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
+     * @param completionRequest Completion request details (optional)
+     * @return ApiResponse&lt;CompletionResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CompletionResult> createKnowledgeBaseCompletionWithHttpInfo(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, null);
+        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Query the knowledge base (asynchronously)
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
+     * @param completionRequest Completion request details (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createKnowledgeBaseCompletionAsync(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback<CompletionResult> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, _callback);
+        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for deleteARecording
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback Callback for upload/download progress
@@ -3998,142 +4134,6 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = getTollFreeSmsCampaignsValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for knowledgebaseCompletion
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
-     * @param completionRequest Completion request details (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call knowledgebaseCompletionCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = completionRequest;
-
-        // create path and map variables
-        String localVarPath = "/Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion"
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
-            .replaceAll("\\{" + "knowledgeBaseId" + "\\}", localVarApiClient.escapeString(knowledgeBaseId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-        else {
-            localVarHeaderParams.put("Content-Type", "");
-        }
-
-        String[] localVarAuthNames = new String[] { "fc" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call knowledgebaseCompletionValidateBeforeCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'knowledgeBaseId' is set
-        if (knowledgeBaseId == null) {
-            throw new ApiException("Missing the required parameter 'knowledgeBaseId' when calling knowledgebaseCompletion(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = knowledgebaseCompletionCall(knowledgeBaseId, completionRequest, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Query the knowledge base
-     * 
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
-     * @param completionRequest Completion request details (optional)
-     * @return CompletionResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     </table>
-     */
-    public CompletionResult knowledgebaseCompletion(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
-        ApiResponse<CompletionResult> localVarResp = knowledgebaseCompletionWithHttpInfo(knowledgeBaseId, completionRequest);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Query the knowledge base
-     * 
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
-     * @param completionRequest Completion request details (optional)
-     * @return ApiResponse&lt;CompletionResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<CompletionResult> knowledgebaseCompletionWithHttpInfo(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
-        okhttp3.Call localVarCall = knowledgebaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, null);
-        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Query the knowledge base (asynchronously)
-     * 
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
-     * @param completionRequest Completion request details (optional)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call knowledgebaseCompletionAsync(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback<CompletionResult> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = knowledgebaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, _callback);
-        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

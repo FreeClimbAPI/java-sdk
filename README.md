@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.7.1</version>
+  <version>5.8.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.7.1"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.8.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.7.1.jar`
+* `target/freeclimb-java-client-5.8.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -147,6 +147,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**createAConference**](docs/DefaultApi.md#createAConference) | **POST** /Accounts/{accountId}/Conferences | Create a Conference
 *DefaultApi* | [**createAQueue**](docs/DefaultApi.md#createAQueue) | **POST** /Accounts/{accountId}/Queues | Create a Queue
 *DefaultApi* | [**createAnApplication**](docs/DefaultApi.md#createAnApplication) | **POST** /Accounts/{accountId}/Applications | Create an application
+*DefaultApi* | [**createKnowledgeBaseCompletion**](docs/DefaultApi.md#createKnowledgeBaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 *DefaultApi* | [**deleteARecording**](docs/DefaultApi.md#deleteARecording) | **DELETE** /Accounts/{accountId}/Recordings/{recordingId} | Delete a Recording
 *DefaultApi* | [**deleteAnApplication**](docs/DefaultApi.md#deleteAnApplication) | **DELETE** /Accounts/{accountId}/Applications/{applicationId} | Delete an application
 *DefaultApi* | [**deleteAnIncomingNumber**](docs/DefaultApi.md#deleteAnIncomingNumber) | **DELETE** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Delete an Incoming Number
@@ -173,7 +174,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getTenDLCSmsPartnerCampaigns**](docs/DefaultApi.md#getTenDLCSmsPartnerCampaigns) | **GET** /Accounts/{accountId}/Messages/10DLC/PartnerCampaigns | Get list of SMS 10DLC Partner Campaigns
 *DefaultApi* | [**getTollFreeSmsCampaign**](docs/DefaultApi.md#getTollFreeSmsCampaign) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId} | Get a TollFree SMS Campaign
 *DefaultApi* | [**getTollFreeSmsCampaigns**](docs/DefaultApi.md#getTollFreeSmsCampaigns) | **GET** /Accounts/{accountId}/Messages/TollFree/Campaigns | Get list of TollFree Campaigns
-*DefaultApi* | [**knowledgebaseCompletion**](docs/DefaultApi.md#knowledgebaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 *DefaultApi* | [**listActiveQueues**](docs/DefaultApi.md#listActiveQueues) | **GET** /Accounts/{accountId}/Queues | List Active Queues
 *DefaultApi* | [**listAllAccountLogs**](docs/DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 *DefaultApi* | [**listApplications**](docs/DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications

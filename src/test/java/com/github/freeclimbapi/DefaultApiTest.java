@@ -115,6 +115,25 @@ public class DefaultApiTest {
         
     }
     /**
+     * Query the knowledge base
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createKnowledgeBaseCompletionTest() throws ApiException {
+        
+        String knowledgeBaseId = knowledgeBaseIdStringTestValue();
+        
+        CompletionRequest completionRequest = completionRequestCompletionRequestTestValue();
+        
+        CompletionResult response = this.apiInstance.createKnowledgeBaseCompletion(knowledgeBaseId, completionRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), CompletionResult.class);
+        
+    }
+    /**
      * Delete a Recording
      *
      * 
@@ -551,25 +570,6 @@ public class DefaultApiTest {
         SMSTollFreeCampaignsListResult response = this.apiInstance.getTollFreeSmsCampaigns();
         // TODO: test validations
         assertEquals(response.getClass(), SMSTollFreeCampaignsListResult.class);
-        
-    }
-    /**
-     * Query the knowledge base
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void knowledgebaseCompletionTest() throws ApiException {
-        
-        String knowledgeBaseId = knowledgeBaseIdStringTestValue();
-        
-        CompletionRequest completionRequest = completionRequestCompletionRequestTestValue();
-        
-        CompletionResult response = this.apiInstance.knowledgebaseCompletion(knowledgeBaseId, completionRequest);
-        // TODO: test validations
-        assertEquals(response.getClass(), CompletionResult.class);
         
     }
     /**

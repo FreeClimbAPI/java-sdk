@@ -322,3 +322,4 @@ src/main/java/com/github/freeclimbapi/auth/ApiKeyAuth.java
 src/main/java/com/github/freeclimbapi/auth/Authentication.java
 src/main/java/com/github/freeclimbapi/auth/HttpBasicAuth.java
 src/main/java/com/github/freeclimbapi/auth/HttpBearerAuth.java
+src/test/java/com/github/freeclimbapi/DefaultApiTest.java
