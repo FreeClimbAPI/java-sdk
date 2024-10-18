@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="5.8.0"></a>
+
+## [5.8.0] - 2024-10-08
+
+### Added
+
+- Add KnowledgeBase API to SDK
+
 <a name="5.7.0"></a>
 
 ## [5.7.0] - 2024-09-03

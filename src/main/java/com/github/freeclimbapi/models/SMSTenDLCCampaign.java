@@ -1059,7 +1059,7 @@ public class SMSTenDLCCampaign {
    * @return nextRenewalOrExpirationDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Fri Dec 31 18:00:00 CST 1999", value = "When the campaign would be due for its next renew/bill date.")
+  @ApiModelProperty(example = "Fri Dec 31 19:00:00 EST 1999", value = "When the campaign would be due for its next renew/bill date.")
 
   public LocalDate getNextRenewalOrExpirationDate() {
     return nextRenewalOrExpirationDate;
