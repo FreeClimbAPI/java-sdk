@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**createAConference**](DefaultApi.md#createAConference) | **POST** /Accounts/{accountId}/Conferences | Create a Conference
 [**createAQueue**](DefaultApi.md#createAQueue) | **POST** /Accounts/{accountId}/Queues | Create a Queue
 [**createAnApplication**](DefaultApi.md#createAnApplication) | **POST** /Accounts/{accountId}/Applications | Create an application
+[**createKnowledgeBaseCompletion**](DefaultApi.md#createKnowledgeBaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 [**deleteARecording**](DefaultApi.md#deleteARecording) | **DELETE** /Accounts/{accountId}/Recordings/{recordingId} | Delete a Recording
 [**deleteAnApplication**](DefaultApi.md#deleteAnApplication) | **DELETE** /Accounts/{accountId}/Applications/{applicationId} | Delete an application
 [**deleteAnIncomingNumber**](DefaultApi.md#deleteAnIncomingNumber) | **DELETE** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Delete an Incoming Number
@@ -89,8 +90,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    BuyIncomingNumberRequest buyIncomingNumberRequest = new BuyIncomingNumberRequest(); // BuyIncomingNumberRequest | Incoming Number transaction details
-    
+    BuyIncomingNumberRequest buyIncomingNumberRequest = new BuyIncomingNumberRequest(phoneNumber={ Phone number to purchase in E.164 format (as returned in the list of Available Phone Numbers). }, alias={ Description for this new incoming phone number (max 64 characters). }, applicationId={ ID of the application that should handle phone calls to the number. }); // BuyIncomingNumberRequest | Incoming Number transaction details
     try {
       IncomingNumberResult result = apiInstance.buyAPhoneNumber(buyIncomingNumberRequest);
       System.out.println(result);
@@ -157,8 +157,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    CreateConferenceRequest createConferenceRequest = new CreateConferenceRequest(); // CreateConferenceRequest | Conference to create
-    
+    CreateConferenceRequest createConferenceRequest = new CreateConferenceRequest(alias={ A description for this Conference. Maximum 64 characters. }, playBeep={  }, record={ Setting to `true` records the entire Conference. }, waitUrl={ If specified, a URL for the audio file that provides custom hold music for the Conference when it is in the populated state. Otherwise, FreeClimb uses a system default audio file. This is always fetched using HTTP GET and is fetched just once &mdash; when the Conference is created. }, statusCallbackUrl={ This URL is invoked when the status of the Conference changes. For more information, see **statusCallbackUrl** (below). }); // CreateConferenceRequest | Conference to create
     try {
       ConferenceResult result = apiInstance.createAConference(createConferenceRequest);
       System.out.println(result);
@@ -225,8 +224,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    QueueRequest queueRequest = new QueueRequest(); // QueueRequest | Queue details used to create a queue
-    
+    QueueRequest queueRequest = new QueueRequest(alias={ Description for this Queue. Max length is 64 characters. }, maxSize={ Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:** Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks below the new value of maxSize. }); // QueueRequest | Queue details used to create a queue
     try {
       QueueResult result = apiInstance.createAQueue(queueRequest);
       System.out.println(result);
@@ -293,8 +291,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    ApplicationRequest applicationRequest = new ApplicationRequest(); // ApplicationRequest | Application Details
-    
+    ApplicationRequest applicationRequest = new ApplicationRequest(alias={ A human readable description of the application, with maximum length 64 characters. }, voiceUrl={ The URL that FreeClimb will request when an inbound call arrives on a phone number assigned to this application. Used only for inbound calls. }, voiceFallbackUrl={ The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl. Used for inbound calls only. Note: A PerCL response is expected to control the inbound call. }, callConnectUrl={ The URL that FreeClimb will request when an outbound call request is complete. Used for outbound calls only.  Note: A PerCL response is expected if the outbound call is connected (status=InProgress) to control the call. }, statusCallbackUrl={ The URL that FreeClimb will request to pass call status (such as call ended) to the application.  Note: This is a notification only; any PerCL returned will be ignored. }, smsUrl={ The URL that FreeClimb will request when a phone number assigned to this application receives an incoming SMS message. Used for inbound SMS only.  Note: Any PerCL returned will be ignored. }, smsFallbackUrl={ The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only.  Note: Any PerCL returned will be ignored. }); // ApplicationRequest | Application Details
     try {
       ApplicationResult result = apiInstance.createAnApplication(applicationRequest);
       System.out.println(result);
@@ -334,6 +331,76 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Application successfuly created |  -  |
 
+<a name="createKnowledgeBaseCompletion"></a>
+# **createKnowledgeBaseCompletion**
+> CompletionResult createKnowledgeBaseCompletion(knowledgeBaseId, completionRequest)
+
+Query the knowledge base
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String knowledgeBaseId = "knowledgeBaseId_example"; // String | A string that uniquely identifies the KnowledgeBase resource.
+
+    CompletionRequest completionRequest = new CompletionRequest(query={ Question to ask the Knowledge Base }); // CompletionRequest | Completion request details
+    try {
+      CompletionResult result = apiInstance.createKnowledgeBaseCompletion(knowledgeBaseId, completionRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#createKnowledgeBaseCompletion");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **knowledgeBaseId** | **String**| A string that uniquely identifies the KnowledgeBase resource. |
+ **completionRequest** | [**CompletionRequest**](CompletionRequest.md)| Completion request details | [optional]
+
+
+### Return type
+
+[**CompletionResult**](CompletionResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | KnowledgeaBase completion response |  -  |
+
 <a name="deleteARecording"></a>
 # **deleteARecording**
 > deleteARecording(recordingId)
@@ -362,7 +429,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
-    
+
     try {
       apiInstance.deleteARecording(recordingId);
     } catch (ApiException e) {
@@ -429,7 +496,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | String that uniquely identifies this application resource.
-    
+
     try {
       apiInstance.deleteAnApplication(applicationId);
     } catch (ApiException e) {
@@ -496,7 +563,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
-    
+
     try {
       apiInstance.deleteAnIncomingNumber(phoneNumberId);
     } catch (ApiException e) {
@@ -563,9 +630,9 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
-    
+
     String callId = "callId_example"; // String | ID if the Call that the Member belongs to
-    
+
     try {
       QueueMember result = apiInstance.dequeueAMember(queueId, callId);
       System.out.println(result);
@@ -634,7 +701,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies this queue resource.
-    
+
     try {
       QueueMember result = apiInstance.dequeueHeadMember(queueId);
       System.out.println(result);
@@ -702,7 +769,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
-    
+
     try {
       File result = apiInstance.downloadARecordingFile(recordingId);
       System.out.println(result);
@@ -769,8 +836,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    FilterLogsRequest filterLogsRequest = new FilterLogsRequest(); // FilterLogsRequest | Filter logs request paramters
-    
+    FilterLogsRequest filterLogsRequest = new FilterLogsRequest(pql={ The filter query for retrieving logs. See **Performance Query Language** below. }); // FilterLogsRequest | Filter logs request paramters
     try {
       LogList result = apiInstance.filterLogs(filterLogsRequest);
       System.out.println(result);
@@ -838,7 +904,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
-    
+
     try {
       CallResult result = apiInstance.getACall(callId);
       System.out.println(result);
@@ -906,7 +972,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | A string that uniquely identifies this conference resource.
-    
+
     try {
       ConferenceResult result = apiInstance.getAConference(conferenceId);
       System.out.println(result);
@@ -974,9 +1040,9 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
-    
+
     String callId = "callId_example"; // String | ID of the Call that the Member belongs to
-    
+
     try {
       QueueMember result = apiInstance.getAMember(queueId, callId);
       System.out.println(result);
@@ -1045,9 +1111,9 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
-    
+
     String callId = "callId_example"; // String | ID of the Call associated with this participant.
-    
+
     try {
       ConferenceParticipantResult result = apiInstance.getAParticipant(conferenceId, callId);
       System.out.println(result);
@@ -1116,7 +1182,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | A string that uniquely identifies this queue resource.
-    
+
     try {
       QueueResult result = apiInstance.getAQueue(queueId);
       System.out.println(result);
@@ -1184,7 +1250,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
-    
+
     try {
       RecordingResult result = apiInstance.getARecording(recordingId);
       System.out.println(result);
@@ -1315,7 +1381,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | A string that uniquely identifies this application resource.
-    
+
     try {
       ApplicationResult result = apiInstance.getAnApplication(applicationId);
       System.out.println(result);
@@ -1383,7 +1449,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
-    
+
     try {
       IncomingNumberResult result = apiInstance.getAnIncomingNumber(phoneNumberId);
       System.out.println(result);
@@ -1451,7 +1517,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String messageId = "messageId_example"; // String | String that uniquely identifies this Message resource.
-    
+
     try {
       MessageResult result = apiInstance.getAnSmsMessage(messageId);
       System.out.println(result);
@@ -1519,7 +1585,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
-    
+
     try {
       QueueMember result = apiInstance.getHeadMember(queueId);
       System.out.println(result);
@@ -1587,7 +1653,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String brandId = "brandId_example"; // String | String that uniquely identifies this brand resource.
-    
+
     try {
       SMSTenDLCBrand result = apiInstance.getTenDLCSmsBrand(brandId);
       System.out.println(result);
@@ -1718,7 +1784,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String campaignId = "campaignId_example"; // String | String that uniquely identifies this campaign resource.
-    
+
     try {
       SMSTenDLCCampaign result = apiInstance.getTenDLCSmsCampaign(campaignId);
       System.out.println(result);
@@ -1786,7 +1852,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String brandId = "brandId_example"; // String | The unique identifier for a brand
-    
+
     try {
       SMSTenDLCCampaignsListResult result = apiInstance.getTenDLCSmsCampaigns(brandId);
       System.out.println(result);
@@ -1854,7 +1920,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String campaignId = "campaignId_example"; // String | String that uniquely identifies this campaign resource.
-    
+
     try {
       SMSTenDLCPartnerCampaign result = apiInstance.getTenDLCSmsPartnerCampaign(campaignId);
       System.out.println(result);
@@ -1922,7 +1988,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String brandId = "brandId_example"; // String | The unique identifier for a brand
-    
+
     try {
       SMSTenDLCPartnerCampaignsListResult result = apiInstance.getTenDLCSmsPartnerCampaigns(brandId);
       System.out.println(result);
@@ -1990,7 +2056,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String campaignId = "campaignId_example"; // String | String that uniquely identifies this TollFree Campaign resource.
-    
+
     try {
       SMSTollFreeCampaign result = apiInstance.getTollFreeSmsCampaign(campaignId);
       System.out.println(result);
@@ -2121,7 +2187,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String alias = "alias_example"; // String | Return only the Queue resources with aliases that exactly match this name.
-    
+
     try {
       QueueList result = apiInstance.listActiveQueues(alias);
       System.out.println(result);
@@ -2252,7 +2318,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String alias = "alias_example"; // String | Return only applications with aliases that exactly match this value.
-    
+
     try {
       ApplicationList result = apiInstance.listApplications(alias);
       System.out.println(result);
@@ -2320,25 +2386,25 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumber = "phoneNumber_example"; // String | PCRE-compatible regular expression to filter against `phoneNumber` field, which is in E.164 format.
-    
+
     String region = "region_example"; // String | State or province of this phone number.
-    
+
     String country = "country_example"; // String | Country of this phone number.
-    
+
     Boolean voiceEnabled = true; // Boolean | Indicates whether the phone number can handle Calls. Typically set to true for all numbers.
-    
+
     Boolean smsEnabled = true; // Boolean | Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers.
-    
+
     Boolean capabilitiesVoice = true; // Boolean | 
-    
+
     Boolean capabilitiesSms = true; // Boolean | 
-    
+
     Boolean capabilitiesTollFree = true; // Boolean | 
-    
+
     Boolean capabilitiesTenDLC = true; // Boolean | 
-    
+
     Boolean capabilitiesShortCode = true; // Boolean | 
-    
+
     try {
       AvailableNumberList result = apiInstance.listAvailableNumbers(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
       System.out.println(result);
@@ -2415,7 +2481,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
-    
+
     try {
       LogList result = apiInstance.listCallLogs(callId);
       System.out.println(result);
@@ -2483,9 +2549,9 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
-    
+
     String dateCreated = "dateCreated_example"; // String | Only show recordings created on the specified date, in the form *YYYY-MM-DD*.
-    
+
     try {
       RecordingList result = apiInstance.listCallRecordings(callId, dateCreated);
       System.out.println(result);
@@ -2554,21 +2620,19 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     Boolean active = false; // Boolean | If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query.
-    
+
     String to = "to_example"; // String | Only show Calls to this phone number.
-    
+
     String from = "from_example"; // String | Only show Calls from this phone number.
-    
-    CallStatus status = CallStatus.fromValue("queued"); // CallStatus | Only show Calls currently in this status. May be `queued`, `ringing`, `inProgress`, `canceled`, `completed`, `failed`, `busy`, or `noAnswer`.
-    
+
+    CallStatus status = new CallStatus(); // CallStatus | Only show Calls currently in this status. May be `queued`, `ringing`, `inProgress`, `canceled`, `completed`, `failed`, `busy`, or `noAnswer`.
     String startTime = "startTime_example"; // String | Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss.
-    
+
     String endTime = "endTime_example"; // String | Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss.
-    
+
     String parentCallId = "parentCallId_example"; // String | Only show Calls spawned by the call with this ID.
-    
-    List<String> applicationId = Arrays.asList(); // List<String> | Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications.
-    
+
+    List<String> applicationId = new List<String>(); // List<String> | Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications.
     try {
       CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
       System.out.println(result);
@@ -2643,11 +2707,11 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | Show only Recordings made during the conference with this ID.
-    
+
     String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
-    
+
     String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-    
+
     try {
       RecordingList result = apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
       System.out.println(result);
@@ -2717,13 +2781,13 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String status = "status_example"; // String | Only show conferences that currently have the specified status. Valid values: `empty`, `populated`, `inProgress`, or `terminated`.
-    
+
     String alias = "alias_example"; // String | List Conferences whose alias exactly matches this string.
-    
+
     String dateCreated = "dateCreated_example"; // String | Only show Conferences that were created on the specified date, in the form *YYYY-MM-DD*.
-    
+
     String dateUpdated = "dateUpdated_example"; // String | Only show Conferences that were last updated on the specified date, in the form *YYYY-MM-DD*.
-    
+
     try {
       ConferenceList result = apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
       System.out.println(result);
@@ -2794,37 +2858,37 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumber = "phoneNumber_example"; // String | Only show incoming phone number resources that match this PCRE-compatible regular expression.
-    
+
     String alias = "alias_example"; // String | Only show incoming phone numbers with aliases that exactly match this value.
-    
+
     String region = "region_example"; // String | State or province of this phone number.
-    
+
     String country = "country_example"; // String | Country of this phone number.
-    
+
     String applicationId = "applicationId_example"; // String | ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId.
-    
+
     Boolean hasApplication = false; // Boolean | Indication of whether the phone number has an application linked to it.
-    
+
     Boolean voiceEnabled = true; // Boolean | Indicates whether the phone number can handle Calls. Typically set to true for all numbers.
-    
+
     Boolean smsEnabled = true; // Boolean | Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers.
-    
+
     Boolean hasCampaign = true; // Boolean | Indication of whether the phone number has a campaign associated with it
-    
+
     Boolean capabilitiesVoice = true; // Boolean | 
-    
+
     Boolean capabilitiesSms = true; // Boolean | 
-    
+
     Boolean capabilitiesTollFree = true; // Boolean | 
-    
+
     Boolean capabilitiesTenDLC = true; // Boolean | 
-    
+
     Boolean capabilitiesShortCode = true; // Boolean | 
-    
+
     String tfnCampaignId = "tfnCampaignId_example"; // String | Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID.
-    
+
     Boolean offnet = true; // Boolean | Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource.
-    
+
     try {
       IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
       System.out.println(result);
@@ -2907,7 +2971,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | String that uniquely identifies the Queue that the Member belongs to.
-    
+
     try {
       QueueMemberList result = apiInstance.listMembers(queueId);
       System.out.println(result);
@@ -2975,11 +3039,11 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
-    
+
     Boolean talk = true; // Boolean | Only show Participants with the talk privilege.
-    
+
     Boolean listen = true; // Boolean | Only show Participants with the listen privilege.
-    
+
     try {
       ConferenceParticipantList result = apiInstance.listParticipants(conferenceId, talk, listen);
       System.out.println(result);
@@ -3049,11 +3113,11 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | Show only Recordings made during the Call with this ID.
-    
+
     String conferenceId = "conferenceId_example"; // String | Show only Recordings made during the conference with this ID.
-    
+
     String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-    
+
     try {
       RecordingList result = apiInstance.listRecordings(callId, conferenceId, dateCreated);
       System.out.println(result);
@@ -3123,21 +3187,20 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String to = "to_example"; // String | Only show Messages to this phone number.
-    
+
     String from = "from_example"; // String | Only show Messages from this phone number.
-    
+
     String beginTime = "beginTime_example"; // String | Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*.
-    
+
     String endTime = "endTime_example"; // String | Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*..
-    
-    MessageDirection direction = MessageDirection.fromValue("inbound"); // MessageDirection | Either `inbound` or `outbound`. Only show Messages that were either *sent from* or *received by* FreeClimb.
-    
+
+    MessageDirection direction = new MessageDirection(); // MessageDirection | Either `inbound` or `outbound`. Only show Messages that were either *sent from* or *received by* FreeClimb.
     String campaignId = "campaignId_example"; // String | Only show messages associated with this campaign ID.
-    
+
     String brandId = "brandId_example"; // String | Only show messages associated with this brand ID
-    
+
     Boolean is10DLC = true; // Boolean | Only show messages that were sent as part of a 10DLC campaign.
-    
+
     try {
       MessagesList result = apiInstance.listSmsMessages(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
       System.out.println(result);
@@ -3211,8 +3274,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    MakeCallRequest makeCallRequest = new MakeCallRequest(); // MakeCallRequest | Call details for making a call
-    
+    MakeCallRequest makeCallRequest = new MakeCallRequest(from={ Phone number to use as the caller ID. This can be: (a) The To or From number provided in FreeClimb's initial request to your app or (b) Any incoming phone number you have purchased from FreeClimb. }, to={ Phone number to place the Call to. }, applicationId={ Required if no `parentCallId` or `callConnectUrl` has been provided. ID of the application FreeClimb should use to handle this phone call. FreeClimb will use the `callConnectUrl` and `statusCallbackUrl` set on the application unless the `callConnectUrl` attribute is also provided with the request. In this case, the URL specified in that `callConnectUrl` attribute will be used as a replacement of the `callConnectUrl` originally assigned in the application. If the `callConnectUrl` is not set as either an attribute of the request or as part of the specified application, an error will be provided. The application’s voiceUrl parameter is not used for outbound calls. }, sendDigits={ String of digits to dial after connecting to the number. It can include digits `0-9`, `*`, and `#`, and allows embedding a pause between the output of individual digits. The default pause is 500 milliseconds. So, a string such as *1234#* will be played in 2 seconds because of the 4 standard pauses implied within the string. A custom pause is specified by including a positive integer wrapped in curly braces: {n}. For more information, see **sendDigits examples** below. }, ifMachine={ Specifies how FreeClimb should handle this Call if an answering machine answers it. }, ifMachineUrl={ This attribute specifies a URL to which FreeClimb will make a POST request when an answering machine or a fax machine is detected. This URL is required if the ifMachine flag is set to redirect. When ifMachine is set to hangup, ifMachineUrl must not be included in the request. For more information, see **ifMachineUrl example** below. }, timeout={ Number of seconds that FreeClimb should allow the phone to ring before assuming there is no answer. Default is 30 seconds. Maximum allowed ring-time is determined by the target phone's provider. Note that most providers limit ring-time to 120 seconds. }, parentCallId={ Required if no `applicationId` or `callConnectUrl` has been provided. The ID of the parent Call in the case that this new Call is meant to be treated as a child of an existing Call. This attribute should be included when possible to reduce latency when adding child calls to Conferences containing the parent Call. A call can only be used as a parent once the call is in progress or as an inbound call that is still ringing. An outbound call is considered to be in progress once the `outdialConnect` or `outdialApiConnect` webhook is invoked. An inbound call is ringing when the inbound webhook is invoked. If a `callConnectUrl` attribute is also included with the `parentCallId` in the request, this URL will be used as a replacement of the `callConnectUrl` originally assigned in the parent call. }, privacyMode={ Activate privacy mode in order to obscure log data that can potentially expose private information. }, callConnectUrl={ The URL that FreeClimb should use to handle this phone call. If an applicationId or parentCallId have already been provided, this callConnectUrl attribute will be used as a replacement of the callConnectUrl originally assigned in the application or parent call. }); // MakeCallRequest | Call details for making a call
     try {
       CallResult result = apiInstance.makeACall(makeCallRequest);
       System.out.println(result);
@@ -3279,8 +3341,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    CreateWebRTCToken createWebRTCToken = new CreateWebRTCToken(); // CreateWebRTCToken | Information needed to craft a JWT compatible with the platforms WebRTC APIs
-    
+    CreateWebRTCToken createWebRTCToken = new CreateWebRTCToken(to={ E.164 formatted phone number to which calls using this token will be made. }, from={ E.164 formatted phone number owned by the reqeusting account from which calls using this token will be made. }, uses={ number of times this token may be used for a WebRTC call }); // CreateWebRTCToken | Information needed to craft a JWT compatible with the platforms WebRTC APIs
     try {
       String result = apiInstance.makeAWebrtcJwt(createWebRTCToken);
       System.out.println(result);
@@ -3348,9 +3409,9 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
-    
+
     String callId = "callId_example"; // String | ID of the Call associated with this participant.
-    
+
     try {
       apiInstance.removeAParticipant(conferenceId, callId);
     } catch (ApiException e) {
@@ -3418,7 +3479,6 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     MessageRequest messageRequest = new MessageRequest(); // MessageRequest | Details to create a message
-    
     try {
       MessageResult result = apiInstance.sendAnSmsMessage(messageRequest);
       System.out.println(result);
@@ -3486,7 +3546,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String recordingId = "recordingId_example"; // String | String that uniquely identifies this recording resource.
-    
+
     try {
       File result = apiInstance.streamARecordingFile(recordingId);
       System.out.println(result);
@@ -3554,9 +3614,8 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | String that uniquely identifies this conference resource.
-    
-    UpdateConferenceRequest updateConferenceRequest = new UpdateConferenceRequest(); // UpdateConferenceRequest | Conference Details to update
-    
+
+    UpdateConferenceRequest updateConferenceRequest = new UpdateConferenceRequest(alias={ Description for this conference. Maximum 64 characters. }, playBeep={  }, status={  }); // UpdateConferenceRequest | Conference Details to update
     try {
       apiInstance.updateAConference(conferenceId, updateConferenceRequest);
     } catch (ApiException e) {
@@ -3624,9 +3683,8 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String callId = "callId_example"; // String | String that uniquely identifies this call resource.
-    
-    UpdateCallRequest updateCallRequest = new UpdateCallRequest(); // UpdateCallRequest | Call details to update
-    
+
+    UpdateCallRequest updateCallRequest = new UpdateCallRequest(status={  }); // UpdateCallRequest | Call details to update
     try {
       apiInstance.updateALiveCall(callId, updateCallRequest);
     } catch (ApiException e) {
@@ -3694,11 +3752,10 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String conferenceId = "conferenceId_example"; // String | ID of the conference this participant is in.
-    
+
     String callId = "callId_example"; // String | ID of the Call associated with this participant.
-    
-    UpdateConferenceParticipantRequest updateConferenceParticipantRequest = new UpdateConferenceParticipantRequest(); // UpdateConferenceParticipantRequest | Conference participant details to update
-    
+
+    UpdateConferenceParticipantRequest updateConferenceParticipantRequest = new UpdateConferenceParticipantRequest(talk={ (Optional) Default is `true`. Setting to `false` mutes the Participant. FreeClimb returns an error and ignores any other value. }, listen={ (Optional) Default is `true`. Setting to `false` silences the Conference for this Participant. FreeClimb returns an error and ignores any other value. }); // UpdateConferenceParticipantRequest | Conference participant details to update
     try {
       ConferenceParticipantResult result = apiInstance.updateAParticipant(conferenceId, callId, updateConferenceParticipantRequest);
       System.out.println(result);
@@ -3768,9 +3825,8 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String queueId = "queueId_example"; // String | A string that uniquely identifies this Queue resource.
-    
-    QueueRequest queueRequest = new QueueRequest(); // QueueRequest | Queue Details to update
-    
+
+    QueueRequest queueRequest = new QueueRequest(alias={ Description for this Queue. Max length is 64 characters. }, maxSize={ Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:** Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks below the new value of maxSize. }); // QueueRequest | Queue Details to update
     try {
       QueueResult result = apiInstance.updateAQueue(queueId, queueRequest);
       System.out.println(result);
@@ -3838,8 +3894,7 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    AccountRequest accountRequest = new AccountRequest(); // AccountRequest | Account details to update
-    
+    AccountRequest accountRequest = new AccountRequest(alias={ Description for this account. }, label={ Group to which this account belongs. }); // AccountRequest | Account details to update
     try {
       apiInstance.updateAnAccount(accountRequest);
     } catch (ApiException e) {
@@ -3906,9 +3961,8 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String applicationId = "applicationId_example"; // String | A string that uniquely identifies this application resource.
-    
-    ApplicationRequest applicationRequest = new ApplicationRequest(); // ApplicationRequest | Application details to update.
-    
+
+    ApplicationRequest applicationRequest = new ApplicationRequest(alias={ A human readable description of the application, with maximum length 64 characters. }, voiceUrl={ The URL that FreeClimb will request when an inbound call arrives on a phone number assigned to this application. Used only for inbound calls. }, voiceFallbackUrl={ The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl. Used for inbound calls only. Note: A PerCL response is expected to control the inbound call. }, callConnectUrl={ The URL that FreeClimb will request when an outbound call request is complete. Used for outbound calls only.  Note: A PerCL response is expected if the outbound call is connected (status=InProgress) to control the call. }, statusCallbackUrl={ The URL that FreeClimb will request to pass call status (such as call ended) to the application.  Note: This is a notification only; any PerCL returned will be ignored. }, smsUrl={ The URL that FreeClimb will request when a phone number assigned to this application receives an incoming SMS message. Used for inbound SMS only.  Note: Any PerCL returned will be ignored. }, smsFallbackUrl={ The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only.  Note: Any PerCL returned will be ignored. }); // ApplicationRequest | Application details to update.
     try {
       ApplicationResult result = apiInstance.updateAnApplication(applicationId, applicationRequest);
       System.out.println(result);
@@ -3977,9 +4031,8 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
     String phoneNumberId = "phoneNumberId_example"; // String | String that uniquely identifies this phone number resource.
-    
-    IncomingNumberRequest incomingNumberRequest = new IncomingNumberRequest(); // IncomingNumberRequest | Incoming Number details to update
-    
+
+    IncomingNumberRequest incomingNumberRequest = new IncomingNumberRequest(applicationId={ ID of the Application that should handle calls to this number. }, alias={ Description for this phone number. }, campaignId={ The campaign ID generated by the campaign registry }); // IncomingNumberRequest | Incoming Number details to update
     try {
       IncomingNumberResult result = apiInstance.updateAnIncomingNumber(phoneNumberId, incomingNumberRequest);
       System.out.println(result);

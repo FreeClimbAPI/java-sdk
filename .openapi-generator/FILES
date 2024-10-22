@@ -28,6 +28,8 @@ docs/CallResult.md
 docs/CallResultAllOf.md
 docs/CallStatus.md
 docs/Capabilities.md
+docs/CompletionRequest.md
+docs/CompletionResult.md
 docs/ConferenceList.md
 docs/ConferenceListAllOf.md
 docs/ConferenceParticipantList.md
@@ -185,6 +187,8 @@ src/main/java/com/github/freeclimbapi/CallResult.java
 src/main/java/com/github/freeclimbapi/CallResultAllOf.java
 src/main/java/com/github/freeclimbapi/CallStatus.java
 src/main/java/com/github/freeclimbapi/Capabilities.java
+src/main/java/com/github/freeclimbapi/CompletionRequest.java
+src/main/java/com/github/freeclimbapi/CompletionResult.java
 src/main/java/com/github/freeclimbapi/ConferenceList.java
 src/main/java/com/github/freeclimbapi/ConferenceListAllOf.java
 src/main/java/com/github/freeclimbapi/ConferenceParticipantList.java

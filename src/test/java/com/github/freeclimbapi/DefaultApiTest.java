@@ -115,6 +115,25 @@ public class DefaultApiTest {
         
     }
     /**
+     * Query the knowledge base
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createKnowledgeBaseCompletionTest() throws ApiException {
+        
+        String knowledgeBaseId = knowledgeBaseIdStringTestValue();
+        
+        CompletionRequest completionRequest = completionRequestCompletionRequestTestValue();
+        
+        CompletionResult response = this.apiInstance.createKnowledgeBaseCompletion(knowledgeBaseId, completionRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), CompletionResult.class);
+        
+    }
+    /**
      * Delete a Recording
      *
      * 
@@ -1886,5 +1905,15 @@ public class DefaultApiTest {
 
     private String tfnCampaignIdStringTestValue() {
         return "TEST-TFN-CAMPAIGN";
+    }
+
+    private String knowledgeBaseIdStringTestValue() {
+        return "KNOWLEDGE-BASE-ID";
+    }
+
+    private CompletionRequest completionRequestCompletionRequestTestValue() {
+        CompletionRequest object = new CompletionRequest();
+        object.setQuery("query_example");
+        return object;
     }
 }
