@@ -44,45 +44,90 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MakeCallRequest {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
   private String applicationId;
 
+  
   public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
+  
   private String sendDigits;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE)
+  
   private String ifMachine;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
+  
   private String ifMachineUrl;
 
+  
   public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
+  
+  
   @SerializedName(SERIALIZED_NAME_TIMEOUT)
+  
   private Integer timeout = 30;
 
+  
   public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+  
+  
   @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+  
   private String parentCallId;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
+  
   private String callConnectUrl;
+
 
   public MakeCallRequest() { 
   }
@@ -374,4 +419,3 @@ public class MakeCallRequest {
   }
 
 }
-

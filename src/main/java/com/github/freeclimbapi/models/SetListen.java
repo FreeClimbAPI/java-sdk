@@ -45,9 +45,18 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SetListen` command enables or disables the listen privilege for a Conference Participant provided both calls are in the same conference. The Participant can hear what the other participants are saying only if this privilege is enabled.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetListen extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
+
 
   public SetListen() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +132,3 @@ public class SetListen extends PerclCommand {
   }
 
 }
-

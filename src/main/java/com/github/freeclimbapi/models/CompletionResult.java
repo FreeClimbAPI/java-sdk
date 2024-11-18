@@ -44,8 +44,16 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionResult {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_RESPONSE = "response";
+  
+  
   @SerializedName(SERIALIZED_NAME_RESPONSE)
+  
   private String response;
 
   /**
@@ -95,9 +103,14 @@ public class CompletionResult {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private StatusEnum status;
+
 
   public CompletionResult() { 
   }
@@ -189,4 +202,3 @@ public class CompletionResult {
   }
 
 }
-

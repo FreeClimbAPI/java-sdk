@@ -36,9 +36,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(MachineType.Adapter.class)
 public enum MachineType {
   
-  ANSWERING_MACHINE("answeringMachine"),
+  ANSWERING_MACHINE("answering machine"),
   
-  FAX_MACHINE("faxMachine");
+  FAX_MODEM("fax modem");
 
   private String value;
 

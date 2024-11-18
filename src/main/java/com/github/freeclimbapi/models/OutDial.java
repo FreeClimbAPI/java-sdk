@@ -45,45 +45,90 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The OutDial command is used to call a phone number")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OutDial extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
+  
   private String callConnectUrl;
 
+  
   public static final String SERIALIZED_NAME_CALLING_NUMBER = "callingNumber";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALLING_NUMBER)
+  
   private String callingNumber;
 
+  
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
+  
+  
   @SerializedName(SERIALIZED_NAME_DESTINATION)
+  
   private String destination;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE)
+  
   private IfMachine ifMachine;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
+  
   private String ifMachineUrl;
 
+  
   public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
+  
   private String sendDigits;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+  
   private String statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
+  
+  
   @SerializedName(SERIALIZED_NAME_TIMEOUT)
+  
   private Integer timeout;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public OutDial() { 
     this.command = this.getClass().getSimpleName();
@@ -393,4 +438,3 @@ public class OutDial extends PerclCommand {
   }
 
 }
-

@@ -44,17 +44,34 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TranscribeUtteranceAllOfRecord {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_SAVE_RECORDING = "saveRecording";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAVE_RECORDING)
+  
   private Boolean saveRecording = false;
 
+  
   public static final String SERIALIZED_NAME_MAX_LENGTH_SEC = "maxLengthSec";
+  
+  
   @SerializedName(SERIALIZED_NAME_MAX_LENGTH_SEC)
+  
   private Integer maxLengthSec = 60;
 
+  
   public static final String SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS = "rcrdTerminationSilenceTimeMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS)
+  
   private Integer rcrdTerminationSilenceTimeMs;
+
 
   public TranscribeUtteranceAllOfRecord() { 
   }
@@ -175,4 +192,3 @@ public class TranscribeUtteranceAllOfRecord {
   }
 
 }
-

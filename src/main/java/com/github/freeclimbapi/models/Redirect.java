@@ -45,9 +45,18 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Redirect` command transfers control of a Call to the PerCL at a different URL. `Redirect` is a terminal command, so any actions following it are never executed. The maximum number of redirections allowed during the life time of a Call is 256. This is intended to prevent a Call from possibly looping infinitely due to errors in PerCL being generated.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Redirect extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
+
 
   public Redirect() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +132,3 @@ public class Redirect extends PerclCommand {
   }
 
 }
-

@@ -44,12 +44,24 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCPartnerCampaign {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
   /**
@@ -99,113 +111,222 @@ public class SMSTenDLCPartnerCampaign {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private StatusEnum status;
 
+  
   public static final String SERIALIZED_NAME_CREATE_DATE = "createDate";
+  
+  
   @SerializedName(SERIALIZED_NAME_CREATE_DATE)
+  
   private OffsetDateTime createDate;
 
+  
   public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  
   private String brandId;
 
+  
   public static final String SERIALIZED_NAME_USECASE = "usecase";
+  
+  
   @SerializedName(SERIALIZED_NAME_USECASE)
+  
   private String usecase;
 
+  
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  
+  
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  
   private String description;
 
+  
   public static final String SERIALIZED_NAME_EMBEDDED_LINK = "embeddedLink";
+  
+  
   @SerializedName(SERIALIZED_NAME_EMBEDDED_LINK)
+  
   private Boolean embeddedLink = false;
 
+  
   public static final String SERIALIZED_NAME_EMBEDDED_PHONE = "embeddedPhone";
+  
+  
   @SerializedName(SERIALIZED_NAME_EMBEDDED_PHONE)
+  
   private Boolean embeddedPhone = false;
 
+  
   public static final String SERIALIZED_NAME_AFFILIATE_MARKETING = "affiliateMarketing";
+  
+  
   @SerializedName(SERIALIZED_NAME_AFFILIATE_MARKETING)
+  
   private Boolean affiliateMarketing;
 
+  
   public static final String SERIALIZED_NAME_NUMBER_POOL = "numberPool";
+  
+  
   @SerializedName(SERIALIZED_NAME_NUMBER_POOL)
+  
   private Boolean numberPool = false;
 
+  
   public static final String SERIALIZED_NAME_AGE_GATED = "ageGated";
+  
+  
   @SerializedName(SERIALIZED_NAME_AGE_GATED)
+  
   private Boolean ageGated;
 
+  
   public static final String SERIALIZED_NAME_DIRECT_LENDING = "directLending";
+  
+  
   @SerializedName(SERIALIZED_NAME_DIRECT_LENDING)
+  
   private Boolean directLending;
 
+  
   public static final String SERIALIZED_NAME_SUBSCRIBER_OPTIN = "subscriberOptin";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBSCRIBER_OPTIN)
+  
   private Boolean subscriberOptin = false;
 
+  
   public static final String SERIALIZED_NAME_SUBSCRIBER_OPTOUT = "subscriberOptout";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBSCRIBER_OPTOUT)
+  
   private Boolean subscriberOptout = false;
 
+  
   public static final String SERIALIZED_NAME_SUBSCRIBER_HELP = "subscriberHelp";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBSCRIBER_HELP)
+  
   private Boolean subscriberHelp = false;
 
+  
   public static final String SERIALIZED_NAME_SAMPLE1 = "sample1";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAMPLE1)
+  
   private String sample1;
 
+  
   public static final String SERIALIZED_NAME_SAMPLE2 = "sample2";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAMPLE2)
+  
   private String sample2;
 
+  
   public static final String SERIALIZED_NAME_SAMPLE3 = "sample3";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAMPLE3)
+  
   private String sample3;
 
+  
   public static final String SERIALIZED_NAME_SAMPLE4 = "sample4";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAMPLE4)
+  
   private String sample4;
 
+  
   public static final String SERIALIZED_NAME_SAMPLE5 = "sample5";
+  
+  
   @SerializedName(SERIALIZED_NAME_SAMPLE5)
+  
   private String sample5;
 
+  
   public static final String SERIALIZED_NAME_MESSAGE_FLOW = "messageFlow";
+  
+  
   @SerializedName(SERIALIZED_NAME_MESSAGE_FLOW)
+  
   private String messageFlow;
 
+  
   public static final String SERIALIZED_NAME_HELP_MESSAGE = "helpMessage";
+  
+  
   @SerializedName(SERIALIZED_NAME_HELP_MESSAGE)
+  
   private String helpMessage;
 
+  
   public static final String SERIALIZED_NAME_OPTIN_KEYWORDS = "optinKeywords";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTIN_KEYWORDS)
+  
   private String optinKeywords;
 
+  
   public static final String SERIALIZED_NAME_OPTOUT_KEYWORDS = "optoutKeywords";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTOUT_KEYWORDS)
+  
   private String optoutKeywords;
 
+  
   public static final String SERIALIZED_NAME_HELP_KEYWORDS = "helpKeywords";
+  
+  
   @SerializedName(SERIALIZED_NAME_HELP_KEYWORDS)
+  
   private String helpKeywords;
 
+  
   public static final String SERIALIZED_NAME_OPTIN_MESSAGE = "optinMessage";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTIN_MESSAGE)
+  
   private String optinMessage;
 
+  
   public static final String SERIALIZED_NAME_OPTOUT_MESSAGE = "optoutMessage";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTOUT_MESSAGE)
+  
   private String optoutMessage;
 
+  
   public static final String SERIALIZED_NAME_BRAND = "brand";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND)
+  
   private SMSTenDLCPartnerCampaignBrand brand;
+
 
   public SMSTenDLCPartnerCampaign() { 
   }
@@ -983,4 +1104,3 @@ public class SMSTenDLCPartnerCampaign {
   }
 
 }
-

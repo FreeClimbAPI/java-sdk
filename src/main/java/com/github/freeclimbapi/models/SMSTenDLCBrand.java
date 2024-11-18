@@ -45,8 +45,16 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "A brand is a business identity behind the campaign.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCBrand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
   /**
@@ -102,72 +110,140 @@ public class SMSTenDLCBrand {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entityType";
+  
+  
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
+  
   private EntityTypeEnum entityType;
 
+  
   public static final String SERIALIZED_NAME_CSP_ID = "cspId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CSP_ID)
+  
   private String cspId;
 
+  
   public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  
   private String brandId;
 
+  
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
+  
+  
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
+  
   private String firstName;
 
+  
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  
+  
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  
   private String lastName;
 
+  
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
+  
+  
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  
   private String displayName;
 
+  
   public static final String SERIALIZED_NAME_COMPANY_NAME = "companyName";
+  
+  
   @SerializedName(SERIALIZED_NAME_COMPANY_NAME)
+  
   private String companyName;
 
+  
   public static final String SERIALIZED_NAME_EIN = "ein";
+  
+  
   @SerializedName(SERIALIZED_NAME_EIN)
+  
   private String ein;
 
+  
   public static final String SERIALIZED_NAME_EIN_ISSUING_COUNTRY = "einIssuingCountry";
+  
+  
   @SerializedName(SERIALIZED_NAME_EIN_ISSUING_COUNTRY)
+  
   private String einIssuingCountry;
 
+  
   public static final String SERIALIZED_NAME_PHONE = "phone";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE)
+  
   private String phone;
 
+  
   public static final String SERIALIZED_NAME_STREET = "street";
+  
+  
   @SerializedName(SERIALIZED_NAME_STREET)
+  
   private String street;
 
+  
   public static final String SERIALIZED_NAME_CITY = "city";
+  
+  
   @SerializedName(SERIALIZED_NAME_CITY)
+  
   private String city;
 
+  
   public static final String SERIALIZED_NAME_STATE = "state";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATE)
+  
   private String state;
 
+  
   public static final String SERIALIZED_NAME_POSTAL_CODE = "postalCode";
+  
+  
   @SerializedName(SERIALIZED_NAME_POSTAL_CODE)
+  
   private String postalCode;
 
+  
   public static final String SERIALIZED_NAME_COUNTRY = "country";
+  
+  
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  
   private String country;
 
+  
   public static final String SERIALIZED_NAME_EMAIL = "email";
+  
+  
   @SerializedName(SERIALIZED_NAME_EMAIL)
+  
   private String email;
 
+  
   public static final String SERIALIZED_NAME_STOCK_SYMBOL = "stockSymbol";
+  
+  
   @SerializedName(SERIALIZED_NAME_STOCK_SYMBOL)
+  
   private String stockSymbol;
 
   /**
@@ -267,16 +343,28 @@ public class SMSTenDLCBrand {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_STOCK_EXCHANGE = "stockExchange";
+  
+  
   @SerializedName(SERIALIZED_NAME_STOCK_EXCHANGE)
+  
   private StockExchangeEnum stockExchange;
 
+  
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ipAddress";
+  
+  
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
+  
   private String ipAddress;
 
+  
   public static final String SERIALIZED_NAME_WEBSITE = "website";
+  
+  
   @SerializedName(SERIALIZED_NAME_WEBSITE)
+  
   private String website;
 
   /**
@@ -332,16 +420,28 @@ public class SMSTenDLCBrand {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_BRAND_RELATIONSHIP = "brandRelationship";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_RELATIONSHIP)
+  
   private BrandRelationshipEnum brandRelationship;
 
+  
   public static final String SERIALIZED_NAME_VERTICAL = "vertical";
+  
+  
   @SerializedName(SERIALIZED_NAME_VERTICAL)
+  
   private String vertical;
 
+  
   public static final String SERIALIZED_NAME_ALT_BUSINESS_ID = "altBusinessId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALT_BUSINESS_ID)
+  
   private String altBusinessId;
 
   /**
@@ -395,24 +495,44 @@ public class SMSTenDLCBrand {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_ALT_BUSINESS_ID_TYPE = "altBusinessIdType";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALT_BUSINESS_ID_TYPE)
+  
   private AltBusinessIdTypeEnum altBusinessIdType;
 
+  
   public static final String SERIALIZED_NAME_UNIVERSAL_EIN = "universalEin";
+  
+  
   @SerializedName(SERIALIZED_NAME_UNIVERSAL_EIN)
+  
   private String universalEin;
 
+  
   public static final String SERIALIZED_NAME_REFERENCE_ID = "referenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_REFERENCE_ID)
+  
   private String referenceId;
 
+  
   public static final String SERIALIZED_NAME_OPTIONAL_ATTRIBUTES = "optionalAttributes";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTIONAL_ATTRIBUTES)
+  
   private Map<String, Object> optionalAttributes = null;
 
+  
   public static final String SERIALIZED_NAME_MOCK = "mock";
+  
+  
   @SerializedName(SERIALIZED_NAME_MOCK)
+  
   private Boolean mock;
 
   /**
@@ -466,13 +586,22 @@ public class SMSTenDLCBrand {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_IDENTITY_STATUS = "identityStatus";
+  
+  
   @SerializedName(SERIALIZED_NAME_IDENTITY_STATUS)
+  
   private IdentityStatusEnum identityStatus;
 
+  
   public static final String SERIALIZED_NAME_CREATE_DATE = "createDate";
+  
+  
   @SerializedName(SERIALIZED_NAME_CREATE_DATE)
+  
   private OffsetDateTime createDate;
+
 
   public SMSTenDLCBrand() { 
   }
@@ -1098,9 +1227,9 @@ public class SMSTenDLCBrand {
     return this;
   }
 
-  public SMSTenDLCBrand putOptionalAttributesItem(String key, Object optionalAttributesItem) {
+  public SMSTenDLCBrand putoptionalAttributesItem(String key, Object optionalAttributesItem) {
     if (this.optionalAttributes == null) {
-      this.optionalAttributes = new HashMap<String, Object>();
+      this.optionalAttributes = new HashMap<>();
     }
     this.optionalAttributes.put(key, optionalAttributesItem);
     return this;
@@ -1302,4 +1431,3 @@ public class SMSTenDLCBrand {
   }
 
 }
-

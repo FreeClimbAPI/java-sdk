@@ -45,41 +45,82 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `AddToConference` command adds a Participant to a Conference. Two Call legs can be bridged together by creating a Conference and adding both Call legs to it via `AddToConference`.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddToConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALLOW_CALL_CONTROL = "allowCallControl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALLOW_CALL_CONTROL)
+  
   private Boolean allowCallControl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_SEQUENCE = "callControlSequence";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_SEQUENCE)
+  
   private String callControlSequence;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_URL = "callControlUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_URL)
+  
   private String callControlUrl;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
 
+  
   public static final String SERIALIZED_NAME_LEAVE_CONFERENCE_URL = "leaveConferenceUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_LEAVE_CONFERENCE_URL)
+  
   private String leaveConferenceUrl;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
+  
+  
   @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
+  
   private Boolean startConfOnEnter;
 
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
+
 
   public AddToConference() { 
     this.command = this.getClass().getSimpleName();
@@ -363,4 +404,3 @@ public class AddToConference extends PerclCommand {
   }
 
 }
-

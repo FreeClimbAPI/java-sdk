@@ -45,17 +45,34 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Park` command allows a caller to be put on hold.  You can provide hold music,messages,etc until ready to resume the call. Park is a terminal command.  Actions performed on the Call while on hold are provided in a PerCL script in response to the waitUrl property. Actions performed on the Call after it has been unparked (resumed) will be provided in a PerCL script in response to the actionUrl provided. A Call can be resumed in two ways -- REST API invocation or the Unpark percl command. No actions can be nested within Park and Park cannot be nested in any other actions. ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Park extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
+  
   private String waitUrl;
 
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
+
 
   public Park() { 
     this.command = this.getClass().getSimpleName();
@@ -183,4 +200,3 @@ public class Park extends PerclCommand {
   }
 
 }
-

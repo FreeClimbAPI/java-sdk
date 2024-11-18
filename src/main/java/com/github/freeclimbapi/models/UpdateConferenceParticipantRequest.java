@@ -44,13 +44,26 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateConferenceParticipantRequest {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
+
 
   public UpdateConferenceParticipantRequest() { 
   }
@@ -142,4 +155,3 @@ public class UpdateConferenceParticipantRequest {
   }
 
 }
-

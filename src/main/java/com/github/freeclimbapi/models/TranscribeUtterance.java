@@ -45,29 +45,58 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `TranscribeUtterance` command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  `TranscribeUtterance` is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the `PerCL` returned in response of the `actionUrl`. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TranscribeUtterance extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
   private Boolean playBeep = false;
 
+  
   public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECORD)
+  
   private TranscribeUtteranceAllOfRecord record;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_FOR_LOGGING = "privacyForLogging";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_LOGGING)
+  
   private Boolean privacyForLogging = false;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_FOR_RECORDING = "privacyForRecording";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_RECORDING)
+  
   private Boolean privacyForRecording = false;
 
+  
   public static final String SERIALIZED_NAME_PROMPTS = "prompts";
+  
+  
   @SerializedName(SERIALIZED_NAME_PROMPTS)
+  
   private List<Object> prompts = null;
+
 
   public TranscribeUtterance() { 
     this.command = this.getClass().getSimpleName();
@@ -193,7 +222,6 @@ public class TranscribeUtterance extends PerclCommand {
     this.prompts = prompts;
     return this;
   }
-
   public TranscribeUtterance addPromptsItem(Object promptsItem) {
     if (this.prompts == null) {
       this.prompts = new ArrayList<Object>();
@@ -281,4 +309,3 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 }
-

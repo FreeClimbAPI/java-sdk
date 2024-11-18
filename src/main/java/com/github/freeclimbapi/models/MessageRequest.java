@@ -44,41 +44,82 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MessageRequest {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_TEXT = "text";
+  
+  
   @SerializedName(SERIALIZED_NAME_TEXT)
+  
   private String text;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_MEDIA_URLS = "mediaUrls";
+  
+  
   @SerializedName(SERIALIZED_NAME_MEDIA_URLS)
+  
   private List<URI> mediaUrls = null;
+
 
   public MessageRequest() { 
   }
@@ -272,7 +313,6 @@ public class MessageRequest {
     this.mediaUrls = mediaUrls;
     return this;
   }
-
   public MessageRequest addMediaUrlsItem(URI mediaUrlsItem) {
     if (this.mediaUrls == null) {
       this.mediaUrls = new ArrayList<URI>();
@@ -353,4 +393,3 @@ public class MessageRequest {
   }
 
 }
-

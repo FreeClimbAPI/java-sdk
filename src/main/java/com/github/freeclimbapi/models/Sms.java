@@ -45,21 +45,42 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Sms` command can be used to send an SMS message to a phone number during a phone call. International SMS is disabled by default.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Sms extends PerclCommand {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TEXT = "text";
+  
+  
   @SerializedName(SERIALIZED_NAME_TEXT)
+  
   private String text;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
+
 
   public Sms() { 
     this.command = this.getClass().getSimpleName();
@@ -213,4 +234,3 @@ public class Sms extends PerclCommand {
   }
 
 }
-

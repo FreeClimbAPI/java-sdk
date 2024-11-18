@@ -44,16 +44,32 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTollFreeCampaign {
+  public static String getDiscriminatorValue() {
+
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
+  
   public static final String SERIALIZED_NAME_USE_CASE = "useCase";
+  
+  
   @SerializedName(SERIALIZED_NAME_USE_CASE)
+  
   private String useCase;
 
   /**
@@ -109,21 +125,38 @@ public class SMSTollFreeCampaign {
     }
   }
 
+  
   public static final String SERIALIZED_NAME_REGISTRATION_STATUS = "registrationStatus";
+  
+  
   @SerializedName(SERIALIZED_NAME_REGISTRATION_STATUS)
+  
   private RegistrationStatusEnum registrationStatus;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
+
 
   public SMSTollFreeCampaign() { 
   }
@@ -340,4 +373,3 @@ public class SMSTollFreeCampaign {
   }
 
 }
-
