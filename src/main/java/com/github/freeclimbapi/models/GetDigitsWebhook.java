@@ -50,7 +50,6 @@ public class GetDigitsWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "getDigits";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

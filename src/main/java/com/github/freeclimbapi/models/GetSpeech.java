@@ -46,7 +46,6 @@ import java.util.concurrent.Callable;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetSpeech extends PerclCommand {
   public static String getDiscriminatorValue() {
-
     return null;
   }
   

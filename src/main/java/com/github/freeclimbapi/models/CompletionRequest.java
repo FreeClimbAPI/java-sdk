@@ -45,7 +45,6 @@ import java.util.concurrent.Callable;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionRequest {
   public static String getDiscriminatorValue() {
-
     return null;
   }
   

@@ -50,7 +50,6 @@ public class RecordWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "record";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

@@ -50,7 +50,6 @@ public class AddToQueueNotificationWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "addToQueueNotification";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

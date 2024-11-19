@@ -50,7 +50,6 @@ public class CallControlWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "callControl";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

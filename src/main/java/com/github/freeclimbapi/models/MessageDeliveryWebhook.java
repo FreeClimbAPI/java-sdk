@@ -50,7 +50,6 @@ public class MessageDeliveryWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "messageDelivery";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

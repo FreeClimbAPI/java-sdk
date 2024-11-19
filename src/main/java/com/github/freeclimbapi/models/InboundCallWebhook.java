@@ -50,7 +50,6 @@ public class InboundCallWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "inboundCall";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

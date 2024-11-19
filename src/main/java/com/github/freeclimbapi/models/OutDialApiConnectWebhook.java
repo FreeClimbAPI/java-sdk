@@ -50,7 +50,6 @@ public class OutDialApiConnectWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "outDialApiConnect";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

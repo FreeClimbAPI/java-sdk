@@ -45,7 +45,6 @@ import java.util.concurrent.Callable;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateWebRTCToken {
   public static String getDiscriminatorValue() {
-
     return null;
   }
   

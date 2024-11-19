@@ -50,7 +50,6 @@ public class ConferenceRecordingStatusWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "conferenceRecordingStatus";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

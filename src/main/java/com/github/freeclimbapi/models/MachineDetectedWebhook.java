@@ -50,7 +50,6 @@ public class MachineDetectedWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "machineDetected";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

@@ -50,7 +50,6 @@ public class CreateConferenceWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "createConference";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

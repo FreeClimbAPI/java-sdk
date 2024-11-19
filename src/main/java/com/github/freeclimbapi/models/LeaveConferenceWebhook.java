@@ -50,7 +50,6 @@ public class LeaveConferenceWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "leaveConference";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

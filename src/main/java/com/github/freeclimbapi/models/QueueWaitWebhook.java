@@ -50,7 +50,6 @@ public class QueueWaitWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "queueWait";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

@@ -50,7 +50,6 @@ public class AddToConferenceNotificationWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "addToConferenceNotification";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

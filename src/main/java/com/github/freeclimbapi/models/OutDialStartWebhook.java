@@ -50,7 +50,6 @@ public class OutDialStartWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "outDialStart";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";

@@ -50,7 +50,6 @@ public class RemoveFromQueueNotificationWebhook extends Webhook {
   }
   public static String getDiscriminatorValue() {
     return "removeFromQueueNotification";
-
   }
   
   public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
