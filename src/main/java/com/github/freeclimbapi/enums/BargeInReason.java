@@ -40,7 +40,7 @@ public enum BargeInReason {
   
   BARGE_IN_BY_DTMF("bargeInByDTMF"),
   
-  bargeInByEnergy("bargeInByEnergy");
+  BARGE_IN_BY_ENERGY("bargeInByEnergy");
 
   private String value;
 

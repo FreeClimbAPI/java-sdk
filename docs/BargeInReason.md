@@ -9,7 +9,7 @@
 
 * `BARGE_IN_BY_DTMF` (value: `"bargeInByDTMF"`)
 
-* `bargeInByEnergy` (value: `"bargeInByEnergy"`)
+* `BARGE_IN_BY_ENERGY` (value: `"bargeInByEnergy"`)
 
 
 

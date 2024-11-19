@@ -84,23 +84,23 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(expectedValue, calculatedValue);
     }
         @Test
-    public void testbargeInByEnergyShouldWork() {
+    public void testBARGE_IN_BY_ENERGYShouldWork() {
 
-        BargeInReason test = BargeInReason.bargeInByEnergy;
+        BargeInReason test = BargeInReason.BARGE_IN_BY_ENERGY;
          Assert.assertEquals(test.getClass(), BargeInReason.class);
     }
 
     @Test 
-    public void testbargeInByEnergyShouldSerializeToEnum() {
+    public void testBARGE_IN_BY_ENERGYShouldSerializeToEnum() {
     
-        BargeInReason expectedValue = BargeInReason.bargeInByEnergy;
+        BargeInReason expectedValue = BargeInReason.BARGE_IN_BY_ENERGY;
         BargeInReason calculatedValue = BargeInReason.fromValue("bargeInByEnergy");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
-    public void testbargeInByEnergyShouldDeserializeToString() {
-     BargeInReason test = BargeInReason.bargeInByEnergy;
+    public void testBARGE_IN_BY_ENERGYShouldDeserializeToString() {
+     BargeInReason test = BargeInReason.BARGE_IN_BY_ENERGY;
       String expectedValue = "bargeInByEnergy";
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);

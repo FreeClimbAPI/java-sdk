@@ -215,8 +215,8 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(model.getBargeInReason(),BargeInReason.NO_BARGE_IN);
       model.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
       Assert.assertEquals(model.getBargeInReason(),BargeInReason.BARGE_IN_BY_DTMF);
-      model.setBargeInReason(BargeInReason.bargeInByEnergy);
-      Assert.assertEquals(model.getBargeInReason(),BargeInReason.bargeInByEnergy);
+      model.setBargeInReason(BargeInReason.BARGE_IN_BY_ENERGY);
+      Assert.assertEquals(model.getBargeInReason(),BargeInReason.BARGE_IN_BY_ENERGY);
       
     }
     /**
