@@ -250,7 +250,6 @@ Class | Method | HTTP request | Description
  - [GetSpeech](docs/GetSpeech.md)
  - [GetSpeechReason](docs/GetSpeechReason.md)
  - [GetSpeechWebhook](docs/GetSpeechWebhook.md)
- - [GetSpeechWebhookAllOfRecognitionResult](docs/GetSpeechWebhookAllOfRecognitionResult.md)
  - [GrammarFileBuiltIn](docs/GrammarFileBuiltIn.md)
  - [GrammarType](docs/GrammarType.md)
  - [Hangup](docs/Hangup.md)

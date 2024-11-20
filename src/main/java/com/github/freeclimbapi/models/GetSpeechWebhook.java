@@ -137,7 +137,7 @@ public class GetSpeechWebhook extends Webhook {
   
   @SerializedName(SERIALIZED_NAME_RECOGNITION_RESULT)
   
-  private GetSpeechWebhookAllOfRecognitionResult recognitionResult;
+  private String recognitionResult;
 
   
   public static final String SERIALIZED_NAME_CONFIDENCE = "confidence";
@@ -422,25 +422,25 @@ public class GetSpeechWebhook extends Webhook {
   }
 
 
-  public GetSpeechWebhook recognitionResult(GetSpeechWebhookAllOfRecognitionResult recognitionResult) {
+  public GetSpeechWebhook recognitionResult(String recognitionResult) {
     
     this.recognitionResult = recognitionResult;
     return this;
   }
 
    /**
-   * Get recognitionResult
+   * Semantic content (either a string if speech was recognized or a digit if a digit was input instead of speech) returned from the entry or tag that was recognized within the grammar. The content will be replaced by &#39;xxxxx&#39; when privacyMode is set to true. This field is populated only if the reason field is set to recognition or digit.
    * @return recognitionResult
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Semantic content (either a string if speech was recognized or a digit if a digit was input instead of speech) returned from the entry or tag that was recognized within the grammar. The content will be replaced by 'xxxxx' when privacyMode is set to true. This field is populated only if the reason field is set to recognition or digit.")
 
-  public GetSpeechWebhookAllOfRecognitionResult getRecognitionResult() {
+  public String getRecognitionResult() {
     return recognitionResult;
   }
 
 
-  public void setRecognitionResult(GetSpeechWebhookAllOfRecognitionResult recognitionResult) {
+  public void setRecognitionResult(String recognitionResult) {
     this.recognitionResult = recognitionResult;
   }
 

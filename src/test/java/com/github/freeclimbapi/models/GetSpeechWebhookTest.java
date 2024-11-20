@@ -181,6 +181,11 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void recognitionResultTest() {
       
+      
+      model.setRecognitionResult("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRecognitionResult());
+      
+      
     }
     /**
      * Test the property 'confidence'
@@ -287,6 +292,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.ERROR);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -337,6 +346,10 @@ import com.github.freeclimbapi.models.*;
       test2.setQueueId("TS");
       
       test2.setReason(GetSpeechReason.ERROR);
+        
+        
+      test2.setRecognitionResult("TS");
+      
       test2.setConfidence(1);
         
         
@@ -397,6 +410,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.HANGUP);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -447,6 +464,10 @@ import com.github.freeclimbapi.models.*;
       test2.setQueueId("TS2");
       
       test2.setReason(GetSpeechReason.ERROR);
+        
+        
+      test2.setRecognitionResult("TS2");
+      
       test2.setConfidence(0);
         
         
@@ -507,6 +528,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.ERROR);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -568,6 +593,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.ERROR);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -618,6 +647,10 @@ import com.github.freeclimbapi.models.*;
       test2.setQueueId("TS");
       
       test2.setReason(GetSpeechReason.ERROR);
+        
+        
+      test2.setRecognitionResult("TS");
+      
       test2.setConfidence(1);
         
         
@@ -680,6 +713,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.ERROR);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -730,6 +767,10 @@ import com.github.freeclimbapi.models.*;
       test2.setQueueId("TS");
       
       test2.setReason(GetSpeechReason.ERROR);
+        
+        
+      test2.setRecognitionResult("TS");
+      
       test2.setConfidence(1);
         
         
@@ -789,6 +830,10 @@ import com.github.freeclimbapi.models.*;
       test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.HANGUP);
+        
+        
+      test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         
@@ -839,6 +884,10 @@ import com.github.freeclimbapi.models.*;
       test2.setQueueId("TS2");
       
       test2.setReason(GetSpeechReason.ERROR);
+        
+        
+      test2.setRecognitionResult("TS2");
+      
       test2.setConfidence(0);
         
         
@@ -898,6 +947,10 @@ import com.github.freeclimbapi.models.*;
         test1.setQueueId("TS");
       
       test1.setReason(GetSpeechReason.ERROR);
+        
+        
+        test1.setRecognitionResult("TS");
+      
       test1.setConfidence(1);
         
         

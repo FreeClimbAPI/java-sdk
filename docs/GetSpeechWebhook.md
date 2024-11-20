@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **conferenceId** | **String** | Unique ID of the Conference. |  [optional]
 **queueId** | **String** | This is only populated if the request pertains to a Queue. Otherwise, it is set to null. |  [optional]
 **reason** | **GetSpeechReason** |  |  [optional]
-**recognitionResult** | [**GetSpeechWebhookAllOfRecognitionResult**](GetSpeechWebhookAllOfRecognitionResult.md) |  |  [optional]
+**recognitionResult** | **String** | Semantic content (either a string if speech was recognized or a digit if a digit was input instead of speech) returned from the entry or tag that was recognized within the grammar. The content will be replaced by &#39;xxxxx&#39; when privacyMode is set to true. This field is populated only if the reason field is set to recognition or digit. |  [optional]
 **confidence** | **Integer** | Level of confidence in the obtained result. This is a value in the range 0 to 100 – with 0 being total lack of confidence and 100 being absolute certainty in the recognition. This field is populated only if the reason field is set to recognition. |  [optional]
 **parentCallId** | **String** | ID of the Call that created this leg (child call). |  [optional]
 **completionReason** | **String** | Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.12 - speech recognition. |  [optional]

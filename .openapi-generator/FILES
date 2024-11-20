@@ -52,7 +52,6 @@ docs/GetDigitsWebhook.md
 docs/GetSpeech.md
 docs/GetSpeechReason.md
 docs/GetSpeechWebhook.md
-docs/GetSpeechWebhookAllOfRecognitionResult.md
 docs/GrammarFileBuiltIn.md
 docs/GrammarType.md
 docs/Hangup.md
@@ -198,7 +197,6 @@ src/main/java/com/github/freeclimbapi/GetDigitsWebhook.java
 src/main/java/com/github/freeclimbapi/GetSpeech.java
 src/main/java/com/github/freeclimbapi/GetSpeechReason.java
 src/main/java/com/github/freeclimbapi/GetSpeechWebhook.java
-src/main/java/com/github/freeclimbapi/GetSpeechWebhookAllOfRecognitionResult.java
 src/main/java/com/github/freeclimbapi/GrammarFileBuiltIn.java
 src/main/java/com/github/freeclimbapi/GrammarType.java
 src/main/java/com/github/freeclimbapi/GzipRequestInterceptor.java
@@ -339,7 +337,6 @@ src/test/java/com/github/freeclimbapi/GetDigitsTest.java
 src/test/java/com/github/freeclimbapi/GetDigitsWebhookTest.java
 src/test/java/com/github/freeclimbapi/GetSpeechReasonTest.java
 src/test/java/com/github/freeclimbapi/GetSpeechTest.java
-src/test/java/com/github/freeclimbapi/GetSpeechWebhookAllOfRecognitionResultTest.java
 src/test/java/com/github/freeclimbapi/GetSpeechWebhookTest.java
 src/test/java/com/github/freeclimbapi/GrammarFileBuiltInTest.java
 src/test/java/com/github/freeclimbapi/GrammarTypeTest.java
