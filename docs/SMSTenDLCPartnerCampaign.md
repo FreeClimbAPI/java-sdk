@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accountId** | **String** | ID of the account that created this Queue. |  [optional]
 **campaignId** | **String** | Alphanumeric identifier assigned by the registry for a campaign. This identifier is required by the NetNumber OSR SMS enabling process of 10DLC. | 
-**status** | [**StatusEnum**](#StatusEnum) | Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status.  |  [optional]
+**status** | **SMSTenDLCPartnerCampaignStatus** |  |  [optional]
 **createDate** | **OffsetDateTime** | Unix timestamp when campaign was created. |  [optional]
 **brandId** | **String** | Alphanumeric identifier of the brand associated with this campaign. | 
 **usecase** | **String** | Campaign usecase. Must be of defined valid types. Use &#x60;/registry/enum/usecase&#x60; operation to retrieve usecases available for given brand. | 
@@ -36,15 +36,6 @@ Name | Type | Description | Notes
 **optinMessage** | **String** | Subscriber opt-in message. |  [optional]
 **optoutMessage** | **String** | Subscriber opt-out message. |  [optional]
 **brand** | [**SMSTenDLCPartnerCampaignBrand**](SMSTenDLCPartnerCampaignBrand.md) |  |  [optional]
-
-
-
-## Enum: StatusEnum
-
-Name | Value
----- | -----
-ACTIVE | &quot;ACTIVE&quot;
-EXPIRED | &quot;EXPIRED&quot;
 
 
 

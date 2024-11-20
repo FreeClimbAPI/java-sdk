@@ -63,60 +63,13 @@ public class SMSTenDLCPartnerCampaign {
   
   private String campaignId;
 
-  /**
-   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. 
-   */
-  @JsonAdapter(StatusEnum.Adapter.class)
-  public enum StatusEnum {
-    ACTIVE("ACTIVE"),
-    
-    EXPIRED("EXPIRED");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StatusEnum.fromValue(value);
-      }
-    }
-  }
-
   
   public static final String SERIALIZED_NAME_STATUS = "status";
   
   
   @SerializedName(SERIALIZED_NAME_STATUS)
   
-  private StatusEnum status;
+  private SMSTenDLCPartnerCampaignStatus status;
 
   
   public static final String SERIALIZED_NAME_CREATE_DATE = "createDate";
@@ -376,25 +329,25 @@ public class SMSTenDLCPartnerCampaign {
   }
 
 
-  public SMSTenDLCPartnerCampaign status(StatusEnum status) {
+  public SMSTenDLCPartnerCampaign status(SMSTenDLCPartnerCampaignStatus status) {
     
     this.status = status;
     return this;
   }
 
    /**
-   * Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. 
+   * Get status
    * @return status
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status. ")
+  @ApiModelProperty(value = "")
 
-  public StatusEnum getStatus() {
+  public SMSTenDLCPartnerCampaignStatus getStatus() {
     return status;
   }
 
 
-  public void setStatus(StatusEnum status) {
+  public void setStatus(SMSTenDLCPartnerCampaignStatus status) {
     this.status = status;
   }
 

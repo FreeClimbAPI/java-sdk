@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **campaignId** | **String** | Alphanumeric identifier assigned by the registry for a campaign. This identifier is required by the NetNumber OSR SMS enabling process of 10DLC. | 
 **cspId** | **String** | Alphanumeric identifier of the CSP associated with this campaign. | 
 **resellerId** | **String** | Alphanumeric identifier of the reseller that you want to associate with this campaign. |  [optional]
-**status** | [**StatusEnum**](#StatusEnum) | Current campaign status. Possible values: ACTIVE, EXPIRED. A newly created campaign defaults to ACTIVE status.  |  [optional]
+**status** | **SMSTenDLCCampaignStatus** |  |  [optional]
 **createDate** | **OffsetDateTime** | Unix timestamp when campaign was created. |  [optional]
 **autoRenewal** | **Boolean** | Campaign subscription auto-renewal status. |  [optional]
 **billedDate** | **OffsetDateTime** | Campaign recent billed date. |  [optional]
@@ -43,15 +43,6 @@ Name | Type | Description | Notes
 **referenceId** | **String** | Caller supplied campaign reference ID. If supplied, the value must be unique across all submitted campaigns. Can be used to prevent duplicate campaign registrations. |  [optional]
 **mock** | **Boolean** | Campaign created from mock brand. Mocked campaign cannot be shared with an upstream CNP. | 
 **nextRenewalOrExpirationDate** | **LocalDate** | When the campaign would be due for its next renew/bill date. |  [optional]
-
-
-
-## Enum: StatusEnum
-
-Name | Value
----- | -----
-ACTIVE | &quot;ACTIVE&quot;
-EXPIRED | &quot;EXPIRED&quot;
 
 
 

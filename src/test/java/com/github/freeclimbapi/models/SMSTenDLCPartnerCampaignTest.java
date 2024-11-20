@@ -70,12 +70,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
-      Assert.assertEquals(model.getStatus(),SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
-      
-      model.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.EXPIRED);
-      Assert.assertEquals(model.getStatus(),SMSTenDLCPartnerCampaign.StatusEnum.EXPIRED);
+      model.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+      Assert.assertEquals(model.getStatus(),SMSTenDLCPartnerCampaignStatus.ACTIVE);
+      model.setStatus(SMSTenDLCPartnerCampaignStatus.EXPIRED);
+      Assert.assertEquals(model.getStatus(),SMSTenDLCPartnerCampaignStatus.EXPIRED);
       
     }
     /**
@@ -374,7 +372,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -456,7 +454,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setCampaignId("TS");
       
-      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -548,7 +546,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.EXPIRED);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.EXPIRED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -630,7 +628,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setCampaignId("TS2");
       
-      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
         
         
@@ -722,7 +720,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -815,7 +813,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -897,7 +895,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setCampaignId("TS");
       
-      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -991,7 +989,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -1073,7 +1071,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setCampaignId("TS");
       
-      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -1164,7 +1162,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.EXPIRED);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.EXPIRED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
@@ -1246,7 +1244,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setCampaignId("TS2");
       
-      test2.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
         
         
@@ -1337,7 +1335,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setCampaignId("TS");
       
-      test1.setStatus(SMSTenDLCPartnerCampaign.StatusEnum.ACTIVE);
+      test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
         
