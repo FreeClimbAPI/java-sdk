@@ -126,6 +126,7 @@ docs/SMSTollFreeCampaignRegistrationStatus.md
 docs/SMSTollFreeCampaignsListResult.md
 docs/Say.md
 docs/SendDigits.md
+docs/SetDTMFPassThrough.md
 docs/SetListen.md
 docs/SetTalk.md
 docs/Sms.md
@@ -135,7 +136,7 @@ docs/TerminateConference.md
 docs/TranscribeReason.md
 docs/TranscribeTermReason.md
 docs/TranscribeUtterance.md
-docs/TranscribeUtteranceAllOfRecord.md
+docs/TranscribeUtteranceRecord.md
 docs/TranscribeWebhook.md
 docs/Unpark.md
 docs/UpdateCallRequest.md
@@ -287,6 +288,7 @@ src/main/java/com/github/freeclimbapi/Say.java
 src/main/java/com/github/freeclimbapi/SendDigits.java
 src/main/java/com/github/freeclimbapi/ServerConfiguration.java
 src/main/java/com/github/freeclimbapi/ServerVariable.java
+src/main/java/com/github/freeclimbapi/SetDTMFPassThrough.java
 src/main/java/com/github/freeclimbapi/SetListen.java
 src/main/java/com/github/freeclimbapi/SetTalk.java
 src/main/java/com/github/freeclimbapi/Sms.java
@@ -297,7 +299,7 @@ src/main/java/com/github/freeclimbapi/TerminateConference.java
 src/main/java/com/github/freeclimbapi/TranscribeReason.java
 src/main/java/com/github/freeclimbapi/TranscribeTermReason.java
 src/main/java/com/github/freeclimbapi/TranscribeUtterance.java
-src/main/java/com/github/freeclimbapi/TranscribeUtteranceAllOfRecord.java
+src/main/java/com/github/freeclimbapi/TranscribeUtteranceRecord.java
 src/main/java/com/github/freeclimbapi/TranscribeWebhook.java
 src/main/java/com/github/freeclimbapi/Unpark.java
 src/main/java/com/github/freeclimbapi/UpdateCallRequest.java
@@ -430,6 +432,7 @@ src/test/java/com/github/freeclimbapi/SMSTollFreeCampaignTest.java
 src/test/java/com/github/freeclimbapi/SMSTollFreeCampaignsListResultTest.java
 src/test/java/com/github/freeclimbapi/SayTest.java
 src/test/java/com/github/freeclimbapi/SendDigitsTest.java
+src/test/java/com/github/freeclimbapi/SetDTMFPassThroughTest.java
 src/test/java/com/github/freeclimbapi/SetListenTest.java
 src/test/java/com/github/freeclimbapi/SetTalkTest.java
 src/test/java/com/github/freeclimbapi/SmsTest.java
@@ -438,7 +441,7 @@ src/test/java/com/github/freeclimbapi/TFNTest.java
 src/test/java/com/github/freeclimbapi/TerminateConferenceTest.java
 src/test/java/com/github/freeclimbapi/TranscribeReasonTest.java
 src/test/java/com/github/freeclimbapi/TranscribeTermReasonTest.java
-src/test/java/com/github/freeclimbapi/TranscribeUtteranceAllOfRecordTest.java
+src/test/java/com/github/freeclimbapi/TranscribeUtteranceRecordTest.java
 src/test/java/com/github/freeclimbapi/TranscribeUtteranceTest.java
 src/test/java/com/github/freeclimbapi/TranscribeWebhookTest.java
 src/test/java/com/github/freeclimbapi/UnparkTest.java

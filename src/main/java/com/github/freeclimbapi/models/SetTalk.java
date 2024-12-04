@@ -40,9 +40,9 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;SetTalk&#x60; command enables or disables the talk privilege for a Participant in a Conference provided both calls are in the same conference. If &#39;true&#39;, no audio from that Participant is shared with the other Participants of the Conference.
+ * The &#x60;SetTalk&#x60; command enables or disables the talk privilege for this Conference Participant. If &#39;true&#39;, no audio from that Participant is shared with the other Participants of the Conference.
  */
-@ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for a Participant in a Conference provided both calls are in the same conference. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
+@ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for this Conference Participant. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetTalk extends PerclCommand {
   public static String getDiscriminatorValue() {

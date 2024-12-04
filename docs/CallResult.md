@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **direction** | **CallDirection** |  |  [optional]
 **answeredBy** | **AnsweredBy** |  |  [optional]
 **subresourceUris** | **Object** | The list of subresources for this Call. These include things like logs and recordings associated with the Call. |  [optional]
+**applicationId** | **String** | ApplicationId associated with the Call. |  [optional]
 
 
 

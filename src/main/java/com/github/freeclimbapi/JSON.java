@@ -413,6 +413,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -568,6 +569,18 @@ public class JSON {
                             classByDiscriminatorValue.put(SendDigits.getDiscriminatorValue(), SendDigits.class);
                         }
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "command"));
+                    }
+          })
+                .registerTypeSelector(SetDTMFPassThrough.class, new TypeSelector<SetDTMFPassThrough>() {
+                    @Override
+                    public Class<? extends SetDTMFPassThrough> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        if (SetDTMFPassThrough.getDiscriminatorValue() != null) {
+                            classByDiscriminatorValue.put(SetDTMFPassThrough.getDiscriminatorValue(), SetDTMFPassThrough.class);
+                        }
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "command"));
                     }

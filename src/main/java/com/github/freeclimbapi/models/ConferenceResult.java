@@ -109,7 +109,7 @@ public class ConferenceResult {
   
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
   
-  private PlayBeep playBeep = PlayBeep.ALWAYS;
+  private PlayBeep playBeep;
 
   
   public static final String SERIALIZED_NAME_RECORD = "record";

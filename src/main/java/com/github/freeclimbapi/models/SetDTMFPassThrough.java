@@ -40,47 +40,47 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;SetListen&#x60; command enables or disables the listen privilege for this Conference Participant. The Participant can hear what the other participants are saying only if this privilege is enabled.
+ * The &#x60;SetDTMFPassThrough&#x60; command enables or disables the dtmfPassThrough privilege for this Conference Participant. If &#39;true&#39;, DTMFs will be passed through from this Participant to all other Participants in the Conference
  */
-@ApiModel(description = "The `SetListen` command enables or disables the listen privilege for this Conference Participant. The Participant can hear what the other participants are saying only if this privilege is enabled.")
+@ApiModel(description = "The `SetDTMFPassThrough` command enables or disables the dtmfPassThrough privilege for this Conference Participant. If 'true', DTMFs will be passed through from this Participant to all other Participants in the Conference")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class SetListen extends PerclCommand {
+public class SetDTMFPassThrough extends PerclCommand {
   public static String getDiscriminatorValue() {
     return null;
   }
   
-  public static final String SERIALIZED_NAME_LISTEN = "listen";
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
   
   
-  @SerializedName(SERIALIZED_NAME_LISTEN)
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
   
-  private Boolean listen;
+  private Boolean dtmfPassThrough;
 
 
-  public SetListen() { 
+  public SetDTMFPassThrough() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public SetListen listen(Boolean listen) {
+  public SetDTMFPassThrough dtmfPassThrough(Boolean dtmfPassThrough) {
     
-    this.listen = listen;
+    this.dtmfPassThrough = dtmfPassThrough;
     return this;
   }
 
    /**
-   * Specifying &#x60;false&#x60; will silence the Conference for this Participant.
-   * @return listen
+   * Specifying &#x60;false&#x60; mutes the Participant&#39;s dtmf audio.
+   * @return dtmfPassThrough
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specifying `false` will silence the Conference for this Participant.")
+  @ApiModelProperty(value = "Specifying `false` mutes the Participant's dtmf audio.")
 
-  public Boolean getListen() {
-    return listen;
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
   }
 
 
-  public void setListen(Boolean listen) {
-    this.listen = listen;
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
   }
 
 
@@ -92,22 +92,22 @@ public class SetListen extends PerclCommand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SetListen setListen = (SetListen) o;
-    return Objects.equals(this.listen, setListen.listen) &&
+    SetDTMFPassThrough setDTMFPassThrough = (SetDTMFPassThrough) o;
+    return Objects.equals(this.dtmfPassThrough, setDTMFPassThrough.dtmfPassThrough) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(listen, super.hashCode());
+    return Objects.hash(dtmfPassThrough, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SetListen {\n");
+    sb.append("class SetDTMFPassThrough {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -115,7 +115,7 @@ public class SetListen extends PerclCommand {
   @Override
   public Map<String, Callable<Object>> attributeTypeMap() {
     Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("listen", () -> this.getListen());
+    attributes.put("dtmfPassThrough", () -> this.getDtmfPassThrough());
     return attributes;
   }
 

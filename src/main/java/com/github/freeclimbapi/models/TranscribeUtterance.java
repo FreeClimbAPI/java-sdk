@@ -70,7 +70,7 @@ public class TranscribeUtterance extends PerclCommand {
   
   @SerializedName(SERIALIZED_NAME_RECORD)
   
-  private TranscribeUtteranceAllOfRecord record;
+  private TranscribeUtteranceRecord record;
 
   
   public static final String SERIALIZED_NAME_PRIVACY_FOR_LOGGING = "privacyForLogging";
@@ -94,7 +94,7 @@ public class TranscribeUtterance extends PerclCommand {
   
   @SerializedName(SERIALIZED_NAME_PROMPTS)
   
-  private List<Object> prompts = null;
+  private List<PerclCommand> prompts = null;
 
 
   public TranscribeUtterance() { 
@@ -147,7 +147,7 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance record(TranscribeUtteranceAllOfRecord record) {
+  public TranscribeUtterance record(TranscribeUtteranceRecord record) {
     
     this.record = record;
     return this;
@@ -160,12 +160,12 @@ public class TranscribeUtterance extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public TranscribeUtteranceAllOfRecord getRecord() {
+  public TranscribeUtteranceRecord getRecord() {
     return record;
   }
 
 
-  public void setRecord(TranscribeUtteranceAllOfRecord record) {
+  public void setRecord(TranscribeUtteranceRecord record) {
     this.record = record;
   }
 
@@ -216,14 +216,14 @@ public class TranscribeUtterance extends PerclCommand {
   }
 
 
-  public TranscribeUtterance prompts(List<Object> prompts) {
+  public TranscribeUtterance prompts(List<PerclCommand> prompts) {
     
     this.prompts = prompts;
     return this;
   }
-  public TranscribeUtterance addPromptsItem(Object promptsItem) {
+  public TranscribeUtterance addPromptsItem(PerclCommand promptsItem) {
     if (this.prompts == null) {
-      this.prompts = new ArrayList<Object>();
+      this.prompts = new ArrayList<PerclCommand>();
     }
     this.prompts.add(promptsItem);
     return this;
@@ -236,12 +236,12 @@ public class TranscribeUtterance extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getPrompts() {
+  public List<PerclCommand> getPrompts() {
     return prompts;
   }
 
 
-  public void setPrompts(List<Object> prompts) {
+  public void setPrompts(List<PerclCommand> prompts) {
     this.prompts = prompts;
   }
 

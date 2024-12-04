@@ -67,9 +67,9 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void recordTest() {
-      TranscribeUtteranceAllOfRecord object = new TranscribeUtteranceAllOfRecord();
+      TranscribeUtteranceRecord object = new TranscribeUtteranceRecord();
       model.setRecord(object);
-      Assert.assertEquals(object.getClass(), TranscribeUtteranceAllOfRecord.class);
+      Assert.assertEquals(object.getClass(), TranscribeUtteranceRecord.class);
       
     }
     /**
@@ -96,7 +96,7 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void promptsTest() {
       
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       model.setPrompts(testList);
       Assert.assertEquals(testList, model.getPrompts()); 
     }
@@ -113,11 +113,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       TranscribeUtterance test2 = new TranscribeUtterance();
         
@@ -125,11 +125,11 @@ import com.github.freeclimbapi.models.*;
       test2.setActionUrl("TS");
       
       test2.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject2 = TranscribeUtteranceAllOfRecordobject;
-      test2.setRecord(TranscribeUtteranceAllOfRecordobject2);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 = TranscribeUtteranceRecordobject;
+      test2.setRecord(TranscribeUtteranceRecordobject2);
       test2.setPrivacyForLogging(true);
       test2.setPrivacyForRecording(true);
-      List<Object> testList2 = testList;
+      List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
 
       Assert.assertTrue(test1.equals(test2));
@@ -147,11 +147,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-        TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       TranscribeUtterance test2 = new TranscribeUtterance();
         
@@ -159,11 +159,11 @@ import com.github.freeclimbapi.models.*;
       test2.setActionUrl("TS2");
       
       test2.setPlayBeep(false);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject2 = new TranscribeUtteranceAllOfRecord();
-      test2.setRecord(TranscribeUtteranceAllOfRecordobject2);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 = new TranscribeUtteranceRecord();
+      test2.setRecord(TranscribeUtteranceRecordobject2);
       test2.setPrivacyForLogging(false);
       test2.setPrivacyForRecording(false);
-      List<Object> testList2 = null;
+      List<PerclCommand> testList2 = null;
       test2.setPrompts(testList2);
 
       Assert.assertFalse(test1.equals(test2));
@@ -181,11 +181,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       
       int hashCode1 = test1.hashCode();
@@ -204,11 +204,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-        TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       TranscribeUtterance test2 = new TranscribeUtterance();
         
@@ -216,11 +216,11 @@ import com.github.freeclimbapi.models.*;
       test2.setActionUrl("TS");
       
       test2.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject2 = TranscribeUtteranceAllOfRecordobject;
-      test2.setRecord(TranscribeUtteranceAllOfRecordobject2);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 = TranscribeUtteranceRecordobject;
+      test2.setRecord(TranscribeUtteranceRecordobject2);
       test2.setPrivacyForLogging(true);
       test2.setPrivacyForRecording(true);
-      List<Object> testList2 = testList;
+      List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
         
       String toString1 = test1.toString();
@@ -240,11 +240,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-        TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       TranscribeUtterance test2 = new TranscribeUtterance();
         
@@ -252,11 +252,11 @@ import com.github.freeclimbapi.models.*;
       test2.setActionUrl("TS");
       
       test2.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject2 = TranscribeUtteranceAllOfRecordobject;
-      test2.setRecord(TranscribeUtteranceAllOfRecordobject2);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 = TranscribeUtteranceRecordobject;
+      test2.setRecord(TranscribeUtteranceRecordobject2);
       test2.setPrivacyForLogging(true);
       test2.setPrivacyForRecording(true);
-      List<Object> testList2 = testList;
+      List<PerclCommand> testList2 = testList;
       test2.setPrompts(testList2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -273,11 +273,11 @@ import com.github.freeclimbapi.models.*;
       test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-        TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
       TranscribeUtterance test2 = new TranscribeUtterance();
         
@@ -285,11 +285,11 @@ import com.github.freeclimbapi.models.*;
       test2.setActionUrl("TS2");
       
       test2.setPlayBeep(false);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject2 = new TranscribeUtteranceAllOfRecord();
-      test2.setRecord(TranscribeUtteranceAllOfRecordobject2);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 = new TranscribeUtteranceRecord();
+      test2.setRecord(TranscribeUtteranceRecordobject2);
       test2.setPrivacyForLogging(false);
       test2.setPrivacyForRecording(false);
-      List<Object> testList2 = null;
+      List<PerclCommand> testList2 = null;
       test2.setPrompts(testList2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -306,11 +306,11 @@ import com.github.freeclimbapi.models.*;
         test1.setActionUrl("TS");
       
       test1.setPlayBeep(true);
-      TranscribeUtteranceAllOfRecord TranscribeUtteranceAllOfRecordobject = new TranscribeUtteranceAllOfRecord();
-      test1.setRecord(TranscribeUtteranceAllOfRecordobject);
+      TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
+      test1.setRecord(TranscribeUtteranceRecordobject);
       test1.setPrivacyForLogging(true);
       test1.setPrivacyForRecording(true);
-      List<Object> testList = new ArrayList<Object>();
+      List<PerclCommand> testList = new ArrayList<PerclCommand>();
       test1.setPrompts(testList);
 
       String toString1 = test1.toString();

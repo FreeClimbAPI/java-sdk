@@ -33,32 +33,14 @@ import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 
 /**
- * Model tests for UpdateConferenceParticipantRequest
+ * Model tests for SetDTMFPassThrough
  */
- public class UpdateConferenceParticipantRequestTest {
+ public class SetDTMFPassThroughTest {
     
-    private final UpdateConferenceParticipantRequest model = new UpdateConferenceParticipantRequest(
+    private final SetDTMFPassThrough model = new SetDTMFPassThrough(
     );
     
     
-    /**
-     * Test the property 'talk'
-     */
-    @Test
-    public void talkTest() {
-      model.setTalk(false);
-      Assert.assertEquals(false, model.getTalk());       
-      
-    }
-    /**
-     * Test the property 'listen'
-     */
-    @Test
-    public void listenTest() {
-      model.setListen(false);
-      Assert.assertEquals(false, model.getListen());       
-      
-    }
     /**
      * Test the property 'dtmfPassThrough'
      */
@@ -75,13 +57,9 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsTrueTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
+      SetDTMFPassThrough test2 = new SetDTMFPassThrough();
       test2.setDtmfPassThrough(true);
 
       Assert.assertTrue(test1.equals(test2));
@@ -93,13 +71,9 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void equalsFalseTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(false);
-      test2.setListen(false);
+      SetDTMFPassThrough test2 = new SetDTMFPassThrough();
       test2.setDtmfPassThrough(false);
 
       Assert.assertFalse(test1.equals(test2));
@@ -111,9 +85,7 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void hashCodeTypeTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
       
       int hashCode1 = test1.hashCode();
@@ -126,13 +98,9 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringEqualsTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
+      SetDTMFPassThrough test2 = new SetDTMFPassThrough();
       test2.setDtmfPassThrough(true);
         
       String toString1 = test1.toString();
@@ -146,13 +114,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsTrueTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
+      SetDTMFPassThrough test2 = new SetDTMFPassThrough();
       test2.setDtmfPassThrough(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -163,13 +127,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void hashCodeEqualsFalseTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(false);
-      test2.setListen(false);
+      SetDTMFPassThrough test2 = new SetDTMFPassThrough();
       test2.setDtmfPassThrough(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -180,14 +140,25 @@ import com.github.freeclimbapi.models.*;
 
      @Test
     public void toStringTypeTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
+      SetDTMFPassThrough test1 = new SetDTMFPassThrough();
       test1.setDtmfPassThrough(true);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    @Test
+    public void commandTest() throws Exception {
+      Assert.assertEquals("SetDTMFPassThrough", model.getCommand());
+    }
+
+    @Test
+    public void buildTest() throws Exception {
+        model.setDtmfPassThrough(false);
+        Map<String, Map<String, Object>> build = model.build();
+        Map<String, Object> attributes = build.get(model.getCommand());
+        Assert.assertEquals(attributes.get("dtmfPassThrough"), model.getDtmfPassThrough());
+        
+    }
     
  }
