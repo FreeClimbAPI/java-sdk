@@ -349,6 +349,7 @@ src/test/java/com/github/freeclimbapi/CreateConferenceRequestTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceWebhookTest.java
 src/test/java/com/github/freeclimbapi/CreateWebRTCTokenTest.java
+src/test/java/com/github/freeclimbapi/DefaultApiTest.java
 src/test/java/com/github/freeclimbapi/DequeueTest.java
 src/test/java/com/github/freeclimbapi/DequeueWebhookTest.java
 src/test/java/com/github/freeclimbapi/EnqueueTest.java
