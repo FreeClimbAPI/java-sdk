@@ -1920,4 +1920,8 @@ public class DefaultApiTest {
         object.setQuery("query_example");
         return object;
     }
+
+    private Boolean dtmfPassThroughBooleanTestValue() {
+        return false;
+    }
 }
