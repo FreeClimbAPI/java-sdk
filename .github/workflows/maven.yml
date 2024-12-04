@@ -20,6 +20,11 @@ jobs:
         java: [ 17, 21 ]
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-node@v3
+    - name: Start Prism Server
+      run: |
+        yarn install
+        ./node_modules/.bin/prism mock -h 127.0.0.1 openapi.json &
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
