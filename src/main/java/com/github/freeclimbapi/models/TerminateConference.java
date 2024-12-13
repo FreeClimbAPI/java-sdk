@@ -45,6 +45,10 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `TerminateConference` command terminates an existing Conference. Any active participants are hung up on by FreeClimb. If this is not the desired behavior, use the `RemoveFromConference` command to unbridge Calls that should not be hung up. Note: The Call requesting TerminateConference must be on the same Conference for this command to execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TerminateConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+
   public TerminateConference() { 
     this.command = this.getClass().getSimpleName();
   }
@@ -92,4 +96,3 @@ public class TerminateConference extends PerclCommand {
   }
 
 }
-

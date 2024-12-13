@@ -45,17 +45,33 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SendDigits` command plays DTMF tones on a live Call. This is useful for navigating through IVR menus or dialing extensions.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SendDigits extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_DIGITS = "digits";
+  
+  
   @SerializedName(SERIALIZED_NAME_DIGITS)
+  
   private String digits;
 
+  
   public static final String SERIALIZED_NAME_PAUSE_MS = "pauseMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAUSE_MS)
+  
   private Integer pauseMs;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public SendDigits() { 
     this.command = this.getClass().getSimpleName();
@@ -183,4 +199,3 @@ public class SendDigits extends PerclCommand {
   }
 
 }
-

@@ -44,25 +44,49 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueMember {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
   private String callId;
 
+  
   public static final String SERIALIZED_NAME_WAIT_TIME = "waitTime";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_TIME)
+  
   private Integer waitTime;
 
+  
   public static final String SERIALIZED_NAME_POSITION = "position";
+  
+  
   @SerializedName(SERIALIZED_NAME_POSITION)
+  
   private Integer position;
 
+  
   public static final String SERIALIZED_NAME_DATE_ENQUEUED = "dateEnqueued";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_ENQUEUED)
+  
   private String dateEnqueued;
+
 
   public QueueMember() { 
   }
@@ -240,4 +264,3 @@ public class QueueMember {
   }
 
 }
-

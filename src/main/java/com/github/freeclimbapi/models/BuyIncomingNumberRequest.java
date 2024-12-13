@@ -44,17 +44,33 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BuyIncomingNumberRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_PHONE_NUMBER = "phoneNumber";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
+  
   private String phoneNumber;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
   private String applicationId;
+
 
   public BuyIncomingNumberRequest() { 
   }
@@ -171,4 +187,3 @@ public class BuyIncomingNumberRequest {
   }
 
 }
-

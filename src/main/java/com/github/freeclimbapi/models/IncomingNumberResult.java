@@ -44,73 +44,145 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class IncomingNumberResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_CAPABILITIES = "capabilities";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAPABILITIES)
+  
   private Capabilities capabilities;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
+  
   public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
+  
   private String phoneNumberId;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
   private String applicationId;
 
+  
   public static final String SERIALIZED_NAME_PHONE_NUMBER = "phoneNumber";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
+  
   private String phoneNumber;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_REGION = "region";
+  
+  
   @SerializedName(SERIALIZED_NAME_REGION)
+  
   private String region;
 
+  
   public static final String SERIALIZED_NAME_COUNTRY = "country";
+  
+  
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  
   private String country;
 
+  
   public static final String SERIALIZED_NAME_VOICE_ENABLED = "voiceEnabled";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_ENABLED)
+  
   private Boolean voiceEnabled;
 
+  
   public static final String SERIALIZED_NAME_SMS_ENABLED = "smsEnabled";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_ENABLED)
+  
   private Boolean smsEnabled;
 
+  
   public static final String SERIALIZED_NAME_OFFNET = "offnet";
+  
+  
   @SerializedName(SERIALIZED_NAME_OFFNET)
+  
   private Boolean offnet;
 
+  
   public static final String SERIALIZED_NAME_TFN = "tfn";
+  
+  
   @SerializedName(SERIALIZED_NAME_TFN)
+  
   private TFN tfn;
+
 
   public IncomingNumberResult() { 
   }
@@ -592,4 +664,3 @@ public class IncomingNumberResult {
   }
 
 }
-

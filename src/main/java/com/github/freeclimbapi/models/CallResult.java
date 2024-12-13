@@ -44,81 +44,169 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CallResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
   private String callId;
 
+  
   public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+  
+  
   @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+  
   private String parentCallId;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
+  
   private String phoneNumberId;
 
+  
   public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+  
   private CallStatus callStatus;
 
+  
   public static final String SERIALIZED_NAME_START_TIME = "startTime";
+  
+  
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  
   private String startTime;
 
+  
   public static final String SERIALIZED_NAME_CONNECT_TIME = "connectTime";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONNECT_TIME)
+  
   private String connectTime;
 
+  
   public static final String SERIALIZED_NAME_END_TIME = "endTime";
+  
+  
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  
   private String endTime;
 
+  
   public static final String SERIALIZED_NAME_DURATION = "duration";
+  
+  
   @SerializedName(SERIALIZED_NAME_DURATION)
+  
   private Integer duration;
 
+  
   public static final String SERIALIZED_NAME_CONNECT_DURATION = "connectDuration";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONNECT_DURATION)
+  
   private Integer connectDuration;
 
+  
   public static final String SERIALIZED_NAME_DIRECTION = "direction";
+  
+  
   @SerializedName(SERIALIZED_NAME_DIRECTION)
+  
   private CallDirection direction;
 
+  
   public static final String SERIALIZED_NAME_ANSWERED_BY = "answeredBy";
+  
+  
   @SerializedName(SERIALIZED_NAME_ANSWERED_BY)
+  
   private AnsweredBy answeredBy;
 
+  
   public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
+  
   private Object subresourceUris;
+
+  
+  public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
+  private String applicationId;
+
 
   public CallResult() { 
   }
@@ -560,6 +648,29 @@ public class CallResult {
   }
 
 
+  public CallResult applicationId(String applicationId) {
+    
+    this.applicationId = applicationId;
+    return this;
+  }
+
+   /**
+   * ApplicationId associated with the Call.
+   * @return applicationId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "ApplicationId associated with the Call.")
+
+  public String getApplicationId() {
+    return applicationId;
+  }
+
+
+  public void setApplicationId(String applicationId) {
+    this.applicationId = applicationId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -587,7 +698,8 @@ public class CallResult {
         Objects.equals(this.connectDuration, callResult.connectDuration) &&
         Objects.equals(this.direction, callResult.direction) &&
         Objects.equals(this.answeredBy, callResult.answeredBy) &&
-        Objects.equals(this.subresourceUris, callResult.subresourceUris);
+        Objects.equals(this.subresourceUris, callResult.subresourceUris) &&
+        Objects.equals(this.applicationId, callResult.applicationId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -596,7 +708,7 @@ public class CallResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, callStatus, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, callStatus, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris, applicationId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -629,6 +741,7 @@ public class CallResult {
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    answeredBy: ").append(toIndentedString(answeredBy)).append("\n");
     sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");
+    sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -646,4 +759,3 @@ public class CallResult {
   }
 
 }
-

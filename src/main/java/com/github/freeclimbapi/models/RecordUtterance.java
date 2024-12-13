@@ -45,33 +45,65 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `RecordUtterance` command records the caller's voice and returns the URL of a file containing the audio recording. `RecordUtterance` is blocking and is a terminal command. As such, the `actionUrl` property is required, and control of the Call picks up using the PerCL returned in response to the `actionUrl`. Recording information is returned in the `actionUrl` request.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecordUtterance extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_SILENCE_TIMEOUT_MS = "silenceTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_SILENCE_TIMEOUT_MS)
+  
   private Integer silenceTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_FINISH_ON_KEY = "finishOnKey";
+  
+  
   @SerializedName(SERIALIZED_NAME_FINISH_ON_KEY)
+  
   private String finishOnKey;
 
+  
   public static final String SERIALIZED_NAME_MAX_LENGTH_SEC = "maxLengthSec";
+  
+  
   @SerializedName(SERIALIZED_NAME_MAX_LENGTH_SEC)
+  
   private Integer maxLengthSec;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
   private Boolean playBeep;
 
+  
   public static final String SERIALIZED_NAME_AUTO_START = "autoStart";
+  
+  
   @SerializedName(SERIALIZED_NAME_AUTO_START)
+  
   private Boolean autoStart;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public RecordUtterance() { 
     this.command = this.getClass().getSimpleName();
@@ -303,4 +335,3 @@ public class RecordUtterance extends PerclCommand {
   }
 
 }
-

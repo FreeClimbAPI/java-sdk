@@ -45,57 +45,113 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `GetSpeech` command enables the Caller to respond to the application using a supported language. Unlike DTMF entry, which implicitly restricts the user to using the available buttons on the phone key pad, speech input allows for flexible audio inputs based on grammar. FreeClimb supports grammars written using GRXML compatible with the Microsoft Speech Platform. `GetSpeech` is only supported on a single call leg. It is not supported when there are two or more call legs connected (as in within a Conference).")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetSpeech extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_GRAMMAR_TYPE = "grammarType";
+  
+  
   @SerializedName(SERIALIZED_NAME_GRAMMAR_TYPE)
+  
   private GrammarType grammarType;
 
+  
   public static final String SERIALIZED_NAME_GRAMMAR_FILE = "grammarFile";
+  
+  
   @SerializedName(SERIALIZED_NAME_GRAMMAR_FILE)
+  
   private String grammarFile;
 
+  
   public static final String SERIALIZED_NAME_GRAMMAR_RULE = "grammarRule";
+  
+  
   @SerializedName(SERIALIZED_NAME_GRAMMAR_RULE)
+  
   private String grammarRule;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
   private Boolean playBeep;
 
+  
   public static final String SERIALIZED_NAME_PROMPTS = "prompts";
+  
+  
   @SerializedName(SERIALIZED_NAME_PROMPTS)
+  
   private List<PerclCommand> prompts = null;
 
+  
   public static final String SERIALIZED_NAME_NO_INPUT_TIMEOUT_MS = "noInputTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_NO_INPUT_TIMEOUT_MS)
+  
   private Integer noInputTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_RECOGNITION_TIMEOUT_MS = "recognitionTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECOGNITION_TIMEOUT_MS)
+  
   private Integer recognitionTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_CONFIDENCE_THRESHOLD = "confidenceThreshold";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_THRESHOLD)
+  
   private BigDecimal confidenceThreshold;
 
+  
   public static final String SERIALIZED_NAME_SENSITIVITY_LEVEL = "sensitivityLevel";
+  
+  
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_LEVEL)
+  
   private BigDecimal sensitivityLevel;
 
+  
   public static final String SERIALIZED_NAME_SPEECH_COMPLETE_TIMEOUT_MS = "speechCompleteTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_SPEECH_COMPLETE_TIMEOUT_MS)
+  
   private Integer speechCompleteTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_SPEECH_INCOMPLETE_TIMEOUT_MS = "speechIncompleteTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_SPEECH_INCOMPLETE_TIMEOUT_MS)
+  
   private Integer speechIncompleteTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public GetSpeech() { 
     this.command = this.getClass().getSimpleName();
@@ -221,7 +277,6 @@ public class GetSpeech extends PerclCommand {
     this.prompts = prompts;
     return this;
   }
-
   public GetSpeech addPromptsItem(PerclCommand promptsItem) {
     if (this.prompts == null) {
       this.prompts = new ArrayList<PerclCommand>();
@@ -502,4 +557,3 @@ public class GetSpeech extends PerclCommand {
   }
 
 }
-

@@ -44,13 +44,33 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateConferenceParticipantRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
+
+  
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  
+  
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  
+  private Boolean dtmfPassThrough;
+
 
   public UpdateConferenceParticipantRequest() { 
   }
@@ -101,6 +121,29 @@ public class UpdateConferenceParticipantRequest {
   }
 
 
+  public UpdateConferenceParticipantRequest dtmfPassThrough(Boolean dtmfPassThrough) {
+    
+    this.dtmfPassThrough = dtmfPassThrough;
+    return this;
+  }
+
+   /**
+   * (Optional) Default is &#x60;true&#x60;. Setting to &#x60;false&#x60; mutes dtmf audio for this Participant. FreeClimb returns an error and ignores any other value.
+   * @return dtmfPassThrough
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "(Optional) Default is `true`. Setting to `false` mutes dtmf audio for this Participant. FreeClimb returns an error and ignores any other value.")
+
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
+  }
+
+
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -111,12 +154,13 @@ public class UpdateConferenceParticipantRequest {
     }
     UpdateConferenceParticipantRequest updateConferenceParticipantRequest = (UpdateConferenceParticipantRequest) o;
     return Objects.equals(this.talk, updateConferenceParticipantRequest.talk) &&
-        Objects.equals(this.listen, updateConferenceParticipantRequest.listen);
+        Objects.equals(this.listen, updateConferenceParticipantRequest.listen) &&
+        Objects.equals(this.dtmfPassThrough, updateConferenceParticipantRequest.dtmfPassThrough);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(talk, listen);
+    return Objects.hash(talk, listen, dtmfPassThrough);
   }
 
   @Override
@@ -125,6 +169,7 @@ public class UpdateConferenceParticipantRequest {
     sb.append("class UpdateConferenceParticipantRequest {\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
     sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -142,4 +187,3 @@ public class UpdateConferenceParticipantRequest {
   }
 
 }
-

@@ -44,49 +44,97 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_API_KEY = "apiKey";
+  
+  
   @SerializedName(SERIALIZED_NAME_API_KEY)
+  
   private String apiKey;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_LABEL = "label";
+  
+  
   @SerializedName(SERIALIZED_NAME_LABEL)
+  
   private String label;
 
+  
   public static final String SERIALIZED_NAME_TYPE = "type";
+  
+  
   @SerializedName(SERIALIZED_NAME_TYPE)
+  
   private AccountType type;
 
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private AccountStatus status;
 
+  
   public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
+  
   private Object subresourceUris;
+
 
   public AccountResult() { 
   }
@@ -414,4 +462,3 @@ public class AccountResult {
   }
 
 }
-

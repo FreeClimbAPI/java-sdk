@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "A PerCL script to be returned to the FreeClimb servers in FreeClimb applications")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PerclScript {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_COMMANDS = "commands";
+  
+  
   @SerializedName(SERIALIZED_NAME_COMMANDS)
+  
   private List<PerclCommand> commands = null;
+
 
   public PerclScript() { 
   }
@@ -57,7 +65,6 @@ public class PerclScript {
     this.commands = commands;
     return this;
   }
-
   public PerclScript addCommandsItem(PerclCommand commandsItem) {
     if (this.commands == null) {
       this.commands = new ArrayList<PerclCommand>();
@@ -138,4 +145,3 @@ public class PerclScript {
   }
 
 }
-

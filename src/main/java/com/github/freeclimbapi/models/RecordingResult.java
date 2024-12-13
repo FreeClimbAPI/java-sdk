@@ -44,41 +44,81 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecordingResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_RECORDING_ID = "recordingId";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECORDING_ID)
+  
   private String recordingId;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
   private String callId;
 
+  
   public static final String SERIALIZED_NAME_DURATION_SEC = "durationSec";
+  
+  
   @SerializedName(SERIALIZED_NAME_DURATION_SEC)
+  
   private Integer durationSec;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
+
 
   public RecordingResult() { 
   }
@@ -356,4 +396,3 @@ public class RecordingResult {
   }
 
 }
-

@@ -45,37 +45,73 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCPartnerCampaignsListResult implements Pagination {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TOTAL = "total";
+  
+  
   @SerializedName(SERIALIZED_NAME_TOTAL)
+  
   private Integer total;
 
+  
   public static final String SERIALIZED_NAME_START = "start";
+  
+  
   @SerializedName(SERIALIZED_NAME_START)
+  
   private Integer start;
 
+  
   public static final String SERIALIZED_NAME_END = "end";
+  
+  
   @SerializedName(SERIALIZED_NAME_END)
+  
   private Integer end;
 
+  
   public static final String SERIALIZED_NAME_PAGE = "page";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE)
+  
   private Integer page;
 
+  
   public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
+  
+  
   @SerializedName(SERIALIZED_NAME_NUM_PAGES)
+  
   private Integer numPages;
 
+  
   public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  
   private Integer pageSize;
 
+  
   public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
+  
+  
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
+  
   private String nextPageUri;
 
+  
   public static final String SERIALIZED_NAME_PARTNER_CAMPAIGNS = "partnerCampaigns";
+  
+  
   @SerializedName(SERIALIZED_NAME_PARTNER_CAMPAIGNS)
+  
   private List<SMSTenDLCPartnerCampaign> partnerCampaigns = null;
+
 
   public SMSTenDLCPartnerCampaignsListResult() { 
   }
@@ -246,7 +282,6 @@ public class SMSTenDLCPartnerCampaignsListResult implements Pagination {
     this.partnerCampaigns = partnerCampaigns;
     return this;
   }
-
   public SMSTenDLCPartnerCampaignsListResult addPartnerCampaignsItem(SMSTenDLCPartnerCampaign partnerCampaignsItem) {
     if (this.partnerCampaigns == null) {
       this.partnerCampaigns = new ArrayList<SMSTenDLCPartnerCampaign>();
@@ -336,4 +371,3 @@ public class SMSTenDLCPartnerCampaignsListResult implements Pagination {
   }
 
 }
-

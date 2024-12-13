@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "An individual command used in a PerCLScript.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_COMMAND = "command";
+  
+  
   @SerializedName(SERIALIZED_NAME_COMMAND)
+  
   protected String command;
+
 
   public PerclCommand() { 
     this.command = this.getClass().getSimpleName();
@@ -153,4 +161,3 @@ public class PerclCommand {
   }
 
 }
-

@@ -3013,7 +3013,7 @@ Name | Type | Description  | Notes
 
 <a name="listParticipants"></a>
 # **listParticipants**
-> ConferenceParticipantList listParticipants(conferenceId, talk, listen)
+> ConferenceParticipantList listParticipants(conferenceId, talk, listen, dtmfPassThrough)
 
 List Participants
 
@@ -3044,8 +3044,10 @@ public class Example {
 
     Boolean listen = true; // Boolean | Only show Participants with the listen privilege.
 
+    Boolean dtmfPassThrough = true; // Boolean | Only show Participants with the dtmfPassThrough privilege.
+
     try {
-      ConferenceParticipantList result = apiInstance.listParticipants(conferenceId, talk, listen);
+      ConferenceParticipantList result = apiInstance.listParticipants(conferenceId, talk, listen, dtmfPassThrough);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listParticipants");
@@ -3065,6 +3067,7 @@ Name | Type | Description  | Notes
  **conferenceId** | **String**| ID of the conference this participant is in. |
  **talk** | **Boolean**| Only show Participants with the talk privilege. | [optional]
  **listen** | **Boolean**| Only show Participants with the listen privilege. | [optional]
+ **dtmfPassThrough** | **Boolean**| Only show Participants with the dtmfPassThrough privilege. | [optional]
 
 
 ### Return type
@@ -3755,7 +3758,7 @@ public class Example {
 
     String callId = "callId_example"; // String | ID of the Call associated with this participant.
 
-    UpdateConferenceParticipantRequest updateConferenceParticipantRequest = new UpdateConferenceParticipantRequest(talk={ (Optional) Default is `true`. Setting to `false` mutes the Participant. FreeClimb returns an error and ignores any other value. }, listen={ (Optional) Default is `true`. Setting to `false` silences the Conference for this Participant. FreeClimb returns an error and ignores any other value. }); // UpdateConferenceParticipantRequest | Conference participant details to update
+    UpdateConferenceParticipantRequest updateConferenceParticipantRequest = new UpdateConferenceParticipantRequest(talk={ (Optional) Default is `true`. Setting to `false` mutes the Participant. FreeClimb returns an error and ignores any other value. }, listen={ (Optional) Default is `true`. Setting to `false` silences the Conference for this Participant. FreeClimb returns an error and ignores any other value. }, dtmfPassThrough={ (Optional) Default is `true`. Setting to `false` mutes dtmf audio for this Participant. FreeClimb returns an error and ignores any other value. }); // UpdateConferenceParticipantRequest | Conference participant details to update
     try {
       ConferenceParticipantResult result = apiInstance.updateAParticipant(conferenceId, callId, updateConferenceParticipantRequest);
       System.out.println(result);

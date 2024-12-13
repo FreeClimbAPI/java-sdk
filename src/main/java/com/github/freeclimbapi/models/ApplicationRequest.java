@@ -44,33 +44,65 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApplicationRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_VOICE_URL = "voiceUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_URL)
+  
   private String voiceUrl;
 
+  
   public static final String SERIALIZED_NAME_VOICE_FALLBACK_URL = "voiceFallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_FALLBACK_URL)
+  
   private String voiceFallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
+  
   private String callConnectUrl;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+  
   private String statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_SMS_URL = "smsUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_URL)
+  
   private String smsUrl;
 
+  
   public static final String SERIALIZED_NAME_SMS_FALLBACK_URL = "smsFallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_FALLBACK_URL)
+  
   private String smsFallbackUrl;
+
 
   public ApplicationRequest() { 
   }
@@ -298,4 +330,3 @@ public class ApplicationRequest {
   }
 
 }
-

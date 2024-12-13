@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Reject` command blocks an incoming Call. Using `Reject` is the only way to prevent FreeClimb from answering a Call. Any other response will result in an answered Call and your account will be billed.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Reject extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_REASON = "reason";
+  
+  
   @SerializedName(SERIALIZED_NAME_REASON)
+  
   private String reason;
+
 
   public Reject() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +131,3 @@ public class Reject extends PerclCommand {
   }
 
 }
-

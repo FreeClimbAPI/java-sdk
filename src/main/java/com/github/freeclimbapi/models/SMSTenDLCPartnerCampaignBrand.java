@@ -44,49 +44,97 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCPartnerCampaignBrand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  
   private String brandId;
 
+  
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
+  
+  
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
+  
   private String firstName;
 
+  
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  
+  
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  
   private String lastName;
 
+  
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
+  
+  
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  
   private String displayName;
 
+  
   public static final String SERIALIZED_NAME_COMPANY_NAME = "companyName";
+  
+  
   @SerializedName(SERIALIZED_NAME_COMPANY_NAME)
+  
   private String companyName;
 
+  
   public static final String SERIALIZED_NAME_PHONE = "phone";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE)
+  
   private String phone;
 
+  
   public static final String SERIALIZED_NAME_EMAIL = "email";
+  
+  
   @SerializedName(SERIALIZED_NAME_EMAIL)
+  
   private String email;
 
+  
   public static final String SERIALIZED_NAME_WEBSITE = "website";
+  
+  
   @SerializedName(SERIALIZED_NAME_WEBSITE)
+  
   private String website;
 
+  
   public static final String SERIALIZED_NAME_OPTIONAL_ATTRIBUTES = "optionalAttributes";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTIONAL_ATTRIBUTES)
+  
   private Map<String, Object> optionalAttributes = null;
 
+  
   public static final String SERIALIZED_NAME_EVP_VETTING_SCORE = "evpVettingScore";
+  
+  
   @SerializedName(SERIALIZED_NAME_EVP_VETTING_SCORE)
+  
   private Integer evpVettingScore;
+
 
   public SMSTenDLCPartnerCampaignBrand() { 
   }
@@ -306,9 +354,9 @@ public class SMSTenDLCPartnerCampaignBrand {
     return this;
   }
 
-  public SMSTenDLCPartnerCampaignBrand putOptionalAttributesItem(String key, Object optionalAttributesItem) {
+  public SMSTenDLCPartnerCampaignBrand putoptionalAttributesItem(String key, Object optionalAttributesItem) {
     if (this.optionalAttributes == null) {
-      this.optionalAttributes = new HashMap<String, Object>();
+      this.optionalAttributes = new HashMap<>();
     }
     this.optionalAttributes.put(key, optionalAttributesItem);
     return this;
@@ -424,4 +472,3 @@ public class SMSTenDLCPartnerCampaignBrand {
   }
 
 }
-

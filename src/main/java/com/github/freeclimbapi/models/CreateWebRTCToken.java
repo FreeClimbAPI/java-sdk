@@ -44,17 +44,33 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateWebRTCToken {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_USES = "uses";
+  
+  
   @SerializedName(SERIALIZED_NAME_USES)
+  
   private Integer uses;
+
 
   public CreateWebRTCToken() { 
   }
@@ -172,4 +188,3 @@ public class CreateWebRTCToken {
   }
 
 }
-

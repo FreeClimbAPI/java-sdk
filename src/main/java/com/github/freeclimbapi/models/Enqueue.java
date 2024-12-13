@@ -45,21 +45,41 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Enqueue` command adds the current Call to a call Queue. If the specified Queue does not exist, it is created and then the Call is added to it. The default maximum length of the queue is 100. This can be modified using the REST API.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Enqueue extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
   @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
   private String queueId;
 
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
+  
   private String waitUrl;
+
 
   public Enqueue() { 
     this.command = this.getClass().getSimpleName();
@@ -213,4 +233,3 @@ public class Enqueue extends PerclCommand {
   }
 
 }
-

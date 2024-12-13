@@ -45,41 +45,81 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `GetDigits` command collects DTMF inputs from the caller. It is only supported only when there is a single party on the Call. `GetDigits` is a Terminal Command — any actions following it are never executed. When the Caller is done entering the digits, FreeClimb submits that data to the provided `actionUrl` using an HTTP POST request. Your server will be required to respond to the FreeClimb Webhook with PerCL to continue handling the call.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetDigits extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
   private String actionUrl;
 
+  
   public static final String SERIALIZED_NAME_DIGIT_TIMEOUT_MS = "digitTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_DIGIT_TIMEOUT_MS)
+  
   private Integer digitTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_FINISH_ON_KEY = "finishOnKey";
+  
+  
   @SerializedName(SERIALIZED_NAME_FINISH_ON_KEY)
+  
   private String finishOnKey;
 
+  
   public static final String SERIALIZED_NAME_FLUSH_BUFFER = "flushBuffer";
+  
+  
   @SerializedName(SERIALIZED_NAME_FLUSH_BUFFER)
+  
   private Boolean flushBuffer;
 
+  
   public static final String SERIALIZED_NAME_INITIAL_TIMEOUT_MS = "initialTimeoutMs";
+  
+  
   @SerializedName(SERIALIZED_NAME_INITIAL_TIMEOUT_MS)
+  
   private Integer initialTimeoutMs;
 
+  
   public static final String SERIALIZED_NAME_MAX_DIGITS = "maxDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_MAX_DIGITS)
+  
   private Integer maxDigits;
 
+  
   public static final String SERIALIZED_NAME_MIN_DIGITS = "minDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_MIN_DIGITS)
+  
   private Integer minDigits;
 
+  
   public static final String SERIALIZED_NAME_PROMPTS = "prompts";
+  
+  
   @SerializedName(SERIALIZED_NAME_PROMPTS)
+  
   private List<PerclCommand> prompts = null;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public GetDigits() { 
     this.command = this.getClass().getSimpleName();
@@ -251,7 +291,6 @@ public class GetDigits extends PerclCommand {
     this.prompts = prompts;
     return this;
   }
-
   public GetDigits addPromptsItem(PerclCommand promptsItem) {
     if (this.prompts == null) {
       this.prompts = new ArrayList<PerclCommand>();
@@ -371,4 +410,3 @@ public class GetDigits extends PerclCommand {
   }
 
 }
-

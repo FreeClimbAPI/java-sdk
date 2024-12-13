@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Hangup` command terminates a Call. If `Hangup` is used as the first action in a PerCL response, it does not prevent FreeClimb from answering the Call and billing your account. See the `Reject` command to hang up at no charge.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Hangup extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_REASON = "reason";
+  
+  
   @SerializedName(SERIALIZED_NAME_REASON)
+  
   private String reason;
+
 
   public Hangup() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +131,3 @@ public class Hangup extends PerclCommand {
   }
 
 }
-

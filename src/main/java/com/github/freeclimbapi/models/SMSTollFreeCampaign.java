@@ -44,86 +44,65 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTollFreeCampaign {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
+  
   public static final String SERIALIZED_NAME_USE_CASE = "useCase";
+  
+  
   @SerializedName(SERIALIZED_NAME_USE_CASE)
+  
   private String useCase;
 
-  /**
-   * Current toll-free campaign registration status.Possible values: UNREGISTERED,INITIATED,PENDING,DECLINED,REGISTERED. A newly created campaign defaults to INITIATED status. 
-   */
-  @JsonAdapter(RegistrationStatusEnum.Adapter.class)
-  public enum RegistrationStatusEnum {
-    UNREGISTERED("UNREGISTERED"),
-    
-    INITIATED("INITIATED"),
-    
-    PENDING("PENDING"),
-    
-    DECLINED("DECLINED"),
-    
-    REGISTERED("REGISTERED");
-
-    private String value;
-
-    RegistrationStatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static RegistrationStatusEnum fromValue(String value) {
-      for (RegistrationStatusEnum b : RegistrationStatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<RegistrationStatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final RegistrationStatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public RegistrationStatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return RegistrationStatusEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_REGISTRATION_STATUS = "registrationStatus";
+  
+  
   @SerializedName(SERIALIZED_NAME_REGISTRATION_STATUS)
-  private RegistrationStatusEnum registrationStatus;
+  
+  private SMSTollFreeCampaignRegistrationStatus registrationStatus;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
+
 
   public SMSTollFreeCampaign() { 
   }
@@ -197,25 +176,25 @@ public class SMSTollFreeCampaign {
   }
 
 
-  public SMSTollFreeCampaign registrationStatus(RegistrationStatusEnum registrationStatus) {
+  public SMSTollFreeCampaign registrationStatus(SMSTollFreeCampaignRegistrationStatus registrationStatus) {
     
     this.registrationStatus = registrationStatus;
     return this;
   }
 
    /**
-   * Current toll-free campaign registration status.Possible values: UNREGISTERED,INITIATED,PENDING,DECLINED,REGISTERED. A newly created campaign defaults to INITIATED status. 
+   * Get registrationStatus
    * @return registrationStatus
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Current toll-free campaign registration status.Possible values: UNREGISTERED,INITIATED,PENDING,DECLINED,REGISTERED. A newly created campaign defaults to INITIATED status. ")
+  @ApiModelProperty(required = true, value = "")
 
-  public RegistrationStatusEnum getRegistrationStatus() {
+  public SMSTollFreeCampaignRegistrationStatus getRegistrationStatus() {
     return registrationStatus;
   }
 
 
-  public void setRegistrationStatus(RegistrationStatusEnum registrationStatus) {
+  public void setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus registrationStatus) {
     this.registrationStatus = registrationStatus;
   }
 
@@ -340,4 +319,3 @@ public class SMSTollFreeCampaign {
   }
 
 }
-

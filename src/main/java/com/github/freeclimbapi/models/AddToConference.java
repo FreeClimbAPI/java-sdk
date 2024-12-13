@@ -45,41 +45,89 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `AddToConference` command adds a Participant to a Conference. Two Call legs can be bridged together by creating a Conference and adding both Call legs to it via `AddToConference`.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddToConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALLOW_CALL_CONTROL = "allowCallControl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALLOW_CALL_CONTROL)
+  
   private Boolean allowCallControl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_SEQUENCE = "callControlSequence";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_SEQUENCE)
+  
   private String callControlSequence;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_URL = "callControlUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_URL)
+  
   private String callControlUrl;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
 
+  
   public static final String SERIALIZED_NAME_LEAVE_CONFERENCE_URL = "leaveConferenceUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_LEAVE_CONFERENCE_URL)
+  
   private String leaveConferenceUrl;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
   private String notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
+  
+  
   @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
+  
   private Boolean startConfOnEnter;
 
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
+
+  
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  
+  
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  
+  private Boolean dtmfPassThrough;
+
 
   public AddToConference() { 
     this.command = this.getClass().getSimpleName();
@@ -292,6 +340,29 @@ public class AddToConference extends PerclCommand {
   }
 
 
+  public AddToConference dtmfPassThrough(Boolean dtmfPassThrough) {
+    
+    this.dtmfPassThrough = dtmfPassThrough;
+    return this;
+  }
+
+   /**
+   * If &#x60;true&#x60;, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or &#x60;SetDTMFPassThrough&#x60; PerCL command. 
+   * @return dtmfPassThrough
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "If `true`, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or `SetDTMFPassThrough` PerCL command. ")
+
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
+  }
+
+
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -310,12 +381,13 @@ public class AddToConference extends PerclCommand {
         Objects.equals(this.notificationUrl, addToConference.notificationUrl) &&
         Objects.equals(this.startConfOnEnter, addToConference.startConfOnEnter) &&
         Objects.equals(this.talk, addToConference.talk) &&
+        Objects.equals(this.dtmfPassThrough, addToConference.dtmfPassThrough) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk, super.hashCode());
+    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk, dtmfPassThrough, super.hashCode());
   }
 
   @Override
@@ -332,6 +404,7 @@ public class AddToConference extends PerclCommand {
     sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
     sb.append("    startConfOnEnter: ").append(toIndentedString(startConfOnEnter)).append("\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -348,6 +421,7 @@ public class AddToConference extends PerclCommand {
     attributes.put("notificationUrl", () -> this.getNotificationUrl());
     attributes.put("startConfOnEnter", () -> this.getStartConfOnEnter());
     attributes.put("talk", () -> this.getTalk());
+    attributes.put("dtmfPassThrough", () -> this.getDtmfPassThrough());
     return attributes;
   }
 
@@ -363,4 +437,3 @@ public class AddToConference extends PerclCommand {
   }
 
 }
-

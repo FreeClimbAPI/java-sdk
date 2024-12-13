@@ -44,13 +44,25 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_LABEL = "label";
+  
+  
   @SerializedName(SERIALIZED_NAME_LABEL)
+  
   private String label;
+
 
   public AccountRequest() { 
   }
@@ -142,4 +154,3 @@ public class AccountRequest {
   }
 
 }
-

@@ -45,17 +45,33 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Play` command plays an audio file back to the caller. The audio file may be located at any location accessible via a URL. `Play` can exist as a stand-alone command or as a nested command. It does not allow barge-in unless nested within a `GetSpeech` command. The file will always be played to completion unless nested.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Play extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_FILE = "file";
+  
+  
   @SerializedName(SERIALIZED_NAME_FILE)
+  
   private String _file;
 
+  
   public static final String SERIALIZED_NAME_LOOP = "loop";
+  
+  
   @SerializedName(SERIALIZED_NAME_LOOP)
+  
   private Integer loop;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public Play() { 
     this.command = this.getClass().getSimpleName();
@@ -183,4 +199,3 @@ public class Play extends PerclCommand {
   }
 
 }
-

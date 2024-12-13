@@ -44,49 +44,97 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
   @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
   private String queueId;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_MAX_SIZE = "maxSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_MAX_SIZE)
+  
   private Integer maxSize;
 
+  
   public static final String SERIALIZED_NAME_CURRENT_SIZE = "currentSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_CURRENT_SIZE)
+  
   private Integer currentSize;
 
+  
   public static final String SERIALIZED_NAME_AVERAGE_QUEUE_REMOVAL_TIME = "averageQueueRemovalTime";
+  
+  
   @SerializedName(SERIALIZED_NAME_AVERAGE_QUEUE_REMOVAL_TIME)
+  
   private Integer averageQueueRemovalTime;
 
+  
   public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
+  
   private Object subresourceUris;
+
 
   public QueueResult() { 
   }
@@ -414,4 +462,3 @@ public class QueueResult {
   }
 
 }
-
