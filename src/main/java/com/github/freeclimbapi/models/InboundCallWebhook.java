@@ -129,7 +129,7 @@ public class InboundCallWebhook extends Webhook {
   
   @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
   
-  private Object parentCallId = null;
+  private String parentCallId;
 
 
   public InboundCallWebhook() { 
@@ -343,7 +343,7 @@ public class InboundCallWebhook extends Webhook {
   }
 
 
-  public InboundCallWebhook parentCallId(Object parentCallId) {
+  public InboundCallWebhook parentCallId(String parentCallId) {
     
     this.parentCallId = parentCallId;
     return this;
@@ -356,12 +356,12 @@ public class InboundCallWebhook extends Webhook {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getParentCallId() {
+  public String getParentCallId() {
     return parentCallId;
   }
 
 
-  public void setParentCallId(Object parentCallId) {
+  public void setParentCallId(String parentCallId) {
     this.parentCallId = parentCallId;
   }
 

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **direction** | **CallDirection** |  |  [optional]
 **conferenceId** | **String** | This is only populated if request pertains to a Conference. Otherwise, it is set to null. |  [optional]
 **queueId** | **String** | This is only populated if the request pertains to a Queue. Otherwise, it is set to null. |  [optional]
-**parentCallId** | **Object** |  |  [optional]
+**parentCallId** | **String** |  |  [optional]
 
 
 

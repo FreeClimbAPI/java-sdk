@@ -162,6 +162,11 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void parentCallIdTest() {
       
+      
+      model.setParentCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getParentCallId());
+      
+      
     }
 
       /**
@@ -201,6 +206,10 @@ import com.github.freeclimbapi.models.*;
         
       test1.setQueueId("TS");
       
+        
+        
+      test1.setParentCallId("TS");
+      
       InboundCallWebhook test2 = new InboundCallWebhook();
         
         
@@ -231,6 +240,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test2.setQueueId("TS");
+      
+        
+        
+      test2.setParentCallId("TS");
       
 
       Assert.assertTrue(test1.equals(test2));
@@ -273,6 +286,10 @@ import com.github.freeclimbapi.models.*;
         
       test1.setQueueId("TS");
       
+        
+        
+      test1.setParentCallId("TS");
+      
       InboundCallWebhook test2 = new InboundCallWebhook();
         
         
@@ -303,6 +320,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test2.setQueueId("TS2");
+      
+        
+        
+      test2.setParentCallId("TS2");
       
 
       Assert.assertFalse(test1.equals(test2));
@@ -344,6 +365,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test1.setQueueId("TS");
+      
+        
+        
+      test1.setParentCallId("TS");
       
       
       int hashCode1 = test1.hashCode();
@@ -387,6 +412,10 @@ import com.github.freeclimbapi.models.*;
         
       test1.setQueueId("TS");
       
+        
+        
+      test1.setParentCallId("TS");
+      
       InboundCallWebhook test2 = new InboundCallWebhook();
         
         
@@ -417,6 +446,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test2.setQueueId("TS");
+      
+        
+        
+      test2.setParentCallId("TS");
       
         
       String toString1 = test1.toString();
@@ -461,6 +494,10 @@ import com.github.freeclimbapi.models.*;
         
       test1.setQueueId("TS");
       
+        
+        
+      test1.setParentCallId("TS");
+      
       InboundCallWebhook test2 = new InboundCallWebhook();
         
         
@@ -491,6 +528,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test2.setQueueId("TS");
+      
+        
+        
+      test2.setParentCallId("TS");
       
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -532,6 +573,10 @@ import com.github.freeclimbapi.models.*;
         
       test1.setQueueId("TS");
       
+        
+        
+      test1.setParentCallId("TS");
+      
       InboundCallWebhook test2 = new InboundCallWebhook();
         
         
@@ -562,6 +607,10 @@ import com.github.freeclimbapi.models.*;
         
         
       test2.setQueueId("TS2");
+      
+        
+        
+      test2.setParentCallId("TS2");
       
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -602,6 +651,10 @@ import com.github.freeclimbapi.models.*;
         
         
         test1.setQueueId("TS");
+      
+        
+        
+        test1.setParentCallId("TS");
       
 
       String toString1 = test1.toString();
