@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **notificationUrl** | **String** | When the Participant enters the Conference, this URL will be invoked using an HTTP POST request with the standard request parameters. |  [optional]
 **startConfOnEnter** | **Boolean** | Flag that indicates whether a Conference starts upon entry of this particular Participant. This is usually set to &#x60;true&#x60; for moderators and &#x60;false&#x60; for all other Participants. |  [optional]
 **talk** | **Boolean** | If &#x60;true&#x60;, the Participant joins the Conference with talk privileges. This may be modified later via the REST API or &#x60;SetTalk&#x60; PerCL command.  |  [optional]
+**dtmfPassThrough** | **Boolean** | If &#x60;true&#x60;, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or &#x60;SetDTMFPassThrough&#x60; PerCL command.  |  [optional]
 
 
 

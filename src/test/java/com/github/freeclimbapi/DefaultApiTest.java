@@ -847,7 +847,9 @@ public class DefaultApiTest {
         
         Boolean listen = listenBooleanTestValue();
         
-        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen);
+        Boolean dtmfPassThrough = dtmfPassThroughBooleanTestValue();
+        
+        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen, dtmfPassThrough);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceParticipantList.class);
         
@@ -1508,7 +1510,9 @@ public class DefaultApiTest {
         
         Boolean listen = listenBooleanTestValue();
         
-        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen);
+        Boolean dtmfPassThrough = dtmfPassThroughBooleanTestValue();
+        
+        ConferenceParticipantList response = this.apiInstance.listParticipants(conferenceId, talk, listen, dtmfPassThrough);
         String localVarNextPageUri = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants"
             .replaceAll("\\{" + "accountId" + "\\}","MOCK")
             .replaceAll("\\{" + "conferenceId" + "\\}","MOCK");
@@ -1915,5 +1919,9 @@ public class DefaultApiTest {
         CompletionRequest object = new CompletionRequest();
         object.setQuery("query_example");
         return object;
+    }
+
+    private Boolean dtmfPassThroughBooleanTestValue() {
+        return true;
     }
 }

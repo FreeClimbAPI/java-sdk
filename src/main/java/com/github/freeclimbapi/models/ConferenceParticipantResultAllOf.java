@@ -64,6 +64,10 @@ public class ConferenceParticipantResultAllOf {
   @SerializedName(SERIALIZED_NAME_LISTEN)
   private Boolean listen;
 
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  private Boolean dtmfPassThrough;
+
   public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
   @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
   private Boolean startConfOnEnter;
@@ -186,6 +190,29 @@ public class ConferenceParticipantResultAllOf {
   }
 
 
+  public ConferenceParticipantResultAllOf dtmfPassThrough(Boolean dtmfPassThrough) {
+    
+    this.dtmfPassThrough = dtmfPassThrough;
+    return this;
+  }
+
+   /**
+   * True if this Participant had dtmfPassThrough privileges in the Conference. False otherwise.
+   * @return dtmfPassThrough
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "True if this Participant had dtmfPassThrough privileges in the Conference. False otherwise.")
+
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
+  }
+
+
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
+  }
+
+
   public ConferenceParticipantResultAllOf startConfOnEnter(Boolean startConfOnEnter) {
     
     this.startConfOnEnter = startConfOnEnter;
@@ -223,6 +250,7 @@ public class ConferenceParticipantResultAllOf {
         Objects.equals(this.callId, conferenceParticipantResultAllOf.callId) &&
         Objects.equals(this.talk, conferenceParticipantResultAllOf.talk) &&
         Objects.equals(this.listen, conferenceParticipantResultAllOf.listen) &&
+        Objects.equals(this.dtmfPassThrough, conferenceParticipantResultAllOf.dtmfPassThrough) &&
         Objects.equals(this.startConfOnEnter, conferenceParticipantResultAllOf.startConfOnEnter);
   }
 
@@ -232,7 +260,7 @@ public class ConferenceParticipantResultAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, conferenceId, callId, talk, listen, startConfOnEnter);
+    return Objects.hash(accountId, conferenceId, callId, talk, listen, dtmfPassThrough, startConfOnEnter);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -251,6 +279,7 @@ public class ConferenceParticipantResultAllOf {
     sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
     sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("    startConfOnEnter: ").append(toIndentedString(startConfOnEnter)).append("\n");
     sb.append("}");
     return sb.toString();

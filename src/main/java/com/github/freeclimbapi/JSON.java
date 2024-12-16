@@ -76,6 +76,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -110,6 +111,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -144,6 +146,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -178,6 +181,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -212,6 +216,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -246,6 +251,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -280,6 +286,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -314,6 +321,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -348,6 +356,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -382,6 +391,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -416,6 +426,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -450,6 +461,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -484,6 +496,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -518,6 +531,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -552,6 +566,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -586,6 +601,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -620,6 +636,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -654,6 +671,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -688,6 +706,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -696,6 +715,41 @@ public class JSON {
                         classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
                         classByDiscriminatorValue.put("Unpark", Unpark.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        return getClassByDiscriminator(classByDiscriminatorValue,
+                                getDiscriminatorValue(readElement, "command"));
+                    }
+          })
+                .registerTypeSelector(SetDTMFPassThrough.class, new TypeSelector<SetDTMFPassThrough>() {
+                    @Override
+                    public Class<? extends SetDTMFPassThrough> getClassForElement(JsonElement readElement) {
+                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
+                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
+                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
+                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
+                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
+                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
+                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
+                        classByDiscriminatorValue.put("Hangup", Hangup.class);
+                        classByDiscriminatorValue.put("OutDial", OutDial.class);
+                        classByDiscriminatorValue.put("Park", Park.class);
+                        classByDiscriminatorValue.put("Pause", Pause.class);
+                        classByDiscriminatorValue.put("Play", Play.class);
+                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
+                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
+                        classByDiscriminatorValue.put("Redirect", Redirect.class);
+                        classByDiscriminatorValue.put("Reject", Reject.class);
+                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
+                        classByDiscriminatorValue.put("Say", Say.class);
+                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
+                        classByDiscriminatorValue.put("SetListen", SetListen.class);
+                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
+                        classByDiscriminatorValue.put("Sms", Sms.class);
+                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
+                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
+                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
+                        classByDiscriminatorValue.put("Unpark", Unpark.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "command"));
                     }
@@ -722,6 +776,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -756,6 +811,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -790,6 +846,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -824,6 +881,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -858,6 +916,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -892,6 +951,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);
@@ -926,6 +986,7 @@ public class JSON {
                         classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
                         classByDiscriminatorValue.put("Say", Say.class);
                         classByDiscriminatorValue.put("SendDigits", SendDigits.class);
+                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
                         classByDiscriminatorValue.put("SetListen", SetListen.class);
                         classByDiscriminatorValue.put("SetTalk", SetTalk.class);
                         classByDiscriminatorValue.put("Sms", Sms.class);

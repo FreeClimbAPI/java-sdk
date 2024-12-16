@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>5.8.0</version>
+  <version>5.9.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:5.8.0"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:5.9.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-5.8.0.jar`
+* `target/freeclimb-java-client-5.9.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -331,6 +331,8 @@ Class | Method | HTTP request | Description
  - [SayAllOf](docs/SayAllOf.md)
  - [SendDigits](docs/SendDigits.md)
  - [SendDigitsAllOf](docs/SendDigitsAllOf.md)
+ - [SetDTMFPassThrough](docs/SetDTMFPassThrough.md)
+ - [SetDTMFPassThroughAllOf](docs/SetDTMFPassThroughAllOf.md)
  - [SetListen](docs/SetListen.md)
  - [SetListenAllOf](docs/SetListenAllOf.md)
  - [SetTalk](docs/SetTalk.md)

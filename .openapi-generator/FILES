@@ -132,6 +132,8 @@ docs/Say.md
 docs/SayAllOf.md
 docs/SendDigits.md
 docs/SendDigitsAllOf.md
+docs/SetDTMFPassThrough.md
+docs/SetDTMFPassThroughAllOf.md
 docs/SetListen.md
 docs/SetListenAllOf.md
 docs/SetTalk.md
@@ -299,6 +301,8 @@ src/main/java/com/github/freeclimbapi/SendDigits.java
 src/main/java/com/github/freeclimbapi/SendDigitsAllOf.java
 src/main/java/com/github/freeclimbapi/ServerConfiguration.java
 src/main/java/com/github/freeclimbapi/ServerVariable.java
+src/main/java/com/github/freeclimbapi/SetDTMFPassThrough.java
+src/main/java/com/github/freeclimbapi/SetDTMFPassThroughAllOf.java
 src/main/java/com/github/freeclimbapi/SetListen.java
 src/main/java/com/github/freeclimbapi/SetListenAllOf.java
 src/main/java/com/github/freeclimbapi/SetTalk.java
@@ -322,3 +326,4 @@ src/main/java/com/github/freeclimbapi/auth/ApiKeyAuth.java
 src/main/java/com/github/freeclimbapi/auth/Authentication.java
 src/main/java/com/github/freeclimbapi/auth/HttpBasicAuth.java
 src/main/java/com/github/freeclimbapi/auth/HttpBearerAuth.java
+src/test/java/com/github/freeclimbapi/DefaultApiTest.java

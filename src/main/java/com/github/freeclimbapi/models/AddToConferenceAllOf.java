@@ -80,6 +80,10 @@ public class AddToConferenceAllOf {
   @SerializedName(SERIALIZED_NAME_TALK)
   private Boolean talk;
 
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  private Boolean dtmfPassThrough;
+
   public AddToConferenceAllOf() { 
   }
 
@@ -290,6 +294,29 @@ public class AddToConferenceAllOf {
   }
 
 
+  public AddToConferenceAllOf dtmfPassThrough(Boolean dtmfPassThrough) {
+    
+    this.dtmfPassThrough = dtmfPassThrough;
+    return this;
+  }
+
+   /**
+   * If &#x60;true&#x60;, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or &#x60;SetDTMFPassThrough&#x60; PerCL command. 
+   * @return dtmfPassThrough
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "If `true`, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or `SetDTMFPassThrough` PerCL command. ")
+
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
+  }
+
+
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -307,12 +334,13 @@ public class AddToConferenceAllOf {
         Objects.equals(this.listen, addToConferenceAllOf.listen) &&
         Objects.equals(this.notificationUrl, addToConferenceAllOf.notificationUrl) &&
         Objects.equals(this.startConfOnEnter, addToConferenceAllOf.startConfOnEnter) &&
-        Objects.equals(this.talk, addToConferenceAllOf.talk);
+        Objects.equals(this.talk, addToConferenceAllOf.talk) &&
+        Objects.equals(this.dtmfPassThrough, addToConferenceAllOf.dtmfPassThrough);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk);
+    return Objects.hash(allowCallControl, callControlSequence, callControlUrl, conferenceId, leaveConferenceUrl, listen, notificationUrl, startConfOnEnter, talk, dtmfPassThrough);
   }
 
   @Override
@@ -328,6 +356,7 @@ public class AddToConferenceAllOf {
     sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
     sb.append("    startConfOnEnter: ").append(toIndentedString(startConfOnEnter)).append("\n");
     sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("}");
     return sb.toString();
   }

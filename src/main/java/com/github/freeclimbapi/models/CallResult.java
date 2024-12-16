@@ -120,6 +120,10 @@ public class CallResult {
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
   private Object subresourceUris;
 
+  public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  private String applicationId;
+
   public CallResult() { 
   }
 
@@ -560,6 +564,29 @@ public class CallResult {
   }
 
 
+  public CallResult applicationId(String applicationId) {
+    
+    this.applicationId = applicationId;
+    return this;
+  }
+
+   /**
+   * ApplicationId associated with the Call.
+   * @return applicationId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "ApplicationId associated with the Call.")
+
+  public String getApplicationId() {
+    return applicationId;
+  }
+
+
+  public void setApplicationId(String applicationId) {
+    this.applicationId = applicationId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -587,7 +614,8 @@ public class CallResult {
         Objects.equals(this.connectDuration, callResult.connectDuration) &&
         Objects.equals(this.direction, callResult.direction) &&
         Objects.equals(this.answeredBy, callResult.answeredBy) &&
-        Objects.equals(this.subresourceUris, callResult.subresourceUris);
+        Objects.equals(this.subresourceUris, callResult.subresourceUris) &&
+        Objects.equals(this.applicationId, callResult.applicationId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -596,7 +624,7 @@ public class CallResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, callStatus, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris);
+    return Objects.hash(uri, dateCreated, dateUpdated, revision, callId, parentCallId, accountId, from, to, phoneNumberId, callStatus, startTime, connectTime, endTime, duration, connectDuration, direction, answeredBy, subresourceUris, applicationId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -629,6 +657,7 @@ public class CallResult {
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    answeredBy: ").append(toIndentedString(answeredBy)).append("\n");
     sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");
+    sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
