@@ -268,6 +268,18 @@ import com.github.freeclimbapi.models.*;
       Assert.assertEquals(testObject, model.getSubresourceUris());
       
     }
+    /**
+     * Test the property 'applicationId'
+     */
+    @Test
+    public void applicationIdTest() {
+      
+      
+      model.setApplicationId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
+      
+    }
 
       /**
      * Test the method 'equalsTrue'
@@ -332,6 +344,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       CallResult test2 = new CallResult();
         
         
@@ -389,6 +405,10 @@ import com.github.freeclimbapi.models.*;
       test2.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
+        
+        
+      test2.setApplicationId("TS");
+      
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -456,6 +476,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.MACHINE);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       CallResult test2 = new CallResult();
         
         
@@ -513,6 +537,10 @@ import com.github.freeclimbapi.models.*;
       test2.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
+        
+        
+      test2.setApplicationId("TS2");
+      
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -580,6 +608,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -648,6 +680,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       CallResult test2 = new CallResult();
         
         
@@ -705,6 +741,10 @@ import com.github.freeclimbapi.models.*;
       test2.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
+        
+        
+      test2.setApplicationId("TS");
+      
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -774,6 +814,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       CallResult test2 = new CallResult();
         
         
@@ -831,6 +875,10 @@ import com.github.freeclimbapi.models.*;
       test2.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
+        
+        
+      test2.setApplicationId("TS");
+      
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -897,6 +945,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.MACHINE);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+      test1.setApplicationId("TS");
+      
       CallResult test2 = new CallResult();
         
         
@@ -954,6 +1006,10 @@ import com.github.freeclimbapi.models.*;
       test2.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
+        
+        
+      test2.setApplicationId("TS2");
+      
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -1020,6 +1076,10 @@ import com.github.freeclimbapi.models.*;
       test1.setAnsweredBy(AnsweredBy.HUMAN);
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
+        
+        
+        test1.setApplicationId("TS");
+      
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));

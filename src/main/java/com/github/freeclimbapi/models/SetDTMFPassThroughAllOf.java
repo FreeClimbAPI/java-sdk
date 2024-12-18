@@ -40,39 +40,37 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;SetTalk&#x60; command enables or disables the talk privilege for this Conference Participant. If &#39;true&#39;, no audio from that Participant is shared with the other Participants of the Conference.
+ * SetDTMFPassThroughAllOf
  */
-@ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for this Conference Participant. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class SetTalk extends PerclCommand {
-  public static final String SERIALIZED_NAME_TALK = "talk";
-  @SerializedName(SERIALIZED_NAME_TALK)
-  private Boolean talk;
+public class SetDTMFPassThroughAllOf {
+  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  private Boolean dtmfPassThrough;
 
-  public SetTalk() { 
-    this.command = this.getClass().getSimpleName();
+  public SetDTMFPassThroughAllOf() { 
   }
 
-  public SetTalk talk(Boolean talk) {
+  public SetDTMFPassThroughAllOf dtmfPassThrough(Boolean dtmfPassThrough) {
     
-    this.talk = talk;
+    this.dtmfPassThrough = dtmfPassThrough;
     return this;
   }
 
    /**
-   * Specifying &#x60;false&#x60; mutes the Participant.
-   * @return talk
+   * Specifying &#x60;false&#x60; mutes the Participant&#39;s dtmf audio.
+   * @return dtmfPassThrough
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specifying `false` mutes the Participant.")
+  @ApiModelProperty(value = "Specifying `false` mutes the Participant's dtmf audio.")
 
-  public Boolean getTalk() {
-    return talk;
+  public Boolean getDtmfPassThrough() {
+    return dtmfPassThrough;
   }
 
 
-  public void setTalk(Boolean talk) {
-    this.talk = talk;
+  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+    this.dtmfPassThrough = dtmfPassThrough;
   }
 
 
@@ -84,32 +82,24 @@ public class SetTalk extends PerclCommand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SetTalk setTalk = (SetTalk) o;
-    return Objects.equals(this.talk, setTalk.talk) &&
-        super.equals(o);
+    SetDTMFPassThroughAllOf setDTMFPassThroughAllOf = (SetDTMFPassThroughAllOf) o;
+    return Objects.equals(this.dtmfPassThrough, setDTMFPassThroughAllOf.dtmfPassThrough);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(talk, super.hashCode());
+    return Objects.hash(dtmfPassThrough);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SetTalk {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
+    sb.append("class SetDTMFPassThroughAllOf {\n");
+    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("talk", () -> this.getTalk());
-    return attributes;
-  }
 
   /**
    * Convert the given object to string with each line indented by 4 spaces

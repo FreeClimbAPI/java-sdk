@@ -5867,6 +5867,7 @@ public class DefaultApi {
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
+     * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5876,7 +5877,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listParticipantsCall(String conferenceId, Boolean talk, Boolean listen, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listParticipantsCall(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -5912,6 +5913,10 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("listen", listen));
         }
 
+        if (dtmfPassThrough != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dtmfPassThrough", dtmfPassThrough));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -5936,7 +5941,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listParticipantsValidateBeforeCall(String conferenceId, Boolean talk, Boolean listen, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listParticipantsValidateBeforeCall(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
@@ -5944,7 +5949,7 @@ public class DefaultApi {
         }
         
 
-        okhttp3.Call localVarCall = listParticipantsCall(conferenceId, talk, listen, _callback);
+        okhttp3.Call localVarCall = listParticipantsCall(conferenceId, talk, listen, dtmfPassThrough, _callback);
         return localVarCall;
 
     }
@@ -5955,6 +5960,7 @@ public class DefaultApi {
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
+     * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @return ConferenceParticipantList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -5963,8 +5969,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
      </table>
      */
-    public ConferenceParticipantList listParticipants(String conferenceId, Boolean talk, Boolean listen) throws ApiException {
-        ApiResponse<ConferenceParticipantList> localVarResp = listParticipantsWithHttpInfo(conferenceId, talk, listen);
+    public ConferenceParticipantList listParticipants(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough) throws ApiException {
+        ApiResponse<ConferenceParticipantList> localVarResp = listParticipantsWithHttpInfo(conferenceId, talk, listen, dtmfPassThrough);
         return localVarResp.getData();
     }
 
@@ -5974,6 +5980,7 @@ public class DefaultApi {
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
+     * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @return ApiResponse&lt;ConferenceParticipantList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -5982,8 +5989,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ConferenceParticipantList> listParticipantsWithHttpInfo(String conferenceId, Boolean talk, Boolean listen) throws ApiException {
-        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, null);
+    public ApiResponse<ConferenceParticipantList> listParticipantsWithHttpInfo(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough) throws ApiException {
+        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, dtmfPassThrough, null);
         Type localVarReturnType = new TypeToken<ConferenceParticipantList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -5994,6 +6001,7 @@ public class DefaultApi {
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
+     * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -6003,9 +6011,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listParticipantsAsync(String conferenceId, Boolean talk, Boolean listen, final ApiCallback<ConferenceParticipantList> _callback) throws ApiException {
+    public okhttp3.Call listParticipantsAsync(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback<ConferenceParticipantList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, _callback);
+        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, dtmfPassThrough, _callback);
         Type localVarReturnType = new TypeToken<ConferenceParticipantList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

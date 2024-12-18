@@ -95,6 +95,15 @@ import com.github.freeclimbapi.models.*;
       
     }
     /**
+     * Test the property 'dtmfPassThrough'
+     */
+    @Test
+    public void dtmfPassThroughTest() {
+      model.setDtmfPassThrough(false);
+      Assert.assertEquals(false, model.getDtmfPassThrough());       
+      
+    }
+    /**
      * Test the property 'startConfOnEnter'
      */
     @Test
@@ -125,6 +134,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResultAllOf test2 = new ConferenceParticipantResultAllOf();
         
@@ -141,6 +151,7 @@ import com.github.freeclimbapi.models.*;
       
       test2.setTalk(true);
       test2.setListen(true);
+      test2.setDtmfPassThrough(true);
       test2.setStartConfOnEnter(true);
 
       Assert.assertTrue(test1.equals(test2));
@@ -167,6 +178,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResultAllOf test2 = new ConferenceParticipantResultAllOf();
         
@@ -183,6 +195,7 @@ import com.github.freeclimbapi.models.*;
       
       test2.setTalk(false);
       test2.setListen(false);
+      test2.setDtmfPassThrough(false);
       test2.setStartConfOnEnter(false);
 
       Assert.assertFalse(test1.equals(test2));
@@ -209,6 +222,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       
       int hashCode1 = test1.hashCode();
@@ -236,6 +250,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResultAllOf test2 = new ConferenceParticipantResultAllOf();
         
@@ -252,6 +267,7 @@ import com.github.freeclimbapi.models.*;
       
       test2.setTalk(true);
       test2.setListen(true);
+      test2.setDtmfPassThrough(true);
       test2.setStartConfOnEnter(true);
         
       String toString1 = test1.toString();
@@ -280,6 +296,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResultAllOf test2 = new ConferenceParticipantResultAllOf();
         
@@ -296,6 +313,7 @@ import com.github.freeclimbapi.models.*;
       
       test2.setTalk(true);
       test2.setListen(true);
+      test2.setDtmfPassThrough(true);
       test2.setStartConfOnEnter(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -321,6 +339,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
       ConferenceParticipantResultAllOf test2 = new ConferenceParticipantResultAllOf();
         
@@ -337,6 +356,7 @@ import com.github.freeclimbapi.models.*;
       
       test2.setTalk(false);
       test2.setListen(false);
+      test2.setDtmfPassThrough(false);
       test2.setStartConfOnEnter(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -362,6 +382,7 @@ import com.github.freeclimbapi.models.*;
       
       test1.setTalk(true);
       test1.setListen(true);
+      test1.setDtmfPassThrough(true);
       test1.setStartConfOnEnter(true);
 
       String toString1 = test1.toString();
