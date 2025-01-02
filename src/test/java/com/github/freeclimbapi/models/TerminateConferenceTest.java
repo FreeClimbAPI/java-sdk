@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for TerminateConference
  */
  public class TerminateConferenceTest {
+    
     private final TerminateConference model = new TerminateConference(
     );
     
@@ -52,4 +53,5 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> attributes = build.get(model.getCommand());
         
     }
+    
  }

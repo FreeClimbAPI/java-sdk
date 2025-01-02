@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for LogList
  */
  public class LogListTest {
+    
     private final LogList model = new LogList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

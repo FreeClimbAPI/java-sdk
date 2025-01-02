@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GetSpeech
  */
  public class GetSpeechTest {
+    
     private final GetSpeech model = new GetSpeech(
     );
     
@@ -605,4 +606,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

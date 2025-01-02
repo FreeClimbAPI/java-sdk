@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Capabilities
  */
  public class CapabilitiesTest {
+    
     private final Capabilities model = new Capabilities(
     );
     
@@ -230,4 +231,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

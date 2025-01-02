@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Unpark
  */
  public class UnparkTest {
+    
     private final Unpark model = new Unpark(
     );
     
@@ -52,4 +53,5 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> attributes = build.get(model.getCommand());
         
     }
+    
  }

@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class GetSpeechReasonTest {
     
     
+    
     @Test
     public void testERRORShouldWork() {
 
@@ -170,5 +171,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

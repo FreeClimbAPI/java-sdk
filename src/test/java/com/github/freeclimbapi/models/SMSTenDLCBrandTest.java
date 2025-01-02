@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCBrand
  */
  public class SMSTenDLCBrandTest {
+    
     private final SMSTenDLCBrand model = new SMSTenDLCBrand(
       "TEST_STRING",
       "TEST_STRING",
@@ -60,21 +61,16 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void entityTypeTest() {
-      
-      model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
-      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
-      
-      model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
-      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
-      
-      model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.NON_PROFIT);
-      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.NON_PROFIT);
-      
-      model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.GOVERNMENT);
-      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.GOVERNMENT);
-      
-      model.setEntityType(SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
-      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrand.EntityTypeEnum.SOLE_PROPRIETOR);
+      model.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
+      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
+      model.setEntityType(SMSTenDLCBrandEntityType.PUBLIC_PROFIT);
+      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrandEntityType.PUBLIC_PROFIT);
+      model.setEntityType(SMSTenDLCBrandEntityType.NON_PROFIT);
+      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrandEntityType.NON_PROFIT);
+      model.setEntityType(SMSTenDLCBrandEntityType.GOVERNMENT);
+      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrandEntityType.GOVERNMENT);
+      model.setEntityType(SMSTenDLCBrandEntityType.SOLE_PROPRIETOR);
+      Assert.assertEquals(model.getEntityType(),SMSTenDLCBrandEntityType.SOLE_PROPRIETOR);
       
     }
     /**
@@ -274,87 +270,60 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void stockExchangeTest() {
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NONE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NYSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NYSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.AMEX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.AMEX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.AMX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.AMX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.ASX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.ASX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.B3);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.B3);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.BME);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.BME);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.BSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.BSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.FRA);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.FRA);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.ICEX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.ICEX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.JPX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.JPX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.JSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.JSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.KRX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.KRX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.LON);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.LON);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.NSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.OMX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.OMX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SEHK);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SEHK);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SGX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SGX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.STO);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.STO);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SWX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SWX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.SZSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.SZSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.TSX);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.TSX);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.TWSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.TWSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.VSE);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.VSE);
-      
-      model.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.OTHER);
-      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrand.StockExchangeEnum.OTHER);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.NONE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.NASDAQ);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.NASDAQ);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.NYSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.NYSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.AMEX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.AMEX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.AMX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.AMX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.ASX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.ASX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.B3);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.B3);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.BME);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.BME);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.BSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.BSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.FRA);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.FRA);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.ICEX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.ICEX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.JPX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.JPX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.JSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.JSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.KRX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.KRX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.LON);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.LON);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.NSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.NSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.OMX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.OMX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.SEHK);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.SEHK);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.SGX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.SGX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.SSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.SSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.STO);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.STO);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.SWX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.SWX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.SZSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.SZSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.TSX);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.TSX);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.TWSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.TWSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.VSE);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.VSE);
+      model.setStockExchange(SMSTenDLCBrandStockExchange.OTHER);
+      Assert.assertEquals(model.getStockExchange(),SMSTenDLCBrandStockExchange.OTHER);
       
     }
     /**
@@ -386,21 +355,16 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void brandRelationshipTest() {
-      
-      model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
-      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
-      
-      model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
-      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
-      
-      model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.MEDIUM_ACCOUNT);
-      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.MEDIUM_ACCOUNT);
-      
-      model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.LARGE_ACCOUNT);
-      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.LARGE_ACCOUNT);
-      
-      model.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
-      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrand.BrandRelationshipEnum.KEY_ACCOUNT);
+      model.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
+      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
+      model.setBrandRelationship(SMSTenDLCBrandRelationship.SMALL_ACCOUNT);
+      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrandRelationship.SMALL_ACCOUNT);
+      model.setBrandRelationship(SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT);
+      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT);
+      model.setBrandRelationship(SMSTenDLCBrandRelationship.LARGE_ACCOUNT);
+      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrandRelationship.LARGE_ACCOUNT);
+      model.setBrandRelationship(SMSTenDLCBrandRelationship.KEY_ACCOUNT);
+      Assert.assertEquals(model.getBrandRelationship(),SMSTenDLCBrandRelationship.KEY_ACCOUNT);
       
     }
     /**
@@ -432,18 +396,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void altBusinessIdTypeTest() {
-      
-      model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
-      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
-      
-      model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
-      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
-      
-      model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.GIIN);
-      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.GIIN);
-      
-      model.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
-      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrand.AltBusinessIdTypeEnum.LEI);
+      model.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
+      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrandAltBusinessIdType.NONE);
+      model.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.DUNS);
+      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrandAltBusinessIdType.DUNS);
+      model.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.GIIN);
+      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrandAltBusinessIdType.GIIN);
+      model.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.LEI);
+      Assert.assertEquals(model.getAltBusinessIdType(),SMSTenDLCBrandAltBusinessIdType.LEI);
       
     }
     /**
@@ -494,18 +454,14 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void identityStatusTest() {
-      
-      model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
-      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
-      
-      model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
-      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
-      
-      model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.VERIFIED);
-      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.VERIFIED);
-      
-      model.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
-      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrand.IdentityStatusEnum.VETTED_VERIFIED);
+      model.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+      model.setIdentityStatus(SMSTenDLCBrandIdentityStatus.UNVERIFIED);
+      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrandIdentityStatus.UNVERIFIED);
+      model.setIdentityStatus(SMSTenDLCBrandIdentityStatus.VERIFIED);
+      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrandIdentityStatus.VERIFIED);
+      model.setIdentityStatus(SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED);
+      Assert.assertEquals(model.getIdentityStatus(),SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED);
       
     }
     /**
@@ -529,7 +485,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -594,7 +550,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test1.setIpAddress("TS");
@@ -603,7 +559,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -612,7 +568,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -624,14 +580,14 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
         
         
       test2.setAccountId("TS");
       
-      test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test2.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -696,7 +652,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setStockSymbol("TS");
       
-      test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test2.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test2.setIpAddress("TS");
@@ -705,7 +661,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setWebsite("TS");
       
-      test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test2.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test2.setVertical("TS");
@@ -714,7 +670,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setAltBusinessId("TS");
       
-      test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test2.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -726,7 +682,7 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap2 = testMap;
       test2.setOptionalAttributes(testMap);
       test2.setMock(true);
-      test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
       Assert.assertTrue(test1.equals(test2));
@@ -743,7 +699,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PUBLIC_PROFIT);
         
         
 
@@ -808,7 +764,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NASDAQ);
         
         
       test1.setIpAddress("TS");
@@ -817,7 +773,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.SMALL_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -826,7 +782,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.DUNS);
         
         
 
@@ -838,14 +794,14 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.UNVERIFIED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
         
         
       test2.setAccountId("TS2");
       
-      test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test2.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -910,7 +866,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setStockSymbol("TS2");
       
-      test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test2.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test2.setIpAddress("TS2");
@@ -919,7 +875,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setWebsite("TS2");
       
-      test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test2.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test2.setVertical("TS2");
@@ -928,7 +884,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setAltBusinessId("TS2");
       
-      test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test2.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -940,7 +896,7 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap2 = new HashMap();
       test2.setOptionalAttributes(testMap2);
       test2.setMock(false);
-      test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
       Assert.assertFalse(test1.equals(test2));
@@ -957,7 +913,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1022,7 +978,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test1.setIpAddress("TS");
@@ -1031,7 +987,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -1040,7 +996,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1052,7 +1008,7 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       
       int hashCode1 = test1.hashCode();
@@ -1070,7 +1026,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1135,7 +1091,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test1.setIpAddress("TS");
@@ -1144,7 +1100,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -1153,7 +1109,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1165,14 +1121,14 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
         
         
       test2.setAccountId("TS");
       
-      test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test2.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1237,7 +1193,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setStockSymbol("TS");
       
-      test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test2.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test2.setIpAddress("TS");
@@ -1246,7 +1202,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setWebsite("TS");
       
-      test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test2.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test2.setVertical("TS");
@@ -1255,7 +1211,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setAltBusinessId("TS");
       
-      test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test2.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1267,7 +1223,7 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> testMap2 = testMap;
       test2.setOptionalAttributes(testMap2);
       test2.setMock(true);
-      test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
         
       String toString1 = test1.toString();
@@ -1286,7 +1242,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1351,7 +1307,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test1.setIpAddress("TS");
@@ -1360,7 +1316,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -1369,7 +1325,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1381,14 +1337,14 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
         
         
       test2.setAccountId("TS");
       
-      test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test2.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1453,7 +1409,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setStockSymbol("TS");
       
-      test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test2.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test2.setIpAddress("TS");
@@ -1462,7 +1418,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setWebsite("TS");
       
-      test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test2.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test2.setVertical("TS");
@@ -1471,7 +1427,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setAltBusinessId("TS");
       
-      test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test2.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1483,7 +1439,7 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> testMap2 = testMap;
       test2.setOptionalAttributes(testMap2);
       test2.setMock(true);
-      test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -1499,7 +1455,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PUBLIC_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PUBLIC_PROFIT);
         
         
 
@@ -1564,7 +1520,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NASDAQ);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NASDAQ);
         
         
       test1.setIpAddress("TS");
@@ -1573,7 +1529,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.SMALL_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.SMALL_ACCOUNT);
         
         
       test1.setVertical("TS");
@@ -1582,7 +1538,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.DUNS);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.DUNS);
         
         
 
@@ -1594,14 +1550,14 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.UNVERIFIED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.UNVERIFIED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
       SMSTenDLCBrand test2 = new SMSTenDLCBrand();
         
         
       test2.setAccountId("TS2");
       
-      test2.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test2.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1666,7 +1622,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setStockSymbol("TS2");
       
-      test2.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test2.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
       test2.setIpAddress("TS2");
@@ -1675,7 +1631,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setWebsite("TS2");
       
-      test2.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test2.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
       test2.setVertical("TS2");
@@ -1684,7 +1640,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setAltBusinessId("TS2");
       
-      test2.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test2.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1696,7 +1652,7 @@ import com.github.freeclimbapi.models.*;
       Map<String, Object> testMap2 = new HashMap();
       test2.setOptionalAttributes(testMap2);
       test2.setMock(false);
-      test2.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -1712,7 +1668,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setAccountId("TS");
       
-      test1.setEntityType(SMSTenDLCBrand.EntityTypeEnum.PRIVATE_PROFIT);
+      test1.setEntityType(SMSTenDLCBrandEntityType.PRIVATE_PROFIT);
         
         
 
@@ -1777,7 +1733,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setStockSymbol("TS");
       
-      test1.setStockExchange(SMSTenDLCBrand.StockExchangeEnum.NONE);
+      test1.setStockExchange(SMSTenDLCBrandStockExchange.NONE);
         
         
         test1.setIpAddress("TS");
@@ -1786,7 +1742,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setWebsite("TS");
       
-      test1.setBrandRelationship(SMSTenDLCBrand.BrandRelationshipEnum.BASIC_ACCOUNT);
+      test1.setBrandRelationship(SMSTenDLCBrandRelationship.BASIC_ACCOUNT);
         
         
         test1.setVertical("TS");
@@ -1795,7 +1751,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setAltBusinessId("TS");
       
-      test1.setAltBusinessIdType(SMSTenDLCBrand.AltBusinessIdTypeEnum.NONE);
+      test1.setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType.NONE);
         
         
 
@@ -1807,11 +1763,12 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> testMap = new HashMap();
       test1.setOptionalAttributes(testMap);
       test1.setMock(true);
-      test1.setIdentityStatus(SMSTenDLCBrand.IdentityStatusEnum.SELF_DECLARED);
+      test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
       test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

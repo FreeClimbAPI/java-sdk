@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for IncomingNumberResult
  */
  public class IncomingNumberResultTest {
+    
     private final IncomingNumberResult model = new IncomingNumberResult(
     );
     
@@ -937,4 +938,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

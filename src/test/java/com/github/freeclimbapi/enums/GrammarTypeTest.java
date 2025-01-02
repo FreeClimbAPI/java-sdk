@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class GrammarTypeTest {
     
     
+    
     @Test
     public void testURLShouldWork() {
 
@@ -82,5 +83,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

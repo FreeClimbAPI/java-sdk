@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTollFreeCampaign
  */
  public class SMSTollFreeCampaignTest {
+    
     private final SMSTollFreeCampaign model = new SMSTollFreeCampaign(
     );
     
@@ -81,21 +82,16 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void registrationStatusTest() {
-      
-      model.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
-      
-      model.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
-      
-      model.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.PENDING);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.PENDING);
-      
-      model.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.DECLINED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.DECLINED);
-      
-      model.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.REGISTERED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaign.RegistrationStatusEnum.REGISTERED);
+      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
+      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.INITIATED);
+      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.PENDING);
+      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.PENDING);
+      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.DECLINED);
+      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.DECLINED);
+      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.REGISTERED);
+      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.REGISTERED);
       
     }
     /**
@@ -151,7 +147,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test1.setDateCreated("TS");
@@ -174,7 +170,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setUseCase("TS");
       
-      test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test2.setDateCreated("TS");
@@ -207,7 +203,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
         
         
       test1.setDateCreated("TS");
@@ -230,7 +226,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setUseCase("TS2");
       
-      test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test2.setDateCreated("TS2");
@@ -263,7 +259,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test1.setDateCreated("TS");
@@ -297,7 +293,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test1.setDateCreated("TS");
@@ -320,7 +316,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setUseCase("TS");
       
-      test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test2.setDateCreated("TS");
@@ -355,7 +351,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test1.setDateCreated("TS");
@@ -378,7 +374,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setUseCase("TS");
       
-      test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test2.setDateCreated("TS");
@@ -410,7 +406,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.INITIATED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
         
         
       test1.setDateCreated("TS");
@@ -433,7 +429,7 @@ import com.github.freeclimbapi.models.*;
         
       test2.setUseCase("TS2");
       
-      test2.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
       test2.setDateCreated("TS2");
@@ -465,7 +461,7 @@ import com.github.freeclimbapi.models.*;
         
         test1.setUseCase("TS");
       
-      test1.setRegistrationStatus(SMSTollFreeCampaign.RegistrationStatusEnum.UNREGISTERED);
+      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
         
         
         test1.setDateCreated("TS");
@@ -480,4 +476,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

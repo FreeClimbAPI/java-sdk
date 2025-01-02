@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Play
  */
  public class PlayTest {
+    
     private final Play model = new Play(
     );
     
@@ -247,4 +248,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Say
  */
  public class SayTest {
+    
     private final Say model = new Say(
     );
     
@@ -313,4 +314,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

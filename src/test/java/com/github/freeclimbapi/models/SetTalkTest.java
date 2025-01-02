@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SetTalk
  */
  public class SetTalkTest {
+    
     private final SetTalk model = new SetTalk(
     );
     
@@ -159,4 +160,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("talk"), model.getTalk());
         
     }
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MakeCallRequest
  */
  public class MakeCallRequestTest {
+    
     private final MakeCallRequest model = new MakeCallRequest(
     );
     
@@ -107,9 +108,13 @@ import com.github.freeclimbapi.models.*;
     public void ifMachineUrlTest() {
       
       
-      model.setIfMachineUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setIfMachineUrl(uri);
+        Assert.assertEquals(uri, model.getIfMachineUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -149,9 +154,13 @@ import com.github.freeclimbapi.models.*;
     public void callConnectUrlTest() {
       
       
-      model.setCallConnectUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setCallConnectUrl(uri);
+        Assert.assertEquals(uri, model.getCallConnectUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -184,8 +193,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -194,8 +207,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       MakeCallRequest test2 = new MakeCallRequest();
         
         
@@ -219,8 +236,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
         
         
@@ -229,8 +250,12 @@ import com.github.freeclimbapi.models.*;
       test2.setPrivacyMode(true);
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -264,8 +289,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -274,8 +303,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       MakeCallRequest test2 = new MakeCallRequest();
         
         
@@ -299,8 +332,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setIfMachineUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(0);
         
         
@@ -309,8 +346,12 @@ import com.github.freeclimbapi.models.*;
       test2.setPrivacyMode(false);
         
         
-      test2.setCallConnectUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -344,8 +385,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -354,8 +399,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -390,8 +439,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -400,8 +453,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       MakeCallRequest test2 = new MakeCallRequest();
         
         
@@ -425,8 +482,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
         
         
@@ -435,8 +496,12 @@ import com.github.freeclimbapi.models.*;
       test2.setPrivacyMode(true);
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -472,8 +537,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -482,8 +551,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       MakeCallRequest test2 = new MakeCallRequest();
         
         
@@ -507,8 +580,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
         
         
@@ -517,8 +594,12 @@ import com.github.freeclimbapi.models.*;
       test2.setPrivacyMode(true);
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -551,8 +632,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -561,8 +646,12 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       MakeCallRequest test2 = new MakeCallRequest();
         
         
@@ -586,8 +675,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setIfMachineUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(0);
         
         
@@ -596,8 +689,12 @@ import com.github.freeclimbapi.models.*;
       test2.setPrivacyMode(false);
         
         
-      test2.setCallConnectUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -630,8 +727,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
         
         
@@ -640,11 +741,16 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
         
         
-        test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

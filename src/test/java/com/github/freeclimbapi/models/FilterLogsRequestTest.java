@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for FilterLogsRequest
  */
  public class FilterLogsRequestTest {
+    
     private final FilterLogsRequest model = new FilterLogsRequest(
     );
     
@@ -185,4 +186,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

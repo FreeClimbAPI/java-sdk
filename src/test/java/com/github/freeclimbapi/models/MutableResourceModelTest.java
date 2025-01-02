@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MutableResourceModel
  */
  public class MutableResourceModelTest {
+    
     private final MutableResourceModel model = new MutableResourceModel(
     );
     
@@ -326,4 +327,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

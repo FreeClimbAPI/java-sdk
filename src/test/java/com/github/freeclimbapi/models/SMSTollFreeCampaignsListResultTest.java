@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTollFreeCampaignsListResult
  */
  public class SMSTollFreeCampaignsListResultTest {
+    
     private final SMSTollFreeCampaignsListResult model = new SMSTollFreeCampaignsListResult(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

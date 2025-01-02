@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Sms
  */
  public class SmsTest {
+    
     private final Sms model = new Sms(
     );
     
@@ -83,9 +84,13 @@ import com.github.freeclimbapi.models.*;
     public void notificationUrlTest() {
       
       
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setNotificationUrl(uri);
+        Assert.assertEquals(uri, model.getNotificationUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -110,8 +115,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Sms test2 = new Sms();
         
         
@@ -127,8 +136,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -154,8 +167,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Sms test2 = new Sms();
         
         
@@ -171,8 +188,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -198,8 +219,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -226,8 +251,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Sms test2 = new Sms();
         
         
@@ -243,8 +272,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -272,8 +305,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Sms test2 = new Sms();
         
         
@@ -289,8 +326,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -315,8 +356,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Sms test2 = new Sms();
         
         
@@ -332,8 +377,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -358,8 +407,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -389,9 +442,13 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setNotificationUrl(uri);
+          Assert.assertEquals(uri, model.getNotificationUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("to"), model.getTo());
@@ -400,4 +457,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("notificationUrl"), model.getNotificationUrl());
         
     }
+    
  }

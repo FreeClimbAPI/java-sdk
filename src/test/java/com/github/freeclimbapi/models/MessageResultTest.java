@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageResult
  */
  public class MessageResultTest {
+    
     private final MessageResult model = new MessageResult(
     );
     
@@ -193,9 +194,13 @@ import com.github.freeclimbapi.models.*;
     public void notificationUrlTest() {
       
       
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setNotificationUrl(uri);
+        Assert.assertEquals(uri, model.getNotificationUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -289,8 +294,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -342,8 +351,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setBrandId("TS");
@@ -405,8 +418,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -458,8 +475,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setBrandId("TS2");
@@ -521,8 +542,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -585,8 +610,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -638,8 +667,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setBrandId("TS");
@@ -703,8 +736,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -756,8 +793,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setBrandId("TS");
@@ -818,8 +859,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setBrandId("TS");
@@ -871,8 +916,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setBrandId("TS2");
@@ -933,8 +982,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
         test1.setBrandId("TS");
@@ -950,4 +1003,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

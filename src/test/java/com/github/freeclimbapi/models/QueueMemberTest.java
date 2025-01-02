@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueMember
  */
  public class QueueMemberTest {
+    
     private final QueueMember model = new QueueMember(
     );
     
@@ -347,4 +348,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

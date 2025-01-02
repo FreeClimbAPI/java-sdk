@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallList
  */
  public class CallListTest {
+    
     private final CallList model = new CallList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

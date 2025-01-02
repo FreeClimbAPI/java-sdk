@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for OutDial
  */
  public class OutDialTest {
+    
     private final OutDial model = new OutDial(
     );
     
@@ -46,10 +47,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void actionUrlTest() {
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -58,10 +63,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void callConnectUrlTest() {
       
-      model.setCallConnectUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setCallConnectUrl(uri);
+        Assert.assertEquals(uri, model.getCallConnectUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -106,9 +115,13 @@ import com.github.freeclimbapi.models.*;
     public void ifMachineUrlTest() {
       
       
-      model.setIfMachineUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setIfMachineUrl(uri);
+        Assert.assertEquals(uri, model.getIfMachineUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -130,9 +143,13 @@ import com.github.freeclimbapi.models.*;
     public void statusCallbackUrlTest() {
       
       
-      model.setStatusCallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setStatusCallbackUrl(uri);
+        Assert.assertEquals(uri, model.getStatusCallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -162,13 +179,21 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -180,27 +205,43 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.REDIRECT);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       OutDial test2 = new OutDial();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setCallingNumber("TS");
@@ -212,16 +253,24 @@ import com.github.freeclimbapi.models.*;
       test2.setIfMachine(IfMachine.REDIRECT);
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setSendDigits("TS");
       
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
       test2.setPrivacyMode(true);
 
@@ -236,13 +285,21 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -254,27 +311,43 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.HANGUP);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       OutDial test2 = new OutDial();
         
-      test2.setActionUrl("TS2");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setCallConnectUrl("TS2");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setCallingNumber("TS2");
@@ -286,16 +359,24 @@ import com.github.freeclimbapi.models.*;
       test2.setIfMachine(IfMachine.REDIRECT);
         
         
-      test2.setIfMachineUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setSendDigits("TS2");
       
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(0);
       test2.setPrivacyMode(false);
 
@@ -310,13 +391,21 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -328,16 +417,24 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.REDIRECT);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       
@@ -353,13 +450,21 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -371,27 +476,43 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.REDIRECT);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       OutDial test2 = new OutDial();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setCallingNumber("TS");
@@ -403,16 +524,24 @@ import com.github.freeclimbapi.models.*;
       test2.setIfMachine(IfMachine.REDIRECT);
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setSendDigits("TS");
       
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
       test2.setPrivacyMode(true);
         
@@ -429,13 +558,21 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -447,27 +584,43 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.REDIRECT);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       OutDial test2 = new OutDial();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setCallingNumber("TS");
@@ -479,16 +632,24 @@ import com.github.freeclimbapi.models.*;
       test2.setIfMachine(IfMachine.REDIRECT);
         
         
-      test2.setIfMachineUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setSendDigits("TS");
       
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(1);
       test2.setPrivacyMode(true);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -502,13 +663,21 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setCallingNumber("TS");
@@ -520,27 +689,43 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.HANGUP);
         
         
-      test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setSendDigits("TS");
       
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
       OutDial test2 = new OutDial();
         
-      test2.setActionUrl("TS2");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setCallConnectUrl("TS2");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setCallingNumber("TS2");
@@ -552,16 +737,24 @@ import com.github.freeclimbapi.models.*;
       test2.setIfMachine(IfMachine.REDIRECT);
         
         
-      test2.setIfMachineUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setSendDigits("TS2");
       
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setTimeout(0);
       test2.setPrivacyMode(false);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -575,13 +768,21 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       OutDial test1 = new OutDial();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setCallConnectUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
         test1.setCallingNumber("TS");
@@ -593,16 +794,24 @@ import com.github.freeclimbapi.models.*;
       test1.setIfMachine(IfMachine.REDIRECT);
         
         
-        test1.setIfMachineUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
         test1.setSendDigits("TS");
       
         
         
-        test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setTimeout(1);
       test1.setPrivacyMode(true);
 
@@ -618,15 +827,23 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
-        
-        model.setCallConnectUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-        
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setCallConnectUrl(uri);
+          Assert.assertEquals(uri, model.getCallConnectUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
         model.setCallingNumber("TEST_STRING");
@@ -639,9 +856,13 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setIfMachineUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getIfMachineUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setIfMachineUrl(uri);
+          Assert.assertEquals(uri, model.getIfMachineUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
         model.setSendDigits("TEST_STRING");
@@ -649,9 +870,13 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setStatusCallbackUrl(uri);
+          Assert.assertEquals(uri, model.getStatusCallbackUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
@@ -667,4 +892,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

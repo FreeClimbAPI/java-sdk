@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PerclCommand
  */
  public class PerclCommandTest {
+    
     private final PerclCommand model = new PerclCommand(
     );
     
@@ -180,4 +181,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

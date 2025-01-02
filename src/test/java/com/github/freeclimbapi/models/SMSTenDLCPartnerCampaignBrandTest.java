@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCPartnerCampaignBrand
  */
  public class SMSTenDLCPartnerCampaignBrandTest {
+    
     private final SMSTenDLCPartnerCampaignBrand model = new SMSTenDLCPartnerCampaignBrand(
       "TEST_STRING"
     );
@@ -721,4 +722,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

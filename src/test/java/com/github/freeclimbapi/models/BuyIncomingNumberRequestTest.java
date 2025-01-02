@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for BuyIncomingNumberRequest
  */
  public class BuyIncomingNumberRequestTest {
+    
     private final BuyIncomingNumberRequest model = new BuyIncomingNumberRequest(
     );
     
@@ -305,4 +306,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

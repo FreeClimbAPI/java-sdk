@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for IncomingNumberList
  */
  public class IncomingNumberListTest {
+    
     private final IncomingNumberList model = new IncomingNumberList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

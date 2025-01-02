@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCCampaignsListResult
  */
  public class SMSTenDLCCampaignsListResultTest {
+    
     private final SMSTenDLCCampaignsListResult model = new SMSTenDLCCampaignsListResult(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CreateWebRTCToken
  */
  public class CreateWebRTCTokenTest {
+    
     private final CreateWebRTCToken model = new CreateWebRTCToken(
     );
     
@@ -266,4 +267,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PaginationModel
  */
  public class PaginationModelTest {
+    
     private final PaginationModel model = new PaginationModel(
     );
     
@@ -311,4 +312,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

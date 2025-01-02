@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class CallStatusTest {
     
     
+    
     @Test
     public void testQUEUEDShouldWork() {
 
@@ -214,5 +215,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

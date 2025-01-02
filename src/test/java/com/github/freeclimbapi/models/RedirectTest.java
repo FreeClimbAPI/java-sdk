@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Redirect
  */
  public class RedirectTest {
+    
     private final Redirect model = new Redirect(
     );
     
@@ -46,10 +47,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void actionUrlTest() {
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -61,14 +66,22 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Redirect test2 = new Redirect();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -81,14 +94,22 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Redirect test2 = new Redirect();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -101,9 +122,13 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -117,14 +142,22 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Redirect test2 = new Redirect();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -139,14 +172,22 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Redirect test2 = new Redirect();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -158,14 +199,22 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Redirect test2 = new Redirect();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -177,9 +226,13 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       Redirect test1 = new Redirect();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -193,13 +246,18 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
         
     }
+    
  }

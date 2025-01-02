@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for PlayEarlyMedia
  */
  public class PlayEarlyMediaTest {
+    
     private final PlayEarlyMedia model = new PlayEarlyMedia(
     );
     
@@ -202,4 +203,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("_file"), model.getFile());
         
     }
+    
  }

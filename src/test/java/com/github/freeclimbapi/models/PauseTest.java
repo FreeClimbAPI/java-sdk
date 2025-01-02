@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Pause
  */
  public class PauseTest {
+    
     private final Pause model = new Pause(
     );
     
@@ -158,4 +159,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("length"), model.getLength());
         
     }
+    
  }

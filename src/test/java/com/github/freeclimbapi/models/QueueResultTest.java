@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueResult
  */
  public class QueueResultTest {
+    
     private final QueueResult model = new QueueResult(
     );
     
@@ -603,4 +604,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

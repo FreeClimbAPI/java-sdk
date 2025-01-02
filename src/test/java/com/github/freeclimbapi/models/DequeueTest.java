@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Dequeue
  */
  public class DequeueTest {
+    
     private final Dequeue model = new Dequeue(
     );
     
@@ -52,4 +53,5 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> attributes = build.get(model.getCommand());
         
     }
+    
  }

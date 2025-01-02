@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for QueueList
  */
  public class QueueListTest {
+    
     private final QueueList model = new QueueList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

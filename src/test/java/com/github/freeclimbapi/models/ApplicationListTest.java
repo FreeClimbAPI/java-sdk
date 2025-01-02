@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ApplicationList
  */
  public class ApplicationListTest {
+    
     private final ApplicationList model = new ApplicationList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class RequestTypeTest {
     
     
+    
     @Test
     public void testINBOUND_CALLShouldWork() {
 
@@ -544,5 +545,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

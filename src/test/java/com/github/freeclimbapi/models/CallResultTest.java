@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CallResult
  */
  public class CallResultTest {
+    
     private final CallResult model = new CallResult(
     );
     
@@ -1085,4 +1086,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for TFN
  */
  public class TFNTest {
+    
     private final TFN model = new TFN(
     );
     
@@ -185,4 +186,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

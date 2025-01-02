@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceList
  */
  public class ConferenceListTest {
+    
     private final ConferenceList model = new ConferenceList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RemoveFromConference
  */
  public class RemoveFromConferenceTest {
+    
     private final RemoveFromConference model = new RemoveFromConference(
     );
     
@@ -52,4 +53,5 @@ import com.github.freeclimbapi.models.*;
         Map<String, Object> attributes = build.get(model.getCommand());
         
     }
+    
  }

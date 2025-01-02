@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class LanguageTest {
     
     
+    
     @Test
     public void testCATALANShouldWork() {
 
@@ -610,5 +611,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

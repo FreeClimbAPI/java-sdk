@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Hangup
  */
  public class HangupTest {
+    
     private final Hangup model = new Hangup(
     );
     
@@ -202,4 +203,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("reason"), model.getReason());
         
     }
+    
  }

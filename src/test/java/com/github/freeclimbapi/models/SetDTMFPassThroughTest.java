@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SetDTMFPassThrough
  */
  public class SetDTMFPassThroughTest {
+    
     private final SetDTMFPassThrough model = new SetDTMFPassThrough(
     );
     
@@ -159,4 +160,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("dtmfPassThrough"), model.getDtmfPassThrough());
         
     }
+    
  }

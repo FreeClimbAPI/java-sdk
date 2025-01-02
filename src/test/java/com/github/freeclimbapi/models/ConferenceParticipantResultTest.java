@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceParticipantResult
  */
  public class ConferenceParticipantResultTest {
+    
     private final ConferenceParticipantResult model = new ConferenceParticipantResult(
     );
     
@@ -590,4 +591,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

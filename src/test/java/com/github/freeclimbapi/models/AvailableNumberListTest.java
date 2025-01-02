@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AvailableNumberList
  */
  public class AvailableNumberListTest {
+    
     private final AvailableNumberList model = new AvailableNumberList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

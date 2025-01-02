@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessageRequest
  */
  public class MessageRequestTest {
+    
     private final MessageRequest model = new MessageRequest(
     );
     
@@ -128,9 +129,13 @@ import com.github.freeclimbapi.models.*;
     public void notificationUrlTest() {
       
       
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setNotificationUrl(uri);
+        Assert.assertEquals(uri, model.getNotificationUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -178,8 +183,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       MessageRequest test2 = new MessageRequest();
@@ -210,8 +219,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList2 = testList;
       test2.setMediaUrls(testList2);
 
@@ -252,8 +265,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       MessageRequest test2 = new MessageRequest();
@@ -284,8 +301,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList2 = null;
       test2.setMediaUrls(testList2);
 
@@ -326,8 +347,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       
@@ -369,8 +394,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       MessageRequest test2 = new MessageRequest();
@@ -401,8 +430,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList2 = testList;
       test2.setMediaUrls(testList2);
         
@@ -445,8 +478,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       MessageRequest test2 = new MessageRequest();
@@ -477,8 +514,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList2 = testList;
       test2.setMediaUrls(testList2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -518,8 +559,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
       MessageRequest test2 = new MessageRequest();
@@ -550,8 +595,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList2 = null;
       test2.setMediaUrls(testList2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -591,8 +640,12 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       List<URI> testList = new ArrayList<URI>();
       test1.setMediaUrls(testList);
 
@@ -600,4 +653,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

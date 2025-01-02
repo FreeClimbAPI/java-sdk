@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AddToConference
  */
  public class AddToConferenceTest {
+    
     private final AddToConference model = new AddToConference(
     );
     
@@ -68,9 +69,13 @@ import com.github.freeclimbapi.models.*;
     public void callControlUrlTest() {
       
       
-      model.setCallControlUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setCallControlUrl(uri);
+        Assert.assertEquals(uri, model.getCallControlUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -92,9 +97,13 @@ import com.github.freeclimbapi.models.*;
     public void leaveConferenceUrlTest() {
       
       
-      model.setLeaveConferenceUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setLeaveConferenceUrl(uri);
+        Assert.assertEquals(uri, model.getLeaveConferenceUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -113,9 +122,13 @@ import com.github.freeclimbapi.models.*;
     public void notificationUrlTest() {
       
       
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setNotificationUrl(uri);
+        Assert.assertEquals(uri, model.getNotificationUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -160,21 +173,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -186,21 +211,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setCallControlUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallControlUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setConferenceId("TS");
       
         
         
-      test2.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setLeaveConferenceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setListen(true);
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
       test2.setDtmfPassThrough(true);
@@ -222,21 +259,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -248,21 +297,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setCallControlUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallControlUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setConferenceId("TS2");
       
         
         
-      test2.setLeaveConferenceUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setLeaveConferenceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setListen(false);
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setStartConfOnEnter(false);
       test2.setTalk(false);
       test2.setDtmfPassThrough(false);
@@ -284,21 +345,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -321,21 +394,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -347,21 +432,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setCallControlUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallControlUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setConferenceId("TS");
       
         
         
-      test2.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setLeaveConferenceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setListen(true);
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
       test2.setDtmfPassThrough(true);
@@ -385,21 +482,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -411,21 +520,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setCallControlUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallControlUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setConferenceId("TS");
       
         
         
-      test2.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setLeaveConferenceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setListen(true);
         
         
-      test2.setNotificationUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setStartConfOnEnter(true);
       test2.setTalk(true);
       test2.setDtmfPassThrough(true);
@@ -446,21 +567,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setConferenceId("TS");
       
         
         
-      test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-      test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -472,21 +605,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setCallControlUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallControlUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setConferenceId("TS2");
       
         
         
-      test2.setLeaveConferenceUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setLeaveConferenceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setListen(false);
         
         
-      test2.setNotificationUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setStartConfOnEnter(false);
       test2.setTalk(false);
       test2.setDtmfPassThrough(false);
@@ -507,21 +652,33 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setCallControlUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallControlUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
         test1.setConferenceId("TS");
       
         
         
-        test1.setLeaveConferenceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setLeaveConferenceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setListen(true);
         
         
-        test1.setNotificationUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setStartConfOnEnter(true);
       test1.setTalk(true);
       test1.setDtmfPassThrough(true);
@@ -545,9 +702,13 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setCallControlUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallControlUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setCallControlUrl(uri);
+          Assert.assertEquals(uri, model.getCallControlUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
         model.setConferenceId("TEST_STRING");
@@ -555,15 +716,23 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setLeaveConferenceUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getLeaveConferenceUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setLeaveConferenceUrl(uri);
+          Assert.assertEquals(uri, model.getLeaveConferenceUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         model.setListen(false);
         
         
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setNotificationUrl(uri);
+          Assert.assertEquals(uri, model.getNotificationUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         model.setStartConfOnEnter(false);
         model.setTalk(false);
         model.setDtmfPassThrough(false);
@@ -581,4 +750,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("dtmfPassThrough"), model.getDtmfPassThrough());
         
     }
+    
  }

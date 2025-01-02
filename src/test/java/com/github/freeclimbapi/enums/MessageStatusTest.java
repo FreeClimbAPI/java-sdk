@@ -38,6 +38,7 @@ import com.github.freeclimbapi.models.*;
  public class MessageStatusTest {
     
     
+    
     @Test
     public void testNEWShouldWork() {
 
@@ -280,5 +281,6 @@ import com.github.freeclimbapi.models.*;
       String calculatedValue = test.toString();
       Assert.assertEquals(expectedValue, calculatedValue);
     }
+    
     
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CompletionResult
  */
  public class CompletionResultTest {
+    
     private final CompletionResult model = new CompletionResult(
     );
     
@@ -57,12 +58,10 @@ import com.github.freeclimbapi.models.*;
      */
     @Test
     public void statusTest() {
-      
-      model.setStatus(CompletionResult.StatusEnum.SUCCESS);
-      Assert.assertEquals(model.getStatus(),CompletionResult.StatusEnum.SUCCESS);
-      
-      model.setStatus(CompletionResult.StatusEnum.NO_CONTEXT);
-      Assert.assertEquals(model.getStatus(),CompletionResult.StatusEnum.NO_CONTEXT);
+      model.setStatus(CompletionResultStatus.SUCCESS);
+      Assert.assertEquals(model.getStatus(),CompletionResultStatus.SUCCESS);
+      model.setStatus(CompletionResultStatus.NO_CONTEXT);
+      Assert.assertEquals(model.getStatus(),CompletionResultStatus.NO_CONTEXT);
       
     }
 
@@ -77,13 +76,13 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test1.setStatus(CompletionResultStatus.SUCCESS);
       CompletionResult test2 = new CompletionResult();
         
         
       test2.setResponse("TS");
       
-      test2.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test2.setStatus(CompletionResultStatus.SUCCESS);
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -99,13 +98,13 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.NO_CONTEXT);
+      test1.setStatus(CompletionResultStatus.NO_CONTEXT);
       CompletionResult test2 = new CompletionResult();
         
         
       test2.setResponse("TS2");
       
-      test2.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test2.setStatus(CompletionResultStatus.SUCCESS);
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -121,7 +120,7 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test1.setStatus(CompletionResultStatus.SUCCESS);
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -138,13 +137,13 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test1.setStatus(CompletionResultStatus.SUCCESS);
       CompletionResult test2 = new CompletionResult();
         
         
       test2.setResponse("TS");
       
-      test2.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test2.setStatus(CompletionResultStatus.SUCCESS);
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -162,13 +161,13 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test1.setStatus(CompletionResultStatus.SUCCESS);
       CompletionResult test2 = new CompletionResult();
         
         
       test2.setResponse("TS");
       
-      test2.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test2.setStatus(CompletionResultStatus.SUCCESS);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -183,13 +182,13 @@ import com.github.freeclimbapi.models.*;
         
       test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.NO_CONTEXT);
+      test1.setStatus(CompletionResultStatus.NO_CONTEXT);
       CompletionResult test2 = new CompletionResult();
         
         
       test2.setResponse("TS2");
       
-      test2.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test2.setStatus(CompletionResultStatus.SUCCESS);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -204,10 +203,11 @@ import com.github.freeclimbapi.models.*;
         
         test1.setResponse("TS");
       
-      test1.setStatus(CompletionResult.StatusEnum.SUCCESS);
+      test1.setStatus(CompletionResultStatus.SUCCESS);
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

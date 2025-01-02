@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordingResult
  */
  public class RecordingResultTest {
+    
     private final RecordingResult model = new RecordingResult(
     );
     
@@ -587,4 +588,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

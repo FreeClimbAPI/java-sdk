@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for LogResult
  */
  public class LogResultTest {
+    
     private final LogResult model = new LogResult(
     );
     
@@ -445,4 +446,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

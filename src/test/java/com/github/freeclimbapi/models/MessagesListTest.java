@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for MessagesList
  */
  public class MessagesListTest {
+    
     private final MessagesList model = new MessagesList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

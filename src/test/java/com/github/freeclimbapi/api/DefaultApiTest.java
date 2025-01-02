@@ -14,10 +14,7 @@
 package com.github.freeclimbapi;
 
 import com.github.freeclimbapi.ApiException;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
 import static org.junit.Assert.*;
-import com.github.freeclimbapi.Configuration;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -29,6 +26,11 @@ import java.util.List;
 import java.util.Map;
 import java.net.URI;
 import java.io.File;
+
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.Configuration;
+import java.net.URISyntaxException;
 
 /**
  * API tests for DefaultApi
@@ -1124,6 +1126,26 @@ public class DefaultApiTest {
     }
 
     /**
+     * Get Next Page for Filter Logs
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+     @Test
+     public void filterLogsGetNextPageTest() throws ApiException {
+        
+        FilterLogsRequest filterLogsRequest = filterLogsRequestFilterLogsRequestTestValue();
+        
+        LogList response = this.apiInstance.filterLogs(filterLogsRequest);
+        String localVarNextPageUri = "/Accounts/{accountId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}","MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
+        LogList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), LogList.class);
+
+     }
+    /**
      * Get Next Page for Get list of SMS 10DLC Brands
      *
      * 
@@ -1579,7 +1601,6 @@ public class DefaultApiTest {
         assertEquals(nextPageResponse.getClass(), MessagesList.class);
 
      }
-
     private BuyIncomingNumberRequest buyIncomingNumberRequestBuyIncomingNumberRequestTestValue() {
         BuyIncomingNumberRequest request = new BuyIncomingNumberRequest();
         request.setPhoneNumber("TEST-PHONE-NUMBER");
@@ -1593,20 +1614,20 @@ public class DefaultApiTest {
         request.setAlias("TEST-ALIAS");
         request.setPlayBeep(PlayBeep.ALWAYS);
         request.setRecord(true);
-        request.setStatusCallbackUrl("TEST-STATUS-CALLBACK-URL");
-        request.setWaitUrl("TEST-WAIT-URL");
+        request.setStatusCallbackUrl(buildUri("TEST-STATUS-CALLBACK-URL"));
+        request.setWaitUrl(buildUri("TEST-WAIT-URL"));
         return request;
     }
     
     private ApplicationRequest applicationRequestApplicationRequestTestValue() {
         ApplicationRequest request = new ApplicationRequest();
         request.setAlias("TEST-ALIAS");
-        request.setCallConnectUrl("TEST-CALL-CONNECT-URL");
-        request.setSmsFallbackUrl("TEST-SMS-FALLBACK-URL");
-        request.setSmsUrl("TEST-SMS-URL");
-        request.setStatusCallbackUrl("TEST-STATUS-CALLBACK-URL");
-        request.setVoiceFallbackUrl("TEST-VOICE-FALLBACK-URL");
-        request.setVoiceUrl("TEST-VOICE-URL");
+        request.setCallConnectUrl(buildUri("TEST-CALL-CONNECT-URL"));
+        request.setSmsFallbackUrl(buildUri("TEST-SMS-FALLBACK-URL"));
+        request.setSmsUrl(buildUri("TEST-SMS-URL"));
+        request.setStatusCallbackUrl(buildUri("TEST-STATUS-CALLBACK-URL"));
+        request.setVoiceFallbackUrl(buildUri("TEST-VOICE-FALLBACK-URL"));
+        request.setVoiceUrl(buildUri("TEST-VOICE-URL"));
         return request;
     }
 
@@ -1621,11 +1642,11 @@ public class DefaultApiTest {
         request.setDateCreated("");
         request.setDateUpdated("");
         request.setFrom("_from_example");
-        request.setNotificationUrl("");
+        request.setNotificationUrl(buildUri("TEST_NOTIFICATION_URL"));
         request.setRevision(0);
         request.setTo("to_example");
         request.setText("Example Text");
-        request.setUri("");
+        request.setUri("TEST_URL");
         return request;
     }
 
@@ -1647,10 +1668,10 @@ public class DefaultApiTest {
     private MakeCallRequest makeCallRequestMakeCallRequestTestValue() {
         MakeCallRequest request = new MakeCallRequest();
         request.setApplicationId("applicationId_example");
-        request.setCallConnectUrl("callConnectUrl_example");
+        request.setCallConnectUrl(buildUri("TEST_CALL_CONNECT_URL"));
         request.setFrom("_from_example");
         request.setIfMachine("ifMachine_example");
-        request.setIfMachineUrl("ifMachineUrl_example");
+        request.setIfMachineUrl(buildUri("TEST_IF_MACHINE_URL"));
         request.setParentCallId("parentCallId_example");
         request.setSendDigits("sendDigits_example");
         request.setPrivacyMode(false);
@@ -1922,6 +1943,16 @@ public class DefaultApiTest {
     }
 
     private Boolean dtmfPassThroughBooleanTestValue() {
-        return true;
+        return false;
+    }
+
+    private URI buildUri(String uriString) {
+        try {
+            return new URI("https://" + uriString + ".com");
+        } catch (URISyntaxException e) {
+            // Handle the exception
+            System.out.println("Invalid URI: " + e.getMessage());
+            return null;
+        }
     }
 }

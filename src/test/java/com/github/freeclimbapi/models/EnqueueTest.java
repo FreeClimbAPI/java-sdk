@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Enqueue
  */
  public class EnqueueTest {
+    
     private final Enqueue model = new Enqueue(
     );
     
@@ -46,10 +47,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void actionUrlTest() {
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -58,10 +63,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void notificationUrlTest() {
       
-      model.setNotificationUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setNotificationUrl(uri);
+        Assert.assertEquals(uri, model.getNotificationUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -83,9 +92,13 @@ import com.github.freeclimbapi.models.*;
     public void waitUrlTest() {
       
       
-      model.setWaitUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setWaitUrl(uri);
+        Assert.assertEquals(uri, model.getWaitUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -97,38 +110,62 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Enqueue test2 = new Enqueue();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setQueueId("TS");
       
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -141,38 +178,62 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Enqueue test2 = new Enqueue();
         
-      test2.setActionUrl("TS2");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setNotificationUrl("TS2");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setQueueId("TS2");
       
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -185,21 +246,33 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -213,38 +286,62 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Enqueue test2 = new Enqueue();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setQueueId("TS");
       
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -259,38 +356,62 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Enqueue test2 = new Enqueue();
         
-      test2.setActionUrl("TS");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setQueueId("TS");
       
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -302,38 +423,62 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test1.setQueueId("TS");
       
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Enqueue test2 = new Enqueue();
         
-      test2.setActionUrl("TS2");
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test2.setNotificationUrl("TS2");
-        
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setNotificationUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
       test2.setQueueId("TS2");
       
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -345,21 +490,33 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       Enqueue test1 = new Enqueue();
         
-      test1.setActionUrl("TS");
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        
-      test1.setNotificationUrl("TS");
-        
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setNotificationUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
         test1.setQueueId("TS");
       
         
         
-        test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -373,15 +530,23 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
+        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
-        
-        model.setNotificationUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getNotificationUrl());
-        
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setNotificationUrl(uri);
+          Assert.assertEquals(uri, model.getNotificationUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
         model.setQueueId("TEST_STRING");
@@ -389,9 +554,13 @@ import com.github.freeclimbapi.models.*;
         
         
         
-        model.setWaitUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setWaitUrl(uri);
+          Assert.assertEquals(uri, model.getWaitUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -400,4 +569,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
         
     }
+    
  }

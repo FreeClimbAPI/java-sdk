@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for UpdateConferenceRequest
  */
  public class UpdateConferenceRequestTest {
+    
     private final UpdateConferenceRequest model = new UpdateConferenceRequest(
     );
     
@@ -235,4 +236,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

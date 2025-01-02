@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for AccountResult
  */
  public class AccountResultTest {
+    
     private final AccountResult model = new AccountResult(
     );
     
@@ -648,4 +649,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

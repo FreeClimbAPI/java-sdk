@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for RecordingList
  */
  public class RecordingListTest {
+    
     private final RecordingList model = new RecordingList(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

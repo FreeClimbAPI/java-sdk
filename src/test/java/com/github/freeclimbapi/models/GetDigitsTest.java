@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for GetDigits
  */
  public class GetDigitsTest {
+    
     private final GetDigits model = new GetDigits(
     );
     
@@ -46,10 +47,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void actionUrlTest() {
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -137,9 +142,13 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -154,9 +163,13 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
       GetDigits test2 = new GetDigits();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setDigitTimeoutMs(1);
         
         
@@ -181,9 +194,13 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -198,9 +215,13 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
       GetDigits test2 = new GetDigits();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setDigitTimeoutMs(0);
         
         
@@ -225,9 +246,13 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -253,9 +278,13 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -270,9 +299,13 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
       GetDigits test2 = new GetDigits();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setDigitTimeoutMs(1);
         
         
@@ -299,9 +332,13 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -316,9 +353,13 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
       GetDigits test2 = new GetDigits();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setDigitTimeoutMs(1);
         
         
@@ -342,9 +383,13 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -359,9 +404,13 @@ import com.github.freeclimbapi.models.*;
       test1.setPrivacyMode(true);
       GetDigits test2 = new GetDigits();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setDigitTimeoutMs(0);
         
         
@@ -385,9 +434,13 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       GetDigits test1 = new GetDigits();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setDigitTimeoutMs(1);
         
         
@@ -413,10 +466,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
         model.setFinishOnKey("TEST_STRING");
@@ -437,4 +494,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

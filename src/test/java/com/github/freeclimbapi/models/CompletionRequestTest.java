@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CompletionRequest
  */
  public class CompletionRequestTest {
+    
     private final CompletionRequest model = new CompletionRequest(
     );
     
@@ -185,4 +186,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

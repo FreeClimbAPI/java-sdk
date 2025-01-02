@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ApplicationResult
  */
  public class ApplicationResultTest {
+    
     private final ApplicationResult model = new ApplicationResult(
     );
     
@@ -128,9 +129,13 @@ import com.github.freeclimbapi.models.*;
     public void voiceUrlTest() {
       
       
-      model.setVoiceUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getVoiceUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setVoiceUrl(uri);
+        Assert.assertEquals(uri, model.getVoiceUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -140,9 +145,13 @@ import com.github.freeclimbapi.models.*;
     public void voiceFallbackUrlTest() {
       
       
-      model.setVoiceFallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getVoiceFallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setVoiceFallbackUrl(uri);
+        Assert.assertEquals(uri, model.getVoiceFallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -152,9 +161,13 @@ import com.github.freeclimbapi.models.*;
     public void callConnectUrlTest() {
       
       
-      model.setCallConnectUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallConnectUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setCallConnectUrl(uri);
+        Assert.assertEquals(uri, model.getCallConnectUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -164,9 +177,13 @@ import com.github.freeclimbapi.models.*;
     public void statusCallbackUrlTest() {
       
       
-      model.setStatusCallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setStatusCallbackUrl(uri);
+        Assert.assertEquals(uri, model.getStatusCallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -176,9 +193,13 @@ import com.github.freeclimbapi.models.*;
     public void smsUrlTest() {
       
       
-      model.setSmsUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getSmsUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setSmsUrl(uri);
+        Assert.assertEquals(uri, model.getSmsUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -188,9 +209,13 @@ import com.github.freeclimbapi.models.*;
     public void smsFallbackUrlTest() {
       
       
-      model.setSmsFallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getSmsFallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setSmsFallbackUrl(uri);
+        Assert.assertEquals(uri, model.getSmsFallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -228,28 +253,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       ApplicationResult test2 = new ApplicationResult();
         
         
@@ -278,28 +327,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setVoiceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -338,28 +411,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       ApplicationResult test2 = new ApplicationResult();
         
         
@@ -388,28 +485,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setVoiceUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setVoiceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setVoiceFallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setVoiceFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setCallConnectUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setSmsUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsFallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setSmsFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -448,28 +569,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -509,28 +654,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       ApplicationResult test2 = new ApplicationResult();
         
         
@@ -559,28 +728,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setVoiceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -621,28 +814,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       ApplicationResult test2 = new ApplicationResult();
         
         
@@ -671,28 +888,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setVoiceUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setVoiceFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setCallConnectUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setSmsFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -730,28 +971,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       ApplicationResult test2 = new ApplicationResult();
         
         
@@ -780,28 +1045,52 @@ import com.github.freeclimbapi.models.*;
       
         
         
-      test2.setVoiceUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setVoiceUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setVoiceFallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setVoiceFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setCallConnectUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setSmsUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setSmsFallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setSmsFallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -839,31 +1128,56 @@ import com.github.freeclimbapi.models.*;
       
         
         
-        test1.setVoiceUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setVoiceFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setVoiceFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setCallConnectUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setSmsUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setSmsFallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setSmsFallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

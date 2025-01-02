@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SMSTenDLCBrandsListResult
  */
  public class SMSTenDLCBrandsListResultTest {
+    
     private final SMSTenDLCBrandsListResult model = new SMSTenDLCBrandsListResult(
     );
     
@@ -345,4 +346,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }

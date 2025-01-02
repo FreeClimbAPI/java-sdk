@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for Reject
  */
  public class RejectTest {
+    
     private final Reject model = new Reject(
     );
     
@@ -202,4 +203,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("reason"), model.getReason());
         
     }
+    
  }

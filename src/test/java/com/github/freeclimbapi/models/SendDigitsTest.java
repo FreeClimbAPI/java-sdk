@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for SendDigits
  */
  public class SendDigitsTest {
+    
     private final SendDigits model = new SendDigits(
     );
     
@@ -247,4 +248,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
         
     }
+    
  }

@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for CreateConference
  */
  public class CreateConferenceTest {
+    
     private final CreateConference model = new CreateConference(
     );
     
@@ -46,10 +47,14 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void actionUrlTest() {
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
       
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -92,9 +97,13 @@ import com.github.freeclimbapi.models.*;
     public void statusCallbackUrlTest() {
       
       
-      model.setStatusCallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setStatusCallbackUrl(uri);
+        Assert.assertEquals(uri, model.getStatusCallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -104,9 +113,13 @@ import com.github.freeclimbapi.models.*;
     public void waitUrlTest() {
       
       
-      model.setWaitUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setWaitUrl(uri);
+        Assert.assertEquals(uri, model.getWaitUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
 
@@ -118,36 +131,60 @@ import com.github.freeclimbapi.models.*;
     public void equalsTrueTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       CreateConference test2 = new CreateConference();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setAlias(true);
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertTrue(test1.equals(test2));
     }
@@ -160,36 +197,60 @@ import com.github.freeclimbapi.models.*;
     public void equalsFalseTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.NEVER);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       CreateConference test2 = new CreateConference();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setAlias(false);
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(false);
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       Assert.assertFalse(test1.equals(test2));
     }
@@ -202,20 +263,32 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeTypeTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       
       int hashCode1 = test1.hashCode();
       Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -229,36 +302,60 @@ import com.github.freeclimbapi.models.*;
     public void toStringEqualsTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       CreateConference test2 = new CreateConference();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setAlias(true);
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
       String toString1 = test1.toString();
       String toString2 = test2.toString();
@@ -273,36 +370,60 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsTrueTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       CreateConference test2 = new CreateConference();
         
-      test2.setActionUrl("TS");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setAlias(true);
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(true);
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -314,36 +435,60 @@ import com.github.freeclimbapi.models.*;
     public void hashCodeEqualsFalseTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.NEVER);
       test1.setRecord(true);
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       CreateConference test2 = new CreateConference();
         
-      test2.setActionUrl("TS2");
         
-        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test2.setAlias(false);
       test2.setPlayBeep(PlayBeep.ALWAYS);
       test2.setRecord(false);
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -355,20 +500,32 @@ import com.github.freeclimbapi.models.*;
     public void toStringTypeTest() {
       CreateConference test1 = new CreateConference();
         
-      test1.setActionUrl("TS");
         
-        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       test1.setAlias(true);
       test1.setPlayBeep(PlayBeep.ALWAYS);
       test1.setRecord(true);
         
         
-        test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
 
       String toString1 = test1.toString();
       Assert.assertTrue(String.class.isInstance(toString1));
@@ -382,22 +539,34 @@ import com.github.freeclimbapi.models.*;
     @Test
     public void buildTest() throws Exception {
         
-        model.setActionUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getActionUrl());
         
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         model.setAlias(false);
         model.setRecord(false);
         
         
-        model.setStatusCallbackUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setStatusCallbackUrl(uri);
+          Assert.assertEquals(uri, model.getStatusCallbackUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         
         
-        
-        model.setWaitUrl("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-        
+        try {
+          URI uri = new URI("TEST_STRING");
+          model.setWaitUrl(uri);
+          Assert.assertEquals(uri, model.getWaitUrl());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -408,4 +577,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
         
     }
+    
  }

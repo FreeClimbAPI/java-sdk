@@ -36,6 +36,7 @@ import com.github.freeclimbapi.models.*;
  * Model tests for ConferenceResult
  */
  public class ConferenceResultTest {
+    
     private final ConferenceResult model = new ConferenceResult(
     );
     
@@ -167,9 +168,13 @@ import com.github.freeclimbapi.models.*;
     public void waitUrlTest() {
       
       
-      model.setWaitUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getWaitUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setWaitUrl(uri);
+        Assert.assertEquals(uri, model.getWaitUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -179,9 +184,13 @@ import com.github.freeclimbapi.models.*;
     public void actionUrlTest() {
       
       
-      model.setActionUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getActionUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -191,9 +200,13 @@ import com.github.freeclimbapi.models.*;
     public void statusCallbackUrlTest() {
       
       
-      model.setStatusCallbackUrl("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getStatusCallbackUrl());
-      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setStatusCallbackUrl(uri);
+        Assert.assertEquals(uri, model.getStatusCallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
       
     }
     /**
@@ -244,16 +257,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.EMPTY);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
@@ -287,16 +312,28 @@ import com.github.freeclimbapi.models.*;
       test2.setStatus(ConferenceStatus.EMPTY);
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setActionUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
 
@@ -340,16 +377,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.POPULATED);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
@@ -383,16 +432,28 @@ import com.github.freeclimbapi.models.*;
       test2.setStatus(ConferenceStatus.EMPTY);
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setActionUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
 
@@ -436,16 +497,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.EMPTY);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       
@@ -490,16 +563,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.EMPTY);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
@@ -533,16 +618,28 @@ import com.github.freeclimbapi.models.*;
       test2.setStatus(ConferenceStatus.EMPTY);
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setActionUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
         
@@ -588,16 +685,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.EMPTY);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
@@ -631,16 +740,28 @@ import com.github.freeclimbapi.models.*;
       test2.setStatus(ConferenceStatus.EMPTY);
         
         
-      test2.setWaitUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setActionUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject2 = testObject;
       test2.setSubresourceUris(testObject2);
       Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -683,16 +804,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.POPULATED);
         
         
-      test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
       ConferenceResult test2 = new ConferenceResult();
@@ -726,16 +859,28 @@ import com.github.freeclimbapi.models.*;
       test2.setStatus(ConferenceStatus.EMPTY);
         
         
-      test2.setWaitUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setWaitUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setActionUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-      test2.setStatusCallbackUrl("TS2");
-      
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject2 = new Object();
       test2.setSubresourceUris(testObject2);
       Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -778,16 +923,28 @@ import com.github.freeclimbapi.models.*;
       test1.setStatus(ConferenceStatus.EMPTY);
         
         
-        test1.setWaitUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setWaitUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setActionUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
         
         
-        test1.setStatusCallbackUrl("TS");
-      
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
+        } catch (Exception e) {
+          e.printStackTrace();
+        };
       Object testObject = new Object();
       test1.setSubresourceUris(testObject);
 
@@ -795,4 +952,5 @@ import com.github.freeclimbapi.models.*;
       Assert.assertTrue(String.class.isInstance(toString1));
     }
 
+    
  }
