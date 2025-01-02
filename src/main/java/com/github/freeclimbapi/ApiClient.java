@@ -44,6 +44,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.text.DateFormat;
+
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
@@ -131,7 +132,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/5.9.0/java");
+        setUserAgent("OpenAPI-Generator/6.0.0/java");
 
         authentications = new HashMap<String, Authentication>();
     }

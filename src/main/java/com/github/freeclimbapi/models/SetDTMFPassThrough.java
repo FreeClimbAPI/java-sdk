@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SetDTMFPassThrough` command enables or disables the dtmfPassThrough privilege for this Conference Participant. If 'true', DTMFs will be passed through from this Participant to all other Participants in the Conference")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetDTMFPassThrough extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  
+  
   @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  
   private Boolean dtmfPassThrough;
+
 
   public SetDTMFPassThrough() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +131,3 @@ public class SetDTMFPassThrough extends PerclCommand {
   }
 
 }
-

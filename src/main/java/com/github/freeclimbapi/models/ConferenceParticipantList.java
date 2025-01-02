@@ -45,37 +45,73 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConferenceParticipantList implements Pagination {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TOTAL = "total";
+  
+  
   @SerializedName(SERIALIZED_NAME_TOTAL)
+  
   private Integer total;
 
+  
   public static final String SERIALIZED_NAME_START = "start";
+  
+  
   @SerializedName(SERIALIZED_NAME_START)
+  
   private Integer start;
 
+  
   public static final String SERIALIZED_NAME_END = "end";
+  
+  
   @SerializedName(SERIALIZED_NAME_END)
+  
   private Integer end;
 
+  
   public static final String SERIALIZED_NAME_PAGE = "page";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE)
+  
   private Integer page;
 
+  
   public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
+  
+  
   @SerializedName(SERIALIZED_NAME_NUM_PAGES)
+  
   private Integer numPages;
 
+  
   public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  
   private Integer pageSize;
 
+  
   public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
+  
+  
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
+  
   private String nextPageUri;
 
+  
   public static final String SERIALIZED_NAME_PARTICIPANTS = "participants";
+  
+  
   @SerializedName(SERIALIZED_NAME_PARTICIPANTS)
+  
   private List<ConferenceParticipantResult> participants = null;
+
 
   public ConferenceParticipantList() { 
   }
@@ -246,7 +282,6 @@ public class ConferenceParticipantList implements Pagination {
     this.participants = participants;
     return this;
   }
-
   public ConferenceParticipantList addParticipantsItem(ConferenceParticipantResult participantsItem) {
     if (this.participants == null) {
       this.participants = new ArrayList<ConferenceParticipantResult>();
@@ -336,4 +371,3 @@ public class ConferenceParticipantList implements Pagination {
   }
 
 }
-

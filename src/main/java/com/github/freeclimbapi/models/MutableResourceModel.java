@@ -44,21 +44,41 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MutableResourceModel {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
+
 
   public MutableResourceModel() { 
   }
@@ -200,4 +220,3 @@ public class MutableResourceModel {
   }
 
 }
-

@@ -44,9 +44,17 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateCallRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private UpdateCallRequestStatus status;
+
 
   public UpdateCallRequest() { 
   }
@@ -113,4 +121,3 @@ public class UpdateCallRequest {
   }
 
 }
-

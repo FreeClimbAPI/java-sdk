@@ -45,35 +45,63 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `CreateConference` command does exactly what its name implies — it creates an unpopulated Conference (one without any Participants). Once created, a Conference remains in FreeClimb until explicitly terminated by a customer. Once a Conference has been terminated, it can no longer be used.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private Boolean alias;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-  private PlayBeep playBeep = PlayBeep.ALWAYS;
+  
+  private PlayBeep playBeep;
 
+  
   public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECORD)
+  
   private Boolean record;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
+  
+  private URI statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
-  private String waitUrl;
+  
+  private URI waitUrl;
+
 
   public CreateConference() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public CreateConference actionUrl(String actionUrl) {
+  public CreateConference actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -86,12 +114,12 @@ public class CreateConference extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = " This URL is invoked once the Conference is successfully created. Actions on the Conference, such as adding Participants, can be performed via the PerCL script returned in the response. ")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
@@ -165,7 +193,7 @@ public class CreateConference extends PerclCommand {
   }
 
 
-  public CreateConference statusCallbackUrl(String statusCallbackUrl) {
+  public CreateConference statusCallbackUrl(URI statusCallbackUrl) {
     
     this.statusCallbackUrl = statusCallbackUrl;
     return this;
@@ -178,17 +206,17 @@ public class CreateConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "This URL is invoked when the status of the Conference changes or when a recording of the Conference has become available.")
 
-  public String getStatusCallbackUrl() {
+  public URI getStatusCallbackUrl() {
     return statusCallbackUrl;
   }
 
 
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
     this.statusCallbackUrl = statusCallbackUrl;
   }
 
 
-  public CreateConference waitUrl(String waitUrl) {
+  public CreateConference waitUrl(URI waitUrl) {
     
     this.waitUrl = waitUrl;
     return this;
@@ -201,12 +229,12 @@ public class CreateConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "If specified, this URL provides the custom hold music for the Conference when it is in the populated state. This attribute is always fetched using HTTP GET and is fetched just once – when the Conference is created. The URL must be an audio file that is reachable and readable by FreeClimb.")
 
-  public String getWaitUrl() {
+  public URI getWaitUrl() {
     return waitUrl;
   }
 
 
-  public void setWaitUrl(String waitUrl) {
+  public void setWaitUrl(URI waitUrl) {
     this.waitUrl = waitUrl;
   }
 
@@ -284,4 +312,3 @@ public class CreateConference extends PerclCommand {
   }
 
 }
-

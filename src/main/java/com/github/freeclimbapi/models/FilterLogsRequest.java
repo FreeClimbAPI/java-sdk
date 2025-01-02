@@ -44,9 +44,17 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FilterLogsRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_PQL = "pql";
+  
+  
   @SerializedName(SERIALIZED_NAME_PQL)
+  
   private String pql;
+
 
   public FilterLogsRequest() { 
   }
@@ -113,4 +121,3 @@ public class FilterLogsRequest {
   }
 
 }
-

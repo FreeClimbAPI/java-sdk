@@ -44,49 +44,97 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConferenceParticipantResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
 
+  
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
   private String callId;
 
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
 
+  
   public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  
+  
   @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  
   private Boolean dtmfPassThrough;
 
+  
   public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
+  
+  
   @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
+  
   private Boolean startConfOnEnter;
+
 
   public ConferenceParticipantResult() { 
   }
@@ -414,4 +462,3 @@ public class ConferenceParticipantResult {
   }
 
 }
-

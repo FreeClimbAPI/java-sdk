@@ -44,9 +44,17 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_QUERY = "query";
+  
+  
   @SerializedName(SERIALIZED_NAME_QUERY)
+  
   private String query;
+
 
   public CompletionRequest() { 
   }
@@ -113,4 +121,3 @@ public class CompletionRequest {
   }
 
 }
-

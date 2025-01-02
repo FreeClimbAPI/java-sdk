@@ -45,15 +45,23 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Redirect` command transfers control of a Call to the PerCL at a different URL. `Redirect` is a terminal command, so any actions following it are never executed. The maximum number of redirections allowed during the life time of a Call is 256. This is intended to prevent a Call from possibly looping infinitely due to errors in PerCL being generated.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Redirect extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
+
 
   public Redirect() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public Redirect actionUrl(String actionUrl) {
+  public Redirect actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -66,12 +74,12 @@ public class Redirect extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "URL to request a new PerCL script to continue with the current Call's processing. When `Redirect` invokes the `actionUrl`, an `inbound` Webhook is sent. This request therefore looks identical to the initial request (made to the `voiceUrl` of the number that was called) for an inbound Call.")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
@@ -123,4 +131,3 @@ public class Redirect extends PerclCommand {
   }
 
 }
-

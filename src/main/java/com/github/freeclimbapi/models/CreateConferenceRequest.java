@@ -44,25 +44,49 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateConferenceRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-  private PlayBeep playBeep = PlayBeep.ALWAYS;
+  
+  private PlayBeep playBeep;
 
+  
   public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECORD)
+  
   private Boolean record;
 
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
-  private String waitUrl;
+  
+  private URI waitUrl;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
+  
+  private URI statusCallbackUrl;
+
 
   public CreateConferenceRequest() { 
   }
@@ -136,7 +160,7 @@ public class CreateConferenceRequest {
   }
 
 
-  public CreateConferenceRequest waitUrl(String waitUrl) {
+  public CreateConferenceRequest waitUrl(URI waitUrl) {
     
     this.waitUrl = waitUrl;
     return this;
@@ -149,17 +173,17 @@ public class CreateConferenceRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "If specified, a URL for the audio file that provides custom hold music for the Conference when it is in the populated state. Otherwise, FreeClimb uses a system default audio file. This is always fetched using HTTP GET and is fetched just once &mdash; when the Conference is created.")
 
-  public String getWaitUrl() {
+  public URI getWaitUrl() {
     return waitUrl;
   }
 
 
-  public void setWaitUrl(String waitUrl) {
+  public void setWaitUrl(URI waitUrl) {
     this.waitUrl = waitUrl;
   }
 
 
-  public CreateConferenceRequest statusCallbackUrl(String statusCallbackUrl) {
+  public CreateConferenceRequest statusCallbackUrl(URI statusCallbackUrl) {
     
     this.statusCallbackUrl = statusCallbackUrl;
     return this;
@@ -172,12 +196,12 @@ public class CreateConferenceRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "This URL is invoked when the status of the Conference changes. For more information, see **statusCallbackUrl** (below).")
 
-  public String getStatusCallbackUrl() {
+  public URI getStatusCallbackUrl() {
     return statusCallbackUrl;
   }
 
 
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
     this.statusCallbackUrl = statusCallbackUrl;
   }
 
@@ -240,4 +264,3 @@ public class CreateConferenceRequest {
   }
 
 }
-

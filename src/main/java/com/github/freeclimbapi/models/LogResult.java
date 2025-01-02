@@ -44,33 +44,65 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class LogResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
+  
+  
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  
   private Integer timestamp;
 
+  
   public static final String SERIALIZED_NAME_LEVEL = "level";
+  
+  
   @SerializedName(SERIALIZED_NAME_LEVEL)
+  
   private LogLevel level;
 
+  
   public static final String SERIALIZED_NAME_REQUEST_ID = "requestId";
+  
+  
   @SerializedName(SERIALIZED_NAME_REQUEST_ID)
+  
   private String requestId;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
   private String callId;
 
+  
   public static final String SERIALIZED_NAME_MESSAGE = "message";
+  
+  
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  
   private String message;
 
+  
   public static final String SERIALIZED_NAME_METADATA = "metadata";
+  
+  
   @SerializedName(SERIALIZED_NAME_METADATA)
+  
   private Object metadata;
+
 
   public LogResult() { 
   }
@@ -298,4 +330,3 @@ public class LogResult {
   }
 
 }
-

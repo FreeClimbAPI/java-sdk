@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.github.freeclimbapi'
-version = '5.9.0'
+version = '6.0.0'
 
 buildscript {
     repositories {
@@ -115,7 +115,7 @@ dependencies {
     implementation 'org.openapitools:jackson-databind-nullable:0.2.2'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
     implementation group: 'commons-codec', name: 'commons-codec', version: '1.7'
-    implementation 'org.threeten:threetenbp:1.5.0'
+    implementation 'org.threeten:threetenbp:1.6.0'
     implementation "jakarta.annotation:jakarta.annotation-api:$jakarta_annotation_version"
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:3.12.4'

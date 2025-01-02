@@ -45,51 +45,95 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The OutDial command is used to call a phone number")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OutDial extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
-  private String callConnectUrl;
+  
+  private URI callConnectUrl;
 
+  
   public static final String SERIALIZED_NAME_CALLING_NUMBER = "callingNumber";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALLING_NUMBER)
+  
   private String callingNumber;
 
+  
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
+  
+  
   @SerializedName(SERIALIZED_NAME_DESTINATION)
+  
   private String destination;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE)
+  
   private IfMachine ifMachine;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
-  private String ifMachineUrl;
+  
+  private URI ifMachineUrl;
 
+  
   public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
+  
   private String sendDigits;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
+  
+  private URI statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
+  
+  
   @SerializedName(SERIALIZED_NAME_TIMEOUT)
+  
   private Integer timeout;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public OutDial() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public OutDial actionUrl(String actionUrl) {
+  public OutDial actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -102,17 +146,17 @@ public class OutDial extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "URL to which FreeClimb sends an HTTP POST request. ")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
 
-  public OutDial callConnectUrl(String callConnectUrl) {
+  public OutDial callConnectUrl(URI callConnectUrl) {
     
     this.callConnectUrl = callConnectUrl;
     return this;
@@ -125,12 +169,12 @@ public class OutDial extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "URL to which FreeClimb makes an HTTP POST request informing the result of the OutDial.")
 
-  public String getCallConnectUrl() {
+  public URI getCallConnectUrl() {
     return callConnectUrl;
   }
 
 
-  public void setCallConnectUrl(String callConnectUrl) {
+  public void setCallConnectUrl(URI callConnectUrl) {
     this.callConnectUrl = callConnectUrl;
   }
 
@@ -204,7 +248,7 @@ public class OutDial extends PerclCommand {
   }
 
 
-  public OutDial ifMachineUrl(String ifMachineUrl) {
+  public OutDial ifMachineUrl(URI ifMachineUrl) {
     
     this.ifMachineUrl = ifMachineUrl;
     return this;
@@ -217,12 +261,12 @@ public class OutDial extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "When the `ifMachine` flag is set to `redirect`, this attribute specifies a URL to which FreeClimb makes a POST request when an answering machine or a fax machine is detected. This URL is required if the `ifMachine` flag is set to `redirect`. Otherwise, it should not be included.")
 
-  public String getIfMachineUrl() {
+  public URI getIfMachineUrl() {
     return ifMachineUrl;
   }
 
 
-  public void setIfMachineUrl(String ifMachineUrl) {
+  public void setIfMachineUrl(URI ifMachineUrl) {
     this.ifMachineUrl = ifMachineUrl;
   }
 
@@ -250,7 +294,7 @@ public class OutDial extends PerclCommand {
   }
 
 
-  public OutDial statusCallbackUrl(String statusCallbackUrl) {
+  public OutDial statusCallbackUrl(URI statusCallbackUrl) {
     
     this.statusCallbackUrl = statusCallbackUrl;
     return this;
@@ -263,12 +307,12 @@ public class OutDial extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "When the outdialed Call leg terminates, FreeClimb sends a `callStatus` Webhook to the `statusCallbackUrl`. This is a notification only; any PerCL command returned is ignored.")
 
-  public String getStatusCallbackUrl() {
+  public URI getStatusCallbackUrl() {
     return statusCallbackUrl;
   }
 
 
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
     this.statusCallbackUrl = statusCallbackUrl;
   }
 
@@ -393,4 +437,3 @@ public class OutDial extends PerclCommand {
   }
 
 }
-

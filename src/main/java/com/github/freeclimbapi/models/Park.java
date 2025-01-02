@@ -45,23 +45,39 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Park` command allows a caller to be put on hold.  You can provide hold music,messages,etc until ready to resume the call. Park is a terminal command.  Actions performed on the Call while on hold are provided in a PerCL script in response to the waitUrl property. Actions performed on the Call after it has been unparked (resumed) will be provided in a PerCL script in response to the actionUrl provided. A Call can be resumed in two ways -- REST API invocation or the Unpark percl command. No actions can be nested within Park and Park cannot be nested in any other actions. ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Park extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
-  private String waitUrl;
+  
+  private URI waitUrl;
 
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
-  private String notificationUrl;
+  
+  private URI notificationUrl;
+
 
   public Park() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public Park waitUrl(String waitUrl) {
+  public Park waitUrl(URI waitUrl) {
     
     this.waitUrl = waitUrl;
     return this;
@@ -74,17 +90,17 @@ public class Park extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Specifies a URL pointing to a PerCL script containing actions to be executed while the caller is Parked. Once the script returned by the waitUrl runs out of commands to execute, FreeClimb will re-request the waitUrl and start over, essentially looping the script requests indefinitely.")
 
-  public String getWaitUrl() {
+  public URI getWaitUrl() {
     return waitUrl;
   }
 
 
-  public void setWaitUrl(String waitUrl) {
+  public void setWaitUrl(URI waitUrl) {
     this.waitUrl = waitUrl;
   }
 
 
-  public Park actionUrl(String actionUrl) {
+  public Park actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -97,17 +113,17 @@ public class Park extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "A request is made to this URL when the Call is resumed, which can occur if the Call is resumed via the Unpark command, the REST API (POST to Call resource), or the caller hangs up. The PerCL script returned in response to the actionUrl will be executed on the resumed call.")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
 
-  public Park notificationUrl(String notificationUrl) {
+  public Park notificationUrl(URI notificationUrl) {
     
     this.notificationUrl = notificationUrl;
     return this;
@@ -120,12 +136,12 @@ public class Park extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL to be invoked when the Call is parked. The request to the URL contains the standard request parameters.")
 
-  public String getNotificationUrl() {
+  public URI getNotificationUrl() {
     return notificationUrl;
   }
 
 
-  public void setNotificationUrl(String notificationUrl) {
+  public void setNotificationUrl(URI notificationUrl) {
     this.notificationUrl = notificationUrl;
   }
 
@@ -183,4 +199,3 @@ public class Park extends PerclCommand {
   }
 
 }
-

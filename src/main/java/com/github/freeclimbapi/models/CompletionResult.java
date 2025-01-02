@@ -44,60 +44,25 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_RESPONSE = "response";
+  
+  
   @SerializedName(SERIALIZED_NAME_RESPONSE)
+  
   private String response;
 
-  /**
-   * Completion result status. Possible values: success, no_context
-   */
-  @JsonAdapter(StatusEnum.Adapter.class)
-  public enum StatusEnum {
-    SUCCESS("success"),
-    
-    NO_CONTEXT("no_context");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StatusEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private StatusEnum status;
+  
+  private CompletionResultStatus status;
+
 
   public CompletionResult() { 
   }
@@ -125,25 +90,25 @@ public class CompletionResult {
   }
 
 
-  public CompletionResult status(StatusEnum status) {
+  public CompletionResult status(CompletionResultStatus status) {
     
     this.status = status;
     return this;
   }
 
    /**
-   * Completion result status. Possible values: success, no_context
+   * Get status
    * @return status
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Completion result status. Possible values: success, no_context")
+  @ApiModelProperty(required = true, value = "")
 
-  public StatusEnum getStatus() {
+  public CompletionResultStatus getStatus() {
     return status;
   }
 
 
-  public void setStatus(StatusEnum status) {
+  public void setStatus(CompletionResultStatus status) {
     this.status = status;
   }
 
@@ -189,4 +154,3 @@ public class CompletionResult {
   }
 
 }
-

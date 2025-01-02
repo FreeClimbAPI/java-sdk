@@ -45,37 +45,73 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApplicationList implements Pagination {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TOTAL = "total";
+  
+  
   @SerializedName(SERIALIZED_NAME_TOTAL)
+  
   private Integer total;
 
+  
   public static final String SERIALIZED_NAME_START = "start";
+  
+  
   @SerializedName(SERIALIZED_NAME_START)
+  
   private Integer start;
 
+  
   public static final String SERIALIZED_NAME_END = "end";
+  
+  
   @SerializedName(SERIALIZED_NAME_END)
+  
   private Integer end;
 
+  
   public static final String SERIALIZED_NAME_PAGE = "page";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE)
+  
   private Integer page;
 
+  
   public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
+  
+  
   @SerializedName(SERIALIZED_NAME_NUM_PAGES)
+  
   private Integer numPages;
 
+  
   public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  
   private Integer pageSize;
 
+  
   public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
+  
+  
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
+  
   private String nextPageUri;
 
+  
   public static final String SERIALIZED_NAME_APPLICATIONS = "applications";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATIONS)
+  
   private List<ApplicationResult> applications = null;
+
 
   public ApplicationList() { 
   }
@@ -246,7 +282,6 @@ public class ApplicationList implements Pagination {
     this.applications = applications;
     return this;
   }
-
   public ApplicationList addApplicationsItem(ApplicationResult applicationsItem) {
     if (this.applications == null) {
       this.applications = new ArrayList<ApplicationResult>();
@@ -336,4 +371,3 @@ public class ApplicationList implements Pagination {
   }
 
 }
-

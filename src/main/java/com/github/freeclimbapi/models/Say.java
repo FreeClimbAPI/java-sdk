@@ -45,21 +45,41 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Say` command provides Text-To-Speech (TTS) support. It converts text to speech and then renders it in a female voice back to the caller. `Say` is useful in cases where it's difficult to pre-record a prompt for any reason. `Say` does not allow barge-in unless nested within a `GetSpeech` command. The file will always be played to completion unless nested.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Say extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TEXT = "text";
+  
+  
   @SerializedName(SERIALIZED_NAME_TEXT)
+  
   private String text;
 
+  
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
+  
+  
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
+  
   private String language;
 
+  
   public static final String SERIALIZED_NAME_LOOP = "loop";
+  
+  
   @SerializedName(SERIALIZED_NAME_LOOP)
+  
   private Integer loop = 1;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
+
 
   public Say() { 
     this.command = this.getClass().getSimpleName();
@@ -213,4 +233,3 @@ public class Say extends PerclCommand {
   }
 
 }
-

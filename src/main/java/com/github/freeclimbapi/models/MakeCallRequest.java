@@ -44,45 +44,89 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MakeCallRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
   private String applicationId;
 
+  
   public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
+  
+  
   @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
+  
   private String sendDigits;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE)
+  
   private String ifMachine;
 
+  
   public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
-  private String ifMachineUrl;
+  
+  private URI ifMachineUrl;
 
+  
   public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
+  
+  
   @SerializedName(SERIALIZED_NAME_TIMEOUT)
+  
   private Integer timeout = 30;
 
+  
   public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+  
+  
   @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+  
   private String parentCallId;
 
+  
   public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+  
+  
   @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+  
   private Boolean privacyMode;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
-  private String callConnectUrl;
+  
+  private URI callConnectUrl;
+
 
   public MakeCallRequest() { 
   }
@@ -202,7 +246,7 @@ public class MakeCallRequest {
   }
 
 
-  public MakeCallRequest ifMachineUrl(String ifMachineUrl) {
+  public MakeCallRequest ifMachineUrl(URI ifMachineUrl) {
     
     this.ifMachineUrl = ifMachineUrl;
     return this;
@@ -215,12 +259,12 @@ public class MakeCallRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "This attribute specifies a URL to which FreeClimb will make a POST request when an answering machine or a fax machine is detected. This URL is required if the ifMachine flag is set to redirect. When ifMachine is set to hangup, ifMachineUrl must not be included in the request. For more information, see **ifMachineUrl example** below.")
 
-  public String getIfMachineUrl() {
+  public URI getIfMachineUrl() {
     return ifMachineUrl;
   }
 
 
-  public void setIfMachineUrl(String ifMachineUrl) {
+  public void setIfMachineUrl(URI ifMachineUrl) {
     this.ifMachineUrl = ifMachineUrl;
   }
 
@@ -294,7 +338,7 @@ public class MakeCallRequest {
   }
 
 
-  public MakeCallRequest callConnectUrl(String callConnectUrl) {
+  public MakeCallRequest callConnectUrl(URI callConnectUrl) {
     
     this.callConnectUrl = callConnectUrl;
     return this;
@@ -307,12 +351,12 @@ public class MakeCallRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL that FreeClimb should use to handle this phone call. If an applicationId or parentCallId have already been provided, this callConnectUrl attribute will be used as a replacement of the callConnectUrl originally assigned in the application or parent call.")
 
-  public String getCallConnectUrl() {
+  public URI getCallConnectUrl() {
     return callConnectUrl;
   }
 
 
-  public void setCallConnectUrl(String callConnectUrl) {
+  public void setCallConnectUrl(URI callConnectUrl) {
     this.callConnectUrl = callConnectUrl;
   }
 
@@ -374,4 +418,3 @@ public class MakeCallRequest {
   }
 
 }
-

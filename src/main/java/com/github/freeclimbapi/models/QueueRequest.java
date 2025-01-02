@@ -44,13 +44,25 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueRequest {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_MAX_SIZE = "maxSize";
+  
+  
   @SerializedName(SERIALIZED_NAME_MAX_SIZE)
+  
   private Integer maxSize = 100;
+
 
   public QueueRequest() { 
   }
@@ -142,4 +154,3 @@ public class QueueRequest {
   }
 
 }
-

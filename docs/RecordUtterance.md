@@ -8,7 +8,7 @@ The `RecordUtterance` command records the caller's voice and returns the URL of 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**actionUrl** | **String** | URL to which information on the completed recording is submitted. The PerCL received in response is then used to continue with Call processing. | 
+**actionUrl** | **URI** | URL to which information on the completed recording is submitted. The PerCL received in response is then used to continue with Call processing. | 
 **silenceTimeoutMs** | **Integer** | Interval of silence that should elapse before ending the recording. |  [optional]
 **finishOnKey** | **String** | Key that triggers the end of the recording. any digit, &#39;#&#39;, or &#39;*&#39; |  [optional]
 **maxLengthSec** | **Integer** | Maximum length for the command execution in seconds. |  [optional]

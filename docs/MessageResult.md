@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **to** | **String** | Phone number in E.164 format that received the message. |  [optional]
 **text** | **String** | Message contents |  [optional]
 **direction** | **String** | Noting whether the message was inbound or outbound |  [optional]
-**notificationUrl** | **String** | URL invoked when message sent |  [optional]
+**notificationUrl** | **URI** | URL invoked when message sent |  [optional]
 **brandId** | **String** | The unique identifier for the brand associated with the message |  [optional]
 **campaignId** | **String** | The unique identifier for the campaign associated with the message |  [optional]
 **segmentCount** | **BigDecimal** | The number of segments into which the message was split |  [optional]

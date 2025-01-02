@@ -45,25 +45,49 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "Details for which features this number may be used.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Capabilities {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_VOICE = "voice";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE)
+  
   private Boolean voice;
 
+  
   public static final String SERIALIZED_NAME_SMS = "sms";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS)
+  
   private Boolean sms;
 
+  
   public static final String SERIALIZED_NAME_TOLL_FREE = "tollFree";
+  
+  
   @SerializedName(SERIALIZED_NAME_TOLL_FREE)
+  
   private Boolean tollFree;
 
+  
   public static final String SERIALIZED_NAME_TEN_D_L_C = "tenDLC";
+  
+  
   @SerializedName(SERIALIZED_NAME_TEN_D_L_C)
+  
   private Boolean tenDLC;
 
+  
   public static final String SERIALIZED_NAME_SHORT_CODE = "shortCode";
+  
+  
   @SerializedName(SERIALIZED_NAME_SHORT_CODE)
+  
   private Boolean shortCode;
+
 
   public Capabilities() { 
   }
@@ -230,4 +254,3 @@ public class Capabilities {
   }
 
 }
-

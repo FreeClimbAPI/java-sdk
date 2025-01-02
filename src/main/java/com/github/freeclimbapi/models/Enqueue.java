@@ -45,27 +45,47 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `Enqueue` command adds the current Call to a call Queue. If the specified Queue does not exist, it is created and then the Call is added to it. The default maximum length of the queue is 100. This can be modified using the REST API.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Enqueue extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
-  private String notificationUrl;
+  
+  private URI notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
   @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
   private String queueId;
 
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
-  private String waitUrl;
+  
+  private URI waitUrl;
+
 
   public Enqueue() { 
     this.command = this.getClass().getSimpleName();
   }
 
-  public Enqueue actionUrl(String actionUrl) {
+  public Enqueue actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -78,17 +98,17 @@ public class Enqueue extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the `Dequeue` command, the REST API (POST to Queue Member resource), or the caller hangs up.")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
 
-  public Enqueue notificationUrl(String notificationUrl) {
+  public Enqueue notificationUrl(URI notificationUrl) {
     
     this.notificationUrl = notificationUrl;
     return this;
@@ -101,12 +121,12 @@ public class Enqueue extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL to be invoked when the call enters the queue. The request to the URL contains the standard request parameters.This is a notification only; any PerCL returned will be ignored.")
 
-  public String getNotificationUrl() {
+  public URI getNotificationUrl() {
     return notificationUrl;
   }
 
 
-  public void setNotificationUrl(String notificationUrl) {
+  public void setNotificationUrl(URI notificationUrl) {
     this.notificationUrl = notificationUrl;
   }
 
@@ -134,7 +154,7 @@ public class Enqueue extends PerclCommand {
   }
 
 
-  public Enqueue waitUrl(String waitUrl) {
+  public Enqueue waitUrl(URI waitUrl) {
     
     this.waitUrl = waitUrl;
     return this;
@@ -147,12 +167,12 @@ public class Enqueue extends PerclCommand {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the `Dequeue` command, the REST API (POST to Queue Member resource), or the caller hangs up.")
 
-  public String getWaitUrl() {
+  public URI getWaitUrl() {
     return waitUrl;
   }
 
 
-  public void setWaitUrl(String waitUrl) {
+  public void setWaitUrl(URI waitUrl) {
     this.waitUrl = waitUrl;
   }
 
@@ -213,4 +233,3 @@ public class Enqueue extends PerclCommand {
   }
 
 }
-

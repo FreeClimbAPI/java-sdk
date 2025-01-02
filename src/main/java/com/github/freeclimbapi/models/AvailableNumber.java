@@ -44,33 +44,65 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AvailableNumber {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_CAPABILITIES = "capabilities";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAPABILITIES)
+  
   private Capabilities capabilities;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
+  
   public static final String SERIALIZED_NAME_PHONE_NUMBER = "phoneNumber";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
+  
   private String phoneNumber;
 
+  
   public static final String SERIALIZED_NAME_VOICE_ENABLED = "voiceEnabled";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_ENABLED)
+  
   private Boolean voiceEnabled;
 
+  
   public static final String SERIALIZED_NAME_SMS_ENABLED = "smsEnabled";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_ENABLED)
+  
   private Boolean smsEnabled;
 
+  
   public static final String SERIALIZED_NAME_REGION = "region";
+  
+  
   @SerializedName(SERIALIZED_NAME_REGION)
+  
   private String region;
 
+  
   public static final String SERIALIZED_NAME_COUNTRY = "country";
+  
+  
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  
   private String country;
+
 
   public AvailableNumber() { 
   }
@@ -302,4 +334,3 @@ public class AvailableNumber {
   }
 
 }
-

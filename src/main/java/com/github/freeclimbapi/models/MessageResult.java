@@ -44,69 +44,137 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MessageResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_MESSAGE_ID = "messageId";
+  
+  
   @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
+  
   private String messageId;
 
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private MessageStatus status;
 
+  
   public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
   @SerializedName(SERIALIZED_NAME_FROM)
+  
   private String from;
 
+  
   public static final String SERIALIZED_NAME_TO = "to";
+  
+  
   @SerializedName(SERIALIZED_NAME_TO)
+  
   private String to;
 
+  
   public static final String SERIALIZED_NAME_TEXT = "text";
+  
+  
   @SerializedName(SERIALIZED_NAME_TEXT)
+  
   private String text;
 
+  
   public static final String SERIALIZED_NAME_DIRECTION = "direction";
+  
+  
   @SerializedName(SERIALIZED_NAME_DIRECTION)
+  
   private String direction;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
-  private String notificationUrl;
+  
+  private URI notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  
   private String brandId;
 
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
 
+  
   public static final String SERIALIZED_NAME_SEGMENT_COUNT = "segmentCount";
+  
+  
   @SerializedName(SERIALIZED_NAME_SEGMENT_COUNT)
+  
   private BigDecimal segmentCount;
 
+  
   public static final String SERIALIZED_NAME_MEDIA_URLS = "mediaUrls";
+  
+  
   @SerializedName(SERIALIZED_NAME_MEDIA_URLS)
+  
   private List<URI> mediaUrls = null;
+
 
   public MessageResult() { 
   }
@@ -364,7 +432,7 @@ public class MessageResult {
   }
 
 
-  public MessageResult notificationUrl(String notificationUrl) {
+  public MessageResult notificationUrl(URI notificationUrl) {
     
     this.notificationUrl = notificationUrl;
     return this;
@@ -377,12 +445,12 @@ public class MessageResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL invoked when message sent")
 
-  public String getNotificationUrl() {
+  public URI getNotificationUrl() {
     return notificationUrl;
   }
 
 
-  public void setNotificationUrl(String notificationUrl) {
+  public void setNotificationUrl(URI notificationUrl) {
     this.notificationUrl = notificationUrl;
   }
 
@@ -461,7 +529,6 @@ public class MessageResult {
     this.mediaUrls = mediaUrls;
     return this;
   }
-
   public MessageResult addMediaUrlsItem(URI mediaUrlsItem) {
     if (this.mediaUrls == null) {
       this.mediaUrls = new ArrayList<URI>();
@@ -567,4 +634,3 @@ public class MessageResult {
   }
 
 }
-

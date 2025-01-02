@@ -44,61 +44,121 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConferenceResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
   @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-  private PlayBeep playBeep = PlayBeep.ALWAYS;
+  
+  private PlayBeep playBeep;
 
+  
   public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
   @SerializedName(SERIALIZED_NAME_RECORD)
+  
   private Boolean record;
 
+  
   public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS)
+  
   private ConferenceStatus status;
 
+  
   public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_WAIT_URL)
-  private String waitUrl;
+  
+  private URI waitUrl;
 
+  
   public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
+  
+  private URI actionUrl;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
+  
+  private URI statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
+  
+  
   @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
+  
   private Object subresourceUris;
+
 
   public ConferenceResult() { 
   }
@@ -333,7 +393,7 @@ public class ConferenceResult {
   }
 
 
-  public ConferenceResult waitUrl(String waitUrl) {
+  public ConferenceResult waitUrl(URI waitUrl) {
     
     this.waitUrl = waitUrl;
     return this;
@@ -346,17 +406,17 @@ public class ConferenceResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL referencing the audio file to be used as default wait music for the Conference when it is in the populated state.")
 
-  public String getWaitUrl() {
+  public URI getWaitUrl() {
     return waitUrl;
   }
 
 
-  public void setWaitUrl(String waitUrl) {
+  public void setWaitUrl(URI waitUrl) {
     this.waitUrl = waitUrl;
   }
 
 
-  public ConferenceResult actionUrl(String actionUrl) {
+  public ConferenceResult actionUrl(URI actionUrl) {
     
     this.actionUrl = actionUrl;
     return this;
@@ -369,17 +429,17 @@ public class ConferenceResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL invoked once the Conference is successfully created.")
 
-  public String getActionUrl() {
+  public URI getActionUrl() {
     return actionUrl;
   }
 
 
-  public void setActionUrl(String actionUrl) {
+  public void setActionUrl(URI actionUrl) {
     this.actionUrl = actionUrl;
   }
 
 
-  public ConferenceResult statusCallbackUrl(String statusCallbackUrl) {
+  public ConferenceResult statusCallbackUrl(URI statusCallbackUrl) {
     
     this.statusCallbackUrl = statusCallbackUrl;
     return this;
@@ -392,12 +452,12 @@ public class ConferenceResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL to inform that the Conference status has changed.")
 
-  public String getStatusCallbackUrl() {
+  public URI getStatusCallbackUrl() {
     return statusCallbackUrl;
   }
 
 
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
     this.statusCallbackUrl = statusCallbackUrl;
   }
 
@@ -501,4 +561,3 @@ public class ConferenceResult {
   }
 
 }
-

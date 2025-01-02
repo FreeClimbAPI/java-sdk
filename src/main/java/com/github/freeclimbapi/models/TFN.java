@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "TollFree Campaign details for this number")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TFN {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
   private String campaignId;
+
 
   public TFN() { 
   }
@@ -114,4 +122,3 @@ public class TFN {
   }
 
 }
-

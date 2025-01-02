@@ -45,45 +45,89 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `AddToConference` command adds a Participant to a Conference. Two Call legs can be bridged together by creating a Conference and adding both Call legs to it via `AddToConference`.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddToConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ALLOW_CALL_CONTROL = "allowCallControl";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALLOW_CALL_CONTROL)
+  
   private Boolean allowCallControl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_SEQUENCE = "callControlSequence";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_SEQUENCE)
+  
   private String callControlSequence;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONTROL_URL = "callControlUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONTROL_URL)
-  private String callControlUrl;
+  
+  private URI callControlUrl;
 
+  
   public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
   private String conferenceId;
 
+  
   public static final String SERIALIZED_NAME_LEAVE_CONFERENCE_URL = "leaveConferenceUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_LEAVE_CONFERENCE_URL)
-  private String leaveConferenceUrl;
+  
+  private URI leaveConferenceUrl;
 
+  
   public static final String SERIALIZED_NAME_LISTEN = "listen";
+  
+  
   @SerializedName(SERIALIZED_NAME_LISTEN)
+  
   private Boolean listen;
 
+  
   public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
-  private String notificationUrl;
+  
+  private URI notificationUrl;
 
+  
   public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
+  
+  
   @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
+  
   private Boolean startConfOnEnter;
 
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
 
+  
   public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+  
+  
   @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+  
   private Boolean dtmfPassThrough;
+
 
   public AddToConference() { 
     this.command = this.getClass().getSimpleName();
@@ -135,7 +179,7 @@ public class AddToConference extends PerclCommand {
   }
 
 
-  public AddToConference callControlUrl(String callControlUrl) {
+  public AddToConference callControlUrl(URI callControlUrl) {
     
     this.callControlUrl = callControlUrl;
     return this;
@@ -148,12 +192,12 @@ public class AddToConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL to be invoked when this Participant enters the digit sequence defined in the `callControlSequence` attribute.")
 
-  public String getCallControlUrl() {
+  public URI getCallControlUrl() {
     return callControlUrl;
   }
 
 
-  public void setCallControlUrl(String callControlUrl) {
+  public void setCallControlUrl(URI callControlUrl) {
     this.callControlUrl = callControlUrl;
   }
 
@@ -181,7 +225,7 @@ public class AddToConference extends PerclCommand {
   }
 
 
-  public AddToConference leaveConferenceUrl(String leaveConferenceUrl) {
+  public AddToConference leaveConferenceUrl(URI leaveConferenceUrl) {
     
     this.leaveConferenceUrl = leaveConferenceUrl;
     return this;
@@ -194,12 +238,12 @@ public class AddToConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "URL to be invoked when the Participant leaves the Conference. ")
 
-  public String getLeaveConferenceUrl() {
+  public URI getLeaveConferenceUrl() {
     return leaveConferenceUrl;
   }
 
 
-  public void setLeaveConferenceUrl(String leaveConferenceUrl) {
+  public void setLeaveConferenceUrl(URI leaveConferenceUrl) {
     this.leaveConferenceUrl = leaveConferenceUrl;
   }
 
@@ -227,7 +271,7 @@ public class AddToConference extends PerclCommand {
   }
 
 
-  public AddToConference notificationUrl(String notificationUrl) {
+  public AddToConference notificationUrl(URI notificationUrl) {
     
     this.notificationUrl = notificationUrl;
     return this;
@@ -240,12 +284,12 @@ public class AddToConference extends PerclCommand {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "When the Participant enters the Conference, this URL will be invoked using an HTTP POST request with the standard request parameters.")
 
-  public String getNotificationUrl() {
+  public URI getNotificationUrl() {
     return notificationUrl;
   }
 
 
-  public void setNotificationUrl(String notificationUrl) {
+  public void setNotificationUrl(URI notificationUrl) {
     this.notificationUrl = notificationUrl;
   }
 
@@ -393,4 +437,3 @@ public class AddToConference extends PerclCommand {
   }
 
 }
-

@@ -45,6 +45,10 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `RemoveFromConference` command removes a Participant from a Conference but does not hang up. Instead, the Call is simply unbridged and what happens next with the Call is determined by the PerCL returned in response to the `leaveConferenceUrl` attribute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RemoveFromConference extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+
   public RemoveFromConference() { 
     this.command = this.getClass().getSimpleName();
   }
@@ -92,4 +96,3 @@ public class RemoveFromConference extends PerclCommand {
   }
 
 }
-

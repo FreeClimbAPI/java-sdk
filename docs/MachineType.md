@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `ANSWERING_MACHINE` (value: `"answeringMachine"`)
+* `ANSWERING_MACHINE` (value: `"answering machine"`)
 
-* `FAX_MACHINE` (value: `"faxMachine"`)
+* `FAX_MODEM` (value: `"fax modem"`)
 
 
 

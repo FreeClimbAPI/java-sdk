@@ -45,9 +45,17 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "The `SetTalk` command enables or disables the talk privilege for this Conference Participant. If 'true', no audio from that Participant is shared with the other Participants of the Conference.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetTalk extends PerclCommand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_TALK = "talk";
+  
+  
   @SerializedName(SERIALIZED_NAME_TALK)
+  
   private Boolean talk;
+
 
   public SetTalk() { 
     this.command = this.getClass().getSimpleName();
@@ -123,4 +131,3 @@ public class SetTalk extends PerclCommand {
   }
 
 }
-

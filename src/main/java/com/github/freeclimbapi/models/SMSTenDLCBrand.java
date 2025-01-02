@@ -45,434 +45,257 @@ import java.util.concurrent.Callable;
 @ApiModel(description = "A brand is a business identity behind the campaign.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCBrand {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
-  /**
-   * Entity type behind the brand. This is the form of business establishment.
-   */
-  @JsonAdapter(EntityTypeEnum.Adapter.class)
-  public enum EntityTypeEnum {
-    PRIVATE_PROFIT("PRIVATE_PROFIT"),
-    
-    PUBLIC_PROFIT("PUBLIC_PROFIT"),
-    
-    NON_PROFIT("NON_PROFIT"),
-    
-    GOVERNMENT("GOVERNMENT"),
-    
-    SOLE_PROPRIETOR("SOLE_PROPRIETOR");
-
-    private String value;
-
-    EntityTypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static EntityTypeEnum fromValue(String value) {
-      for (EntityTypeEnum b : EntityTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<EntityTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final EntityTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public EntityTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return EntityTypeEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entityType";
+  
+  
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
-  private EntityTypeEnum entityType;
+  
+  private SMSTenDLCBrandEntityType entityType;
 
+  
   public static final String SERIALIZED_NAME_CSP_ID = "cspId";
+  
+  
   @SerializedName(SERIALIZED_NAME_CSP_ID)
+  
   private String cspId;
 
+  
   public static final String SERIALIZED_NAME_BRAND_ID = "brandId";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_ID)
+  
   private String brandId;
 
+  
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
+  
+  
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
+  
   private String firstName;
 
+  
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
+  
+  
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  
   private String lastName;
 
+  
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
+  
+  
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  
   private String displayName;
 
+  
   public static final String SERIALIZED_NAME_COMPANY_NAME = "companyName";
+  
+  
   @SerializedName(SERIALIZED_NAME_COMPANY_NAME)
+  
   private String companyName;
 
+  
   public static final String SERIALIZED_NAME_EIN = "ein";
+  
+  
   @SerializedName(SERIALIZED_NAME_EIN)
+  
   private String ein;
 
+  
   public static final String SERIALIZED_NAME_EIN_ISSUING_COUNTRY = "einIssuingCountry";
+  
+  
   @SerializedName(SERIALIZED_NAME_EIN_ISSUING_COUNTRY)
+  
   private String einIssuingCountry;
 
+  
   public static final String SERIALIZED_NAME_PHONE = "phone";
+  
+  
   @SerializedName(SERIALIZED_NAME_PHONE)
+  
   private String phone;
 
+  
   public static final String SERIALIZED_NAME_STREET = "street";
+  
+  
   @SerializedName(SERIALIZED_NAME_STREET)
+  
   private String street;
 
+  
   public static final String SERIALIZED_NAME_CITY = "city";
+  
+  
   @SerializedName(SERIALIZED_NAME_CITY)
+  
   private String city;
 
+  
   public static final String SERIALIZED_NAME_STATE = "state";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATE)
+  
   private String state;
 
+  
   public static final String SERIALIZED_NAME_POSTAL_CODE = "postalCode";
+  
+  
   @SerializedName(SERIALIZED_NAME_POSTAL_CODE)
+  
   private String postalCode;
 
+  
   public static final String SERIALIZED_NAME_COUNTRY = "country";
+  
+  
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  
   private String country;
 
+  
   public static final String SERIALIZED_NAME_EMAIL = "email";
+  
+  
   @SerializedName(SERIALIZED_NAME_EMAIL)
+  
   private String email;
 
+  
   public static final String SERIALIZED_NAME_STOCK_SYMBOL = "stockSymbol";
+  
+  
   @SerializedName(SERIALIZED_NAME_STOCK_SYMBOL)
+  
   private String stockSymbol;
 
-  /**
-   * (Required for public company) stock exchange.
-   */
-  @JsonAdapter(StockExchangeEnum.Adapter.class)
-  public enum StockExchangeEnum {
-    NONE("NONE"),
-    
-    NASDAQ("NASDAQ"),
-    
-    NYSE("NYSE"),
-    
-    AMEX("AMEX"),
-    
-    AMX("AMX"),
-    
-    ASX("ASX"),
-    
-    B3("B3"),
-    
-    BME("BME"),
-    
-    BSE("BSE"),
-    
-    FRA("FRA"),
-    
-    ICEX("ICEX"),
-    
-    JPX("JPX"),
-    
-    JSE("JSE"),
-    
-    KRX("KRX"),
-    
-    LON("LON"),
-    
-    NSE("NSE"),
-    
-    OMX("OMX"),
-    
-    SEHK("SEHK"),
-    
-    SGX("SGX"),
-    
-    SSE("SSE"),
-    
-    STO("STO"),
-    
-    SWX("SWX"),
-    
-    SZSE("SZSE"),
-    
-    TSX("TSX"),
-    
-    TWSE("TWSE"),
-    
-    VSE("VSE"),
-    
-    OTHER("OTHER");
-
-    private String value;
-
-    StockExchangeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static StockExchangeEnum fromValue(String value) {
-      for (StockExchangeEnum b : StockExchangeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<StockExchangeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StockExchangeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StockExchangeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StockExchangeEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_STOCK_EXCHANGE = "stockExchange";
+  
+  
   @SerializedName(SERIALIZED_NAME_STOCK_EXCHANGE)
-  private StockExchangeEnum stockExchange;
+  
+  private SMSTenDLCBrandStockExchange stockExchange;
 
+  
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ipAddress";
+  
+  
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
+  
   private String ipAddress;
 
+  
   public static final String SERIALIZED_NAME_WEBSITE = "website";
+  
+  
   @SerializedName(SERIALIZED_NAME_WEBSITE)
+  
   private String website;
 
-  /**
-   * Brand relationship to the CSP
-   */
-  @JsonAdapter(BrandRelationshipEnum.Adapter.class)
-  public enum BrandRelationshipEnum {
-    BASIC_ACCOUNT("BASIC_ACCOUNT"),
-    
-    SMALL_ACCOUNT("SMALL_ACCOUNT"),
-    
-    MEDIUM_ACCOUNT("MEDIUM_ACCOUNT"),
-    
-    LARGE_ACCOUNT("LARGE_ACCOUNT"),
-    
-    KEY_ACCOUNT("KEY_ACCOUNT");
-
-    private String value;
-
-    BrandRelationshipEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static BrandRelationshipEnum fromValue(String value) {
-      for (BrandRelationshipEnum b : BrandRelationshipEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<BrandRelationshipEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final BrandRelationshipEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public BrandRelationshipEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return BrandRelationshipEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_BRAND_RELATIONSHIP = "brandRelationship";
+  
+  
   @SerializedName(SERIALIZED_NAME_BRAND_RELATIONSHIP)
-  private BrandRelationshipEnum brandRelationship;
+  
+  private SMSTenDLCBrandRelationship brandRelationship;
 
+  
   public static final String SERIALIZED_NAME_VERTICAL = "vertical";
+  
+  
   @SerializedName(SERIALIZED_NAME_VERTICAL)
+  
   private String vertical;
 
+  
   public static final String SERIALIZED_NAME_ALT_BUSINESS_ID = "altBusinessId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALT_BUSINESS_ID)
+  
   private String altBusinessId;
 
-  /**
-   * The type of the Alternative business identifier
-   */
-  @JsonAdapter(AltBusinessIdTypeEnum.Adapter.class)
-  public enum AltBusinessIdTypeEnum {
-    NONE("NONE"),
-    
-    DUNS("DUNS"),
-    
-    GIIN("GIIN"),
-    
-    LEI("LEI");
-
-    private String value;
-
-    AltBusinessIdTypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static AltBusinessIdTypeEnum fromValue(String value) {
-      for (AltBusinessIdTypeEnum b : AltBusinessIdTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<AltBusinessIdTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final AltBusinessIdTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public AltBusinessIdTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return AltBusinessIdTypeEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_ALT_BUSINESS_ID_TYPE = "altBusinessIdType";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALT_BUSINESS_ID_TYPE)
-  private AltBusinessIdTypeEnum altBusinessIdType;
+  
+  private SMSTenDLCBrandAltBusinessIdType altBusinessIdType;
 
+  
   public static final String SERIALIZED_NAME_UNIVERSAL_EIN = "universalEin";
+  
+  
   @SerializedName(SERIALIZED_NAME_UNIVERSAL_EIN)
+  
   private String universalEin;
 
+  
   public static final String SERIALIZED_NAME_REFERENCE_ID = "referenceId";
+  
+  
   @SerializedName(SERIALIZED_NAME_REFERENCE_ID)
+  
   private String referenceId;
 
+  
   public static final String SERIALIZED_NAME_OPTIONAL_ATTRIBUTES = "optionalAttributes";
+  
+  
   @SerializedName(SERIALIZED_NAME_OPTIONAL_ATTRIBUTES)
+  
   private Map<String, Object> optionalAttributes = null;
 
+  
   public static final String SERIALIZED_NAME_MOCK = "mock";
+  
+  
   @SerializedName(SERIALIZED_NAME_MOCK)
+  
   private Boolean mock;
 
-  /**
-   * TCR assessment of the brand identification status.
-   */
-  @JsonAdapter(IdentityStatusEnum.Adapter.class)
-  public enum IdentityStatusEnum {
-    SELF_DECLARED("SELF_DECLARED"),
-    
-    UNVERIFIED("UNVERIFIED"),
-    
-    VERIFIED("VERIFIED"),
-    
-    VETTED_VERIFIED("VETTED_VERIFIED");
-
-    private String value;
-
-    IdentityStatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static IdentityStatusEnum fromValue(String value) {
-      for (IdentityStatusEnum b : IdentityStatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<IdentityStatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final IdentityStatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public IdentityStatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return IdentityStatusEnum.fromValue(value);
-      }
-    }
-  }
-
+  
   public static final String SERIALIZED_NAME_IDENTITY_STATUS = "identityStatus";
+  
+  
   @SerializedName(SERIALIZED_NAME_IDENTITY_STATUS)
-  private IdentityStatusEnum identityStatus;
+  
+  private SMSTenDLCBrandIdentityStatus identityStatus;
 
+  
   public static final String SERIALIZED_NAME_CREATE_DATE = "createDate";
+  
+  
   @SerializedName(SERIALIZED_NAME_CREATE_DATE)
+  
   private OffsetDateTime createDate;
+
 
   public SMSTenDLCBrand() { 
   }
@@ -512,25 +335,25 @@ public class SMSTenDLCBrand {
   }
 
 
-  public SMSTenDLCBrand entityType(EntityTypeEnum entityType) {
+  public SMSTenDLCBrand entityType(SMSTenDLCBrandEntityType entityType) {
     
     this.entityType = entityType;
     return this;
   }
 
    /**
-   * Entity type behind the brand. This is the form of business establishment.
+   * Get entityType
    * @return entityType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Entity type behind the brand. This is the form of business establishment.")
+  @ApiModelProperty(required = true, value = "")
 
-  public EntityTypeEnum getEntityType() {
+  public SMSTenDLCBrandEntityType getEntityType() {
     return entityType;
   }
 
 
-  public void setEntityType(EntityTypeEnum entityType) {
+  public void setEntityType(SMSTenDLCBrandEntityType entityType) {
     this.entityType = entityType;
   }
 
@@ -891,25 +714,25 @@ public class SMSTenDLCBrand {
   }
 
 
-  public SMSTenDLCBrand stockExchange(StockExchangeEnum stockExchange) {
+  public SMSTenDLCBrand stockExchange(SMSTenDLCBrandStockExchange stockExchange) {
     
     this.stockExchange = stockExchange;
     return this;
   }
 
    /**
-   * (Required for public company) stock exchange.
+   * Get stockExchange
    * @return stockExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "NASDAQ", value = "(Required for public company) stock exchange.")
+  @ApiModelProperty(value = "")
 
-  public StockExchangeEnum getStockExchange() {
+  public SMSTenDLCBrandStockExchange getStockExchange() {
     return stockExchange;
   }
 
 
-  public void setStockExchange(StockExchangeEnum stockExchange) {
+  public void setStockExchange(SMSTenDLCBrandStockExchange stockExchange) {
     this.stockExchange = stockExchange;
   }
 
@@ -960,25 +783,25 @@ public class SMSTenDLCBrand {
   }
 
 
-  public SMSTenDLCBrand brandRelationship(BrandRelationshipEnum brandRelationship) {
+  public SMSTenDLCBrand brandRelationship(SMSTenDLCBrandRelationship brandRelationship) {
     
     this.brandRelationship = brandRelationship;
     return this;
   }
 
    /**
-   * Brand relationship to the CSP
+   * Get brandRelationship
    * @return brandRelationship
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Brand relationship to the CSP")
+  @ApiModelProperty(required = true, value = "")
 
-  public BrandRelationshipEnum getBrandRelationship() {
+  public SMSTenDLCBrandRelationship getBrandRelationship() {
     return brandRelationship;
   }
 
 
-  public void setBrandRelationship(BrandRelationshipEnum brandRelationship) {
+  public void setBrandRelationship(SMSTenDLCBrandRelationship brandRelationship) {
     this.brandRelationship = brandRelationship;
   }
 
@@ -1029,25 +852,25 @@ public class SMSTenDLCBrand {
   }
 
 
-  public SMSTenDLCBrand altBusinessIdType(AltBusinessIdTypeEnum altBusinessIdType) {
+  public SMSTenDLCBrand altBusinessIdType(SMSTenDLCBrandAltBusinessIdType altBusinessIdType) {
     
     this.altBusinessIdType = altBusinessIdType;
     return this;
   }
 
    /**
-   * The type of the Alternative business identifier
+   * Get altBusinessIdType
    * @return altBusinessIdType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of the Alternative business identifier")
+  @ApiModelProperty(value = "")
 
-  public AltBusinessIdTypeEnum getAltBusinessIdType() {
+  public SMSTenDLCBrandAltBusinessIdType getAltBusinessIdType() {
     return altBusinessIdType;
   }
 
 
-  public void setAltBusinessIdType(AltBusinessIdTypeEnum altBusinessIdType) {
+  public void setAltBusinessIdType(SMSTenDLCBrandAltBusinessIdType altBusinessIdType) {
     this.altBusinessIdType = altBusinessIdType;
   }
 
@@ -1098,9 +921,9 @@ public class SMSTenDLCBrand {
     return this;
   }
 
-  public SMSTenDLCBrand putOptionalAttributesItem(String key, Object optionalAttributesItem) {
+  public SMSTenDLCBrand putoptionalAttributesItem(String key, Object optionalAttributesItem) {
     if (this.optionalAttributes == null) {
-      this.optionalAttributes = new HashMap<String, Object>();
+      this.optionalAttributes = new HashMap<>();
     }
     this.optionalAttributes.put(key, optionalAttributesItem);
     return this;
@@ -1146,25 +969,25 @@ public class SMSTenDLCBrand {
   }
 
 
-  public SMSTenDLCBrand identityStatus(IdentityStatusEnum identityStatus) {
+  public SMSTenDLCBrand identityStatus(SMSTenDLCBrandIdentityStatus identityStatus) {
     
     this.identityStatus = identityStatus;
     return this;
   }
 
    /**
-   * TCR assessment of the brand identification status.
+   * Get identityStatus
    * @return identityStatus
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "TCR assessment of the brand identification status.")
+  @ApiModelProperty(required = true, value = "")
 
-  public IdentityStatusEnum getIdentityStatus() {
+  public SMSTenDLCBrandIdentityStatus getIdentityStatus() {
     return identityStatus;
   }
 
 
-  public void setIdentityStatus(IdentityStatusEnum identityStatus) {
+  public void setIdentityStatus(SMSTenDLCBrandIdentityStatus identityStatus) {
     this.identityStatus = identityStatus;
   }
 
@@ -1302,4 +1125,3 @@ public class SMSTenDLCBrand {
   }
 
 }
-

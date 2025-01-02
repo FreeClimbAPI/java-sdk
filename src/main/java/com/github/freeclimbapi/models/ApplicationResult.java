@@ -44,57 +44,113 @@ import java.util.concurrent.Callable;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApplicationResult {
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
   public static final String SERIALIZED_NAME_URI = "uri";
+  
+  
   @SerializedName(SERIALIZED_NAME_URI)
+  
   private String uri;
 
+  
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  
   private String dateCreated;
 
+  
   public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+  
+  
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  
   private String dateUpdated;
 
+  
   public static final String SERIALIZED_NAME_REVISION = "revision";
+  
+  
   @SerializedName(SERIALIZED_NAME_REVISION)
+  
   private Integer revision;
 
+  
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
   private String accountId;
 
+  
   public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+  
+  
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  
   private String applicationId;
 
+  
   public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  
   private String alias;
 
+  
   public static final String SERIALIZED_NAME_VOICE_URL = "voiceUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_URL)
-  private String voiceUrl;
+  
+  private URI voiceUrl;
 
+  
   public static final String SERIALIZED_NAME_VOICE_FALLBACK_URL = "voiceFallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_VOICE_FALLBACK_URL)
-  private String voiceFallbackUrl;
+  
+  private URI voiceFallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
-  private String callConnectUrl;
+  
+  private URI callConnectUrl;
 
+  
   public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
+  
+  private URI statusCallbackUrl;
 
+  
   public static final String SERIALIZED_NAME_SMS_URL = "smsUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_URL)
-  private String smsUrl;
+  
+  private URI smsUrl;
 
+  
   public static final String SERIALIZED_NAME_SMS_FALLBACK_URL = "smsFallbackUrl";
+  
+  
   @SerializedName(SERIALIZED_NAME_SMS_FALLBACK_URL)
-  private String smsFallbackUrl;
+  
+  private URI smsFallbackUrl;
+
 
   public ApplicationResult() { 
   }
@@ -260,7 +316,7 @@ public class ApplicationResult {
   }
 
 
-  public ApplicationResult voiceUrl(String voiceUrl) {
+  public ApplicationResult voiceUrl(URI voiceUrl) {
     
     this.voiceUrl = voiceUrl;
     return this;
@@ -273,17 +329,17 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL FreeClimb will request when a phone number assigned to this Application receives a Call. Used for inbound calls only.")
 
-  public String getVoiceUrl() {
+  public URI getVoiceUrl() {
     return voiceUrl;
   }
 
 
-  public void setVoiceUrl(String voiceUrl) {
+  public void setVoiceUrl(URI voiceUrl) {
     this.voiceUrl = voiceUrl;
   }
 
 
-  public ApplicationResult voiceFallbackUrl(String voiceFallbackUrl) {
+  public ApplicationResult voiceFallbackUrl(URI voiceFallbackUrl) {
     
     this.voiceFallbackUrl = voiceFallbackUrl;
     return this;
@@ -296,17 +352,17 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl. Used for inbound calls only.")
 
-  public String getVoiceFallbackUrl() {
+  public URI getVoiceFallbackUrl() {
     return voiceFallbackUrl;
   }
 
 
-  public void setVoiceFallbackUrl(String voiceFallbackUrl) {
+  public void setVoiceFallbackUrl(URI voiceFallbackUrl) {
     this.voiceFallbackUrl = voiceFallbackUrl;
   }
 
 
-  public ApplicationResult callConnectUrl(String callConnectUrl) {
+  public ApplicationResult callConnectUrl(URI callConnectUrl) {
     
     this.callConnectUrl = callConnectUrl;
     return this;
@@ -319,17 +375,17 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL to which FreeClimb will make a POST request informing the result of the outbound Call request. The status property of the request message specifies if the Call was connected or not.")
 
-  public String getCallConnectUrl() {
+  public URI getCallConnectUrl() {
     return callConnectUrl;
   }
 
 
-  public void setCallConnectUrl(String callConnectUrl) {
+  public void setCallConnectUrl(URI callConnectUrl) {
     this.callConnectUrl = callConnectUrl;
   }
 
 
-  public ApplicationResult statusCallbackUrl(String statusCallbackUrl) {
+  public ApplicationResult statusCallbackUrl(URI statusCallbackUrl) {
     
     this.statusCallbackUrl = statusCallbackUrl;
     return this;
@@ -342,17 +398,17 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "A URL to which FreeClimb will make a POST request when the Call ends to notify this app.")
 
-  public String getStatusCallbackUrl() {
+  public URI getStatusCallbackUrl() {
     return statusCallbackUrl;
   }
 
 
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
     this.statusCallbackUrl = statusCallbackUrl;
   }
 
 
-  public ApplicationResult smsUrl(String smsUrl) {
+  public ApplicationResult smsUrl(URI smsUrl) {
     
     this.smsUrl = smsUrl;
     return this;
@@ -365,17 +421,17 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL FreeClimb will request when a phone number assigned to this Application receives an incoming SMS message. Used for inbound SMS only.")
 
-  public String getSmsUrl() {
+  public URI getSmsUrl() {
     return smsUrl;
   }
 
 
-  public void setSmsUrl(String smsUrl) {
+  public void setSmsUrl(URI smsUrl) {
     this.smsUrl = smsUrl;
   }
 
 
-  public ApplicationResult smsFallbackUrl(String smsFallbackUrl) {
+  public ApplicationResult smsFallbackUrl(URI smsFallbackUrl) {
     
     this.smsFallbackUrl = smsFallbackUrl;
     return this;
@@ -388,12 +444,12 @@ public class ApplicationResult {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only.")
 
-  public String getSmsFallbackUrl() {
+  public URI getSmsFallbackUrl() {
     return smsFallbackUrl;
   }
 
 
-  public void setSmsFallbackUrl(String smsFallbackUrl) {
+  public void setSmsFallbackUrl(URI smsFallbackUrl) {
     this.smsFallbackUrl = smsFallbackUrl;
   }
 
@@ -472,4 +528,3 @@ public class ApplicationResult {
   }
 
 }
-
