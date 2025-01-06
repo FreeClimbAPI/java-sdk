@@ -12,75 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 /**
- * Current toll-free campaign registration status.Possible values: UNREGISTERED,INITIATED,PENDING,DECLINED,REGISTERED. A newly created campaign defaults to INITIATED status. 
+ * Current toll-free campaign registration status.Possible values:
+ * UNREGISTERED,INITIATED,PENDING,DECLINED,REGISTERED. A newly created campaign defaults to
+ * INITIATED status.
  */
 @JsonAdapter(SMSTollFreeCampaignRegistrationStatus.Adapter.class)
 public enum SMSTollFreeCampaignRegistrationStatus {
-  
-  UNREGISTERED("UNREGISTERED"),
-  
-  INITIATED("INITIATED"),
-  
-  PENDING("PENDING"),
-  
-  DECLINED("DECLINED"),
-  
-  REGISTERED("REGISTERED");
+    UNREGISTERED("UNREGISTERED"),
 
-  private String value;
+    INITIATED("INITIATED"),
 
-  SMSTollFreeCampaignRegistrationStatus(String value) {
-    this.value = value;
-  }
+    PENDING("PENDING"),
 
-  public String getValue() {
-    return value;
-  }
+    DECLINED("DECLINED"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    REGISTERED("REGISTERED");
 
-  public static SMSTollFreeCampaignRegistrationStatus fromValue(String value) {
-    for (SMSTollFreeCampaignRegistrationStatus b : SMSTollFreeCampaignRegistrationStatus.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    private String value;
+
+    SMSTollFreeCampaignRegistrationStatus(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<SMSTollFreeCampaignRegistrationStatus> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final SMSTollFreeCampaignRegistrationStatus enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public SMSTollFreeCampaignRegistrationStatus read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return SMSTollFreeCampaignRegistrationStatus.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static SMSTollFreeCampaignRegistrationStatus fromValue(String value) {
+        for (SMSTollFreeCampaignRegistrationStatus b :
+                SMSTollFreeCampaignRegistrationStatus.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<SMSTollFreeCampaignRegistrationStatus> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter,
+                final SMSTollFreeCampaignRegistrationStatus enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public SMSTollFreeCampaignRegistrationStatus read(final JsonReader jsonReader)
+                throws IOException {
+            String value = jsonReader.nextString();
+            return SMSTollFreeCampaignRegistrationStatus.fromValue(value);
+        }
+    }
 }
-

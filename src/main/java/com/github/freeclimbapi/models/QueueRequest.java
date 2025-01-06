@@ -12,145 +12,115 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * QueueRequest
- */
+/** QueueRequest */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueRequest {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_ALIAS = "alias";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ALIAS)
-  
-  private String alias;
-
-  
-  public static final String SERIALIZED_NAME_MAX_SIZE = "maxSize";
-  
-  
-  @SerializedName(SERIALIZED_NAME_MAX_SIZE)
-  
-  private Integer maxSize = 100;
-
-
-  public QueueRequest() { 
-  }
-
-  public QueueRequest alias(String alias) {
-    
-    this.alias = alias;
-    return this;
-  }
-
-   /**
-   * Description for this Queue. Max length is 64 characters.
-   * @return alias
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description for this Queue. Max length is 64 characters.")
-
-  public String getAlias() {
-    return alias;
-  }
-
-
-  public void setAlias(String alias) {
-    this.alias = alias;
-  }
-
-
-  public QueueRequest maxSize(Integer maxSize) {
-    
-    this.maxSize = maxSize;
-    return this;
-  }
-
-   /**
-   * Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:** Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks below the new value of maxSize.
-   * @return maxSize
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:** Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks below the new value of maxSize.")
-
-  public Integer getMaxSize() {
-    return maxSize;
-  }
-
-
-  public void setMaxSize(Integer maxSize) {
-    this.maxSize = maxSize;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_ALIAS = "alias";
+
+    @SerializedName(SERIALIZED_NAME_ALIAS)
+    private String alias;
+
+    public static final String SERIALIZED_NAME_MAX_SIZE = "maxSize";
+
+    @SerializedName(SERIALIZED_NAME_MAX_SIZE)
+    private Integer maxSize = 100;
+
+    public QueueRequest() {}
+
+    public QueueRequest alias(String alias) {
+
+        this.alias = alias;
+        return this;
     }
-    QueueRequest queueRequest = (QueueRequest) o;
-    return Objects.equals(this.alias, queueRequest.alias) &&
-        Objects.equals(this.maxSize, queueRequest.maxSize);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(alias, maxSize);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class QueueRequest {\n");
-    sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
-    sb.append("    maxSize: ").append(toIndentedString(maxSize)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Description for this Queue. Max length is 64 characters.
+     *
+     * @return alias
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Description for this Queue. Max length is 64 characters.")
+    public String getAlias() {
+        return alias;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public QueueRequest maxSize(Integer maxSize) {
+
+        this.maxSize = maxSize;
+        return this;
+    }
+
+    /**
+     * Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:**
+     * Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks
+     * below the new value of maxSize.
+     *
+     * @return maxSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Maximum number of calls this queue can hold. Default is 100. Maximum is 1000."
+                        + " **Note:** Reducing the maxSize of a Queue causes the Queue to reject"
+                        + " incoming requests until it shrinks below the new value of maxSize.")
+    public Integer getMaxSize() {
+        return maxSize;
+    }
+
+    public void setMaxSize(Integer maxSize) {
+        this.maxSize = maxSize;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        QueueRequest queueRequest = (QueueRequest) o;
+        return Objects.equals(this.alias, queueRequest.alias)
+                && Objects.equals(this.maxSize, queueRequest.maxSize);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(alias, maxSize);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class QueueRequest {\n");
+        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
+        sb.append("    maxSize: ").append(toIndentedString(maxSize)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

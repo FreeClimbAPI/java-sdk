@@ -10,471 +10,315 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for SMSTollFreeCampaign
- */
- public class SMSTollFreeCampaignTest {
-    
-    private final SMSTollFreeCampaign model = new SMSTollFreeCampaign(
-    );
-    
-    
-    /**
-     * Test the property 'accountId'
-     */
+/** Model tests for SMSTollFreeCampaign */
+public class SMSTollFreeCampaignTest {
+
+    private final SMSTollFreeCampaign model = new SMSTollFreeCampaign();
+
+    /** Test the property 'accountId' */
     @Test
     public void accountIdTest() {
-      
-      
-      model.setAccountId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getAccountId());
-      
-      
+
+        model.setAccountId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAccountId());
     }
-    /**
-     * Test the property 'campaignId'
-     */
+
+    /** Test the property 'campaignId' */
     @Test
     public void campaignIdTest() {
-      
-      
-      model.setCampaignId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCampaignId());
-      
-      
+
+        model.setCampaignId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCampaignId());
     }
-    /**
-     * Test the property 'useCase'
-     */
+
+    /** Test the property 'useCase' */
     @Test
     public void useCaseTest() {
-      
-      
-      model.setUseCase("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getUseCase());
-      
-      
+
+        model.setUseCase("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getUseCase());
     }
-    /**
-     * Test the property 'registrationStatus'
-     */
+
+    /** Test the property 'registrationStatus' */
     @Test
     public void registrationStatusTest() {
-      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.INITIATED);
-      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.PENDING);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.PENDING);
-      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.DECLINED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.DECLINED);
-      model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.REGISTERED);
-      Assert.assertEquals(model.getRegistrationStatus(),SMSTollFreeCampaignRegistrationStatus.REGISTERED);
-      
+        model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+        Assert.assertEquals(
+                model.getRegistrationStatus(), SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+        model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
+        Assert.assertEquals(
+                model.getRegistrationStatus(), SMSTollFreeCampaignRegistrationStatus.INITIATED);
+        model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.PENDING);
+        Assert.assertEquals(
+                model.getRegistrationStatus(), SMSTollFreeCampaignRegistrationStatus.PENDING);
+        model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.DECLINED);
+        Assert.assertEquals(
+                model.getRegistrationStatus(), SMSTollFreeCampaignRegistrationStatus.DECLINED);
+        model.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.REGISTERED);
+        Assert.assertEquals(
+                model.getRegistrationStatus(), SMSTollFreeCampaignRegistrationStatus.REGISTERED);
     }
-    /**
-     * Test the property 'dateCreated'
-     */
+
+    /** Test the property 'dateCreated' */
     @Test
     public void dateCreatedTest() {
-      
-      
-      model.setDateCreated("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getDateCreated());
-      
-      
+
+        model.setDateCreated("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDateCreated());
     }
-    /**
-     * Test the property 'dateUpdated'
-     */
+
+    /** Test the property 'dateUpdated' */
     @Test
     public void dateUpdatedTest() {
-      
-      
-      model.setDateUpdated("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getDateUpdated());
-      
-      
+
+        model.setDateUpdated("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDateUpdated());
     }
-    /**
-     * Test the property 'revision'
-     */
+
+    /** Test the property 'revision' */
     @Test
     public void revisionTest() {
-      
-      model.setRevision(1);
-      Assert.assertEquals(1, (int) model.getRevision());
+
+        model.setRevision(1);
+        Assert.assertEquals(1, (int) model.getRevision());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCampaignId("TS");
-      
-        
-        
-      test2.setUseCase("TS");
-      
-      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test2.setDateCreated("TS");
-      
-        
-        
-      test2.setDateUpdated("TS");
-      
-      test2.setRevision(1);
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
 
-      Assert.assertTrue(test1.equals(test2));
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+        SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+
+        test2.setAccountId("TS");
+
+        test2.setCampaignId("TS");
+
+        test2.setUseCase("TS");
+
+        test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test2.setDateCreated("TS");
+
+        test2.setDateUpdated("TS");
+
+        test2.setRevision(1);
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setCampaignId("TS2");
-      
-        
-        
-      test2.setUseCase("TS2");
-      
-      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test2.setDateCreated("TS2");
-      
-        
-        
-      test2.setDateUpdated("TS2");
-      
-      test2.setRevision(0);
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
 
-      Assert.assertFalse(test1.equals(test2));
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+        SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+
+        test2.setAccountId("TS2");
+
+        test2.setCampaignId("TS2");
+
+        test2.setUseCase("TS2");
+
+        test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test2.setDateCreated("TS2");
+
+        test2.setDateUpdated("TS2");
+
+        test2.setRevision(0);
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCampaignId("TS");
-      
-        
-        
-      test2.setUseCase("TS");
-      
-      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test2.setDateCreated("TS");
-      
-        
-        
-      test2.setDateUpdated("TS");
-      
-      test2.setRevision(1);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+        SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+
+        test2.setAccountId("TS");
+
+        test2.setCampaignId("TS");
+
+        test2.setUseCase("TS");
+
+        test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test2.setDateCreated("TS");
+
+        test2.setDateUpdated("TS");
+
+        test2.setRevision(1);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCampaignId("TS");
-      
-        
-        
-      test2.setUseCase("TS");
-      
-      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test2.setDateCreated("TS");
-      
-        
-        
-      test2.setDateUpdated("TS");
-      
-      test2.setRevision(1);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+        SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+
+        test2.setAccountId("TS");
+
+        test2.setCampaignId("TS");
+
+        test2.setUseCase("TS");
+
+        test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test2.setDateCreated("TS");
+
+        test2.setDateUpdated("TS");
+
+        test2.setRevision(1);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCampaignId("TS");
-      
-        
-        
-      test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
-        
-        
-      test1.setDateCreated("TS");
-      
-        
-        
-      test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
-      SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setCampaignId("TS2");
-      
-        
-        
-      test2.setUseCase("TS2");
-      
-      test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-      test2.setDateCreated("TS2");
-      
-        
-        
-      test2.setDateUpdated("TS2");
-      
-      test2.setRevision(0);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-    }
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
-    public void toStringTypeTest() {
-      SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
-        
-        
         test1.setAccountId("TS");
-      
-        
-        
-        test1.setCampaignId("TS");
-      
-        
-        
-        test1.setUseCase("TS");
-      
-      test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
-        
-        
-        test1.setDateCreated("TS");
-      
-        
-        
-        test1.setDateUpdated("TS");
-      
-      test1.setRevision(1);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.INITIATED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+        SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
+
+        test2.setAccountId("TS2");
+
+        test2.setCampaignId("TS2");
+
+        test2.setUseCase("TS2");
+
+        test2.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test2.setDateCreated("TS2");
+
+        test2.setDateUpdated("TS2");
+
+        test2.setRevision(0);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    
- }
+    /** Test the method 'toStringType' */
+    @Test
+    public void toStringTypeTest() {
+        SMSTollFreeCampaign test1 = new SMSTollFreeCampaign();
+
+        test1.setAccountId("TS");
+
+        test1.setCampaignId("TS");
+
+        test1.setUseCase("TS");
+
+        test1.setRegistrationStatus(SMSTollFreeCampaignRegistrationStatus.UNREGISTERED);
+
+        test1.setDateCreated("TS");
+
+        test1.setDateUpdated("TS");
+
+        test1.setRevision(1);
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
+    }
+}

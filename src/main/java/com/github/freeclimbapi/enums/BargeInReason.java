@@ -12,71 +12,57 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets BargeInReason
- */
+/** Gets or Sets BargeInReason */
 @JsonAdapter(BargeInReason.Adapter.class)
 public enum BargeInReason {
-  
-  NO_BARGE_IN("noBargeIn"),
-  
-  BARGE_IN_BY_DTMF("bargeInByDTMF"),
-  
-  BARGE_IN_BY_ENERGY("bargeInByEnergy");
+    NO_BARGE_IN("noBargeIn"),
 
-  private String value;
+    BARGE_IN_BY_DTMF("bargeInByDTMF"),
 
-  BargeInReason(String value) {
-    this.value = value;
-  }
+    BARGE_IN_BY_ENERGY("bargeInByEnergy");
 
-  public String getValue() {
-    return value;
-  }
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static BargeInReason fromValue(String value) {
-    for (BargeInReason b : BargeInReason.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    BargeInReason(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<BargeInReason> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final BargeInReason enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public BargeInReason read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return BargeInReason.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static BargeInReason fromValue(String value) {
+        for (BargeInReason b : BargeInReason.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<BargeInReason> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final BargeInReason enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public BargeInReason read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return BargeInReason.fromValue(value);
+        }
+    }
 }
-

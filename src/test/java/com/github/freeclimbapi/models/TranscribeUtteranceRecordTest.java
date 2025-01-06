@@ -10,184 +10,138 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for TranscribeUtteranceRecord
- */
- public class TranscribeUtteranceRecordTest {
-    
-    private final TranscribeUtteranceRecord model = new TranscribeUtteranceRecord(
-    );
-    
-    
-    /**
-     * Test the property 'saveRecording'
-     */
+/** Model tests for TranscribeUtteranceRecord */
+public class TranscribeUtteranceRecordTest {
+
+    private final TranscribeUtteranceRecord model = new TranscribeUtteranceRecord();
+
+    /** Test the property 'saveRecording' */
     @Test
     public void saveRecordingTest() {
-      model.setSaveRecording(false);
-      Assert.assertEquals(false, model.getSaveRecording());       
-      
+        model.setSaveRecording(false);
+        Assert.assertEquals(false, model.getSaveRecording());
     }
-    /**
-     * Test the property 'maxLengthSec'
-     */
+
+    /** Test the property 'maxLengthSec' */
     @Test
     public void maxLengthSecTest() {
-      
-      model.setMaxLengthSec(1);
-      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+
+        model.setMaxLengthSec(1);
+        Assert.assertEquals(1, (int) model.getMaxLengthSec());
     }
-    /**
-     * Test the property 'rcrdTerminationSilenceTimeMs'
-     */
+
+    /** Test the property 'rcrdTerminationSilenceTimeMs' */
     @Test
     public void rcrdTerminationSilenceTimeMsTest() {
-      
-      model.setRcrdTerminationSilenceTimeMs(1);
-      Assert.assertEquals(1, (int) model.getRcrdTerminationSilenceTimeMs());
+
+        model.setRcrdTerminationSilenceTimeMs(1);
+        Assert.assertEquals(1, (int) model.getRcrdTerminationSilenceTimeMs());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
-      test2.setSaveRecording(true);
-      test2.setMaxLengthSec(1);
-      test2.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+        test2.setSaveRecording(true);
+        test2.setMaxLengthSec(1);
+        test2.setRcrdTerminationSilenceTimeMs(1);
 
-      Assert.assertTrue(test1.equals(test2));
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
-      test2.setSaveRecording(false);
-      test2.setMaxLengthSec(0);
-      test2.setRcrdTerminationSilenceTimeMs(0);
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+        test2.setSaveRecording(false);
+        test2.setMaxLengthSec(0);
+        test2.setRcrdTerminationSilenceTimeMs(0);
 
-      Assert.assertFalse(test1.equals(test2));
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
-      test2.setSaveRecording(true);
-      test2.setMaxLengthSec(1);
-      test2.setRcrdTerminationSilenceTimeMs(1);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+        test2.setSaveRecording(true);
+        test2.setMaxLengthSec(1);
+        test2.setRcrdTerminationSilenceTimeMs(1);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
-      test2.setSaveRecording(true);
-      test2.setMaxLengthSec(1);
-      test2.setRcrdTerminationSilenceTimeMs(1);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+        test2.setSaveRecording(true);
+        test2.setMaxLengthSec(1);
+        test2.setRcrdTerminationSilenceTimeMs(1);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
-      TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
-      test2.setSaveRecording(false);
-      test2.setMaxLengthSec(0);
-      test2.setRcrdTerminationSilenceTimeMs(0);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
+        test2.setSaveRecording(false);
+        test2.setMaxLengthSec(0);
+        test2.setRcrdTerminationSilenceTimeMs(0);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
+    /** Test the method 'toStringType' */
+    @Test
     public void toStringTypeTest() {
-      TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
-      test1.setSaveRecording(true);
-      test1.setMaxLengthSec(1);
-      test1.setRcrdTerminationSilenceTimeMs(1);
+        TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
+        test1.setSaveRecording(true);
+        test1.setMaxLengthSec(1);
+        test1.setRcrdTerminationSilenceTimeMs(1);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
     }
-
-    
- }
+}

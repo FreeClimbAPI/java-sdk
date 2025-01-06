@@ -12,81 +12,76 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 /**
- * * &#x60;queued&#x60; &amp;ndash; Call is ready and waiting in line before going out. * &#x60;ringing&#x60; &amp;ndash; Call is currently ringing. * &#x60;inProgress&#x60; &amp;ndash; Call was answered and is currently in progress. * &#x60;canceled&#x60; &amp;ndash; Call was hung up while it was queued or ringing. * &#x60;completed&#x60; &amp;ndash; Call was answered and has ended normally. * &#x60;busy&#x60; &amp;ndash; Caller received a busy signal. * &#x60;failed&#x60; &amp;ndash; Call could not be completed as dialed, most likely because the phone number was non-existent. * &#x60;noAnswer&#x60; &amp;ndash; Call ended without being answered.
+ * * &#x60;queued&#x60; &amp;ndash; Call is ready and waiting in line before going out. *
+ * &#x60;ringing&#x60; &amp;ndash; Call is currently ringing. * &#x60;inProgress&#x60; &amp;ndash;
+ * Call was answered and is currently in progress. * &#x60;canceled&#x60; &amp;ndash; Call was hung
+ * up while it was queued or ringing. * &#x60;completed&#x60; &amp;ndash; Call was answered and has
+ * ended normally. * &#x60;busy&#x60; &amp;ndash; Caller received a busy signal. *
+ * &#x60;failed&#x60; &amp;ndash; Call could not be completed as dialed, most likely because the
+ * phone number was non-existent. * &#x60;noAnswer&#x60; &amp;ndash; Call ended without being
+ * answered.
  */
 @JsonAdapter(CallStatus.Adapter.class)
 public enum CallStatus {
-  
-  QUEUED("queued"),
-  
-  RINGING("ringing"),
-  
-  IN_PROGRESS("inProgress"),
-  
-  CANCELED("canceled"),
-  
-  COMPLETED("completed"),
-  
-  FAILED("failed"),
-  
-  BUSY("busy"),
-  
-  NO_ANSWER("noAnswer");
+    QUEUED("queued"),
 
-  private String value;
+    RINGING("ringing"),
 
-  CallStatus(String value) {
-    this.value = value;
-  }
+    IN_PROGRESS("inProgress"),
 
-  public String getValue() {
-    return value;
-  }
+    CANCELED("canceled"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    COMPLETED("completed"),
 
-  public static CallStatus fromValue(String value) {
-    for (CallStatus b : CallStatus.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    FAILED("failed"),
+
+    BUSY("busy"),
+
+    NO_ANSWER("noAnswer");
+
+    private String value;
+
+    CallStatus(String value) {
+        this.value = value;
     }
-    return null;
-  }
 
-  public static class Adapter extends TypeAdapter<CallStatus> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final CallStatus enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public CallStatus read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return CallStatus.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static CallStatus fromValue(String value) {
+        for (CallStatus b : CallStatus.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public static class Adapter extends TypeAdapter<CallStatus> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final CallStatus enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public CallStatus read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return CallStatus.fromValue(value);
+        }
+    }
 }
-

@@ -10,475 +10,409 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.net.URI;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for GetDigits
- */
- public class GetDigitsTest {
-    
-    private final GetDigits model = new GetDigits(
-    );
-    
-    
-    /**
-     * Test the property 'actionUrl'
-     */
+/** Model tests for GetDigits */
+public class GetDigitsTest {
+
+    private final GetDigits model = new GetDigits();
+
+    /** Test the property 'actionUrl' */
     @Test
     public void actionUrlTest() {
-      
-      
-      try {
-        URI uri = new URI("TEST_STRING");
-        model.setActionUrl(uri);
-        Assert.assertEquals(uri, model.getActionUrl());
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-      
+
+        try {
+            URI uri = new URI("TEST_STRING");
+            model.setActionUrl(uri);
+            Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    /**
-     * Test the property 'digitTimeoutMs'
-     */
+
+    /** Test the property 'digitTimeoutMs' */
     @Test
     public void digitTimeoutMsTest() {
-      
-      model.setDigitTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
+
+        model.setDigitTimeoutMs(1);
+        Assert.assertEquals(1, (int) model.getDigitTimeoutMs());
     }
-    /**
-     * Test the property 'finishOnKey'
-     */
+
+    /** Test the property 'finishOnKey' */
     @Test
     public void finishOnKeyTest() {
-      
-      
-      model.setFinishOnKey("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-      
-      
+
+        model.setFinishOnKey("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
     }
-    /**
-     * Test the property 'flushBuffer'
-     */
+
+    /** Test the property 'flushBuffer' */
     @Test
     public void flushBufferTest() {
-      model.setFlushBuffer(false);
-      Assert.assertEquals(false, model.getFlushBuffer());       
-      
+        model.setFlushBuffer(false);
+        Assert.assertEquals(false, model.getFlushBuffer());
     }
-    /**
-     * Test the property 'initialTimeoutMs'
-     */
+
+    /** Test the property 'initialTimeoutMs' */
     @Test
     public void initialTimeoutMsTest() {
-      
-      model.setInitialTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getInitialTimeoutMs());
+
+        model.setInitialTimeoutMs(1);
+        Assert.assertEquals(1, (int) model.getInitialTimeoutMs());
     }
-    /**
-     * Test the property 'maxDigits'
-     */
+
+    /** Test the property 'maxDigits' */
     @Test
     public void maxDigitsTest() {
-      
-      model.setMaxDigits(1);
-      Assert.assertEquals(1, (int) model.getMaxDigits());
+
+        model.setMaxDigits(1);
+        Assert.assertEquals(1, (int) model.getMaxDigits());
     }
-    /**
-     * Test the property 'minDigits'
-     */
+
+    /** Test the property 'minDigits' */
     @Test
     public void minDigitsTest() {
-      
-      model.setMinDigits(1);
-      Assert.assertEquals(1, (int) model.getMinDigits());
+
+        model.setMinDigits(1);
+        Assert.assertEquals(1, (int) model.getMinDigits());
     }
-    /**
-     * Test the property 'prompts'
-     */
+
+    /** Test the property 'prompts' */
     @Test
     public void promptsTest() {
-      
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      model.setPrompts(testList);
-      Assert.assertEquals(testList, model.getPrompts()); 
+
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        model.setPrompts(testList);
+        Assert.assertEquals(testList, model.getPrompts());
     }
-    /**
-     * Test the property 'privacyMode'
-     */
+
+    /** Test the property 'privacyMode' */
     @Test
     public void privacyModeTest() {
-      model.setPrivacyMode(false);
-      Assert.assertEquals(false, model.getPrivacyMode());       
-      
+        model.setPrivacyMode(false);
+        Assert.assertEquals(false, model.getPrivacyMode());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setDigitTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setFlushBuffer(true);
-      test2.setInitialTimeoutMs(1);
-      test2.setMaxDigits(1);
-      test2.setMinDigits(1);
-      List<PerclCommand> testList2 = testList;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(true);
+        GetDigits test1 = new GetDigits();
 
-      Assert.assertTrue(test1.equals(test2));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+        GetDigits test2 = new GetDigits();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test2.setDigitTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setFlushBuffer(true);
+        test2.setInitialTimeoutMs(1);
+        test2.setMaxDigits(1);
+        test2.setMinDigits(1);
+        List<PerclCommand> testList2 = testList;
+        test2.setPrompts(testList2);
+        test2.setPrivacyMode(true);
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING2");
-          test2.setActionUrl(uri2);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setDigitTimeoutMs(0);
-        
-        
-      test2.setFinishOnKey("TS2");
-      
-      test2.setFlushBuffer(false);
-      test2.setInitialTimeoutMs(0);
-      test2.setMaxDigits(0);
-      test2.setMinDigits(0);
-      List<PerclCommand> testList2 = null;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(false);
+        GetDigits test1 = new GetDigits();
 
-      Assert.assertFalse(test1.equals(test2));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+        GetDigits test2 = new GetDigits();
+
+        try {
+            URI uri2 = new URI("TEST_STRING2");
+            test2.setActionUrl(uri2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test2.setDigitTimeoutMs(0);
+
+        test2.setFinishOnKey("TS2");
+
+        test2.setFlushBuffer(false);
+        test2.setInitialTimeoutMs(0);
+        test2.setMaxDigits(0);
+        test2.setMinDigits(0);
+        List<PerclCommand> testList2 = null;
+        test2.setPrompts(testList2);
+        test2.setPrivacyMode(false);
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        GetDigits test1 = new GetDigits();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        GetDigits test1 = new GetDigits();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+        GetDigits test2 = new GetDigits();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setDigitTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setFlushBuffer(true);
-      test2.setInitialTimeoutMs(1);
-      test2.setMaxDigits(1);
-      test2.setMinDigits(1);
-      List<PerclCommand> testList2 = testList;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(true);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+            e.printStackTrace();
+        }
+        ;
+        test2.setDigitTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setFlushBuffer(true);
+        test2.setInitialTimeoutMs(1);
+        test2.setMaxDigits(1);
+        test2.setMinDigits(1);
+        List<PerclCommand> testList2 = testList;
+        test2.setPrompts(testList2);
+        test2.setPrivacyMode(true);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        GetDigits test1 = new GetDigits();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+        GetDigits test2 = new GetDigits();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setDigitTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setFlushBuffer(true);
-      test2.setInitialTimeoutMs(1);
-      test2.setMaxDigits(1);
-      test2.setMinDigits(1);
-      List<PerclCommand> testList2 = testList;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(true);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+            e.printStackTrace();
+        }
+        ;
+        test2.setDigitTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setFlushBuffer(true);
+        test2.setInitialTimeoutMs(1);
+        test2.setMaxDigits(1);
+        test2.setMinDigits(1);
+        List<PerclCommand> testList2 = testList;
+        test2.setPrompts(testList2);
+        test2.setPrivacyMode(true);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        GetDigits test1 = new GetDigits();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
-      GetDigits test2 = new GetDigits();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING2");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+        GetDigits test2 = new GetDigits();
+
+        try {
+            URI uri2 = new URI("TEST_STRING2");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setDigitTimeoutMs(0);
-        
-        
-      test2.setFinishOnKey("TS2");
-      
-      test2.setFlushBuffer(false);
-      test2.setInitialTimeoutMs(0);
-      test2.setMaxDigits(0);
-      test2.setMinDigits(0);
-      List<PerclCommand> testList2 = null;
-      test2.setPrompts(testList2);
-      test2.setPrivacyMode(false);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+            e.printStackTrace();
+        }
+        ;
+        test2.setDigitTimeoutMs(0);
+
+        test2.setFinishOnKey("TS2");
+
+        test2.setFlushBuffer(false);
+        test2.setInitialTimeoutMs(0);
+        test2.setMaxDigits(0);
+        test2.setMinDigits(0);
+        List<PerclCommand> testList2 = null;
+        test2.setPrompts(testList2);
+        test2.setPrivacyMode(false);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
+    /** Test the method 'toStringType' */
+    @Test
     public void toStringTypeTest() {
-      GetDigits test1 = new GetDigits();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setDigitTimeoutMs(1);
-        
-        
-        test1.setFinishOnKey("TS");
-      
-      test1.setFlushBuffer(true);
-      test1.setInitialTimeoutMs(1);
-      test1.setMaxDigits(1);
-      test1.setMinDigits(1);
-      List<PerclCommand> testList = new ArrayList<PerclCommand>();
-      test1.setPrompts(testList);
-      test1.setPrivacyMode(true);
+        GetDigits test1 = new GetDigits();
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setDigitTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setFlushBuffer(true);
+        test1.setInitialTimeoutMs(1);
+        test1.setMaxDigits(1);
+        test1.setMinDigits(1);
+        List<PerclCommand> testList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testList);
+        test1.setPrivacyMode(true);
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-      Assert.assertEquals("GetDigits", model.getCommand());
+        Assert.assertEquals("GetDigits", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-        
-        
+
         try {
-          URI uri = new URI("TEST_STRING");
-          model.setActionUrl(uri);
-          Assert.assertEquals(uri, model.getActionUrl());
+            URI uri = new URI("TEST_STRING");
+            model.setActionUrl(uri);
+            Assert.assertEquals(uri, model.getActionUrl());
         } catch (Exception e) {
-          e.printStackTrace();
+            e.printStackTrace();
         }
-        
-        
+
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-        
+
         model.setFlushBuffer(false);
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
@@ -492,7 +426,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("minDigits"), model.getMinDigits());
         Assert.assertEquals(attributes.get("prompts"), model.getPrompts());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-        
     }
-    
- }
+}

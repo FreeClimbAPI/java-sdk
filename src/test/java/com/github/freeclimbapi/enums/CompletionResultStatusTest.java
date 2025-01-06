@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for CompletionResultStatus
- */
- public class CompletionResultStatusTest {
-    
-    
-    
+/** Model tests for CompletionResultStatus */
+public class CompletionResultStatusTest {
+
     @Test
     public void testSUCCESSShouldWork() {
 
         CompletionResultStatus test = CompletionResultStatus.SUCCESS;
-         Assert.assertEquals(test.getClass(), CompletionResultStatus.class);
+        Assert.assertEquals(test.getClass(), CompletionResultStatus.class);
     }
 
-    @Test 
+    @Test
     public void testSUCCESSShouldSerializeToEnum() {
-    
+
         CompletionResultStatus expectedValue = CompletionResultStatus.SUCCESS;
         CompletionResultStatus calculatedValue = CompletionResultStatus.fromValue("success");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testSUCCESSShouldDeserializeToString() {
-     CompletionResultStatus test = CompletionResultStatus.SUCCESS;
-      String expectedValue = "success";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CompletionResultStatus test = CompletionResultStatus.SUCCESS;
+        String expectedValue = "success";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testNO_CONTEXTShouldWork() {
 
         CompletionResultStatus test = CompletionResultStatus.NO_CONTEXT;
-         Assert.assertEquals(test.getClass(), CompletionResultStatus.class);
+        Assert.assertEquals(test.getClass(), CompletionResultStatus.class);
     }
 
-    @Test 
+    @Test
     public void testNO_CONTEXTShouldSerializeToEnum() {
-    
+
         CompletionResultStatus expectedValue = CompletionResultStatus.NO_CONTEXT;
         CompletionResultStatus calculatedValue = CompletionResultStatus.fromValue("no_context");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,11 +61,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testNO_CONTEXTShouldDeserializeToString() {
-     CompletionResultStatus test = CompletionResultStatus.NO_CONTEXT;
-      String expectedValue = "no_context";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CompletionResultStatus test = CompletionResultStatus.NO_CONTEXT;
+        String expectedValue = "no_context";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

@@ -12,75 +12,61 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Entity type behind the brand. This is the form of business establishment.
- */
+/** Entity type behind the brand. This is the form of business establishment. */
 @JsonAdapter(SMSTenDLCBrandEntityType.Adapter.class)
 public enum SMSTenDLCBrandEntityType {
-  
-  PRIVATE_PROFIT("PRIVATE_PROFIT"),
-  
-  PUBLIC_PROFIT("PUBLIC_PROFIT"),
-  
-  NON_PROFIT("NON_PROFIT"),
-  
-  GOVERNMENT("GOVERNMENT"),
-  
-  SOLE_PROPRIETOR("SOLE_PROPRIETOR");
+    PRIVATE_PROFIT("PRIVATE_PROFIT"),
 
-  private String value;
+    PUBLIC_PROFIT("PUBLIC_PROFIT"),
 
-  SMSTenDLCBrandEntityType(String value) {
-    this.value = value;
-  }
+    NON_PROFIT("NON_PROFIT"),
 
-  public String getValue() {
-    return value;
-  }
+    GOVERNMENT("GOVERNMENT"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    SOLE_PROPRIETOR("SOLE_PROPRIETOR");
 
-  public static SMSTenDLCBrandEntityType fromValue(String value) {
-    for (SMSTenDLCBrandEntityType b : SMSTenDLCBrandEntityType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    private String value;
+
+    SMSTenDLCBrandEntityType(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<SMSTenDLCBrandEntityType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandEntityType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public SMSTenDLCBrandEntityType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return SMSTenDLCBrandEntityType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static SMSTenDLCBrandEntityType fromValue(String value) {
+        for (SMSTenDLCBrandEntityType b : SMSTenDLCBrandEntityType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<SMSTenDLCBrandEntityType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandEntityType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public SMSTenDLCBrandEntityType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return SMSTenDLCBrandEntityType.fromValue(value);
+        }
+    }
 }
-

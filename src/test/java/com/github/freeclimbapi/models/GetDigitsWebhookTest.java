@@ -10,749 +10,482 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for GetDigitsWebhook
- */
- public class GetDigitsWebhookTest {
-    
-    private final GetDigitsWebhook model = new GetDigitsWebhook(
-    );
-    
-    
-    /**
-     * Test the property 'requestType'
-     */
+/** Model tests for GetDigitsWebhook */
+public class GetDigitsWebhookTest {
+
+    private final GetDigitsWebhook model = new GetDigitsWebhook();
+
+    /** Test the property 'requestType' */
     @Test
-    public void requestTypeTest() {
-      
-    }
-    /**
-     * Test the property 'callId'
-     */
+    public void requestTypeTest() {}
+
+    /** Test the property 'callId' */
     @Test
     public void callIdTest() {
-      
-      
-      model.setCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallId());
-      
-      
+
+        model.setCallId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallId());
     }
-    /**
-     * Test the property 'accountId'
-     */
+
+    /** Test the property 'accountId' */
     @Test
     public void accountIdTest() {
-      
-      
-      model.setAccountId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getAccountId());
-      
-      
+
+        model.setAccountId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAccountId());
     }
-    /**
-     * Test the property 'from'
-     */
+
+    /** Test the property 'from' */
     @Test
     public void fromTest() {
-      
-      
-      model.setFrom("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getFrom());
-      
-      
+
+        model.setFrom("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFrom());
     }
-    /**
-     * Test the property 'to'
-     */
+
+    /** Test the property 'to' */
     @Test
     public void toTest() {
-      
-      
-      model.setTo("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getTo());
-      
-      
+
+        model.setTo("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getTo());
     }
-    /**
-     * Test the property 'callStatus'
-     */
+
+    /** Test the property 'callStatus' */
     @Test
     public void callStatusTest() {
-      model.setCallStatus(CallStatus.QUEUED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
-      model.setCallStatus(CallStatus.RINGING);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
-      model.setCallStatus(CallStatus.IN_PROGRESS);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
-      model.setCallStatus(CallStatus.CANCELED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
-      model.setCallStatus(CallStatus.COMPLETED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
-      model.setCallStatus(CallStatus.FAILED);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
-      model.setCallStatus(CallStatus.BUSY);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
-      model.setCallStatus(CallStatus.NO_ANSWER);
-      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
-      
+        model.setCallStatus(CallStatus.QUEUED);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.QUEUED);
+        model.setCallStatus(CallStatus.RINGING);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.RINGING);
+        model.setCallStatus(CallStatus.IN_PROGRESS);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.IN_PROGRESS);
+        model.setCallStatus(CallStatus.CANCELED);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.CANCELED);
+        model.setCallStatus(CallStatus.COMPLETED);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.COMPLETED);
+        model.setCallStatus(CallStatus.FAILED);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.FAILED);
+        model.setCallStatus(CallStatus.BUSY);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.BUSY);
+        model.setCallStatus(CallStatus.NO_ANSWER);
+        Assert.assertEquals(model.getCallStatus(), CallStatus.NO_ANSWER);
     }
-    /**
-     * Test the property 'direction'
-     */
+
+    /** Test the property 'direction' */
     @Test
     public void directionTest() {
-      model.setDirection(CallDirection.INBOUND);
-      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
-      model.setDirection(CallDirection.OUTBOUND_API);
-      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
-      model.setDirection(CallDirection.OUTBOUND_DIAL);
-      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
-      
+        model.setDirection(CallDirection.INBOUND);
+        Assert.assertEquals(model.getDirection(), CallDirection.INBOUND);
+        model.setDirection(CallDirection.OUTBOUND_API);
+        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_API);
+        model.setDirection(CallDirection.OUTBOUND_DIAL);
+        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_DIAL);
     }
-    /**
-     * Test the property 'conferenceId'
-     */
+
+    /** Test the property 'conferenceId' */
     @Test
     public void conferenceIdTest() {
-      
-      
-      model.setConferenceId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getConferenceId());
-      
-      
+
+        model.setConferenceId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getConferenceId());
     }
-    /**
-     * Test the property 'queueId'
-     */
+
+    /** Test the property 'queueId' */
     @Test
     public void queueIdTest() {
-      
-      
-      model.setQueueId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getQueueId());
-      
-      
+
+        model.setQueueId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getQueueId());
     }
-    /**
-     * Test the property 'digits'
-     */
+
+    /** Test the property 'digits' */
     @Test
     public void digitsTest() {
-      
-      
-      model.setDigits("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getDigits());
-      
-      
+
+        model.setDigits("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDigits());
     }
-    /**
-     * Test the property 'reason'
-     */
+
+    /** Test the property 'reason' */
     @Test
     public void reasonTest() {
-      model.setReason(GetDigitsReason.FINISH_KEY);
-      Assert.assertEquals(model.getReason(),GetDigitsReason.FINISH_KEY);
-      model.setReason(GetDigitsReason.TIMEOUT);
-      Assert.assertEquals(model.getReason(),GetDigitsReason.TIMEOUT);
-      model.setReason(GetDigitsReason.MAX_DIGITS);
-      Assert.assertEquals(model.getReason(),GetDigitsReason.MAX_DIGITS);
-      model.setReason(GetDigitsReason.TONE);
-      Assert.assertEquals(model.getReason(),GetDigitsReason.TONE);
-      
+        model.setReason(GetDigitsReason.FINISH_KEY);
+        Assert.assertEquals(model.getReason(), GetDigitsReason.FINISH_KEY);
+        model.setReason(GetDigitsReason.TIMEOUT);
+        Assert.assertEquals(model.getReason(), GetDigitsReason.TIMEOUT);
+        model.setReason(GetDigitsReason.MAX_DIGITS);
+        Assert.assertEquals(model.getReason(), GetDigitsReason.MAX_DIGITS);
+        model.setReason(GetDigitsReason.TONE);
+        Assert.assertEquals(model.getReason(), GetDigitsReason.TONE);
     }
-    /**
-     * Test the property 'parentCallId'
-     */
+
+    /** Test the property 'parentCallId' */
     @Test
     public void parentCallIdTest() {
-      
-      
-      model.setParentCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getParentCallId());
-      
-      
+
+        model.setParentCallId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getParentCallId());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.QUEUED);
-      test1.setDirection(CallDirection.INBOUND);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test1.setParentCallId("TS");
-      
-      GetDigitsWebhook test2 = new GetDigitsWebhook();
-        
-        
-      test2.setRequestType("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setFrom("TS");
-      
-        
-        
-      test2.setTo("TS");
-      
-      test2.setCallStatus(CallStatus.QUEUED);
-      test2.setDirection(CallDirection.INBOUND);
-        
-        
-      test2.setConferenceId("TS");
-      
-        
-        
-      test2.setQueueId("TS");
-      
-        
-        
-      test2.setDigits("TS");
-      
-      test2.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test2.setParentCallId("TS");
-      
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
 
-      Assert.assertTrue(test1.equals(test2));
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setDirection(CallDirection.INBOUND);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.FINISH_KEY);
+
+        test1.setParentCallId("TS");
+
+        GetDigitsWebhook test2 = new GetDigitsWebhook();
+
+        test2.setRequestType("TS");
+
+        test2.setCallId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setFrom("TS");
+
+        test2.setTo("TS");
+
+        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setDirection(CallDirection.INBOUND);
+
+        test2.setConferenceId("TS");
+
+        test2.setQueueId("TS");
+
+        test2.setDigits("TS");
+
+        test2.setReason(GetDigitsReason.FINISH_KEY);
+
+        test2.setParentCallId("TS");
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.RINGING);
-      test1.setDirection(CallDirection.OUTBOUND_API);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.TIMEOUT);
-        
-        
-      test1.setParentCallId("TS");
-      
-      GetDigitsWebhook test2 = new GetDigitsWebhook();
-        
-        
-      test2.setRequestType("TS2");
-      
-        
-        
-      test2.setCallId("TS2");
-      
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setFrom("TS2");
-      
-        
-        
-      test2.setTo("TS2");
-      
-      test2.setCallStatus(CallStatus.QUEUED);
-      test2.setDirection(CallDirection.INBOUND);
-        
-        
-      test2.setConferenceId("TS2");
-      
-        
-        
-      test2.setQueueId("TS2");
-      
-        
-        
-      test2.setDigits("TS2");
-      
-      test2.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test2.setParentCallId("TS2");
-      
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
 
-      Assert.assertFalse(test1.equals(test2));
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.RINGING);
+        test1.setDirection(CallDirection.OUTBOUND_API);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.TIMEOUT);
+
+        test1.setParentCallId("TS");
+
+        GetDigitsWebhook test2 = new GetDigitsWebhook();
+
+        test2.setRequestType("TS2");
+
+        test2.setCallId("TS2");
+
+        test2.setAccountId("TS2");
+
+        test2.setFrom("TS2");
+
+        test2.setTo("TS2");
+
+        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setDirection(CallDirection.INBOUND);
+
+        test2.setConferenceId("TS2");
+
+        test2.setQueueId("TS2");
+
+        test2.setDigits("TS2");
+
+        test2.setReason(GetDigitsReason.FINISH_KEY);
+
+        test2.setParentCallId("TS2");
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.QUEUED);
-      test1.setDirection(CallDirection.INBOUND);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test1.setParentCallId("TS");
-      
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
+
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setDirection(CallDirection.INBOUND);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.FINISH_KEY);
+
+        test1.setParentCallId("TS");
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.QUEUED);
-      test1.setDirection(CallDirection.INBOUND);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test1.setParentCallId("TS");
-      
-      GetDigitsWebhook test2 = new GetDigitsWebhook();
-        
-        
-      test2.setRequestType("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setFrom("TS");
-      
-        
-        
-      test2.setTo("TS");
-      
-      test2.setCallStatus(CallStatus.QUEUED);
-      test2.setDirection(CallDirection.INBOUND);
-        
-        
-      test2.setConferenceId("TS");
-      
-        
-        
-      test2.setQueueId("TS");
-      
-        
-        
-      test2.setDigits("TS");
-      
-      test2.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test2.setParentCallId("TS");
-      
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
+
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setDirection(CallDirection.INBOUND);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.FINISH_KEY);
+
+        test1.setParentCallId("TS");
+
+        GetDigitsWebhook test2 = new GetDigitsWebhook();
+
+        test2.setRequestType("TS");
+
+        test2.setCallId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setFrom("TS");
+
+        test2.setTo("TS");
+
+        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setDirection(CallDirection.INBOUND);
+
+        test2.setConferenceId("TS");
+
+        test2.setQueueId("TS");
+
+        test2.setDigits("TS");
+
+        test2.setReason(GetDigitsReason.FINISH_KEY);
+
+        test2.setParentCallId("TS");
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.QUEUED);
-      test1.setDirection(CallDirection.INBOUND);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test1.setParentCallId("TS");
-      
-      GetDigitsWebhook test2 = new GetDigitsWebhook();
-        
-        
-      test2.setRequestType("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setFrom("TS");
-      
-        
-        
-      test2.setTo("TS");
-      
-      test2.setCallStatus(CallStatus.QUEUED);
-      test2.setDirection(CallDirection.INBOUND);
-        
-        
-      test2.setConferenceId("TS");
-      
-        
-        
-      test2.setQueueId("TS");
-      
-        
-        
-      test2.setDigits("TS");
-      
-      test2.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test2.setParentCallId("TS");
-      
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
+
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setDirection(CallDirection.INBOUND);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.FINISH_KEY);
+
+        test1.setParentCallId("TS");
+
+        GetDigitsWebhook test2 = new GetDigitsWebhook();
+
+        test2.setRequestType("TS");
+
+        test2.setCallId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setFrom("TS");
+
+        test2.setTo("TS");
+
+        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setDirection(CallDirection.INBOUND);
+
+        test2.setConferenceId("TS");
+
+        test2.setQueueId("TS");
+
+        test2.setDigits("TS");
+
+        test2.setReason(GetDigitsReason.FINISH_KEY);
+
+        test2.setParentCallId("TS");
+
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-      test1.setRequestType("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setFrom("TS");
-      
-        
-        
-      test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.RINGING);
-      test1.setDirection(CallDirection.OUTBOUND_API);
-        
-        
-      test1.setConferenceId("TS");
-      
-        
-        
-      test1.setQueueId("TS");
-      
-        
-        
-      test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.TIMEOUT);
-        
-        
-      test1.setParentCallId("TS");
-      
-      GetDigitsWebhook test2 = new GetDigitsWebhook();
-        
-        
-      test2.setRequestType("TS2");
-      
-        
-        
-      test2.setCallId("TS2");
-      
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setFrom("TS2");
-      
-        
-        
-      test2.setTo("TS2");
-      
-      test2.setCallStatus(CallStatus.QUEUED);
-      test2.setDirection(CallDirection.INBOUND);
-        
-        
-      test2.setConferenceId("TS2");
-      
-        
-        
-      test2.setQueueId("TS2");
-      
-        
-        
-      test2.setDigits("TS2");
-      
-      test2.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-      test2.setParentCallId("TS2");
-      
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
+
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.RINGING);
+        test1.setDirection(CallDirection.OUTBOUND_API);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.TIMEOUT);
+
+        test1.setParentCallId("TS");
+
+        GetDigitsWebhook test2 = new GetDigitsWebhook();
+
+        test2.setRequestType("TS2");
+
+        test2.setCallId("TS2");
+
+        test2.setAccountId("TS2");
+
+        test2.setFrom("TS2");
+
+        test2.setTo("TS2");
+
+        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setDirection(CallDirection.INBOUND);
+
+        test2.setConferenceId("TS2");
+
+        test2.setQueueId("TS2");
+
+        test2.setDigits("TS2");
+
+        test2.setReason(GetDigitsReason.FINISH_KEY);
+
+        test2.setParentCallId("TS2");
+
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
+    /** Test the method 'toStringType' */
+    @Test
     public void toStringTypeTest() {
-      GetDigitsWebhook test1 = new GetDigitsWebhook();
-        
-        
-        test1.setRequestType("TS");
-      
-        
-        
-        test1.setCallId("TS");
-      
-        
-        
-        test1.setAccountId("TS");
-      
-        
-        
-        test1.setFrom("TS");
-      
-        
-        
-        test1.setTo("TS");
-      
-      test1.setCallStatus(CallStatus.QUEUED);
-      test1.setDirection(CallDirection.INBOUND);
-        
-        
-        test1.setConferenceId("TS");
-      
-        
-        
-        test1.setQueueId("TS");
-      
-        
-        
-        test1.setDigits("TS");
-      
-      test1.setReason(GetDigitsReason.FINISH_KEY);
-        
-        
-        test1.setParentCallId("TS");
-      
+        GetDigitsWebhook test1 = new GetDigitsWebhook();
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        test1.setRequestType("TS");
+
+        test1.setCallId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setFrom("TS");
+
+        test1.setTo("TS");
+
+        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setDirection(CallDirection.INBOUND);
+
+        test1.setConferenceId("TS");
+
+        test1.setQueueId("TS");
+
+        test1.setDigits("TS");
+
+        test1.setReason(GetDigitsReason.FINISH_KEY);
+
+        test1.setParentCallId("TS");
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-      String json = "{ \"requestType\": \"getDigits\" }";
-      GetDigitsWebhook webhookInstance = GetDigitsWebhook.deserialize(json);
-      Assert.assertTrue(webhookInstance instanceof GetDigitsWebhook);
+        String json = "{ \"requestType\": \"getDigits\" }";
+        GetDigitsWebhook webhookInstance = GetDigitsWebhook.deserialize(json);
+        Assert.assertTrue(webhookInstance instanceof GetDigitsWebhook);
     }
-    
- }
+}

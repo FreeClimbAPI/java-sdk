@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for CallEndedReason
- */
- public class CallEndedReasonTest {
-    
-    
-    
+/** Model tests for CallEndedReason */
+public class CallEndedReasonTest {
+
     @Test
     public void testBUSYShouldWork() {
 
         CallEndedReason test = CallEndedReason.BUSY;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testBUSYShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.BUSY;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("busy");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testBUSYShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.BUSY;
-      String expectedValue = "busy";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.BUSY;
+        String expectedValue = "busy";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testFAILEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.FAILED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testFAILEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.FAILED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("failed");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,21 +61,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testFAILEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.FAILED;
-      String expectedValue = "failed";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.FAILED;
+        String expectedValue = "failed";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testNO_ANSWERShouldWork() {
 
         CallEndedReason test = CallEndedReason.NO_ANSWER;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testNO_ANSWERShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.NO_ANSWER;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("noAnswer");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -100,21 +84,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testNO_ANSWERShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.NO_ANSWER;
-      String expectedValue = "noAnswer";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.NO_ANSWER;
+        String expectedValue = "noAnswer";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testCALL_CANCELEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.CALL_CANCELED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testCALL_CANCELEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.CALL_CANCELED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("callCanceled");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -122,21 +107,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testCALL_CANCELEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.CALL_CANCELED;
-      String expectedValue = "callCanceled";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.CALL_CANCELED;
+        String expectedValue = "callCanceled";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testFAR_END_HANGUPShouldWork() {
 
         CallEndedReason test = CallEndedReason.FAR_END_HANGUP;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testFAR_END_HANGUPShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.FAR_END_HANGUP;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("farEndHangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -144,21 +130,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testFAR_END_HANGUPShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.FAR_END_HANGUP;
-      String expectedValue = "farEndHangup";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.FAR_END_HANGUP;
+        String expectedValue = "farEndHangup";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testAPP_HANGUPShouldWork() {
 
         CallEndedReason test = CallEndedReason.APP_HANGUP;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testAPP_HANGUPShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.APP_HANGUP;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("appHangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -166,21 +153,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testAPP_HANGUPShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.APP_HANGUP;
-      String expectedValue = "appHangup";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.APP_HANGUP;
+        String expectedValue = "appHangup";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testAPP_REJECTShouldWork() {
 
         CallEndedReason test = CallEndedReason.APP_REJECT;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testAPP_REJECTShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.APP_REJECT;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("appReject");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -188,21 +176,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testAPP_REJECTShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.APP_REJECT;
-      String expectedValue = "appReject";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.APP_REJECT;
+        String expectedValue = "appReject";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testAPP_NO_PERCLShouldWork() {
 
         CallEndedReason test = CallEndedReason.APP_NO_PERCL;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testAPP_NO_PERCLShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.APP_NO_PERCL;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("appNoPercl");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -210,21 +199,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testAPP_NO_PERCLShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.APP_NO_PERCL;
-      String expectedValue = "appNoPercl";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.APP_NO_PERCL;
+        String expectedValue = "appNoPercl";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testAPP_INVALID_PERCLShouldWork() {
 
         CallEndedReason test = CallEndedReason.APP_INVALID_PERCL;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testAPP_INVALID_PERCLShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.APP_INVALID_PERCL;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("appInvalidPercl");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -232,21 +222,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testAPP_INVALID_PERCLShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.APP_INVALID_PERCL;
-      String expectedValue = "appInvalidPercl";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.APP_INVALID_PERCL;
+        String expectedValue = "appInvalidPercl";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testCONFERENCE_TERMINATEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.CONFERENCE_TERMINATED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testCONFERENCE_TERMINATEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.CONFERENCE_TERMINATED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("conferenceTerminated");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -254,21 +245,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testCONFERENCE_TERMINATEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.CONFERENCE_TERMINATED;
-      String expectedValue = "conferenceTerminated";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.CONFERENCE_TERMINATED;
+        String expectedValue = "conferenceTerminated";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testCONFERENCE_EMPTIEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.CONFERENCE_EMPTIED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testCONFERENCE_EMPTIEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.CONFERENCE_EMPTIED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("conferenceEmptied");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -276,21 +268,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testCONFERENCE_EMPTIEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.CONFERENCE_EMPTIED;
-      String expectedValue = "conferenceEmptied";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.CONFERENCE_EMPTIED;
+        String expectedValue = "conferenceEmptied";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testREMOVED_FROM_CONFERENCEShouldWork() {
 
         CallEndedReason test = CallEndedReason.REMOVED_FROM_CONFERENCE;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testREMOVED_FROM_CONFERENCEShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.REMOVED_FROM_CONFERENCE;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("removedFromConference");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -298,21 +291,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testREMOVED_FROM_CONFERENCEShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.REMOVED_FROM_CONFERENCE;
-      String expectedValue = "removedFromConference";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.REMOVED_FROM_CONFERENCE;
+        String expectedValue = "removedFromConference";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testMACHINE_DETECTEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.MACHINE_DETECTED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testMACHINE_DETECTEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.MACHINE_DETECTED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("machineDetected");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -320,21 +314,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testMACHINE_DETECTEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.MACHINE_DETECTED;
-      String expectedValue = "machineDetected";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.MACHINE_DETECTED;
+        String expectedValue = "machineDetected";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testWEBHOOK_FAILEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.WEBHOOK_FAILED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testWEBHOOK_FAILEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.WEBHOOK_FAILED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("webhookFailed");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -342,21 +337,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testWEBHOOK_FAILEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.WEBHOOK_FAILED;
-      String expectedValue = "webhookFailed";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.WEBHOOK_FAILED;
+        String expectedValue = "webhookFailed";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testWEBHOOK_INVALID_RESPONSEShouldWork() {
 
         CallEndedReason test = CallEndedReason.WEBHOOK_INVALID_RESPONSE;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testWEBHOOK_INVALID_RESPONSEShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.WEBHOOK_INVALID_RESPONSE;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("webhookInvalidResponse");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -364,21 +360,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testWEBHOOK_INVALID_RESPONSEShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.WEBHOOK_INVALID_RESPONSE;
-      String expectedValue = "webhookInvalidResponse";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.WEBHOOK_INVALID_RESPONSE;
+        String expectedValue = "webhookInvalidResponse";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testVOICE_DISABLEDShouldWork() {
 
         CallEndedReason test = CallEndedReason.VOICE_DISABLED;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testVOICE_DISABLEDShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.VOICE_DISABLED;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("voiceDisabled");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -386,21 +383,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testVOICE_DISABLEDShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.VOICE_DISABLED;
-      String expectedValue = "voiceDisabled";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.VOICE_DISABLED;
+        String expectedValue = "voiceDisabled";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testCONFIG_ERROR_NO_APPLICATIONShouldWork() {
 
         CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_APPLICATION;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testCONFIG_ERROR_NO_APPLICATIONShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.CONFIG_ERROR_NO_APPLICATION;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("configErrorNoApplication");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -408,21 +406,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testCONFIG_ERROR_NO_APPLICATIONShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_APPLICATION;
-      String expectedValue = "configErrorNoApplication";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_APPLICATION;
+        String expectedValue = "configErrorNoApplication";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testCONFIG_ERROR_NO_VOICE_URLShouldWork() {
 
         CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_VOICE_URL;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testCONFIG_ERROR_NO_VOICE_URLShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.CONFIG_ERROR_NO_VOICE_URL;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("configErrorNoVoiceUrl");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -430,21 +429,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testCONFIG_ERROR_NO_VOICE_URLShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_VOICE_URL;
-      String expectedValue = "configErrorNoVoiceUrl";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.CONFIG_ERROR_NO_VOICE_URL;
+        String expectedValue = "configErrorNoVoiceUrl";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testMAX_REDIRECTS_ERRORShouldWork() {
 
         CallEndedReason test = CallEndedReason.MAX_REDIRECTS_ERROR;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testMAX_REDIRECTS_ERRORShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.MAX_REDIRECTS_ERROR;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("maxRedirectsError");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -452,21 +452,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testMAX_REDIRECTS_ERRORShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.MAX_REDIRECTS_ERROR;
-      String expectedValue = "maxRedirectsError";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.MAX_REDIRECTS_ERROR;
+        String expectedValue = "maxRedirectsError";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testPERCL_PROCESSING_ERRORShouldWork() {
 
         CallEndedReason test = CallEndedReason.PERCL_PROCESSING_ERROR;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testPERCL_PROCESSING_ERRORShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.PERCL_PROCESSING_ERROR;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("perclProcessingError");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -474,21 +475,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testPERCL_PROCESSING_ERRORShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.PERCL_PROCESSING_ERROR;
-      String expectedValue = "perclProcessingError";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.PERCL_PROCESSING_ERROR;
+        String expectedValue = "perclProcessingError";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testINTERNAL_ERRORShouldWork() {
 
         CallEndedReason test = CallEndedReason.INTERNAL_ERROR;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testINTERNAL_ERRORShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.INTERNAL_ERROR;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("internalError");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -496,21 +498,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testINTERNAL_ERRORShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.INTERNAL_ERROR;
-      String expectedValue = "internalError";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.INTERNAL_ERROR;
+        String expectedValue = "internalError";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testGRPC_HANGUPShouldWork() {
 
         CallEndedReason test = CallEndedReason.GRPC_HANGUP;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testGRPC_HANGUPShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.GRPC_HANGUP;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("grpcHangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -518,21 +521,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testGRPC_HANGUPShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.GRPC_HANGUP;
-      String expectedValue = "grpcHangup";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.GRPC_HANGUP;
+        String expectedValue = "grpcHangup";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testMAX_DURATIONShouldWork() {
 
         CallEndedReason test = CallEndedReason.MAX_DURATION;
-         Assert.assertEquals(test.getClass(), CallEndedReason.class);
+        Assert.assertEquals(test.getClass(), CallEndedReason.class);
     }
 
-    @Test 
+    @Test
     public void testMAX_DURATIONShouldSerializeToEnum() {
-    
+
         CallEndedReason expectedValue = CallEndedReason.MAX_DURATION;
         CallEndedReason calculatedValue = CallEndedReason.fromValue("maxDuration");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -540,11 +544,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testMAX_DURATIONShouldDeserializeToString() {
-     CallEndedReason test = CallEndedReason.MAX_DURATION;
-      String expectedValue = "maxDuration";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        CallEndedReason test = CallEndedReason.MAX_DURATION;
+        String expectedValue = "maxDuration";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

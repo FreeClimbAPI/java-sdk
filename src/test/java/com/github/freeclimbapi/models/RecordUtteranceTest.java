@@ -10,420 +10,353 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.net.URI;
+import java.util.*;
+import java.util.Map;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for RecordUtterance
- */
- public class RecordUtteranceTest {
-    
-    private final RecordUtterance model = new RecordUtterance(
-    );
-    
-    
-    /**
-     * Test the property 'actionUrl'
-     */
+/** Model tests for RecordUtterance */
+public class RecordUtteranceTest {
+
+    private final RecordUtterance model = new RecordUtterance();
+
+    /** Test the property 'actionUrl' */
     @Test
     public void actionUrlTest() {
-      
-      
-      try {
-        URI uri = new URI("TEST_STRING");
-        model.setActionUrl(uri);
-        Assert.assertEquals(uri, model.getActionUrl());
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-      
+
+        try {
+            URI uri = new URI("TEST_STRING");
+            model.setActionUrl(uri);
+            Assert.assertEquals(uri, model.getActionUrl());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    /**
-     * Test the property 'silenceTimeoutMs'
-     */
+
+    /** Test the property 'silenceTimeoutMs' */
     @Test
     public void silenceTimeoutMsTest() {
-      
-      model.setSilenceTimeoutMs(1);
-      Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
+
+        model.setSilenceTimeoutMs(1);
+        Assert.assertEquals(1, (int) model.getSilenceTimeoutMs());
     }
-    /**
-     * Test the property 'finishOnKey'
-     */
+
+    /** Test the property 'finishOnKey' */
     @Test
     public void finishOnKeyTest() {
-      
-      
-      model.setFinishOnKey("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-      
-      
+
+        model.setFinishOnKey("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
     }
-    /**
-     * Test the property 'maxLengthSec'
-     */
+
+    /** Test the property 'maxLengthSec' */
     @Test
     public void maxLengthSecTest() {
-      
-      model.setMaxLengthSec(1);
-      Assert.assertEquals(1, (int) model.getMaxLengthSec());
+
+        model.setMaxLengthSec(1);
+        Assert.assertEquals(1, (int) model.getMaxLengthSec());
     }
-    /**
-     * Test the property 'playBeep'
-     */
+
+    /** Test the property 'playBeep' */
     @Test
     public void playBeepTest() {
-      model.setPlayBeep(false);
-      Assert.assertEquals(false, model.getPlayBeep());       
-      
+        model.setPlayBeep(false);
+        Assert.assertEquals(false, model.getPlayBeep());
     }
-    /**
-     * Test the property 'autoStart'
-     */
+
+    /** Test the property 'autoStart' */
     @Test
     public void autoStartTest() {
-      model.setAutoStart(false);
-      Assert.assertEquals(false, model.getAutoStart());       
-      
+        model.setAutoStart(false);
+        Assert.assertEquals(false, model.getAutoStart());
     }
-    /**
-     * Test the property 'privacyMode'
-     */
+
+    /** Test the property 'privacyMode' */
     @Test
     public void privacyModeTest() {
-      model.setPrivacyMode(false);
-      Assert.assertEquals(false, model.getPrivacyMode());       
-      
+        model.setPrivacyMode(false);
+        Assert.assertEquals(false, model.getPrivacyMode());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      RecordUtterance test2 = new RecordUtterance();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setSilenceTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setMaxLengthSec(1);
-      test2.setPlayBeep(true);
-      test2.setAutoStart(true);
-      test2.setPrivacyMode(true);
+        RecordUtterance test1 = new RecordUtterance();
 
-      Assert.assertTrue(test1.equals(test2));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+        RecordUtterance test2 = new RecordUtterance();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test2.setSilenceTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setMaxLengthSec(1);
+        test2.setPlayBeep(true);
+        test2.setAutoStart(true);
+        test2.setPrivacyMode(true);
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      RecordUtterance test2 = new RecordUtterance();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING2");
-          test2.setActionUrl(uri2);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setSilenceTimeoutMs(0);
-        
-        
-      test2.setFinishOnKey("TS2");
-      
-      test2.setMaxLengthSec(0);
-      test2.setPlayBeep(false);
-      test2.setAutoStart(false);
-      test2.setPrivacyMode(false);
+        RecordUtterance test1 = new RecordUtterance();
 
-      Assert.assertFalse(test1.equals(test2));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+        RecordUtterance test2 = new RecordUtterance();
+
+        try {
+            URI uri2 = new URI("TEST_STRING2");
+            test2.setActionUrl(uri2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test2.setSilenceTimeoutMs(0);
+
+        test2.setFinishOnKey("TS2");
+
+        test2.setMaxLengthSec(0);
+        test2.setPlayBeep(false);
+        test2.setAutoStart(false);
+        test2.setPrivacyMode(false);
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        RecordUtterance test1 = new RecordUtterance();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        RecordUtterance test1 = new RecordUtterance();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      RecordUtterance test2 = new RecordUtterance();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+        RecordUtterance test2 = new RecordUtterance();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setSilenceTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setMaxLengthSec(1);
-      test2.setPlayBeep(true);
-      test2.setAutoStart(true);
-      test2.setPrivacyMode(true);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+            e.printStackTrace();
+        }
+        ;
+        test2.setSilenceTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setMaxLengthSec(1);
+        test2.setPlayBeep(true);
+        test2.setAutoStart(true);
+        test2.setPrivacyMode(true);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        RecordUtterance test1 = new RecordUtterance();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      RecordUtterance test2 = new RecordUtterance();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+        RecordUtterance test2 = new RecordUtterance();
+
+        try {
+            URI uri2 = new URI("TEST_STRING");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setSilenceTimeoutMs(1);
-        
-        
-      test2.setFinishOnKey("TS");
-      
-      test2.setMaxLengthSec(1);
-      test2.setPlayBeep(true);
-      test2.setAutoStart(true);
-      test2.setPrivacyMode(true);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+            e.printStackTrace();
+        }
+        ;
+        test2.setSilenceTimeoutMs(1);
+
+        test2.setFinishOnKey("TS");
+
+        test2.setMaxLengthSec(1);
+        test2.setPlayBeep(true);
+        test2.setAutoStart(true);
+        test2.setPrivacyMode(true);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
+        RecordUtterance test1 = new RecordUtterance();
+
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-      test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
-      RecordUtterance test2 = new RecordUtterance();
-        
-        
-         try {
-          URI uri2 = new URI("TEST_STRING2");
-          test2.setActionUrl(uri2);
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+        RecordUtterance test2 = new RecordUtterance();
+
+        try {
+            URI uri2 = new URI("TEST_STRING2");
+            test2.setActionUrl(uri2);
         } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test2.setSilenceTimeoutMs(0);
-        
-        
-      test2.setFinishOnKey("TS2");
-      
-      test2.setMaxLengthSec(0);
-      test2.setPlayBeep(false);
-      test2.setAutoStart(false);
-      test2.setPrivacyMode(false);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+            e.printStackTrace();
+        }
+        ;
+        test2.setSilenceTimeoutMs(0);
+
+        test2.setFinishOnKey("TS2");
+
+        test2.setMaxLengthSec(0);
+        test2.setPlayBeep(false);
+        test2.setAutoStart(false);
+        test2.setPrivacyMode(false);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
+    /** Test the method 'toStringType' */
+    @Test
     public void toStringTypeTest() {
-      RecordUtterance test1 = new RecordUtterance();
-        
-        
-         try {
-          URI uri1 = new URI("TEST_STRING");
-          test1.setActionUrl(uri1);
-        } catch (Exception e) {
-          e.printStackTrace();
-        };
-      test1.setSilenceTimeoutMs(1);
-        
-        
-        test1.setFinishOnKey("TS");
-      
-      test1.setMaxLengthSec(1);
-      test1.setPlayBeep(true);
-      test1.setAutoStart(true);
-      test1.setPrivacyMode(true);
+        RecordUtterance test1 = new RecordUtterance();
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        try {
+            URI uri1 = new URI("TEST_STRING");
+            test1.setActionUrl(uri1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ;
+        test1.setSilenceTimeoutMs(1);
+
+        test1.setFinishOnKey("TS");
+
+        test1.setMaxLengthSec(1);
+        test1.setPlayBeep(true);
+        test1.setAutoStart(true);
+        test1.setPrivacyMode(true);
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-      Assert.assertEquals("RecordUtterance", model.getCommand());
+        Assert.assertEquals("RecordUtterance", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-        
-        
+
         try {
-          URI uri = new URI("TEST_STRING");
-          model.setActionUrl(uri);
-          Assert.assertEquals(uri, model.getActionUrl());
+            URI uri = new URI("TEST_STRING");
+            model.setActionUrl(uri);
+            Assert.assertEquals(uri, model.getActionUrl());
         } catch (Exception e) {
-          e.printStackTrace();
+            e.printStackTrace();
         }
-        
-        
+
         model.setFinishOnKey("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getFinishOnKey());
-        
+
         model.setPlayBeep(false);
         model.setAutoStart(false);
         model.setPrivacyMode(false);
@@ -436,7 +369,5 @@ import com.github.freeclimbapi.models.*;
         Assert.assertEquals(attributes.get("playBeep"), model.getPlayBeep());
         Assert.assertEquals(attributes.get("autoStart"), model.getAutoStart());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
-        
     }
-    
- }
+}

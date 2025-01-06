@@ -12,73 +12,59 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets RecordUtteranceTermReason
- */
+/** Gets or Sets RecordUtteranceTermReason */
 @JsonAdapter(RecordUtteranceTermReason.Adapter.class)
 public enum RecordUtteranceTermReason {
-  
-  FINISH_KEY("finishKey"),
-  
-  TIMEOUT("timeout"),
-  
-  HANGUP("hangup"),
-  
-  MAX_LENGTH("maxLength");
+    FINISH_KEY("finishKey"),
 
-  private String value;
+    TIMEOUT("timeout"),
 
-  RecordUtteranceTermReason(String value) {
-    this.value = value;
-  }
+    HANGUP("hangup"),
 
-  public String getValue() {
-    return value;
-  }
+    MAX_LENGTH("maxLength");
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    private String value;
 
-  public static RecordUtteranceTermReason fromValue(String value) {
-    for (RecordUtteranceTermReason b : RecordUtteranceTermReason.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    RecordUtteranceTermReason(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<RecordUtteranceTermReason> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final RecordUtteranceTermReason enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public RecordUtteranceTermReason read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return RecordUtteranceTermReason.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static RecordUtteranceTermReason fromValue(String value) {
+        for (RecordUtteranceTermReason b : RecordUtteranceTermReason.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<RecordUtteranceTermReason> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final RecordUtteranceTermReason enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public RecordUtteranceTermReason read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return RecordUtteranceTermReason.fromValue(value);
+        }
+    }
 }
-

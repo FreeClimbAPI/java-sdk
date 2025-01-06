@@ -10,441 +10,294 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for LogResult
- */
- public class LogResultTest {
-    
-    private final LogResult model = new LogResult(
-    );
-    
-    
-    /**
-     * Test the property 'timestamp'
-     */
+/** Model tests for LogResult */
+public class LogResultTest {
+
+    private final LogResult model = new LogResult();
+
+    /** Test the property 'timestamp' */
     @Test
     public void timestampTest() {
-      
-      model.setTimestamp(1);
-      Assert.assertEquals(1, (int) model.getTimestamp());
+
+        model.setTimestamp(1);
+        Assert.assertEquals(1, (int) model.getTimestamp());
     }
-    /**
-     * Test the property 'level'
-     */
+
+    /** Test the property 'level' */
     @Test
     public void levelTest() {
-      model.setLevel(LogLevel.INFO);
-      Assert.assertEquals(model.getLevel(),LogLevel.INFO);
-      model.setLevel(LogLevel.WARNING);
-      Assert.assertEquals(model.getLevel(),LogLevel.WARNING);
-      model.setLevel(LogLevel.ERROR);
-      Assert.assertEquals(model.getLevel(),LogLevel.ERROR);
-      
+        model.setLevel(LogLevel.INFO);
+        Assert.assertEquals(model.getLevel(), LogLevel.INFO);
+        model.setLevel(LogLevel.WARNING);
+        Assert.assertEquals(model.getLevel(), LogLevel.WARNING);
+        model.setLevel(LogLevel.ERROR);
+        Assert.assertEquals(model.getLevel(), LogLevel.ERROR);
     }
-    /**
-     * Test the property 'requestId'
-     */
+
+    /** Test the property 'requestId' */
     @Test
     public void requestIdTest() {
-      
-      
-      model.setRequestId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getRequestId());
-      
-      
+
+        model.setRequestId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getRequestId());
     }
-    /**
-     * Test the property 'accountId'
-     */
+
+    /** Test the property 'accountId' */
     @Test
     public void accountIdTest() {
-      
-      
-      model.setAccountId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getAccountId());
-      
-      
+
+        model.setAccountId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAccountId());
     }
-    /**
-     * Test the property 'callId'
-     */
+
+    /** Test the property 'callId' */
     @Test
     public void callIdTest() {
-      
-      
-      model.setCallId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCallId());
-      
-      
+
+        model.setCallId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallId());
     }
-    /**
-     * Test the property 'message'
-     */
+
+    /** Test the property 'message' */
     @Test
     public void messageTest() {
-      
-      
-      model.setMessage("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getMessage());
-      
-      
+
+        model.setMessage("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getMessage());
     }
-    /**
-     * Test the property 'metadata'
-     */
+
+    /** Test the property 'metadata' */
     @Test
     public void metadataTest() {
-      Object testObject = new Object();
-      model.setMetadata(testObject);
-      Assert.assertEquals(testObject, model.getMetadata());
-      
+        Object testObject = new Object();
+        model.setMetadata(testObject);
+        Assert.assertEquals(testObject, model.getMetadata());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.INFO);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      LogResult test2 = new LogResult();
-      test2.setTimestamp(1);
-      test2.setLevel(LogLevel.INFO);
-        
-        
-      test2.setRequestId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setMessage("TS");
-      
-      Object testObject2 = testObject;
-      test2.setMetadata(testObject2);
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.INFO);
 
-      Assert.assertTrue(test1.equals(test2));
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        LogResult test2 = new LogResult();
+        test2.setTimestamp(1);
+        test2.setLevel(LogLevel.INFO);
+
+        test2.setRequestId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setCallId("TS");
+
+        test2.setMessage("TS");
+
+        Object testObject2 = testObject;
+        test2.setMetadata(testObject2);
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.WARNING);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      LogResult test2 = new LogResult();
-      test2.setTimestamp(0);
-      test2.setLevel(LogLevel.INFO);
-        
-        
-      test2.setRequestId("TS2");
-      
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setCallId("TS2");
-      
-        
-        
-      test2.setMessage("TS2");
-      
-      Object testObject2 = new Object();
-      test2.setMetadata(testObject2);
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.WARNING);
 
-      Assert.assertFalse(test1.equals(test2));
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        LogResult test2 = new LogResult();
+        test2.setTimestamp(0);
+        test2.setLevel(LogLevel.INFO);
+
+        test2.setRequestId("TS2");
+
+        test2.setAccountId("TS2");
+
+        test2.setCallId("TS2");
+
+        test2.setMessage("TS2");
+
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.INFO);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.INFO);
+
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.INFO);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      LogResult test2 = new LogResult();
-      test2.setTimestamp(1);
-      test2.setLevel(LogLevel.INFO);
-        
-        
-      test2.setRequestId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setMessage("TS");
-      
-      Object testObject2 = testObject;
-      test2.setMetadata(testObject2);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.INFO);
+
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        LogResult test2 = new LogResult();
+        test2.setTimestamp(1);
+        test2.setLevel(LogLevel.INFO);
+
+        test2.setRequestId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setCallId("TS");
+
+        test2.setMessage("TS");
+
+        Object testObject2 = testObject;
+        test2.setMetadata(testObject2);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.INFO);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      LogResult test2 = new LogResult();
-      test2.setTimestamp(1);
-      test2.setLevel(LogLevel.INFO);
-        
-        
-      test2.setRequestId("TS");
-      
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-      test2.setCallId("TS");
-      
-        
-        
-      test2.setMessage("TS");
-      
-      Object testObject2 = testObject;
-      test2.setMetadata(testObject2);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.INFO);
+
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        LogResult test2 = new LogResult();
+        test2.setTimestamp(1);
+        test2.setLevel(LogLevel.INFO);
+
+        test2.setRequestId("TS");
+
+        test2.setAccountId("TS");
+
+        test2.setCallId("TS");
+
+        test2.setMessage("TS");
+
+        Object testObject2 = testObject;
+        test2.setMetadata(testObject2);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.WARNING);
-        
-        
-      test1.setRequestId("TS");
-      
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-      test1.setCallId("TS");
-      
-        
-        
-      test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
-      LogResult test2 = new LogResult();
-      test2.setTimestamp(0);
-      test2.setLevel(LogLevel.INFO);
-        
-        
-      test2.setRequestId("TS2");
-      
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-      test2.setCallId("TS2");
-      
-        
-        
-      test2.setMessage("TS2");
-      
-      Object testObject2 = new Object();
-      test2.setMetadata(testObject2);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-    }
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.WARNING);
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
-    public void toStringTypeTest() {
-      LogResult test1 = new LogResult();
-      test1.setTimestamp(1);
-      test1.setLevel(LogLevel.INFO);
-        
-        
         test1.setRequestId("TS");
-      
-        
-        
-        test1.setAccountId("TS");
-      
-        
-        
-        test1.setCallId("TS");
-      
-        
-        
-        test1.setMessage("TS");
-      
-      Object testObject = new Object();
-      test1.setMetadata(testObject);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+        LogResult test2 = new LogResult();
+        test2.setTimestamp(0);
+        test2.setLevel(LogLevel.INFO);
+
+        test2.setRequestId("TS2");
+
+        test2.setAccountId("TS2");
+
+        test2.setCallId("TS2");
+
+        test2.setMessage("TS2");
+
+        Object testObject2 = new Object();
+        test2.setMetadata(testObject2);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    
- }
+    /** Test the method 'toStringType' */
+    @Test
+    public void toStringTypeTest() {
+        LogResult test1 = new LogResult();
+        test1.setTimestamp(1);
+        test1.setLevel(LogLevel.INFO);
+
+        test1.setRequestId("TS");
+
+        test1.setAccountId("TS");
+
+        test1.setCallId("TS");
+
+        test1.setMessage("TS");
+
+        Object testObject = new Object();
+        test1.setMetadata(testObject);
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
+    }
+}

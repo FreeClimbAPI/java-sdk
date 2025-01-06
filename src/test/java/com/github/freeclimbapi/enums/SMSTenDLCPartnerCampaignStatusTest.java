@@ -10,79 +10,62 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for SMSTenDLCPartnerCampaignStatus
- */
- public class SMSTenDLCPartnerCampaignStatusTest {
-    
-    
-    
+/** Model tests for SMSTenDLCPartnerCampaignStatus */
+public class SMSTenDLCPartnerCampaignStatusTest {
+
     @Test
     public void testACTIVEShouldWork() {
 
         SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.ACTIVE;
-         Assert.assertEquals(test.getClass(), SMSTenDLCPartnerCampaignStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCPartnerCampaignStatus.class);
     }
 
-    @Test 
+    @Test
     public void testACTIVEShouldSerializeToEnum() {
-    
+
         SMSTenDLCPartnerCampaignStatus expectedValue = SMSTenDLCPartnerCampaignStatus.ACTIVE;
-        SMSTenDLCPartnerCampaignStatus calculatedValue = SMSTenDLCPartnerCampaignStatus.fromValue("ACTIVE");
+        SMSTenDLCPartnerCampaignStatus calculatedValue =
+                SMSTenDLCPartnerCampaignStatus.fromValue("ACTIVE");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testACTIVEShouldDeserializeToString() {
-     SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.ACTIVE;
-      String expectedValue = "ACTIVE";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.ACTIVE;
+        String expectedValue = "ACTIVE";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testEXPIREDShouldWork() {
 
         SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.EXPIRED;
-         Assert.assertEquals(test.getClass(), SMSTenDLCPartnerCampaignStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCPartnerCampaignStatus.class);
     }
 
-    @Test 
+    @Test
     public void testEXPIREDShouldSerializeToEnum() {
-    
+
         SMSTenDLCPartnerCampaignStatus expectedValue = SMSTenDLCPartnerCampaignStatus.EXPIRED;
-        SMSTenDLCPartnerCampaignStatus calculatedValue = SMSTenDLCPartnerCampaignStatus.fromValue("EXPIRED");
+        SMSTenDLCPartnerCampaignStatus calculatedValue =
+                SMSTenDLCPartnerCampaignStatus.fromValue("EXPIRED");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testEXPIREDShouldDeserializeToString() {
-     SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.EXPIRED;
-      String expectedValue = "EXPIRED";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCPartnerCampaignStatus test = SMSTenDLCPartnerCampaignStatus.EXPIRED;
+        String expectedValue = "EXPIRED";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

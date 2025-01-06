@@ -12,460 +12,420 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
+import java.util.*;
+import java.util.Arrays;
+import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * An outbound SMS has changed status and the notificationUrl from the Sms command or Send an SMS request is being invoked. A PerCL response will be ignored.
+ * An outbound SMS has changed status and the notificationUrl from the Sms command or Send an SMS
+ * request is being invoked. A PerCL response will be ignored.
  */
-@ApiModel(description = "An outbound SMS has changed status and the notificationUrl from the Sms command or Send an SMS request is being invoked. A PerCL response will be ignored.")
+@ApiModel(
+        description =
+                "An outbound SMS has changed status and the notificationUrl from the Sms command or"
+                    + " Send an SMS request is being invoked. A PerCL response will be ignored.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MessageStatusWebhook extends Webhook {
-  public static MessageStatusWebhook deserialize(String payload) {
-    return (MessageStatusWebhook)(new JSON().getGson().fromJson(payload, Webhook.class));
-  }
-  public static String getDiscriminatorValue() {
-    return "messageStatus";
-  }
-  
-  public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
-  
-  
-  @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
-  
-  protected String requestType;
-
-  
-  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-  
-  private String accountId;
-
-  
-  public static final String SERIALIZED_NAME_MESSAGE_ID = "messageId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
-  
-  private String messageId;
-
-  
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  
-  private String callId;
-
-  
-  public static final String SERIALIZED_NAME_FROM = "from";
-  
-  
-  @SerializedName(SERIALIZED_NAME_FROM)
-  
-  private String from;
-
-  
-  public static final String SERIALIZED_NAME_TO = "to";
-  
-  
-  @SerializedName(SERIALIZED_NAME_TO)
-  
-  private String to;
-
-  
-  public static final String SERIALIZED_NAME_TEXT = "text";
-  
-  
-  @SerializedName(SERIALIZED_NAME_TEXT)
-  
-  private String text;
-
-  
-  public static final String SERIALIZED_NAME_DIRECTION = "direction";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DIRECTION)
-  
-  private String direction;
-
-  
-  public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
-  
-  private String applicationId;
-
-  
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  
-  
-  @SerializedName(SERIALIZED_NAME_STATUS)
-  
-  private MessageStatus status;
-
-  
-  public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
-  
-  private String phoneNumberId;
-
-
-  public MessageStatusWebhook() { 
-    this.requestType = this.getClass().getSimpleName();
-  }
-
-  public MessageStatusWebhook requestType(String requestType) {
-    
-    this.requestType = requestType;
-    return this;
-  }
-
-   /**
-   * Value will be messageStatus - An outbound SMS has changed status and the Sms command&#39;s notificationUrl is being invoked.
-   * @return requestType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value will be messageStatus - An outbound SMS has changed status and the Sms command's notificationUrl is being invoked.")
-
-  public String getRequestType() {
-    return requestType;
-  }
-
-
-  public void setRequestType(String requestType) {
-    this.requestType = requestType;
-  }
-
-
-  public MessageStatusWebhook accountId(String accountId) {
-    
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * Account ID associated with your account.
-   * @return accountId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Account ID associated with your account.")
-
-  public String getAccountId() {
-    return accountId;
-  }
-
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
-
-  public MessageStatusWebhook messageId(String messageId) {
-    
-    this.messageId = messageId;
-    return this;
-  }
-
-   /**
-   * Unique ID for this message, generated by FreeClimb.
-   * @return messageId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unique ID for this message, generated by FreeClimb.")
-
-  public String getMessageId() {
-    return messageId;
-  }
-
-
-  public void setMessageId(String messageId) {
-    this.messageId = messageId;
-  }
-
-
-  public MessageStatusWebhook callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * Unique ID for the Call in the context of which the Sms PerCL command was issued.
-   * @return callId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unique ID for the Call in the context of which the Sms PerCL command was issued.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
-
-  public MessageStatusWebhook from(String from) {
-    
-    this.from = from;
-    return this;
-  }
-
-   /**
-   * aPhone number used to initiate the SMS message (in E.164 format).
-   * @return from
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "aPhone number used to initiate the SMS message (in E.164 format).")
-
-  public String getFrom() {
-    return from;
-  }
-
-
-  public void setFrom(String from) {
-    this.from = from;
-  }
-
-
-  public MessageStatusWebhook to(String to) {
-    
-    this.to = to;
-    return this;
-  }
-
-   /**
-   * Destination number of the SMS message (in E.164 format).
-   * @return to
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Destination number of the SMS message (in E.164 format).")
-
-  public String getTo() {
-    return to;
-  }
-
-
-  public void setTo(String to) {
-    this.to = to;
-  }
-
-
-  public MessageStatusWebhook text(String text) {
-    
-    this.text = text;
-    return this;
-  }
-
-   /**
-   * Body of the SMS message.
-   * @return text
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Body of the SMS message.")
-
-  public String getText() {
-    return text;
-  }
-
-
-  public void setText(String text) {
-    this.text = text;
-  }
-
-
-  public MessageStatusWebhook direction(String direction) {
-    
-    this.direction = direction;
-    return this;
-  }
-
-   /**
-   * Value will be outbound to indicate an outgoing SMS from FreeClimb.
-   * @return direction
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value will be outbound to indicate an outgoing SMS from FreeClimb.")
-
-  public String getDirection() {
-    return direction;
-  }
-
-
-  public void setDirection(String direction) {
-    this.direction = direction;
-  }
-
-
-  public MessageStatusWebhook applicationId(String applicationId) {
-    
-    this.applicationId = applicationId;
-    return this;
-  }
-
-   /**
-   * ID of the application to which the destination number is assigned. May be null if the originating number is invalid in some way or is not registered to an application.
-   * @return applicationId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the application to which the destination number is assigned. May be null if the originating number is invalid in some way or is not registered to an application.")
-
-  public String getApplicationId() {
-    return applicationId;
-  }
-
-
-  public void setApplicationId(String applicationId) {
-    this.applicationId = applicationId;
-  }
-
-
-  public MessageStatusWebhook status(MessageStatus status) {
-    
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public MessageStatus getStatus() {
-    return status;
-  }
-
-
-  public void setStatus(MessageStatus status) {
-    this.status = status;
-  }
-
-
-  public MessageStatusWebhook phoneNumberId(String phoneNumberId) {
-    
-    this.phoneNumberId = phoneNumberId;
-    return this;
-  }
-
-   /**
-   * ID of the destination phone number.
-   * @return phoneNumberId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the destination phone number.")
-
-  public String getPhoneNumberId() {
-    return phoneNumberId;
-  }
-
-
-  public void setPhoneNumberId(String phoneNumberId) {
-    this.phoneNumberId = phoneNumberId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static MessageStatusWebhook deserialize(String payload) {
+        return (MessageStatusWebhook) (new JSON().getGson().fromJson(payload, Webhook.class));
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static String getDiscriminatorValue() {
+        return "messageStatus";
     }
-    MessageStatusWebhook messageStatusWebhook = (MessageStatusWebhook) o;
-    return Objects.equals(this.requestType, messageStatusWebhook.requestType) &&
-        Objects.equals(this.accountId, messageStatusWebhook.accountId) &&
-        Objects.equals(this.messageId, messageStatusWebhook.messageId) &&
-        Objects.equals(this.callId, messageStatusWebhook.callId) &&
-        Objects.equals(this.from, messageStatusWebhook.from) &&
-        Objects.equals(this.to, messageStatusWebhook.to) &&
-        Objects.equals(this.text, messageStatusWebhook.text) &&
-        Objects.equals(this.direction, messageStatusWebhook.direction) &&
-        Objects.equals(this.applicationId, messageStatusWebhook.applicationId) &&
-        Objects.equals(this.status, messageStatusWebhook.status) &&
-        Objects.equals(this.phoneNumberId, messageStatusWebhook.phoneNumberId) &&
-        super.equals(o);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
+    public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(requestType, accountId, messageId, callId, from, to, text, direction, applicationId, status, phoneNumberId, super.hashCode());
-  }
+    @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
+    protected String requestType;
 
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+
+    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+    private String accountId;
+
+    public static final String SERIALIZED_NAME_MESSAGE_ID = "messageId";
+
+    @SerializedName(SERIALIZED_NAME_MESSAGE_ID)
+    private String messageId;
+
+    public static final String SERIALIZED_NAME_CALL_ID = "callId";
+
+    @SerializedName(SERIALIZED_NAME_CALL_ID)
+    private String callId;
+
+    public static final String SERIALIZED_NAME_FROM = "from";
+
+    @SerializedName(SERIALIZED_NAME_FROM)
+    private String from;
+
+    public static final String SERIALIZED_NAME_TO = "to";
+
+    @SerializedName(SERIALIZED_NAME_TO)
+    private String to;
+
+    public static final String SERIALIZED_NAME_TEXT = "text";
+
+    @SerializedName(SERIALIZED_NAME_TEXT)
+    private String text;
+
+    public static final String SERIALIZED_NAME_DIRECTION = "direction";
+
+    @SerializedName(SERIALIZED_NAME_DIRECTION)
+    private String direction;
+
+    public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+
+    @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+    private String applicationId;
+
+    public static final String SERIALIZED_NAME_STATUS = "status";
+
+    @SerializedName(SERIALIZED_NAME_STATUS)
+    private MessageStatus status;
+
+    public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
+
+    @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
+    private String phoneNumberId;
+
+    public MessageStatusWebhook() {
+        this.requestType = this.getClass().getSimpleName();
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class MessageStatusWebhook {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    messageId: ").append(toIndentedString(messageId)).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
-    sb.append("    from: ").append(toIndentedString(from)).append("\n");
-    sb.append("    to: ").append(toIndentedString(to)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
-    sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
+    public MessageStatusWebhook requestType(String requestType) {
 
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.requestType = requestType;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Value will be messageStatus - An outbound SMS has changed status and the Sms command&#39;s
+     * notificationUrl is being invoked.
+     *
+     * @return requestType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Value will be messageStatus - An outbound SMS has changed status and the Sms"
+                            + " command's notificationUrl is being invoked.")
+    public String getRequestType() {
+        return requestType;
+    }
+
+    public void setRequestType(String requestType) {
+        this.requestType = requestType;
+    }
+
+    public MessageStatusWebhook accountId(String accountId) {
+
+        this.accountId = accountId;
+        return this;
+    }
+
+    /**
+     * Account ID associated with your account.
+     *
+     * @return accountId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Account ID associated with your account.")
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public MessageStatusWebhook messageId(String messageId) {
+
+        this.messageId = messageId;
+        return this;
+    }
+
+    /**
+     * Unique ID for this message, generated by FreeClimb.
+     *
+     * @return messageId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Unique ID for this message, generated by FreeClimb.")
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
+    }
+
+    public MessageStatusWebhook callId(String callId) {
+
+        this.callId = callId;
+        return this;
+    }
+
+    /**
+     * Unique ID for the Call in the context of which the Sms PerCL command was issued.
+     *
+     * @return callId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Unique ID for the Call in the context of which the Sms PerCL command was"
+                            + " issued.")
+    public String getCallId() {
+        return callId;
+    }
+
+    public void setCallId(String callId) {
+        this.callId = callId;
+    }
+
+    public MessageStatusWebhook from(String from) {
+
+        this.from = from;
+        return this;
+    }
+
+    /**
+     * aPhone number used to initiate the SMS message (in E.164 format).
+     *
+     * @return from
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "aPhone number used to initiate the SMS message (in E.164 format).")
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public MessageStatusWebhook to(String to) {
+
+        this.to = to;
+        return this;
+    }
+
+    /**
+     * Destination number of the SMS message (in E.164 format).
+     *
+     * @return to
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Destination number of the SMS message (in E.164 format).")
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public MessageStatusWebhook text(String text) {
+
+        this.text = text;
+        return this;
+    }
+
+    /**
+     * Body of the SMS message.
+     *
+     * @return text
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Body of the SMS message.")
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public MessageStatusWebhook direction(String direction) {
+
+        this.direction = direction;
+        return this;
+    }
+
+    /**
+     * Value will be outbound to indicate an outgoing SMS from FreeClimb.
+     *
+     * @return direction
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Value will be outbound to indicate an outgoing SMS from FreeClimb.")
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public MessageStatusWebhook applicationId(String applicationId) {
+
+        this.applicationId = applicationId;
+        return this;
+    }
+
+    /**
+     * ID of the application to which the destination number is assigned. May be null if the
+     * originating number is invalid in some way or is not registered to an application.
+     *
+     * @return applicationId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "ID of the application to which the destination number is assigned. May be null"
+                        + " if the originating number is invalid in some way or is not registered"
+                        + " to an application.")
+    public String getApplicationId() {
+        return applicationId;
+    }
+
+    public void setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+    }
+
+    public MessageStatusWebhook status(MessageStatus status) {
+
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return status
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public MessageStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(MessageStatus status) {
+        this.status = status;
+    }
+
+    public MessageStatusWebhook phoneNumberId(String phoneNumberId) {
+
+        this.phoneNumberId = phoneNumberId;
+        return this;
+    }
+
+    /**
+     * ID of the destination phone number.
+     *
+     * @return phoneNumberId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the destination phone number.")
+    public String getPhoneNumberId() {
+        return phoneNumberId;
+    }
+
+    public void setPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MessageStatusWebhook messageStatusWebhook = (MessageStatusWebhook) o;
+        return Objects.equals(this.requestType, messageStatusWebhook.requestType)
+                && Objects.equals(this.accountId, messageStatusWebhook.accountId)
+                && Objects.equals(this.messageId, messageStatusWebhook.messageId)
+                && Objects.equals(this.callId, messageStatusWebhook.callId)
+                && Objects.equals(this.from, messageStatusWebhook.from)
+                && Objects.equals(this.to, messageStatusWebhook.to)
+                && Objects.equals(this.text, messageStatusWebhook.text)
+                && Objects.equals(this.direction, messageStatusWebhook.direction)
+                && Objects.equals(this.applicationId, messageStatusWebhook.applicationId)
+                && Objects.equals(this.status, messageStatusWebhook.status)
+                && Objects.equals(this.phoneNumberId, messageStatusWebhook.phoneNumberId)
+                && super.equals(o);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                requestType,
+                accountId,
+                messageId,
+                callId,
+                from,
+                to,
+                text,
+                direction,
+                applicationId,
+                status,
+                phoneNumberId,
+                super.hashCode());
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class MessageStatusWebhook {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
+        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+        sb.append("    messageId: ").append(toIndentedString(messageId)).append("\n");
+        sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
+        sb.append("    from: ").append(toIndentedString(from)).append("\n");
+        sb.append("    to: ").append(toIndentedString(to)).append("\n");
+        sb.append("    text: ").append(toIndentedString(text)).append("\n");
+        sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+        sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
