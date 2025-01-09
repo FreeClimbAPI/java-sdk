@@ -12,71 +12,57 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Level of the log. Possible values are info, warning, and error.
- */
+/** Level of the log. Possible values are info, warning, and error. */
 @JsonAdapter(LogLevel.Adapter.class)
 public enum LogLevel {
-  
-  INFO("info"),
-  
-  WARNING("warning"),
-  
-  ERROR("error");
+    INFO("info"),
 
-  private String value;
+    WARNING("warning"),
 
-  LogLevel(String value) {
-    this.value = value;
-  }
+    ERROR("error");
 
-  public String getValue() {
-    return value;
-  }
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static LogLevel fromValue(String value) {
-    for (LogLevel b : LogLevel.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    LogLevel(String value) {
+        this.value = value;
     }
-    return null;
-  }
 
-  public static class Adapter extends TypeAdapter<LogLevel> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final LogLevel enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public LogLevel read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return LogLevel.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static LogLevel fromValue(String value) {
+        for (LogLevel b : LogLevel.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public static class Adapter extends TypeAdapter<LogLevel> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final LogLevel enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public LogLevel read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return LogLevel.fromValue(value);
+        }
+    }
 }
-

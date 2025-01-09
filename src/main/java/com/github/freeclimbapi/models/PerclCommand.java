@@ -12,145 +12,131 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
+import java.util.*;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
-/**
- * An individual command used in a PerCLScript.
- */
+/** An individual command used in a PerCLScript. */
 @ApiModel(description = "An individual command used in a PerCLScript.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PerclCommand {
-  public static final String SERIALIZED_NAME_COMMAND = "command";
-  @SerializedName(SERIALIZED_NAME_COMMAND)
-  protected String command;
-
-  public PerclCommand() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public PerclCommand command(String command) {
-    
-    this.command = command;
-    return this;
-  }
-
-   /**
-   * Name of PerCL Command (this is automatically derived from mapping configuration and should not be manually supplied in any arguments)
-   * @return command
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of PerCL Command (this is automatically derived from mapping configuration and should not be manually supplied in any arguments)")
-
-  public String getCommand() {
-    return command;
-  }
-
-
-  public void setCommand(String command) {
-    this.command = command;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_COMMAND = "command";
+
+    @SerializedName(SERIALIZED_NAME_COMMAND)
+    protected String command;
+
+    public PerclCommand() {
+        this.command = this.getClass().getSimpleName();
     }
-    PerclCommand perclCommand = (PerclCommand) o;
-    return Objects.equals(this.command, perclCommand.command);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(command);
-  }
+    public PerclCommand command(String command) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class PerclCommand {\n");
-    sb.append("    command: ").append(toIndentedString(command)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
+        this.command = command;
+        return this;
+    }
 
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    return attributes;
-  }
-  public Map<String, Map<String, Object>> build() throws Exception {
-    Map<String, Map<String, Object>> map = new HashMap();
-    String command = this.command;
-    Map<String, Object> commandValue = new HashMap<String, Object>();
-    Map<String, Callable<Object>> attributeMap = this.attributeTypeMap();
+    /**
+     * Name of PerCL Command (this is automatically derived from mapping configuration and should
+     * not be manually supplied in any arguments)
+     *
+     * @return command
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Name of PerCL Command (this is automatically derived from mapping"
+                        + " configuration and should not be manually supplied in any arguments)")
+    public String getCommand() {
+        return command;
+    }
 
-    for (Map.Entry<String, Callable<Object>> entry : attributeMap.entrySet()) {
-      Object value = entry.getValue().call();
-      String key = entry.getKey();
-      if (key != "command" && value != null) {
-        if (value instanceof PerclCommand) {
-          commandValue.put(key, ((PerclCommand) value).build());
+    public void setCommand(String command) {
+        this.command = command;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
         }
-        else if (value.getClass().isArray()) {
-          ArrayList<Object> subList = new ArrayList<Object>();
-          for (Object el : subList) {
-            if (el != null) {
-              if (el instanceof PerclCommand) {
-                subList.add(((PerclCommand) el).build());
-              } else {
-                subList.add(el);
-              }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PerclCommand perclCommand = (PerclCommand) o;
+        return Objects.equals(this.command, perclCommand.command);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(command);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class PerclCommand {\n");
+        sb.append("    command: ").append(toIndentedString(command)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        return attributes;
+    }
+
+    public Map<String, Map<String, Object>> build() throws Exception {
+        Map<String, Map<String, Object>> map = new HashMap();
+        String command = this.command;
+        Map<String, Object> commandValue = new HashMap<String, Object>();
+        Map<String, Callable<Object>> attributeMap = this.attributeTypeMap();
+
+        for (Map.Entry<String, Callable<Object>> entry : attributeMap.entrySet()) {
+            Object value = entry.getValue().call();
+            String key = entry.getKey();
+            if (key != "command" && value != null) {
+                if (value instanceof PerclCommand) {
+                    commandValue.put(key, ((PerclCommand) value).build());
+                } else if (value.getClass().isArray()) {
+                    ArrayList<Object> subList = new ArrayList<Object>();
+                    for (Object el : subList) {
+                        if (el != null) {
+                            if (el instanceof PerclCommand) {
+                                subList.add(((PerclCommand) el).build());
+                            } else {
+                                subList.add(el);
+                            }
+                        }
+                    }
+                    commandValue.put(key, subList);
+                } else {
+                    commandValue.put(key, value);
+                }
             }
-          }
-          commandValue.put(key, subList);
         }
-        else {
-          commandValue.put(key, value);
+        map.put(command, commandValue);
+        return map;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
+        return o.toString().replace("\n", "\n    ");
     }
-    map.put(command, commandValue);
-    return map;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
-
 }
-

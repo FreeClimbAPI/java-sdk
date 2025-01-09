@@ -12,115 +12,105 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;SetDTMFPassThrough&#x60; command enables or disables the dtmfPassThrough privilege for this Conference Participant. If &#39;true&#39;, DTMFs will be passed through from this Participant to all other Participants in the Conference
+ * The &#x60;SetDTMFPassThrough&#x60; command enables or disables the dtmfPassThrough privilege for
+ * this Conference Participant. If &#39;true&#39;, DTMFs will be passed through from this
+ * Participant to all other Participants in the Conference
  */
-@ApiModel(description = "The `SetDTMFPassThrough` command enables or disables the dtmfPassThrough privilege for this Conference Participant. If 'true', DTMFs will be passed through from this Participant to all other Participants in the Conference")
+@ApiModel(
+        description =
+                "The `SetDTMFPassThrough` command enables or disables the dtmfPassThrough privilege"
+                    + " for this Conference Participant. If 'true', DTMFs will be passed through"
+                    + " from this Participant to all other Participants in the Conference")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetDTMFPassThrough extends PerclCommand {
-  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
-  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
-  private Boolean dtmfPassThrough;
-
-  public SetDTMFPassThrough() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public SetDTMFPassThrough dtmfPassThrough(Boolean dtmfPassThrough) {
-    
-    this.dtmfPassThrough = dtmfPassThrough;
-    return this;
-  }
-
-   /**
-   * Specifying &#x60;false&#x60; mutes the Participant&#39;s dtmf audio.
-   * @return dtmfPassThrough
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specifying `false` mutes the Participant's dtmf audio.")
-
-  public Boolean getDtmfPassThrough() {
-    return dtmfPassThrough;
-  }
-
-
-  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
-    this.dtmfPassThrough = dtmfPassThrough;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+
+    @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+    private Boolean dtmfPassThrough;
+
+    public SetDTMFPassThrough() {
+        this.command = this.getClass().getSimpleName();
     }
-    SetDTMFPassThrough setDTMFPassThrough = (SetDTMFPassThrough) o;
-    return Objects.equals(this.dtmfPassThrough, setDTMFPassThrough.dtmfPassThrough) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(dtmfPassThrough, super.hashCode());
-  }
+    public SetDTMFPassThrough dtmfPassThrough(Boolean dtmfPassThrough) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SetDTMFPassThrough {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("dtmfPassThrough", () -> this.getDtmfPassThrough());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.dtmfPassThrough = dtmfPassThrough;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Specifying &#x60;false&#x60; mutes the Participant&#39;s dtmf audio.
+     *
+     * @return dtmfPassThrough
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Specifying `false` mutes the Participant's dtmf audio.")
+    public Boolean getDtmfPassThrough() {
+        return dtmfPassThrough;
+    }
+
+    public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+        this.dtmfPassThrough = dtmfPassThrough;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SetDTMFPassThrough setDTMFPassThrough = (SetDTMFPassThrough) o;
+        return Objects.equals(this.dtmfPassThrough, setDTMFPassThrough.dtmfPassThrough)
+                && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dtmfPassThrough, super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SetDTMFPassThrough {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("dtmfPassThrough", () -> this.getDtmfPassThrough());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

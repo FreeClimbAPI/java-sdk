@@ -1,14 +1,9 @@
 package com.github.freeclimbapi.utils;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.security.NoSuchAlgorithmException;
 import java.security.InvalidKeyException;
-import java.util.Arrays;
-import java.util.List;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.Date;
-
+import java.util.List;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Hex;

@@ -12,84 +12,74 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import io.swagger.annotations.ApiModel;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;RemoveFromConference&#x60; command removes a Participant from a Conference but does not hang up. Instead, the Call is simply unbridged and what happens next with the Call is determined by the PerCL returned in response to the &#x60;leaveConferenceUrl&#x60; attribute.
+ * The &#x60;RemoveFromConference&#x60; command removes a Participant from a Conference but does not
+ * hang up. Instead, the Call is simply unbridged and what happens next with the Call is determined
+ * by the PerCL returned in response to the &#x60;leaveConferenceUrl&#x60; attribute.
  */
-@ApiModel(description = "The `RemoveFromConference` command removes a Participant from a Conference but does not hang up. Instead, the Call is simply unbridged and what happens next with the Call is determined by the PerCL returned in response to the `leaveConferenceUrl` attribute.")
+@ApiModel(
+        description =
+                "The `RemoveFromConference` command removes a Participant from a Conference but"
+                    + " does not hang up. Instead, the Call is simply unbridged and what happens"
+                    + " next with the Call is determined by the PerCL returned in response to the"
+                    + " `leaveConferenceUrl` attribute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RemoveFromConference extends PerclCommand {
-  public RemoveFromConference() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public RemoveFromConference() {
+        this.command = this.getClass().getSimpleName();
     }
-    return super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(super.hashCode());
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class RemoveFromConference {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        return super.equals(o);
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class RemoveFromConference {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

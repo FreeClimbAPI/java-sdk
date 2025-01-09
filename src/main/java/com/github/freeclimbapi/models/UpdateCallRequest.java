@@ -12,105 +12,81 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * UpdateCallRequest
- */
+/** UpdateCallRequest */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateCallRequest {
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
-  private UpdateCallRequestStatus status;
-
-  public UpdateCallRequest() { 
-  }
-
-  public UpdateCallRequest status(UpdateCallRequestStatus status) {
-    
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public UpdateCallRequestStatus getStatus() {
-    return status;
-  }
-
-
-  public void setStatus(UpdateCallRequestStatus status) {
-    this.status = status;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_STATUS = "status";
+
+    @SerializedName(SERIALIZED_NAME_STATUS)
+    private UpdateCallRequestStatus status;
+
+    public UpdateCallRequest() {}
+
+    public UpdateCallRequest status(UpdateCallRequestStatus status) {
+
+        this.status = status;
+        return this;
     }
-    UpdateCallRequest updateCallRequest = (UpdateCallRequest) o;
-    return Objects.equals(this.status, updateCallRequest.status);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(status);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateCallRequest {\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get status
+     *
+     * @return status
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public UpdateCallRequestStatus getStatus() {
+        return status;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setStatus(UpdateCallRequestStatus status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        UpdateCallRequest updateCallRequest = (UpdateCallRequest) o;
+        return Objects.equals(this.status, updateCallRequest.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(status);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class UpdateCallRequest {\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -12,328 +12,306 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
 import com.github.freeclimbapi.utils.*;
-
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * QueueList
- */
+/** QueueList */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueList implements Pagination {
-  public static final String SERIALIZED_NAME_TOTAL = "total";
-  @SerializedName(SERIALIZED_NAME_TOTAL)
-  private Integer total;
-
-  public static final String SERIALIZED_NAME_START = "start";
-  @SerializedName(SERIALIZED_NAME_START)
-  private Integer start;
-
-  public static final String SERIALIZED_NAME_END = "end";
-  @SerializedName(SERIALIZED_NAME_END)
-  private Integer end;
-
-  public static final String SERIALIZED_NAME_PAGE = "page";
-  @SerializedName(SERIALIZED_NAME_PAGE)
-  private Integer page;
-
-  public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
-  @SerializedName(SERIALIZED_NAME_NUM_PAGES)
-  private Integer numPages;
-
-  public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
-  @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
-  private Integer pageSize;
-
-  public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
-  @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
-  private String nextPageUri;
-
-  public static final String SERIALIZED_NAME_QUEUES = "queues";
-  @SerializedName(SERIALIZED_NAME_QUEUES)
-  private List<QueueResult> queues = null;
-
-  public QueueList() { 
-  }
-
-  public QueueList total(Integer total) {
-    
-    this.total = total;
-    return this;
-  }
-
-   /**
-   * Total amount of requested resource.
-   * @return total
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total amount of requested resource.")
-
-  public Integer getTotal() {
-    return total;
-  }
-
-
-  public void setTotal(Integer total) {
-    this.total = total;
-  }
-
-
-  public QueueList start(Integer start) {
-    
-    this.start = start;
-    return this;
-  }
-
-   /**
-   * Resource index at start of current page
-   * @return start
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resource index at start of current page")
-
-  public Integer getStart() {
-    return start;
-  }
-
-
-  public void setStart(Integer start) {
-    this.start = start;
-  }
-
-
-  public QueueList end(Integer end) {
-    
-    this.end = end;
-    return this;
-  }
-
-   /**
-   * Resource index at end of current page
-   * @return end
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resource index at end of current page")
-
-  public Integer getEnd() {
-    return end;
-  }
-
-
-  public void setEnd(Integer end) {
-    this.end = end;
-  }
-
-
-  public QueueList page(Integer page) {
-    
-    this.page = page;
-    return this;
-  }
-
-   /**
-   * Current page
-   * @return page
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current page")
-
-  public Integer getPage() {
-    return page;
-  }
-
-
-  public void setPage(Integer page) {
-    this.page = page;
-  }
-
-
-  public QueueList numPages(Integer numPages) {
-    
-    this.numPages = numPages;
-    return this;
-  }
-
-   /**
-   * Total number of pages
-   * @return numPages
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Total number of pages")
-
-  public Integer getNumPages() {
-    return numPages;
-  }
-
-
-  public void setNumPages(Integer numPages) {
-    this.numPages = numPages;
-  }
-
-
-  public QueueList pageSize(Integer pageSize) {
-    
-    this.pageSize = pageSize;
-    return this;
-  }
-
-   /**
-   * Number of items per page
-   * @return pageSize
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of items per page")
-
-  public Integer getPageSize() {
-    return pageSize;
-  }
-
-
-  public void setPageSize(Integer pageSize) {
-    this.pageSize = pageSize;
-  }
-
-
-  public QueueList nextPageUri(String nextPageUri) {
-    
-    this.nextPageUri = nextPageUri;
-    return this;
-  }
-
-   /**
-   * Uri to retrieve the next page of items
-   * @return nextPageUri
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Uri to retrieve the next page of items")
-
-  public String getNextPageUri() {
-    return nextPageUri;
-  }
-
-
-  public void setNextPageUri(String nextPageUri) {
-    this.nextPageUri = nextPageUri;
-  }
-
-
-  public QueueList queues(List<QueueResult> queues) {
-    
-    this.queues = queues;
-    return this;
-  }
-
-  public QueueList addQueuesItem(QueueResult queuesItem) {
-    if (this.queues == null) {
-      this.queues = new ArrayList<QueueResult>();
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    this.queues.add(queuesItem);
-    return this;
-  }
 
-   /**
-   * Get queues
-   * @return queues
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public static final String SERIALIZED_NAME_TOTAL = "total";
 
-  public List<QueueResult> getQueues() {
-    return queues;
-  }
+    @SerializedName(SERIALIZED_NAME_TOTAL)
+    private Integer total;
 
+    public static final String SERIALIZED_NAME_START = "start";
 
-  public void setQueues(List<QueueResult> queues) {
-    this.queues = queues;
-  }
+    @SerializedName(SERIALIZED_NAME_START)
+    private Integer start;
 
+    public static final String SERIALIZED_NAME_END = "end";
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    @SerializedName(SERIALIZED_NAME_END)
+    private Integer end;
+
+    public static final String SERIALIZED_NAME_PAGE = "page";
+
+    @SerializedName(SERIALIZED_NAME_PAGE)
+    private Integer page;
+
+    public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
+
+    @SerializedName(SERIALIZED_NAME_NUM_PAGES)
+    private Integer numPages;
+
+    public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
+
+    @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+    private Integer pageSize;
+
+    public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
+
+    @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
+    private String nextPageUri;
+
+    public static final String SERIALIZED_NAME_QUEUES = "queues";
+
+    @SerializedName(SERIALIZED_NAME_QUEUES)
+    private List<QueueResult> queues = null;
+
+    public QueueList() {}
+
+    public QueueList total(Integer total) {
+
+        this.total = total;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Total amount of requested resource.
+     *
+     * @return total
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Total amount of requested resource.")
+    public Integer getTotal() {
+        return total;
     }
-    QueueList queueList = (QueueList) o;
-    return Objects.equals(this.total, queueList.total) &&
-        Objects.equals(this.start, queueList.start) &&
-        Objects.equals(this.end, queueList.end) &&
-        Objects.equals(this.page, queueList.page) &&
-        Objects.equals(this.numPages, queueList.numPages) &&
-        Objects.equals(this.pageSize, queueList.pageSize) &&
-        Objects.equals(this.nextPageUri, queueList.nextPageUri) &&
-        Objects.equals(this.queues, queueList.queues);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, queues);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public void setTotal(Integer total) {
+        this.total = total;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class QueueList {\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
-    sb.append("    start: ").append(toIndentedString(start)).append("\n");
-    sb.append("    end: ").append(toIndentedString(end)).append("\n");
-    sb.append("    page: ").append(toIndentedString(page)).append("\n");
-    sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
-    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
-    sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
-    sb.append("    queues: ").append(toIndentedString(queues)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
+    public QueueList start(Integer start) {
 
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.start = start;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Resource index at start of current page
+     *
+     * @return start
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Resource index at start of current page")
+    public Integer getStart() {
+        return start;
+    }
+
+    public void setStart(Integer start) {
+        this.start = start;
+    }
+
+    public QueueList end(Integer end) {
+
+        this.end = end;
+        return this;
+    }
+
+    /**
+     * Resource index at end of current page
+     *
+     * @return end
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Resource index at end of current page")
+    public Integer getEnd() {
+        return end;
+    }
+
+    public void setEnd(Integer end) {
+        this.end = end;
+    }
+
+    public QueueList page(Integer page) {
+
+        this.page = page;
+        return this;
+    }
+
+    /**
+     * Current page
+     *
+     * @return page
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Current page")
+    public Integer getPage() {
+        return page;
+    }
+
+    public void setPage(Integer page) {
+        this.page = page;
+    }
+
+    public QueueList numPages(Integer numPages) {
+
+        this.numPages = numPages;
+        return this;
+    }
+
+    /**
+     * Total number of pages
+     *
+     * @return numPages
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Total number of pages")
+    public Integer getNumPages() {
+        return numPages;
+    }
+
+    public void setNumPages(Integer numPages) {
+        this.numPages = numPages;
+    }
+
+    public QueueList pageSize(Integer pageSize) {
+
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * Number of items per page
+     *
+     * @return pageSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Number of items per page")
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public QueueList nextPageUri(String nextPageUri) {
+
+        this.nextPageUri = nextPageUri;
+        return this;
+    }
+
+    /**
+     * Uri to retrieve the next page of items
+     *
+     * @return nextPageUri
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Uri to retrieve the next page of items")
+    public String getNextPageUri() {
+        return nextPageUri;
+    }
+
+    public void setNextPageUri(String nextPageUri) {
+        this.nextPageUri = nextPageUri;
+    }
+
+    public QueueList queues(List<QueueResult> queues) {
+
+        this.queues = queues;
+        return this;
+    }
+
+    public QueueList addQueuesItem(QueueResult queuesItem) {
+        if (this.queues == null) {
+            this.queues = new ArrayList<QueueResult>();
+        }
+        this.queues.add(queuesItem);
+        return this;
+    }
+
+    /**
+     * Get queues
+     *
+     * @return queues
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<QueueResult> getQueues() {
+        return queues;
+    }
+
+    public void setQueues(List<QueueResult> queues) {
+        this.queues = queues;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        QueueList queueList = (QueueList) o;
+        return Objects.equals(this.total, queueList.total)
+                && Objects.equals(this.start, queueList.start)
+                && Objects.equals(this.end, queueList.end)
+                && Objects.equals(this.page, queueList.page)
+                && Objects.equals(this.numPages, queueList.numPages)
+                && Objects.equals(this.pageSize, queueList.pageSize)
+                && Objects.equals(this.nextPageUri, queueList.nextPageUri)
+                && Objects.equals(this.queues, queueList.queues);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, queues);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class QueueList {\n");
+        sb.append("    total: ").append(toIndentedString(total)).append("\n");
+        sb.append("    start: ").append(toIndentedString(start)).append("\n");
+        sb.append("    end: ").append(toIndentedString(end)).append("\n");
+        sb.append("    page: ").append(toIndentedString(page)).append("\n");
+        sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
+        sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
+        sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
+        sb.append("    queues: ").append(toIndentedString(queues)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

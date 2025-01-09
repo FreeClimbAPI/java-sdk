@@ -12,69 +12,55 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * The type of this account. It is one of: trial or full.
- */
+/** The type of this account. It is one of: trial or full. */
 @JsonAdapter(AccountType.Adapter.class)
 public enum AccountType {
-  
-  TRIAL("trial"),
-  
-  FULL("full");
+    TRIAL("trial"),
 
-  private String value;
+    FULL("full");
 
-  AccountType(String value) {
-    this.value = value;
-  }
+    private String value;
 
-  public String getValue() {
-    return value;
-  }
-
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static AccountType fromValue(String value) {
-    for (AccountType b : AccountType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    AccountType(String value) {
+        this.value = value;
     }
-    return null;
-  }
 
-  public static class Adapter extends TypeAdapter<AccountType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final AccountType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public AccountType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return AccountType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static AccountType fromValue(String value) {
+        for (AccountType b : AccountType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public static class Adapter extends TypeAdapter<AccountType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final AccountType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public AccountType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return AccountType.fromValue(value);
+        }
+    }
 }
-

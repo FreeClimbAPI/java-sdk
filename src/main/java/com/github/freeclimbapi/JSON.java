@@ -10,37 +10,40 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 import com.google.gson.TypeAdapter;
 import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import okio.ByteString;
-
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
 import java.util.Date;
-import java.util.Locale;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
+import okio.ByteString;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
 
 public class JSON {
     private Gson gson;
@@ -50,991 +53,1159 @@ public class JSON {
     private OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
     private ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+    private UriTypeAdapter uriTypeAdapter = new UriTypeAdapter();
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
-        GsonFireBuilder fireBuilder = new GsonFireBuilder()
-                .registerTypeSelector(AddToConference.class, new TypeSelector<AddToConference>() {
-                    @Override
-                    public Class<? extends AddToConference> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(CreateConference.class, new TypeSelector<CreateConference>() {
-                    @Override
-                    public Class<? extends CreateConference> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Dequeue.class, new TypeSelector<Dequeue>() {
-                    @Override
-                    public Class<? extends Dequeue> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Enqueue.class, new TypeSelector<Enqueue>() {
-                    @Override
-                    public Class<? extends Enqueue> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(GetDigits.class, new TypeSelector<GetDigits>() {
-                    @Override
-                    public Class<? extends GetDigits> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(GetSpeech.class, new TypeSelector<GetSpeech>() {
-                    @Override
-                    public Class<? extends GetSpeech> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Hangup.class, new TypeSelector<Hangup>() {
-                    @Override
-                    public Class<? extends Hangup> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(OutDial.class, new TypeSelector<OutDial>() {
-                    @Override
-                    public Class<? extends OutDial> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Park.class, new TypeSelector<Park>() {
-                    @Override
-                    public Class<? extends Park> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Pause.class, new TypeSelector<Pause>() {
-                    @Override
-                    public Class<? extends Pause> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(PerclCommand.class, new TypeSelector<PerclCommand>() {
-                    @Override
-                    public Class<? extends PerclCommand> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("PerclCommand", PerclCommand.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Play.class, new TypeSelector<Play>() {
-                    @Override
-                    public Class<? extends Play> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(PlayEarlyMedia.class, new TypeSelector<PlayEarlyMedia>() {
-                    @Override
-                    public Class<? extends PlayEarlyMedia> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(RecordUtterance.class, new TypeSelector<RecordUtterance>() {
-                    @Override
-                    public Class<? extends RecordUtterance> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Redirect.class, new TypeSelector<Redirect>() {
-                    @Override
-                    public Class<? extends Redirect> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Reject.class, new TypeSelector<Reject>() {
-                    @Override
-                    public Class<? extends Reject> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(RemoveFromConference.class, new TypeSelector<RemoveFromConference>() {
-                    @Override
-                    public Class<? extends RemoveFromConference> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Say.class, new TypeSelector<Say>() {
-                    @Override
-                    public Class<? extends Say> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(SendDigits.class, new TypeSelector<SendDigits>() {
-                    @Override
-                    public Class<? extends SendDigits> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(SetDTMFPassThrough.class, new TypeSelector<SetDTMFPassThrough>() {
-                    @Override
-                    public Class<? extends SetDTMFPassThrough> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(SetListen.class, new TypeSelector<SetListen>() {
-                    @Override
-                    public Class<? extends SetListen> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(SetTalk.class, new TypeSelector<SetTalk>() {
-                    @Override
-                    public Class<? extends SetTalk> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Sms.class, new TypeSelector<Sms>() {
-                    @Override
-                    public Class<? extends Sms> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(StartRecordCall.class, new TypeSelector<StartRecordCall>() {
-                    @Override
-                    public Class<? extends StartRecordCall> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(TerminateConference.class, new TypeSelector<TerminateConference>() {
-                    @Override
-                    public Class<? extends TerminateConference> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(TranscribeUtterance.class, new TypeSelector<TranscribeUtterance>() {
-                    @Override
-                    public Class<? extends TranscribeUtterance> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-                .registerTypeSelector(Unpark.class, new TypeSelector<Unpark>() {
-                    @Override
-                    public Class<? extends Unpark> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("AddToConference", AddToConference.class);
-                        classByDiscriminatorValue.put("CreateConference", CreateConference.class);
-                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
-                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
-                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
-                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
-                        classByDiscriminatorValue.put("Hangup", Hangup.class);
-                        classByDiscriminatorValue.put("OutDial", OutDial.class);
-                        classByDiscriminatorValue.put("Park", Park.class);
-                        classByDiscriminatorValue.put("Pause", Pause.class);
-                        classByDiscriminatorValue.put("Play", Play.class);
-                        classByDiscriminatorValue.put("PlayEarlyMedia", PlayEarlyMedia.class);
-                        classByDiscriminatorValue.put("RecordUtterance", RecordUtterance.class);
-                        classByDiscriminatorValue.put("Redirect", Redirect.class);
-                        classByDiscriminatorValue.put("Reject", Reject.class);
-                        classByDiscriminatorValue.put("RemoveFromConference", RemoveFromConference.class);
-                        classByDiscriminatorValue.put("Say", Say.class);
-                        classByDiscriminatorValue.put("SendDigits", SendDigits.class);
-                        classByDiscriminatorValue.put("SetDTMFPassThrough", SetDTMFPassThrough.class);
-                        classByDiscriminatorValue.put("SetListen", SetListen.class);
-                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
-                        classByDiscriminatorValue.put("Sms", Sms.class);
-                        classByDiscriminatorValue.put("StartRecordCall", StartRecordCall.class);
-                        classByDiscriminatorValue.put("TerminateConference", TerminateConference.class);
-                        classByDiscriminatorValue.put("TranscribeUtterance", TranscribeUtterance.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        classByDiscriminatorValue.put("Unpark", Unpark.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "command"));
-                    }
-          })
-        ;
+        GsonFireBuilder fireBuilder =
+                new GsonFireBuilder()
+                        .registerTypeSelector(
+                                AddToConference.class,
+                                new TypeSelector<AddToConference>() {
+                                    @Override
+                                    public Class<? extends AddToConference> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (AddToConference.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    AddToConference.getDiscriminatorValue(),
+                                                    AddToConference.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "AddToConference", AddToConference.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                AddToConferenceNotificationWebhook.class,
+                                new TypeSelector<AddToConferenceNotificationWebhook>() {
+                                    @Override
+                                    public Class<? extends AddToConferenceNotificationWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (AddToConferenceNotificationWebhook
+                                                        .getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    AddToConferenceNotificationWebhook
+                                                            .getDiscriminatorValue(),
+                                                    AddToConferenceNotificationWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "AddToConferenceNotificationWebhook",
+                                                AddToConferenceNotificationWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                AddToQueueNotificationWebhook.class,
+                                new TypeSelector<AddToQueueNotificationWebhook>() {
+                                    @Override
+                                    public Class<? extends AddToQueueNotificationWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (AddToQueueNotificationWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    AddToQueueNotificationWebhook
+                                                            .getDiscriminatorValue(),
+                                                    AddToQueueNotificationWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "AddToQueueNotificationWebhook",
+                                                AddToQueueNotificationWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                CallControlWebhook.class,
+                                new TypeSelector<CallControlWebhook>() {
+                                    @Override
+                                    public Class<? extends CallControlWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (CallControlWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    CallControlWebhook.getDiscriminatorValue(),
+                                                    CallControlWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "CallControlWebhook", CallControlWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                CallStatusWebhook.class,
+                                new TypeSelector<CallStatusWebhook>() {
+                                    @Override
+                                    public Class<? extends CallStatusWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (CallStatusWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    CallStatusWebhook.getDiscriminatorValue(),
+                                                    CallStatusWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "CallStatusWebhook", CallStatusWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                ConferenceRecordingStatusWebhook.class,
+                                new TypeSelector<ConferenceRecordingStatusWebhook>() {
+                                    @Override
+                                    public Class<? extends ConferenceRecordingStatusWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (ConferenceRecordingStatusWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    ConferenceRecordingStatusWebhook
+                                                            .getDiscriminatorValue(),
+                                                    ConferenceRecordingStatusWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "ConferenceRecordingStatusWebhook",
+                                                ConferenceRecordingStatusWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                ConferenceStatusWebhook.class,
+                                new TypeSelector<ConferenceStatusWebhook>() {
+                                    @Override
+                                    public Class<? extends ConferenceStatusWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (ConferenceStatusWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    ConferenceStatusWebhook.getDiscriminatorValue(),
+                                                    ConferenceStatusWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "ConferenceStatusWebhook",
+                                                ConferenceStatusWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                CreateConference.class,
+                                new TypeSelector<CreateConference>() {
+                                    @Override
+                                    public Class<? extends CreateConference> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (CreateConference.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    CreateConference.getDiscriminatorValue(),
+                                                    CreateConference.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "CreateConference", CreateConference.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                CreateConferenceWebhook.class,
+                                new TypeSelector<CreateConferenceWebhook>() {
+                                    @Override
+                                    public Class<? extends CreateConferenceWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (CreateConferenceWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    CreateConferenceWebhook.getDiscriminatorValue(),
+                                                    CreateConferenceWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "CreateConferenceWebhook",
+                                                CreateConferenceWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Dequeue.class,
+                                new TypeSelector<Dequeue>() {
+                                    @Override
+                                    public Class<? extends Dequeue> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Dequeue.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Dequeue.getDiscriminatorValue(), Dequeue.class);
+                                        }
+                                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                DequeueWebhook.class,
+                                new TypeSelector<DequeueWebhook>() {
+                                    @Override
+                                    public Class<? extends DequeueWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (DequeueWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    DequeueWebhook.getDiscriminatorValue(),
+                                                    DequeueWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "DequeueWebhook", DequeueWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Enqueue.class,
+                                new TypeSelector<Enqueue>() {
+                                    @Override
+                                    public Class<? extends Enqueue> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Enqueue.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Enqueue.getDiscriminatorValue(), Enqueue.class);
+                                        }
+                                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                GetDigits.class,
+                                new TypeSelector<GetDigits>() {
+                                    @Override
+                                    public Class<? extends GetDigits> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (GetDigits.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    GetDigits.getDiscriminatorValue(),
+                                                    GetDigits.class);
+                                        }
+                                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                GetDigitsWebhook.class,
+                                new TypeSelector<GetDigitsWebhook>() {
+                                    @Override
+                                    public Class<? extends GetDigitsWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (GetDigitsWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    GetDigitsWebhook.getDiscriminatorValue(),
+                                                    GetDigitsWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "GetDigitsWebhook", GetDigitsWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                GetSpeech.class,
+                                new TypeSelector<GetSpeech>() {
+                                    @Override
+                                    public Class<? extends GetSpeech> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (GetSpeech.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    GetSpeech.getDiscriminatorValue(),
+                                                    GetSpeech.class);
+                                        }
+                                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                GetSpeechWebhook.class,
+                                new TypeSelector<GetSpeechWebhook>() {
+                                    @Override
+                                    public Class<? extends GetSpeechWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (GetSpeechWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    GetSpeechWebhook.getDiscriminatorValue(),
+                                                    GetSpeechWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "GetSpeechWebhook", GetSpeechWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Hangup.class,
+                                new TypeSelector<Hangup>() {
+                                    @Override
+                                    public Class<? extends Hangup> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Hangup.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Hangup.getDiscriminatorValue(), Hangup.class);
+                                        }
+                                        classByDiscriminatorValue.put("Hangup", Hangup.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                InboundCallWebhook.class,
+                                new TypeSelector<InboundCallWebhook>() {
+                                    @Override
+                                    public Class<? extends InboundCallWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (InboundCallWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    InboundCallWebhook.getDiscriminatorValue(),
+                                                    InboundCallWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "InboundCallWebhook", InboundCallWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                LeaveConferenceWebhook.class,
+                                new TypeSelector<LeaveConferenceWebhook>() {
+                                    @Override
+                                    public Class<? extends LeaveConferenceWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (LeaveConferenceWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    LeaveConferenceWebhook.getDiscriminatorValue(),
+                                                    LeaveConferenceWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "LeaveConferenceWebhook",
+                                                LeaveConferenceWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                MachineDetectedWebhook.class,
+                                new TypeSelector<MachineDetectedWebhook>() {
+                                    @Override
+                                    public Class<? extends MachineDetectedWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (MachineDetectedWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    MachineDetectedWebhook.getDiscriminatorValue(),
+                                                    MachineDetectedWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "MachineDetectedWebhook",
+                                                MachineDetectedWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                MessageDeliveryWebhook.class,
+                                new TypeSelector<MessageDeliveryWebhook>() {
+                                    @Override
+                                    public Class<? extends MessageDeliveryWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (MessageDeliveryWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    MessageDeliveryWebhook.getDiscriminatorValue(),
+                                                    MessageDeliveryWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "MessageDeliveryWebhook",
+                                                MessageDeliveryWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                MessageStatusWebhook.class,
+                                new TypeSelector<MessageStatusWebhook>() {
+                                    @Override
+                                    public Class<? extends MessageStatusWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (MessageStatusWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    MessageStatusWebhook.getDiscriminatorValue(),
+                                                    MessageStatusWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "MessageStatusWebhook", MessageStatusWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                OutDial.class,
+                                new TypeSelector<OutDial>() {
+                                    @Override
+                                    public Class<? extends OutDial> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (OutDial.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    OutDial.getDiscriminatorValue(), OutDial.class);
+                                        }
+                                        classByDiscriminatorValue.put("OutDial", OutDial.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                OutDialApiConnectWebhook.class,
+                                new TypeSelector<OutDialApiConnectWebhook>() {
+                                    @Override
+                                    public Class<? extends OutDialApiConnectWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (OutDialApiConnectWebhook.getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    OutDialApiConnectWebhook
+                                                            .getDiscriminatorValue(),
+                                                    OutDialApiConnectWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "OutDialApiConnectWebhook",
+                                                OutDialApiConnectWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                OutDialConnectWebhook.class,
+                                new TypeSelector<OutDialConnectWebhook>() {
+                                    @Override
+                                    public Class<? extends OutDialConnectWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (OutDialConnectWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    OutDialConnectWebhook.getDiscriminatorValue(),
+                                                    OutDialConnectWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "OutDialConnectWebhook",
+                                                OutDialConnectWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                OutDialStartWebhook.class,
+                                new TypeSelector<OutDialStartWebhook>() {
+                                    @Override
+                                    public Class<? extends OutDialStartWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (OutDialStartWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    OutDialStartWebhook.getDiscriminatorValue(),
+                                                    OutDialStartWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "OutDialStartWebhook", OutDialStartWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Park.class,
+                                new TypeSelector<Park>() {
+                                    @Override
+                                    public Class<? extends Park> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Park.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Park.getDiscriminatorValue(), Park.class);
+                                        }
+                                        classByDiscriminatorValue.put("Park", Park.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Pause.class,
+                                new TypeSelector<Pause>() {
+                                    @Override
+                                    public Class<? extends Pause> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Pause.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Pause.getDiscriminatorValue(), Pause.class);
+                                        }
+                                        classByDiscriminatorValue.put("Pause", Pause.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                PerclCommand.class,
+                                new TypeSelector<PerclCommand>() {
+                                    @Override
+                                    public Class<? extends PerclCommand> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        classByDiscriminatorValue.put(
+                                                "AddToConference", AddToConference.class);
+                                        classByDiscriminatorValue.put(
+                                                "CreateConference", CreateConference.class);
+                                        classByDiscriminatorValue.put("Dequeue", Dequeue.class);
+                                        classByDiscriminatorValue.put("Enqueue", Enqueue.class);
+                                        classByDiscriminatorValue.put("GetDigits", GetDigits.class);
+                                        classByDiscriminatorValue.put("GetSpeech", GetSpeech.class);
+                                        classByDiscriminatorValue.put("Hangup", Hangup.class);
+                                        classByDiscriminatorValue.put("OutDial", OutDial.class);
+                                        classByDiscriminatorValue.put("Park", Park.class);
+                                        classByDiscriminatorValue.put("Pause", Pause.class);
+                                        classByDiscriminatorValue.put("Play", Play.class);
+                                        classByDiscriminatorValue.put(
+                                                "PlayEarlyMedia", PlayEarlyMedia.class);
+                                        classByDiscriminatorValue.put(
+                                                "RecordUtterance", RecordUtterance.class);
+                                        classByDiscriminatorValue.put("Redirect", Redirect.class);
+                                        classByDiscriminatorValue.put("Reject", Reject.class);
+                                        classByDiscriminatorValue.put(
+                                                "RemoveFromConference", RemoveFromConference.class);
+                                        classByDiscriminatorValue.put("Say", Say.class);
+                                        classByDiscriminatorValue.put(
+                                                "SendDigits", SendDigits.class);
+                                        classByDiscriminatorValue.put(
+                                                "SetDTMFPassThrough", SetDTMFPassThrough.class);
+                                        classByDiscriminatorValue.put("SetListen", SetListen.class);
+                                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
+                                        classByDiscriminatorValue.put("Sms", Sms.class);
+                                        classByDiscriminatorValue.put(
+                                                "StartRecordCall", StartRecordCall.class);
+                                        classByDiscriminatorValue.put(
+                                                "TerminateConference", TerminateConference.class);
+                                        classByDiscriminatorValue.put(
+                                                "TranscribeUtterance", TranscribeUtterance.class);
+                                        classByDiscriminatorValue.put("Unpark", Unpark.class);
+                                        if (PerclCommand.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    PerclCommand.getDiscriminatorValue(),
+                                                    PerclCommand.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "PerclCommand", PerclCommand.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Play.class,
+                                new TypeSelector<Play>() {
+                                    @Override
+                                    public Class<? extends Play> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Play.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Play.getDiscriminatorValue(), Play.class);
+                                        }
+                                        classByDiscriminatorValue.put("Play", Play.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                PlayEarlyMedia.class,
+                                new TypeSelector<PlayEarlyMedia>() {
+                                    @Override
+                                    public Class<? extends PlayEarlyMedia> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (PlayEarlyMedia.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    PlayEarlyMedia.getDiscriminatorValue(),
+                                                    PlayEarlyMedia.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "PlayEarlyMedia", PlayEarlyMedia.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                QueueWaitWebhook.class,
+                                new TypeSelector<QueueWaitWebhook>() {
+                                    @Override
+                                    public Class<? extends QueueWaitWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (QueueWaitWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    QueueWaitWebhook.getDiscriminatorValue(),
+                                                    QueueWaitWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "QueueWaitWebhook", QueueWaitWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                RecordUtterance.class,
+                                new TypeSelector<RecordUtterance>() {
+                                    @Override
+                                    public Class<? extends RecordUtterance> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (RecordUtterance.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    RecordUtterance.getDiscriminatorValue(),
+                                                    RecordUtterance.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "RecordUtterance", RecordUtterance.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                RecordWebhook.class,
+                                new TypeSelector<RecordWebhook>() {
+                                    @Override
+                                    public Class<? extends RecordWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (RecordWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    RecordWebhook.getDiscriminatorValue(),
+                                                    RecordWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "RecordWebhook", RecordWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Redirect.class,
+                                new TypeSelector<Redirect>() {
+                                    @Override
+                                    public Class<? extends Redirect> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Redirect.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Redirect.getDiscriminatorValue(),
+                                                    Redirect.class);
+                                        }
+                                        classByDiscriminatorValue.put("Redirect", Redirect.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                RedirectWebhook.class,
+                                new TypeSelector<RedirectWebhook>() {
+                                    @Override
+                                    public Class<? extends RedirectWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (RedirectWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    RedirectWebhook.getDiscriminatorValue(),
+                                                    RedirectWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "RedirectWebhook", RedirectWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Reject.class,
+                                new TypeSelector<Reject>() {
+                                    @Override
+                                    public Class<? extends Reject> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Reject.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Reject.getDiscriminatorValue(), Reject.class);
+                                        }
+                                        classByDiscriminatorValue.put("Reject", Reject.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                RemoveFromConference.class,
+                                new TypeSelector<RemoveFromConference>() {
+                                    @Override
+                                    public Class<? extends RemoveFromConference> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (RemoveFromConference.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    RemoveFromConference.getDiscriminatorValue(),
+                                                    RemoveFromConference.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "RemoveFromConference", RemoveFromConference.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                RemoveFromQueueNotificationWebhook.class,
+                                new TypeSelector<RemoveFromQueueNotificationWebhook>() {
+                                    @Override
+                                    public Class<? extends RemoveFromQueueNotificationWebhook>
+                                            getClassForElement(JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (RemoveFromQueueNotificationWebhook
+                                                        .getDiscriminatorValue()
+                                                != null) {
+                                            classByDiscriminatorValue.put(
+                                                    RemoveFromQueueNotificationWebhook
+                                                            .getDiscriminatorValue(),
+                                                    RemoveFromQueueNotificationWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "RemoveFromQueueNotificationWebhook",
+                                                RemoveFromQueueNotificationWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Say.class,
+                                new TypeSelector<Say>() {
+                                    @Override
+                                    public Class<? extends Say> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Say.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Say.getDiscriminatorValue(), Say.class);
+                                        }
+                                        classByDiscriminatorValue.put("Say", Say.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                SendDigits.class,
+                                new TypeSelector<SendDigits>() {
+                                    @Override
+                                    public Class<? extends SendDigits> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (SendDigits.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    SendDigits.getDiscriminatorValue(),
+                                                    SendDigits.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "SendDigits", SendDigits.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                SetDTMFPassThrough.class,
+                                new TypeSelector<SetDTMFPassThrough>() {
+                                    @Override
+                                    public Class<? extends SetDTMFPassThrough> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (SetDTMFPassThrough.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    SetDTMFPassThrough.getDiscriminatorValue(),
+                                                    SetDTMFPassThrough.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "SetDTMFPassThrough", SetDTMFPassThrough.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                SetListen.class,
+                                new TypeSelector<SetListen>() {
+                                    @Override
+                                    public Class<? extends SetListen> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (SetListen.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    SetListen.getDiscriminatorValue(),
+                                                    SetListen.class);
+                                        }
+                                        classByDiscriminatorValue.put("SetListen", SetListen.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                SetTalk.class,
+                                new TypeSelector<SetTalk>() {
+                                    @Override
+                                    public Class<? extends SetTalk> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (SetTalk.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    SetTalk.getDiscriminatorValue(), SetTalk.class);
+                                        }
+                                        classByDiscriminatorValue.put("SetTalk", SetTalk.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Sms.class,
+                                new TypeSelector<Sms>() {
+                                    @Override
+                                    public Class<? extends Sms> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Sms.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Sms.getDiscriminatorValue(), Sms.class);
+                                        }
+                                        classByDiscriminatorValue.put("Sms", Sms.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                StartRecordCall.class,
+                                new TypeSelector<StartRecordCall>() {
+                                    @Override
+                                    public Class<? extends StartRecordCall> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (StartRecordCall.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    StartRecordCall.getDiscriminatorValue(),
+                                                    StartRecordCall.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "StartRecordCall", StartRecordCall.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                TerminateConference.class,
+                                new TypeSelector<TerminateConference>() {
+                                    @Override
+                                    public Class<? extends TerminateConference> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (TerminateConference.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    TerminateConference.getDiscriminatorValue(),
+                                                    TerminateConference.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "TerminateConference", TerminateConference.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                TranscribeUtterance.class,
+                                new TypeSelector<TranscribeUtterance>() {
+                                    @Override
+                                    public Class<? extends TranscribeUtterance> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (TranscribeUtterance.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    TranscribeUtterance.getDiscriminatorValue(),
+                                                    TranscribeUtterance.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "TranscribeUtterance", TranscribeUtterance.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                TranscribeWebhook.class,
+                                new TypeSelector<TranscribeWebhook>() {
+                                    @Override
+                                    public Class<? extends TranscribeWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (TranscribeWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    TranscribeWebhook.getDiscriminatorValue(),
+                                                    TranscribeWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "TranscribeWebhook", TranscribeWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Unpark.class,
+                                new TypeSelector<Unpark>() {
+                                    @Override
+                                    public Class<? extends Unpark> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (Unpark.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Unpark.getDiscriminatorValue(), Unpark.class);
+                                        }
+                                        classByDiscriminatorValue.put("Unpark", Unpark.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                Webhook.class,
+                                new TypeSelector<Webhook>() {
+                                    @Override
+                                    public Class<? extends Webhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        classByDiscriminatorValue.put(
+                                                "addToConferenceNotification",
+                                                AddToConferenceNotificationWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "addToQueueNotification",
+                                                AddToQueueNotificationWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "callControl", CallControlWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "callStatus", CallStatusWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "conferenceRecordingStatus",
+                                                ConferenceRecordingStatusWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "conferenceStatus", ConferenceStatusWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "createConference", CreateConferenceWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "dequeue", DequeueWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "getDigits", GetDigitsWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "getSpeech", GetSpeechWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "inboundCall", InboundCallWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "leaveConference", LeaveConferenceWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "machineDetected", MachineDetectedWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "messageDelivery", MessageDeliveryWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "messageStatus", MessageStatusWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "outDialApiConnect",
+                                                OutDialApiConnectWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "outDialConnect", OutDialConnectWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "outDialStart", OutDialStartWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "queueWait", QueueWaitWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "record", RecordWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "redirect", RedirectWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "removeFromQueueNotification",
+                                                RemoveFromQueueNotificationWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "transcribe", TranscribeWebhook.class);
+                                        if (Webhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    Webhook.getDiscriminatorValue(), Webhook.class);
+                                        }
+                                        classByDiscriminatorValue.put("Webhook", Webhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                });
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;
     }
 
-    private static String getDiscriminatorValue(JsonElement readElement, String discriminatorField) {
+    private static String getDiscriminatorValue(
+            JsonElement readElement, String discriminatorField) {
         JsonElement element = readElement.getAsJsonObject().get(discriminatorField);
         if (null == element) {
-            throw new IllegalArgumentException("missing discriminator field: <" + discriminatorField + ">");
+            throw new IllegalArgumentException(
+                    "missing discriminator field: <" + discriminatorField + ">");
         }
         return element.getAsString();
     }
 
     /**
-     * Returns the Java class that implements the OpenAPI schema for the specified discriminator value.
+     * Returns the Java class that implements the OpenAPI schema for the specified discriminator
+     * value.
      *
      * @param classByDiscriminatorValue The map of discriminator values to Java classes.
      * @param discriminatorValue The value of the OpenAPI discriminator in the input data.
      * @return The Java class that implements the OpenAPI schema
      */
-    private static Class getClassByDiscriminator(Map classByDiscriminatorValue, String discriminatorValue) {
+    private static Class getClassByDiscriminator(
+            Map classByDiscriminatorValue, String discriminatorValue) {
         Class clazz = (Class) classByDiscriminatorValue.get(discriminatorValue);
         if (null == clazz) {
-            throw new IllegalArgumentException("cannot determine model class of name: <" + discriminatorValue + ">");
+            throw new IllegalArgumentException(
+                    "cannot determine model class of name: <" + discriminatorValue + ">");
         }
         return clazz;
     }
 
     public JSON() {
-        gson = createGson()
-            .registerTypeAdapter(Date.class, dateTypeAdapter)
-            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-            .registerTypeAdapter(byte[].class, byteArrayAdapter)
-            .create();
+        gson =
+                createGson()
+                        .registerTypeAdapter(Date.class, dateTypeAdapter)
+                        .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
+                        .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
+                        .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
+                        .registerTypeAdapter(byte[].class, byteArrayAdapter)
+                        .registerTypeAdapter(URI.class, uriTypeAdapter)
+                        .create();
     }
 
     /**
@@ -1062,7 +1233,8 @@ public class JSON {
      *
      * @param lenientOnJson Set it to true to ignore some syntax errors
      * @return JSON
-     * @see <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
+     * @see <a
+     *     href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
      */
     public JSON setLenientOnJson(boolean lenientOnJson) {
         isLenientOnJson = lenientOnJson;
@@ -1082,8 +1254,8 @@ public class JSON {
     /**
      * Deserialize the given JSON string to Java object.
      *
-     * @param <T>        Type
-     * @param body       The JSON string
+     * @param <T> Type
+     * @param body The JSON string
      * @param returnType The type to deserialize into
      * @return The deserialized Java object
      */
@@ -1092,7 +1264,8 @@ public class JSON {
         try {
             if (isLenientOnJson) {
                 JsonReader jsonReader = new JsonReader(new StringReader(body));
-                // see https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
+                // see
+                // https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
                 jsonReader.setLenient(true);
                 return gson.fromJson(jsonReader, returnType);
             } else {
@@ -1109,9 +1282,7 @@ public class JSON {
         }
     }
 
-    /**
-     * Gson TypeAdapter for Byte Array type
-     */
+    /** Gson TypeAdapter for Byte Array type */
     public class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
         @Override
@@ -1137,9 +1308,7 @@ public class JSON {
         }
     }
 
-    /**
-     * Gson TypeAdapter for JSR310 OffsetDateTime type
-     */
+    /** Gson TypeAdapter for JSR310 OffsetDateTime type */
     public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
 
         private DateTimeFormatter formatter;
@@ -1174,16 +1343,14 @@ public class JSON {
                 default:
                     String date = in.nextString();
                     if (date.endsWith("+0000")) {
-                        date = date.substring(0, date.length()-5) + "Z";
+                        date = date.substring(0, date.length() - 5) + "Z";
                     }
                     return OffsetDateTime.parse(date, formatter);
             }
         }
     }
 
-    /**
-     * Gson TypeAdapter for JSR310 LocalDate type
-     */
+    /** Gson TypeAdapter for JSR310 LocalDate type */
     public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
         private DateTimeFormatter formatter;
@@ -1233,9 +1400,8 @@ public class JSON {
     }
 
     /**
-     * Gson TypeAdapter for java.sql.Date type
-     * If the dateFormat is null, a simple "yyyy-MM-dd" format will be used
-     * (more efficient than SimpleDateFormat).
+     * Gson TypeAdapter for java.sql.Date type If the dateFormat is null, a simple "yyyy-MM-dd"
+     * format will be used (more efficient than SimpleDateFormat).
      */
     public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
 
@@ -1278,7 +1444,8 @@ public class JSON {
                         if (dateFormat != null) {
                             return new java.sql.Date(dateFormat.parse(date).getTime());
                         }
-                        return new java.sql.Date(ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
+                        return new java.sql.Date(
+                                ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
                     } catch (ParseException e) {
                         throw new JsonParseException(e);
                     }
@@ -1287,8 +1454,8 @@ public class JSON {
     }
 
     /**
-     * Gson TypeAdapter for java.util.Date type
-     * If the dateFormat is null, ISO8601Utils will be used.
+     * Gson TypeAdapter for java.util.Date type If the dateFormat is null, ISO8601Utils will be
+     * used.
      */
     public static class DateTypeAdapter extends TypeAdapter<Date> {
 
@@ -1353,4 +1520,19 @@ public class JSON {
         return this;
     }
 
+    public class UriTypeAdapter implements JsonSerializer<URI>, JsonDeserializer<URI> {
+
+        public JsonElement serialize(URI src, Type typeOfSrc, JsonSerializationContext context) {
+            return new JsonPrimitive(src.toString());
+        }
+
+        public URI deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
+                throws JsonParseException {
+            try {
+                return new URI(json.getAsString());
+            } catch (URISyntaxException e) {
+                throw new JsonParseException(e);
+            }
+        }
+    }
 }

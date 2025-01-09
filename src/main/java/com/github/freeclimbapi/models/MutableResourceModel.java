@@ -12,192 +12,177 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * MutableResourceModel
- */
+/** MutableResourceModel */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MutableResourceModel {
-  public static final String SERIALIZED_NAME_URI = "uri";
-  @SerializedName(SERIALIZED_NAME_URI)
-  private String uri;
-
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
-  private String dateCreated;
-
-  public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
-  @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
-  private String dateUpdated;
-
-  public static final String SERIALIZED_NAME_REVISION = "revision";
-  @SerializedName(SERIALIZED_NAME_REVISION)
-  private Integer revision;
-
-  public MutableResourceModel() { 
-  }
-
-  public MutableResourceModel uri(String uri) {
-    
-    this.uri = uri;
-    return this;
-  }
-
-   /**
-   * The URI for this resource, relative to /apiserver.
-   * @return uri
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
-
-  public String getUri() {
-    return uri;
-  }
-
-
-  public void setUri(String uri) {
-    this.uri = uri;
-  }
-
-
-  public MutableResourceModel dateCreated(String dateCreated) {
-    
-    this.dateCreated = dateCreated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateCreated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateCreated() {
-    return dateCreated;
-  }
-
-
-  public void setDateCreated(String dateCreated) {
-    this.dateCreated = dateCreated;
-  }
-
-
-  public MutableResourceModel dateUpdated(String dateUpdated) {
-    
-    this.dateUpdated = dateUpdated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateUpdated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateUpdated() {
-    return dateUpdated;
-  }
-
-
-  public void setDateUpdated(String dateUpdated) {
-    this.dateUpdated = dateUpdated;
-  }
-
-
-  public MutableResourceModel revision(Integer revision) {
-    
-    this.revision = revision;
-    return this;
-  }
-
-   /**
-   * Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.
-   * @return revision
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.")
-
-  public Integer getRevision() {
-    return revision;
-  }
-
-
-  public void setRevision(Integer revision) {
-    this.revision = revision;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_URI = "uri";
+
+    @SerializedName(SERIALIZED_NAME_URI)
+    private String uri;
+
+    public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+    private String dateCreated;
+
+    public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+    private String dateUpdated;
+
+    public static final String SERIALIZED_NAME_REVISION = "revision";
+
+    @SerializedName(SERIALIZED_NAME_REVISION)
+    private Integer revision;
+
+    public MutableResourceModel() {}
+
+    public MutableResourceModel uri(String uri) {
+
+        this.uri = uri;
+        return this;
     }
-    MutableResourceModel mutableResourceModel = (MutableResourceModel) o;
-    return Objects.equals(this.uri, mutableResourceModel.uri) &&
-        Objects.equals(this.dateCreated, mutableResourceModel.dateCreated) &&
-        Objects.equals(this.dateUpdated, mutableResourceModel.dateUpdated) &&
-        Objects.equals(this.revision, mutableResourceModel.revision);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class MutableResourceModel {\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
-    sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
-    sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * The URI for this resource, relative to /apiserver.
+     *
+     * @return uri
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
+    public String getUri() {
+        return uri;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
+    public MutableResourceModel dateCreated(String dateCreated) {
+
+        this.dateCreated = dateCreated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateCreated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon,"
+                            + " 15 Jun 2009 20:45:30 GMT).")
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public MutableResourceModel dateUpdated(String dateUpdated) {
+
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateUpdated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was last updated (GMT) in RFC 1123 format (e.g.,"
+                            + " Mon, 15 Jun 2009 20:45:30 GMT).")
+    public String getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(String dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    public MutableResourceModel revision(Integer revision) {
+
+        this.revision = revision;
+        return this;
+    }
+
+    /**
+     * Revision count for the resource. This count is set to 1 on creation and is incremented every
+     * time it is updated.
+     *
+     * @return revision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Revision count for the resource. This count is set to 1 on creation and is"
+                            + " incremented every time it is updated.")
+    public Integer getRevision() {
+        return revision;
+    }
+
+    public void setRevision(Integer revision) {
+        this.revision = revision;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MutableResourceModel mutableResourceModel = (MutableResourceModel) o;
+        return Objects.equals(this.uri, mutableResourceModel.uri)
+                && Objects.equals(this.dateCreated, mutableResourceModel.dateCreated)
+                && Objects.equals(this.dateUpdated, mutableResourceModel.dateUpdated)
+                && Objects.equals(this.revision, mutableResourceModel.revision);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uri, dateCreated, dateUpdated, revision);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class MutableResourceModel {\n");
+        sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+        sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+        sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
+        sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

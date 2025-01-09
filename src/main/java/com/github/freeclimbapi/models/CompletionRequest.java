@@ -12,105 +12,81 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * CompletionRequest
- */
+/** CompletionRequest */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionRequest {
-  public static final String SERIALIZED_NAME_QUERY = "query";
-  @SerializedName(SERIALIZED_NAME_QUERY)
-  private String query;
-
-  public CompletionRequest() { 
-  }
-
-  public CompletionRequest query(String query) {
-    
-    this.query = query;
-    return this;
-  }
-
-   /**
-   * Question to ask the Knowledge Base
-   * @return query
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Question to ask the Knowledge Base")
-
-  public String getQuery() {
-    return query;
-  }
-
-
-  public void setQuery(String query) {
-    this.query = query;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_QUERY = "query";
+
+    @SerializedName(SERIALIZED_NAME_QUERY)
+    private String query;
+
+    public CompletionRequest() {}
+
+    public CompletionRequest query(String query) {
+
+        this.query = query;
+        return this;
     }
-    CompletionRequest completionRequest = (CompletionRequest) o;
-    return Objects.equals(this.query, completionRequest.query);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(query);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CompletionRequest {\n");
-    sb.append("    query: ").append(toIndentedString(query)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Question to ask the Knowledge Base
+     *
+     * @return query
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "Question to ask the Knowledge Base")
+    public String getQuery() {
+        return query;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CompletionRequest completionRequest = (CompletionRequest) o;
+        return Objects.equals(this.query, completionRequest.query);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(query);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CompletionRequest {\n");
+        sb.append("    query: ").append(toIndentedString(query)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

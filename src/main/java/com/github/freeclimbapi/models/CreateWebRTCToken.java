@@ -12,164 +12,146 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * CreateWebRTCToken
- */
+/** CreateWebRTCToken */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateWebRTCToken {
-  public static final String SERIALIZED_NAME_TO = "to";
-  @SerializedName(SERIALIZED_NAME_TO)
-  private String to;
-
-  public static final String SERIALIZED_NAME_FROM = "from";
-  @SerializedName(SERIALIZED_NAME_FROM)
-  private String from;
-
-  public static final String SERIALIZED_NAME_USES = "uses";
-  @SerializedName(SERIALIZED_NAME_USES)
-  private Integer uses;
-
-  public CreateWebRTCToken() { 
-  }
-
-  public CreateWebRTCToken to(String to) {
-    
-    this.to = to;
-    return this;
-  }
-
-   /**
-   * E.164 formatted phone number to which calls using this token will be made.
-   * @return to
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "E.164 formatted phone number to which calls using this token will be made.")
-
-  public String getTo() {
-    return to;
-  }
-
-
-  public void setTo(String to) {
-    this.to = to;
-  }
-
-
-  public CreateWebRTCToken from(String from) {
-    
-    this.from = from;
-    return this;
-  }
-
-   /**
-   * E.164 formatted phone number owned by the reqeusting account from which calls using this token will be made.
-   * @return from
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "E.164 formatted phone number owned by the reqeusting account from which calls using this token will be made.")
-
-  public String getFrom() {
-    return from;
-  }
-
-
-  public void setFrom(String from) {
-    this.from = from;
-  }
-
-
-  public CreateWebRTCToken uses(Integer uses) {
-    
-    this.uses = uses;
-    return this;
-  }
-
-   /**
-   * number of times this token may be used for a WebRTC call
-   * minimum: 1
-   * @return uses
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "number of times this token may be used for a WebRTC call")
-
-  public Integer getUses() {
-    return uses;
-  }
-
-
-  public void setUses(Integer uses) {
-    this.uses = uses;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_TO = "to";
+
+    @SerializedName(SERIALIZED_NAME_TO)
+    private String to;
+
+    public static final String SERIALIZED_NAME_FROM = "from";
+
+    @SerializedName(SERIALIZED_NAME_FROM)
+    private String from;
+
+    public static final String SERIALIZED_NAME_USES = "uses";
+
+    @SerializedName(SERIALIZED_NAME_USES)
+    private Integer uses;
+
+    public CreateWebRTCToken() {}
+
+    public CreateWebRTCToken to(String to) {
+
+        this.to = to;
+        return this;
     }
-    CreateWebRTCToken createWebRTCToken = (CreateWebRTCToken) o;
-    return Objects.equals(this.to, createWebRTCToken.to) &&
-        Objects.equals(this.from, createWebRTCToken.from) &&
-        Objects.equals(this.uses, createWebRTCToken.uses);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(to, from, uses);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CreateWebRTCToken {\n");
-    sb.append("    to: ").append(toIndentedString(to)).append("\n");
-    sb.append("    from: ").append(toIndentedString(from)).append("\n");
-    sb.append("    uses: ").append(toIndentedString(uses)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * E.164 formatted phone number to which calls using this token will be made.
+     *
+     * @return to
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value = "E.164 formatted phone number to which calls using this token will be made.")
+    public String getTo() {
+        return to;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public CreateWebRTCToken from(String from) {
+
+        this.from = from;
+        return this;
+    }
+
+    /**
+     * E.164 formatted phone number owned by the reqeusting account from which calls using this
+     * token will be made.
+     *
+     * @return from
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "E.164 formatted phone number owned by the reqeusting account from which calls"
+                            + " using this token will be made.")
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public CreateWebRTCToken uses(Integer uses) {
+
+        this.uses = uses;
+        return this;
+    }
+
+    /**
+     * number of times this token may be used for a WebRTC call minimum: 1
+     *
+     * @return uses
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value = "number of times this token may be used for a WebRTC call")
+    public Integer getUses() {
+        return uses;
+    }
+
+    public void setUses(Integer uses) {
+        this.uses = uses;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CreateWebRTCToken createWebRTCToken = (CreateWebRTCToken) o;
+        return Objects.equals(this.to, createWebRTCToken.to)
+                && Objects.equals(this.from, createWebRTCToken.from)
+                && Objects.equals(this.uses, createWebRTCToken.uses);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(to, from, uses);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CreateWebRTCToken {\n");
+        sb.append("    to: ").append(toIndentedString(to)).append("\n");
+        sb.append("    from: ").append(toIndentedString(from)).append("\n");
+        sb.append("    uses: ").append(toIndentedString(uses)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

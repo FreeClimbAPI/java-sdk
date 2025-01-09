@@ -12,115 +12,110 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;Hangup&#x60; command terminates a Call. If &#x60;Hangup&#x60; is used as the first action in a PerCL response, it does not prevent FreeClimb from answering the Call and billing your account. See the &#x60;Reject&#x60; command to hang up at no charge.
+ * The &#x60;Hangup&#x60; command terminates a Call. If &#x60;Hangup&#x60; is used as the first
+ * action in a PerCL response, it does not prevent FreeClimb from answering the Call and billing
+ * your account. See the &#x60;Reject&#x60; command to hang up at no charge.
  */
-@ApiModel(description = "The `Hangup` command terminates a Call. If `Hangup` is used as the first action in a PerCL response, it does not prevent FreeClimb from answering the Call and billing your account. See the `Reject` command to hang up at no charge.")
+@ApiModel(
+        description =
+                "The `Hangup` command terminates a Call. If `Hangup` is used as the first action in"
+                    + " a PerCL response, it does not prevent FreeClimb from answering the Call and"
+                    + " billing your account. See the `Reject` command to hang up at no charge.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Hangup extends PerclCommand {
-  public static final String SERIALIZED_NAME_REASON = "reason";
-  @SerializedName(SERIALIZED_NAME_REASON)
-  private String reason;
-
-  public Hangup() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public Hangup reason(String reason) {
-    
-    this.reason = reason;
-    return this;
-  }
-
-   /**
-   * The user defined reason for the hangup. In general, applications should use a set of enumerated values that are predefined to cover all exit points of the Call flows for the given application.
-   * @return reason
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The user defined reason for the hangup. In general, applications should use a set of enumerated values that are predefined to cover all exit points of the Call flows for the given application.")
-
-  public String getReason() {
-    return reason;
-  }
-
-
-  public void setReason(String reason) {
-    this.reason = reason;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_REASON = "reason";
+
+    @SerializedName(SERIALIZED_NAME_REASON)
+    private String reason;
+
+    public Hangup() {
+        this.command = this.getClass().getSimpleName();
     }
-    Hangup hangup = (Hangup) o;
-    return Objects.equals(this.reason, hangup.reason) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(reason, super.hashCode());
-  }
+    public Hangup reason(String reason) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Hangup {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("reason", () -> this.getReason());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.reason = reason;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * The user defined reason for the hangup. In general, applications should use a set of
+     * enumerated values that are predefined to cover all exit points of the Call flows for the
+     * given application.
+     *
+     * @return reason
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The user defined reason for the hangup. In general, applications should use a"
+                        + " set of enumerated values that are predefined to cover all exit points"
+                        + " of the Call flows for the given application.")
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Hangup hangup = (Hangup) o;
+        return Objects.equals(this.reason, hangup.reason) && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(reason, super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Hangup {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("reason", () -> this.getReason());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -12,385 +12,414 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.net.URI;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
-/**
- * The OutDial command is used to call a phone number
- */
+/** The OutDial command is used to call a phone number */
 @ApiModel(description = "The OutDial command is used to call a phone number")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OutDial extends PerclCommand {
-  public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
-  @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  private String actionUrl;
-
-  public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
-  @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
-  private String callConnectUrl;
-
-  public static final String SERIALIZED_NAME_CALLING_NUMBER = "callingNumber";
-  @SerializedName(SERIALIZED_NAME_CALLING_NUMBER)
-  private String callingNumber;
-
-  public static final String SERIALIZED_NAME_DESTINATION = "destination";
-  @SerializedName(SERIALIZED_NAME_DESTINATION)
-  private String destination;
-
-  public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
-  @SerializedName(SERIALIZED_NAME_IF_MACHINE)
-  private IfMachine ifMachine;
-
-  public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
-  @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
-  private String ifMachineUrl;
-
-  public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
-  @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
-  private String sendDigits;
-
-  public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
-  @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  private String statusCallbackUrl;
-
-  public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
-  @SerializedName(SERIALIZED_NAME_TIMEOUT)
-  private Integer timeout;
-
-  public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
-  @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
-  private Boolean privacyMode;
-
-  public OutDial() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public OutDial actionUrl(String actionUrl) {
-    
-    this.actionUrl = actionUrl;
-    return this;
-  }
-
-   /**
-   * URL to which FreeClimb sends an HTTP POST request. 
-   * @return actionUrl
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "URL to which FreeClimb sends an HTTP POST request. ")
-
-  public String getActionUrl() {
-    return actionUrl;
-  }
-
-
-  public void setActionUrl(String actionUrl) {
-    this.actionUrl = actionUrl;
-  }
-
-
-  public OutDial callConnectUrl(String callConnectUrl) {
-    
-    this.callConnectUrl = callConnectUrl;
-    return this;
-  }
-
-   /**
-   * URL to which FreeClimb makes an HTTP POST request informing the result of the OutDial.
-   * @return callConnectUrl
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "URL to which FreeClimb makes an HTTP POST request informing the result of the OutDial.")
-
-  public String getCallConnectUrl() {
-    return callConnectUrl;
-  }
-
-
-  public void setCallConnectUrl(String callConnectUrl) {
-    this.callConnectUrl = callConnectUrl;
-  }
-
-
-  public OutDial callingNumber(String callingNumber) {
-    
-    this.callingNumber = callingNumber;
-    return this;
-  }
-
-   /**
-   * he caller ID to show to the called party when FreeClimb calls. This can be one of the following: The To or From number provided in the first Webhook to your webserver. Any phone number you have purchased from FreeClimb.
-   * @return callingNumber
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "he caller ID to show to the called party when FreeClimb calls. This can be one of the following: The To or From number provided in the first Webhook to your webserver. Any phone number you have purchased from FreeClimb.")
-
-  public String getCallingNumber() {
-    return callingNumber;
-  }
-
-
-  public void setCallingNumber(String callingNumber) {
-    this.callingNumber = callingNumber;
-  }
-
-
-  public OutDial destination(String destination) {
-    
-    this.destination = destination;
-    return this;
-  }
-
-   /**
-   * E.164 representation of the phone number to Call. 
-   * @return destination
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "E.164 representation of the phone number to Call. ")
-
-  public String getDestination() {
-    return destination;
-  }
-
-
-  public void setDestination(String destination) {
-    this.destination = destination;
-  }
-
-
-  public OutDial ifMachine(IfMachine ifMachine) {
-    
-    this.ifMachine = ifMachine;
-    return this;
-  }
-
-   /**
-   * Get ifMachine
-   * @return ifMachine
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IfMachine getIfMachine() {
-    return ifMachine;
-  }
-
-
-  public void setIfMachine(IfMachine ifMachine) {
-    this.ifMachine = ifMachine;
-  }
-
-
-  public OutDial ifMachineUrl(String ifMachineUrl) {
-    
-    this.ifMachineUrl = ifMachineUrl;
-    return this;
-  }
-
-   /**
-   * When the &#x60;ifMachine&#x60; flag is set to &#x60;redirect&#x60;, this attribute specifies a URL to which FreeClimb makes a POST request when an answering machine or a fax machine is detected. This URL is required if the &#x60;ifMachine&#x60; flag is set to &#x60;redirect&#x60;. Otherwise, it should not be included.
-   * @return ifMachineUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "When the `ifMachine` flag is set to `redirect`, this attribute specifies a URL to which FreeClimb makes a POST request when an answering machine or a fax machine is detected. This URL is required if the `ifMachine` flag is set to `redirect`. Otherwise, it should not be included.")
-
-  public String getIfMachineUrl() {
-    return ifMachineUrl;
-  }
-
-
-  public void setIfMachineUrl(String ifMachineUrl) {
-    this.ifMachineUrl = ifMachineUrl;
-  }
-
-
-  public OutDial sendDigits(String sendDigits) {
-    
-    this.sendDigits = sendDigits;
-    return this;
-  }
-
-   /**
-   * DTMF tones to play to the outdialed Call. This is typically used to dial a number and then dial an extension.
-   * @return sendDigits
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "DTMF tones to play to the outdialed Call. This is typically used to dial a number and then dial an extension.")
-
-  public String getSendDigits() {
-    return sendDigits;
-  }
-
-
-  public void setSendDigits(String sendDigits) {
-    this.sendDigits = sendDigits;
-  }
-
-
-  public OutDial statusCallbackUrl(String statusCallbackUrl) {
-    
-    this.statusCallbackUrl = statusCallbackUrl;
-    return this;
-  }
-
-   /**
-   * When the outdialed Call leg terminates, FreeClimb sends a &#x60;callStatus&#x60; Webhook to the &#x60;statusCallbackUrl&#x60;. This is a notification only; any PerCL command returned is ignored.
-   * @return statusCallbackUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "When the outdialed Call leg terminates, FreeClimb sends a `callStatus` Webhook to the `statusCallbackUrl`. This is a notification only; any PerCL command returned is ignored.")
-
-  public String getStatusCallbackUrl() {
-    return statusCallbackUrl;
-  }
-
-
-  public void setStatusCallbackUrl(String statusCallbackUrl) {
-    this.statusCallbackUrl = statusCallbackUrl;
-  }
-
-
-  public OutDial timeout(Integer timeout) {
-    
-    this.timeout = timeout;
-    return this;
-  }
-
-   /**
-   * Maximum time in seconds the &#x60;OutDial&#x60; command waits for the called party to answer the Call. When a timeout occurs, FreeClimb invokes the &#x60;callConnectUrl&#x60; Webhook to report that the out-dialed Call has ended with a status of &#x60;noAnswer&#x60;.
-   * @return timeout
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Maximum time in seconds the `OutDial` command waits for the called party to answer the Call. When a timeout occurs, FreeClimb invokes the `callConnectUrl` Webhook to report that the out-dialed Call has ended with a status of `noAnswer`.")
-
-  public Integer getTimeout() {
-    return timeout;
-  }
-
-
-  public void setTimeout(Integer timeout) {
-    this.timeout = timeout;
-  }
-
-
-  public OutDial privacyMode(Boolean privacyMode) {
-    
-    this.privacyMode = privacyMode;
-    return this;
-  }
-
-   /**
-   * Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance.
-   * @return privacyMode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Parameter `privacyMode` will not log the `text` as required by PCI compliance.")
-
-  public Boolean getPrivacyMode() {
-    return privacyMode;
-  }
-
-
-  public void setPrivacyMode(Boolean privacyMode) {
-    this.privacyMode = privacyMode;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+
+    @SerializedName(SERIALIZED_NAME_ACTION_URL)
+    private URI actionUrl;
+
+    public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+
+    @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
+    private URI callConnectUrl;
+
+    public static final String SERIALIZED_NAME_CALLING_NUMBER = "callingNumber";
+
+    @SerializedName(SERIALIZED_NAME_CALLING_NUMBER)
+    private String callingNumber;
+
+    public static final String SERIALIZED_NAME_DESTINATION = "destination";
+
+    @SerializedName(SERIALIZED_NAME_DESTINATION)
+    private String destination;
+
+    public static final String SERIALIZED_NAME_IF_MACHINE = "ifMachine";
+
+    @SerializedName(SERIALIZED_NAME_IF_MACHINE)
+    private IfMachine ifMachine;
+
+    public static final String SERIALIZED_NAME_IF_MACHINE_URL = "ifMachineUrl";
+
+    @SerializedName(SERIALIZED_NAME_IF_MACHINE_URL)
+    private URI ifMachineUrl;
+
+    public static final String SERIALIZED_NAME_SEND_DIGITS = "sendDigits";
+
+    @SerializedName(SERIALIZED_NAME_SEND_DIGITS)
+    private String sendDigits;
+
+    public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+
+    @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+    private URI statusCallbackUrl;
+
+    public static final String SERIALIZED_NAME_TIMEOUT = "timeout";
+
+    @SerializedName(SERIALIZED_NAME_TIMEOUT)
+    private Integer timeout;
+
+    public static final String SERIALIZED_NAME_PRIVACY_MODE = "privacyMode";
+
+    @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
+    private Boolean privacyMode;
+
+    public OutDial() {
+        this.command = this.getClass().getSimpleName();
     }
-    OutDial outDial = (OutDial) o;
-    return Objects.equals(this.actionUrl, outDial.actionUrl) &&
-        Objects.equals(this.callConnectUrl, outDial.callConnectUrl) &&
-        Objects.equals(this.callingNumber, outDial.callingNumber) &&
-        Objects.equals(this.destination, outDial.destination) &&
-        Objects.equals(this.ifMachine, outDial.ifMachine) &&
-        Objects.equals(this.ifMachineUrl, outDial.ifMachineUrl) &&
-        Objects.equals(this.sendDigits, outDial.sendDigits) &&
-        Objects.equals(this.statusCallbackUrl, outDial.statusCallbackUrl) &&
-        Objects.equals(this.timeout, outDial.timeout) &&
-        Objects.equals(this.privacyMode, outDial.privacyMode) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(actionUrl, callConnectUrl, callingNumber, destination, ifMachine, ifMachineUrl, sendDigits, statusCallbackUrl, timeout, privacyMode, super.hashCode());
-  }
+    public OutDial actionUrl(URI actionUrl) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class OutDial {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
-    sb.append("    callConnectUrl: ").append(toIndentedString(callConnectUrl)).append("\n");
-    sb.append("    callingNumber: ").append(toIndentedString(callingNumber)).append("\n");
-    sb.append("    destination: ").append(toIndentedString(destination)).append("\n");
-    sb.append("    ifMachine: ").append(toIndentedString(ifMachine)).append("\n");
-    sb.append("    ifMachineUrl: ").append(toIndentedString(ifMachineUrl)).append("\n");
-    sb.append("    sendDigits: ").append(toIndentedString(sendDigits)).append("\n");
-    sb.append("    statusCallbackUrl: ").append(toIndentedString(statusCallbackUrl)).append("\n");
-    sb.append("    timeout: ").append(toIndentedString(timeout)).append("\n");
-    sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("actionUrl", () -> this.getActionUrl());
-    attributes.put("callConnectUrl", () -> this.getCallConnectUrl());
-    attributes.put("callingNumber", () -> this.getCallingNumber());
-    attributes.put("destination", () -> this.getDestination());
-    attributes.put("ifMachine", () -> this.getIfMachine());
-    attributes.put("ifMachineUrl", () -> this.getIfMachineUrl());
-    attributes.put("sendDigits", () -> this.getSendDigits());
-    attributes.put("statusCallbackUrl", () -> this.getStatusCallbackUrl());
-    attributes.put("timeout", () -> this.getTimeout());
-    attributes.put("privacyMode", () -> this.getPrivacyMode());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.actionUrl = actionUrl;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * URL to which FreeClimb sends an HTTP POST request.
+     *
+     * @return actionUrl
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value = "URL to which FreeClimb sends an HTTP POST request. ")
+    public URI getActionUrl() {
+        return actionUrl;
+    }
+
+    public void setActionUrl(URI actionUrl) {
+        this.actionUrl = actionUrl;
+    }
+
+    public OutDial callConnectUrl(URI callConnectUrl) {
+
+        this.callConnectUrl = callConnectUrl;
+        return this;
+    }
+
+    /**
+     * URL to which FreeClimb makes an HTTP POST request informing the result of the OutDial.
+     *
+     * @return callConnectUrl
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "URL to which FreeClimb makes an HTTP POST request informing the result of the"
+                            + " OutDial.")
+    public URI getCallConnectUrl() {
+        return callConnectUrl;
+    }
+
+    public void setCallConnectUrl(URI callConnectUrl) {
+        this.callConnectUrl = callConnectUrl;
+    }
+
+    public OutDial callingNumber(String callingNumber) {
+
+        this.callingNumber = callingNumber;
+        return this;
+    }
+
+    /**
+     * he caller ID to show to the called party when FreeClimb calls. This can be one of the
+     * following: The To or From number provided in the first Webhook to your webserver. Any phone
+     * number you have purchased from FreeClimb.
+     *
+     * @return callingNumber
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "he caller ID to show to the called party when FreeClimb calls. This can be one"
+                        + " of the following: The To or From number provided in the first Webhook"
+                        + " to your webserver. Any phone number you have purchased from FreeClimb.")
+    public String getCallingNumber() {
+        return callingNumber;
+    }
+
+    public void setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+    }
+
+    public OutDial destination(String destination) {
+
+        this.destination = destination;
+        return this;
+    }
+
+    /**
+     * E.164 representation of the phone number to Call.
+     *
+     * @return destination
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "E.164 representation of the phone number to Call. ")
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public OutDial ifMachine(IfMachine ifMachine) {
+
+        this.ifMachine = ifMachine;
+        return this;
+    }
+
+    /**
+     * Get ifMachine
+     *
+     * @return ifMachine
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IfMachine getIfMachine() {
+        return ifMachine;
+    }
+
+    public void setIfMachine(IfMachine ifMachine) {
+        this.ifMachine = ifMachine;
+    }
+
+    public OutDial ifMachineUrl(URI ifMachineUrl) {
+
+        this.ifMachineUrl = ifMachineUrl;
+        return this;
+    }
+
+    /**
+     * When the &#x60;ifMachine&#x60; flag is set to &#x60;redirect&#x60;, this attribute specifies
+     * a URL to which FreeClimb makes a POST request when an answering machine or a fax machine is
+     * detected. This URL is required if the &#x60;ifMachine&#x60; flag is set to
+     * &#x60;redirect&#x60;. Otherwise, it should not be included.
+     *
+     * @return ifMachineUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "When the `ifMachine` flag is set to `redirect`, this attribute specifies a URL"
+                        + " to which FreeClimb makes a POST request when an answering machine or a"
+                        + " fax machine is detected. This URL is required if the `ifMachine` flag"
+                        + " is set to `redirect`. Otherwise, it should not be included.")
+    public URI getIfMachineUrl() {
+        return ifMachineUrl;
+    }
+
+    public void setIfMachineUrl(URI ifMachineUrl) {
+        this.ifMachineUrl = ifMachineUrl;
+    }
+
+    public OutDial sendDigits(String sendDigits) {
+
+        this.sendDigits = sendDigits;
+        return this;
+    }
+
+    /**
+     * DTMF tones to play to the outdialed Call. This is typically used to dial a number and then
+     * dial an extension.
+     *
+     * @return sendDigits
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "DTMF tones to play to the outdialed Call. This is typically used to dial a"
+                            + " number and then dial an extension.")
+    public String getSendDigits() {
+        return sendDigits;
+    }
+
+    public void setSendDigits(String sendDigits) {
+        this.sendDigits = sendDigits;
+    }
+
+    public OutDial statusCallbackUrl(URI statusCallbackUrl) {
+
+        this.statusCallbackUrl = statusCallbackUrl;
+        return this;
+    }
+
+    /**
+     * When the outdialed Call leg terminates, FreeClimb sends a &#x60;callStatus&#x60; Webhook to
+     * the &#x60;statusCallbackUrl&#x60;. This is a notification only; any PerCL command returned is
+     * ignored.
+     *
+     * @return statusCallbackUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "When the outdialed Call leg terminates, FreeClimb sends a `callStatus` Webhook"
+                            + " to the `statusCallbackUrl`. This is a notification only; any PerCL"
+                            + " command returned is ignored.")
+    public URI getStatusCallbackUrl() {
+        return statusCallbackUrl;
+    }
+
+    public void setStatusCallbackUrl(URI statusCallbackUrl) {
+        this.statusCallbackUrl = statusCallbackUrl;
+    }
+
+    public OutDial timeout(Integer timeout) {
+
+        this.timeout = timeout;
+        return this;
+    }
+
+    /**
+     * Maximum time in seconds the &#x60;OutDial&#x60; command waits for the called party to answer
+     * the Call. When a timeout occurs, FreeClimb invokes the &#x60;callConnectUrl&#x60; Webhook to
+     * report that the out-dialed Call has ended with a status of &#x60;noAnswer&#x60;.
+     *
+     * @return timeout
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Maximum time in seconds the `OutDial` command waits for the called party to"
+                        + " answer the Call. When a timeout occurs, FreeClimb invokes the"
+                        + " `callConnectUrl` Webhook to report that the out-dialed Call has ended"
+                        + " with a status of `noAnswer`.")
+    public Integer getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(Integer timeout) {
+        this.timeout = timeout;
+    }
+
+    public OutDial privacyMode(Boolean privacyMode) {
+
+        this.privacyMode = privacyMode;
+        return this;
+    }
+
+    /**
+     * Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI
+     * compliance.
+     *
+     * @return privacyMode
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Parameter `privacyMode` will not log the `text` as required by PCI"
+                            + " compliance.")
+    public Boolean getPrivacyMode() {
+        return privacyMode;
+    }
+
+    public void setPrivacyMode(Boolean privacyMode) {
+        this.privacyMode = privacyMode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        OutDial outDial = (OutDial) o;
+        return Objects.equals(this.actionUrl, outDial.actionUrl)
+                && Objects.equals(this.callConnectUrl, outDial.callConnectUrl)
+                && Objects.equals(this.callingNumber, outDial.callingNumber)
+                && Objects.equals(this.destination, outDial.destination)
+                && Objects.equals(this.ifMachine, outDial.ifMachine)
+                && Objects.equals(this.ifMachineUrl, outDial.ifMachineUrl)
+                && Objects.equals(this.sendDigits, outDial.sendDigits)
+                && Objects.equals(this.statusCallbackUrl, outDial.statusCallbackUrl)
+                && Objects.equals(this.timeout, outDial.timeout)
+                && Objects.equals(this.privacyMode, outDial.privacyMode)
+                && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                actionUrl,
+                callConnectUrl,
+                callingNumber,
+                destination,
+                ifMachine,
+                ifMachineUrl,
+                sendDigits,
+                statusCallbackUrl,
+                timeout,
+                privacyMode,
+                super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class OutDial {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
+        sb.append("    callConnectUrl: ").append(toIndentedString(callConnectUrl)).append("\n");
+        sb.append("    callingNumber: ").append(toIndentedString(callingNumber)).append("\n");
+        sb.append("    destination: ").append(toIndentedString(destination)).append("\n");
+        sb.append("    ifMachine: ").append(toIndentedString(ifMachine)).append("\n");
+        sb.append("    ifMachineUrl: ").append(toIndentedString(ifMachineUrl)).append("\n");
+        sb.append("    sendDigits: ").append(toIndentedString(sendDigits)).append("\n");
+        sb.append("    statusCallbackUrl: ")
+                .append(toIndentedString(statusCallbackUrl))
+                .append("\n");
+        sb.append("    timeout: ").append(toIndentedString(timeout)).append("\n");
+        sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("actionUrl", () -> this.getActionUrl());
+        attributes.put("callConnectUrl", () -> this.getCallConnectUrl());
+        attributes.put("callingNumber", () -> this.getCallingNumber());
+        attributes.put("destination", () -> this.getDestination());
+        attributes.put("ifMachine", () -> this.getIfMachine());
+        attributes.put("ifMachineUrl", () -> this.getIfMachineUrl());
+        attributes.put("sendDigits", () -> this.getSendDigits());
+        attributes.put("statusCallbackUrl", () -> this.getStatusCallbackUrl());
+        attributes.put("timeout", () -> this.getTimeout());
+        attributes.put("privacyMode", () -> this.getPrivacyMode());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-
