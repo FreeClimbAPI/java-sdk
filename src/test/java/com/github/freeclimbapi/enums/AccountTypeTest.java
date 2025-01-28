@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for AccountType
- */
- public class AccountTypeTest {
-    
-    
-    
+/** Model tests for AccountType */
+public class AccountTypeTest {
+
     @Test
     public void testTRIALShouldWork() {
 
         AccountType test = AccountType.TRIAL;
-         Assert.assertEquals(test.getClass(), AccountType.class);
+        Assert.assertEquals(test.getClass(), AccountType.class);
     }
 
-    @Test 
+    @Test
     public void testTRIALShouldSerializeToEnum() {
-    
+
         AccountType expectedValue = AccountType.TRIAL;
         AccountType calculatedValue = AccountType.fromValue("trial");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testTRIALShouldDeserializeToString() {
-     AccountType test = AccountType.TRIAL;
-      String expectedValue = "trial";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        AccountType test = AccountType.TRIAL;
+        String expectedValue = "trial";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testFULLShouldWork() {
 
         AccountType test = AccountType.FULL;
-         Assert.assertEquals(test.getClass(), AccountType.class);
+        Assert.assertEquals(test.getClass(), AccountType.class);
     }
 
-    @Test 
+    @Test
     public void testFULLShouldSerializeToEnum() {
-    
+
         AccountType expectedValue = AccountType.FULL;
         AccountType calculatedValue = AccountType.fromValue("full");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,11 +61,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testFULLShouldDeserializeToString() {
-     AccountType test = AccountType.FULL;
-      String expectedValue = "full";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        AccountType test = AccountType.FULL;
+        String expectedValue = "full";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

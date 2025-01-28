@@ -12,519 +12,499 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.net.URI;
+import java.util.*;
+import java.util.Arrays;
+import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * ApplicationResult
- */
+/** ApplicationResult */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApplicationResult {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_URI = "uri";
-  
-  
-  @SerializedName(SERIALIZED_NAME_URI)
-  
-  private String uri;
-
-  
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
-  
-  private String dateCreated;
-
-  
-  public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
-  
-  private String dateUpdated;
-
-  
-  public static final String SERIALIZED_NAME_REVISION = "revision";
-  
-  
-  @SerializedName(SERIALIZED_NAME_REVISION)
-  
-  private Integer revision;
-
-  
-  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-  
-  private String accountId;
-
-  
-  public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
-  
-  private String applicationId;
-
-  
-  public static final String SERIALIZED_NAME_ALIAS = "alias";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ALIAS)
-  
-  private String alias;
-
-  
-  public static final String SERIALIZED_NAME_VOICE_URL = "voiceUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_VOICE_URL)
-  
-  private URI voiceUrl;
-
-  
-  public static final String SERIALIZED_NAME_VOICE_FALLBACK_URL = "voiceFallbackUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_VOICE_FALLBACK_URL)
-  
-  private URI voiceFallbackUrl;
-
-  
-  public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
-  
-  private URI callConnectUrl;
-
-  
-  public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-  
-  private URI statusCallbackUrl;
-
-  
-  public static final String SERIALIZED_NAME_SMS_URL = "smsUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_SMS_URL)
-  
-  private URI smsUrl;
-
-  
-  public static final String SERIALIZED_NAME_SMS_FALLBACK_URL = "smsFallbackUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_SMS_FALLBACK_URL)
-  
-  private URI smsFallbackUrl;
-
-
-  public ApplicationResult() { 
-  }
-
-  public ApplicationResult uri(String uri) {
-    
-    this.uri = uri;
-    return this;
-  }
-
-   /**
-   * The URI for this resource, relative to /apiserver.
-   * @return uri
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
-
-  public String getUri() {
-    return uri;
-  }
-
-
-  public void setUri(String uri) {
-    this.uri = uri;
-  }
-
-
-  public ApplicationResult dateCreated(String dateCreated) {
-    
-    this.dateCreated = dateCreated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateCreated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateCreated() {
-    return dateCreated;
-  }
-
-
-  public void setDateCreated(String dateCreated) {
-    this.dateCreated = dateCreated;
-  }
-
-
-  public ApplicationResult dateUpdated(String dateUpdated) {
-    
-    this.dateUpdated = dateUpdated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateUpdated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateUpdated() {
-    return dateUpdated;
-  }
-
-
-  public void setDateUpdated(String dateUpdated) {
-    this.dateUpdated = dateUpdated;
-  }
-
-
-  public ApplicationResult revision(Integer revision) {
-    
-    this.revision = revision;
-    return this;
-  }
-
-   /**
-   * Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.
-   * @return revision
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.")
-
-  public Integer getRevision() {
-    return revision;
-  }
-
-
-  public void setRevision(Integer revision) {
-    this.revision = revision;
-  }
-
-
-  public ApplicationResult accountId(String accountId) {
-    
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * ID of the account that owns this phone number.
-   * @return accountId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the account that owns this phone number.")
-
-  public String getAccountId() {
-    return accountId;
-  }
-
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
-
-  public ApplicationResult applicationId(String applicationId) {
-    
-    this.applicationId = applicationId;
-    return this;
-  }
-
-   /**
-   * ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId.
-   * @return applicationId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId.")
-
-  public String getApplicationId() {
-    return applicationId;
-  }
-
-
-  public void setApplicationId(String applicationId) {
-    this.applicationId = applicationId;
-  }
-
-
-  public ApplicationResult alias(String alias) {
-    
-    this.alias = alias;
-    return this;
-  }
-
-   /**
-   * Description for this phone number. Typically the conventionally-formatted version of the phone number.
-   * @return alias
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description for this phone number. Typically the conventionally-formatted version of the phone number.")
-
-  public String getAlias() {
-    return alias;
-  }
-
-
-  public void setAlias(String alias) {
-    this.alias = alias;
-  }
-
-
-  public ApplicationResult voiceUrl(URI voiceUrl) {
-    
-    this.voiceUrl = voiceUrl;
-    return this;
-  }
-
-   /**
-   * The URL FreeClimb will request when a phone number assigned to this Application receives a Call. Used for inbound calls only.
-   * @return voiceUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URL FreeClimb will request when a phone number assigned to this Application receives a Call. Used for inbound calls only.")
-
-  public URI getVoiceUrl() {
-    return voiceUrl;
-  }
-
-
-  public void setVoiceUrl(URI voiceUrl) {
-    this.voiceUrl = voiceUrl;
-  }
-
-
-  public ApplicationResult voiceFallbackUrl(URI voiceFallbackUrl) {
-    
-    this.voiceFallbackUrl = voiceFallbackUrl;
-    return this;
-  }
-
-   /**
-   * The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl. Used for inbound calls only.
-   * @return voiceFallbackUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl. Used for inbound calls only.")
-
-  public URI getVoiceFallbackUrl() {
-    return voiceFallbackUrl;
-  }
-
-
-  public void setVoiceFallbackUrl(URI voiceFallbackUrl) {
-    this.voiceFallbackUrl = voiceFallbackUrl;
-  }
-
-
-  public ApplicationResult callConnectUrl(URI callConnectUrl) {
-    
-    this.callConnectUrl = callConnectUrl;
-    return this;
-  }
-
-   /**
-   * The URL to which FreeClimb will make a POST request informing the result of the outbound Call request. The status property of the request message specifies if the Call was connected or not.
-   * @return callConnectUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URL to which FreeClimb will make a POST request informing the result of the outbound Call request. The status property of the request message specifies if the Call was connected or not.")
-
-  public URI getCallConnectUrl() {
-    return callConnectUrl;
-  }
-
-
-  public void setCallConnectUrl(URI callConnectUrl) {
-    this.callConnectUrl = callConnectUrl;
-  }
-
-
-  public ApplicationResult statusCallbackUrl(URI statusCallbackUrl) {
-    
-    this.statusCallbackUrl = statusCallbackUrl;
-    return this;
-  }
-
-   /**
-   * A URL to which FreeClimb will make a POST request when the Call ends to notify this app.
-   * @return statusCallbackUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "A URL to which FreeClimb will make a POST request when the Call ends to notify this app.")
-
-  public URI getStatusCallbackUrl() {
-    return statusCallbackUrl;
-  }
-
-
-  public void setStatusCallbackUrl(URI statusCallbackUrl) {
-    this.statusCallbackUrl = statusCallbackUrl;
-  }
-
-
-  public ApplicationResult smsUrl(URI smsUrl) {
-    
-    this.smsUrl = smsUrl;
-    return this;
-  }
-
-   /**
-   * The URL FreeClimb will request when a phone number assigned to this Application receives an incoming SMS message. Used for inbound SMS only.
-   * @return smsUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URL FreeClimb will request when a phone number assigned to this Application receives an incoming SMS message. Used for inbound SMS only.")
-
-  public URI getSmsUrl() {
-    return smsUrl;
-  }
-
-
-  public void setSmsUrl(URI smsUrl) {
-    this.smsUrl = smsUrl;
-  }
-
-
-  public ApplicationResult smsFallbackUrl(URI smsFallbackUrl) {
-    
-    this.smsFallbackUrl = smsFallbackUrl;
-    return this;
-  }
-
-   /**
-   * The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only.
-   * @return smsFallbackUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only.")
-
-  public URI getSmsFallbackUrl() {
-    return smsFallbackUrl;
-  }
-
-
-  public void setSmsFallbackUrl(URI smsFallbackUrl) {
-    this.smsFallbackUrl = smsFallbackUrl;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_URI = "uri";
+
+    @SerializedName(SERIALIZED_NAME_URI)
+    private String uri;
+
+    public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+    private String dateCreated;
+
+    public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+    private String dateUpdated;
+
+    public static final String SERIALIZED_NAME_REVISION = "revision";
+
+    @SerializedName(SERIALIZED_NAME_REVISION)
+    private Integer revision;
+
+    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+
+    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+    private String accountId;
+
+    public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+
+    @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+    private String applicationId;
+
+    public static final String SERIALIZED_NAME_ALIAS = "alias";
+
+    @SerializedName(SERIALIZED_NAME_ALIAS)
+    private String alias;
+
+    public static final String SERIALIZED_NAME_VOICE_URL = "voiceUrl";
+
+    @SerializedName(SERIALIZED_NAME_VOICE_URL)
+    private URI voiceUrl;
+
+    public static final String SERIALIZED_NAME_VOICE_FALLBACK_URL = "voiceFallbackUrl";
+
+    @SerializedName(SERIALIZED_NAME_VOICE_FALLBACK_URL)
+    private URI voiceFallbackUrl;
+
+    public static final String SERIALIZED_NAME_CALL_CONNECT_URL = "callConnectUrl";
+
+    @SerializedName(SERIALIZED_NAME_CALL_CONNECT_URL)
+    private URI callConnectUrl;
+
+    public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+
+    @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+    private URI statusCallbackUrl;
+
+    public static final String SERIALIZED_NAME_SMS_URL = "smsUrl";
+
+    @SerializedName(SERIALIZED_NAME_SMS_URL)
+    private URI smsUrl;
+
+    public static final String SERIALIZED_NAME_SMS_FALLBACK_URL = "smsFallbackUrl";
+
+    @SerializedName(SERIALIZED_NAME_SMS_FALLBACK_URL)
+    private URI smsFallbackUrl;
+
+    public ApplicationResult() {}
+
+    public ApplicationResult uri(String uri) {
+
+        this.uri = uri;
+        return this;
     }
-    ApplicationResult applicationResult = (ApplicationResult) o;
-    return Objects.equals(this.uri, applicationResult.uri) &&
-        Objects.equals(this.dateCreated, applicationResult.dateCreated) &&
-        Objects.equals(this.dateUpdated, applicationResult.dateUpdated) &&
-        Objects.equals(this.revision, applicationResult.revision) &&
-        Objects.equals(this.accountId, applicationResult.accountId) &&
-        Objects.equals(this.applicationId, applicationResult.applicationId) &&
-        Objects.equals(this.alias, applicationResult.alias) &&
-        Objects.equals(this.voiceUrl, applicationResult.voiceUrl) &&
-        Objects.equals(this.voiceFallbackUrl, applicationResult.voiceFallbackUrl) &&
-        Objects.equals(this.callConnectUrl, applicationResult.callConnectUrl) &&
-        Objects.equals(this.statusCallbackUrl, applicationResult.statusCallbackUrl) &&
-        Objects.equals(this.smsUrl, applicationResult.smsUrl) &&
-        Objects.equals(this.smsFallbackUrl, applicationResult.smsFallbackUrl);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, accountId, applicationId, alias, voiceUrl, voiceFallbackUrl, callConnectUrl, statusCallbackUrl, smsUrl, smsFallbackUrl);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    /**
+     * The URI for this resource, relative to /apiserver.
+     *
+     * @return uri
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
+    public String getUri() {
+        return uri;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ApplicationResult {\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
-    sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
-    sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
-    sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
-    sb.append("    voiceUrl: ").append(toIndentedString(voiceUrl)).append("\n");
-    sb.append("    voiceFallbackUrl: ").append(toIndentedString(voiceFallbackUrl)).append("\n");
-    sb.append("    callConnectUrl: ").append(toIndentedString(callConnectUrl)).append("\n");
-    sb.append("    statusCallbackUrl: ").append(toIndentedString(statusCallbackUrl)).append("\n");
-    sb.append("    smsUrl: ").append(toIndentedString(smsUrl)).append("\n");
-    sb.append("    smsFallbackUrl: ").append(toIndentedString(smsFallbackUrl)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setUri(String uri) {
+        this.uri = uri;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ApplicationResult dateCreated(String dateCreated) {
+
+        this.dateCreated = dateCreated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateCreated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon,"
+                            + " 15 Jun 2009 20:45:30 GMT).")
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public ApplicationResult dateUpdated(String dateUpdated) {
+
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateUpdated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was last updated (GMT) in RFC 1123 format (e.g.,"
+                            + " Mon, 15 Jun 2009 20:45:30 GMT).")
+    public String getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(String dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    public ApplicationResult revision(Integer revision) {
+
+        this.revision = revision;
+        return this;
+    }
+
+    /**
+     * Revision count for the resource. This count is set to 1 on creation and is incremented every
+     * time it is updated.
+     *
+     * @return revision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Revision count for the resource. This count is set to 1 on creation and is"
+                            + " incremented every time it is updated.")
+    public Integer getRevision() {
+        return revision;
+    }
+
+    public void setRevision(Integer revision) {
+        this.revision = revision;
+    }
+
+    public ApplicationResult accountId(String accountId) {
+
+        this.accountId = accountId;
+        return this;
+    }
+
+    /**
+     * ID of the account that owns this phone number.
+     *
+     * @return accountId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the account that owns this phone number.")
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public ApplicationResult applicationId(String applicationId) {
+
+        this.applicationId = applicationId;
+        return this;
+    }
+
+    /**
+     * ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone
+     * number or a Call from this number is placed. An incoming phone number is not useful until
+     * associated with an applicationId.
+     *
+     * @return applicationId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "ID of the Application that FreeClimb should contact if a Call or SMS arrives"
+                        + " for this phone number or a Call from this number is placed. An incoming"
+                        + " phone number is not useful until associated with an applicationId.")
+    public String getApplicationId() {
+        return applicationId;
+    }
+
+    public void setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+    }
+
+    public ApplicationResult alias(String alias) {
+
+        this.alias = alias;
+        return this;
+    }
+
+    /**
+     * Description for this phone number. Typically the conventionally-formatted version of the
+     * phone number.
+     *
+     * @return alias
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Description for this phone number. Typically the conventionally-formatted"
+                            + " version of the phone number.")
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public ApplicationResult voiceUrl(URI voiceUrl) {
+
+        this.voiceUrl = voiceUrl;
+        return this;
+    }
+
+    /**
+     * The URL FreeClimb will request when a phone number assigned to this Application receives a
+     * Call. Used for inbound calls only.
+     *
+     * @return voiceUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The URL FreeClimb will request when a phone number assigned to this"
+                            + " Application receives a Call. Used for inbound calls only.")
+    public URI getVoiceUrl() {
+        return voiceUrl;
+    }
+
+    public void setVoiceUrl(URI voiceUrl) {
+        this.voiceUrl = voiceUrl;
+    }
+
+    public ApplicationResult voiceFallbackUrl(URI voiceFallbackUrl) {
+
+        this.voiceFallbackUrl = voiceFallbackUrl;
+        return this;
+    }
+
+    /**
+     * The URL that FreeClimb will request if it times out waiting for a response from the voiceUrl.
+     * Used for inbound calls only.
+     *
+     * @return voiceFallbackUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The URL that FreeClimb will request if it times out waiting for a response"
+                            + " from the voiceUrl. Used for inbound calls only.")
+    public URI getVoiceFallbackUrl() {
+        return voiceFallbackUrl;
+    }
+
+    public void setVoiceFallbackUrl(URI voiceFallbackUrl) {
+        this.voiceFallbackUrl = voiceFallbackUrl;
+    }
+
+    public ApplicationResult callConnectUrl(URI callConnectUrl) {
+
+        this.callConnectUrl = callConnectUrl;
+        return this;
+    }
+
+    /**
+     * The URL to which FreeClimb will make a POST request informing the result of the outbound Call
+     * request. The status property of the request message specifies if the Call was connected or
+     * not.
+     *
+     * @return callConnectUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The URL to which FreeClimb will make a POST request informing the result of"
+                        + " the outbound Call request. The status property of the request message"
+                        + " specifies if the Call was connected or not.")
+    public URI getCallConnectUrl() {
+        return callConnectUrl;
+    }
+
+    public void setCallConnectUrl(URI callConnectUrl) {
+        this.callConnectUrl = callConnectUrl;
+    }
+
+    public ApplicationResult statusCallbackUrl(URI statusCallbackUrl) {
+
+        this.statusCallbackUrl = statusCallbackUrl;
+        return this;
+    }
+
+    /**
+     * A URL to which FreeClimb will make a POST request when the Call ends to notify this app.
+     *
+     * @return statusCallbackUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "A URL to which FreeClimb will make a POST request when the Call ends to notify"
+                            + " this app.")
+    public URI getStatusCallbackUrl() {
+        return statusCallbackUrl;
+    }
+
+    public void setStatusCallbackUrl(URI statusCallbackUrl) {
+        this.statusCallbackUrl = statusCallbackUrl;
+    }
+
+    public ApplicationResult smsUrl(URI smsUrl) {
+
+        this.smsUrl = smsUrl;
+        return this;
+    }
+
+    /**
+     * The URL FreeClimb will request when a phone number assigned to this Application receives an
+     * incoming SMS message. Used for inbound SMS only.
+     *
+     * @return smsUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The URL FreeClimb will request when a phone number assigned to this"
+                            + " Application receives an incoming SMS message. Used for inbound SMS"
+                            + " only.")
+    public URI getSmsUrl() {
+        return smsUrl;
+    }
+
+    public void setSmsUrl(URI smsUrl) {
+        this.smsUrl = smsUrl;
+    }
+
+    public ApplicationResult smsFallbackUrl(URI smsFallbackUrl) {
+
+        this.smsFallbackUrl = smsFallbackUrl;
+        return this;
+    }
+
+    /**
+     * The URL that FreeClimb will request if it times out waiting for a response from the smsUrl.
+     * Used for inbound SMS only.
+     *
+     * @return smsFallbackUrl
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The URL that FreeClimb will request if it times out waiting for a response"
+                            + " from the smsUrl. Used for inbound SMS only.")
+    public URI getSmsFallbackUrl() {
+        return smsFallbackUrl;
+    }
+
+    public void setSmsFallbackUrl(URI smsFallbackUrl) {
+        this.smsFallbackUrl = smsFallbackUrl;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ApplicationResult applicationResult = (ApplicationResult) o;
+        return Objects.equals(this.uri, applicationResult.uri)
+                && Objects.equals(this.dateCreated, applicationResult.dateCreated)
+                && Objects.equals(this.dateUpdated, applicationResult.dateUpdated)
+                && Objects.equals(this.revision, applicationResult.revision)
+                && Objects.equals(this.accountId, applicationResult.accountId)
+                && Objects.equals(this.applicationId, applicationResult.applicationId)
+                && Objects.equals(this.alias, applicationResult.alias)
+                && Objects.equals(this.voiceUrl, applicationResult.voiceUrl)
+                && Objects.equals(this.voiceFallbackUrl, applicationResult.voiceFallbackUrl)
+                && Objects.equals(this.callConnectUrl, applicationResult.callConnectUrl)
+                && Objects.equals(this.statusCallbackUrl, applicationResult.statusCallbackUrl)
+                && Objects.equals(this.smsUrl, applicationResult.smsUrl)
+                && Objects.equals(this.smsFallbackUrl, applicationResult.smsFallbackUrl);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                uri,
+                dateCreated,
+                dateUpdated,
+                revision,
+                accountId,
+                applicationId,
+                alias,
+                voiceUrl,
+                voiceFallbackUrl,
+                callConnectUrl,
+                statusCallbackUrl,
+                smsUrl,
+                smsFallbackUrl);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ApplicationResult {\n");
+        sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+        sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+        sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
+        sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
+        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+        sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
+        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
+        sb.append("    voiceUrl: ").append(toIndentedString(voiceUrl)).append("\n");
+        sb.append("    voiceFallbackUrl: ").append(toIndentedString(voiceFallbackUrl)).append("\n");
+        sb.append("    callConnectUrl: ").append(toIndentedString(callConnectUrl)).append("\n");
+        sb.append("    statusCallbackUrl: ")
+                .append(toIndentedString(statusCallbackUrl))
+                .append("\n");
+        sb.append("    smsUrl: ").append(toIndentedString(smsUrl)).append("\n");
+        sb.append("    smsFallbackUrl: ").append(toIndentedString(smsFallbackUrl)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

@@ -12,75 +12,61 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets TranscribeReason
- */
+/** Gets or Sets TranscribeReason */
 @JsonAdapter(TranscribeReason.Adapter.class)
 public enum TranscribeReason {
-  
-  INTERNAL_ERROR("internalError"),
-  
-  HANGUP("hangup"),
-  
-  MAX_LENGTH("maxLength"),
-  
-  DIGIT("digit"),
-  
-  NO_INPUT("noInput");
+    INTERNAL_ERROR("internalError"),
 
-  private String value;
+    HANGUP("hangup"),
 
-  TranscribeReason(String value) {
-    this.value = value;
-  }
+    MAX_LENGTH("maxLength"),
 
-  public String getValue() {
-    return value;
-  }
+    DIGIT("digit"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    NO_INPUT("noInput");
 
-  public static TranscribeReason fromValue(String value) {
-    for (TranscribeReason b : TranscribeReason.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    private String value;
+
+    TranscribeReason(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<TranscribeReason> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final TranscribeReason enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public TranscribeReason read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return TranscribeReason.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static TranscribeReason fromValue(String value) {
+        for (TranscribeReason b : TranscribeReason.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<TranscribeReason> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final TranscribeReason enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public TranscribeReason read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return TranscribeReason.fromValue(value);
+        }
+    }
 }
-

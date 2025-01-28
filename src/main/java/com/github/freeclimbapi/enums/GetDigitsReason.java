@@ -12,73 +12,67 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 /**
- * This field explains how the GetDigits action ended. The value is one of the below: •finishKey - The finish key as specified had been pressed by the caller. Digit string has all keys up to, but not including, the finish key.  •timeout - The timeout limit was reached prior to any other criteria being met. If any digits were collected, they will be included.  •maxDigits - The maximum number of digits was reached and digit collection ended.  •tone - Answering machine or fax tone detection occurred, interrupting digit collection. Any digits received up to this point are included in this webhook.
+ * This field explains how the GetDigits action ended. The value is one of the below: •finishKey -
+ * The finish key as specified had been pressed by the caller. Digit string has all keys up to, but
+ * not including, the finish key. •timeout - The timeout limit was reached prior to any other
+ * criteria being met. If any digits were collected, they will be included. •maxDigits - The maximum
+ * number of digits was reached and digit collection ended. •tone - Answering machine or fax tone
+ * detection occurred, interrupting digit collection. Any digits received up to this point are
+ * included in this webhook.
  */
 @JsonAdapter(GetDigitsReason.Adapter.class)
 public enum GetDigitsReason {
-  
-  FINISH_KEY("finishKey"),
-  
-  TIMEOUT("timeout"),
-  
-  MAX_DIGITS("maxDigits"),
-  
-  TONE("tone");
+    FINISH_KEY("finishKey"),
 
-  private String value;
+    TIMEOUT("timeout"),
 
-  GetDigitsReason(String value) {
-    this.value = value;
-  }
+    MAX_DIGITS("maxDigits"),
 
-  public String getValue() {
-    return value;
-  }
+    TONE("tone");
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    private String value;
 
-  public static GetDigitsReason fromValue(String value) {
-    for (GetDigitsReason b : GetDigitsReason.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    GetDigitsReason(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<GetDigitsReason> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final GetDigitsReason enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public GetDigitsReason read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return GetDigitsReason.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static GetDigitsReason fromValue(String value) {
+        for (GetDigitsReason b : GetDigitsReason.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<GetDigitsReason> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final GetDigitsReason enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public GetDigitsReason read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return GetDigitsReason.fromValue(value);
+        }
+    }
 }
-

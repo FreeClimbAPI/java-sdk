@@ -12,69 +12,58 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 /**
- * If this Call was initiated with answering machine detection, either &#x60;human&#x60; or &#x60;machine&#x60;. Empty otherwise.
+ * If this Call was initiated with answering machine detection, either &#x60;human&#x60; or
+ * &#x60;machine&#x60;. Empty otherwise.
  */
 @JsonAdapter(AnsweredBy.Adapter.class)
 public enum AnsweredBy {
-  
-  HUMAN("human"),
-  
-  MACHINE("machine");
+    HUMAN("human"),
 
-  private String value;
+    MACHINE("machine");
 
-  AnsweredBy(String value) {
-    this.value = value;
-  }
+    private String value;
 
-  public String getValue() {
-    return value;
-  }
-
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static AnsweredBy fromValue(String value) {
-    for (AnsweredBy b : AnsweredBy.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    AnsweredBy(String value) {
+        this.value = value;
     }
-    return null;
-  }
 
-  public static class Adapter extends TypeAdapter<AnsweredBy> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final AnsweredBy enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public AnsweredBy read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return AnsweredBy.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static AnsweredBy fromValue(String value) {
+        for (AnsweredBy b : AnsweredBy.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public static class Adapter extends TypeAdapter<AnsweredBy> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final AnsweredBy enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public AnsweredBy read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return AnsweredBy.fromValue(value);
+        }
+    }
 }
-

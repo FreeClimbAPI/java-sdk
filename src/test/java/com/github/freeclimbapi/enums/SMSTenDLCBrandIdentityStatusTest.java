@@ -10,123 +10,110 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for SMSTenDLCBrandIdentityStatus
- */
- public class SMSTenDLCBrandIdentityStatusTest {
-    
-    
-    
+/** Model tests for SMSTenDLCBrandIdentityStatus */
+public class SMSTenDLCBrandIdentityStatusTest {
+
     @Test
     public void testSELF_DECLAREDShouldWork() {
 
         SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.SELF_DECLARED;
-         Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
     }
 
-    @Test 
+    @Test
     public void testSELF_DECLAREDShouldSerializeToEnum() {
-    
+
         SMSTenDLCBrandIdentityStatus expectedValue = SMSTenDLCBrandIdentityStatus.SELF_DECLARED;
-        SMSTenDLCBrandIdentityStatus calculatedValue = SMSTenDLCBrandIdentityStatus.fromValue("SELF_DECLARED");
+        SMSTenDLCBrandIdentityStatus calculatedValue =
+                SMSTenDLCBrandIdentityStatus.fromValue("SELF_DECLARED");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testSELF_DECLAREDShouldDeserializeToString() {
-     SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.SELF_DECLARED;
-      String expectedValue = "SELF_DECLARED";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.SELF_DECLARED;
+        String expectedValue = "SELF_DECLARED";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testUNVERIFIEDShouldWork() {
 
         SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.UNVERIFIED;
-         Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
     }
 
-    @Test 
+    @Test
     public void testUNVERIFIEDShouldSerializeToEnum() {
-    
+
         SMSTenDLCBrandIdentityStatus expectedValue = SMSTenDLCBrandIdentityStatus.UNVERIFIED;
-        SMSTenDLCBrandIdentityStatus calculatedValue = SMSTenDLCBrandIdentityStatus.fromValue("UNVERIFIED");
+        SMSTenDLCBrandIdentityStatus calculatedValue =
+                SMSTenDLCBrandIdentityStatus.fromValue("UNVERIFIED");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testUNVERIFIEDShouldDeserializeToString() {
-     SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.UNVERIFIED;
-      String expectedValue = "UNVERIFIED";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.UNVERIFIED;
+        String expectedValue = "UNVERIFIED";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testVERIFIEDShouldWork() {
 
         SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VERIFIED;
-         Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
     }
 
-    @Test 
+    @Test
     public void testVERIFIEDShouldSerializeToEnum() {
-    
+
         SMSTenDLCBrandIdentityStatus expectedValue = SMSTenDLCBrandIdentityStatus.VERIFIED;
-        SMSTenDLCBrandIdentityStatus calculatedValue = SMSTenDLCBrandIdentityStatus.fromValue("VERIFIED");
+        SMSTenDLCBrandIdentityStatus calculatedValue =
+                SMSTenDLCBrandIdentityStatus.fromValue("VERIFIED");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testVERIFIEDShouldDeserializeToString() {
-     SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VERIFIED;
-      String expectedValue = "VERIFIED";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VERIFIED;
+        String expectedValue = "VERIFIED";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testVETTED_VERIFIEDShouldWork() {
 
         SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED;
-         Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
+        Assert.assertEquals(test.getClass(), SMSTenDLCBrandIdentityStatus.class);
     }
 
-    @Test 
+    @Test
     public void testVETTED_VERIFIEDShouldSerializeToEnum() {
-    
+
         SMSTenDLCBrandIdentityStatus expectedValue = SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED;
-        SMSTenDLCBrandIdentityStatus calculatedValue = SMSTenDLCBrandIdentityStatus.fromValue("VETTED_VERIFIED");
+        SMSTenDLCBrandIdentityStatus calculatedValue =
+                SMSTenDLCBrandIdentityStatus.fromValue("VETTED_VERIFIED");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testVETTED_VERIFIEDShouldDeserializeToString() {
-     SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED;
-      String expectedValue = "VETTED_VERIFIED";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        SMSTenDLCBrandIdentityStatus test = SMSTenDLCBrandIdentityStatus.VETTED_VERIFIED;
+        String expectedValue = "VETTED_VERIFIED";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

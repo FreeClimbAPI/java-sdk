@@ -12,117 +12,103 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets Language
- */
+/** Gets or Sets Language */
 @JsonAdapter(Language.Adapter.class)
 public enum Language {
-  
-  CATALAN("ca-ES"),
-  
-  DANISH("da-DK"),
-  
-  GERMAN("de-DE"),
-  
-  ENGLISH_AU("en-AU"),
-  
-  ENGLISH_CA("en-CA"),
-  
-  ENGLISH_UK("en-GB"),
-  
-  ENGLISH_IN("en-IN"),
-  
-  ENGLISH_US("en-US"),
-  
-  ENGLISH_ES("es-ES"),
-  
-  ENGLISH_MX("es-MX"),
-  
-  FINNISH("fi-FI"),
-  
-  FRENCH_CA("fr-CA"),
-  
-  FRENCH_FR("fr-FR"),
-  
-  ITALIAN("it-IT"),
-  
-  JAPANESE("ja-JP"),
-  
-  KOREAN("ko-KR"),
-  
-  NORWEGIAN("nb-NO"),
-  
-  DUTCH("nl-NL"),
-  
-  POLISH("pl-PL"),
-  
-  PORTUGESE_BR("pt-BR"),
-  
-  PORTUGESE_PT("pt-PT"),
-  
-  RUSSIAN("ru-RU"),
-  
-  SWEDISH("sv-SE"),
-  
-  CHINESE_CN("zh-CN"),
-  
-  CHINESE_HK("zh-HK"),
-  
-  CHINESE_TW("zh-TW");
+    CATALAN("ca-ES"),
 
-  private String value;
+    DANISH("da-DK"),
 
-  Language(String value) {
-    this.value = value;
-  }
+    GERMAN("de-DE"),
 
-  public String getValue() {
-    return value;
-  }
+    ENGLISH_AU("en-AU"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    ENGLISH_CA("en-CA"),
 
-  public static Language fromValue(String value) {
-    for (Language b : Language.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    ENGLISH_UK("en-GB"),
+
+    ENGLISH_IN("en-IN"),
+
+    ENGLISH_US("en-US"),
+
+    ENGLISH_ES("es-ES"),
+
+    ENGLISH_MX("es-MX"),
+
+    FINNISH("fi-FI"),
+
+    FRENCH_CA("fr-CA"),
+
+    FRENCH_FR("fr-FR"),
+
+    ITALIAN("it-IT"),
+
+    JAPANESE("ja-JP"),
+
+    KOREAN("ko-KR"),
+
+    NORWEGIAN("nb-NO"),
+
+    DUTCH("nl-NL"),
+
+    POLISH("pl-PL"),
+
+    PORTUGESE_BR("pt-BR"),
+
+    PORTUGESE_PT("pt-PT"),
+
+    RUSSIAN("ru-RU"),
+
+    SWEDISH("sv-SE"),
+
+    CHINESE_CN("zh-CN"),
+
+    CHINESE_HK("zh-HK"),
+
+    CHINESE_TW("zh-TW");
+
+    private String value;
+
+    Language(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<Language> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final Language enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public Language read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return Language.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static Language fromValue(String value) {
+        for (Language b : Language.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<Language> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final Language enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public Language read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return Language.fromValue(value);
+        }
+    }
 }
-

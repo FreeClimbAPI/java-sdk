@@ -10,717 +10,410 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for SMSTenDLCPartnerCampaignBrand
- */
- public class SMSTenDLCPartnerCampaignBrandTest {
-    
-    private final SMSTenDLCPartnerCampaignBrand model = new SMSTenDLCPartnerCampaignBrand(
-      "TEST_STRING"
-    );
-    
-    
-    /**
-     * Test the property 'accountId'
-     */
+/** Model tests for SMSTenDLCPartnerCampaignBrand */
+public class SMSTenDLCPartnerCampaignBrandTest {
+
+    private final SMSTenDLCPartnerCampaignBrand model =
+            new SMSTenDLCPartnerCampaignBrand("TEST_STRING");
+
+    /** Test the property 'accountId' */
     @Test
     public void accountIdTest() {
-      
-      
-      model.setAccountId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getAccountId());
-      
-      
+
+        model.setAccountId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAccountId());
     }
-    /**
-     * Test the property 'brandId'
-     */
+
+    /** Test the property 'brandId' */
     @Test
     public void brandIdTest() {
-      
-      
 
-      Assert.assertEquals("TEST_STRING", model.getBrandId());
-      
-      
+        Assert.assertEquals("TEST_STRING", model.getBrandId());
     }
-    /**
-     * Test the property 'firstName'
-     */
+
+    /** Test the property 'firstName' */
     @Test
     public void firstNameTest() {
-      
-      
-      model.setFirstName("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getFirstName());
-      
-      
+
+        model.setFirstName("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getFirstName());
     }
-    /**
-     * Test the property 'lastName'
-     */
+
+    /** Test the property 'lastName' */
     @Test
     public void lastNameTest() {
-      
-      
-      model.setLastName("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getLastName());
-      
-      
+
+        model.setLastName("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getLastName());
     }
-    /**
-     * Test the property 'displayName'
-     */
+
+    /** Test the property 'displayName' */
     @Test
     public void displayNameTest() {
-      
-      
-      model.setDisplayName("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getDisplayName());
-      
-      
+
+        model.setDisplayName("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getDisplayName());
     }
-    /**
-     * Test the property 'companyName'
-     */
+
+    /** Test the property 'companyName' */
     @Test
     public void companyNameTest() {
-      
-      
-      model.setCompanyName("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCompanyName());
-      
-      
+
+        model.setCompanyName("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCompanyName());
     }
-    /**
-     * Test the property 'phone'
-     */
+
+    /** Test the property 'phone' */
     @Test
     public void phoneTest() {
-      
-      
-      model.setPhone("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getPhone());
-      
-      
+
+        model.setPhone("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getPhone());
     }
-    /**
-     * Test the property 'email'
-     */
+
+    /** Test the property 'email' */
     @Test
     public void emailTest() {
-      
-      
-      model.setEmail("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getEmail());
-      
-      
+
+        model.setEmail("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getEmail());
     }
-    /**
-     * Test the property 'website'
-     */
+
+    /** Test the property 'website' */
     @Test
     public void websiteTest() {
-      
-      
-      model.setWebsite("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getWebsite());
-      
-      
+
+        model.setWebsite("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getWebsite());
     }
-    /**
-     * Test the property 'optionalAttributes'
-     */
+
+    /** Test the property 'optionalAttributes' */
     @Test
     public void optionalAttributesTest() {
-      
-      Map<String, Object> testMap = new HashMap();
-      model.setOptionalAttributes(testMap);
-      Assert.assertEquals(testMap, model.getOptionalAttributes()); 
+
+        Map<String, Object> testMap = new HashMap();
+        model.setOptionalAttributes(testMap);
+        Assert.assertEquals(testMap, model.getOptionalAttributes());
     }
-    /**
-     * Test the property 'evpVettingScore'
-     */
+
+    /** Test the property 'evpVettingScore' */
     @Test
     public void evpVettingScoreTest() {
-      
-      model.setEvpVettingScore(1);
-      Assert.assertEquals(1, (int) model.getEvpVettingScore());
+
+        model.setEvpVettingScore(1);
+        Assert.assertEquals(1, (int) model.getEvpVettingScore());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
 
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
+        test1.setAccountId("TS");
+
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
         Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+        SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
-      
-        
-        
-      test2.setFirstName("TS");
-      
-        
-        
-      test2.setLastName("TS");
-      
-        
-        
-      test2.setDisplayName("TS");
-      
-        
-        
-      test2.setCompanyName("TS");
-      
-        
-        
-      test2.setPhone("TS");
-      
-        
-        
-      test2.setEmail("TS");
-      
-        
-        
-      test2.setWebsite("TS");
-      
-      Map<String, Object> testMap2 = testMap;
-      test2.setOptionalAttributes(testMap);
-      test2.setEvpVettingScore(1);
+        test2.setAccountId("TS");
 
-      Assert.assertTrue(test1.equals(test2));
-    }
+        test2.setFirstName("TS");
 
-    /**
-     * Test the method 'equalsFalse'
-     */
+        test2.setLastName("TS");
 
-     @Test
-    public void equalsFalseTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
+        test2.setDisplayName("TS");
 
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
-      Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
+        test2.setCompanyName("TS");
 
-      
-        
-        
-      test2.setFirstName("TS2");
-      
-        
-        
-      test2.setLastName("TS2");
-      
-        
-        
-      test2.setDisplayName("TS2");
-      
-        
-        
-      test2.setCompanyName("TS2");
-      
-        
-        
-      test2.setPhone("TS2");
-      
-        
-        
-      test2.setEmail("TS2");
-      
-        
-        
-      test2.setWebsite("TS2");
-      
-      Map<String, Object> testMap2 = new HashMap();
-      test2.setOptionalAttributes(testMap2);
-      test2.setEvpVettingScore(0);
+        test2.setPhone("TS");
 
-      Assert.assertFalse(test1.equals(test2));
-    }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
+        test2.setEmail("TS");
 
-     @Test
-    public void hashCodeTypeTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
+        test2.setWebsite("TS");
 
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
-      Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
-    }
-
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
-    public void toStringEqualsTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
-
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
-      Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
-
-      
-        
-        
-      test2.setFirstName("TS");
-      
-        
-        
-      test2.setLastName("TS");
-      
-        
-        
-      test2.setDisplayName("TS");
-      
-        
-        
-      test2.setCompanyName("TS");
-      
-        
-        
-      test2.setPhone("TS");
-      
-        
-        
-      test2.setEmail("TS");
-      
-        
-        
-      test2.setWebsite("TS");
-      
         Map<String, Object> testMap2 = testMap;
-      test2.setOptionalAttributes(testMap2);
-      test2.setEvpVettingScore(1);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        test2.setOptionalAttributes(testMap);
+        test2.setEvpVettingScore(1);
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
+    /** Test the method 'equalsFalse' */
+    @Test
+    public void equalsFalseTest() {
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
 
+        test1.setAccountId("TS");
+
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+        SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+
+        test2.setAccountId("TS2");
+
+        test2.setFirstName("TS2");
+
+        test2.setLastName("TS2");
+
+        test2.setDisplayName("TS2");
+
+        test2.setCompanyName("TS2");
+
+        test2.setPhone("TS2");
+
+        test2.setEmail("TS2");
+
+        test2.setWebsite("TS2");
+
+        Map<String, Object> testMap2 = new HashMap();
+        test2.setOptionalAttributes(testMap2);
+        test2.setEvpVettingScore(0);
+
+        Assert.assertFalse(test1.equals(test2));
+    }
+
+    /** Test the method 'hashCodeType' */
+    @Test
+    public void hashCodeTypeTest() {
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+
+        test1.setAccountId("TS");
+
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+    }
+
+    /** Test the method 'toStringEquals' */
+    @Test
+    public void toStringEqualsTest() {
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+
+        test1.setAccountId("TS");
+
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+        SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+
+        test2.setAccountId("TS");
+
+        test2.setFirstName("TS");
+
+        test2.setLastName("TS");
+
+        test2.setDisplayName("TS");
+
+        test2.setCompanyName("TS");
+
+        test2.setPhone("TS");
+
+        test2.setEmail("TS");
+
+        test2.setWebsite("TS");
+
+        Map<String, Object> testMap2 = testMap;
+        test2.setOptionalAttributes(testMap2);
+        test2.setEvpVettingScore(1);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
+    }
+
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
 
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
-      Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test2.setAccountId("TS");
-      
-        
-        
+        test1.setAccountId("TS");
 
-      
-        
-        
-      test2.setFirstName("TS");
-      
-        
-        
-      test2.setLastName("TS");
-      
-        
-        
-      test2.setDisplayName("TS");
-      
-        
-        
-      test2.setCompanyName("TS");
-      
-        
-        
-      test2.setPhone("TS");
-      
-        
-        
-      test2.setEmail("TS");
-      
-        
-        
-      test2.setWebsite("TS");
-      
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+        SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+
+        test2.setAccountId("TS");
+
+        test2.setFirstName("TS");
+
+        test2.setLastName("TS");
+
+        test2.setDisplayName("TS");
+
+        test2.setCompanyName("TS");
+
+        test2.setPhone("TS");
+
+        test2.setEmail("TS");
+
+        test2.setWebsite("TS");
+
         Map<String, Object> testMap2 = testMap;
-      test2.setOptionalAttributes(testMap2);
-      test2.setEvpVettingScore(1);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        test2.setOptionalAttributes(testMap2);
+        test2.setEvpVettingScore(1);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test1.setAccountId("TS");
-      
-        
-        
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
 
-      
-        
-        
-      test1.setFirstName("TS");
-      
-        
-        
-      test1.setLastName("TS");
-      
-        
-        
-      test1.setDisplayName("TS");
-      
-        
-        
-      test1.setCompanyName("TS");
-      
-        
-        
-      test1.setPhone("TS");
-      
-        
-        
-      test1.setEmail("TS");
-      
-        
-        
-      test1.setWebsite("TS");
-      
-      Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
-      SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
-      test2.setAccountId("TS2");
-      
-        
-        
-
-      
-        
-        
-      test2.setFirstName("TS2");
-      
-        
-        
-      test2.setLastName("TS2");
-      
-        
-        
-      test2.setDisplayName("TS2");
-      
-        
-        
-      test2.setCompanyName("TS2");
-      
-        
-        
-      test2.setPhone("TS2");
-      
-        
-        
-      test2.setEmail("TS2");
-      
-        
-        
-      test2.setWebsite("TS2");
-      
-      Map<String, Object> testMap2 = new HashMap();
-      test2.setOptionalAttributes(testMap2);
-      test2.setEvpVettingScore(0);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-    }
-
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
-    public void toStringTypeTest() {
-      SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
-        
-        
         test1.setAccountId("TS");
-      
-        
-        
 
-      
-        
-        
         test1.setFirstName("TS");
-      
-        
-        
-        test1.setLastName("TS");
-      
-        
-        
-        test1.setDisplayName("TS");
-      
-        
-        
-        test1.setCompanyName("TS");
-      
-        
-        
-        test1.setPhone("TS");
-      
-        
-        
-        test1.setEmail("TS");
-      
-        
-        
-        test1.setWebsite("TS");
-      
-        Map<String, Object> testMap = new HashMap();
-      test1.setOptionalAttributes(testMap);
-      test1.setEvpVettingScore(1);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+        SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
+
+        test2.setAccountId("TS2");
+
+        test2.setFirstName("TS2");
+
+        test2.setLastName("TS2");
+
+        test2.setDisplayName("TS2");
+
+        test2.setCompanyName("TS2");
+
+        test2.setPhone("TS2");
+
+        test2.setEmail("TS2");
+
+        test2.setWebsite("TS2");
+
+        Map<String, Object> testMap2 = new HashMap();
+        test2.setOptionalAttributes(testMap2);
+        test2.setEvpVettingScore(0);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    
- }
+    /** Test the method 'toStringType' */
+    @Test
+    public void toStringTypeTest() {
+        SMSTenDLCPartnerCampaignBrand test1 = new SMSTenDLCPartnerCampaignBrand();
+
+        test1.setAccountId("TS");
+
+        test1.setFirstName("TS");
+
+        test1.setLastName("TS");
+
+        test1.setDisplayName("TS");
+
+        test1.setCompanyName("TS");
+
+        test1.setPhone("TS");
+
+        test1.setEmail("TS");
+
+        test1.setWebsite("TS");
+
+        Map<String, Object> testMap = new HashMap();
+        test1.setOptionalAttributes(testMap);
+        test1.setEvpVettingScore(1);
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
+    }
+}

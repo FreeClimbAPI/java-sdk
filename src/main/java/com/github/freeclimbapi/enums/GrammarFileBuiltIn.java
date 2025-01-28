@@ -12,95 +12,81 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets GrammarFileBuiltIn
- */
+/** Gets or Sets GrammarFileBuiltIn */
 @JsonAdapter(GrammarFileBuiltIn.Adapter.class)
 public enum GrammarFileBuiltIn {
-  
-  ALPHNUM6("ALPHNUM6"),
-  
-  ANY_DIG("ANY_DIG"),
-  
-  DIG1("DIG1"),
-  
-  DIG2("DIG2"),
-  
-  DIG3("DIG3"),
-  
-  DIG4("DIG4"),
-  
-  DIG5("DIG5"),
-  
-  DIG6("DIG6"),
-  
-  DIG7("DIG7"),
-  
-  DIG8("DIG8"),
-  
-  DIG9("DIG9"),
-  
-  DIG10("DIG10"),
-  
-  DIG11("DIG11"),
-  
-  UP_TO_20_DIGIT_SEQUENCE("UP_TO_20_DIGIT_SEQUENCE"),
-  
-  VERSAY_YESNO("VERSAY_YESNO");
+    ALPHNUM6("ALPHNUM6"),
 
-  private String value;
+    ANY_DIG("ANY_DIG"),
 
-  GrammarFileBuiltIn(String value) {
-    this.value = value;
-  }
+    DIG1("DIG1"),
 
-  public String getValue() {
-    return value;
-  }
+    DIG2("DIG2"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    DIG3("DIG3"),
 
-  public static GrammarFileBuiltIn fromValue(String value) {
-    for (GrammarFileBuiltIn b : GrammarFileBuiltIn.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    DIG4("DIG4"),
+
+    DIG5("DIG5"),
+
+    DIG6("DIG6"),
+
+    DIG7("DIG7"),
+
+    DIG8("DIG8"),
+
+    DIG9("DIG9"),
+
+    DIG10("DIG10"),
+
+    DIG11("DIG11"),
+
+    UP_TO_20_DIGIT_SEQUENCE("UP_TO_20_DIGIT_SEQUENCE"),
+
+    VERSAY_YESNO("VERSAY_YESNO");
+
+    private String value;
+
+    GrammarFileBuiltIn(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<GrammarFileBuiltIn> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final GrammarFileBuiltIn enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public GrammarFileBuiltIn read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return GrammarFileBuiltIn.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static GrammarFileBuiltIn fromValue(String value) {
+        for (GrammarFileBuiltIn b : GrammarFileBuiltIn.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<GrammarFileBuiltIn> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final GrammarFileBuiltIn enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public GrammarFileBuiltIn read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return GrammarFileBuiltIn.fromValue(value);
+        }
+    }
 }
-

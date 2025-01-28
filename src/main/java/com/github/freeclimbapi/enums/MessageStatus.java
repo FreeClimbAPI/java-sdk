@@ -12,87 +12,76 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 /**
- * Indicates the state of the message through the message lifecycle including: new, queued, rejected, sending, sent, failed, received, undelivered, expired, deleted, and unknown
+ * Indicates the state of the message through the message lifecycle including: new, queued,
+ * rejected, sending, sent, failed, received, undelivered, expired, deleted, and unknown
  */
 @JsonAdapter(MessageStatus.Adapter.class)
 public enum MessageStatus {
-  
-  NEW("new"),
-  
-  QUEUED("queued"),
-  
-  REJECTED("rejected"),
-  
-  SENDING("sending"),
-  
-  SENT("sent"),
-  
-  FAILED("failed"),
-  
-  RECEIVED("received"),
-  
-  UNDELIVERED("undelivered"),
-  
-  EXPIRED("expired"),
-  
-  DELETED("deleted"),
-  
-  UNKNOWN("unknown");
+    NEW("new"),
 
-  private String value;
+    QUEUED("queued"),
 
-  MessageStatus(String value) {
-    this.value = value;
-  }
+    REJECTED("rejected"),
 
-  public String getValue() {
-    return value;
-  }
+    SENDING("sending"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    SENT("sent"),
 
-  public static MessageStatus fromValue(String value) {
-    for (MessageStatus b : MessageStatus.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    FAILED("failed"),
+
+    RECEIVED("received"),
+
+    UNDELIVERED("undelivered"),
+
+    EXPIRED("expired"),
+
+    DELETED("deleted"),
+
+    UNKNOWN("unknown");
+
+    private String value;
+
+    MessageStatus(String value) {
+        this.value = value;
     }
-    return null;
-  }
 
-  public static class Adapter extends TypeAdapter<MessageStatus> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final MessageStatus enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public MessageStatus read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return MessageStatus.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static MessageStatus fromValue(String value) {
+        for (MessageStatus b : MessageStatus.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    public static class Adapter extends TypeAdapter<MessageStatus> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final MessageStatus enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public MessageStatus read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return MessageStatus.fromValue(value);
+        }
+    }
 }
-

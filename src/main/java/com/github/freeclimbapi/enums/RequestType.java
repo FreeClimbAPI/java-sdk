@@ -12,111 +12,97 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets RequestType
- */
+/** Gets or Sets RequestType */
 @JsonAdapter(RequestType.Adapter.class)
 public enum RequestType {
-  
-  INBOUND_CALL("inboundCall"),
-  
-  RECORD("record"),
-  
-  GET_DIGITS("getDigits"),
-  
-  GET_SPEECH("getSpeech"),
-  
-  REDIRECT("redirect"),
-  
-  PAUSE("pause"),
-  
-  OUT_DIAL_START("outDialStart"),
-  
-  OUT_DIAL_CONNECT("outDialConnect"),
-  
-  OUT_DIAL_API_CONNECT("outDialApiConnect"),
-  
-  MACHINE_DETECTED("machineDetected"),
-  
-  DEQUEUE("dequeue"),
-  
-  QUEUE_WAIT("queueWait"),
-  
-  ADD_TO_QUEUE_NOTIFICATION("addToQueueNotification"),
-  
-  REMOVE_FROM_QUEUE_NOTIFICATION("removeFromQueueNotification"),
-  
-  CALL_STATUS("callStatus"),
-  
-  CREATE_CONFERENCE("createConference"),
-  
-  CONFERENCE_STATUS("conferenceStatus"),
-  
-  LEAVE_CONFERENCE("leaveConference"),
-  
-  ADD_TO_CONFERENCE_NOTIFICATION("addToConferenceNotification"),
-  
-  CONFERENCE_RECORDING_STATUS("conferenceRecordingStatus"),
-  
-  CONFERENCE_CALL_CONTROL("conferenceCallControl"),
-  
-  MESSAGE_DELIVERY("messageDelivery"),
-  
-  MESSAGE_STATUS("messageStatus");
+    INBOUND_CALL("inboundCall"),
 
-  private String value;
+    RECORD("record"),
 
-  RequestType(String value) {
-    this.value = value;
-  }
+    GET_DIGITS("getDigits"),
 
-  public String getValue() {
-    return value;
-  }
+    GET_SPEECH("getSpeech"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    REDIRECT("redirect"),
 
-  public static RequestType fromValue(String value) {
-    for (RequestType b : RequestType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    PAUSE("pause"),
+
+    OUT_DIAL_START("outDialStart"),
+
+    OUT_DIAL_CONNECT("outDialConnect"),
+
+    OUT_DIAL_API_CONNECT("outDialApiConnect"),
+
+    MACHINE_DETECTED("machineDetected"),
+
+    DEQUEUE("dequeue"),
+
+    QUEUE_WAIT("queueWait"),
+
+    ADD_TO_QUEUE_NOTIFICATION("addToQueueNotification"),
+
+    REMOVE_FROM_QUEUE_NOTIFICATION("removeFromQueueNotification"),
+
+    CALL_STATUS("callStatus"),
+
+    CREATE_CONFERENCE("createConference"),
+
+    CONFERENCE_STATUS("conferenceStatus"),
+
+    LEAVE_CONFERENCE("leaveConference"),
+
+    ADD_TO_CONFERENCE_NOTIFICATION("addToConferenceNotification"),
+
+    CONFERENCE_RECORDING_STATUS("conferenceRecordingStatus"),
+
+    CONFERENCE_CALL_CONTROL("conferenceCallControl"),
+
+    MESSAGE_DELIVERY("messageDelivery"),
+
+    MESSAGE_STATUS("messageStatus");
+
+    private String value;
+
+    RequestType(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<RequestType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final RequestType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public RequestType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return RequestType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static RequestType fromValue(String value) {
+        for (RequestType b : RequestType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<RequestType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final RequestType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public RequestType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return RequestType.fromValue(value);
+        }
+    }
 }
-

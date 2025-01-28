@@ -12,122 +12,105 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;SetListen&#x60; command enables or disables the listen privilege for this Conference Participant. The Participant can hear what the other participants are saying only if this privilege is enabled.
+ * The &#x60;SetListen&#x60; command enables or disables the listen privilege for this Conference
+ * Participant. The Participant can hear what the other participants are saying only if this
+ * privilege is enabled.
  */
-@ApiModel(description = "The `SetListen` command enables or disables the listen privilege for this Conference Participant. The Participant can hear what the other participants are saying only if this privilege is enabled.")
+@ApiModel(
+        description =
+                "The `SetListen` command enables or disables the listen privilege for this"
+                        + " Conference Participant. The Participant can hear what the other"
+                        + " participants are saying only if this privilege is enabled.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SetListen extends PerclCommand {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_LISTEN = "listen";
-  
-  
-  @SerializedName(SERIALIZED_NAME_LISTEN)
-  
-  private Boolean listen;
-
-
-  public SetListen() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public SetListen listen(Boolean listen) {
-    
-    this.listen = listen;
-    return this;
-  }
-
-   /**
-   * Specifying &#x60;false&#x60; will silence the Conference for this Participant.
-   * @return listen
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specifying `false` will silence the Conference for this Participant.")
-
-  public Boolean getListen() {
-    return listen;
-  }
-
-
-  public void setListen(Boolean listen) {
-    this.listen = listen;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_LISTEN = "listen";
+
+    @SerializedName(SERIALIZED_NAME_LISTEN)
+    private Boolean listen;
+
+    public SetListen() {
+        this.command = this.getClass().getSimpleName();
     }
-    SetListen setListen = (SetListen) o;
-    return Objects.equals(this.listen, setListen.listen) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(listen, super.hashCode());
-  }
+    public SetListen listen(Boolean listen) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SetListen {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("listen", () -> this.getListen());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.listen = listen;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Specifying &#x60;false&#x60; will silence the Conference for this Participant.
+     *
+     * @return listen
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value = "Specifying `false` will silence the Conference for this Participant.")
+    public Boolean getListen() {
+        return listen;
+    }
+
+    public void setListen(Boolean listen) {
+        this.listen = listen;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SetListen setListen = (SetListen) o;
+        return Objects.equals(this.listen, setListen.listen) && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(listen, super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SetListen {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("listen", () -> this.getListen());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for GetSpeechReason
- */
- public class GetSpeechReasonTest {
-    
-    
-    
+/** Model tests for GetSpeechReason */
+public class GetSpeechReasonTest {
+
     @Test
     public void testERRORShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.ERROR;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testERRORShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.ERROR;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("error");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testERRORShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.ERROR;
-      String expectedValue = "error";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.ERROR;
+        String expectedValue = "error";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testHANGUPShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.HANGUP;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testHANGUPShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.HANGUP;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("hangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,21 +61,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testHANGUPShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.HANGUP;
-      String expectedValue = "hangup";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.HANGUP;
+        String expectedValue = "hangup";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testDIGITShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.DIGIT;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testDIGITShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.DIGIT;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("digit");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -100,21 +84,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testDIGITShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.DIGIT;
-      String expectedValue = "digit";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.DIGIT;
+        String expectedValue = "digit";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testNO_INPUTShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.NO_INPUT;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testNO_INPUTShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.NO_INPUT;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("noInput");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -122,21 +107,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testNO_INPUTShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.NO_INPUT;
-      String expectedValue = "noInput";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.NO_INPUT;
+        String expectedValue = "noInput";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testNO_MATCHShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.NO_MATCH;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testNO_MATCHShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.NO_MATCH;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("noMatch");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -144,21 +130,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testNO_MATCHShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.NO_MATCH;
-      String expectedValue = "noMatch";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.NO_MATCH;
+        String expectedValue = "noMatch";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testRECOGNITIONShouldWork() {
 
         GetSpeechReason test = GetSpeechReason.RECOGNITION;
-         Assert.assertEquals(test.getClass(), GetSpeechReason.class);
+        Assert.assertEquals(test.getClass(), GetSpeechReason.class);
     }
 
-    @Test 
+    @Test
     public void testRECOGNITIONShouldSerializeToEnum() {
-    
+
         GetSpeechReason expectedValue = GetSpeechReason.RECOGNITION;
         GetSpeechReason calculatedValue = GetSpeechReason.fromValue("recognition");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -166,11 +153,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testRECOGNITIONShouldDeserializeToString() {
-     GetSpeechReason test = GetSpeechReason.RECOGNITION;
-      String expectedValue = "recognition";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        GetSpeechReason test = GetSpeechReason.RECOGNITION;
+        String expectedValue = "recognition";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

@@ -12,112 +12,84 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * MessageResultAllOfTfn
- */
+/** MessageResultAllOfTfn */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MessageResultAllOfTfn {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
-  
-  private String campaignId;
-
-
-  public MessageResultAllOfTfn() { 
-  }
-
-  public MessageResultAllOfTfn campaignId(String campaignId) {
-    
-    this.campaignId = campaignId;
-    return this;
-  }
-
-   /**
-   * TFNCampaignId
-   * @return campaignId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "cmptfn_387ec3f6e03b340553f35f29c8f118cdf3eae08a", required = true, value = "TFNCampaignId")
-
-  public String getCampaignId() {
-    return campaignId;
-  }
-
-
-  public void setCampaignId(String campaignId) {
-    this.campaignId = campaignId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+
+    @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+    private String campaignId;
+
+    public MessageResultAllOfTfn() {}
+
+    public MessageResultAllOfTfn campaignId(String campaignId) {
+
+        this.campaignId = campaignId;
+        return this;
     }
-    MessageResultAllOfTfn messageResultAllOfTfn = (MessageResultAllOfTfn) o;
-    return Objects.equals(this.campaignId, messageResultAllOfTfn.campaignId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(campaignId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class MessageResultAllOfTfn {\n");
-    sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * TFNCampaignId
+     *
+     * @return campaignId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            example = "cmptfn_387ec3f6e03b340553f35f29c8f118cdf3eae08a",
+            required = true,
+            value = "TFNCampaignId")
+    public String getCampaignId() {
+        return campaignId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        MessageResultAllOfTfn messageResultAllOfTfn = (MessageResultAllOfTfn) o;
+        return Objects.equals(this.campaignId, messageResultAllOfTfn.campaignId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(campaignId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class MessageResultAllOfTfn {\n");
+        sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

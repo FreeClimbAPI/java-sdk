@@ -12,460 +12,428 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
+import java.util.*;
+import java.util.Arrays;
+import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * The OutDial command has started and the actionUrl is being invoked. This request is made in the context of the parent call (Call leg that invoked). A PerCL response is expected.
+ * The OutDial command has started and the actionUrl is being invoked. This request is made in the
+ * context of the parent call (Call leg that invoked). A PerCL response is expected.
  */
-@ApiModel(description = "The OutDial command has started and the actionUrl is being invoked. This request is made in the context of the parent call (Call leg that invoked). A PerCL response is expected.")
+@ApiModel(
+        description =
+                "The OutDial command has started and the actionUrl is being invoked. This request"
+                    + " is made in the context of the parent call (Call leg that invoked). A PerCL"
+                    + " response is expected.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OutDialStartWebhook extends Webhook {
-  public static OutDialStartWebhook deserialize(String payload) {
-    return (OutDialStartWebhook)(new JSON().getGson().fromJson(payload, Webhook.class));
-  }
-  public static String getDiscriminatorValue() {
-    return "outDialStart";
-  }
-  
-  public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
-  
-  
-  @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
-  
-  protected String requestType;
-
-  
-  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-  
-  private String accountId;
-
-  
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  
-  private String callId;
-
-  
-  public static final String SERIALIZED_NAME_FROM = "from";
-  
-  
-  @SerializedName(SERIALIZED_NAME_FROM)
-  
-  private String from;
-
-  
-  public static final String SERIALIZED_NAME_TO = "to";
-  
-  
-  @SerializedName(SERIALIZED_NAME_TO)
-  
-  private String to;
-
-  
-  public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CALL_STATUS)
-  
-  private CallStatus callStatus;
-
-  
-  public static final String SERIALIZED_NAME_DIRECTION = "direction";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DIRECTION)
-  
-  private CallDirection direction;
-
-  
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  
-  private String conferenceId;
-
-  
-  public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_QUEUE_ID)
-  
-  private String queueId;
-
-  
-  public static final String SERIALIZED_NAME_DIAL_CALL_ID = "dialCallId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DIAL_CALL_ID)
-  
-  private String dialCallId;
-
-  
-  public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
-  
-  private String parentCallId;
-
-
-  public OutDialStartWebhook() { 
-    this.requestType = this.getClass().getSimpleName();
-  }
-
-  public OutDialStartWebhook requestType(String requestType) {
-    
-    this.requestType = requestType;
-    return this;
-  }
-
-   /**
-   * Context or reason why this request is being made. Will be outDialStart - The OutDial command has started and the actionUrl is being invoked.
-   * @return requestType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Context or reason why this request is being made. Will be outDialStart - The OutDial command has started and the actionUrl is being invoked.")
-
-  public String getRequestType() {
-    return requestType;
-  }
-
-
-  public void setRequestType(String requestType) {
-    this.requestType = requestType;
-  }
-
-
-  public OutDialStartWebhook accountId(String accountId) {
-    
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * Account ID associated with your account.
-   * @return accountId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Account ID associated with your account.")
-
-  public String getAccountId() {
-    return accountId;
-  }
-
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
-
-  public OutDialStartWebhook callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * Unique identifier for this Call, generated by FreeClimb
-   * @return callId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unique identifier for this Call, generated by FreeClimb")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
-
-  public OutDialStartWebhook from(String from) {
-    
-    this.from = from;
-    return this;
-  }
-
-   /**
-   * Phone number of the party that initiated the Call (in E.164 format).
-   * @return from
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Phone number of the party that initiated the Call (in E.164 format).")
-
-  public String getFrom() {
-    return from;
-  }
-
-
-  public void setFrom(String from) {
-    this.from = from;
-  }
-
-
-  public OutDialStartWebhook to(String to) {
-    
-    this.to = to;
-    return this;
-  }
-
-   /**
-   * Phone number provisioned to the customer and to which this Call is directed (in E.164 format).
-   * @return to
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Phone number provisioned to the customer and to which this Call is directed (in E.164 format).")
-
-  public String getTo() {
-    return to;
-  }
-
-
-  public void setTo(String to) {
-    this.to = to;
-  }
-
-
-  public OutDialStartWebhook callStatus(CallStatus callStatus) {
-    
-    this.callStatus = callStatus;
-    return this;
-  }
-
-   /**
-   * Get callStatus
-   * @return callStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public CallStatus getCallStatus() {
-    return callStatus;
-  }
-
-
-  public void setCallStatus(CallStatus callStatus) {
-    this.callStatus = callStatus;
-  }
-
-
-  public OutDialStartWebhook direction(CallDirection direction) {
-    
-    this.direction = direction;
-    return this;
-  }
-
-   /**
-   * Get direction
-   * @return direction
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public CallDirection getDirection() {
-    return direction;
-  }
-
-
-  public void setDirection(CallDirection direction) {
-    this.direction = direction;
-  }
-
-
-  public OutDialStartWebhook conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * This is only populated if request pertains to a conference. Otherwise, it is set to null.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "This is only populated if request pertains to a conference. Otherwise, it is set to null.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
-  public OutDialStartWebhook queueId(String queueId) {
-    
-    this.queueId = queueId;
-    return this;
-  }
-
-   /**
-   * This is only populated if the request pertains to a queue. Otherwise, it is set to null.
-   * @return queueId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "This is only populated if the request pertains to a queue. Otherwise, it is set to null.")
-
-  public String getQueueId() {
-    return queueId;
-  }
-
-
-  public void setQueueId(String queueId) {
-    this.queueId = queueId;
-  }
-
-
-  public OutDialStartWebhook dialCallId(String dialCallId) {
-    
-    this.dialCallId = dialCallId;
-    return this;
-  }
-
-   /**
-   * ID of the child call that was generated as a result of the Outdial.
-   * @return dialCallId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the child call that was generated as a result of the Outdial.")
-
-  public String getDialCallId() {
-    return dialCallId;
-  }
-
-
-  public void setDialCallId(String dialCallId) {
-    this.dialCallId = dialCallId;
-  }
-
-
-  public OutDialStartWebhook parentCallId(String parentCallId) {
-    
-    this.parentCallId = parentCallId;
-    return this;
-  }
-
-   /**
-   * ID of the Call that created this leg (child call). If this was an inbound call or call created via REST API with no parent, this field will be null.
-   * @return parentCallId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Call that created this leg (child call). If this was an inbound call or call created via REST API with no parent, this field will be null.")
-
-  public String getParentCallId() {
-    return parentCallId;
-  }
-
-
-  public void setParentCallId(String parentCallId) {
-    this.parentCallId = parentCallId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static OutDialStartWebhook deserialize(String payload) {
+        return (OutDialStartWebhook) (new JSON().getGson().fromJson(payload, Webhook.class));
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static String getDiscriminatorValue() {
+        return "outDialStart";
     }
-    OutDialStartWebhook outDialStartWebhook = (OutDialStartWebhook) o;
-    return Objects.equals(this.requestType, outDialStartWebhook.requestType) &&
-        Objects.equals(this.accountId, outDialStartWebhook.accountId) &&
-        Objects.equals(this.callId, outDialStartWebhook.callId) &&
-        Objects.equals(this.from, outDialStartWebhook.from) &&
-        Objects.equals(this.to, outDialStartWebhook.to) &&
-        Objects.equals(this.callStatus, outDialStartWebhook.callStatus) &&
-        Objects.equals(this.direction, outDialStartWebhook.direction) &&
-        Objects.equals(this.conferenceId, outDialStartWebhook.conferenceId) &&
-        Objects.equals(this.queueId, outDialStartWebhook.queueId) &&
-        Objects.equals(this.dialCallId, outDialStartWebhook.dialCallId) &&
-        Objects.equals(this.parentCallId, outDialStartWebhook.parentCallId) &&
-        super.equals(o);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
+    public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(requestType, accountId, callId, from, to, callStatus, direction, conferenceId, queueId, dialCallId, parentCallId, super.hashCode());
-  }
+    @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
+    protected String requestType;
 
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+
+    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+    private String accountId;
+
+    public static final String SERIALIZED_NAME_CALL_ID = "callId";
+
+    @SerializedName(SERIALIZED_NAME_CALL_ID)
+    private String callId;
+
+    public static final String SERIALIZED_NAME_FROM = "from";
+
+    @SerializedName(SERIALIZED_NAME_FROM)
+    private String from;
+
+    public static final String SERIALIZED_NAME_TO = "to";
+
+    @SerializedName(SERIALIZED_NAME_TO)
+    private String to;
+
+    public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+
+    @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+    private CallStatus callStatus;
+
+    public static final String SERIALIZED_NAME_DIRECTION = "direction";
+
+    @SerializedName(SERIALIZED_NAME_DIRECTION)
+    private CallDirection direction;
+
+    public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+
+    @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+    private String conferenceId;
+
+    public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+
+    @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+    private String queueId;
+
+    public static final String SERIALIZED_NAME_DIAL_CALL_ID = "dialCallId";
+
+    @SerializedName(SERIALIZED_NAME_DIAL_CALL_ID)
+    private String dialCallId;
+
+    public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+
+    @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+    private String parentCallId;
+
+    public OutDialStartWebhook() {
+        this.requestType = this.getClass().getSimpleName();
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class OutDialStartWebhook {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
-    sb.append("    from: ").append(toIndentedString(from)).append("\n");
-    sb.append("    to: ").append(toIndentedString(to)).append("\n");
-    sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
-    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
-    sb.append("    dialCallId: ").append(toIndentedString(dialCallId)).append("\n");
-    sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
+    public OutDialStartWebhook requestType(String requestType) {
 
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.requestType = requestType;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Context or reason why this request is being made. Will be outDialStart - The OutDial command
+     * has started and the actionUrl is being invoked.
+     *
+     * @return requestType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Context or reason why this request is being made. Will be outDialStart - The"
+                            + " OutDial command has started and the actionUrl is being invoked.")
+    public String getRequestType() {
+        return requestType;
+    }
+
+    public void setRequestType(String requestType) {
+        this.requestType = requestType;
+    }
+
+    public OutDialStartWebhook accountId(String accountId) {
+
+        this.accountId = accountId;
+        return this;
+    }
+
+    /**
+     * Account ID associated with your account.
+     *
+     * @return accountId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Account ID associated with your account.")
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public OutDialStartWebhook callId(String callId) {
+
+        this.callId = callId;
+        return this;
+    }
+
+    /**
+     * Unique identifier for this Call, generated by FreeClimb
+     *
+     * @return callId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Unique identifier for this Call, generated by FreeClimb")
+    public String getCallId() {
+        return callId;
+    }
+
+    public void setCallId(String callId) {
+        this.callId = callId;
+    }
+
+    public OutDialStartWebhook from(String from) {
+
+        this.from = from;
+        return this;
+    }
+
+    /**
+     * Phone number of the party that initiated the Call (in E.164 format).
+     *
+     * @return from
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value = "Phone number of the party that initiated the Call (in E.164 format).")
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public OutDialStartWebhook to(String to) {
+
+        this.to = to;
+        return this;
+    }
+
+    /**
+     * Phone number provisioned to the customer and to which this Call is directed (in E.164
+     * format).
+     *
+     * @return to
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Phone number provisioned to the customer and to which this Call is directed"
+                            + " (in E.164 format).")
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public OutDialStartWebhook callStatus(CallStatus callStatus) {
+
+        this.callStatus = callStatus;
+        return this;
+    }
+
+    /**
+     * Get callStatus
+     *
+     * @return callStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public CallStatus getCallStatus() {
+        return callStatus;
+    }
+
+    public void setCallStatus(CallStatus callStatus) {
+        this.callStatus = callStatus;
+    }
+
+    public OutDialStartWebhook direction(CallDirection direction) {
+
+        this.direction = direction;
+        return this;
+    }
+
+    /**
+     * Get direction
+     *
+     * @return direction
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public CallDirection getDirection() {
+        return direction;
+    }
+
+    public void setDirection(CallDirection direction) {
+        this.direction = direction;
+    }
+
+    public OutDialStartWebhook conferenceId(String conferenceId) {
+
+        this.conferenceId = conferenceId;
+        return this;
+    }
+
+    /**
+     * This is only populated if request pertains to a conference. Otherwise, it is set to null.
+     *
+     * @return conferenceId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "This is only populated if request pertains to a conference. Otherwise, it is"
+                            + " set to null.")
+    public String getConferenceId() {
+        return conferenceId;
+    }
+
+    public void setConferenceId(String conferenceId) {
+        this.conferenceId = conferenceId;
+    }
+
+    public OutDialStartWebhook queueId(String queueId) {
+
+        this.queueId = queueId;
+        return this;
+    }
+
+    /**
+     * This is only populated if the request pertains to a queue. Otherwise, it is set to null.
+     *
+     * @return queueId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "This is only populated if the request pertains to a queue. Otherwise, it is"
+                            + " set to null.")
+    public String getQueueId() {
+        return queueId;
+    }
+
+    public void setQueueId(String queueId) {
+        this.queueId = queueId;
+    }
+
+    public OutDialStartWebhook dialCallId(String dialCallId) {
+
+        this.dialCallId = dialCallId;
+        return this;
+    }
+
+    /**
+     * ID of the child call that was generated as a result of the Outdial.
+     *
+     * @return dialCallId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the child call that was generated as a result of the Outdial.")
+    public String getDialCallId() {
+        return dialCallId;
+    }
+
+    public void setDialCallId(String dialCallId) {
+        this.dialCallId = dialCallId;
+    }
+
+    public OutDialStartWebhook parentCallId(String parentCallId) {
+
+        this.parentCallId = parentCallId;
+        return this;
+    }
+
+    /**
+     * ID of the Call that created this leg (child call). If this was an inbound call or call
+     * created via REST API with no parent, this field will be null.
+     *
+     * @return parentCallId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "ID of the Call that created this leg (child call). If this was an inbound call"
+                        + " or call created via REST API with no parent, this field will be null.")
+    public String getParentCallId() {
+        return parentCallId;
+    }
+
+    public void setParentCallId(String parentCallId) {
+        this.parentCallId = parentCallId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        OutDialStartWebhook outDialStartWebhook = (OutDialStartWebhook) o;
+        return Objects.equals(this.requestType, outDialStartWebhook.requestType)
+                && Objects.equals(this.accountId, outDialStartWebhook.accountId)
+                && Objects.equals(this.callId, outDialStartWebhook.callId)
+                && Objects.equals(this.from, outDialStartWebhook.from)
+                && Objects.equals(this.to, outDialStartWebhook.to)
+                && Objects.equals(this.callStatus, outDialStartWebhook.callStatus)
+                && Objects.equals(this.direction, outDialStartWebhook.direction)
+                && Objects.equals(this.conferenceId, outDialStartWebhook.conferenceId)
+                && Objects.equals(this.queueId, outDialStartWebhook.queueId)
+                && Objects.equals(this.dialCallId, outDialStartWebhook.dialCallId)
+                && Objects.equals(this.parentCallId, outDialStartWebhook.parentCallId)
+                && super.equals(o);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                requestType,
+                accountId,
+                callId,
+                from,
+                to,
+                callStatus,
+                direction,
+                conferenceId,
+                queueId,
+                dialCallId,
+                parentCallId,
+                super.hashCode());
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class OutDialStartWebhook {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
+        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+        sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
+        sb.append("    from: ").append(toIndentedString(from)).append("\n");
+        sb.append("    to: ").append(toIndentedString(to)).append("\n");
+        sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
+        sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+        sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
+        sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
+        sb.append("    dialCallId: ").append(toIndentedString(dialCallId)).append("\n");
+        sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

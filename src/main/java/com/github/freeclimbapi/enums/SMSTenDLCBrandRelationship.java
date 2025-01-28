@@ -12,75 +12,61 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Brand relationship to the CSP
- */
+/** Brand relationship to the CSP */
 @JsonAdapter(SMSTenDLCBrandRelationship.Adapter.class)
 public enum SMSTenDLCBrandRelationship {
-  
-  BASIC_ACCOUNT("BASIC_ACCOUNT"),
-  
-  SMALL_ACCOUNT("SMALL_ACCOUNT"),
-  
-  MEDIUM_ACCOUNT("MEDIUM_ACCOUNT"),
-  
-  LARGE_ACCOUNT("LARGE_ACCOUNT"),
-  
-  KEY_ACCOUNT("KEY_ACCOUNT");
+    BASIC_ACCOUNT("BASIC_ACCOUNT"),
 
-  private String value;
+    SMALL_ACCOUNT("SMALL_ACCOUNT"),
 
-  SMSTenDLCBrandRelationship(String value) {
-    this.value = value;
-  }
+    MEDIUM_ACCOUNT("MEDIUM_ACCOUNT"),
 
-  public String getValue() {
-    return value;
-  }
+    LARGE_ACCOUNT("LARGE_ACCOUNT"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    KEY_ACCOUNT("KEY_ACCOUNT");
 
-  public static SMSTenDLCBrandRelationship fromValue(String value) {
-    for (SMSTenDLCBrandRelationship b : SMSTenDLCBrandRelationship.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    private String value;
+
+    SMSTenDLCBrandRelationship(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<SMSTenDLCBrandRelationship> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandRelationship enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public SMSTenDLCBrandRelationship read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return SMSTenDLCBrandRelationship.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static SMSTenDLCBrandRelationship fromValue(String value) {
+        for (SMSTenDLCBrandRelationship b : SMSTenDLCBrandRelationship.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<SMSTenDLCBrandRelationship> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandRelationship enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public SMSTenDLCBrandRelationship read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return SMSTenDLCBrandRelationship.fromValue(value);
+        }
+    }
 }
-

@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for LogLevel
- */
- public class LogLevelTest {
-    
-    
-    
+/** Model tests for LogLevel */
+public class LogLevelTest {
+
     @Test
     public void testINFOShouldWork() {
 
         LogLevel test = LogLevel.INFO;
-         Assert.assertEquals(test.getClass(), LogLevel.class);
+        Assert.assertEquals(test.getClass(), LogLevel.class);
     }
 
-    @Test 
+    @Test
     public void testINFOShouldSerializeToEnum() {
-    
+
         LogLevel expectedValue = LogLevel.INFO;
         LogLevel calculatedValue = LogLevel.fromValue("info");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testINFOShouldDeserializeToString() {
-     LogLevel test = LogLevel.INFO;
-      String expectedValue = "info";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        LogLevel test = LogLevel.INFO;
+        String expectedValue = "info";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testWARNINGShouldWork() {
 
         LogLevel test = LogLevel.WARNING;
-         Assert.assertEquals(test.getClass(), LogLevel.class);
+        Assert.assertEquals(test.getClass(), LogLevel.class);
     }
 
-    @Test 
+    @Test
     public void testWARNINGShouldSerializeToEnum() {
-    
+
         LogLevel expectedValue = LogLevel.WARNING;
         LogLevel calculatedValue = LogLevel.fromValue("warning");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,21 +61,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testWARNINGShouldDeserializeToString() {
-     LogLevel test = LogLevel.WARNING;
-      String expectedValue = "warning";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        LogLevel test = LogLevel.WARNING;
+        String expectedValue = "warning";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testERRORShouldWork() {
 
         LogLevel test = LogLevel.ERROR;
-         Assert.assertEquals(test.getClass(), LogLevel.class);
+        Assert.assertEquals(test.getClass(), LogLevel.class);
     }
 
-    @Test 
+    @Test
     public void testERRORShouldSerializeToEnum() {
-    
+
         LogLevel expectedValue = LogLevel.ERROR;
         LogLevel calculatedValue = LogLevel.fromValue("error");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -100,11 +84,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testERRORShouldDeserializeToString() {
-     LogLevel test = LogLevel.ERROR;
-      String expectedValue = "error";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        LogLevel test = LogLevel.ERROR;
+        String expectedValue = "error";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

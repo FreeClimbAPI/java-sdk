@@ -12,122 +12,118 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.net.URI;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;Redirect&#x60; command transfers control of a Call to the PerCL at a different URL. &#x60;Redirect&#x60; is a terminal command, so any actions following it are never executed. The maximum number of redirections allowed during the life time of a Call is 256. This is intended to prevent a Call from possibly looping infinitely due to errors in PerCL being generated.
+ * The &#x60;Redirect&#x60; command transfers control of a Call to the PerCL at a different URL.
+ * &#x60;Redirect&#x60; is a terminal command, so any actions following it are never executed. The
+ * maximum number of redirections allowed during the life time of a Call is 256. This is intended to
+ * prevent a Call from possibly looping infinitely due to errors in PerCL being generated.
  */
-@ApiModel(description = "The `Redirect` command transfers control of a Call to the PerCL at a different URL. `Redirect` is a terminal command, so any actions following it are never executed. The maximum number of redirections allowed during the life time of a Call is 256. This is intended to prevent a Call from possibly looping infinitely due to errors in PerCL being generated.")
+@ApiModel(
+        description =
+                "The `Redirect` command transfers control of a Call to the PerCL at a different"
+                    + " URL. `Redirect` is a terminal command, so any actions following it are"
+                    + " never executed. The maximum number of redirections allowed during the life"
+                    + " time of a Call is 256. This is intended to prevent a Call from possibly"
+                    + " looping infinitely due to errors in PerCL being generated.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Redirect extends PerclCommand {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ACTION_URL)
-  
-  private URI actionUrl;
-
-
-  public Redirect() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public Redirect actionUrl(URI actionUrl) {
-    
-    this.actionUrl = actionUrl;
-    return this;
-  }
-
-   /**
-   * URL to request a new PerCL script to continue with the current Call&#39;s processing. When &#x60;Redirect&#x60; invokes the &#x60;actionUrl&#x60;, an &#x60;inbound&#x60; Webhook is sent. This request therefore looks identical to the initial request (made to the &#x60;voiceUrl&#x60; of the number that was called) for an inbound Call.
-   * @return actionUrl
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "URL to request a new PerCL script to continue with the current Call's processing. When `Redirect` invokes the `actionUrl`, an `inbound` Webhook is sent. This request therefore looks identical to the initial request (made to the `voiceUrl` of the number that was called) for an inbound Call.")
-
-  public URI getActionUrl() {
-    return actionUrl;
-  }
-
-
-  public void setActionUrl(URI actionUrl) {
-    this.actionUrl = actionUrl;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+
+    @SerializedName(SERIALIZED_NAME_ACTION_URL)
+    private URI actionUrl;
+
+    public Redirect() {
+        this.command = this.getClass().getSimpleName();
     }
-    Redirect redirect = (Redirect) o;
-    return Objects.equals(this.actionUrl, redirect.actionUrl) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(actionUrl, super.hashCode());
-  }
+    public Redirect actionUrl(URI actionUrl) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Redirect {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("actionUrl", () -> this.getActionUrl());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.actionUrl = actionUrl;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * URL to request a new PerCL script to continue with the current Call&#39;s processing. When
+     * &#x60;Redirect&#x60; invokes the &#x60;actionUrl&#x60;, an &#x60;inbound&#x60; Webhook is
+     * sent. This request therefore looks identical to the initial request (made to the
+     * &#x60;voiceUrl&#x60; of the number that was called) for an inbound Call.
+     *
+     * @return actionUrl
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "URL to request a new PerCL script to continue with the current Call's"
+                        + " processing. When `Redirect` invokes the `actionUrl`, an `inbound`"
+                        + " Webhook is sent. This request therefore looks identical to the initial"
+                        + " request (made to the `voiceUrl` of the number that was called) for an"
+                        + " inbound Call.")
+    public URI getActionUrl() {
+        return actionUrl;
+    }
+
+    public void setActionUrl(URI actionUrl) {
+        this.actionUrl = actionUrl;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Redirect redirect = (Redirect) o;
+        return Objects.equals(this.actionUrl, redirect.actionUrl) && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(actionUrl, super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Redirect {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("actionUrl", () -> this.getActionUrl());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

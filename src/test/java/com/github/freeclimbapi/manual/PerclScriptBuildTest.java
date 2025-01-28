@@ -1,29 +1,19 @@
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
-import java.util.*;
-import java.io.File;
-import java.math.BigDecimal;
-import com.github.freeclimbapi.models.*;
 import com.github.freeclimbapi.enums.*;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
-import java.security.NoSuchAlgorithmException;
-import java.security.InvalidKeyException;
+import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class PerclScriptBuildTest {
 
     private final PerclScript instance = new PerclScript();
 
-    public String expectedPerclJson = "[{\"Pause\":{}},{\"SendDigits\":{}},{\"Pause\":{}},{\"GetDigits\":{\"prompts\":[{\"Play\":"
-            +
-            "{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}}"
-            +
-            ",{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}}]}}]";
+    public String expectedPerclJson =
+            "[{\"Pause\":{}},{\"SendDigits\":{}},{\"Pause\":{}},{\"GetDigits\":{\"prompts\":[{\"Play\":"
+                + "{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}}"
+                + ",{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}}]}}]";
 
     @Test
     public void buildArrayListToJsonTest() throws Exception {
@@ -134,5 +124,4 @@ public class PerclScriptBuildTest {
         String perclJson = instance.toJson();
         Assert.assertEquals(perclJson, expectedPerclJson);
     }
-
 }

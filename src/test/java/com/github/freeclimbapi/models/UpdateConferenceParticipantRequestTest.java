@@ -10,184 +10,137 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for UpdateConferenceParticipantRequest
- */
- public class UpdateConferenceParticipantRequestTest {
-    
-    private final UpdateConferenceParticipantRequest model = new UpdateConferenceParticipantRequest(
-    );
-    
-    
-    /**
-     * Test the property 'talk'
-     */
+/** Model tests for UpdateConferenceParticipantRequest */
+public class UpdateConferenceParticipantRequestTest {
+
+    private final UpdateConferenceParticipantRequest model =
+            new UpdateConferenceParticipantRequest();
+
+    /** Test the property 'talk' */
     @Test
     public void talkTest() {
-      model.setTalk(false);
-      Assert.assertEquals(false, model.getTalk());       
-      
+        model.setTalk(false);
+        Assert.assertEquals(false, model.getTalk());
     }
-    /**
-     * Test the property 'listen'
-     */
+
+    /** Test the property 'listen' */
     @Test
     public void listenTest() {
-      model.setListen(false);
-      Assert.assertEquals(false, model.getListen());       
-      
+        model.setListen(false);
+        Assert.assertEquals(false, model.getListen());
     }
-    /**
-     * Test the property 'dtmfPassThrough'
-     */
+
+    /** Test the property 'dtmfPassThrough' */
     @Test
     public void dtmfPassThroughTest() {
-      model.setDtmfPassThrough(false);
-      Assert.assertEquals(false, model.getDtmfPassThrough());       
-      
+        model.setDtmfPassThrough(false);
+        Assert.assertEquals(false, model.getDtmfPassThrough());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
-      test2.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        test2.setTalk(true);
+        test2.setListen(true);
+        test2.setDtmfPassThrough(true);
 
-      Assert.assertTrue(test1.equals(test2));
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(false);
-      test2.setListen(false);
-      test2.setDtmfPassThrough(false);
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        test2.setTalk(false);
+        test2.setListen(false);
+        test2.setDtmfPassThrough(false);
 
-      Assert.assertFalse(test1.equals(test2));
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
-      test2.setDtmfPassThrough(true);
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        test2.setTalk(true);
+        test2.setListen(true);
+        test2.setDtmfPassThrough(true);
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(true);
-      test2.setListen(true);
-      test2.setDtmfPassThrough(true);
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        test2.setTalk(true);
+        test2.setListen(true);
+        test2.setDtmfPassThrough(true);
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
-      UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
-      test2.setTalk(false);
-      test2.setListen(false);
-      test2.setDtmfPassThrough(false);
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
+        test2.setTalk(false);
+        test2.setListen(false);
+        test2.setDtmfPassThrough(false);
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
+    /** Test the method 'toStringType' */
+    @Test
     public void toStringTypeTest() {
-      UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
-      test1.setTalk(true);
-      test1.setListen(true);
-      test1.setDtmfPassThrough(true);
+        UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
+        test1.setTalk(true);
+        test1.setListen(true);
+        test1.setDtmfPassThrough(true);
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
     }
-
-    
- }
+}

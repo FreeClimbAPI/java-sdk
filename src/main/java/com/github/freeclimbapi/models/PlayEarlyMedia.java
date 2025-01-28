@@ -12,122 +12,118 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 /**
- * &#x60;PlayEarlyMedia&#x60; is relevant only when present as the very first command in the PerCL script returned for an incoming Call. In such cases, the command is executed before FreeClimb attempts to connect the call. The audio file it uses can be stored in any location that is accessible via URL.
+ * &#x60;PlayEarlyMedia&#x60; is relevant only when present as the very first command in the PerCL
+ * script returned for an incoming Call. In such cases, the command is executed before FreeClimb
+ * attempts to connect the call. The audio file it uses can be stored in any location that is
+ * accessible via URL.
  */
-@ApiModel(description = "`PlayEarlyMedia` is relevant only when present as the very first command in the PerCL script returned for an incoming Call. In such cases, the command is executed before FreeClimb attempts to connect the call. The audio file it uses can be stored in any location that is accessible via URL.")
+@ApiModel(
+        description =
+                "`PlayEarlyMedia` is relevant only when present as the very first command in the"
+                    + " PerCL script returned for an incoming Call. In such cases, the command is"
+                    + " executed before FreeClimb attempts to connect the call. The audio file it"
+                    + " uses can be stored in any location that is accessible via URL.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlayEarlyMedia extends PerclCommand {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_FILE = "file";
-  
-  
-  @SerializedName(SERIALIZED_NAME_FILE)
-  
-  private String _file;
-
-
-  public PlayEarlyMedia() { 
-    this.command = this.getClass().getSimpleName();
-  }
-
-  public PlayEarlyMedia _file(String _file) {
-    
-    this._file = _file;
-    return this;
-  }
-
-   /**
-   * RL of the audio file to be played to the caller. The URL can be the &#x60;recordingUrl&#x60; generated from the &#x60;RecordUtterance&#x60; or &#x60;StartRecordCall&#x60; PerCL commands or any accessible URL. FreeClimb will respect Cache-Control headers for this file. Use these to limit repeated requests for unchanged audio. If no Cache-Control header is provided, the file will be cached for seven days by default.
-   * @return _file
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "RL of the audio file to be played to the caller. The URL can be the `recordingUrl` generated from the `RecordUtterance` or `StartRecordCall` PerCL commands or any accessible URL. FreeClimb will respect Cache-Control headers for this file. Use these to limit repeated requests for unchanged audio. If no Cache-Control header is provided, the file will be cached for seven days by default.")
-
-  public String getFile() {
-    return _file;
-  }
-
-
-  public void setFile(String _file) {
-    this._file = _file;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_FILE = "file";
+
+    @SerializedName(SERIALIZED_NAME_FILE)
+    private String _file;
+
+    public PlayEarlyMedia() {
+        this.command = this.getClass().getSimpleName();
     }
-    PlayEarlyMedia playEarlyMedia = (PlayEarlyMedia) o;
-    return Objects.equals(this._file, playEarlyMedia._file) &&
-        super.equals(o);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(_file, super.hashCode());
-  }
+    public PlayEarlyMedia _file(String _file) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class PlayEarlyMedia {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  @Override
-  public Map<String, Callable<Object>> attributeTypeMap() {
-    Map<String, Callable<Object>> attributes = new HashMap();
-    attributes.put("file", () -> this.getFile());
-    return attributes;
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this._file = _file;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * RL of the audio file to be played to the caller. The URL can be the &#x60;recordingUrl&#x60;
+     * generated from the &#x60;RecordUtterance&#x60; or &#x60;StartRecordCall&#x60; PerCL commands
+     * or any accessible URL. FreeClimb will respect Cache-Control headers for this file. Use these
+     * to limit repeated requests for unchanged audio. If no Cache-Control header is provided, the
+     * file will be cached for seven days by default.
+     *
+     * @return _file
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "RL of the audio file to be played to the caller. The URL can be the"
+                        + " `recordingUrl` generated from the `RecordUtterance` or"
+                        + " `StartRecordCall` PerCL commands or any accessible URL. FreeClimb will"
+                        + " respect Cache-Control headers for this file. Use these to limit"
+                        + " repeated requests for unchanged audio. If no Cache-Control header is"
+                        + " provided, the file will be cached for seven days by default.")
+    public String getFile() {
+        return _file;
+    }
+
+    public void setFile(String _file) {
+        this._file = _file;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PlayEarlyMedia playEarlyMedia = (PlayEarlyMedia) o;
+        return Objects.equals(this._file, playEarlyMedia._file) && super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(_file, super.hashCode());
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class PlayEarlyMedia {\n");
+        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+        sb.append("    _file: ").append(toIndentedString(_file)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public Map<String, Callable<Object>> attributeTypeMap() {
+        Map<String, Callable<Object>> attributes = new HashMap();
+        attributes.put("file", () -> this.getFile());
+        return attributes;
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

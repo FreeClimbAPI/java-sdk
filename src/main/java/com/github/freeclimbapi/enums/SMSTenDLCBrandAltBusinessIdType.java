@@ -12,73 +12,61 @@
 
 package com.github.freeclimbapi.enums;
 
-import java.util.Objects;
-import java.util.Arrays;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * The type of the Alternative business identifier
- */
+/** The type of the Alternative business identifier */
 @JsonAdapter(SMSTenDLCBrandAltBusinessIdType.Adapter.class)
 public enum SMSTenDLCBrandAltBusinessIdType {
-  
-  NONE("NONE"),
-  
-  DUNS("DUNS"),
-  
-  GIIN("GIIN"),
-  
-  LEI("LEI");
+    NONE("NONE"),
 
-  private String value;
+    DUNS("DUNS"),
 
-  SMSTenDLCBrandAltBusinessIdType(String value) {
-    this.value = value;
-  }
+    GIIN("GIIN"),
 
-  public String getValue() {
-    return value;
-  }
+    LEI("LEI");
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    private String value;
 
-  public static SMSTenDLCBrandAltBusinessIdType fromValue(String value) {
-    for (SMSTenDLCBrandAltBusinessIdType b : SMSTenDLCBrandAltBusinessIdType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    SMSTenDLCBrandAltBusinessIdType(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<SMSTenDLCBrandAltBusinessIdType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandAltBusinessIdType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public SMSTenDLCBrandAltBusinessIdType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return SMSTenDLCBrandAltBusinessIdType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static SMSTenDLCBrandAltBusinessIdType fromValue(String value) {
+        for (SMSTenDLCBrandAltBusinessIdType b : SMSTenDLCBrandAltBusinessIdType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<SMSTenDLCBrandAltBusinessIdType> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter, final SMSTenDLCBrandAltBusinessIdType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public SMSTenDLCBrandAltBusinessIdType read(final JsonReader jsonReader)
+                throws IOException {
+            String value = jsonReader.nextString();
+            return SMSTenDLCBrandAltBusinessIdType.fromValue(value);
+        }
+    }
 }
-

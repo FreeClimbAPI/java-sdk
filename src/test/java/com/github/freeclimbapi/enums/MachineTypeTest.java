@@ -10,45 +10,27 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for MachineType
- */
- public class MachineTypeTest {
-    
-    
-    
+/** Model tests for MachineType */
+public class MachineTypeTest {
+
     @Test
     public void testANSWERING_MACHINEShouldWork() {
 
         MachineType test = MachineType.ANSWERING_MACHINE;
-         Assert.assertEquals(test.getClass(), MachineType.class);
+        Assert.assertEquals(test.getClass(), MachineType.class);
     }
 
-    @Test 
+    @Test
     public void testANSWERING_MACHINEShouldSerializeToEnum() {
-    
+
         MachineType expectedValue = MachineType.ANSWERING_MACHINE;
         MachineType calculatedValue = MachineType.fromValue("answering machine");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -56,21 +38,22 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testANSWERING_MACHINEShouldDeserializeToString() {
-     MachineType test = MachineType.ANSWERING_MACHINE;
-      String expectedValue = "answering machine";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        MachineType test = MachineType.ANSWERING_MACHINE;
+        String expectedValue = "answering machine";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-        @Test
+
+    @Test
     public void testFAX_MODEMShouldWork() {
 
         MachineType test = MachineType.FAX_MODEM;
-         Assert.assertEquals(test.getClass(), MachineType.class);
+        Assert.assertEquals(test.getClass(), MachineType.class);
     }
 
-    @Test 
+    @Test
     public void testFAX_MODEMShouldSerializeToEnum() {
-    
+
         MachineType expectedValue = MachineType.FAX_MODEM;
         MachineType calculatedValue = MachineType.fromValue("fax modem");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -78,11 +61,9 @@ import com.github.freeclimbapi.models.*;
 
     @Test
     public void testFAX_MODEMShouldDeserializeToString() {
-     MachineType test = MachineType.FAX_MODEM;
-      String expectedValue = "fax modem";
-      String calculatedValue = test.toString();
-      Assert.assertEquals(expectedValue, calculatedValue);
+        MachineType test = MachineType.FAX_MODEM;
+        String expectedValue = "fax modem";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
     }
-    
-    
- }
+}

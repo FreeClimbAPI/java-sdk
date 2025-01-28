@@ -12,453 +12,416 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Arrays;
+import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * ConferenceParticipantResult
- */
+/** ConferenceParticipantResult */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConferenceParticipantResult {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_URI = "uri";
-  
-  
-  @SerializedName(SERIALIZED_NAME_URI)
-  
-  private String uri;
-
-  
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
-  
-  private String dateCreated;
-
-  
-  public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
-  
-  private String dateUpdated;
-
-  
-  public static final String SERIALIZED_NAME_REVISION = "revision";
-  
-  
-  @SerializedName(SERIALIZED_NAME_REVISION)
-  
-  private Integer revision;
-
-  
-  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-  
-  private String accountId;
-
-  
-  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-  
-  private String conferenceId;
-
-  
-  public static final String SERIALIZED_NAME_CALL_ID = "callId";
-  
-  
-  @SerializedName(SERIALIZED_NAME_CALL_ID)
-  
-  private String callId;
-
-  
-  public static final String SERIALIZED_NAME_TALK = "talk";
-  
-  
-  @SerializedName(SERIALIZED_NAME_TALK)
-  
-  private Boolean talk;
-
-  
-  public static final String SERIALIZED_NAME_LISTEN = "listen";
-  
-  
-  @SerializedName(SERIALIZED_NAME_LISTEN)
-  
-  private Boolean listen;
-
-  
-  public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
-  
-  
-  @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
-  
-  private Boolean dtmfPassThrough;
-
-  
-  public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
-  
-  
-  @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
-  
-  private Boolean startConfOnEnter;
-
-
-  public ConferenceParticipantResult() { 
-  }
-
-  public ConferenceParticipantResult uri(String uri) {
-    
-    this.uri = uri;
-    return this;
-  }
-
-   /**
-   * The URI for this resource, relative to /apiserver.
-   * @return uri
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
-
-  public String getUri() {
-    return uri;
-  }
-
-
-  public void setUri(String uri) {
-    this.uri = uri;
-  }
-
-
-  public ConferenceParticipantResult dateCreated(String dateCreated) {
-    
-    this.dateCreated = dateCreated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateCreated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateCreated() {
-    return dateCreated;
-  }
-
-
-  public void setDateCreated(String dateCreated) {
-    this.dateCreated = dateCreated;
-  }
-
-
-  public ConferenceParticipantResult dateUpdated(String dateUpdated) {
-    
-    this.dateUpdated = dateUpdated;
-    return this;
-  }
-
-   /**
-   * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).
-   * @return dateUpdated
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT).")
-
-  public String getDateUpdated() {
-    return dateUpdated;
-  }
-
-
-  public void setDateUpdated(String dateUpdated) {
-    this.dateUpdated = dateUpdated;
-  }
-
-
-  public ConferenceParticipantResult revision(Integer revision) {
-    
-    this.revision = revision;
-    return this;
-  }
-
-   /**
-   * Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.
-   * @return revision
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated.")
-
-  public Integer getRevision() {
-    return revision;
-  }
-
-
-  public void setRevision(Integer revision) {
-    this.revision = revision;
-  }
-
-
-  public ConferenceParticipantResult accountId(String accountId) {
-    
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * ID of the account that created this participant.
-   * @return accountId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the account that created this participant.")
-
-  public String getAccountId() {
-    return accountId;
-  }
-
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
-
-  public ConferenceParticipantResult conferenceId(String conferenceId) {
-    
-    this.conferenceId = conferenceId;
-    return this;
-  }
-
-   /**
-   * ID of the conference this participant is in.
-   * @return conferenceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the conference this participant is in.")
-
-  public String getConferenceId() {
-    return conferenceId;
-  }
-
-
-  public void setConferenceId(String conferenceId) {
-    this.conferenceId = conferenceId;
-  }
-
-
-  public ConferenceParticipantResult callId(String callId) {
-    
-    this.callId = callId;
-    return this;
-  }
-
-   /**
-   * ID of the Call associated with this Participant.
-   * @return callId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the Call associated with this Participant.")
-
-  public String getCallId() {
-    return callId;
-  }
-
-
-  public void setCallId(String callId) {
-    this.callId = callId;
-  }
-
-
-  public ConferenceParticipantResult talk(Boolean talk) {
-    
-    this.talk = talk;
-    return this;
-  }
-
-   /**
-   * True if this Participant has talk privileges in the Conference. False otherwise.
-   * @return talk
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this Participant has talk privileges in the Conference. False otherwise.")
-
-  public Boolean getTalk() {
-    return talk;
-  }
-
-
-  public void setTalk(Boolean talk) {
-    this.talk = talk;
-  }
-
-
-  public ConferenceParticipantResult listen(Boolean listen) {
-    
-    this.listen = listen;
-    return this;
-  }
-
-   /**
-   * True if this Participant has listen privileges in the Conference. False otherwise.
-   * @return listen
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this Participant has listen privileges in the Conference. False otherwise.")
-
-  public Boolean getListen() {
-    return listen;
-  }
-
-
-  public void setListen(Boolean listen) {
-    this.listen = listen;
-  }
-
-
-  public ConferenceParticipantResult dtmfPassThrough(Boolean dtmfPassThrough) {
-    
-    this.dtmfPassThrough = dtmfPassThrough;
-    return this;
-  }
-
-   /**
-   * True if this Participant had dtmfPassThrough privileges in the Conference. False otherwise.
-   * @return dtmfPassThrough
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this Participant had dtmfPassThrough privileges in the Conference. False otherwise.")
-
-  public Boolean getDtmfPassThrough() {
-    return dtmfPassThrough;
-  }
-
-
-  public void setDtmfPassThrough(Boolean dtmfPassThrough) {
-    this.dtmfPassThrough = dtmfPassThrough;
-  }
-
-
-  public ConferenceParticipantResult startConfOnEnter(Boolean startConfOnEnter) {
-    
-    this.startConfOnEnter = startConfOnEnter;
-    return this;
-  }
-
-   /**
-   * True if this Participant joining the Conference caused the Conference to start (status &#x3D; inProgress). False otherwise.
-   * @return startConfOnEnter
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this Participant joining the Conference caused the Conference to start (status = inProgress). False otherwise.")
-
-  public Boolean getStartConfOnEnter() {
-    return startConfOnEnter;
-  }
-
-
-  public void setStartConfOnEnter(Boolean startConfOnEnter) {
-    this.startConfOnEnter = startConfOnEnter;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_URI = "uri";
+
+    @SerializedName(SERIALIZED_NAME_URI)
+    private String uri;
+
+    public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+    private String dateCreated;
+
+    public static final String SERIALIZED_NAME_DATE_UPDATED = "dateUpdated";
+
+    @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+    private String dateUpdated;
+
+    public static final String SERIALIZED_NAME_REVISION = "revision";
+
+    @SerializedName(SERIALIZED_NAME_REVISION)
+    private Integer revision;
+
+    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+
+    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+    private String accountId;
+
+    public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+
+    @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+    private String conferenceId;
+
+    public static final String SERIALIZED_NAME_CALL_ID = "callId";
+
+    @SerializedName(SERIALIZED_NAME_CALL_ID)
+    private String callId;
+
+    public static final String SERIALIZED_NAME_TALK = "talk";
+
+    @SerializedName(SERIALIZED_NAME_TALK)
+    private Boolean talk;
+
+    public static final String SERIALIZED_NAME_LISTEN = "listen";
+
+    @SerializedName(SERIALIZED_NAME_LISTEN)
+    private Boolean listen;
+
+    public static final String SERIALIZED_NAME_DTMF_PASS_THROUGH = "dtmfPassThrough";
+
+    @SerializedName(SERIALIZED_NAME_DTMF_PASS_THROUGH)
+    private Boolean dtmfPassThrough;
+
+    public static final String SERIALIZED_NAME_START_CONF_ON_ENTER = "startConfOnEnter";
+
+    @SerializedName(SERIALIZED_NAME_START_CONF_ON_ENTER)
+    private Boolean startConfOnEnter;
+
+    public ConferenceParticipantResult() {}
+
+    public ConferenceParticipantResult uri(String uri) {
+
+        this.uri = uri;
+        return this;
     }
-    ConferenceParticipantResult conferenceParticipantResult = (ConferenceParticipantResult) o;
-    return Objects.equals(this.uri, conferenceParticipantResult.uri) &&
-        Objects.equals(this.dateCreated, conferenceParticipantResult.dateCreated) &&
-        Objects.equals(this.dateUpdated, conferenceParticipantResult.dateUpdated) &&
-        Objects.equals(this.revision, conferenceParticipantResult.revision) &&
-        Objects.equals(this.accountId, conferenceParticipantResult.accountId) &&
-        Objects.equals(this.conferenceId, conferenceParticipantResult.conferenceId) &&
-        Objects.equals(this.callId, conferenceParticipantResult.callId) &&
-        Objects.equals(this.talk, conferenceParticipantResult.talk) &&
-        Objects.equals(this.listen, conferenceParticipantResult.listen) &&
-        Objects.equals(this.dtmfPassThrough, conferenceParticipantResult.dtmfPassThrough) &&
-        Objects.equals(this.startConfOnEnter, conferenceParticipantResult.startConfOnEnter);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(uri, dateCreated, dateUpdated, revision, accountId, conferenceId, callId, talk, listen, dtmfPassThrough, startConfOnEnter);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    /**
+     * The URI for this resource, relative to /apiserver.
+     *
+     * @return uri
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "The URI for this resource, relative to /apiserver.")
+    public String getUri() {
+        return uri;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ConferenceParticipantResult {\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
-    sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
-    sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
-    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
-    sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
-    sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
-    sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
-    sb.append("    startConfOnEnter: ").append(toIndentedString(startConfOnEnter)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setUri(String uri) {
+        this.uri = uri;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ConferenceParticipantResult dateCreated(String dateCreated) {
+
+        this.dateCreated = dateCreated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateCreated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was created (GMT) in RFC 1123 format (e.g., Mon,"
+                            + " 15 Jun 2009 20:45:30 GMT).")
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public ConferenceParticipantResult dateUpdated(String dateUpdated) {
+
+        this.dateUpdated = dateUpdated;
+        return this;
+    }
+
+    /**
+     * The date that this resource was last updated (GMT) in RFC 1123 format (e.g., Mon, 15 Jun 2009
+     * 20:45:30 GMT).
+     *
+     * @return dateUpdated
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was last updated (GMT) in RFC 1123 format (e.g.,"
+                            + " Mon, 15 Jun 2009 20:45:30 GMT).")
+    public String getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(String dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    public ConferenceParticipantResult revision(Integer revision) {
+
+        this.revision = revision;
+        return this;
+    }
+
+    /**
+     * Revision count for the resource. This count is set to 1 on creation and is incremented every
+     * time it is updated.
+     *
+     * @return revision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Revision count for the resource. This count is set to 1 on creation and is"
+                            + " incremented every time it is updated.")
+    public Integer getRevision() {
+        return revision;
+    }
+
+    public void setRevision(Integer revision) {
+        this.revision = revision;
+    }
+
+    public ConferenceParticipantResult accountId(String accountId) {
+
+        this.accountId = accountId;
+        return this;
+    }
+
+    /**
+     * ID of the account that created this participant.
+     *
+     * @return accountId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the account that created this participant.")
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public ConferenceParticipantResult conferenceId(String conferenceId) {
+
+        this.conferenceId = conferenceId;
+        return this;
+    }
+
+    /**
+     * ID of the conference this participant is in.
+     *
+     * @return conferenceId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the conference this participant is in.")
+    public String getConferenceId() {
+        return conferenceId;
+    }
+
+    public void setConferenceId(String conferenceId) {
+        this.conferenceId = conferenceId;
+    }
+
+    public ConferenceParticipantResult callId(String callId) {
+
+        this.callId = callId;
+        return this;
+    }
+
+    /**
+     * ID of the Call associated with this Participant.
+     *
+     * @return callId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the Call associated with this Participant.")
+    public String getCallId() {
+        return callId;
+    }
+
+    public void setCallId(String callId) {
+        this.callId = callId;
+    }
+
+    public ConferenceParticipantResult talk(Boolean talk) {
+
+        this.talk = talk;
+        return this;
+    }
+
+    /**
+     * True if this Participant has talk privileges in the Conference. False otherwise.
+     *
+     * @return talk
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "True if this Participant has talk privileges in the Conference. False"
+                            + " otherwise.")
+    public Boolean getTalk() {
+        return talk;
+    }
+
+    public void setTalk(Boolean talk) {
+        this.talk = talk;
+    }
+
+    public ConferenceParticipantResult listen(Boolean listen) {
+
+        this.listen = listen;
+        return this;
+    }
+
+    /**
+     * True if this Participant has listen privileges in the Conference. False otherwise.
+     *
+     * @return listen
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "True if this Participant has listen privileges in the Conference. False"
+                            + " otherwise.")
+    public Boolean getListen() {
+        return listen;
+    }
+
+    public void setListen(Boolean listen) {
+        this.listen = listen;
+    }
+
+    public ConferenceParticipantResult dtmfPassThrough(Boolean dtmfPassThrough) {
+
+        this.dtmfPassThrough = dtmfPassThrough;
+        return this;
+    }
+
+    /**
+     * True if this Participant had dtmfPassThrough privileges in the Conference. False otherwise.
+     *
+     * @return dtmfPassThrough
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "True if this Participant had dtmfPassThrough privileges in the Conference."
+                            + " False otherwise.")
+    public Boolean getDtmfPassThrough() {
+        return dtmfPassThrough;
+    }
+
+    public void setDtmfPassThrough(Boolean dtmfPassThrough) {
+        this.dtmfPassThrough = dtmfPassThrough;
+    }
+
+    public ConferenceParticipantResult startConfOnEnter(Boolean startConfOnEnter) {
+
+        this.startConfOnEnter = startConfOnEnter;
+        return this;
+    }
+
+    /**
+     * True if this Participant joining the Conference caused the Conference to start (status &#x3D;
+     * inProgress). False otherwise.
+     *
+     * @return startConfOnEnter
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "True if this Participant joining the Conference caused the Conference to start"
+                            + " (status = inProgress). False otherwise.")
+    public Boolean getStartConfOnEnter() {
+        return startConfOnEnter;
+    }
+
+    public void setStartConfOnEnter(Boolean startConfOnEnter) {
+        this.startConfOnEnter = startConfOnEnter;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ConferenceParticipantResult conferenceParticipantResult = (ConferenceParticipantResult) o;
+        return Objects.equals(this.uri, conferenceParticipantResult.uri)
+                && Objects.equals(this.dateCreated, conferenceParticipantResult.dateCreated)
+                && Objects.equals(this.dateUpdated, conferenceParticipantResult.dateUpdated)
+                && Objects.equals(this.revision, conferenceParticipantResult.revision)
+                && Objects.equals(this.accountId, conferenceParticipantResult.accountId)
+                && Objects.equals(this.conferenceId, conferenceParticipantResult.conferenceId)
+                && Objects.equals(this.callId, conferenceParticipantResult.callId)
+                && Objects.equals(this.talk, conferenceParticipantResult.talk)
+                && Objects.equals(this.listen, conferenceParticipantResult.listen)
+                && Objects.equals(this.dtmfPassThrough, conferenceParticipantResult.dtmfPassThrough)
+                && Objects.equals(
+                        this.startConfOnEnter, conferenceParticipantResult.startConfOnEnter);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                uri,
+                dateCreated,
+                dateUpdated,
+                revision,
+                accountId,
+                conferenceId,
+                callId,
+                talk,
+                listen,
+                dtmfPassThrough,
+                startConfOnEnter);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ConferenceParticipantResult {\n");
+        sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+        sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+        sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
+        sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
+        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+        sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
+        sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
+        sb.append("    talk: ").append(toIndentedString(talk)).append("\n");
+        sb.append("    listen: ").append(toIndentedString(listen)).append("\n");
+        sb.append("    dtmfPassThrough: ").append(toIndentedString(dtmfPassThrough)).append("\n");
+        sb.append("    startConfOnEnter: ").append(toIndentedString(startConfOnEnter)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

@@ -10,181 +10,118 @@
  * Do not edit the class manually.
  */
 
-
 package com.github.freeclimbapi;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.LocalDate;
-
-import java.util.*;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.io.File;
-import java.math.BigDecimal;
-import java.net.URI;
-import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import java.util.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Model tests for MessageResultAllOfTfn
- */
- public class MessageResultAllOfTfnTest {
-    
-    private final MessageResultAllOfTfn model = new MessageResultAllOfTfn(
-    );
-    
-    
-    /**
-     * Test the property 'campaignId'
-     */
+/** Model tests for MessageResultAllOfTfn */
+public class MessageResultAllOfTfnTest {
+
+    private final MessageResultAllOfTfn model = new MessageResultAllOfTfn();
+
+    /** Test the property 'campaignId' */
     @Test
     public void campaignIdTest() {
-      
-      
-      model.setCampaignId("TEST_STRING");
-      Assert.assertEquals("TEST_STRING", model.getCampaignId());
-      
-      
+
+        model.setCampaignId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCampaignId());
     }
 
-      /**
-     * Test the method 'equalsTrue'
-     */
-
-     @Test
+    /** Test the method 'equalsTrue' */
+    @Test
     public void equalsTrueTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
-        
-        
-      test2.setCampaignId("TS");
-      
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-      Assert.assertTrue(test1.equals(test2));
+        test1.setCampaignId("TS");
+
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
+
+        test2.setCampaignId("TS");
+
+        Assert.assertTrue(test1.equals(test2));
     }
 
-    /**
-     * Test the method 'equalsFalse'
-     */
-
-     @Test
+    /** Test the method 'equalsFalse' */
+    @Test
     public void equalsFalseTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
-        
-        
-      test2.setCampaignId("TS2");
-      
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-      Assert.assertFalse(test1.equals(test2));
+        test1.setCampaignId("TS");
+
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
+
+        test2.setCampaignId("TS2");
+
+        Assert.assertFalse(test1.equals(test2));
     }
-    
-    /**
-     * Test the method 'hashCodeType'
-     */
 
-     @Test
+    /** Test the method 'hashCodeType' */
+    @Test
     public void hashCodeTypeTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      
-      int hashCode1 = test1.hashCode();
-      Assert.assertTrue(Integer.class.isInstance(hashCode1));
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
+
+        test1.setCampaignId("TS");
+
+        int hashCode1 = test1.hashCode();
+        Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /**
-     * Test the method 'toStringEquals'
-     */
-
-     @Test
+    /** Test the method 'toStringEquals' */
+    @Test
     public void toStringEqualsTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
-        
-        
-      test2.setCampaignId("TS");
-      
-        
-      String toString1 = test1.toString();
-      String toString2 = test2.toString();
-      Assert.assertEquals(toString1, toString2);
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
+
+        test1.setCampaignId("TS");
+
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
+
+        test2.setCampaignId("TS");
+
+        String toString1 = test1.toString();
+        String toString2 = test2.toString();
+        Assert.assertEquals(toString1, toString2);
     }
 
-    /**
-     * Test the method 'hashCodeEqualsTrue'
-     */
-
+    /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
-        
-        
-      test2.setCampaignId("TS");
-      
-      Assert.assertEquals(test1.hashCode(), test2.hashCode());
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
+
+        test1.setCampaignId("TS");
+
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
+
+        test2.setCampaignId("TS");
+
+        Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /**
-     * Test the method 'hashCodeEqualsFalse'
-     */
-
+    /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
-      test1.setCampaignId("TS");
-      
-      MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
-        
-        
-      test2.setCampaignId("TS2");
-      
-      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
-    }
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-     /**
-     * Test the method 'toStringType'
-     */
-
-     @Test
-    public void toStringTypeTest() {
-      MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
-        
-        
         test1.setCampaignId("TS");
-      
 
-      String toString1 = test1.toString();
-      Assert.assertTrue(String.class.isInstance(toString1));
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
+
+        test2.setCampaignId("TS2");
+
+        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    
- }
+    /** Test the method 'toStringType' */
+    @Test
+    public void toStringTypeTest() {
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
+
+        test1.setCampaignId("TS");
+
+        String toString1 = test1.toString();
+        Assert.assertTrue(String.class.isInstance(toString1));
+    }
+}

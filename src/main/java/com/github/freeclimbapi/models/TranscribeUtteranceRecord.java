@@ -12,182 +12,143 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * TranscribeUtteranceRecord
- */
+/** TranscribeUtteranceRecord */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TranscribeUtteranceRecord {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  public static final String SERIALIZED_NAME_SAVE_RECORDING = "saveRecording";
-  
-  
-  @SerializedName(SERIALIZED_NAME_SAVE_RECORDING)
-  
-  private Boolean saveRecording = false;
-
-  
-  public static final String SERIALIZED_NAME_MAX_LENGTH_SEC = "maxLengthSec";
-  
-  
-  @SerializedName(SERIALIZED_NAME_MAX_LENGTH_SEC)
-  
-  private Integer maxLengthSec = 60;
-
-  
-  public static final String SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS = "rcrdTerminationSilenceTimeMs";
-  
-  
-  @SerializedName(SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS)
-  
-  private Integer rcrdTerminationSilenceTimeMs;
-
-
-  public TranscribeUtteranceRecord() { 
-  }
-
-  public TranscribeUtteranceRecord saveRecording(Boolean saveRecording) {
-    
-    this.saveRecording = saveRecording;
-    return this;
-  }
-
-   /**
-   * Get saveRecording
-   * @return saveRecording
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Boolean getSaveRecording() {
-    return saveRecording;
-  }
-
-
-  public void setSaveRecording(Boolean saveRecording) {
-    this.saveRecording = saveRecording;
-  }
-
-
-  public TranscribeUtteranceRecord maxLengthSec(Integer maxLengthSec) {
-    
-    this.maxLengthSec = maxLengthSec;
-    return this;
-  }
-
-   /**
-   * Get maxLengthSec
-   * minimum: 1
-   * maximum: 60
-   * @return maxLengthSec
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getMaxLengthSec() {
-    return maxLengthSec;
-  }
-
-
-  public void setMaxLengthSec(Integer maxLengthSec) {
-    this.maxLengthSec = maxLengthSec;
-  }
-
-
-  public TranscribeUtteranceRecord rcrdTerminationSilenceTimeMs(Integer rcrdTerminationSilenceTimeMs) {
-    
-    this.rcrdTerminationSilenceTimeMs = rcrdTerminationSilenceTimeMs;
-    return this;
-  }
-
-   /**
-   * Get rcrdTerminationSilenceTimeMs
-   * minimum: 1
-   * maximum: 3000
-   * @return rcrdTerminationSilenceTimeMs
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getRcrdTerminationSilenceTimeMs() {
-    return rcrdTerminationSilenceTimeMs;
-  }
-
-
-  public void setRcrdTerminationSilenceTimeMs(Integer rcrdTerminationSilenceTimeMs) {
-    this.rcrdTerminationSilenceTimeMs = rcrdTerminationSilenceTimeMs;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public static final String SERIALIZED_NAME_SAVE_RECORDING = "saveRecording";
+
+    @SerializedName(SERIALIZED_NAME_SAVE_RECORDING)
+    private Boolean saveRecording = false;
+
+    public static final String SERIALIZED_NAME_MAX_LENGTH_SEC = "maxLengthSec";
+
+    @SerializedName(SERIALIZED_NAME_MAX_LENGTH_SEC)
+    private Integer maxLengthSec = 60;
+
+    public static final String SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS =
+            "rcrdTerminationSilenceTimeMs";
+
+    @SerializedName(SERIALIZED_NAME_RCRD_TERMINATION_SILENCE_TIME_MS)
+    private Integer rcrdTerminationSilenceTimeMs;
+
+    public TranscribeUtteranceRecord() {}
+
+    public TranscribeUtteranceRecord saveRecording(Boolean saveRecording) {
+
+        this.saveRecording = saveRecording;
+        return this;
     }
-    TranscribeUtteranceRecord transcribeUtteranceRecord = (TranscribeUtteranceRecord) o;
-    return Objects.equals(this.saveRecording, transcribeUtteranceRecord.saveRecording) &&
-        Objects.equals(this.maxLengthSec, transcribeUtteranceRecord.maxLengthSec) &&
-        Objects.equals(this.rcrdTerminationSilenceTimeMs, transcribeUtteranceRecord.rcrdTerminationSilenceTimeMs);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(saveRecording, maxLengthSec, rcrdTerminationSilenceTimeMs);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TranscribeUtteranceRecord {\n");
-    sb.append("    saveRecording: ").append(toIndentedString(saveRecording)).append("\n");
-    sb.append("    maxLengthSec: ").append(toIndentedString(maxLengthSec)).append("\n");
-    sb.append("    rcrdTerminationSilenceTimeMs: ").append(toIndentedString(rcrdTerminationSilenceTimeMs)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get saveRecording
+     *
+     * @return saveRecording
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getSaveRecording() {
+        return saveRecording;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setSaveRecording(Boolean saveRecording) {
+        this.saveRecording = saveRecording;
+    }
+
+    public TranscribeUtteranceRecord maxLengthSec(Integer maxLengthSec) {
+
+        this.maxLengthSec = maxLengthSec;
+        return this;
+    }
+
+    /**
+     * Get maxLengthSec minimum: 1 maximum: 60
+     *
+     * @return maxLengthSec
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getMaxLengthSec() {
+        return maxLengthSec;
+    }
+
+    public void setMaxLengthSec(Integer maxLengthSec) {
+        this.maxLengthSec = maxLengthSec;
+    }
+
+    public TranscribeUtteranceRecord rcrdTerminationSilenceTimeMs(
+            Integer rcrdTerminationSilenceTimeMs) {
+
+        this.rcrdTerminationSilenceTimeMs = rcrdTerminationSilenceTimeMs;
+        return this;
+    }
+
+    /**
+     * Get rcrdTerminationSilenceTimeMs minimum: 1 maximum: 3000
+     *
+     * @return rcrdTerminationSilenceTimeMs
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getRcrdTerminationSilenceTimeMs() {
+        return rcrdTerminationSilenceTimeMs;
+    }
+
+    public void setRcrdTerminationSilenceTimeMs(Integer rcrdTerminationSilenceTimeMs) {
+        this.rcrdTerminationSilenceTimeMs = rcrdTerminationSilenceTimeMs;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TranscribeUtteranceRecord transcribeUtteranceRecord = (TranscribeUtteranceRecord) o;
+        return Objects.equals(this.saveRecording, transcribeUtteranceRecord.saveRecording)
+                && Objects.equals(this.maxLengthSec, transcribeUtteranceRecord.maxLengthSec)
+                && Objects.equals(
+                        this.rcrdTerminationSilenceTimeMs,
+                        transcribeUtteranceRecord.rcrdTerminationSilenceTimeMs);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(saveRecording, maxLengthSec, rcrdTerminationSilenceTimeMs);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TranscribeUtteranceRecord {\n");
+        sb.append("    saveRecording: ").append(toIndentedString(saveRecording)).append("\n");
+        sb.append("    maxLengthSec: ").append(toIndentedString(maxLengthSec)).append("\n");
+        sb.append("    rcrdTerminationSilenceTimeMs: ")
+                .append(toIndentedString(rcrdTerminationSilenceTimeMs))
+                .append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }

@@ -12,108 +12,79 @@
 
 package com.github.freeclimbapi.models;
 
-import java.util.Objects;
-import java.util.Arrays;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
-import java.io.IOException;
-import java.util.*;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.annotations.SerializedName;
-import java.util.List;
-import java.math.BigDecimal;
-import java.net.URI;
-import org.openapitools.jackson.nullable.JsonNullable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.JSON;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.*;
+import java.util.Objects;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.concurrent.Callable;
-
-/**
- * Webhook
- */
+/** Webhook */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Webhook {
-  public static String getDiscriminatorValue() {
-    return null;
-  }
-  
-  
-  protected String requestType_noop;
-
-  public Webhook() {
-    this.requestType_noop = this.getClass().getSimpleName();
-  }
-
-  public Webhook requestType(String requestType) {
-    
-    this.requestType_noop = requestType;
-    return this;
-  }
-
-   /**
-   * Type of webhook request
-   * @return requestType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of webhook request")
-
-  public String getRequestType() {
-    return requestType_noop;
-  }
-
-
-  public void setRequestType(String requestType) {
-    this.requestType_noop = requestType;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public static String getDiscriminatorValue() {
+        return null;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    protected String requestType_noop;
+
+    public Webhook() {
+        this.requestType_noop = this.getClass().getSimpleName();
     }
-    Webhook webhook = (Webhook) o;
-    return Objects.equals(this.requestType_noop, webhook.requestType_noop);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(requestType_noop);
-  }
+    public Webhook requestType(String requestType) {
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Webhook {\n");
-    sb.append("    requestType_noop: ").append(toIndentedString(requestType_noop)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+        this.requestType_noop = requestType;
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    /**
+     * Type of webhook request
+     *
+     * @return requestType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Type of webhook request")
+    public String getRequestType() {
+        return requestType_noop;
+    }
+
+    public void setRequestType(String requestType) {
+        this.requestType_noop = requestType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Webhook webhook = (Webhook) o;
+        return Objects.equals(this.requestType_noop, webhook.requestType_noop);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(requestType_noop);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Webhook {\n");
+        sb.append("    requestType_noop: ").append(toIndentedString(requestType_noop)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
