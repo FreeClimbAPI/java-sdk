@@ -12,463 +12,493 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.JSON;
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.Arrays;
-import java.util.Objects;
-import org.openapitools.jackson.nullable.JsonNullable;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
 
 /**
- * A queued Call is requesting instructions to execute during the wait in the Queue and the
- * corresponding waitUrl is being invoked. A PerCL response is expected. The following are the only
- * PerCL commands supported in the PerCL script response to a request to the waitUrl:
- * Play,Say,Pause,GetDigits,Dequeue,Hangup
+ * A queued Call is requesting instructions to execute during the wait in the Queue and the corresponding waitUrl is being invoked. A PerCL response is expected. The following are the only PerCL commands supported in the PerCL script response to a request to the waitUrl: Play,Say,Pause,GetDigits,Dequeue,Hangup
  */
-@ApiModel(
-        description =
-                "A queued Call is requesting instructions to execute during the wait in the Queue"
-                    + " and the corresponding waitUrl is being invoked. A PerCL response is"
-                    + " expected. The following are the only PerCL commands supported in the PerCL"
-                    + " script response to a request to the waitUrl:"
-                    + " Play,Say,Pause,GetDigits,Dequeue,Hangup")
+@ApiModel(description = "A queued Call is requesting instructions to execute during the wait in the Queue and the corresponding waitUrl is being invoked. A PerCL response is expected. The following are the only PerCL commands supported in the PerCL script response to a request to the waitUrl: Play,Say,Pause,GetDigits,Dequeue,Hangup")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueueWaitWebhook extends Webhook {
-    public static QueueWaitWebhook deserialize(String payload) {
-        return (QueueWaitWebhook) (new JSON().getGson().fromJson(payload, Webhook.class));
+  public static QueueWaitWebhook deserialize(String payload) {
+    return (QueueWaitWebhook)(new JSON().getGson().fromJson(payload, Webhook.class));
+  }
+  public static String getDiscriminatorValue() {
+    return "queueWait";
+  }
+  
+  public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
+  
+  
+  @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
+  
+  protected String requestType;
+
+  
+  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
+  private String accountId;
+
+  
+  public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
+  private String callId;
+
+  
+  public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
+  @SerializedName(SERIALIZED_NAME_FROM)
+  
+  private String from;
+
+  
+  public static final String SERIALIZED_NAME_TO = "to";
+  
+  
+  @SerializedName(SERIALIZED_NAME_TO)
+  
+  private String to;
+
+  
+  public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+  
+  private CallStatus callStatus;
+
+  
+  public static final String SERIALIZED_NAME_DIRECTION = "direction";
+  
+  
+  @SerializedName(SERIALIZED_NAME_DIRECTION)
+  
+  private CallDirection direction;
+
+  
+  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
+  private String conferenceId;
+
+  
+  public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
+  private String queueId;
+
+  
+  public static final String SERIALIZED_NAME_QUEUE_POSITION = "queuePosition";
+  
+  
+  @SerializedName(SERIALIZED_NAME_QUEUE_POSITION)
+  
+  private String queuePosition;
+
+  
+  public static final String SERIALIZED_NAME_QUEUE_TIME = "queueTime";
+  
+  
+  @SerializedName(SERIALIZED_NAME_QUEUE_TIME)
+  
+  private Integer queueTime;
+
+  
+  public static final String SERIALIZED_NAME_CURRENT_QUEUE_SIZE = "currentQueueSize";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CURRENT_QUEUE_SIZE)
+  
+  private Integer currentQueueSize;
+
+
+  public QueueWaitWebhook() { 
+    this.requestType = this.getClass().getSimpleName();
+  }
+
+  public QueueWaitWebhook requestType(String requestType) {
+    
+    this.requestType = requestType;
+    return this;
+  }
+
+   /**
+   * Context or reason why this request is being made. Will be queueWait - A queued call is requesting instructions to execute during the wait in the queue and the corresponding waitUrl is being invoked.
+   * @return requestType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Context or reason why this request is being made. Will be queueWait - A queued call is requesting instructions to execute during the wait in the queue and the corresponding waitUrl is being invoked.")
+
+  public String getRequestType() {
+    return requestType;
+  }
+
+
+  public void setRequestType(String requestType) {
+    this.requestType = requestType;
+  }
+
+
+  public QueueWaitWebhook accountId(String accountId) {
+    
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Account ID associated with your account.
+   * @return accountId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Account ID associated with your account.")
+
+  public String getAccountId() {
+    return accountId;
+  }
+
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+
+  public QueueWaitWebhook callId(String callId) {
+    
+    this.callId = callId;
+    return this;
+  }
+
+   /**
+   * Unique identifier for this Call, generated by FreeClimb
+   * @return callId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Unique identifier for this Call, generated by FreeClimb")
+
+  public String getCallId() {
+    return callId;
+  }
+
+
+  public void setCallId(String callId) {
+    this.callId = callId;
+  }
+
+
+  public QueueWaitWebhook from(String from) {
+    
+    this.from = from;
+    return this;
+  }
+
+   /**
+   * Phone number of the party that initiated the Call (in E.164 format).
+   * @return from
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Phone number of the party that initiated the Call (in E.164 format).")
+
+  public String getFrom() {
+    return from;
+  }
+
+
+  public void setFrom(String from) {
+    this.from = from;
+  }
+
+
+  public QueueWaitWebhook to(String to) {
+    
+    this.to = to;
+    return this;
+  }
+
+   /**
+   * Phone number provisioned to the customer and to which this Call is directed (in E.164 format).
+   * @return to
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Phone number provisioned to the customer and to which this Call is directed (in E.164 format).")
+
+  public String getTo() {
+    return to;
+  }
+
+
+  public void setTo(String to) {
+    this.to = to;
+  }
+
+
+  public QueueWaitWebhook callStatus(CallStatus callStatus) {
+    
+    this.callStatus = callStatus;
+    return this;
+  }
+
+   /**
+   * Get callStatus
+   * @return callStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public CallStatus getCallStatus() {
+    return callStatus;
+  }
+
+
+  public void setCallStatus(CallStatus callStatus) {
+    this.callStatus = callStatus;
+  }
+
+
+  public QueueWaitWebhook direction(CallDirection direction) {
+    
+    this.direction = direction;
+    return this;
+  }
+
+   /**
+   * Get direction
+   * @return direction
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public CallDirection getDirection() {
+    return direction;
+  }
+
+
+  public void setDirection(CallDirection direction) {
+    this.direction = direction;
+  }
+
+
+  public QueueWaitWebhook conferenceId(String conferenceId) {
+    
+    this.conferenceId = conferenceId;
+    return this;
+  }
+
+   /**
+   * This is only populated if request pertains to a conference. Otherwise, it is set to null.
+   * @return conferenceId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This is only populated if request pertains to a conference. Otherwise, it is set to null.")
+
+  public String getConferenceId() {
+    return conferenceId;
+  }
+
+
+  public void setConferenceId(String conferenceId) {
+    this.conferenceId = conferenceId;
+  }
+
+
+  public QueueWaitWebhook queueId(String queueId) {
+    
+    this.queueId = queueId;
+    return this;
+  }
+
+   /**
+   * This is only populated if the request pertains to a queue. Otherwise, it is set to null.
+   * @return queueId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This is only populated if the request pertains to a queue. Otherwise, it is set to null.")
+
+  public String getQueueId() {
+    return queueId;
+  }
+
+
+  public void setQueueId(String queueId) {
+    this.queueId = queueId;
+  }
+
+
+  public QueueWaitWebhook queuePosition(String queuePosition) {
+    
+    this.queuePosition = queuePosition;
+    return this;
+  }
+
+   /**
+   * Current queue position of the enqueued Call.
+   * @return queuePosition
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Current queue position of the enqueued Call.")
+
+  public String getQueuePosition() {
+    return queuePosition;
+  }
+
+
+  public void setQueuePosition(String queuePosition) {
+    this.queuePosition = queuePosition;
+  }
+
+
+  public QueueWaitWebhook queueTime(Integer queueTime) {
+    
+    this.queueTime = queueTime;
+    return this;
+  }
+
+   /**
+   * Time (in seconds) the Call spent in the Queue. This is only available if the Call was actually enqueued.
+   * @return queueTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Time (in seconds) the Call spent in the Queue. This is only available if the Call was actually enqueued.")
+
+  public Integer getQueueTime() {
+    return queueTime;
+  }
+
+
+  public void setQueueTime(Integer queueTime) {
+    this.queueTime = queueTime;
+  }
+
+
+  public QueueWaitWebhook currentQueueSize(Integer currentQueueSize) {
+    
+    this.currentQueueSize = currentQueueSize;
+    return this;
+  }
+
+   /**
+   * Current number of enqueued Calls in this Queue.
+   * @return currentQueueSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Current number of enqueued Calls in this Queue.")
+
+  public Integer getCurrentQueueSize() {
+    return currentQueueSize;
+  }
+
+
+  public void setCurrentQueueSize(Integer currentQueueSize) {
+    this.currentQueueSize = currentQueueSize;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static String getDiscriminatorValue() {
-        return "queueWait";
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    QueueWaitWebhook queueWaitWebhook = (QueueWaitWebhook) o;
+    return Objects.equals(this.requestType, queueWaitWebhook.requestType) &&
+        Objects.equals(this.accountId, queueWaitWebhook.accountId) &&
+        Objects.equals(this.callId, queueWaitWebhook.callId) &&
+        Objects.equals(this.from, queueWaitWebhook.from) &&
+        Objects.equals(this.to, queueWaitWebhook.to) &&
+        Objects.equals(this.callStatus, queueWaitWebhook.callStatus) &&
+        Objects.equals(this.direction, queueWaitWebhook.direction) &&
+        Objects.equals(this.conferenceId, queueWaitWebhook.conferenceId) &&
+        Objects.equals(this.queueId, queueWaitWebhook.queueId) &&
+        Objects.equals(this.queuePosition, queueWaitWebhook.queuePosition) &&
+        Objects.equals(this.queueTime, queueWaitWebhook.queueTime) &&
+        Objects.equals(this.currentQueueSize, queueWaitWebhook.currentQueueSize) &&
+        super.equals(o);
+  }
 
-    public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
 
-    @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
-    protected String requestType;
+  @Override
+  public int hashCode() {
+    return Objects.hash(requestType, accountId, callId, from, to, callStatus, direction, conferenceId, queueId, queuePosition, queueTime, currentQueueSize, super.hashCode());
+  }
 
-    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-
-    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-    private String accountId;
-
-    public static final String SERIALIZED_NAME_CALL_ID = "callId";
-
-    @SerializedName(SERIALIZED_NAME_CALL_ID)
-    private String callId;
-
-    public static final String SERIALIZED_NAME_FROM = "from";
-
-    @SerializedName(SERIALIZED_NAME_FROM)
-    private String from;
-
-    public static final String SERIALIZED_NAME_TO = "to";
-
-    @SerializedName(SERIALIZED_NAME_TO)
-    private String to;
-
-    public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
-
-    @SerializedName(SERIALIZED_NAME_CALL_STATUS)
-    private CallStatus callStatus;
-
-    public static final String SERIALIZED_NAME_DIRECTION = "direction";
-
-    @SerializedName(SERIALIZED_NAME_DIRECTION)
-    private CallDirection direction;
-
-    public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-
-    @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-    private String conferenceId;
-
-    public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
-
-    @SerializedName(SERIALIZED_NAME_QUEUE_ID)
-    private String queueId;
-
-    public static final String SERIALIZED_NAME_QUEUE_POSITION = "queuePosition";
-
-    @SerializedName(SERIALIZED_NAME_QUEUE_POSITION)
-    private String queuePosition;
-
-    public static final String SERIALIZED_NAME_QUEUE_TIME = "queueTime";
-
-    @SerializedName(SERIALIZED_NAME_QUEUE_TIME)
-    private Integer queueTime;
-
-    public static final String SERIALIZED_NAME_CURRENT_QUEUE_SIZE = "currentQueueSize";
-
-    @SerializedName(SERIALIZED_NAME_CURRENT_QUEUE_SIZE)
-    private Integer currentQueueSize;
-
-    public QueueWaitWebhook() {
-        this.requestType = this.getClass().getSimpleName();
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
     }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+  }
 
-    public QueueWaitWebhook requestType(String requestType) {
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class QueueWaitWebhook {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
+    sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    to: ").append(toIndentedString(to)).append("\n");
+    sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
+    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
+    sb.append("    queuePosition: ").append(toIndentedString(queuePosition)).append("\n");
+    sb.append("    queueTime: ").append(toIndentedString(queueTime)).append("\n");
+    sb.append("    currentQueueSize: ").append(toIndentedString(currentQueueSize)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-        this.requestType = requestType;
-        return this;
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    /**
-     * Context or reason why this request is being made. Will be queueWait - A queued call is
-     * requesting instructions to execute during the wait in the queue and the corresponding waitUrl
-     * is being invoked.
-     *
-     * @return requestType
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Context or reason why this request is being made. Will be queueWait - A queued"
-                        + " call is requesting instructions to execute during the wait in the queue"
-                        + " and the corresponding waitUrl is being invoked.")
-    public String getRequestType() {
-        return requestType;
-    }
-
-    public void setRequestType(String requestType) {
-        this.requestType = requestType;
-    }
-
-    public QueueWaitWebhook accountId(String accountId) {
-
-        this.accountId = accountId;
-        return this;
-    }
-
-    /**
-     * Account ID associated with your account.
-     *
-     * @return accountId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Account ID associated with your account.")
-    public String getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
-    }
-
-    public QueueWaitWebhook callId(String callId) {
-
-        this.callId = callId;
-        return this;
-    }
-
-    /**
-     * Unique identifier for this Call, generated by FreeClimb
-     *
-     * @return callId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Unique identifier for this Call, generated by FreeClimb")
-    public String getCallId() {
-        return callId;
-    }
-
-    public void setCallId(String callId) {
-        this.callId = callId;
-    }
-
-    public QueueWaitWebhook from(String from) {
-
-        this.from = from;
-        return this;
-    }
-
-    /**
-     * Phone number of the party that initiated the Call (in E.164 format).
-     *
-     * @return from
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value = "Phone number of the party that initiated the Call (in E.164 format).")
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-    public QueueWaitWebhook to(String to) {
-
-        this.to = to;
-        return this;
-    }
-
-    /**
-     * Phone number provisioned to the customer and to which this Call is directed (in E.164
-     * format).
-     *
-     * @return to
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Phone number provisioned to the customer and to which this Call is directed"
-                            + " (in E.164 format).")
-    public String getTo() {
-        return to;
-    }
-
-    public void setTo(String to) {
-        this.to = to;
-    }
-
-    public QueueWaitWebhook callStatus(CallStatus callStatus) {
-
-        this.callStatus = callStatus;
-        return this;
-    }
-
-    /**
-     * Get callStatus
-     *
-     * @return callStatus
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public CallStatus getCallStatus() {
-        return callStatus;
-    }
-
-    public void setCallStatus(CallStatus callStatus) {
-        this.callStatus = callStatus;
-    }
-
-    public QueueWaitWebhook direction(CallDirection direction) {
-
-        this.direction = direction;
-        return this;
-    }
-
-    /**
-     * Get direction
-     *
-     * @return direction
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public CallDirection getDirection() {
-        return direction;
-    }
-
-    public void setDirection(CallDirection direction) {
-        this.direction = direction;
-    }
-
-    public QueueWaitWebhook conferenceId(String conferenceId) {
-
-        this.conferenceId = conferenceId;
-        return this;
-    }
-
-    /**
-     * This is only populated if request pertains to a conference. Otherwise, it is set to null.
-     *
-     * @return conferenceId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "This is only populated if request pertains to a conference. Otherwise, it is"
-                            + " set to null.")
-    public String getConferenceId() {
-        return conferenceId;
-    }
-
-    public void setConferenceId(String conferenceId) {
-        this.conferenceId = conferenceId;
-    }
-
-    public QueueWaitWebhook queueId(String queueId) {
-
-        this.queueId = queueId;
-        return this;
-    }
-
-    /**
-     * This is only populated if the request pertains to a queue. Otherwise, it is set to null.
-     *
-     * @return queueId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "This is only populated if the request pertains to a queue. Otherwise, it is"
-                            + " set to null.")
-    public String getQueueId() {
-        return queueId;
-    }
-
-    public void setQueueId(String queueId) {
-        this.queueId = queueId;
-    }
-
-    public QueueWaitWebhook queuePosition(String queuePosition) {
-
-        this.queuePosition = queuePosition;
-        return this;
-    }
-
-    /**
-     * Current queue position of the enqueued Call.
-     *
-     * @return queuePosition
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Current queue position of the enqueued Call.")
-    public String getQueuePosition() {
-        return queuePosition;
-    }
-
-    public void setQueuePosition(String queuePosition) {
-        this.queuePosition = queuePosition;
-    }
-
-    public QueueWaitWebhook queueTime(Integer queueTime) {
-
-        this.queueTime = queueTime;
-        return this;
-    }
-
-    /**
-     * Time (in seconds) the Call spent in the Queue. This is only available if the Call was
-     * actually enqueued.
-     *
-     * @return queueTime
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Time (in seconds) the Call spent in the Queue. This is only available if the"
-                            + " Call was actually enqueued.")
-    public Integer getQueueTime() {
-        return queueTime;
-    }
-
-    public void setQueueTime(Integer queueTime) {
-        this.queueTime = queueTime;
-    }
-
-    public QueueWaitWebhook currentQueueSize(Integer currentQueueSize) {
-
-        this.currentQueueSize = currentQueueSize;
-        return this;
-    }
-
-    /**
-     * Current number of enqueued Calls in this Queue.
-     *
-     * @return currentQueueSize
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Current number of enqueued Calls in this Queue.")
-    public Integer getCurrentQueueSize() {
-        return currentQueueSize;
-    }
-
-    public void setCurrentQueueSize(Integer currentQueueSize) {
-        this.currentQueueSize = currentQueueSize;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        QueueWaitWebhook queueWaitWebhook = (QueueWaitWebhook) o;
-        return Objects.equals(this.requestType, queueWaitWebhook.requestType)
-                && Objects.equals(this.accountId, queueWaitWebhook.accountId)
-                && Objects.equals(this.callId, queueWaitWebhook.callId)
-                && Objects.equals(this.from, queueWaitWebhook.from)
-                && Objects.equals(this.to, queueWaitWebhook.to)
-                && Objects.equals(this.callStatus, queueWaitWebhook.callStatus)
-                && Objects.equals(this.direction, queueWaitWebhook.direction)
-                && Objects.equals(this.conferenceId, queueWaitWebhook.conferenceId)
-                && Objects.equals(this.queueId, queueWaitWebhook.queueId)
-                && Objects.equals(this.queuePosition, queueWaitWebhook.queuePosition)
-                && Objects.equals(this.queueTime, queueWaitWebhook.queueTime)
-                && Objects.equals(this.currentQueueSize, queueWaitWebhook.currentQueueSize)
-                && super.equals(o);
-    }
-
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                requestType,
-                accountId,
-                callId,
-                from,
-                to,
-                callStatus,
-                direction,
-                conferenceId,
-                queueId,
-                queuePosition,
-                queueTime,
-                currentQueueSize,
-                super.hashCode());
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class QueueWaitWebhook {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
-        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-        sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
-        sb.append("    from: ").append(toIndentedString(from)).append("\n");
-        sb.append("    to: ").append(toIndentedString(to)).append("\n");
-        sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
-        sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
-        sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
-        sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
-        sb.append("    queuePosition: ").append(toIndentedString(queuePosition)).append("\n");
-        sb.append("    queueTime: ").append(toIndentedString(queueTime)).append("\n");
-        sb.append("    currentQueueSize: ").append(toIndentedString(currentQueueSize)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

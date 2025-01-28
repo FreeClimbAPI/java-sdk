@@ -12,85 +12,112 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** FilterLogsRequest */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * FilterLogsRequest
+ */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FilterLogsRequest {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_PQL = "pql";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PQL)
+  
+  private String pql;
+
+
+  public FilterLogsRequest() { 
+  }
+
+  public FilterLogsRequest pql(String pql) {
+    
+    this.pql = pql;
+    return this;
+  }
+
+   /**
+   * The filter query for retrieving logs. See **Performance Query Language** below.
+   * @return pql
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The filter query for retrieving logs. See **Performance Query Language** below.")
+
+  public String getPql() {
+    return pql;
+  }
+
+
+  public void setPql(String pql) {
+    this.pql = pql;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_PQL = "pql";
-
-    @SerializedName(SERIALIZED_NAME_PQL)
-    private String pql;
-
-    public FilterLogsRequest() {}
-
-    public FilterLogsRequest pql(String pql) {
-
-        this.pql = pql;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    FilterLogsRequest filterLogsRequest = (FilterLogsRequest) o;
+    return Objects.equals(this.pql, filterLogsRequest.pql);
+  }
 
-    /**
-     * The filter query for retrieving logs. See **Performance Query Language** below.
-     *
-     * @return pql
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "The filter query for retrieving logs. See **Performance Query Language**"
-                            + " below.")
-    public String getPql() {
-        return pql;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(pql);
+  }
 
-    public void setPql(String pql) {
-        this.pql = pql;
-    }
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class FilterLogsRequest {\n");
+    sb.append("    pql: ").append(toIndentedString(pql)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        FilterLogsRequest filterLogsRequest = (FilterLogsRequest) o;
-        return Objects.equals(this.pql, filterLogsRequest.pql);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(pql);
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class FilterLogsRequest {\n");
-        sb.append("    pql: ").append(toIndentedString(pql)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

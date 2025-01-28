@@ -12,97 +12,111 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** Enhanced status for the Call with additional information where available. */
+/**
+ * Enhanced status for the Call with additional information where available.
+ */
 @JsonAdapter(CallEndedReason.Adapter.class)
 public enum CallEndedReason {
-    BUSY("busy"),
+  
+  BUSY("busy"),
+  
+  FAILED("failed"),
+  
+  NO_ANSWER("noAnswer"),
+  
+  CALL_CANCELED("callCanceled"),
+  
+  FAR_END_HANGUP("farEndHangup"),
+  
+  APP_HANGUP("appHangup"),
+  
+  APP_REJECT("appReject"),
+  
+  APP_NO_PERCL("appNoPercl"),
+  
+  APP_INVALID_PERCL("appInvalidPercl"),
+  
+  CONFERENCE_TERMINATED("conferenceTerminated"),
+  
+  CONFERENCE_EMPTIED("conferenceEmptied"),
+  
+  REMOVED_FROM_CONFERENCE("removedFromConference"),
+  
+  MACHINE_DETECTED("machineDetected"),
+  
+  WEBHOOK_FAILED("webhookFailed"),
+  
+  WEBHOOK_INVALID_RESPONSE("webhookInvalidResponse"),
+  
+  VOICE_DISABLED("voiceDisabled"),
+  
+  CONFIG_ERROR_NO_APPLICATION("configErrorNoApplication"),
+  
+  CONFIG_ERROR_NO_VOICE_URL("configErrorNoVoiceUrl"),
+  
+  MAX_REDIRECTS_ERROR("maxRedirectsError"),
+  
+  PERCL_PROCESSING_ERROR("perclProcessingError"),
+  
+  INTERNAL_ERROR("internalError"),
+  
+  GRPC_HANGUP("grpcHangup"),
+  
+  MAX_DURATION("maxDuration");
 
-    FAILED("failed"),
+  private String value;
 
-    NO_ANSWER("noAnswer"),
+  CallEndedReason(String value) {
+    this.value = value;
+  }
 
-    CALL_CANCELED("callCanceled"),
+  public String getValue() {
+    return value;
+  }
 
-    FAR_END_HANGUP("farEndHangup"),
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
 
-    APP_HANGUP("appHangup"),
-
-    APP_REJECT("appReject"),
-
-    APP_NO_PERCL("appNoPercl"),
-
-    APP_INVALID_PERCL("appInvalidPercl"),
-
-    CONFERENCE_TERMINATED("conferenceTerminated"),
-
-    CONFERENCE_EMPTIED("conferenceEmptied"),
-
-    REMOVED_FROM_CONFERENCE("removedFromConference"),
-
-    MACHINE_DETECTED("machineDetected"),
-
-    WEBHOOK_FAILED("webhookFailed"),
-
-    WEBHOOK_INVALID_RESPONSE("webhookInvalidResponse"),
-
-    VOICE_DISABLED("voiceDisabled"),
-
-    CONFIG_ERROR_NO_APPLICATION("configErrorNoApplication"),
-
-    CONFIG_ERROR_NO_VOICE_URL("configErrorNoVoiceUrl"),
-
-    MAX_REDIRECTS_ERROR("maxRedirectsError"),
-
-    PERCL_PROCESSING_ERROR("perclProcessingError"),
-
-    INTERNAL_ERROR("internalError"),
-
-    GRPC_HANGUP("grpcHangup"),
-
-    MAX_DURATION("maxDuration");
-
-    private String value;
-
-    CallEndedReason(String value) {
-        this.value = value;
+  public static CallEndedReason fromValue(String value) {
+    for (CallEndedReason b : CallEndedReason.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    return null;
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<CallEndedReason> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final CallEndedReason enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public CallEndedReason read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return CallEndedReason.fromValue(value);
     }
-
-    public static CallEndedReason fromValue(String value) {
-        for (CallEndedReason b : CallEndedReason.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        return null;
-    }
-
-    public static class Adapter extends TypeAdapter<CallEndedReason> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final CallEndedReason enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public CallEndedReason read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return CallEndedReason.fromValue(value);
-        }
-    }
+  }
 }
+

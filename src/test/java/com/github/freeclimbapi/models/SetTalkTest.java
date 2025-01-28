@@ -10,105 +10,146 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import java.util.Map;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for SetTalk */
-public class SetTalkTest {
-
-    private final SetTalk model = new SetTalk();
-
-    /** Test the property 'talk' */
+/**
+ * Model tests for SetTalk
+ */
+ public class SetTalkTest {
+    
+    private final SetTalk model = new SetTalk(
+    );
+    
+    
+    /**
+     * Test the property 'talk'
+     */
     @Test
     public void talkTest() {
-        model.setTalk(false);
-        Assert.assertEquals(false, model.getTalk());
+      model.setTalk(false);
+      Assert.assertEquals(false, model.getTalk());       
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-        SetTalk test2 = new SetTalk();
-        test2.setTalk(true);
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      SetTalk test2 = new SetTalk();
+      test2.setTalk(true);
 
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-        SetTalk test2 = new SetTalk();
-        test2.setTalk(false);
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      SetTalk test2 = new SetTalk();
+      test2.setTalk(false);
 
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-        SetTalk test2 = new SetTalk();
-        test2.setTalk(true);
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      SetTalk test2 = new SetTalk();
+      test2.setTalk(true);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-        SetTalk test2 = new SetTalk();
-        test2.setTalk(true);
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      SetTalk test2 = new SetTalk();
+      test2.setTalk(true);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
-        SetTalk test2 = new SetTalk();
-        test2.setTalk(false);
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+      SetTalk test2 = new SetTalk();
+      test2.setTalk(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
-    public void toStringTypeTest() {
-        SetTalk test1 = new SetTalk();
-        test1.setTalk(true);
+     /**
+     * Test the method 'toStringType'
+     */
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+     @Test
+    public void toStringTypeTest() {
+      SetTalk test1 = new SetTalk();
+      test1.setTalk(true);
+
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-        Assert.assertEquals("SetTalk", model.getCommand());
+      Assert.assertEquals("SetTalk", model.getCommand());
     }
 
     @Test
@@ -117,5 +158,7 @@ public class SetTalkTest {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("talk"), model.getTalk());
+        
     }
-}
+    
+ }

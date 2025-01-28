@@ -10,75 +10,89 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for SMSTenDLCBrandEntityType */
-public class SMSTenDLCBrandEntityTypeTest {
-
+/**
+ * Model tests for SMSTenDLCBrandEntityType
+ */
+ public class SMSTenDLCBrandEntityTypeTest {
+    
+    
+    
     @Test
     public void testPRIVATE_PROFITShouldWork() {
 
         SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PRIVATE_PROFIT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
     }
 
-    @Test
+    @Test 
     public void testPRIVATE_PROFITShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandEntityType expectedValue = SMSTenDLCBrandEntityType.PRIVATE_PROFIT;
-        SMSTenDLCBrandEntityType calculatedValue =
-                SMSTenDLCBrandEntityType.fromValue("PRIVATE_PROFIT");
+        SMSTenDLCBrandEntityType calculatedValue = SMSTenDLCBrandEntityType.fromValue("PRIVATE_PROFIT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testPRIVATE_PROFITShouldDeserializeToString() {
-        SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PRIVATE_PROFIT;
-        String expectedValue = "PRIVATE_PROFIT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PRIVATE_PROFIT;
+      String expectedValue = "PRIVATE_PROFIT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testPUBLIC_PROFITShouldWork() {
 
         SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PUBLIC_PROFIT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
     }
 
-    @Test
+    @Test 
     public void testPUBLIC_PROFITShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandEntityType expectedValue = SMSTenDLCBrandEntityType.PUBLIC_PROFIT;
-        SMSTenDLCBrandEntityType calculatedValue =
-                SMSTenDLCBrandEntityType.fromValue("PUBLIC_PROFIT");
+        SMSTenDLCBrandEntityType calculatedValue = SMSTenDLCBrandEntityType.fromValue("PUBLIC_PROFIT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testPUBLIC_PROFITShouldDeserializeToString() {
-        SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PUBLIC_PROFIT;
-        String expectedValue = "PUBLIC_PROFIT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.PUBLIC_PROFIT;
+      String expectedValue = "PUBLIC_PROFIT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testNON_PROFITShouldWork() {
 
         SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.NON_PROFIT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
     }
 
-    @Test
+    @Test 
     public void testNON_PROFITShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandEntityType expectedValue = SMSTenDLCBrandEntityType.NON_PROFIT;
         SMSTenDLCBrandEntityType calculatedValue = SMSTenDLCBrandEntityType.fromValue("NON_PROFIT");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -86,22 +100,21 @@ public class SMSTenDLCBrandEntityTypeTest {
 
     @Test
     public void testNON_PROFITShouldDeserializeToString() {
-        SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.NON_PROFIT;
-        String expectedValue = "NON_PROFIT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.NON_PROFIT;
+      String expectedValue = "NON_PROFIT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testGOVERNMENTShouldWork() {
 
         SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.GOVERNMENT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
     }
 
-    @Test
+    @Test 
     public void testGOVERNMENTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandEntityType expectedValue = SMSTenDLCBrandEntityType.GOVERNMENT;
         SMSTenDLCBrandEntityType calculatedValue = SMSTenDLCBrandEntityType.fromValue("GOVERNMENT");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -109,33 +122,33 @@ public class SMSTenDLCBrandEntityTypeTest {
 
     @Test
     public void testGOVERNMENTShouldDeserializeToString() {
-        SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.GOVERNMENT;
-        String expectedValue = "GOVERNMENT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.GOVERNMENT;
+      String expectedValue = "GOVERNMENT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testSOLE_PROPRIETORShouldWork() {
 
         SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.SOLE_PROPRIETOR;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandEntityType.class);
     }
 
-    @Test
+    @Test 
     public void testSOLE_PROPRIETORShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandEntityType expectedValue = SMSTenDLCBrandEntityType.SOLE_PROPRIETOR;
-        SMSTenDLCBrandEntityType calculatedValue =
-                SMSTenDLCBrandEntityType.fromValue("SOLE_PROPRIETOR");
+        SMSTenDLCBrandEntityType calculatedValue = SMSTenDLCBrandEntityType.fromValue("SOLE_PROPRIETOR");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testSOLE_PROPRIETORShouldDeserializeToString() {
-        SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.SOLE_PROPRIETOR;
-        String expectedValue = "SOLE_PROPRIETOR";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandEntityType test = SMSTenDLCBrandEntityType.SOLE_PROPRIETOR;
+      String expectedValue = "SOLE_PROPRIETOR";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

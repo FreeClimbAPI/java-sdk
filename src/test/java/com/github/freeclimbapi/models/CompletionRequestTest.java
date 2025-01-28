@@ -10,118 +10,181 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for CompletionRequest */
-public class CompletionRequestTest {
-
-    private final CompletionRequest model = new CompletionRequest();
-
-    /** Test the property 'query' */
+/**
+ * Model tests for CompletionRequest
+ */
+ public class CompletionRequestTest {
+    
+    private final CompletionRequest model = new CompletionRequest(
+    );
+    
+    
+    /**
+     * Test the property 'query'
+     */
     @Test
     public void queryTest() {
-
-        model.setQuery("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQuery());
+      
+      
+      model.setQuery("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQuery());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        CompletionRequest test1 = new CompletionRequest();
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      CompletionRequest test2 = new CompletionRequest();
+        
+        
+      test2.setQuery("TS");
+      
 
-        test1.setQuery("TS");
-
-        CompletionRequest test2 = new CompletionRequest();
-
-        test2.setQuery("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        CompletionRequest test1 = new CompletionRequest();
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      CompletionRequest test2 = new CompletionRequest();
+        
+        
+      test2.setQuery("TS2");
+      
 
-        test1.setQuery("TS");
-
-        CompletionRequest test2 = new CompletionRequest();
-
-        test2.setQuery("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        CompletionRequest test1 = new CompletionRequest();
-
-        test1.setQuery("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        CompletionRequest test1 = new CompletionRequest();
-
-        test1.setQuery("TS");
-
-        CompletionRequest test2 = new CompletionRequest();
-
-        test2.setQuery("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      CompletionRequest test2 = new CompletionRequest();
+        
+        
+      test2.setQuery("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        CompletionRequest test1 = new CompletionRequest();
-
-        test1.setQuery("TS");
-
-        CompletionRequest test2 = new CompletionRequest();
-
-        test2.setQuery("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      CompletionRequest test2 = new CompletionRequest();
+        
+        
+      test2.setQuery("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        CompletionRequest test1 = new CompletionRequest();
-
-        test1.setQuery("TS");
-
-        CompletionRequest test2 = new CompletionRequest();
-
-        test2.setQuery("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
+      test1.setQuery("TS");
+      
+      CompletionRequest test2 = new CompletionRequest();
+        
+        
+      test2.setQuery("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        CompletionRequest test1 = new CompletionRequest();
-
+      CompletionRequest test1 = new CompletionRequest();
+        
+        
         test1.setQuery("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
-}
+
+    
+ }

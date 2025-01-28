@@ -12,59 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 /**
- * New status of the conference. Valid values: &#x60;empty&#x60; or &#x60;terminated&#x60;. For more
- * information, see **Status Parameter** below.**
+ * New status of the conference. Valid values: &#x60;empty&#x60; or &#x60;terminated&#x60;. For more information, see **Status Parameter** below.**
  */
 @JsonAdapter(UpdateConferenceRequestStatus.Adapter.class)
 public enum UpdateConferenceRequestStatus {
-    EMPTY("empty"),
+  
+  EMPTY("empty"),
+  
+  TERMINATED("terminated");
 
-    TERMINATED("terminated");
+  private String value;
 
-    private String value;
+  UpdateConferenceRequestStatus(String value) {
+    this.value = value;
+  }
 
-    UpdateConferenceRequestStatus(String value) {
-        this.value = value;
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static UpdateConferenceRequestStatus fromValue(String value) {
+    for (UpdateConferenceRequestStatus b : UpdateConferenceRequestStatus.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<UpdateConferenceRequestStatus> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final UpdateConferenceRequestStatus enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public UpdateConferenceRequestStatus read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return UpdateConferenceRequestStatus.fromValue(value);
     }
-
-    public static UpdateConferenceRequestStatus fromValue(String value) {
-        for (UpdateConferenceRequestStatus b : UpdateConferenceRequestStatus.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<UpdateConferenceRequestStatus> {
-        @Override
-        public void write(
-                final JsonWriter jsonWriter, final UpdateConferenceRequestStatus enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public UpdateConferenceRequestStatus read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return UpdateConferenceRequestStatus.fromValue(value);
-        }
-    }
+  }
 }
+

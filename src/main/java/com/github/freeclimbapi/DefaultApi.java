@@ -10,18 +10,33 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.models.*;
-import com.github.freeclimbapi.utils.*;
+import com.github.freeclimbapi.ApiCallback;
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.ApiResponse;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.Pair;
+import com.github.freeclimbapi.ProgressRequestBody;
+import com.github.freeclimbapi.ProgressResponseBody;
+
 import com.google.gson.reflect.TypeToken;
-import java.io.File;
+
+import java.io.IOException;
+
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
+
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.utils.*;
 
 public class DefaultApi {
     private String accountId;
@@ -64,29 +79,26 @@ public class DefaultApi {
 
     /**
      * Build call for buyAPhoneNumber
-     *
      * @param buyIncomingNumberRequest Incoming Number transaction details (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call buyAPhoneNumberCall(
-            BuyIncomingNumberRequest buyIncomingNumberRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call buyAPhoneNumberCall(BuyIncomingNumberRequest buyIncomingNumberRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -95,11 +107,8 @@ public class DefaultApi {
         Object localVarPostBody = buyIncomingNumberRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/IncomingPhoneNumbers"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/IncomingPhoneNumbers"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -107,144 +116,120 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call buyAPhoneNumberValidateBeforeCall(
-            BuyIncomingNumberRequest buyIncomingNumberRequest, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call buyAPhoneNumberValidateBeforeCall(BuyIncomingNumberRequest buyIncomingNumberRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'buyIncomingNumberRequest' is set
         if (buyIncomingNumberRequest == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'buyIncomingNumberRequest' when calling"
-                            + " buyAPhoneNumber(Async)");
+            throw new ApiException("Missing the required parameter 'buyIncomingNumberRequest' when calling buyAPhoneNumber(Async)");
         }
+        
 
         okhttp3.Call localVarCall = buyAPhoneNumberCall(buyIncomingNumberRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Buy a Phone Number
-     *
+     * 
      * @param buyIncomingNumberRequest Incoming Number transaction details (required)
      * @return IncomingNumberResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
+     </table>
      */
-    public IncomingNumberResult buyAPhoneNumber(BuyIncomingNumberRequest buyIncomingNumberRequest)
-            throws ApiException {
-        ApiResponse<IncomingNumberResult> localVarResp =
-                buyAPhoneNumberWithHttpInfo(buyIncomingNumberRequest);
+    public IncomingNumberResult buyAPhoneNumber(BuyIncomingNumberRequest buyIncomingNumberRequest) throws ApiException {
+        ApiResponse<IncomingNumberResult> localVarResp = buyAPhoneNumberWithHttpInfo(buyIncomingNumberRequest);
         return localVarResp.getData();
     }
 
     /**
      * Buy a Phone Number
-     *
+     * 
      * @param buyIncomingNumberRequest Incoming Number transaction details (required)
      * @return ApiResponse&lt;IncomingNumberResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<IncomingNumberResult> buyAPhoneNumberWithHttpInfo(
-            BuyIncomingNumberRequest buyIncomingNumberRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                buyAPhoneNumberValidateBeforeCall(buyIncomingNumberRequest, null);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+    public ApiResponse<IncomingNumberResult> buyAPhoneNumberWithHttpInfo(BuyIncomingNumberRequest buyIncomingNumberRequest) throws ApiException {
+        okhttp3.Call localVarCall = buyAPhoneNumberValidateBeforeCall(buyIncomingNumberRequest, null);
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Buy a Phone Number (asynchronously)
-     *
+     * 
      * @param buyIncomingNumberRequest Incoming Number transaction details (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful Incoming Number transaction </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call buyAPhoneNumberAsync(
-            BuyIncomingNumberRequest buyIncomingNumberRequest,
-            final ApiCallback<IncomingNumberResult> _callback)
-            throws ApiException {
+    public okhttp3.Call buyAPhoneNumberAsync(BuyIncomingNumberRequest buyIncomingNumberRequest, final ApiCallback<IncomingNumberResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                buyAPhoneNumberValidateBeforeCall(buyIncomingNumberRequest, _callback);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+        okhttp3.Call localVarCall = buyAPhoneNumberValidateBeforeCall(buyIncomingNumberRequest, _callback);
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for createAConference
-     *
      * @param createConferenceRequest Conference to create (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAConferenceCall(
-            CreateConferenceRequest createConferenceRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call createAConferenceCall(CreateConferenceRequest createConferenceRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -253,11 +238,8 @@ public class DefaultApi {
         Object localVarPostBody = createConferenceRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -265,136 +247,115 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createAConferenceValidateBeforeCall(
-            CreateConferenceRequest createConferenceRequest, final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call createAConferenceValidateBeforeCall(CreateConferenceRequest createConferenceRequest, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = createAConferenceCall(createConferenceRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Create a Conference
-     *
+     * 
      * @param createConferenceRequest Conference to create (optional)
      * @return ConferenceResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
+     </table>
      */
-    public ConferenceResult createAConference(CreateConferenceRequest createConferenceRequest)
-            throws ApiException {
-        ApiResponse<ConferenceResult> localVarResp =
-                createAConferenceWithHttpInfo(createConferenceRequest);
+    public ConferenceResult createAConference(CreateConferenceRequest createConferenceRequest) throws ApiException {
+        ApiResponse<ConferenceResult> localVarResp = createAConferenceWithHttpInfo(createConferenceRequest);
         return localVarResp.getData();
     }
 
     /**
      * Create a Conference
-     *
+     * 
      * @param createConferenceRequest Conference to create (optional)
      * @return ApiResponse&lt;ConferenceResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceResult> createAConferenceWithHttpInfo(
-            CreateConferenceRequest createConferenceRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                createAConferenceValidateBeforeCall(createConferenceRequest, null);
-        Type localVarReturnType = new TypeToken<ConferenceResult>() {}.getType();
+    public ApiResponse<ConferenceResult> createAConferenceWithHttpInfo(CreateConferenceRequest createConferenceRequest) throws ApiException {
+        okhttp3.Call localVarCall = createAConferenceValidateBeforeCall(createConferenceRequest, null);
+        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create a Conference (asynchronously)
-     *
+     * 
      * @param createConferenceRequest Conference to create (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Details of created conference </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAConferenceAsync(
-            CreateConferenceRequest createConferenceRequest,
-            final ApiCallback<ConferenceResult> _callback)
-            throws ApiException {
+    public okhttp3.Call createAConferenceAsync(CreateConferenceRequest createConferenceRequest, final ApiCallback<ConferenceResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                createAConferenceValidateBeforeCall(createConferenceRequest, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceResult>() {}.getType();
+        okhttp3.Call localVarCall = createAConferenceValidateBeforeCall(createConferenceRequest, _callback);
+        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for createAQueue
-     *
      * @param queueRequest Queue details used to create a queue (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAQueueCall(QueueRequest queueRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call createAQueueCall(QueueRequest queueRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -403,11 +364,8 @@ public class DefaultApi {
         Object localVarPostBody = queueRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -415,56 +373,49 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createAQueueValidateBeforeCall(
-            QueueRequest queueRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createAQueueValidateBeforeCall(QueueRequest queueRequest, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = createAQueueCall(queueRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Create a Queue
-     *
+     * 
      * @param queueRequest Queue details used to create a queue (optional)
      * @return QueueResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     </table>
      */
     public QueueResult createAQueue(QueueRequest queueRequest) throws ApiException {
         ApiResponse<QueueResult> localVarResp = createAQueueWithHttpInfo(queueRequest);
@@ -473,73 +424,64 @@ public class DefaultApi {
 
     /**
      * Create a Queue
-     *
+     * 
      * @param queueRequest Queue details used to create a queue (optional)
      * @return ApiResponse&lt;QueueResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueResult> createAQueueWithHttpInfo(QueueRequest queueRequest)
-            throws ApiException {
+    public ApiResponse<QueueResult> createAQueueWithHttpInfo(QueueRequest queueRequest) throws ApiException {
         okhttp3.Call localVarCall = createAQueueValidateBeforeCall(queueRequest, null);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create a Queue (asynchronously)
-     *
+     * 
      * @param queueRequest Queue details used to create a queue (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAQueueAsync(
-            QueueRequest queueRequest, final ApiCallback<QueueResult> _callback)
-            throws ApiException {
+    public okhttp3.Call createAQueueAsync(QueueRequest queueRequest, final ApiCallback<QueueResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createAQueueValidateBeforeCall(queueRequest, _callback);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for createAnApplication
-     *
      * @param applicationRequest Application Details (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAnApplicationCall(
-            ApplicationRequest applicationRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call createAnApplicationCall(ApplicationRequest applicationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -548,11 +490,8 @@ public class DefaultApi {
         Object localVarPostBody = applicationRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Applications"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Applications"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -560,139 +499,116 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createAnApplicationValidateBeforeCall(
-            ApplicationRequest applicationRequest, final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call createAnApplicationValidateBeforeCall(ApplicationRequest applicationRequest, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = createAnApplicationCall(applicationRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Create an application
-     *
+     * 
      * @param applicationRequest Application Details (optional)
      * @return ApplicationResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
+     </table>
      */
-    public ApplicationResult createAnApplication(ApplicationRequest applicationRequest)
-            throws ApiException {
-        ApiResponse<ApplicationResult> localVarResp =
-                createAnApplicationWithHttpInfo(applicationRequest);
+    public ApplicationResult createAnApplication(ApplicationRequest applicationRequest) throws ApiException {
+        ApiResponse<ApplicationResult> localVarResp = createAnApplicationWithHttpInfo(applicationRequest);
         return localVarResp.getData();
     }
 
     /**
      * Create an application
-     *
+     * 
      * @param applicationRequest Application Details (optional)
      * @return ApiResponse&lt;ApplicationResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ApplicationResult> createAnApplicationWithHttpInfo(
-            ApplicationRequest applicationRequest) throws ApiException {
+    public ApiResponse<ApplicationResult> createAnApplicationWithHttpInfo(ApplicationRequest applicationRequest) throws ApiException {
         okhttp3.Call localVarCall = createAnApplicationValidateBeforeCall(applicationRequest, null);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create an application (asynchronously)
-     *
+     * 
      * @param applicationRequest Application Details (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Application successfuly created </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createAnApplicationAsync(
-            ApplicationRequest applicationRequest, final ApiCallback<ApplicationResult> _callback)
-            throws ApiException {
+    public okhttp3.Call createAnApplicationAsync(ApplicationRequest applicationRequest, final ApiCallback<ApplicationResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                createAnApplicationValidateBeforeCall(applicationRequest, _callback);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        okhttp3.Call localVarCall = createAnApplicationValidateBeforeCall(applicationRequest, _callback);
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for createKnowledgeBaseCompletion
-     *
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource.
-     *     (required)
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
      * @param completionRequest Completion request details (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createKnowledgeBaseCompletionCall(
-            String knowledgeBaseId,
-            CompletionRequest completionRequest,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call createKnowledgeBaseCompletionCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -701,14 +617,9 @@ public class DefaultApi {
         Object localVarPostBody = completionRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "knowledgeBaseId" + "\\}",
-                                localVarApiClient.escapeString(knowledgeBaseId.toString()));
+        String localVarPath = "/Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "knowledgeBaseId" + "\\}", localVarApiClient.escapeString(knowledgeBaseId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -716,155 +627,123 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createKnowledgeBaseCompletionValidateBeforeCall(
-            String knowledgeBaseId,
-            CompletionRequest completionRequest,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call createKnowledgeBaseCompletionValidateBeforeCall(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'knowledgeBaseId' is set
         if (knowledgeBaseId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'knowledgeBaseId' when calling"
-                            + " createKnowledgeBaseCompletion(Async)");
+            throw new ApiException("Missing the required parameter 'knowledgeBaseId' when calling createKnowledgeBaseCompletion(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                createKnowledgeBaseCompletionCall(knowledgeBaseId, completionRequest, _callback);
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionCall(knowledgeBaseId, completionRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Query the knowledge base
-     *
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource.
-     *     (required)
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
      * @param completionRequest Completion request details (optional)
      * @return CompletionResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
      */
-    public CompletionResult createKnowledgeBaseCompletion(
-            String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
-        ApiResponse<CompletionResult> localVarResp =
-                createKnowledgeBaseCompletionWithHttpInfo(knowledgeBaseId, completionRequest);
+    public CompletionResult createKnowledgeBaseCompletion(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
+        ApiResponse<CompletionResult> localVarResp = createKnowledgeBaseCompletionWithHttpInfo(knowledgeBaseId, completionRequest);
         return localVarResp.getData();
     }
 
     /**
      * Query the knowledge base
-     *
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource.
-     *     (required)
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
      * @param completionRequest Completion request details (optional)
      * @return ApiResponse&lt;CompletionResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<CompletionResult> createKnowledgeBaseCompletionWithHttpInfo(
-            String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                createKnowledgeBaseCompletionValidateBeforeCall(
-                        knowledgeBaseId, completionRequest, null);
-        Type localVarReturnType = new TypeToken<CompletionResult>() {}.getType();
+    public ApiResponse<CompletionResult> createKnowledgeBaseCompletionWithHttpInfo(String knowledgeBaseId, CompletionRequest completionRequest) throws ApiException {
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, null);
+        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Query the knowledge base (asynchronously)
-     *
-     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource.
-     *     (required)
+     * 
+     * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource. (required)
      * @param completionRequest Completion request details (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> KnowledgeaBase completion response </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call createKnowledgeBaseCompletionAsync(
-            String knowledgeBaseId,
-            CompletionRequest completionRequest,
-            final ApiCallback<CompletionResult> _callback)
-            throws ApiException {
+    public okhttp3.Call createKnowledgeBaseCompletionAsync(String knowledgeBaseId, CompletionRequest completionRequest, final ApiCallback<CompletionResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                createKnowledgeBaseCompletionValidateBeforeCall(
-                        knowledgeBaseId, completionRequest, _callback);
-        Type localVarReturnType = new TypeToken<CompletionResult>() {}.getType();
+        okhttp3.Call localVarCall = createKnowledgeBaseCompletionValidateBeforeCall(knowledgeBaseId, completionRequest, _callback);
+        Type localVarReturnType = new TypeToken<CompletionResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for deleteARecording
-     *
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteARecordingCall(String recordingId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call deleteARecordingCall(String recordingId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -873,14 +752,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Recordings/{recordingId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "recordingId" + "\\}",
-                                localVarApiClient.escapeString(recordingId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Recordings/{recordingId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "recordingId" + "\\}", localVarApiClient.escapeString(recordingId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -888,64 +762,53 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "DELETE",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteARecordingValidateBeforeCall(
-            String recordingId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call deleteARecordingValidateBeforeCall(String recordingId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'recordingId' is set
         if (recordingId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'recordingId' when calling"
-                            + " deleteARecording(Async)");
+            throw new ApiException("Missing the required parameter 'recordingId' when calling deleteARecording(Async)");
         }
+        
 
         okhttp3.Call localVarCall = deleteARecordingCall(recordingId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Delete a Recording
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
+     </table>
      */
     public void deleteARecording(String recordingId) throws ApiException {
         deleteARecordingWithHttpInfo(recordingId);
@@ -953,16 +816,15 @@ public class DefaultApi {
 
     /**
      * Delete a Recording
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<Void> deleteARecordingWithHttpInfo(String recordingId) throws ApiException {
         okhttp3.Call localVarCall = deleteARecordingValidateBeforeCall(recordingId, null);
@@ -971,50 +833,45 @@ public class DefaultApi {
 
     /**
      * Delete a Recording (asynchronously)
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Recording Deleted </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteARecordingAsync(String recordingId, final ApiCallback<Void> _callback)
-            throws ApiException {
+    public okhttp3.Call deleteARecordingAsync(String recordingId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteARecordingValidateBeforeCall(recordingId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for deleteAnApplication
-     *
      * @param applicationId String that uniquely identifies this application resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteAnApplicationCall(String applicationId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call deleteAnApplicationCall(String applicationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1023,14 +880,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Applications/{applicationId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "applicationId" + "\\}",
-                                localVarApiClient.escapeString(applicationId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Applications/{applicationId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "applicationId" + "\\}", localVarApiClient.escapeString(applicationId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1038,64 +890,53 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "DELETE",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteAnApplicationValidateBeforeCall(
-            String applicationId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call deleteAnApplicationValidateBeforeCall(String applicationId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'applicationId' is set
         if (applicationId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'applicationId' when calling"
-                            + " deleteAnApplication(Async)");
+            throw new ApiException("Missing the required parameter 'applicationId' when calling deleteAnApplication(Async)");
         }
+        
 
         okhttp3.Call localVarCall = deleteAnApplicationCall(applicationId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Delete an application
-     *
+     * 
      * @param applicationId String that uniquely identifies this application resource. (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
+     </table>
      */
     public void deleteAnApplication(String applicationId) throws ApiException {
         deleteAnApplicationWithHttpInfo(applicationId);
@@ -1103,69 +944,62 @@ public class DefaultApi {
 
     /**
      * Delete an application
-     *
+     * 
      * @param applicationId String that uniquely identifies this application resource. (required)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> deleteAnApplicationWithHttpInfo(String applicationId)
-            throws ApiException {
+    public ApiResponse<Void> deleteAnApplicationWithHttpInfo(String applicationId) throws ApiException {
         okhttp3.Call localVarCall = deleteAnApplicationValidateBeforeCall(applicationId, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Delete an application (asynchronously)
-     *
+     * 
      * @param applicationId String that uniquely identifies this application resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful application deletion </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteAnApplicationAsync(
-            String applicationId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call deleteAnApplicationAsync(String applicationId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteAnApplicationValidateBeforeCall(applicationId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for deleteAnIncomingNumber
-     *
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteAnIncomingNumberCall(
-            String phoneNumberId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteAnIncomingNumberCall(String phoneNumberId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1174,14 +1008,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "phoneNumberId" + "\\}",
-                                localVarApiClient.escapeString(phoneNumberId.toString()));
+        String localVarPath = "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "phoneNumberId" + "\\}", localVarApiClient.escapeString(phoneNumberId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1189,64 +1018,53 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "DELETE",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteAnIncomingNumberValidateBeforeCall(
-            String phoneNumberId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call deleteAnIncomingNumberValidateBeforeCall(String phoneNumberId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'phoneNumberId' is set
         if (phoneNumberId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'phoneNumberId' when calling"
-                            + " deleteAnIncomingNumber(Async)");
+            throw new ApiException("Missing the required parameter 'phoneNumberId' when calling deleteAnIncomingNumber(Async)");
         }
+        
 
         okhttp3.Call localVarCall = deleteAnIncomingNumberCall(phoneNumberId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Delete an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
+     </table>
      */
     public void deleteAnIncomingNumber(String phoneNumberId) throws ApiException {
         deleteAnIncomingNumberWithHttpInfo(phoneNumberId);
@@ -1254,72 +1072,63 @@ public class DefaultApi {
 
     /**
      * Delete an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> deleteAnIncomingNumberWithHttpInfo(String phoneNumberId)
-            throws ApiException {
+    public ApiResponse<Void> deleteAnIncomingNumberWithHttpInfo(String phoneNumberId) throws ApiException {
         okhttp3.Call localVarCall = deleteAnIncomingNumberValidateBeforeCall(phoneNumberId, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Delete an Incoming Number (asynchronously)
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Incoming Number deletion. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call deleteAnIncomingNumberAsync(
-            String phoneNumberId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call deleteAnIncomingNumberAsync(String phoneNumberId, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                deleteAnIncomingNumberValidateBeforeCall(phoneNumberId, _callback);
+        okhttp3.Call localVarCall = deleteAnIncomingNumberValidateBeforeCall(phoneNumberId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for dequeueAMember
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID if the Call that the Member belongs to (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call dequeueAMemberCall(
-            String queueId, String callId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dequeueAMemberCall(String queueId, String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1328,17 +1137,10 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}/Members/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}/Members/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1346,71 +1148,60 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dequeueAMemberValidateBeforeCall(
-            String queueId, String callId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call dequeueAMemberValidateBeforeCall(String queueId, String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling dequeueAMember(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling dequeueAMember(Async)");
         }
-
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling dequeueAMember(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling dequeueAMember(Async)");
         }
+        
 
         okhttp3.Call localVarCall = dequeueAMemberCall(queueId, callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Dequeue a Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID if the Call that the Member belongs to (required)
      * @return QueueMember
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
     public QueueMember dequeueAMember(String queueId, String callId) throws ApiException {
         ApiResponse<QueueMember> localVarResp = dequeueAMemberWithHttpInfo(queueId, callId);
@@ -1419,76 +1210,66 @@ public class DefaultApi {
 
     /**
      * Dequeue a Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID if the Call that the Member belongs to (required)
      * @return ApiResponse&lt;QueueMember&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueMember> dequeueAMemberWithHttpInfo(String queueId, String callId)
-            throws ApiException {
+    public ApiResponse<QueueMember> dequeueAMemberWithHttpInfo(String queueId, String callId) throws ApiException {
         okhttp3.Call localVarCall = dequeueAMemberValidateBeforeCall(queueId, callId, null);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Dequeue a Member (asynchronously)
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID if the Call that the Member belongs to (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call dequeueAMemberAsync(
-            String queueId, String callId, final ApiCallback<QueueMember> _callback)
-            throws ApiException {
+    public okhttp3.Call dequeueAMemberAsync(String queueId, String callId, final ApiCallback<QueueMember> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dequeueAMemberValidateBeforeCall(queueId, callId, _callback);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for dequeueHeadMember
-     *
      * @param queueId String that uniquely identifies this queue resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call dequeueHeadMemberCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call dequeueHeadMemberCall(String queueId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1497,14 +1278,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}/Members/Front"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}/Members/Front"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1512,64 +1288,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dequeueHeadMemberValidateBeforeCall(
-            String queueId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call dequeueHeadMemberValidateBeforeCall(String queueId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling"
-                            + " dequeueHeadMember(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling dequeueHeadMember(Async)");
         }
+        
 
         okhttp3.Call localVarCall = dequeueHeadMemberCall(queueId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Dequeue Head Member
-     *
+     * 
      * @param queueId String that uniquely identifies this queue resource. (required)
      * @return QueueMember
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
     public QueueMember dequeueHeadMember(String queueId) throws ApiException {
         ApiResponse<QueueMember> localVarResp = dequeueHeadMemberWithHttpInfo(queueId);
@@ -1578,71 +1344,64 @@ public class DefaultApi {
 
     /**
      * Dequeue Head Member
-     *
+     * 
      * @param queueId String that uniquely identifies this queue resource. (required)
      * @return ApiResponse&lt;QueueMember&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueMember> dequeueHeadMemberWithHttpInfo(String queueId)
-            throws ApiException {
+    public ApiResponse<QueueMember> dequeueHeadMemberWithHttpInfo(String queueId) throws ApiException {
         okhttp3.Call localVarCall = dequeueHeadMemberValidateBeforeCall(queueId, null);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Dequeue Head Member (asynchronously)
-     *
+     * 
      * @param queueId String that uniquely identifies this queue resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Accepted dequeue request </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call dequeueHeadMemberAsync(
-            String queueId, final ApiCallback<QueueMember> _callback) throws ApiException {
+    public okhttp3.Call dequeueHeadMemberAsync(String queueId, final ApiCallback<QueueMember> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dequeueHeadMemberValidateBeforeCall(queueId, _callback);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for downloadARecordingFile
-     *
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call downloadARecordingFileCall(String recordingId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call downloadARecordingFileCall(String recordingId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1651,14 +1410,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Recordings/{recordingId}/Download"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "recordingId" + "\\}",
-                                localVarApiClient.escapeString(recordingId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Recordings/{recordingId}/Download"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "recordingId" + "\\}", localVarApiClient.escapeString(recordingId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1666,64 +1420,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"audio/x-wav"};
+        final String[] localVarAccepts = {
+            "audio/x-wav"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call downloadARecordingFileValidateBeforeCall(
-            String recordingId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call downloadARecordingFileValidateBeforeCall(String recordingId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'recordingId' is set
         if (recordingId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'recordingId' when calling"
-                            + " downloadARecordingFile(Async)");
+            throw new ApiException("Missing the required parameter 'recordingId' when calling downloadARecordingFile(Async)");
         }
+        
 
         okhttp3.Call localVarCall = downloadARecordingFileCall(recordingId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Download a Recording File
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return File
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
     public File downloadARecordingFile(String recordingId) throws ApiException {
         ApiResponse<File> localVarResp = downloadARecordingFileWithHttpInfo(recordingId);
@@ -1732,72 +1476,64 @@ public class DefaultApi {
 
     /**
      * Download a Recording File
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return ApiResponse&lt;File&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<File> downloadARecordingFileWithHttpInfo(String recordingId)
-            throws ApiException {
+    public ApiResponse<File> downloadARecordingFileWithHttpInfo(String recordingId) throws ApiException {
         okhttp3.Call localVarCall = downloadARecordingFileValidateBeforeCall(recordingId, null);
-        Type localVarReturnType = new TypeToken<File>() {}.getType();
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Download a Recording File (asynchronously)
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call downloadARecordingFileAsync(
-            String recordingId, final ApiCallback<File> _callback) throws ApiException {
+    public okhttp3.Call downloadARecordingFileAsync(String recordingId, final ApiCallback<File> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                downloadARecordingFileValidateBeforeCall(recordingId, _callback);
-        Type localVarReturnType = new TypeToken<File>() {}.getType();
+        okhttp3.Call localVarCall = downloadARecordingFileValidateBeforeCall(recordingId, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for filterLogs
-     *
      * @param filterLogsRequest Filter logs request paramters (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call filterLogsCall(
-            FilterLogsRequest filterLogsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call filterLogsCall(FilterLogsRequest filterLogsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1806,11 +1542,8 @@ public class DefaultApi {
         Object localVarPostBody = filterLogsRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Logs"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1818,63 +1551,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call filterLogsValidateBeforeCall(
-            FilterLogsRequest filterLogsRequest, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call filterLogsValidateBeforeCall(FilterLogsRequest filterLogsRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'filterLogsRequest' is set
         if (filterLogsRequest == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'filterLogsRequest' when calling"
-                            + " filterLogs(Async)");
+            throw new ApiException("Missing the required parameter 'filterLogsRequest' when calling filterLogs(Async)");
         }
+        
 
         okhttp3.Call localVarCall = filterLogsCall(filterLogsRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Filter Logs
-     *
+     * 
      * @param filterLogsRequest Filter logs request paramters (required)
      * @return LogList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
     public LogList filterLogs(FilterLogsRequest filterLogsRequest) throws ApiException {
         ApiResponse<LogList> localVarResp = filterLogsWithHttpInfo(filterLogsRequest);
@@ -1883,72 +1607,64 @@ public class DefaultApi {
 
     /**
      * Filter Logs
-     *
+     * 
      * @param filterLogsRequest Filter logs request paramters (required)
      * @return ApiResponse&lt;LogList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<LogList> filterLogsWithHttpInfo(FilterLogsRequest filterLogsRequest)
-            throws ApiException {
+    public ApiResponse<LogList> filterLogsWithHttpInfo(FilterLogsRequest filterLogsRequest) throws ApiException {
         okhttp3.Call localVarCall = filterLogsValidateBeforeCall(filterLogsRequest, null);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Filter Logs (asynchronously)
-     *
+     * 
      * @param filterLogsRequest Filter logs request paramters (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call filterLogsAsync(
-            FilterLogsRequest filterLogsRequest, final ApiCallback<LogList> _callback)
-            throws ApiException {
+    public okhttp3.Call filterLogsAsync(FilterLogsRequest filterLogsRequest, final ApiCallback<LogList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = filterLogsValidateBeforeCall(filterLogsRequest, _callback);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getACall
-     *
      * @param callId String that uniquely identifies this call resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getACallCall(String callId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getACallCall(String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -1957,14 +1673,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1972,63 +1683,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getACallValidateBeforeCall(String callId, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call getACallValidateBeforeCall(String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling getACall(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling getACall(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getACallCall(callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Call
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @return CallResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
+     </table>
      */
     public CallResult getACall(String callId) throws ApiException {
         ApiResponse<CallResult> localVarResp = getACallWithHttpInfo(callId);
@@ -2037,70 +1739,64 @@ public class DefaultApi {
 
     /**
      * Get a Call
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @return ApiResponse&lt;CallResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<CallResult> getACallWithHttpInfo(String callId) throws ApiException {
         okhttp3.Call localVarCall = getACallValidateBeforeCall(callId, null);
-        Type localVarReturnType = new TypeToken<CallResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<CallResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Call (asynchronously)
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call Resource </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getACallAsync(String callId, final ApiCallback<CallResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getACallAsync(String callId, final ApiCallback<CallResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getACallValidateBeforeCall(callId, _callback);
-        Type localVarReturnType = new TypeToken<CallResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<CallResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAConference
-     *
      * @param conferenceId A string that uniquely identifies this conference resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAConferenceCall(String conferenceId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAConferenceCall(String conferenceId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2109,14 +1805,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2124,64 +1815,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAConferenceValidateBeforeCall(
-            String conferenceId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAConferenceValidateBeforeCall(String conferenceId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " getAConference(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling getAConference(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAConferenceCall(conferenceId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Conference
-     *
+     * 
      * @param conferenceId A string that uniquely identifies this conference resource. (required)
      * @return ConferenceResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
+     </table>
      */
     public ConferenceResult getAConference(String conferenceId) throws ApiException {
         ApiResponse<ConferenceResult> localVarResp = getAConferenceWithHttpInfo(conferenceId);
@@ -2190,74 +1871,65 @@ public class DefaultApi {
 
     /**
      * Get a Conference
-     *
+     * 
      * @param conferenceId A string that uniquely identifies this conference resource. (required)
      * @return ApiResponse&lt;ConferenceResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceResult> getAConferenceWithHttpInfo(String conferenceId)
-            throws ApiException {
+    public ApiResponse<ConferenceResult> getAConferenceWithHttpInfo(String conferenceId) throws ApiException {
         okhttp3.Call localVarCall = getAConferenceValidateBeforeCall(conferenceId, null);
-        Type localVarReturnType = new TypeToken<ConferenceResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Conference (asynchronously)
-     *
+     * 
      * @param conferenceId A string that uniquely identifies this conference resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAConferenceAsync(
-            String conferenceId, final ApiCallback<ConferenceResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAConferenceAsync(String conferenceId, final ApiCallback<ConferenceResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAConferenceValidateBeforeCall(conferenceId, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ConferenceResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAMember
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID of the Call that the Member belongs to (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAMemberCall(String queueId, String callId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAMemberCall(String queueId, String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2266,17 +1938,10 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}/Members/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}/Members/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2284,71 +1949,60 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAMemberValidateBeforeCall(
-            String queueId, String callId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAMemberValidateBeforeCall(String queueId, String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling getAMember(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling getAMember(Async)");
         }
-
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling getAMember(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling getAMember(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAMemberCall(queueId, callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID of the Call that the Member belongs to (required)
      * @return QueueMember
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
+     </table>
      */
     public QueueMember getAMember(String queueId, String callId) throws ApiException {
         ApiResponse<QueueMember> localVarResp = getAMemberWithHttpInfo(queueId, callId);
@@ -2357,77 +2011,67 @@ public class DefaultApi {
 
     /**
      * Get a Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID of the Call that the Member belongs to (required)
      * @return ApiResponse&lt;QueueMember&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueMember> getAMemberWithHttpInfo(String queueId, String callId)
-            throws ApiException {
+    public ApiResponse<QueueMember> getAMemberWithHttpInfo(String queueId, String callId) throws ApiException {
         okhttp3.Call localVarCall = getAMemberValidateBeforeCall(queueId, callId, null);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Member (asynchronously)
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param callId ID of the Call that the Member belongs to (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved a queue member </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAMemberAsync(
-            String queueId, String callId, final ApiCallback<QueueMember> _callback)
-            throws ApiException {
+    public okhttp3.Call getAMemberAsync(String queueId, String callId, final ApiCallback<QueueMember> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAMemberValidateBeforeCall(queueId, callId, _callback);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAParticipant
-     *
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAParticipantCall(
-            String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAParticipantCall(String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2436,17 +2080,10 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2454,152 +2091,128 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAParticipantValidateBeforeCall(
-            String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAParticipantValidateBeforeCall(String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " getAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling getAParticipant(Async)");
         }
-
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling getAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling getAParticipant(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAParticipantCall(conferenceId, callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @return ConferenceParticipantResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public ConferenceParticipantResult getAParticipant(String conferenceId, String callId)
-            throws ApiException {
-        ApiResponse<ConferenceParticipantResult> localVarResp =
-                getAParticipantWithHttpInfo(conferenceId, callId);
+    public ConferenceParticipantResult getAParticipant(String conferenceId, String callId) throws ApiException {
+        ApiResponse<ConferenceParticipantResult> localVarResp = getAParticipantWithHttpInfo(conferenceId, callId);
         return localVarResp.getData();
     }
 
     /**
      * Get a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @return ApiResponse&lt;ConferenceParticipantResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceParticipantResult> getAParticipantWithHttpInfo(
-            String conferenceId, String callId) throws ApiException {
+    public ApiResponse<ConferenceParticipantResult> getAParticipantWithHttpInfo(String conferenceId, String callId) throws ApiException {
         okhttp3.Call localVarCall = getAParticipantValidateBeforeCall(conferenceId, callId, null);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Participant (asynchronously)
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAParticipantAsync(
-            String conferenceId,
-            String callId,
-            final ApiCallback<ConferenceParticipantResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAParticipantAsync(String conferenceId, String callId, final ApiCallback<ConferenceParticipantResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                getAParticipantValidateBeforeCall(conferenceId, callId, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>() {}.getType();
+        okhttp3.Call localVarCall = getAParticipantValidateBeforeCall(conferenceId, callId, _callback);
+        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAQueue
-     *
      * @param queueId A string that uniquely identifies this queue resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAQueueCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAQueueCall(String queueId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2608,14 +2221,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2623,63 +2231,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAQueueValidateBeforeCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call getAQueueValidateBeforeCall(String queueId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling getAQueue(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling getAQueue(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAQueueCall(queueId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Queue
-     *
+     * 
      * @param queueId A string that uniquely identifies this queue resource. (required)
      * @return QueueResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
+     </table>
      */
     public QueueResult getAQueue(String queueId) throws ApiException {
         ApiResponse<QueueResult> localVarResp = getAQueueWithHttpInfo(queueId);
@@ -2688,70 +2287,64 @@ public class DefaultApi {
 
     /**
      * Get a Queue
-     *
+     * 
      * @param queueId A string that uniquely identifies this queue resource. (required)
      * @return ApiResponse&lt;QueueResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<QueueResult> getAQueueWithHttpInfo(String queueId) throws ApiException {
         okhttp3.Call localVarCall = getAQueueValidateBeforeCall(queueId, null);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Queue (asynchronously)
-     *
+     * 
      * @param queueId A string that uniquely identifies this queue resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAQueueAsync(String queueId, final ApiCallback<QueueResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAQueueAsync(String queueId, final ApiCallback<QueueResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAQueueValidateBeforeCall(queueId, _callback);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getARecording
-     *
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getARecordingCall(String recordingId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getARecordingCall(String recordingId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2760,14 +2353,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Recordings/{recordingId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "recordingId" + "\\}",
-                                localVarApiClient.escapeString(recordingId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Recordings/{recordingId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "recordingId" + "\\}", localVarApiClient.escapeString(recordingId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2775,64 +2363,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getARecordingValidateBeforeCall(
-            String recordingId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getARecordingValidateBeforeCall(String recordingId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'recordingId' is set
         if (recordingId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'recordingId' when calling"
-                            + " getARecording(Async)");
+            throw new ApiException("Missing the required parameter 'recordingId' when calling getARecording(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getARecordingCall(recordingId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a Recording
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return RecordingResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+     </table>
      */
     public RecordingResult getARecording(String recordingId) throws ApiException {
         ApiResponse<RecordingResult> localVarResp = getARecordingWithHttpInfo(recordingId);
@@ -2841,69 +2419,63 @@ public class DefaultApi {
 
     /**
      * Get a Recording
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return ApiResponse&lt;RecordingResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<RecordingResult> getARecordingWithHttpInfo(String recordingId)
-            throws ApiException {
+    public ApiResponse<RecordingResult> getARecordingWithHttpInfo(String recordingId) throws ApiException {
         okhttp3.Call localVarCall = getARecordingValidateBeforeCall(recordingId, null);
-        Type localVarReturnType = new TypeToken<RecordingResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<RecordingResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a Recording (asynchronously)
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getARecordingAsync(
-            String recordingId, final ApiCallback<RecordingResult> _callback) throws ApiException {
+    public okhttp3.Call getARecordingAsync(String recordingId, final ApiCallback<RecordingResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getARecordingValidateBeforeCall(recordingId, _callback);
-        Type localVarReturnType = new TypeToken<RecordingResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<RecordingResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAnAccount
-     *
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
+     </table>
      */
     public okhttp3.Call getAnAccountCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -2912,11 +2484,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2924,56 +2493,48 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnAccountValidateBeforeCall(final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call getAnAccountValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = getAnAccountCall(_callback);
         return localVarCall;
+
     }
 
     /**
      * Get an Account
-     *
+     * 
      * @return AccountResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
+     </table>
      */
     public AccountResult getAnAccount() throws ApiException {
         ApiResponse<AccountResult> localVarResp = getAnAccountWithHttpInfo();
@@ -2982,68 +2543,62 @@ public class DefaultApi {
 
     /**
      * Get an Account
-     *
+     * 
      * @return ApiResponse&lt;AccountResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<AccountResult> getAnAccountWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getAnAccountValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<AccountResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<AccountResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get an Account (asynchronously)
-     *
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Account Details </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnAccountAsync(final ApiCallback<AccountResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAnAccountAsync(final ApiCallback<AccountResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnAccountValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<AccountResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<AccountResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAnApplication
-     *
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnApplicationCall(String applicationId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAnApplicationCall(String applicationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3052,14 +2607,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Applications/{applicationId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "applicationId" + "\\}",
-                                localVarApiClient.escapeString(applicationId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Applications/{applicationId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "applicationId" + "\\}", localVarApiClient.escapeString(applicationId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3067,64 +2617,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnApplicationValidateBeforeCall(
-            String applicationId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAnApplicationValidateBeforeCall(String applicationId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'applicationId' is set
         if (applicationId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'applicationId' when calling"
-                            + " getAnApplication(Async)");
+            throw new ApiException("Missing the required parameter 'applicationId' when calling getAnApplication(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAnApplicationCall(applicationId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get an Application
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @return ApplicationResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
+     </table>
      */
     public ApplicationResult getAnApplication(String applicationId) throws ApiException {
         ApiResponse<ApplicationResult> localVarResp = getAnApplicationWithHttpInfo(applicationId);
@@ -3133,72 +2673,64 @@ public class DefaultApi {
 
     /**
      * Get an Application
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @return ApiResponse&lt;ApplicationResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ApplicationResult> getAnApplicationWithHttpInfo(String applicationId)
-            throws ApiException {
+    public ApiResponse<ApplicationResult> getAnApplicationWithHttpInfo(String applicationId) throws ApiException {
         okhttp3.Call localVarCall = getAnApplicationValidateBeforeCall(applicationId, null);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get an Application (asynchronously)
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Application Details </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnApplicationAsync(
-            String applicationId, final ApiCallback<ApplicationResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAnApplicationAsync(String applicationId, final ApiCallback<ApplicationResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnApplicationValidateBeforeCall(applicationId, _callback);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAnIncomingNumber
-     *
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnIncomingNumberCall(String phoneNumberId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAnIncomingNumberCall(String phoneNumberId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3207,14 +2739,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "phoneNumberId" + "\\}",
-                                localVarApiClient.escapeString(phoneNumberId.toString()));
+        String localVarPath = "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "phoneNumberId" + "\\}", localVarApiClient.escapeString(phoneNumberId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3222,139 +2749,120 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnIncomingNumberValidateBeforeCall(
-            String phoneNumberId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAnIncomingNumberValidateBeforeCall(String phoneNumberId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'phoneNumberId' is set
         if (phoneNumberId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'phoneNumberId' when calling"
-                            + " getAnIncomingNumber(Async)");
+            throw new ApiException("Missing the required parameter 'phoneNumberId' when calling getAnIncomingNumber(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAnIncomingNumberCall(phoneNumberId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @return IncomingNumberResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
+     </table>
      */
     public IncomingNumberResult getAnIncomingNumber(String phoneNumberId) throws ApiException {
-        ApiResponse<IncomingNumberResult> localVarResp =
-                getAnIncomingNumberWithHttpInfo(phoneNumberId);
+        ApiResponse<IncomingNumberResult> localVarResp = getAnIncomingNumberWithHttpInfo(phoneNumberId);
         return localVarResp.getData();
     }
 
     /**
      * Get an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @return ApiResponse&lt;IncomingNumberResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<IncomingNumberResult> getAnIncomingNumberWithHttpInfo(String phoneNumberId)
-            throws ApiException {
+    public ApiResponse<IncomingNumberResult> getAnIncomingNumberWithHttpInfo(String phoneNumberId) throws ApiException {
         okhttp3.Call localVarCall = getAnIncomingNumberValidateBeforeCall(phoneNumberId, null);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get an Incoming Number (asynchronously)
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Incoming Phone Number result. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnIncomingNumberAsync(
-            String phoneNumberId, final ApiCallback<IncomingNumberResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getAnIncomingNumberAsync(String phoneNumberId, final ApiCallback<IncomingNumberResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnIncomingNumberValidateBeforeCall(phoneNumberId, _callback);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getAnSmsMessage
-     *
      * @param messageId String that uniquely identifies this Message resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnSmsMessageCall(String messageId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getAnSmsMessageCall(String messageId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3363,14 +2871,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/{messageId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "messageId" + "\\}",
-                                localVarApiClient.escapeString(messageId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/{messageId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "messageId" + "\\}", localVarApiClient.escapeString(messageId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3378,64 +2881,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnSmsMessageValidateBeforeCall(
-            String messageId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getAnSmsMessageValidateBeforeCall(String messageId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'messageId' is set
         if (messageId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'messageId' when calling"
-                            + " getAnSmsMessage(Async)");
+            throw new ApiException("Missing the required parameter 'messageId' when calling getAnSmsMessage(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getAnSmsMessageCall(messageId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get an SMS Message
-     *
+     * 
      * @param messageId String that uniquely identifies this Message resource. (required)
      * @return MessageResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
     public MessageResult getAnSmsMessage(String messageId) throws ApiException {
         ApiResponse<MessageResult> localVarResp = getAnSmsMessageWithHttpInfo(messageId);
@@ -3444,72 +2937,64 @@ public class DefaultApi {
 
     /**
      * Get an SMS Message
-     *
+     * 
      * @param messageId String that uniquely identifies this Message resource. (required)
      * @return ApiResponse&lt;MessageResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<MessageResult> getAnSmsMessageWithHttpInfo(String messageId)
-            throws ApiException {
+    public ApiResponse<MessageResult> getAnSmsMessageWithHttpInfo(String messageId) throws ApiException {
         okhttp3.Call localVarCall = getAnSmsMessageValidateBeforeCall(messageId, null);
-        Type localVarReturnType = new TypeToken<MessageResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<MessageResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get an SMS Message (asynchronously)
-     *
+     * 
      * @param messageId String that uniquely identifies this Message resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS message that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getAnSmsMessageAsync(
-            String messageId, final ApiCallback<MessageResult> _callback) throws ApiException {
+    public okhttp3.Call getAnSmsMessageAsync(String messageId, final ApiCallback<MessageResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnSmsMessageValidateBeforeCall(messageId, _callback);
-        Type localVarReturnType = new TypeToken<MessageResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<MessageResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getHeadMember
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getHeadMemberCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getHeadMemberCall(String queueId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3518,14 +3003,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}/Members/Front"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}/Members/Front"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3533,64 +3013,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getHeadMemberValidateBeforeCall(
-            String queueId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getHeadMemberValidateBeforeCall(String queueId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling getHeadMember(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling getHeadMember(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getHeadMemberCall(queueId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get Head Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @return QueueMember
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
+     </table>
      */
     public QueueMember getHeadMember(String queueId) throws ApiException {
         ApiResponse<QueueMember> localVarResp = getHeadMemberWithHttpInfo(queueId);
@@ -3599,72 +3069,64 @@ public class DefaultApi {
 
     /**
      * Get Head Member
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @return ApiResponse&lt;QueueMember&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<QueueMember> getHeadMemberWithHttpInfo(String queueId) throws ApiException {
         okhttp3.Call localVarCall = getHeadMemberValidateBeforeCall(queueId, null);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get Head Member (asynchronously)
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getHeadMemberAsync(String queueId, final ApiCallback<QueueMember> _callback)
-            throws ApiException {
+    public okhttp3.Call getHeadMemberAsync(String queueId, final ApiCallback<QueueMember> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getHeadMemberValidateBeforeCall(queueId, _callback);
-        Type localVarReturnType = new TypeToken<QueueMember>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMember>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsBrand
-     *
      * @param brandId String that uniquely identifies this brand resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsBrandCall(String brandId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsBrandCall(String brandId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3673,14 +3135,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/Brands/{brandId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "brandId" + "\\}",
-                                localVarApiClient.escapeString(brandId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Brands/{brandId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", localVarApiClient.escapeString(brandId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3688,64 +3145,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsBrandValidateBeforeCall(
-            String brandId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getTenDLCSmsBrandValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'brandId' is set
         if (brandId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'brandId' when calling"
-                            + " getTenDLCSmsBrand(Async)");
+            throw new ApiException("Missing the required parameter 'brandId' when calling getTenDLCSmsBrand(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsBrandCall(brandId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a 10DLC SMS Brand
-     *
+     * 
      * @param brandId String that uniquely identifies this brand resource. (required)
      * @return SMSTenDLCBrand
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTenDLCBrand getTenDLCSmsBrand(String brandId) throws ApiException {
         ApiResponse<SMSTenDLCBrand> localVarResp = getTenDLCSmsBrandWithHttpInfo(brandId);
@@ -3754,69 +3201,63 @@ public class DefaultApi {
 
     /**
      * Get a 10DLC SMS Brand
-     *
+     * 
      * @param brandId String that uniquely identifies this brand resource. (required)
      * @return ApiResponse&lt;SMSTenDLCBrand&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCBrand> getTenDLCSmsBrandWithHttpInfo(String brandId)
-            throws ApiException {
+    public ApiResponse<SMSTenDLCBrand> getTenDLCSmsBrandWithHttpInfo(String brandId) throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsBrandValidateBeforeCall(brandId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrand>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrand>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a 10DLC SMS Brand (asynchronously)
-     *
+     * 
      * @param brandId String that uniquely identifies this brand resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Brand that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsBrandAsync(
-            String brandId, final ApiCallback<SMSTenDLCBrand> _callback) throws ApiException {
+    public okhttp3.Call getTenDLCSmsBrandAsync(String brandId, final ApiCallback<SMSTenDLCBrand> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTenDLCSmsBrandValidateBeforeCall(brandId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrand>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrand>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsBrands
-     *
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
      */
     public okhttp3.Call getTenDLCSmsBrandsCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3825,11 +3266,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/Brands"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Brands"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3837,56 +3275,48 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsBrandsValidateBeforeCall(final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call getTenDLCSmsBrandsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsBrandsCall(_callback);
         return localVarCall;
+
     }
 
     /**
      * Get list of SMS 10DLC Brands
-     *
+     * 
      * @return SMSTenDLCBrandsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTenDLCBrandsListResult getTenDLCSmsBrands() throws ApiException {
         ApiResponse<SMSTenDLCBrandsListResult> localVarResp = getTenDLCSmsBrandsWithHttpInfo();
@@ -3895,69 +3325,62 @@ public class DefaultApi {
 
     /**
      * Get list of SMS 10DLC Brands
-     *
+     * 
      * @return ApiResponse&lt;SMSTenDLCBrandsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCBrandsListResult> getTenDLCSmsBrandsWithHttpInfo()
-            throws ApiException {
+    public ApiResponse<SMSTenDLCBrandsListResult> getTenDLCSmsBrandsWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsBrandsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get list of SMS 10DLC Brands (asynchronously)
-     *
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC brands </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsBrandsAsync(
-            final ApiCallback<SMSTenDLCBrandsListResult> _callback) throws ApiException {
+    public okhttp3.Call getTenDLCSmsBrandsAsync(final ApiCallback<SMSTenDLCBrandsListResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTenDLCSmsBrandsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCBrandsListResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsCampaign
-     *
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsCampaignCall(String campaignId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsCampaignCall(String campaignId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -3966,14 +3389,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/Campaigns/{campaignId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "campaignId" + "\\}",
-                                localVarApiClient.escapeString(campaignId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Campaigns/{campaignId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "campaignId" + "\\}", localVarApiClient.escapeString(campaignId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3981,64 +3399,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsCampaignValidateBeforeCall(
-            String campaignId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getTenDLCSmsCampaignValidateBeforeCall(String campaignId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'campaignId' is set
         if (campaignId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'campaignId' when calling"
-                            + " getTenDLCSmsCampaign(Async)");
+            throw new ApiException("Missing the required parameter 'campaignId' when calling getTenDLCSmsCampaign(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsCampaignCall(campaignId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a 10DLC SMS Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @return SMSTenDLCCampaign
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTenDLCCampaign getTenDLCSmsCampaign(String campaignId) throws ApiException {
         ApiResponse<SMSTenDLCCampaign> localVarResp = getTenDLCSmsCampaignWithHttpInfo(campaignId);
@@ -4047,71 +3455,64 @@ public class DefaultApi {
 
     /**
      * Get a 10DLC SMS Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @return ApiResponse&lt;SMSTenDLCCampaign&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCCampaign> getTenDLCSmsCampaignWithHttpInfo(String campaignId)
-            throws ApiException {
+    public ApiResponse<SMSTenDLCCampaign> getTenDLCSmsCampaignWithHttpInfo(String campaignId) throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsCampaignValidateBeforeCall(campaignId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaign>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaign>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a 10DLC SMS Campaign (asynchronously)
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsCampaignAsync(
-            String campaignId, final ApiCallback<SMSTenDLCCampaign> _callback) throws ApiException {
+    public okhttp3.Call getTenDLCSmsCampaignAsync(String campaignId, final ApiCallback<SMSTenDLCCampaign> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTenDLCSmsCampaignValidateBeforeCall(campaignId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaign>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaign>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsCampaigns
-     *
      * @param brandId The unique identifier for a brand (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsCampaignsCall(String brandId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4120,11 +3521,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/Campaigns"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4136,132 +3534,115 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsCampaignsValidateBeforeCall(
-            String brandId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTenDLCSmsCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsCampaignsCall(brandId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get list of SMS 10DLC Campaigns
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @return SMSTenDLCCampaignsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTenDLCCampaignsListResult getTenDLCSmsCampaigns(String brandId) throws ApiException {
-        ApiResponse<SMSTenDLCCampaignsListResult> localVarResp =
-                getTenDLCSmsCampaignsWithHttpInfo(brandId);
+        ApiResponse<SMSTenDLCCampaignsListResult> localVarResp = getTenDLCSmsCampaignsWithHttpInfo(brandId);
         return localVarResp.getData();
     }
 
     /**
      * Get list of SMS 10DLC Campaigns
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @return ApiResponse&lt;SMSTenDLCCampaignsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCCampaignsListResult> getTenDLCSmsCampaignsWithHttpInfo(
-            String brandId) throws ApiException {
+    public ApiResponse<SMSTenDLCCampaignsListResult> getTenDLCSmsCampaignsWithHttpInfo(String brandId) throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsCampaignsValidateBeforeCall(brandId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get list of SMS 10DLC Campaigns (asynchronously)
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsCampaignsAsync(
-            String brandId, final ApiCallback<SMSTenDLCCampaignsListResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCCampaignsListResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTenDLCSmsCampaignsValidateBeforeCall(brandId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCCampaignsListResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsPartnerCampaign
-     *
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsPartnerCampaignCall(
-            String campaignId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTenDLCSmsPartnerCampaignCall(String campaignId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4270,14 +3651,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "campaignId" + "\\}",
-                                localVarApiClient.escapeString(campaignId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns/{campaignId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "campaignId" + "\\}", localVarApiClient.escapeString(campaignId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4285,141 +3661,120 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsPartnerCampaignValidateBeforeCall(
-            String campaignId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getTenDLCSmsPartnerCampaignValidateBeforeCall(String campaignId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'campaignId' is set
         if (campaignId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'campaignId' when calling"
-                            + " getTenDLCSmsPartnerCampaign(Async)");
+            throw new ApiException("Missing the required parameter 'campaignId' when calling getTenDLCSmsPartnerCampaign(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignCall(campaignId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a 10DLC SMS Partner Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @return SMSTenDLCPartnerCampaign
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public SMSTenDLCPartnerCampaign getTenDLCSmsPartnerCampaign(String campaignId)
-            throws ApiException {
-        ApiResponse<SMSTenDLCPartnerCampaign> localVarResp =
-                getTenDLCSmsPartnerCampaignWithHttpInfo(campaignId);
+    public SMSTenDLCPartnerCampaign getTenDLCSmsPartnerCampaign(String campaignId) throws ApiException {
+        ApiResponse<SMSTenDLCPartnerCampaign> localVarResp = getTenDLCSmsPartnerCampaignWithHttpInfo(campaignId);
         return localVarResp.getData();
     }
 
     /**
      * Get a 10DLC SMS Partner Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @return ApiResponse&lt;SMSTenDLCPartnerCampaign&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCPartnerCampaign> getTenDLCSmsPartnerCampaignWithHttpInfo(
-            String campaignId) throws ApiException {
+    public ApiResponse<SMSTenDLCPartnerCampaign> getTenDLCSmsPartnerCampaignWithHttpInfo(String campaignId) throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignValidateBeforeCall(campaignId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaign>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaign>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a 10DLC SMS Partner Campaign (asynchronously)
-     *
+     * 
      * @param campaignId String that uniquely identifies this campaign resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS 10DLC Partner Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsPartnerCampaignAsync(
-            String campaignId, final ApiCallback<SMSTenDLCPartnerCampaign> _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsPartnerCampaignAsync(String campaignId, final ApiCallback<SMSTenDLCPartnerCampaign> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                getTenDLCSmsPartnerCampaignValidateBeforeCall(campaignId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaign>() {}.getType();
+        okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignValidateBeforeCall(campaignId, _callback);
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaign>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTenDLCSmsPartnerCampaigns
-     *
      * @param brandId The unique identifier for a brand (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsPartnerCampaignsCall(
-            String brandId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTenDLCSmsPartnerCampaignsCall(String brandId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4428,11 +3783,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/10DLC/PartnerCampaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4444,134 +3796,115 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("brandId", brandId));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTenDLCSmsPartnerCampaignsValidateBeforeCall(
-            String brandId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTenDLCSmsPartnerCampaignsValidateBeforeCall(String brandId, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsCall(brandId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get list of SMS 10DLC Partner Campaigns
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @return SMSTenDLCPartnerCampaignsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public SMSTenDLCPartnerCampaignsListResult getTenDLCSmsPartnerCampaigns(String brandId)
-            throws ApiException {
-        ApiResponse<SMSTenDLCPartnerCampaignsListResult> localVarResp =
-                getTenDLCSmsPartnerCampaignsWithHttpInfo(brandId);
+    public SMSTenDLCPartnerCampaignsListResult getTenDLCSmsPartnerCampaigns(String brandId) throws ApiException {
+        ApiResponse<SMSTenDLCPartnerCampaignsListResult> localVarResp = getTenDLCSmsPartnerCampaignsWithHttpInfo(brandId);
         return localVarResp.getData();
     }
 
     /**
      * Get list of SMS 10DLC Partner Campaigns
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @return ApiResponse&lt;SMSTenDLCPartnerCampaignsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTenDLCPartnerCampaignsListResult>
-            getTenDLCSmsPartnerCampaignsWithHttpInfo(String brandId) throws ApiException {
+    public ApiResponse<SMSTenDLCPartnerCampaignsListResult> getTenDLCSmsPartnerCampaignsWithHttpInfo(String brandId) throws ApiException {
         okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsValidateBeforeCall(brandId, null);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get list of SMS 10DLC Partner Campaigns (asynchronously)
-     *
+     * 
      * @param brandId The unique identifier for a brand (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list SMS 10DLC partner campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTenDLCSmsPartnerCampaignsAsync(
-            String brandId, final ApiCallback<SMSTenDLCPartnerCampaignsListResult> _callback)
-            throws ApiException {
+    public okhttp3.Call getTenDLCSmsPartnerCampaignsAsync(String brandId, final ApiCallback<SMSTenDLCPartnerCampaignsListResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                getTenDLCSmsPartnerCampaignsValidateBeforeCall(brandId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>() {}.getType();
+        okhttp3.Call localVarCall = getTenDLCSmsPartnerCampaignsValidateBeforeCall(brandId, _callback);
+        Type localVarReturnType = new TypeToken<SMSTenDLCPartnerCampaignsListResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTollFreeSmsCampaign
-     *
      * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTollFreeSmsCampaignCall(String campaignId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getTollFreeSmsCampaignCall(String campaignId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4580,14 +3913,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "campaignId" + "\\}",
-                                localVarApiClient.escapeString(campaignId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/TollFree/Campaigns/{campaignId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "campaignId" + "\\}", localVarApiClient.escapeString(campaignId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4595,138 +3923,119 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTollFreeSmsCampaignValidateBeforeCall(
-            String campaignId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call getTollFreeSmsCampaignValidateBeforeCall(String campaignId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'campaignId' is set
         if (campaignId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'campaignId' when calling"
-                            + " getTollFreeSmsCampaign(Async)");
+            throw new ApiException("Missing the required parameter 'campaignId' when calling getTollFreeSmsCampaign(Async)");
         }
+        
 
         okhttp3.Call localVarCall = getTollFreeSmsCampaignCall(campaignId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Get a TollFree SMS Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
      * @return SMSTollFreeCampaign
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTollFreeCampaign getTollFreeSmsCampaign(String campaignId) throws ApiException {
-        ApiResponse<SMSTollFreeCampaign> localVarResp =
-                getTollFreeSmsCampaignWithHttpInfo(campaignId);
+        ApiResponse<SMSTollFreeCampaign> localVarResp = getTollFreeSmsCampaignWithHttpInfo(campaignId);
         return localVarResp.getData();
     }
 
     /**
      * Get a TollFree SMS Campaign
-     *
+     * 
      * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
      * @return ApiResponse&lt;SMSTollFreeCampaign&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTollFreeCampaign> getTollFreeSmsCampaignWithHttpInfo(String campaignId)
-            throws ApiException {
+    public ApiResponse<SMSTollFreeCampaign> getTollFreeSmsCampaignWithHttpInfo(String campaignId) throws ApiException {
         okhttp3.Call localVarCall = getTollFreeSmsCampaignValidateBeforeCall(campaignId, null);
-        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get a TollFree SMS Campaign (asynchronously)
-     *
+     * 
      * @param campaignId String that uniquely identifies this TollFree Campaign resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The specific SMS TollFree Campaign that’s been processed by FreeClimb </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTollFreeSmsCampaignAsync(
-            String campaignId, final ApiCallback<SMSTollFreeCampaign> _callback)
-            throws ApiException {
+    public okhttp3.Call getTollFreeSmsCampaignAsync(String campaignId, final ApiCallback<SMSTollFreeCampaign> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTollFreeSmsCampaignValidateBeforeCall(campaignId, _callback);
-        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaign>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for getTollFreeSmsCampaigns
-     *
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTollFreeSmsCampaignsCall(final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call getTollFreeSmsCampaignsCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4735,11 +4044,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages/TollFree/Campaigns"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages/TollFree/Campaigns"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4747,129 +4053,112 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTollFreeSmsCampaignsValidateBeforeCall(final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call getTollFreeSmsCampaignsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = getTollFreeSmsCampaignsCall(_callback);
         return localVarCall;
+
     }
 
     /**
      * Get list of TollFree Campaigns
-     *
+     * 
      * @return SMSTollFreeCampaignsListResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
      */
     public SMSTollFreeCampaignsListResult getTollFreeSmsCampaigns() throws ApiException {
-        ApiResponse<SMSTollFreeCampaignsListResult> localVarResp =
-                getTollFreeSmsCampaignsWithHttpInfo();
+        ApiResponse<SMSTollFreeCampaignsListResult> localVarResp = getTollFreeSmsCampaignsWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * Get list of TollFree Campaigns
-     *
+     * 
      * @return ApiResponse&lt;SMSTollFreeCampaignsListResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<SMSTollFreeCampaignsListResult> getTollFreeSmsCampaignsWithHttpInfo()
-            throws ApiException {
+    public ApiResponse<SMSTollFreeCampaignsListResult> getTollFreeSmsCampaignsWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getTollFreeSmsCampaignsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get list of TollFree Campaigns (asynchronously)
-     *
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The list toll-free campaigns </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call getTollFreeSmsCampaignsAsync(
-            final ApiCallback<SMSTollFreeCampaignsListResult> _callback) throws ApiException {
+    public okhttp3.Call getTollFreeSmsCampaignsAsync(final ApiCallback<SMSTollFreeCampaignsListResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTollFreeSmsCampaignsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<SMSTollFreeCampaignsListResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listActiveQueues
-     *
-     * @param alias Return only the Queue resources with aliases that exactly match this name.
-     *     (optional)
+     * @param alias Return only the Queue resources with aliases that exactly match this name. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listActiveQueuesCall(String alias, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listActiveQueuesCall(String alias, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -4878,11 +4167,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4894,58 +4180,49 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("alias", alias));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listActiveQueuesValidateBeforeCall(
-            String alias, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listActiveQueuesValidateBeforeCall(String alias, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = listActiveQueuesCall(alias, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Active Queues
-     *
-     * @param alias Return only the Queue resources with aliases that exactly match this name.
-     *     (optional)
+     * 
+     * @param alias Return only the Queue resources with aliases that exactly match this name. (optional)
      * @return QueueList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
+     </table>
      */
     public QueueList listActiveQueues(String alias) throws ApiException {
         ApiResponse<QueueList> localVarResp = listActiveQueuesWithHttpInfo(alias);
@@ -4954,70 +4231,63 @@ public class DefaultApi {
 
     /**
      * List Active Queues
-     *
-     * @param alias Return only the Queue resources with aliases that exactly match this name.
-     *     (optional)
+     * 
+     * @param alias Return only the Queue resources with aliases that exactly match this name. (optional)
      * @return ApiResponse&lt;QueueList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<QueueList> listActiveQueuesWithHttpInfo(String alias) throws ApiException {
         okhttp3.Call localVarCall = listActiveQueuesValidateBeforeCall(alias, null);
-        Type localVarReturnType = new TypeToken<QueueList>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Active Queues (asynchronously)
-     *
-     * @param alias Return only the Queue resources with aliases that exactly match this name.
-     *     (optional)
+     * 
+     * @param alias Return only the Queue resources with aliases that exactly match this name. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfuly retrieved queue list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listActiveQueuesAsync(String alias, final ApiCallback<QueueList> _callback)
-            throws ApiException {
+    public okhttp3.Call listActiveQueuesAsync(String alias, final ApiCallback<QueueList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listActiveQueuesValidateBeforeCall(alias, _callback);
-        Type localVarReturnType = new TypeToken<QueueList>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listAllAccountLogs
-     *
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
     public okhttp3.Call listAllAccountLogsCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5026,11 +4296,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Logs"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5038,56 +4305,48 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listAllAccountLogsValidateBeforeCall(final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listAllAccountLogsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = listAllAccountLogsCall(_callback);
         return localVarCall;
+
     }
 
     /**
      * List All Account Logs
-     *
+     * 
      * @return LogList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
     public LogList listAllAccountLogs() throws ApiException {
         ApiResponse<LogList> localVarResp = listAllAccountLogsWithHttpInfo();
@@ -5096,68 +4355,62 @@ public class DefaultApi {
 
     /**
      * List All Account Logs
-     *
+     * 
      * @return ApiResponse&lt;LogList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<LogList> listAllAccountLogsWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = listAllAccountLogsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List All Account Logs (asynchronously)
-     *
+     * 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved log list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listAllAccountLogsAsync(final ApiCallback<LogList> _callback)
-            throws ApiException {
+    public okhttp3.Call listAllAccountLogsAsync(final ApiCallback<LogList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listAllAccountLogsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listApplications
-     *
      * @param alias Return only applications with aliases that exactly match this value. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listApplicationsCall(String alias, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listApplicationsCall(String alias, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5166,11 +4419,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Applications"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Applications"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5182,57 +4432,49 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("alias", alias));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listApplicationsValidateBeforeCall(
-            String alias, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listApplicationsValidateBeforeCall(String alias, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = listApplicationsCall(alias, _callback);
         return localVarCall;
+
     }
 
     /**
      * List applications
-     *
+     * 
      * @param alias Return only applications with aliases that exactly match this value. (optional)
      * @return ApplicationList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
+     </table>
      */
     public ApplicationList listApplications(String alias) throws ApiException {
         ApiResponse<ApplicationList> localVarResp = listApplicationsWithHttpInfo(alias);
@@ -5241,94 +4483,73 @@ public class DefaultApi {
 
     /**
      * List applications
-     *
+     * 
      * @param alias Return only applications with aliases that exactly match this value. (optional)
      * @return ApiResponse&lt;ApplicationList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ApplicationList> listApplicationsWithHttpInfo(String alias)
-            throws ApiException {
+    public ApiResponse<ApplicationList> listApplicationsWithHttpInfo(String alias) throws ApiException {
         okhttp3.Call localVarCall = listApplicationsValidateBeforeCall(alias, null);
-        Type localVarReturnType = new TypeToken<ApplicationList>() {}.getType();
+        Type localVarReturnType = new TypeToken<ApplicationList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List applications (asynchronously)
-     *
+     * 
      * @param alias Return only applications with aliases that exactly match this value. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Applications </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listApplicationsAsync(
-            String alias, final ApiCallback<ApplicationList> _callback) throws ApiException {
+    public okhttp3.Call listApplicationsAsync(String alias, final ApiCallback<ApplicationList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listApplicationsValidateBeforeCall(alias, _callback);
-        Type localVarReturnType = new TypeToken<ApplicationList>() {}.getType();
+        Type localVarReturnType = new TypeToken<ApplicationList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listAvailableNumbers
-     *
-     * @param phoneNumber PCRE-compatible regular expression to filter against
-     *     &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
+     * @param phoneNumber PCRE-compatible regular expression to filter against &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listAvailableNumbersCall(
-            String phoneNumber,
-            String region,
-            String country,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listAvailableNumbersCall(String phoneNumber, String region, String country, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5346,8 +4567,7 @@ public class DefaultApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (phoneNumber != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("phoneNumber", phoneNumber));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("phoneNumber", phoneNumber));
         }
 
         if (region != null) {
@@ -5359,8 +4579,7 @@ public class DefaultApi {
         }
 
         if (voiceEnabled != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("voiceEnabled", voiceEnabled));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("voiceEnabled", voiceEnabled));
         }
 
         if (smsEnabled != null) {
@@ -5368,282 +4587,161 @@ public class DefaultApi {
         }
 
         if (capabilitiesVoice != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.voice", capabilitiesVoice));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.voice", capabilitiesVoice));
         }
 
         if (capabilitiesSms != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.sms", capabilitiesSms));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.sms", capabilitiesSms));
         }
 
         if (capabilitiesTollFree != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair(
-                            "capabilities.tollFree", capabilitiesTollFree));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.tollFree", capabilitiesTollFree));
         }
 
         if (capabilitiesTenDLC != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.tenDLC", capabilitiesTenDLC));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.tenDLC", capabilitiesTenDLC));
         }
 
         if (capabilitiesShortCode != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair(
-                            "capabilities.shortCode", capabilitiesShortCode));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.shortCode", capabilitiesShortCode));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listAvailableNumbersValidateBeforeCall(
-            String phoneNumber,
-            String region,
-            String country,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listAvailableNumbersValidateBeforeCall(String phoneNumber, String region, String country, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listAvailableNumbersCall(
-                        phoneNumber,
-                        region,
-                        country,
-                        voiceEnabled,
-                        smsEnabled,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        _callback);
+        okhttp3.Call localVarCall = listAvailableNumbersCall(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, _callback);
         return localVarCall;
+
     }
 
     /**
      * List available numbers
-     *
-     * @param phoneNumber PCRE-compatible regular expression to filter against
-     *     &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
+     * 
+     * @param phoneNumber PCRE-compatible regular expression to filter against &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
      * @return AvailableNumberList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
+     </table>
      */
-    public AvailableNumberList listAvailableNumbers(
-            String phoneNumber,
-            String region,
-            String country,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode)
-            throws ApiException {
-        ApiResponse<AvailableNumberList> localVarResp =
-                listAvailableNumbersWithHttpInfo(
-                        phoneNumber,
-                        region,
-                        country,
-                        voiceEnabled,
-                        smsEnabled,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode);
+    public AvailableNumberList listAvailableNumbers(String phoneNumber, String region, String country, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode) throws ApiException {
+        ApiResponse<AvailableNumberList> localVarResp = listAvailableNumbersWithHttpInfo(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode);
         return localVarResp.getData();
     }
 
     /**
      * List available numbers
-     *
-     * @param phoneNumber PCRE-compatible regular expression to filter against
-     *     &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
+     * 
+     * @param phoneNumber PCRE-compatible regular expression to filter against &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
      * @return ApiResponse&lt;AvailableNumberList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<AvailableNumberList> listAvailableNumbersWithHttpInfo(
-            String phoneNumber,
-            String region,
-            String country,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listAvailableNumbersValidateBeforeCall(
-                        phoneNumber,
-                        region,
-                        country,
-                        voiceEnabled,
-                        smsEnabled,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        null);
-        Type localVarReturnType = new TypeToken<AvailableNumberList>() {}.getType();
+    public ApiResponse<AvailableNumberList> listAvailableNumbersWithHttpInfo(String phoneNumber, String region, String country, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode) throws ApiException {
+        okhttp3.Call localVarCall = listAvailableNumbersValidateBeforeCall(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, null);
+        Type localVarReturnType = new TypeToken<AvailableNumberList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List available numbers (asynchronously)
-     *
-     * @param phoneNumber PCRE-compatible regular expression to filter against
-     *     &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
+     * 
+     * @param phoneNumber PCRE-compatible regular expression to filter against &#x60;phoneNumber&#x60; field, which is in E.164 format. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Available Numbers List </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listAvailableNumbersAsync(
-            String phoneNumber,
-            String region,
-            String country,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            final ApiCallback<AvailableNumberList> _callback)
-            throws ApiException {
+    public okhttp3.Call listAvailableNumbersAsync(String phoneNumber, String region, String country, Boolean voiceEnabled, Boolean smsEnabled, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, final ApiCallback<AvailableNumberList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listAvailableNumbersValidateBeforeCall(
-                        phoneNumber,
-                        region,
-                        country,
-                        voiceEnabled,
-                        smsEnabled,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        _callback);
-        Type localVarReturnType = new TypeToken<AvailableNumberList>() {}.getType();
+        okhttp3.Call localVarCall = listAvailableNumbersValidateBeforeCall(phoneNumber, region, country, voiceEnabled, smsEnabled, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, _callback);
+        Type localVarReturnType = new TypeToken<AvailableNumberList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listCallLogs
-     *
      * @param callId String that uniquely identifies this call resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallLogsCall(String callId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listCallLogsCall(String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5652,14 +4750,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls/{callId}/Logs"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls/{callId}/Logs"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5667,63 +4760,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listCallLogsValidateBeforeCall(String callId, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call listCallLogsValidateBeforeCall(String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling listCallLogs(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling listCallLogs(Async)");
         }
+        
 
         okhttp3.Call localVarCall = listCallLogsCall(callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Call Logs
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @return LogList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
+     </table>
      */
     public LogList listCallLogs(String callId) throws ApiException {
         ApiResponse<LogList> localVarResp = listCallLogsWithHttpInfo(callId);
@@ -5732,72 +4816,65 @@ public class DefaultApi {
 
     /**
      * List Call Logs
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @return ApiResponse&lt;LogList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
+     </table>
      */
     public ApiResponse<LogList> listCallLogsWithHttpInfo(String callId) throws ApiException {
         okhttp3.Call localVarCall = listCallLogsValidateBeforeCall(callId, null);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Call Logs (asynchronously)
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Logs for this call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallLogsAsync(String callId, final ApiCallback<LogList> _callback)
-            throws ApiException {
+    public okhttp3.Call listCallLogsAsync(String callId, final ApiCallback<LogList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listCallLogsValidateBeforeCall(callId, _callback);
-        Type localVarReturnType = new TypeToken<LogList>() {}.getType();
+        Type localVarReturnType = new TypeToken<LogList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listCallRecordings
-     *
      * @param callId String that uniquely identifies this call resource. (required)
-     * @param dateCreated Only show recordings created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show recordings created on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallRecordingsCall(
-            String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listCallRecordingsCall(String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5806,14 +4883,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls/{callId}/Recordings"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls/{callId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5822,172 +4894,133 @@ public class DefaultApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (dateCreated != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dateCreated", dateCreated));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listCallRecordingsValidateBeforeCall(
-            String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call listCallRecordingsValidateBeforeCall(String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling"
-                            + " listCallRecordings(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling listCallRecordings(Async)");
         }
+        
 
         okhttp3.Call localVarCall = listCallRecordingsCall(callId, dateCreated, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Call Recordings
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
-     * @param dateCreated Only show recordings created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show recordings created on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @return RecordingList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
+     </table>
      */
     public RecordingList listCallRecordings(String callId, String dateCreated) throws ApiException {
-        ApiResponse<RecordingList> localVarResp =
-                listCallRecordingsWithHttpInfo(callId, dateCreated);
+        ApiResponse<RecordingList> localVarResp = listCallRecordingsWithHttpInfo(callId, dateCreated);
         return localVarResp.getData();
     }
 
     /**
      * List Call Recordings
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
-     * @param dateCreated Only show recordings created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show recordings created on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<RecordingList> listCallRecordingsWithHttpInfo(
-            String callId, String dateCreated) throws ApiException {
+    public ApiResponse<RecordingList> listCallRecordingsWithHttpInfo(String callId, String dateCreated) throws ApiException {
         okhttp3.Call localVarCall = listCallRecordingsValidateBeforeCall(callId, dateCreated, null);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Call Recordings (asynchronously)
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
-     * @param dateCreated Only show recordings created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show recordings created on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallRecordingsAsync(
-            String callId, String dateCreated, final ApiCallback<RecordingList> _callback)
-            throws ApiException {
+    public okhttp3.Call listCallRecordingsAsync(String callId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listCallRecordingsValidateBeforeCall(callId, dateCreated, _callback);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+        okhttp3.Call localVarCall = listCallRecordingsValidateBeforeCall(callId, dateCreated, _callback);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listCalls
-     *
-     * @param active If active is set to true then all calls of the nature queued, ringing,
-     *     inProgress are returned in the query. (optional, default to false)
+     * @param active If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
      * @param from Only show Calls from this phone number. (optional)
-     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
-     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
-     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
-     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
-     *     hh:mm:ss. (optional)
-     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
-     *     hh:mm:ss. (optional)
+     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
+     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
+     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
-     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
-     *     be repeated to return calls from multiple Applications. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallsCall(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listCallsCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -5996,11 +5029,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6033,249 +5063,145 @@ public class DefaultApi {
         }
 
         if (parentCallId != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("parentCallId", parentCallId));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("parentCallId", parentCallId));
         }
 
         if (applicationId != null) {
-            localVarCollectionQueryParams.addAll(
-                    localVarApiClient.parameterToPairs("multi", "applicationId", applicationId));
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("multi", "applicationId", applicationId));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listCallsValidateBeforeCall(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId,
-            final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listCallsValidateBeforeCall(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listCallsCall(
-                        active,
-                        to,
-                        from,
-                        status,
-                        startTime,
-                        endTime,
-                        parentCallId,
-                        applicationId,
-                        _callback);
+        okhttp3.Call localVarCall = listCallsCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Calls
-     *
-     * @param active If active is set to true then all calls of the nature queued, ringing,
-     *     inProgress are returned in the query. (optional, default to false)
+     * 
+     * @param active If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
      * @param from Only show Calls from this phone number. (optional)
-     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
-     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
-     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
-     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
-     *     hh:mm:ss. (optional)
-     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
-     *     hh:mm:ss. (optional)
+     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
+     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
+     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
-     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
-     *     be repeated to return calls from multiple Applications. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
      * @return CallList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
+     </table>
      */
-    public CallList listCalls(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId)
-            throws ApiException {
-        ApiResponse<CallList> localVarResp =
-                listCallsWithHttpInfo(
-                        active, to, from, status, startTime, endTime, parentCallId, applicationId);
+    public CallList listCalls(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId) throws ApiException {
+        ApiResponse<CallList> localVarResp = listCallsWithHttpInfo(active, to, from, status, startTime, endTime, parentCallId, applicationId);
         return localVarResp.getData();
     }
 
     /**
      * List Calls
-     *
-     * @param active If active is set to true then all calls of the nature queued, ringing,
-     *     inProgress are returned in the query. (optional, default to false)
+     * 
+     * @param active If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
      * @param from Only show Calls from this phone number. (optional)
-     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
-     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
-     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
-     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
-     *     hh:mm:ss. (optional)
-     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
-     *     hh:mm:ss. (optional)
+     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
+     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
+     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
-     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
-     *     be repeated to return calls from multiple Applications. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
      * @return ApiResponse&lt;CallList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<CallList> listCallsWithHttpInfo(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listCallsValidateBeforeCall(
-                        active,
-                        to,
-                        from,
-                        status,
-                        startTime,
-                        endTime,
-                        parentCallId,
-                        applicationId,
-                        null);
-        Type localVarReturnType = new TypeToken<CallList>() {}.getType();
+    public ApiResponse<CallList> listCallsWithHttpInfo(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId) throws ApiException {
+        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, null);
+        Type localVarReturnType = new TypeToken<CallList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Calls (asynchronously)
-     *
-     * @param active If active is set to true then all calls of the nature queued, ringing,
-     *     inProgress are returned in the query. (optional, default to false)
+     * 
+     * @param active If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
      * @param from Only show Calls from this phone number. (optional)
-     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
-     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
-     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
-     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
-     *     hh:mm:ss. (optional)
-     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
-     *     hh:mm:ss. (optional)
+     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;, &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;, &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
+     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD hh:mm:ss. (optional)
+     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. (optional)
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
-     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
-     *     be repeated to return calls from multiple Applications. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listCallsAsync(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId,
-            final ApiCallback<CallList> _callback)
-            throws ApiException {
+    public okhttp3.Call listCallsAsync(Boolean active, String to, String from, CallStatus status, String startTime, String endTime, String parentCallId, List<String> applicationId, final ApiCallback<CallList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listCallsValidateBeforeCall(
-                        active,
-                        to,
-                        from,
-                        status,
-                        startTime,
-                        endTime,
-                        parentCallId,
-                        applicationId,
-                        _callback);
-        Type localVarReturnType = new TypeToken<CallList>() {}.getType();
+        okhttp3.Call localVarCall = listCallsValidateBeforeCall(active, to, from, status, startTime, endTime, parentCallId, applicationId, _callback);
+        Type localVarReturnType = new TypeToken<CallList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listConferenceRecordings
-     *
      * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listConferenceRecordingsCall(
-            String conferenceId, String callId, String dateCreated, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listConferenceRecordingsCall(String conferenceId, String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -6284,14 +5210,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6304,173 +5225,132 @@ public class DefaultApi {
         }
 
         if (dateCreated != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dateCreated", dateCreated));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listConferenceRecordingsValidateBeforeCall(
-            String conferenceId, String callId, String dateCreated, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call listConferenceRecordingsValidateBeforeCall(String conferenceId, String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " listConferenceRecordings(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling listConferenceRecordings(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                listConferenceRecordingsCall(conferenceId, callId, dateCreated, _callback);
+        okhttp3.Call localVarCall = listConferenceRecordingsCall(conferenceId, callId, dateCreated, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Conference Recordings
-     *
+     * 
      * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return RecordingList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public RecordingList listConferenceRecordings(
-            String conferenceId, String callId, String dateCreated) throws ApiException {
-        ApiResponse<RecordingList> localVarResp =
-                listConferenceRecordingsWithHttpInfo(conferenceId, callId, dateCreated);
+    public RecordingList listConferenceRecordings(String conferenceId, String callId, String dateCreated) throws ApiException {
+        ApiResponse<RecordingList> localVarResp = listConferenceRecordingsWithHttpInfo(conferenceId, callId, dateCreated);
         return localVarResp.getData();
     }
 
     /**
      * List Conference Recordings
-     *
+     * 
      * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(
-            String conferenceId, String callId, String dateCreated) throws ApiException {
-        okhttp3.Call localVarCall =
-                listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, null);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+    public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(String conferenceId, String callId, String dateCreated) throws ApiException {
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, null);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Conference Recordings (asynchronously)
-     *
+     * 
      * @param conferenceId Show only Recordings made during the conference with this ID. (required)
      * @param callId Show only Recordings made during the Call with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listConferenceRecordingsAsync(
-            String conferenceId,
-            String callId,
-            String dateCreated,
-            final ApiCallback<RecordingList> _callback)
-            throws ApiException {
+    public okhttp3.Call listConferenceRecordingsAsync(String conferenceId, String callId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listConferenceRecordingsValidateBeforeCall(
-                        conferenceId, callId, dateCreated, _callback);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+        okhttp3.Call localVarCall = listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, _callback);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listConferences
-     *
-     * @param status Only show conferences that currently have the specified status. Valid values:
-     *     &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or
-     *     &#x60;terminated&#x60;. (optional)
+     * @param status Only show conferences that currently have the specified status. Valid values: &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or &#x60;terminated&#x60;. (optional)
      * @param alias List Conferences whose alias exactly matches this string. (optional)
-     * @param dateCreated Only show Conferences that were created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
-     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the
-     *     form *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show Conferences that were created on the specified date, in the form *YYYY-MM-DD*. (optional)
+     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listConferencesCall(
-            String status,
-            String alias,
-            String dateCreated,
-            String dateUpdated,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listConferencesCall(String status, String alias, String dateCreated, String dateUpdated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -6479,11 +5359,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6500,220 +5377,146 @@ public class DefaultApi {
         }
 
         if (dateCreated != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dateCreated", dateCreated));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
         if (dateUpdated != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dateUpdated", dateUpdated));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateUpdated", dateUpdated));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listConferencesValidateBeforeCall(
-            String status,
-            String alias,
-            String dateCreated,
-            String dateUpdated,
-            final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listConferencesValidateBeforeCall(String status, String alias, String dateCreated, String dateUpdated, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listConferencesCall(status, alias, dateCreated, dateUpdated, _callback);
+        okhttp3.Call localVarCall = listConferencesCall(status, alias, dateCreated, dateUpdated, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Conferences
-     *
-     * @param status Only show conferences that currently have the specified status. Valid values:
-     *     &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or
-     *     &#x60;terminated&#x60;. (optional)
+     * 
+     * @param status Only show conferences that currently have the specified status. Valid values: &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or &#x60;terminated&#x60;. (optional)
      * @param alias List Conferences whose alias exactly matches this string. (optional)
-     * @param dateCreated Only show Conferences that were created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
-     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the
-     *     form *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show Conferences that were created on the specified date, in the form *YYYY-MM-DD*. (optional)
+     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @return ConferenceList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
+     </table>
      */
-    public ConferenceList listConferences(
-            String status, String alias, String dateCreated, String dateUpdated)
-            throws ApiException {
-        ApiResponse<ConferenceList> localVarResp =
-                listConferencesWithHttpInfo(status, alias, dateCreated, dateUpdated);
+    public ConferenceList listConferences(String status, String alias, String dateCreated, String dateUpdated) throws ApiException {
+        ApiResponse<ConferenceList> localVarResp = listConferencesWithHttpInfo(status, alias, dateCreated, dateUpdated);
         return localVarResp.getData();
     }
 
     /**
      * List Conferences
-     *
-     * @param status Only show conferences that currently have the specified status. Valid values:
-     *     &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or
-     *     &#x60;terminated&#x60;. (optional)
+     * 
+     * @param status Only show conferences that currently have the specified status. Valid values: &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or &#x60;terminated&#x60;. (optional)
      * @param alias List Conferences whose alias exactly matches this string. (optional)
-     * @param dateCreated Only show Conferences that were created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
-     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the
-     *     form *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show Conferences that were created on the specified date, in the form *YYYY-MM-DD*. (optional)
+     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @return ApiResponse&lt;ConferenceList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceList> listConferencesWithHttpInfo(
-            String status, String alias, String dateCreated, String dateUpdated)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listConferencesValidateBeforeCall(status, alias, dateCreated, dateUpdated, null);
-        Type localVarReturnType = new TypeToken<ConferenceList>() {}.getType();
+    public ApiResponse<ConferenceList> listConferencesWithHttpInfo(String status, String alias, String dateCreated, String dateUpdated) throws ApiException {
+        okhttp3.Call localVarCall = listConferencesValidateBeforeCall(status, alias, dateCreated, dateUpdated, null);
+        Type localVarReturnType = new TypeToken<ConferenceList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Conferences (asynchronously)
-     *
-     * @param status Only show conferences that currently have the specified status. Valid values:
-     *     &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or
-     *     &#x60;terminated&#x60;. (optional)
+     * 
+     * @param status Only show conferences that currently have the specified status. Valid values: &#x60;empty&#x60;, &#x60;populated&#x60;, &#x60;inProgress&#x60;, or &#x60;terminated&#x60;. (optional)
      * @param alias List Conferences whose alias exactly matches this string. (optional)
-     * @param dateCreated Only show Conferences that were created on the specified date, in the form
-     *     *YYYY-MM-DD*. (optional)
-     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the
-     *     form *YYYY-MM-DD*. (optional)
+     * @param dateCreated Only show Conferences that were created on the specified date, in the form *YYYY-MM-DD*. (optional)
+     * @param dateUpdated Only show Conferences that were last updated on the specified date, in the form *YYYY-MM-DD*. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Conferences </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listConferencesAsync(
-            String status,
-            String alias,
-            String dateCreated,
-            String dateUpdated,
-            final ApiCallback<ConferenceList> _callback)
-            throws ApiException {
+    public okhttp3.Call listConferencesAsync(String status, String alias, String dateCreated, String dateUpdated, final ApiCallback<ConferenceList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listConferencesValidateBeforeCall(
-                        status, alias, dateCreated, dateUpdated, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceList>() {}.getType();
+        okhttp3.Call localVarCall = listConferencesValidateBeforeCall(status, alias, dateCreated, dateUpdated, _callback);
+        Type localVarReturnType = new TypeToken<ConferenceList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listIncomingNumbers
-     *
-     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible
-     *     regular expression. (optional)
-     * @param alias Only show incoming phone numbers with aliases that exactly match this value.
-     *     (optional)
+     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible regular expression. (optional)
+     * @param alias Only show incoming phone numbers with aliases that exactly match this value. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS
-     *     arrives for this phone number or a Call from this number is placed. An incoming phone
-     *     number is not useful until associated with an applicationId. (optional)
-     * @param hasApplication Indication of whether the phone number has an application linked to it.
-     *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign associated with it
-     *     (optional)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
-     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the
-     *     provided TFNCampaign ID. (optional)
-     * @param offnet Indication of whether the phone number was registered as an offnet number. This
-     *     field will be rendered only for requests to the IncomingPhone number resource. (optional)
+     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId. (optional)
+     * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listIncomingNumbersCall(
-            String phoneNumber,
-            String alias,
-            String region,
-            String country,
-            String applicationId,
-            Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean hasCampaign,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            String tfnCampaignId,
-            Boolean offnet,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listIncomingNumbersCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -6722,11 +5525,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/IncomingPhoneNumbers"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/IncomingPhoneNumbers"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6735,8 +5535,7 @@ public class DefaultApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (phoneNumber != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("phoneNumber", phoneNumber));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("phoneNumber", phoneNumber));
         }
 
         if (alias != null) {
@@ -6752,18 +5551,15 @@ public class DefaultApi {
         }
 
         if (applicationId != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("applicationId", applicationId));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("applicationId", applicationId));
         }
 
         if (hasApplication != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("hasApplication", hasApplication));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("hasApplication", hasApplication));
         }
 
         if (voiceEnabled != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("voiceEnabled", voiceEnabled));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("voiceEnabled", voiceEnabled));
         }
 
         if (smsEnabled != null) {
@@ -6771,384 +5567,191 @@ public class DefaultApi {
         }
 
         if (hasCampaign != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("hasCampaign", hasCampaign));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("hasCampaign", hasCampaign));
         }
 
         if (capabilitiesVoice != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.voice", capabilitiesVoice));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.voice", capabilitiesVoice));
         }
 
         if (capabilitiesSms != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.sms", capabilitiesSms));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.sms", capabilitiesSms));
         }
 
         if (capabilitiesTollFree != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair(
-                            "capabilities.tollFree", capabilitiesTollFree));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.tollFree", capabilitiesTollFree));
         }
 
         if (capabilitiesTenDLC != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("capabilities.tenDLC", capabilitiesTenDLC));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.tenDLC", capabilitiesTenDLC));
         }
 
         if (capabilitiesShortCode != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair(
-                            "capabilities.shortCode", capabilitiesShortCode));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("capabilities.shortCode", capabilitiesShortCode));
         }
 
         if (tfnCampaignId != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("tfn.campaignId", tfnCampaignId));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("tfn.campaignId", tfnCampaignId));
         }
 
         if (offnet != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offnet", offnet));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listIncomingNumbersValidateBeforeCall(
-            String phoneNumber,
-            String alias,
-            String region,
-            String country,
-            String applicationId,
-            Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean hasCampaign,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            String tfnCampaignId,
-            Boolean offnet,
-            final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listIncomingNumbersValidateBeforeCall(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listIncomingNumbersCall(
-                        phoneNumber,
-                        alias,
-                        region,
-                        country,
-                        applicationId,
-                        hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
-                        hasCampaign,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        tfnCampaignId,
-                        offnet,
-                        _callback);
+        okhttp3.Call localVarCall = listIncomingNumbersCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Incoming Numbers
-     *
-     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible
-     *     regular expression. (optional)
-     * @param alias Only show incoming phone numbers with aliases that exactly match this value.
-     *     (optional)
+     * 
+     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible regular expression. (optional)
+     * @param alias Only show incoming phone numbers with aliases that exactly match this value. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS
-     *     arrives for this phone number or a Call from this number is placed. An incoming phone
-     *     number is not useful until associated with an applicationId. (optional)
-     * @param hasApplication Indication of whether the phone number has an application linked to it.
-     *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign associated with it
-     *     (optional)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
-     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the
-     *     provided TFNCampaign ID. (optional)
-     * @param offnet Indication of whether the phone number was registered as an offnet number. This
-     *     field will be rendered only for requests to the IncomingPhone number resource. (optional)
+     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId. (optional)
+     * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return IncomingNumberList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
+     </table>
      */
-    public IncomingNumberList listIncomingNumbers(
-            String phoneNumber,
-            String alias,
-            String region,
-            String country,
-            String applicationId,
-            Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean hasCampaign,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            String tfnCampaignId,
-            Boolean offnet)
-            throws ApiException {
-        ApiResponse<IncomingNumberList> localVarResp =
-                listIncomingNumbersWithHttpInfo(
-                        phoneNumber,
-                        alias,
-                        region,
-                        country,
-                        applicationId,
-                        hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
-                        hasCampaign,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        tfnCampaignId,
-                        offnet);
+    public IncomingNumberList listIncomingNumbers(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet) throws ApiException {
+        ApiResponse<IncomingNumberList> localVarResp = listIncomingNumbersWithHttpInfo(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
         return localVarResp.getData();
     }
 
     /**
      * List Incoming Numbers
-     *
-     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible
-     *     regular expression. (optional)
-     * @param alias Only show incoming phone numbers with aliases that exactly match this value.
-     *     (optional)
+     * 
+     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible regular expression. (optional)
+     * @param alias Only show incoming phone numbers with aliases that exactly match this value. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS
-     *     arrives for this phone number or a Call from this number is placed. An incoming phone
-     *     number is not useful until associated with an applicationId. (optional)
-     * @param hasApplication Indication of whether the phone number has an application linked to it.
-     *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign associated with it
-     *     (optional)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
-     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the
-     *     provided TFNCampaign ID. (optional)
-     * @param offnet Indication of whether the phone number was registered as an offnet number. This
-     *     field will be rendered only for requests to the IncomingPhone number resource. (optional)
+     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId. (optional)
+     * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @return ApiResponse&lt;IncomingNumberList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(
-            String phoneNumber,
-            String alias,
-            String region,
-            String country,
-            String applicationId,
-            Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean hasCampaign,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            String tfnCampaignId,
-            Boolean offnet)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listIncomingNumbersValidateBeforeCall(
-                        phoneNumber,
-                        alias,
-                        region,
-                        country,
-                        applicationId,
-                        hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
-                        hasCampaign,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        tfnCampaignId,
-                        offnet,
-                        null);
-        Type localVarReturnType = new TypeToken<IncomingNumberList>() {}.getType();
+    public ApiResponse<IncomingNumberList> listIncomingNumbersWithHttpInfo(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet) throws ApiException {
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, null);
+        Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Incoming Numbers (asynchronously)
-     *
-     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible
-     *     regular expression. (optional)
-     * @param alias Only show incoming phone numbers with aliases that exactly match this value.
-     *     (optional)
+     * 
+     * @param phoneNumber Only show incoming phone number resources that match this PCRE-compatible regular expression. (optional)
+     * @param alias Only show incoming phone numbers with aliases that exactly match this value. (optional)
      * @param region State or province of this phone number. (optional)
      * @param country Country of this phone number. (optional)
-     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS
-     *     arrives for this phone number or a Call from this number is placed. An incoming phone
-     *     number is not useful until associated with an applicationId. (optional)
-     * @param hasApplication Indication of whether the phone number has an application linked to it.
-     *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
-     * @param hasCampaign Indication of whether the phone number has a campaign associated with it
-     *     (optional)
-     * @param capabilitiesVoice (optional)
-     * @param capabilitiesSms (optional)
-     * @param capabilitiesTollFree (optional)
-     * @param capabilitiesTenDLC (optional)
-     * @param capabilitiesShortCode (optional)
-     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the
-     *     provided TFNCampaign ID. (optional)
-     * @param offnet Indication of whether the phone number was registered as an offnet number. This
-     *     field will be rendered only for requests to the IncomingPhone number resource. (optional)
+     * @param applicationId ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId. (optional)
+     * @param hasApplication Indication of whether the phone number has an application linked to it. (optional, default to false)
+     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to true for all numbers. (optional, default to true)
+     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. (optional, default to true)
+     * @param hasCampaign Indication of whether the phone number has a campaign associated with it (optional)
+     * @param capabilitiesVoice  (optional)
+     * @param capabilitiesSms  (optional)
+     * @param capabilitiesTollFree  (optional)
+     * @param capabilitiesTenDLC  (optional)
+     * @param capabilitiesShortCode  (optional)
+     * @param tfnCampaignId Only show incoming phone number resources that have been assigned to the provided TFNCampaign ID. (optional)
+     * @param offnet Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Incoming Phone Numbers </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listIncomingNumbersAsync(
-            String phoneNumber,
-            String alias,
-            String region,
-            String country,
-            String applicationId,
-            Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
-            Boolean hasCampaign,
-            Boolean capabilitiesVoice,
-            Boolean capabilitiesSms,
-            Boolean capabilitiesTollFree,
-            Boolean capabilitiesTenDLC,
-            Boolean capabilitiesShortCode,
-            String tfnCampaignId,
-            Boolean offnet,
-            final ApiCallback<IncomingNumberList> _callback)
-            throws ApiException {
+    public okhttp3.Call listIncomingNumbersAsync(String phoneNumber, String alias, String region, String country, String applicationId, Boolean hasApplication, Boolean voiceEnabled, Boolean smsEnabled, Boolean hasCampaign, Boolean capabilitiesVoice, Boolean capabilitiesSms, Boolean capabilitiesTollFree, Boolean capabilitiesTenDLC, Boolean capabilitiesShortCode, String tfnCampaignId, Boolean offnet, final ApiCallback<IncomingNumberList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listIncomingNumbersValidateBeforeCall(
-                        phoneNumber,
-                        alias,
-                        region,
-                        country,
-                        applicationId,
-                        hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
-                        hasCampaign,
-                        capabilitiesVoice,
-                        capabilitiesSms,
-                        capabilitiesTollFree,
-                        capabilitiesTenDLC,
-                        capabilitiesShortCode,
-                        tfnCampaignId,
-                        offnet,
-                        _callback);
-        Type localVarReturnType = new TypeToken<IncomingNumberList>() {}.getType();
+        okhttp3.Call localVarCall = listIncomingNumbersValidateBeforeCall(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet, _callback);
+        Type localVarReturnType = new TypeToken<IncomingNumberList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listMembers
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listMembersCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listMembersCall(String queueId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -7157,14 +5760,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}/Members"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}/Members"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7172,64 +5770,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listMembersValidateBeforeCall(String queueId, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call listMembersValidateBeforeCall(String queueId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling listMembers(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling listMembers(Async)");
         }
+        
 
         okhttp3.Call localVarCall = listMembersCall(queueId, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Members
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @return QueueMemberList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
+     </table>
      */
     public QueueMemberList listMembers(String queueId) throws ApiException {
         ApiResponse<QueueMemberList> localVarResp = listMembersWithHttpInfo(queueId);
@@ -7238,52 +5826,44 @@ public class DefaultApi {
 
     /**
      * List Members
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @return ApiResponse&lt;QueueMemberList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueMemberList> listMembersWithHttpInfo(String queueId)
-            throws ApiException {
+    public ApiResponse<QueueMemberList> listMembersWithHttpInfo(String queueId) throws ApiException {
         okhttp3.Call localVarCall = listMembersValidateBeforeCall(queueId, null);
-        Type localVarReturnType = new TypeToken<QueueMemberList>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMemberList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Members (asynchronously)
-     *
-     * @param queueId String that uniquely identifies the Queue that the Member belongs to.
-     *     (required)
+     * 
+     * @param queueId String that uniquely identifies the Queue that the Member belongs to. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved queue member list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listMembersAsync(
-            String queueId, final ApiCallback<QueueMemberList> _callback) throws ApiException {
+    public okhttp3.Call listMembersAsync(String queueId, final ApiCallback<QueueMemberList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listMembersValidateBeforeCall(queueId, _callback);
-        Type localVarReturnType = new TypeToken<QueueMemberList>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueMemberList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listParticipants
-     *
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
@@ -7292,27 +5872,21 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listParticipantsCall(
-            String conferenceId,
-            Boolean talk,
-            Boolean listen,
-            Boolean dtmfPassThrough,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listParticipantsCall(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -7321,14 +5895,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}/Participants"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7345,173 +5914,134 @@ public class DefaultApi {
         }
 
         if (dtmfPassThrough != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dtmfPassThrough", dtmfPassThrough));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dtmfPassThrough", dtmfPassThrough));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listParticipantsValidateBeforeCall(
-            String conferenceId,
-            Boolean talk,
-            Boolean listen,
-            Boolean dtmfPassThrough,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call listParticipantsValidateBeforeCall(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " listParticipants(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling listParticipants(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                listParticipantsCall(conferenceId, talk, listen, dtmfPassThrough, _callback);
+        okhttp3.Call localVarCall = listParticipantsCall(conferenceId, talk, listen, dtmfPassThrough, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Participants
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
      * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @return ConferenceParticipantList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
+     </table>
      */
-    public ConferenceParticipantList listParticipants(
-            String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough)
-            throws ApiException {
-        ApiResponse<ConferenceParticipantList> localVarResp =
-                listParticipantsWithHttpInfo(conferenceId, talk, listen, dtmfPassThrough);
+    public ConferenceParticipantList listParticipants(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough) throws ApiException {
+        ApiResponse<ConferenceParticipantList> localVarResp = listParticipantsWithHttpInfo(conferenceId, talk, listen, dtmfPassThrough);
         return localVarResp.getData();
     }
 
     /**
      * List Participants
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
      * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @return ApiResponse&lt;ConferenceParticipantList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceParticipantList> listParticipantsWithHttpInfo(
-            String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listParticipantsValidateBeforeCall(
-                        conferenceId, talk, listen, dtmfPassThrough, null);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantList>() {}.getType();
+    public ApiResponse<ConferenceParticipantList> listParticipantsWithHttpInfo(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough) throws ApiException {
+        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, dtmfPassThrough, null);
+        Type localVarReturnType = new TypeToken<ConferenceParticipantList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Participants (asynchronously)
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param talk Only show Participants with the talk privilege. (optional)
      * @param listen Only show Participants with the listen privilege. (optional)
      * @param dtmfPassThrough Only show Participants with the dtmfPassThrough privilege. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant list </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listParticipantsAsync(
-            String conferenceId,
-            Boolean talk,
-            Boolean listen,
-            Boolean dtmfPassThrough,
-            final ApiCallback<ConferenceParticipantList> _callback)
-            throws ApiException {
+    public okhttp3.Call listParticipantsAsync(String conferenceId, Boolean talk, Boolean listen, Boolean dtmfPassThrough, final ApiCallback<ConferenceParticipantList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listParticipantsValidateBeforeCall(
-                        conferenceId, talk, listen, dtmfPassThrough, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantList>() {}.getType();
+        okhttp3.Call localVarCall = listParticipantsValidateBeforeCall(conferenceId, talk, listen, dtmfPassThrough, _callback);
+        Type localVarReturnType = new TypeToken<ConferenceParticipantList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listRecordings
-     *
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listRecordingsCall(
-            String callId, String conferenceId, String dateCreated, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listRecordingsCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -7520,11 +6050,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Recordings"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Recordings"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7537,145 +6064,113 @@ public class DefaultApi {
         }
 
         if (conferenceId != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("conferenceId", conferenceId));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("conferenceId", conferenceId));
         }
 
         if (dateCreated != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("dateCreated", dateCreated));
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listRecordingsValidateBeforeCall(
-            String callId, String conferenceId, String dateCreated, final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listRecordingsValidateBeforeCall(String callId, String conferenceId, String dateCreated, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listRecordingsCall(callId, conferenceId, dateCreated, _callback);
+        okhttp3.Call localVarCall = listRecordingsCall(callId, conferenceId, dateCreated, _callback);
         return localVarCall;
+
     }
 
     /**
      * List Recordings
-     *
+     * 
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return RecordingList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public RecordingList listRecordings(String callId, String conferenceId, String dateCreated)
-            throws ApiException {
-        ApiResponse<RecordingList> localVarResp =
-                listRecordingsWithHttpInfo(callId, conferenceId, dateCreated);
+    public RecordingList listRecordings(String callId, String conferenceId, String dateCreated) throws ApiException {
+        ApiResponse<RecordingList> localVarResp = listRecordingsWithHttpInfo(callId, conferenceId, dateCreated);
         return localVarResp.getData();
     }
 
     /**
      * List Recordings
-     *
+     * 
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<RecordingList> listRecordingsWithHttpInfo(
-            String callId, String conferenceId, String dateCreated) throws ApiException {
-        okhttp3.Call localVarCall =
-                listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, null);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+    public ApiResponse<RecordingList> listRecordingsWithHttpInfo(String callId, String conferenceId, String dateCreated) throws ApiException {
+        okhttp3.Call localVarCall = listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, null);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List Recordings (asynchronously)
-     *
+     * 
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
-     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
-     *     (optional)
+     * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listRecordingsAsync(
-            String callId,
-            String conferenceId,
-            String dateCreated,
-            final ApiCallback<RecordingList> _callback)
-            throws ApiException {
+    public okhttp3.Call listRecordingsAsync(String callId, String conferenceId, String dateCreated, final ApiCallback<RecordingList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, _callback);
-        Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
+        okhttp3.Call localVarCall = listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, _callback);
+        Type localVarReturnType = new TypeToken<RecordingList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for listSmsMessages
-     *
      * @param to Only show Messages to this phone number. (optional)
      * @param from Only show Messages from this phone number. (optional)
-     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm:ss*. (optional)
-     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm*.. (optional)
-     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that
-     *     were either *sent from* or *received by* FreeClimb. (optional)
+     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
+     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
+     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
      * @param campaignId Only show messages associated with this campaign ID. (optional)
      * @param brandId Only show messages associated with this brand ID (optional)
      * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
@@ -7683,31 +6178,21 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listSmsMessagesCall(
-            String to,
-            String from,
-            String beginTime,
-            String endTime,
-            MessageDirection direction,
-            String campaignId,
-            String brandId,
-            Boolean is10DLC,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listSmsMessagesCall(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -7716,11 +6201,8 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7760,227 +6242,136 @@ public class DefaultApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("is10DLC", is10DLC));
         }
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listSmsMessagesValidateBeforeCall(
-            String to,
-            String from,
-            String beginTime,
-            String endTime,
-            MessageDirection direction,
-            String campaignId,
-            String brandId,
-            Boolean is10DLC,
-            final ApiCallback _callback)
-            throws ApiException {
+    private okhttp3.Call listSmsMessagesValidateBeforeCall(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback _callback) throws ApiException {
+        
 
-        okhttp3.Call localVarCall =
-                listSmsMessagesCall(
-                        to,
-                        from,
-                        beginTime,
-                        endTime,
-                        direction,
-                        campaignId,
-                        brandId,
-                        is10DLC,
-                        _callback);
+        okhttp3.Call localVarCall = listSmsMessagesCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, _callback);
         return localVarCall;
+
     }
 
     /**
      * List SMS Messages
-     *
+     * 
      * @param to Only show Messages to this phone number. (optional)
      * @param from Only show Messages from this phone number. (optional)
-     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm:ss*. (optional)
-     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm*.. (optional)
-     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that
-     *     were either *sent from* or *received by* FreeClimb. (optional)
+     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
+     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
+     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
      * @param campaignId Only show messages associated with this campaign ID. (optional)
      * @param brandId Only show messages associated with this brand ID (optional)
      * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @return MessagesList
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
+     </table>
      */
-    public MessagesList listSmsMessages(
-            String to,
-            String from,
-            String beginTime,
-            String endTime,
-            MessageDirection direction,
-            String campaignId,
-            String brandId,
-            Boolean is10DLC)
-            throws ApiException {
-        ApiResponse<MessagesList> localVarResp =
-                listSmsMessagesWithHttpInfo(
-                        to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
+    public MessagesList listSmsMessages(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC) throws ApiException {
+        ApiResponse<MessagesList> localVarResp = listSmsMessagesWithHttpInfo(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC);
         return localVarResp.getData();
     }
 
     /**
      * List SMS Messages
-     *
+     * 
      * @param to Only show Messages to this phone number. (optional)
      * @param from Only show Messages from this phone number. (optional)
-     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm:ss*. (optional)
-     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm*.. (optional)
-     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that
-     *     were either *sent from* or *received by* FreeClimb. (optional)
+     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
+     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
+     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
      * @param campaignId Only show messages associated with this campaign ID. (optional)
      * @param brandId Only show messages associated with this brand ID (optional)
      * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @return ApiResponse&lt;MessagesList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(
-            String to,
-            String from,
-            String beginTime,
-            String endTime,
-            MessageDirection direction,
-            String campaignId,
-            String brandId,
-            Boolean is10DLC)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listSmsMessagesValidateBeforeCall(
-                        to,
-                        from,
-                        beginTime,
-                        endTime,
-                        direction,
-                        campaignId,
-                        brandId,
-                        is10DLC,
-                        null);
-        Type localVarReturnType = new TypeToken<MessagesList>() {}.getType();
+    public ApiResponse<MessagesList> listSmsMessagesWithHttpInfo(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC) throws ApiException {
+        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, null);
+        Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * List SMS Messages (asynchronously)
-     *
+     * 
      * @param to Only show Messages to this phone number. (optional)
      * @param from Only show Messages from this phone number. (optional)
-     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm:ss*. (optional)
-     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD
-     *     hh:mm*.. (optional)
-     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that
-     *     were either *sent from* or *received by* FreeClimb. (optional)
+     * @param beginTime Only show Messages sent at or after this time (GMT), given as *YYYY-MM-DD hh:mm:ss*. (optional)
+     * @param endTime Only show messages sent at or before this time (GMT), given as *YYYY-MM-DD hh:mm*.. (optional)
+     * @param direction Either &#x60;inbound&#x60; or &#x60;outbound&#x60;. Only show Messages that were either *sent from* or *received by* FreeClimb. (optional)
      * @param campaignId Only show messages associated with this campaign ID. (optional)
      * @param brandId Only show messages associated with this brand ID (optional)
      * @param is10DLC Only show messages that were sent as part of a 10DLC campaign. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> List of messages </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call listSmsMessagesAsync(
-            String to,
-            String from,
-            String beginTime,
-            String endTime,
-            MessageDirection direction,
-            String campaignId,
-            String brandId,
-            Boolean is10DLC,
-            final ApiCallback<MessagesList> _callback)
-            throws ApiException {
+    public okhttp3.Call listSmsMessagesAsync(String to, String from, String beginTime, String endTime, MessageDirection direction, String campaignId, String brandId, Boolean is10DLC, final ApiCallback<MessagesList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                listSmsMessagesValidateBeforeCall(
-                        to,
-                        from,
-                        beginTime,
-                        endTime,
-                        direction,
-                        campaignId,
-                        brandId,
-                        is10DLC,
-                        _callback);
-        Type localVarReturnType = new TypeToken<MessagesList>() {}.getType();
+        okhttp3.Call localVarCall = listSmsMessagesValidateBeforeCall(to, from, beginTime, endTime, direction, campaignId, brandId, is10DLC, _callback);
+        Type localVarReturnType = new TypeToken<MessagesList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for makeACall
-     *
      * @param makeCallRequest Call details for making a call (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call makeACallCall(MakeCallRequest makeCallRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call makeACallCall(MakeCallRequest makeCallRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -7989,11 +6380,8 @@ public class DefaultApi {
         Object localVarPostBody = makeCallRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8001,56 +6389,49 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call makeACallValidateBeforeCall(
-            MakeCallRequest makeCallRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call makeACallValidateBeforeCall(MakeCallRequest makeCallRequest, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = makeACallCall(makeCallRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Make a Call
-     *
+     * 
      * @param makeCallRequest Call details for making a call (optional)
      * @return CallResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     </table>
      */
     public CallResult makeACall(MakeCallRequest makeCallRequest) throws ApiException {
         ApiResponse<CallResult> localVarResp = makeACallWithHttpInfo(makeCallRequest);
@@ -8059,73 +6440,64 @@ public class DefaultApi {
 
     /**
      * Make a Call
-     *
+     * 
      * @param makeCallRequest Call details for making a call (optional)
      * @return ApiResponse&lt;CallResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<CallResult> makeACallWithHttpInfo(MakeCallRequest makeCallRequest)
-            throws ApiException {
+    public ApiResponse<CallResult> makeACallWithHttpInfo(MakeCallRequest makeCallRequest) throws ApiException {
         okhttp3.Call localVarCall = makeACallValidateBeforeCall(makeCallRequest, null);
-        Type localVarReturnType = new TypeToken<CallResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<CallResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Make a Call (asynchronously)
-     *
+     * 
      * @param makeCallRequest Call details for making a call (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call makeACallAsync(
-            MakeCallRequest makeCallRequest, final ApiCallback<CallResult> _callback)
-            throws ApiException {
+    public okhttp3.Call makeACallAsync(MakeCallRequest makeCallRequest, final ApiCallback<CallResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = makeACallValidateBeforeCall(makeCallRequest, _callback);
-        Type localVarReturnType = new TypeToken<CallResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<CallResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for makeAWebrtcJwt
-     *
-     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms
-     *     WebRTC APIs (required)
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call makeAWebrtcJwtCall(
-            CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call makeAWebrtcJwtCall(CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8134,11 +6506,8 @@ public class DefaultApi {
         Object localVarPostBody = createWebRTCToken;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls/WebRTC/Token"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls/WebRTC/Token"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8146,64 +6515,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"text/plain"};
+        final String[] localVarAccepts = {
+            "text/plain"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call makeAWebrtcJwtValidateBeforeCall(
-            CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call makeAWebrtcJwtValidateBeforeCall(CreateWebRTCToken createWebRTCToken, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'createWebRTCToken' is set
         if (createWebRTCToken == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'createWebRTCToken' when calling"
-                            + " makeAWebrtcJwt(Async)");
+            throw new ApiException("Missing the required parameter 'createWebRTCToken' when calling makeAWebrtcJwt(Async)");
         }
+        
 
         okhttp3.Call localVarCall = makeAWebrtcJwtCall(createWebRTCToken, _callback);
         return localVarCall;
+
     }
 
     /**
      * Make a JWT for WebRTC calling
-     *
-     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms
-     *     WebRTC APIs (required)
+     * 
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return String
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
      */
     public String makeAWebrtcJwt(CreateWebRTCToken createWebRTCToken) throws ApiException {
         ApiResponse<String> localVarResp = makeAWebrtcJwtWithHttpInfo(createWebRTCToken);
@@ -8212,75 +6571,65 @@ public class DefaultApi {
 
     /**
      * Make a JWT for WebRTC calling
-     *
-     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms
-     *     WebRTC APIs (required)
+     * 
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @return ApiResponse&lt;String&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<String> makeAWebrtcJwtWithHttpInfo(CreateWebRTCToken createWebRTCToken)
-            throws ApiException {
+    public ApiResponse<String> makeAWebrtcJwtWithHttpInfo(CreateWebRTCToken createWebRTCToken) throws ApiException {
         okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(createWebRTCToken, null);
-        Type localVarReturnType = new TypeToken<String>() {}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Make a JWT for WebRTC calling (asynchronously)
-     *
-     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms
-     *     WebRTC APIs (required)
+     * 
+     * @param createWebRTCToken Information needed to craft a JWT compatible with the platforms WebRTC APIs (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> The created JWT </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call makeAWebrtcJwtAsync(
-            CreateWebRTCToken createWebRTCToken, final ApiCallback<String> _callback)
-            throws ApiException {
+    public okhttp3.Call makeAWebrtcJwtAsync(CreateWebRTCToken createWebRTCToken, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = makeAWebrtcJwtValidateBeforeCall(createWebRTCToken, _callback);
-        Type localVarReturnType = new TypeToken<String>() {}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for removeAParticipant
-     *
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call removeAParticipantCall(
-            String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeAParticipantCall(String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8289,17 +6638,10 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8307,72 +6649,59 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "DELETE",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeAParticipantValidateBeforeCall(
-            String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call removeAParticipantValidateBeforeCall(String conferenceId, String callId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " removeAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling removeAParticipant(Async)");
         }
-
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling"
-                            + " removeAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling removeAParticipant(Async)");
         }
+        
 
         okhttp3.Call localVarCall = removeAParticipantCall(conferenceId, callId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Remove a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
+     </table>
      */
     public void removeAParticipant(String conferenceId, String callId) throws ApiException {
         removeAParticipantWithHttpInfo(conferenceId, callId);
@@ -8380,74 +6709,64 @@ public class DefaultApi {
 
     /**
      * Remove a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> removeAParticipantWithHttpInfo(String conferenceId, String callId)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                removeAParticipantValidateBeforeCall(conferenceId, callId, null);
+    public ApiResponse<Void> removeAParticipantWithHttpInfo(String conferenceId, String callId) throws ApiException {
+        okhttp3.Call localVarCall = removeAParticipantValidateBeforeCall(conferenceId, callId, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Remove a Participant (asynchronously)
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successfully deleted conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call removeAParticipantAsync(
-            String conferenceId, String callId, final ApiCallback<Void> _callback)
-            throws ApiException {
+    public okhttp3.Call removeAParticipantAsync(String conferenceId, String callId, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                removeAParticipantValidateBeforeCall(conferenceId, callId, _callback);
+        okhttp3.Call localVarCall = removeAParticipantValidateBeforeCall(conferenceId, callId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for sendAnSmsMessage
-     *
      * @param messageRequest Details to create a message (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call sendAnSmsMessageCall(
-            MessageRequest messageRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sendAnSmsMessageCall(MessageRequest messageRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8456,11 +6775,8 @@ public class DefaultApi {
         Object localVarPostBody = messageRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Messages"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Messages"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8468,63 +6784,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sendAnSmsMessageValidateBeforeCall(
-            MessageRequest messageRequest, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call sendAnSmsMessageValidateBeforeCall(MessageRequest messageRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'messageRequest' is set
         if (messageRequest == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'messageRequest' when calling"
-                            + " sendAnSmsMessage(Async)");
+            throw new ApiException("Missing the required parameter 'messageRequest' when calling sendAnSmsMessage(Async)");
         }
+        
 
         okhttp3.Call localVarCall = sendAnSmsMessageCall(messageRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Send an SMS Message
-     *
+     * 
      * @param messageRequest Details to create a message (required)
      * @return MessageResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
+     </table>
      */
     public MessageResult sendAnSmsMessage(MessageRequest messageRequest) throws ApiException {
         ApiResponse<MessageResult> localVarResp = sendAnSmsMessageWithHttpInfo(messageRequest);
@@ -8533,72 +6840,64 @@ public class DefaultApi {
 
     /**
      * Send an SMS Message
-     *
+     * 
      * @param messageRequest Details to create a message (required)
      * @return ApiResponse&lt;MessageResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<MessageResult> sendAnSmsMessageWithHttpInfo(MessageRequest messageRequest)
-            throws ApiException {
+    public ApiResponse<MessageResult> sendAnSmsMessageWithHttpInfo(MessageRequest messageRequest) throws ApiException {
         okhttp3.Call localVarCall = sendAnSmsMessageValidateBeforeCall(messageRequest, null);
-        Type localVarReturnType = new TypeToken<MessageResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<MessageResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Send an SMS Message (asynchronously)
-     *
+     * 
      * @param messageRequest Details to create a message (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> The message has been accepted. </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call sendAnSmsMessageAsync(
-            MessageRequest messageRequest, final ApiCallback<MessageResult> _callback)
-            throws ApiException {
+    public okhttp3.Call sendAnSmsMessageAsync(MessageRequest messageRequest, final ApiCallback<MessageResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = sendAnSmsMessageValidateBeforeCall(messageRequest, _callback);
-        Type localVarReturnType = new TypeToken<MessageResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<MessageResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for streamARecordingFile
-     *
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call streamARecordingFileCall(String recordingId, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call streamARecordingFileCall(String recordingId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8607,14 +6906,9 @@ public class DefaultApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Recordings/{recordingId}/Stream"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "recordingId" + "\\}",
-                                localVarApiClient.escapeString(recordingId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Recordings/{recordingId}/Stream"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "recordingId" + "\\}", localVarApiClient.escapeString(recordingId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8622,64 +6916,54 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"audio/x-wav"};
+        final String[] localVarAccepts = {
+            "audio/x-wav"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call streamARecordingFileValidateBeforeCall(
-            String recordingId, final ApiCallback _callback) throws ApiException {
-
+    private okhttp3.Call streamARecordingFileValidateBeforeCall(String recordingId, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'recordingId' is set
         if (recordingId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'recordingId' when calling"
-                            + " streamARecordingFile(Async)");
+            throw new ApiException("Missing the required parameter 'recordingId' when calling streamARecordingFile(Async)");
         }
+        
 
         okhttp3.Call localVarCall = streamARecordingFileCall(recordingId, _callback);
         return localVarCall;
+
     }
 
     /**
      * Stream a Recording File
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return File
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
     public File streamARecordingFile(String recordingId) throws ApiException {
         ApiResponse<File> localVarResp = streamARecordingFileWithHttpInfo(recordingId);
@@ -8688,75 +6972,65 @@ public class DefaultApi {
 
     /**
      * Stream a Recording File
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @return ApiResponse&lt;File&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<File> streamARecordingFileWithHttpInfo(String recordingId)
-            throws ApiException {
+    public ApiResponse<File> streamARecordingFileWithHttpInfo(String recordingId) throws ApiException {
         okhttp3.Call localVarCall = streamARecordingFileValidateBeforeCall(recordingId, null);
-        Type localVarReturnType = new TypeToken<File>() {}.getType();
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Stream a Recording File (asynchronously)
-     *
+     * 
      * @param recordingId String that uniquely identifies this recording resource. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call streamARecordingFileAsync(
-            String recordingId, final ApiCallback<File> _callback) throws ApiException {
+    public okhttp3.Call streamARecordingFileAsync(String recordingId, final ApiCallback<File> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = streamARecordingFileValidateBeforeCall(recordingId, _callback);
-        Type localVarReturnType = new TypeToken<File>() {}.getType();
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAConference
-     *
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAConferenceCall(
-            String conferenceId,
-            UpdateConferenceRequest updateConferenceRequest,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateAConferenceCall(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8765,14 +7039,9 @@ public class DefaultApi {
         Object localVarPostBody = updateConferenceRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8780,151 +7049,120 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAConferenceValidateBeforeCall(
-            String conferenceId,
-            UpdateConferenceRequest updateConferenceRequest,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateAConferenceValidateBeforeCall(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " updateAConference(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling updateAConference(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                updateAConferenceCall(conferenceId, updateConferenceRequest, _callback);
+        okhttp3.Call localVarCall = updateAConferenceCall(conferenceId, updateConferenceRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update a Conference
-     *
+     * 
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
+     </table>
      */
-    public void updateAConference(
-            String conferenceId, UpdateConferenceRequest updateConferenceRequest)
-            throws ApiException {
+    public void updateAConference(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
         updateAConferenceWithHttpInfo(conferenceId, updateConferenceRequest);
     }
 
     /**
      * Update a Conference
-     *
+     * 
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> updateAConferenceWithHttpInfo(
-            String conferenceId, UpdateConferenceRequest updateConferenceRequest)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                updateAConferenceValidateBeforeCall(conferenceId, updateConferenceRequest, null);
+    public ApiResponse<Void> updateAConferenceWithHttpInfo(String conferenceId, UpdateConferenceRequest updateConferenceRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateAConferenceValidateBeforeCall(conferenceId, updateConferenceRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Update a Conference (asynchronously)
-     *
+     * 
      * @param conferenceId String that uniquely identifies this conference resource. (required)
      * @param updateConferenceRequest Conference Details to update (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful conference details update </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAConferenceAsync(
-            String conferenceId,
-            UpdateConferenceRequest updateConferenceRequest,
-            final ApiCallback<Void> _callback)
-            throws ApiException {
+    public okhttp3.Call updateAConferenceAsync(String conferenceId, UpdateConferenceRequest updateConferenceRequest, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateAConferenceValidateBeforeCall(
-                        conferenceId, updateConferenceRequest, _callback);
+        okhttp3.Call localVarCall = updateAConferenceValidateBeforeCall(conferenceId, updateConferenceRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateALiveCall
-     *
      * @param callId String that uniquely identifies this call resource. (required)
      * @param updateCallRequest Call details to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateALiveCallCall(
-            String callId, UpdateCallRequest updateCallRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateALiveCallCall(String callId, UpdateCallRequest updateCallRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -8933,14 +7171,9 @@ public class DefaultApi {
         Object localVarPostBody = updateCallRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Calls/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Calls/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8948,126 +7181,104 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateALiveCallValidateBeforeCall(
-            String callId, UpdateCallRequest updateCallRequest, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateALiveCallValidateBeforeCall(String callId, UpdateCallRequest updateCallRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling updateALiveCall(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling updateALiveCall(Async)");
         }
-
+        
         // verify the required parameter 'updateCallRequest' is set
         if (updateCallRequest == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'updateCallRequest' when calling"
-                            + " updateALiveCall(Async)");
+            throw new ApiException("Missing the required parameter 'updateCallRequest' when calling updateALiveCall(Async)");
         }
+        
 
         okhttp3.Call localVarCall = updateALiveCallCall(callId, updateCallRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update a Live Call
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @param updateCallRequest Call details to update (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
+     </table>
      */
-    public void updateALiveCall(String callId, UpdateCallRequest updateCallRequest)
-            throws ApiException {
+    public void updateALiveCall(String callId, UpdateCallRequest updateCallRequest) throws ApiException {
         updateALiveCallWithHttpInfo(callId, updateCallRequest);
     }
 
     /**
      * Update a Live Call
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @param updateCallRequest Call details to update (required)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> updateALiveCallWithHttpInfo(
-            String callId, UpdateCallRequest updateCallRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                updateALiveCallValidateBeforeCall(callId, updateCallRequest, null);
+    public ApiResponse<Void> updateALiveCallWithHttpInfo(String callId, UpdateCallRequest updateCallRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateALiveCallValidateBeforeCall(callId, updateCallRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Update a Live Call (asynchronously)
-     *
+     * 
      * @param callId String that uniquely identifies this call resource. (required)
      * @param updateCallRequest Call details to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successfully queued call </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateALiveCallAsync(
-            String callId, UpdateCallRequest updateCallRequest, final ApiCallback<Void> _callback)
-            throws ApiException {
+    public okhttp3.Call updateALiveCallAsync(String callId, UpdateCallRequest updateCallRequest, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateALiveCallValidateBeforeCall(callId, updateCallRequest, _callback);
+        okhttp3.Call localVarCall = updateALiveCallValidateBeforeCall(callId, updateCallRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAParticipant
-     *
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param updateConferenceParticipantRequest Conference participant details to update (optional)
@@ -9075,26 +7286,21 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAParticipantCall(
-            String conferenceId,
-            String callId,
-            UpdateConferenceParticipantRequest updateConferenceParticipantRequest,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateAParticipantCall(String conferenceId, String callId, UpdateConferenceParticipantRequest updateConferenceParticipantRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -9103,17 +7309,10 @@ public class DefaultApi {
         Object localVarPostBody = updateConferenceParticipantRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "conferenceId" + "\\}",
-                                localVarApiClient.escapeString(conferenceId.toString()))
-                        .replaceAll(
-                                "\\{" + "callId" + "\\}",
-                                localVarApiClient.escapeString(callId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "conferenceId" + "\\}", localVarApiClient.escapeString(conferenceId.toString()))
+            .replaceAll("\\{" + "callId" + "\\}", localVarApiClient.escapeString(callId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9121,174 +7320,132 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAParticipantValidateBeforeCall(
-            String conferenceId,
-            String callId,
-            UpdateConferenceParticipantRequest updateConferenceParticipantRequest,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateAParticipantValidateBeforeCall(String conferenceId, String callId, UpdateConferenceParticipantRequest updateConferenceParticipantRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'conferenceId' is set
         if (conferenceId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'conferenceId' when calling"
-                            + " updateAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'conferenceId' when calling updateAParticipant(Async)");
         }
-
+        
         // verify the required parameter 'callId' is set
         if (callId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'callId' when calling"
-                            + " updateAParticipant(Async)");
+            throw new ApiException("Missing the required parameter 'callId' when calling updateAParticipant(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                updateAParticipantCall(
-                        conferenceId, callId, updateConferenceParticipantRequest, _callback);
+        okhttp3.Call localVarCall = updateAParticipantCall(conferenceId, callId, updateConferenceParticipantRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param updateConferenceParticipantRequest Conference participant details to update (optional)
      * @return ConferenceParticipantResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public ConferenceParticipantResult updateAParticipant(
-            String conferenceId,
-            String callId,
-            UpdateConferenceParticipantRequest updateConferenceParticipantRequest)
-            throws ApiException {
-        ApiResponse<ConferenceParticipantResult> localVarResp =
-                updateAParticipantWithHttpInfo(
-                        conferenceId, callId, updateConferenceParticipantRequest);
+    public ConferenceParticipantResult updateAParticipant(String conferenceId, String callId, UpdateConferenceParticipantRequest updateConferenceParticipantRequest) throws ApiException {
+        ApiResponse<ConferenceParticipantResult> localVarResp = updateAParticipantWithHttpInfo(conferenceId, callId, updateConferenceParticipantRequest);
         return localVarResp.getData();
     }
 
     /**
      * Update a Participant
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param updateConferenceParticipantRequest Conference participant details to update (optional)
      * @return ApiResponse&lt;ConferenceParticipantResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ConferenceParticipantResult> updateAParticipantWithHttpInfo(
-            String conferenceId,
-            String callId,
-            UpdateConferenceParticipantRequest updateConferenceParticipantRequest)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                updateAParticipantValidateBeforeCall(
-                        conferenceId, callId, updateConferenceParticipantRequest, null);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>() {}.getType();
+    public ApiResponse<ConferenceParticipantResult> updateAParticipantWithHttpInfo(String conferenceId, String callId, UpdateConferenceParticipantRequest updateConferenceParticipantRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateAParticipantValidateBeforeCall(conferenceId, callId, updateConferenceParticipantRequest, null);
+        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update a Participant (asynchronously)
-     *
+     * 
      * @param conferenceId ID of the conference this participant is in. (required)
      * @param callId ID of the Call associated with this participant. (required)
      * @param updateConferenceParticipantRequest Conference participant details to update (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully retrieved conference participant </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAParticipantAsync(
-            String conferenceId,
-            String callId,
-            UpdateConferenceParticipantRequest updateConferenceParticipantRequest,
-            final ApiCallback<ConferenceParticipantResult> _callback)
-            throws ApiException {
+    public okhttp3.Call updateAParticipantAsync(String conferenceId, String callId, UpdateConferenceParticipantRequest updateConferenceParticipantRequest, final ApiCallback<ConferenceParticipantResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateAParticipantValidateBeforeCall(
-                        conferenceId, callId, updateConferenceParticipantRequest, _callback);
-        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>() {}.getType();
+        okhttp3.Call localVarCall = updateAParticipantValidateBeforeCall(conferenceId, callId, updateConferenceParticipantRequest, _callback);
+        Type localVarReturnType = new TypeToken<ConferenceParticipantResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAQueue
-     *
      * @param queueId A string that uniquely identifies this Queue resource. (required)
      * @param queueRequest Queue Details to update (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAQueueCall(
-            String queueId, QueueRequest queueRequest, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateAQueueCall(String queueId, QueueRequest queueRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -9297,14 +7454,9 @@ public class DefaultApi {
         Object localVarPostBody = queueRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Queues/{queueId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "queueId" + "\\}",
-                                localVarApiClient.escapeString(queueId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Queues/{queueId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "queueId" + "\\}", localVarApiClient.escapeString(queueId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9312,64 +7464,55 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAQueueValidateBeforeCall(
-            String queueId, QueueRequest queueRequest, final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateAQueueValidateBeforeCall(String queueId, QueueRequest queueRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'queueId' is set
         if (queueId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'queueId' when calling updateAQueue(Async)");
+            throw new ApiException("Missing the required parameter 'queueId' when calling updateAQueue(Async)");
         }
+        
 
         okhttp3.Call localVarCall = updateAQueueCall(queueId, queueRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update a Queue
-     *
+     * 
      * @param queueId A string that uniquely identifies this Queue resource. (required)
      * @param queueRequest Queue Details to update (optional)
      * @return QueueResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
+     </table>
      */
     public QueueResult updateAQueue(String queueId, QueueRequest queueRequest) throws ApiException {
         ApiResponse<QueueResult> localVarResp = updateAQueueWithHttpInfo(queueId, queueRequest);
@@ -9378,75 +7521,66 @@ public class DefaultApi {
 
     /**
      * Update a Queue
-     *
+     * 
      * @param queueId A string that uniquely identifies this Queue resource. (required)
      * @param queueRequest Queue Details to update (optional)
      * @return ApiResponse&lt;QueueResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<QueueResult> updateAQueueWithHttpInfo(
-            String queueId, QueueRequest queueRequest) throws ApiException {
+    public ApiResponse<QueueResult> updateAQueueWithHttpInfo(String queueId, QueueRequest queueRequest) throws ApiException {
         okhttp3.Call localVarCall = updateAQueueValidateBeforeCall(queueId, queueRequest, null);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update a Queue (asynchronously)
-     *
+     * 
      * @param queueId A string that uniquely identifies this Queue resource. (required)
      * @param queueRequest Queue Details to update (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successfully updated queue </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAQueueAsync(
-            String queueId, QueueRequest queueRequest, final ApiCallback<QueueResult> _callback)
-            throws ApiException {
+    public okhttp3.Call updateAQueueAsync(String queueId, QueueRequest queueRequest, final ApiCallback<QueueResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateAQueueValidateBeforeCall(queueId, queueRequest, _callback);
-        Type localVarReturnType = new TypeToken<QueueResult>() {}.getType();
+        okhttp3.Call localVarCall = updateAQueueValidateBeforeCall(queueId, queueRequest, _callback);
+        Type localVarReturnType = new TypeToken<QueueResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAnAccount
-     *
      * @param accountRequest Account details to update (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnAccountCall(
-            AccountRequest accountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateAnAccountCall(AccountRequest accountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -9455,11 +7589,8 @@ public class DefaultApi {
         Object localVarPostBody = accountRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()));
+        String localVarPath = "/Accounts/{accountId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9467,56 +7598,48 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {};
-
+        final String[] localVarAccepts = {
+            
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAnAccountValidateBeforeCall(
-            AccountRequest accountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateAnAccountValidateBeforeCall(AccountRequest accountRequest, final ApiCallback _callback) throws ApiException {
+        
 
         okhttp3.Call localVarCall = updateAnAccountCall(accountRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Manage an account
-     *
+     * 
      * @param accountRequest Account details to update (optional)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
+     </table>
      */
     public void updateAnAccount(AccountRequest accountRequest) throws ApiException {
         updateAnAccountWithHttpInfo(accountRequest);
@@ -9524,73 +7647,63 @@ public class DefaultApi {
 
     /**
      * Manage an account
-     *
+     * 
      * @param accountRequest Account details to update (optional)
      * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<Void> updateAnAccountWithHttpInfo(AccountRequest accountRequest)
-            throws ApiException {
+    public ApiResponse<Void> updateAnAccountWithHttpInfo(AccountRequest accountRequest) throws ApiException {
         okhttp3.Call localVarCall = updateAnAccountValidateBeforeCall(accountRequest, null);
         return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Manage an account (asynchronously)
-     *
+     * 
      * @param accountRequest Account details to update (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> Successful Account update </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnAccountAsync(
-            AccountRequest accountRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateAnAccountAsync(AccountRequest accountRequest, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateAnAccountValidateBeforeCall(accountRequest, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAnApplication
-     *
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param applicationRequest Application details to update. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnApplicationCall(
-            String applicationId,
-            ApplicationRequest applicationRequest,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateAnApplicationCall(String applicationId, ApplicationRequest applicationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -9599,14 +7712,9 @@ public class DefaultApi {
         Object localVarPostBody = applicationRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/Applications/{applicationId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "applicationId" + "\\}",
-                                localVarApiClient.escapeString(applicationId.toString()));
+        String localVarPath = "/Accounts/{accountId}/Applications/{applicationId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "applicationId" + "\\}", localVarApiClient.escapeString(applicationId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9614,154 +7722,124 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAnApplicationValidateBeforeCall(
-            String applicationId,
-            ApplicationRequest applicationRequest,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateAnApplicationValidateBeforeCall(String applicationId, ApplicationRequest applicationRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'applicationId' is set
         if (applicationId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'applicationId' when calling"
-                            + " updateAnApplication(Async)");
+            throw new ApiException("Missing the required parameter 'applicationId' when calling updateAnApplication(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                updateAnApplicationCall(applicationId, applicationRequest, _callback);
+        okhttp3.Call localVarCall = updateAnApplicationCall(applicationId, applicationRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update an application
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param applicationRequest Application details to update. (optional)
      * @return ApplicationResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
+     </table>
      */
-    public ApplicationResult updateAnApplication(
-            String applicationId, ApplicationRequest applicationRequest) throws ApiException {
-        ApiResponse<ApplicationResult> localVarResp =
-                updateAnApplicationWithHttpInfo(applicationId, applicationRequest);
+    public ApplicationResult updateAnApplication(String applicationId, ApplicationRequest applicationRequest) throws ApiException {
+        ApiResponse<ApplicationResult> localVarResp = updateAnApplicationWithHttpInfo(applicationId, applicationRequest);
         return localVarResp.getData();
     }
 
     /**
      * Update an application
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param applicationRequest Application details to update. (optional)
      * @return ApiResponse&lt;ApplicationResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<ApplicationResult> updateAnApplicationWithHttpInfo(
-            String applicationId, ApplicationRequest applicationRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                updateAnApplicationValidateBeforeCall(applicationId, applicationRequest, null);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+    public ApiResponse<ApplicationResult> updateAnApplicationWithHttpInfo(String applicationId, ApplicationRequest applicationRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateAnApplicationValidateBeforeCall(applicationId, applicationRequest, null);
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an application (asynchronously)
-     *
+     * 
      * @param applicationId A string that uniquely identifies this application resource. (required)
      * @param applicationRequest Application details to update. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Update Application </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnApplicationAsync(
-            String applicationId,
-            ApplicationRequest applicationRequest,
-            final ApiCallback<ApplicationResult> _callback)
-            throws ApiException {
+    public okhttp3.Call updateAnApplicationAsync(String applicationId, ApplicationRequest applicationRequest, final ApiCallback<ApplicationResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateAnApplicationValidateBeforeCall(applicationId, applicationRequest, _callback);
-        Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        okhttp3.Call localVarCall = updateAnApplicationValidateBeforeCall(applicationId, applicationRequest, _callback);
+        Type localVarReturnType = new TypeToken<ApplicationResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
-
     /**
      * Build call for updateAnIncomingNumber
-     *
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param incomingNumberRequest Incoming Number details to update (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnIncomingNumberCall(
-            String phoneNumberId,
-            IncomingNumberRequest incomingNumberRequest,
-            final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call updateAnIncomingNumberCall(String phoneNumberId, IncomingNumberRequest incomingNumberRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String[] localBasePaths = new String[] {  };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
-        } else if (localBasePaths.length > 0) {
+        } else if ( localBasePaths.length > 0 ) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -9770,14 +7848,9 @@ public class DefaultApi {
         Object localVarPostBody = incomingNumberRequest;
 
         // create path and map variables
-        String localVarPath =
-                "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
-                        .replaceAll(
-                                "\\{" + "accountId" + "\\}",
-                                localVarApiClient.escapeString(accountId.toString()))
-                        .replaceAll(
-                                "\\{" + "phoneNumberId" + "\\}",
-                                localVarApiClient.escapeString(phoneNumberId.toString()));
+        String localVarPath = "/Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId}"
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "phoneNumberId" + "\\}", localVarApiClient.escapeString(phoneNumberId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9785,145 +7858,118 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {"application/json"};
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
 
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                localVarPath,
-                "POST",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateAnIncomingNumberValidateBeforeCall(
-            String phoneNumberId,
-            IncomingNumberRequest incomingNumberRequest,
-            final ApiCallback _callback)
-            throws ApiException {
-
+    private okhttp3.Call updateAnIncomingNumberValidateBeforeCall(String phoneNumberId, IncomingNumberRequest incomingNumberRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'phoneNumberId' is set
         if (phoneNumberId == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'phoneNumberId' when calling"
-                            + " updateAnIncomingNumber(Async)");
+            throw new ApiException("Missing the required parameter 'phoneNumberId' when calling updateAnIncomingNumber(Async)");
         }
+        
 
-        okhttp3.Call localVarCall =
-                updateAnIncomingNumberCall(phoneNumberId, incomingNumberRequest, _callback);
+        okhttp3.Call localVarCall = updateAnIncomingNumberCall(phoneNumberId, incomingNumberRequest, _callback);
         return localVarCall;
+
     }
 
     /**
      * Update an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param incomingNumberRequest Incoming Number details to update (optional)
      * @return IncomingNumberResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
+     </table>
      */
-    public IncomingNumberResult updateAnIncomingNumber(
-            String phoneNumberId, IncomingNumberRequest incomingNumberRequest) throws ApiException {
-        ApiResponse<IncomingNumberResult> localVarResp =
-                updateAnIncomingNumberWithHttpInfo(phoneNumberId, incomingNumberRequest);
+    public IncomingNumberResult updateAnIncomingNumber(String phoneNumberId, IncomingNumberRequest incomingNumberRequest) throws ApiException {
+        ApiResponse<IncomingNumberResult> localVarResp = updateAnIncomingNumberWithHttpInfo(phoneNumberId, incomingNumberRequest);
         return localVarResp.getData();
     }
 
     /**
      * Update an Incoming Number
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param incomingNumberRequest Incoming Number details to update (optional)
      * @return ApiResponse&lt;IncomingNumberResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
+     </table>
      */
-    public ApiResponse<IncomingNumberResult> updateAnIncomingNumberWithHttpInfo(
-            String phoneNumberId, IncomingNumberRequest incomingNumberRequest) throws ApiException {
-        okhttp3.Call localVarCall =
-                updateAnIncomingNumberValidateBeforeCall(
-                        phoneNumberId, incomingNumberRequest, null);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+    public ApiResponse<IncomingNumberResult> updateAnIncomingNumberWithHttpInfo(String phoneNumberId, IncomingNumberRequest incomingNumberRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateAnIncomingNumberValidateBeforeCall(phoneNumberId, incomingNumberRequest, null);
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an Incoming Number (asynchronously)
-     *
+     * 
      * @param phoneNumberId String that uniquely identifies this phone number resource. (required)
      * @param incomingNumberRequest Incoming Number details to update (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body
-     *     object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
-     * </table>
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Updated Incoming Phone Number </td><td>  -  </td></tr>
+     </table>
      */
-    public okhttp3.Call updateAnIncomingNumberAsync(
-            String phoneNumberId,
-            IncomingNumberRequest incomingNumberRequest,
-            final ApiCallback<IncomingNumberResult> _callback)
-            throws ApiException {
+    public okhttp3.Call updateAnIncomingNumberAsync(String phoneNumberId, IncomingNumberRequest incomingNumberRequest, final ApiCallback<IncomingNumberResult> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall =
-                updateAnIncomingNumberValidateBeforeCall(
-                        phoneNumberId, incomingNumberRequest, _callback);
-        Type localVarReturnType = new TypeToken<IncomingNumberResult>() {}.getType();
+        okhttp3.Call localVarCall = updateAnIncomingNumberValidateBeforeCall(phoneNumberId, incomingNumberRequest, _callback);
+        Type localVarReturnType = new TypeToken<IncomingNumberResult>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
 
     /**
      * Build call for getNextPage
-     *
+     * 
      * @param response The response from the previous page of data
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public <T extends Pagination> okhttp3.Call getNextPageCall(
-            T response, final ApiCallback _callback) throws ApiException {
+    public <T extends Pagination> okhttp3.Call getNextPageCall(T response, final ApiCallback _callback) throws ApiException {
         String nextPageUri = response.getNextPageUri();
 
         String basePath = null;
         // Operation Servers
-        String[] localBasePaths = new String[] {};
+        String [] localBasePaths = new String[] { };
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null) {
+        if (localCustomBaseUrl != null){
             basePath = localCustomBaseUrl;
         } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
@@ -9935,61 +7981,51 @@ public class DefaultApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Object localVarPostBody = null;
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        final String[] localVarAccepts = {"application/json"};
+        final String[] localVarAccepts = {
+            "application/json"
+        };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
-        final String[] localVarContentTypes = {};
-
-        final String localVarContentType =
-                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
-        } else {
+        }
+        else {
             localVarHeaderParams.put("Content-Type", "");
         }
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        String[] localVarAuthNames = new String[] {"fc"};
-        return localVarApiClient.buildCall(
-                basePath,
-                nextPageUri,
-                "GET",
-                localVarQueryParams,
-                localVarCollectionQueryParams,
-                localVarPostBody,
-                localVarHeaderParams,
-                localVarCookieParams,
-                localVarFormParams,
-                localVarAuthNames,
-                _callback);
+        String[] localVarAuthNames = new String[] { "fc" };
+        return localVarApiClient.buildCall(basePath, nextPageUri, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private <T extends Pagination> okhttp3.Call getNextPageValidateBeforeCall(
-            T response, final ApiCallback _callback) throws ApiException {
+    private <T extends Pagination> okhttp3.Call getNextPageValidateBeforeCall(T response, final ApiCallback _callback) throws ApiException {
         okhttp3.Call localVarCall = getNextPageCall(response, _callback);
         return localVarCall;
     }
 
     /**
      * Get Next Page
-     *
+     * 
      * @param response The respnose from the previous page of data
      * @return &lt;T extends PaginationModel&gt; ApiResponse&lt;T&gt;
      * @throws ApiException If fail to call the API
      */
-    public <T extends Pagination> ApiResponse<T> getNextPageWithHttpInfo(T response)
-            throws ApiException {
+    public <T extends Pagination> ApiResponse<T> getNextPageWithHttpInfo(T response) throws ApiException {
         okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response, null);
-        Type localVarReturnType = response.getClass();
+        Type localVarReturnType = response.getClass(); 
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get Next Page
-     *
+     * 
      * @param response The response from the previous page of data
      * @return The next page of data
      * @throws ApiException If fail to process the API call
@@ -10001,16 +8037,15 @@ public class DefaultApi {
 
     /**
      * Get Next Page (asynchronously)
-     *
+     * 
      * @param response The response from the previous page of data
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call
      */
-    public <T extends Pagination> okhttp3.Call getNextPageAsync(
-            T response, final ApiCallback<T> _callback) throws ApiException {
+    public <T extends Pagination> okhttp3.Call getNextPageAsync(T response, final ApiCallback<T> _callback) throws ApiException {
         okhttp3.Call localVarCall = getNextPageValidateBeforeCall(response, _callback);
-        Type localVarReturnType = new TypeToken<T>() {}.getType();
+        Type localVarReturnType = new TypeToken<T>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

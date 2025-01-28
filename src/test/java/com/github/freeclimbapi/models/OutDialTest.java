@@ -10,735 +10,872 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.net.URI;
-import java.util.*;
-import java.util.Map;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for OutDial */
-public class OutDialTest {
-
-    private final OutDial model = new OutDial();
-
-    /** Test the property 'actionUrl' */
+/**
+ * Model tests for OutDial
+ */
+ public class OutDialTest {
+    
+    private final OutDial model = new OutDial(
+    );
+    
+    
+    /**
+     * Test the property 'actionUrl'
+     */
     @Test
     public void actionUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setActionUrl(uri);
-            Assert.assertEquals(uri, model.getActionUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'callConnectUrl' */
+    /**
+     * Test the property 'callConnectUrl'
+     */
     @Test
     public void callConnectUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setCallConnectUrl(uri);
-            Assert.assertEquals(uri, model.getCallConnectUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setCallConnectUrl(uri);
+        Assert.assertEquals(uri, model.getCallConnectUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'callingNumber' */
+    /**
+     * Test the property 'callingNumber'
+     */
     @Test
     public void callingNumberTest() {
-
-        model.setCallingNumber("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallingNumber());
+      
+      
+      model.setCallingNumber("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallingNumber());
+      
+      
     }
-
-    /** Test the property 'destination' */
+    /**
+     * Test the property 'destination'
+     */
     @Test
     public void destinationTest() {
-
-        model.setDestination("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDestination());
+      
+      
+      model.setDestination("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDestination());
+      
+      
     }
-
-    /** Test the property 'ifMachine' */
+    /**
+     * Test the property 'ifMachine'
+     */
     @Test
     public void ifMachineTest() {
-        model.setIfMachine(IfMachine.REDIRECT);
-        Assert.assertEquals(model.getIfMachine(), IfMachine.REDIRECT);
-        model.setIfMachine(IfMachine.HANGUP);
-        Assert.assertEquals(model.getIfMachine(), IfMachine.HANGUP);
+      model.setIfMachine(IfMachine.REDIRECT);
+      Assert.assertEquals(model.getIfMachine(),IfMachine.REDIRECT);
+      model.setIfMachine(IfMachine.HANGUP);
+      Assert.assertEquals(model.getIfMachine(),IfMachine.HANGUP);
+      
     }
-
-    /** Test the property 'ifMachineUrl' */
+    /**
+     * Test the property 'ifMachineUrl'
+     */
     @Test
     public void ifMachineUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setIfMachineUrl(uri);
-            Assert.assertEquals(uri, model.getIfMachineUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setIfMachineUrl(uri);
+        Assert.assertEquals(uri, model.getIfMachineUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'sendDigits' */
+    /**
+     * Test the property 'sendDigits'
+     */
     @Test
     public void sendDigitsTest() {
-
-        model.setSendDigits("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getSendDigits());
+      
+      
+      model.setSendDigits("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getSendDigits());
+      
+      
     }
-
-    /** Test the property 'statusCallbackUrl' */
+    /**
+     * Test the property 'statusCallbackUrl'
+     */
     @Test
     public void statusCallbackUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setStatusCallbackUrl(uri);
-            Assert.assertEquals(uri, model.getStatusCallbackUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setStatusCallbackUrl(uri);
+        Assert.assertEquals(uri, model.getStatusCallbackUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'timeout' */
+    /**
+     * Test the property 'timeout'
+     */
     @Test
     public void timeoutTest() {
-
-        model.setTimeout(1);
-        Assert.assertEquals(1, (int) model.getTimeout());
+      
+      model.setTimeout(1);
+      Assert.assertEquals(1, (int) model.getTimeout());
     }
-
-    /** Test the property 'privacyMode' */
+    /**
+     * Test the property 'privacyMode'
+     */
     @Test
     public void privacyModeTest() {
-        model.setPrivacyMode(false);
-        Assert.assertEquals(false, model.getPrivacyMode());
+      model.setPrivacyMode(false);
+      Assert.assertEquals(false, model.getPrivacyMode());       
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-        OutDial test2 = new OutDial();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      OutDial test2 = new OutDial();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setCallConnectUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setCallingNumber("TS");
-
-        test2.setDestination("TS");
-
-        test2.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setIfMachineUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setCallingNumber("TS");
+      
+        
+        
+      test2.setDestination("TS");
+      
+      test2.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setSendDigits("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setStatusCallbackUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setTimeout(1);
-        test2.setPrivacyMode(true);
+          e.printStackTrace();
+        };
+      test2.setTimeout(1);
+      test2.setPrivacyMode(true);
 
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.HANGUP);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.HANGUP);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-        OutDial test2 = new OutDial();
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      OutDial test2 = new OutDial();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setCallConnectUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setCallingNumber("TS2");
-
-        test2.setDestination("TS2");
-
-        test2.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setIfMachineUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setCallingNumber("TS2");
+      
+        
+        
+      test2.setDestination("TS2");
+      
+      test2.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setSendDigits("TS2");
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setStatusCallbackUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setSendDigits("TS2");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setTimeout(0);
-        test2.setPrivacyMode(false);
+          e.printStackTrace();
+        };
+      test2.setTimeout(0);
+      test2.setPrivacyMode(false);
 
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-        OutDial test2 = new OutDial();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      OutDial test2 = new OutDial();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setCallConnectUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setCallingNumber("TS");
-
-        test2.setDestination("TS");
-
-        test2.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setIfMachineUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setCallingNumber("TS");
+      
+        
+        
+      test2.setDestination("TS");
+      
+      test2.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setSendDigits("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setStatusCallbackUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setTimeout(1);
-        test2.setPrivacyMode(true);
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+          e.printStackTrace();
+        };
+      test2.setTimeout(1);
+      test2.setPrivacyMode(true);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-        OutDial test2 = new OutDial();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      OutDial test2 = new OutDial();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setCallConnectUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setCallConnectUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setCallingNumber("TS");
-
-        test2.setDestination("TS");
-
-        test2.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setIfMachineUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setCallingNumber("TS");
+      
+        
+        
+      test2.setDestination("TS");
+      
+      test2.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setIfMachineUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setSendDigits("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setStatusCallbackUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setStatusCallbackUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setTimeout(1);
-        test2.setPrivacyMode(true);
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      test2.setTimeout(1);
+      test2.setPrivacyMode(true);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setCallingNumber("TS");
-
-        test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.HANGUP);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setCallingNumber("TS");
+      
+        
+        
+      test1.setDestination("TS");
+      
+      test1.setIfMachine(IfMachine.HANGUP);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setSendDigits("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
-        OutDial test2 = new OutDial();
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
+      OutDial test2 = new OutDial();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setCallConnectUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setCallConnectUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setCallingNumber("TS2");
-
-        test2.setDestination("TS2");
-
-        test2.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setIfMachineUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setCallingNumber("TS2");
+      
+        
+        
+      test2.setDestination("TS2");
+      
+      test2.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setIfMachineUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setSendDigits("TS2");
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setStatusCallbackUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setSendDigits("TS2");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setStatusCallbackUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setTimeout(0);
-        test2.setPrivacyMode(false);
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      test2.setTimeout(0);
+      test2.setPrivacyMode(false);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        OutDial test1 = new OutDial();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      OutDial test1 = new OutDial();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setCallConnectUrl(uri1);
+          e.printStackTrace();
+        };
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setCallConnectUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
+          e.printStackTrace();
+        };
+        
+        
         test1.setCallingNumber("TS");
-
+      
+        
+        
         test1.setDestination("TS");
-
-        test1.setIfMachine(IfMachine.REDIRECT);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setIfMachineUrl(uri1);
+      
+      test1.setIfMachine(IfMachine.REDIRECT);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setIfMachineUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
+          e.printStackTrace();
+        };
+        
+        
         test1.setSendDigits("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setStatusCallbackUrl(uri1);
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setStatusCallbackUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setTimeout(1);
-        test1.setPrivacyMode(true);
+          e.printStackTrace();
+        };
+      test1.setTimeout(1);
+      test1.setPrivacyMode(true);
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-        Assert.assertEquals("OutDial", model.getCommand());
+      Assert.assertEquals("OutDial", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-
+        
+        
         try {
-            URI uri = new URI("TEST_STRING");
-            model.setActionUrl(uri);
-            Assert.assertEquals(uri, model.getActionUrl());
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
         } catch (Exception e) {
-            e.printStackTrace();
+          e.printStackTrace();
         }
-
+        
+        
         try {
-            URI uri = new URI("TEST_STRING");
-            model.setCallConnectUrl(uri);
-            Assert.assertEquals(uri, model.getCallConnectUrl());
+          URI uri = new URI("TEST_STRING");
+          model.setCallConnectUrl(uri);
+          Assert.assertEquals(uri, model.getCallConnectUrl());
         } catch (Exception e) {
-            e.printStackTrace();
+          e.printStackTrace();
         }
-
+        
+        
         model.setCallingNumber("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getCallingNumber());
-
+        
+        
+        
         model.setDestination("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getDestination());
-
+        
+        
+        
         try {
-            URI uri = new URI("TEST_STRING");
-            model.setIfMachineUrl(uri);
-            Assert.assertEquals(uri, model.getIfMachineUrl());
+          URI uri = new URI("TEST_STRING");
+          model.setIfMachineUrl(uri);
+          Assert.assertEquals(uri, model.getIfMachineUrl());
         } catch (Exception e) {
-            e.printStackTrace();
+          e.printStackTrace();
         }
-
+        
+        
         model.setSendDigits("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getSendDigits());
-
+        
+        
+        
         try {
-            URI uri = new URI("TEST_STRING");
-            model.setStatusCallbackUrl(uri);
-            Assert.assertEquals(uri, model.getStatusCallbackUrl());
+          URI uri = new URI("TEST_STRING");
+          model.setStatusCallbackUrl(uri);
+          Assert.assertEquals(uri, model.getStatusCallbackUrl());
         } catch (Exception e) {
-            e.printStackTrace();
+          e.printStackTrace();
         }
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
@@ -753,5 +890,7 @@ public class OutDialTest {
         Assert.assertEquals(attributes.get("statusCallbackUrl"), model.getStatusCallbackUrl());
         Assert.assertEquals(attributes.get("timeout"), model.getTimeout());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
+        
     }
-}
+    
+ }

@@ -12,107 +12,122 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.HashMap;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;Pause&#x60; command halts execution of the current PerCL script for a specified number
- * of milliseconds. If &#x60;Pause&#x60; is the first command in a PerCL document, FreeClimb will
- * wait for the specified time to elapse before picking up the call.
+ * The &#x60;Pause&#x60; command halts execution of the current PerCL script for a specified number of milliseconds. If &#x60;Pause&#x60; is the first command in a PerCL document, FreeClimb will wait for the specified time to elapse before picking up the call.
  */
-@ApiModel(
-        description =
-                "The `Pause` command halts execution of the current PerCL script for a specified"
-                        + " number of milliseconds. If `Pause` is the first command in a PerCL"
-                        + " document, FreeClimb will wait for the specified time to elapse before"
-                        + " picking up the call.")
+@ApiModel(description = "The `Pause` command halts execution of the current PerCL script for a specified number of milliseconds. If `Pause` is the first command in a PerCL document, FreeClimb will wait for the specified time to elapse before picking up the call.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Pause extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_LENGTH = "length";
+  
+  
+  @SerializedName(SERIALIZED_NAME_LENGTH)
+  
+  private Integer length;
+
+
+  public Pause() { 
+    this.command = this.getClass().getSimpleName();
+  }
+
+  public Pause length(Integer length) {
+    
+    this.length = length;
+    return this;
+  }
+
+   /**
+   * Length in milliseconds. FreeClimb will wait silently before continuing on.
+   * @return length
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Length in milliseconds. FreeClimb will wait silently before continuing on.")
+
+  public Integer getLength() {
+    return length;
+  }
+
+
+  public void setLength(Integer length) {
+    this.length = length;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_LENGTH = "length";
-
-    @SerializedName(SERIALIZED_NAME_LENGTH)
-    private Integer length;
-
-    public Pause() {
-        this.command = this.getClass().getSimpleName();
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    Pause pause = (Pause) o;
+    return Objects.equals(this.length, pause.length) &&
+        super.equals(o);
+  }
 
-    public Pause length(Integer length) {
+  @Override
+  public int hashCode() {
+    return Objects.hash(length, super.hashCode());
+  }
 
-        this.length = length;
-        return this;
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Pause {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    length: ").append(toIndentedString(length)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    attributes.put("length", () -> this.getLength());
+    return attributes;
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    /**
-     * Length in milliseconds. FreeClimb will wait silently before continuing on.
-     *
-     * @return length
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value = "Length in milliseconds. FreeClimb will wait silently before continuing on.")
-    public Integer getLength() {
-        return length;
-    }
-
-    public void setLength(Integer length) {
-        this.length = length;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Pause pause = (Pause) o;
-        return Objects.equals(this.length, pause.length) && super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(length, super.hashCode());
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class Pause {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    length: ").append(toIndentedString(length)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("length", () -> this.getLength());
-        return attributes;
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

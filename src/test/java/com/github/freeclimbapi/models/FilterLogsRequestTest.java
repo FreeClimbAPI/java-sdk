@@ -10,118 +10,181 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for FilterLogsRequest */
-public class FilterLogsRequestTest {
-
-    private final FilterLogsRequest model = new FilterLogsRequest();
-
-    /** Test the property 'pql' */
+/**
+ * Model tests for FilterLogsRequest
+ */
+ public class FilterLogsRequestTest {
+    
+    private final FilterLogsRequest model = new FilterLogsRequest(
+    );
+    
+    
+    /**
+     * Test the property 'pql'
+     */
     @Test
     public void pqlTest() {
-
-        model.setPql("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPql());
+      
+      
+      model.setPql("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPql());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        
+        
+      test2.setPql("TS");
+      
 
-        test1.setPql("TS");
-
-        FilterLogsRequest test2 = new FilterLogsRequest();
-
-        test2.setPql("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        
+        
+      test2.setPql("TS2");
+      
 
-        test1.setPql("TS");
-
-        FilterLogsRequest test2 = new FilterLogsRequest();
-
-        test2.setPql("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
-
-        test1.setPql("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
-
-        test1.setPql("TS");
-
-        FilterLogsRequest test2 = new FilterLogsRequest();
-
-        test2.setPql("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        
+        
+      test2.setPql("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
-
-        test1.setPql("TS");
-
-        FilterLogsRequest test2 = new FilterLogsRequest();
-
-        test2.setPql("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        
+        
+      test2.setPql("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
-
-        test1.setPql("TS");
-
-        FilterLogsRequest test2 = new FilterLogsRequest();
-
-        test2.setPql("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
+      test1.setPql("TS");
+      
+      FilterLogsRequest test2 = new FilterLogsRequest();
+        
+        
+      test2.setPql("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        FilterLogsRequest test1 = new FilterLogsRequest();
-
+      FilterLogsRequest test1 = new FilterLogsRequest();
+        
+        
         test1.setPql("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
-}
+
+    
+ }

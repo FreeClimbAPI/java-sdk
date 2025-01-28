@@ -10,28 +10,48 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import java.util.Map;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for Dequeue */
-public class DequeueTest {
-
-    private final Dequeue model = new Dequeue();
+/**
+ * Model tests for Dequeue
+ */
+ public class DequeueTest {
+    
+    private final Dequeue model = new Dequeue(
+    );
+    
+    
 
     @Test
     public void commandTest() throws Exception {
-        Assert.assertEquals("Dequeue", model.getCommand());
+      Assert.assertEquals("Dequeue", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
+        
     }
-}
+    
+ }

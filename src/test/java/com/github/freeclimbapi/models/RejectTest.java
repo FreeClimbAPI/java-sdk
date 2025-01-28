@@ -10,135 +10,198 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import java.util.Map;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for Reject */
-public class RejectTest {
-
-    private final Reject model = new Reject();
-
-    /** Test the property 'reason' */
+/**
+ * Model tests for Reject
+ */
+ public class RejectTest {
+    
+    private final Reject model = new Reject(
+    );
+    
+    
+    /**
+     * Test the property 'reason'
+     */
     @Test
     public void reasonTest() {
-
-        model.setReason("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getReason());
+      
+      
+      model.setReason("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getReason());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        Reject test1 = new Reject();
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      Reject test2 = new Reject();
+        
+        
+      test2.setReason("TS");
+      
 
-        test1.setReason("TS");
-
-        Reject test2 = new Reject();
-
-        test2.setReason("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        Reject test1 = new Reject();
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      Reject test2 = new Reject();
+        
+        
+      test2.setReason("TS2");
+      
 
-        test1.setReason("TS");
-
-        Reject test2 = new Reject();
-
-        test2.setReason("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        Reject test1 = new Reject();
-
-        test1.setReason("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        Reject test1 = new Reject();
-
-        test1.setReason("TS");
-
-        Reject test2 = new Reject();
-
-        test2.setReason("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      Reject test2 = new Reject();
+        
+        
+      test2.setReason("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        Reject test1 = new Reject();
-
-        test1.setReason("TS");
-
-        Reject test2 = new Reject();
-
-        test2.setReason("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      Reject test2 = new Reject();
+        
+        
+      test2.setReason("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        Reject test1 = new Reject();
-
-        test1.setReason("TS");
-
-        Reject test2 = new Reject();
-
-        test2.setReason("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      Reject test1 = new Reject();
+        
+        
+      test1.setReason("TS");
+      
+      Reject test2 = new Reject();
+        
+        
+      test2.setReason("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        Reject test1 = new Reject();
-
+      Reject test1 = new Reject();
+        
+        
         test1.setReason("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-        Assert.assertEquals("Reject", model.getCommand());
+      Assert.assertEquals("Reject", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-
+        
+        
         model.setReason("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getReason());
-
+        
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("reason"), model.getReason());
+        
     }
-}
+    
+ }

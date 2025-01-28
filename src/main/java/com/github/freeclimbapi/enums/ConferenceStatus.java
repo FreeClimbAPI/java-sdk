@@ -12,59 +12,73 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** The status of the Conference. One of: creating, empty, populated, inProgress, or terminated. */
+/**
+ * The status of the Conference. One of: creating, empty, populated, inProgress, or terminated.
+ */
 @JsonAdapter(ConferenceStatus.Adapter.class)
 public enum ConferenceStatus {
-    EMPTY("empty"),
+  
+  EMPTY("empty"),
+  
+  POPULATED("populated"),
+  
+  IN_PROGRESS("inProgress"),
+  
+  TERMINATED("terminated");
 
-    POPULATED("populated"),
+  private String value;
 
-    IN_PROGRESS("inProgress"),
+  ConferenceStatus(String value) {
+    this.value = value;
+  }
 
-    TERMINATED("terminated");
+  public String getValue() {
+    return value;
+  }
 
-    private String value;
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
 
-    ConferenceStatus(String value) {
-        this.value = value;
+  public static ConferenceStatus fromValue(String value) {
+    for (ConferenceStatus b : ConferenceStatus.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    return null;
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<ConferenceStatus> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final ConferenceStatus enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public ConferenceStatus read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return ConferenceStatus.fromValue(value);
     }
-
-    public static ConferenceStatus fromValue(String value) {
-        for (ConferenceStatus b : ConferenceStatus.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        return null;
-    }
-
-    public static class Adapter extends TypeAdapter<ConferenceStatus> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final ConferenceStatus enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public ConferenceStatus read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return ConferenceStatus.fromValue(value);
-        }
-    }
+  }
 }
+

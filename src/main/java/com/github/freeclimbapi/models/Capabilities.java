@@ -12,212 +12,245 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.Objects;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** Details for which features this number may be used. */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * Details for which features this number may be used.
+ */
 @ApiModel(description = "Details for which features this number may be used.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Capabilities {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_VOICE = "voice";
+  
+  
+  @SerializedName(SERIALIZED_NAME_VOICE)
+  
+  private Boolean voice;
+
+  
+  public static final String SERIALIZED_NAME_SMS = "sms";
+  
+  
+  @SerializedName(SERIALIZED_NAME_SMS)
+  
+  private Boolean sms;
+
+  
+  public static final String SERIALIZED_NAME_TOLL_FREE = "tollFree";
+  
+  
+  @SerializedName(SERIALIZED_NAME_TOLL_FREE)
+  
+  private Boolean tollFree;
+
+  
+  public static final String SERIALIZED_NAME_TEN_D_L_C = "tenDLC";
+  
+  
+  @SerializedName(SERIALIZED_NAME_TEN_D_L_C)
+  
+  private Boolean tenDLC;
+
+  
+  public static final String SERIALIZED_NAME_SHORT_CODE = "shortCode";
+  
+  
+  @SerializedName(SERIALIZED_NAME_SHORT_CODE)
+  
+  private Boolean shortCode;
+
+
+  public Capabilities() { 
+  }
+
+  public Capabilities voice(Boolean voice) {
+    
+    this.voice = voice;
+    return this;
+  }
+
+   /**
+   * Indicates whether a number can be used for voice calls. Replaces voiceEnabled.
+   * @return voice
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(required = true, value = "Indicates whether a number can be used for voice calls. Replaces voiceEnabled.")
+
+  public Boolean getVoice() {
+    return voice;
+  }
+
+
+  public void setVoice(Boolean voice) {
+    this.voice = voice;
+  }
+
+
+  public Capabilities sms(Boolean sms) {
+    
+    this.sms = sms;
+    return this;
+  }
+
+   /**
+   * Indicates whether a number can be used SMS messaging. Replaces smsEnabled.
+   * @return sms
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(required = true, value = "Indicates whether a number can be used SMS messaging. Replaces smsEnabled.")
+
+  public Boolean getSms() {
+    return sms;
+  }
+
+
+  public void setSms(Boolean sms) {
+    this.sms = sms;
+  }
+
+
+  public Capabilities tollFree(Boolean tollFree) {
+    
+    this.tollFree = tollFree;
+    return this;
+  }
+
+   /**
+   * Indicates that a number is toll-free and will make toll-free calls, and when enabled, toll-free messages.
+   * @return tollFree
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(required = true, value = "Indicates that a number is toll-free and will make toll-free calls, and when enabled, toll-free messages.")
+
+  public Boolean getTollFree() {
+    return tollFree;
+  }
+
+
+  public void setTollFree(Boolean tollFree) {
+    this.tollFree = tollFree;
+  }
+
+
+  public Capabilities tenDLC(Boolean tenDLC) {
+    
+    this.tenDLC = tenDLC;
+    return this;
+  }
+
+   /**
+   * Indicates that a number, if sms is true, will be used for 10DLC messaging
+   * @return tenDLC
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(required = true, value = "Indicates that a number, if sms is true, will be used for 10DLC messaging")
+
+  public Boolean getTenDLC() {
+    return tenDLC;
+  }
+
+
+  public void setTenDLC(Boolean tenDLC) {
+    this.tenDLC = tenDLC;
+  }
+
+
+  public Capabilities shortCode(Boolean shortCode) {
+    
+    this.shortCode = shortCode;
+    return this;
+  }
+
+   /**
+   * Indicates that a number is a short code and can be used for short code messaging
+   * @return shortCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(required = true, value = "Indicates that a number is a short code and can be used for short code messaging")
+
+  public Boolean getShortCode() {
+    return shortCode;
+  }
+
+
+  public void setShortCode(Boolean shortCode) {
+    this.shortCode = shortCode;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_VOICE = "voice";
-
-    @SerializedName(SERIALIZED_NAME_VOICE)
-    private Boolean voice;
-
-    public static final String SERIALIZED_NAME_SMS = "sms";
-
-    @SerializedName(SERIALIZED_NAME_SMS)
-    private Boolean sms;
-
-    public static final String SERIALIZED_NAME_TOLL_FREE = "tollFree";
-
-    @SerializedName(SERIALIZED_NAME_TOLL_FREE)
-    private Boolean tollFree;
-
-    public static final String SERIALIZED_NAME_TEN_D_L_C = "tenDLC";
-
-    @SerializedName(SERIALIZED_NAME_TEN_D_L_C)
-    private Boolean tenDLC;
-
-    public static final String SERIALIZED_NAME_SHORT_CODE = "shortCode";
-
-    @SerializedName(SERIALIZED_NAME_SHORT_CODE)
-    private Boolean shortCode;
-
-    public Capabilities() {}
-
-    public Capabilities voice(Boolean voice) {
-
-        this.voice = voice;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    Capabilities capabilities = (Capabilities) o;
+    return Objects.equals(this.voice, capabilities.voice) &&
+        Objects.equals(this.sms, capabilities.sms) &&
+        Objects.equals(this.tollFree, capabilities.tollFree) &&
+        Objects.equals(this.tenDLC, capabilities.tenDLC) &&
+        Objects.equals(this.shortCode, capabilities.shortCode);
+  }
 
-    /**
-     * Indicates whether a number can be used for voice calls. Replaces voiceEnabled.
-     *
-     * @return voice
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "Indicates whether a number can be used for voice calls. Replaces"
-                            + " voiceEnabled.")
-    public Boolean getVoice() {
-        return voice;
+  @Override
+  public int hashCode() {
+    return Objects.hash(voice, sms, tollFree, tenDLC, shortCode);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Capabilities {\n");
+    sb.append("    voice: ").append(toIndentedString(voice)).append("\n");
+    sb.append("    sms: ").append(toIndentedString(sms)).append("\n");
+    sb.append("    tollFree: ").append(toIndentedString(tollFree)).append("\n");
+    sb.append("    tenDLC: ").append(toIndentedString(tenDLC)).append("\n");
+    sb.append("    shortCode: ").append(toIndentedString(shortCode)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public void setVoice(Boolean voice) {
-        this.voice = voice;
-    }
-
-    public Capabilities sms(Boolean sms) {
-
-        this.sms = sms;
-        return this;
-    }
-
-    /**
-     * Indicates whether a number can be used SMS messaging. Replaces smsEnabled.
-     *
-     * @return sms
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            required = true,
-            value = "Indicates whether a number can be used SMS messaging. Replaces smsEnabled.")
-    public Boolean getSms() {
-        return sms;
-    }
-
-    public void setSms(Boolean sms) {
-        this.sms = sms;
-    }
-
-    public Capabilities tollFree(Boolean tollFree) {
-
-        this.tollFree = tollFree;
-        return this;
-    }
-
-    /**
-     * Indicates that a number is toll-free and will make toll-free calls, and when enabled,
-     * toll-free messages.
-     *
-     * @return tollFree
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "Indicates that a number is toll-free and will make toll-free calls, and when"
-                            + " enabled, toll-free messages.")
-    public Boolean getTollFree() {
-        return tollFree;
-    }
-
-    public void setTollFree(Boolean tollFree) {
-        this.tollFree = tollFree;
-    }
-
-    public Capabilities tenDLC(Boolean tenDLC) {
-
-        this.tenDLC = tenDLC;
-        return this;
-    }
-
-    /**
-     * Indicates that a number, if sms is true, will be used for 10DLC messaging
-     *
-     * @return tenDLC
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            required = true,
-            value = "Indicates that a number, if sms is true, will be used for 10DLC messaging")
-    public Boolean getTenDLC() {
-        return tenDLC;
-    }
-
-    public void setTenDLC(Boolean tenDLC) {
-        this.tenDLC = tenDLC;
-    }
-
-    public Capabilities shortCode(Boolean shortCode) {
-
-        this.shortCode = shortCode;
-        return this;
-    }
-
-    /**
-     * Indicates that a number is a short code and can be used for short code messaging
-     *
-     * @return shortCode
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "Indicates that a number is a short code and can be used for short code"
-                            + " messaging")
-    public Boolean getShortCode() {
-        return shortCode;
-    }
-
-    public void setShortCode(Boolean shortCode) {
-        this.shortCode = shortCode;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Capabilities capabilities = (Capabilities) o;
-        return Objects.equals(this.voice, capabilities.voice)
-                && Objects.equals(this.sms, capabilities.sms)
-                && Objects.equals(this.tollFree, capabilities.tollFree)
-                && Objects.equals(this.tenDLC, capabilities.tenDLC)
-                && Objects.equals(this.shortCode, capabilities.shortCode);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(voice, sms, tollFree, tenDLC, shortCode);
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class Capabilities {\n");
-        sb.append("    voice: ").append(toIndentedString(voice)).append("\n");
-        sb.append("    sms: ").append(toIndentedString(sms)).append("\n");
-        sb.append("    tollFree: ").append(toIndentedString(tollFree)).append("\n");
-        sb.append("    tenDLC: ").append(toIndentedString(tenDLC)).append("\n");
-        sb.append("    shortCode: ").append(toIndentedString(shortCode)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

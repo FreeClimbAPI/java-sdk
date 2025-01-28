@@ -12,109 +12,145 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** AccountRequest */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * AccountRequest
+ */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountRequest {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ALIAS)
+  
+  private String alias;
+
+  
+  public static final String SERIALIZED_NAME_LABEL = "label";
+  
+  
+  @SerializedName(SERIALIZED_NAME_LABEL)
+  
+  private String label;
+
+
+  public AccountRequest() { 
+  }
+
+  public AccountRequest alias(String alias) {
+    
+    this.alias = alias;
+    return this;
+  }
+
+   /**
+   * Description for this account.
+   * @return alias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Description for this account.")
+
+  public String getAlias() {
+    return alias;
+  }
+
+
+  public void setAlias(String alias) {
+    this.alias = alias;
+  }
+
+
+  public AccountRequest label(String label) {
+    
+    this.label = label;
+    return this;
+  }
+
+   /**
+   * Group to which this account belongs.
+   * @return label
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Group to which this account belongs.")
+
+  public String getLabel() {
+    return label;
+  }
+
+
+  public void setLabel(String label) {
+    this.label = label;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_ALIAS = "alias";
-
-    @SerializedName(SERIALIZED_NAME_ALIAS)
-    private String alias;
-
-    public static final String SERIALIZED_NAME_LABEL = "label";
-
-    @SerializedName(SERIALIZED_NAME_LABEL)
-    private String label;
-
-    public AccountRequest() {}
-
-    public AccountRequest alias(String alias) {
-
-        this.alias = alias;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    AccountRequest accountRequest = (AccountRequest) o;
+    return Objects.equals(this.alias, accountRequest.alias) &&
+        Objects.equals(this.label, accountRequest.label);
+  }
 
-    /**
-     * Description for this account.
-     *
-     * @return alias
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Description for this account.")
-    public String getAlias() {
-        return alias;
+  @Override
+  public int hashCode() {
+    return Objects.hash(alias, label);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AccountRequest {\n");
+    sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
+    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
-    public AccountRequest label(String label) {
-
-        this.label = label;
-        return this;
-    }
-
-    /**
-     * Group to which this account belongs.
-     *
-     * @return label
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Group to which this account belongs.")
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        AccountRequest accountRequest = (AccountRequest) o;
-        return Objects.equals(this.alias, accountRequest.alias)
-                && Objects.equals(this.label, accountRequest.label);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(alias, label);
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class AccountRequest {\n");
-        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
-        sb.append("    label: ").append(toIndentedString(label)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

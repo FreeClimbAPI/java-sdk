@@ -10,445 +10,667 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for CallStatusWebhook */
-public class CallStatusWebhookTest {
-
-    private final CallStatusWebhook model = new CallStatusWebhook();
-
-    /** Test the property 'requestType' */
+/**
+ * Model tests for CallStatusWebhook
+ */
+ public class CallStatusWebhookTest {
+    
+    private final CallStatusWebhook model = new CallStatusWebhook(
+    );
+    
+    
+    /**
+     * Test the property 'requestType'
+     */
     @Test
-    public void requestTypeTest() {}
-
-    /** Test the property 'callId' */
+    public void requestTypeTest() {
+      
+    }
+    /**
+     * Test the property 'callId'
+     */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
     }
-
-    /** Test the property 'accountId' */
+    /**
+     * Test the property 'accountId'
+     */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-
-    /** Test the property 'from' */
+    /**
+     * Test the property 'from'
+     */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-
-    /** Test the property 'to' */
+    /**
+     * Test the property 'to'
+     */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-
-    /** Test the property 'callStatus' */
+    /**
+     * Test the property 'callStatus'
+     */
     @Test
     public void callStatusTest() {
-        model.setCallStatus(CallStatus.QUEUED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.QUEUED);
-        model.setCallStatus(CallStatus.RINGING);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.RINGING);
-        model.setCallStatus(CallStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.IN_PROGRESS);
-        model.setCallStatus(CallStatus.CANCELED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.CANCELED);
-        model.setCallStatus(CallStatus.COMPLETED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.COMPLETED);
-        model.setCallStatus(CallStatus.FAILED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.FAILED);
-        model.setCallStatus(CallStatus.BUSY);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.BUSY);
-        model.setCallStatus(CallStatus.NO_ANSWER);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.NO_ANSWER);
+      model.setCallStatus(CallStatus.QUEUED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+      model.setCallStatus(CallStatus.RINGING);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+      model.setCallStatus(CallStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+      model.setCallStatus(CallStatus.CANCELED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+      model.setCallStatus(CallStatus.COMPLETED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+      model.setCallStatus(CallStatus.FAILED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+      model.setCallStatus(CallStatus.BUSY);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+      model.setCallStatus(CallStatus.NO_ANSWER);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+      
     }
-
-    /** Test the property 'callEndedReason' */
+    /**
+     * Test the property 'callEndedReason'
+     */
     @Test
     public void callEndedReasonTest() {
-        model.setCallEndedReason(CallEndedReason.BUSY);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.BUSY);
-        model.setCallEndedReason(CallEndedReason.FAILED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.FAILED);
-        model.setCallEndedReason(CallEndedReason.NO_ANSWER);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.NO_ANSWER);
-        model.setCallEndedReason(CallEndedReason.CALL_CANCELED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.CALL_CANCELED);
-        model.setCallEndedReason(CallEndedReason.FAR_END_HANGUP);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.FAR_END_HANGUP);
-        model.setCallEndedReason(CallEndedReason.APP_HANGUP);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.APP_HANGUP);
-        model.setCallEndedReason(CallEndedReason.APP_REJECT);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.APP_REJECT);
-        model.setCallEndedReason(CallEndedReason.APP_NO_PERCL);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.APP_NO_PERCL);
-        model.setCallEndedReason(CallEndedReason.APP_INVALID_PERCL);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.APP_INVALID_PERCL);
-        model.setCallEndedReason(CallEndedReason.CONFERENCE_TERMINATED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.CONFERENCE_TERMINATED);
-        model.setCallEndedReason(CallEndedReason.CONFERENCE_EMPTIED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.CONFERENCE_EMPTIED);
-        model.setCallEndedReason(CallEndedReason.REMOVED_FROM_CONFERENCE);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.REMOVED_FROM_CONFERENCE);
-        model.setCallEndedReason(CallEndedReason.MACHINE_DETECTED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.MACHINE_DETECTED);
-        model.setCallEndedReason(CallEndedReason.WEBHOOK_FAILED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.WEBHOOK_FAILED);
-        model.setCallEndedReason(CallEndedReason.WEBHOOK_INVALID_RESPONSE);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.WEBHOOK_INVALID_RESPONSE);
-        model.setCallEndedReason(CallEndedReason.VOICE_DISABLED);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.VOICE_DISABLED);
-        model.setCallEndedReason(CallEndedReason.CONFIG_ERROR_NO_APPLICATION);
-        Assert.assertEquals(
-                model.getCallEndedReason(), CallEndedReason.CONFIG_ERROR_NO_APPLICATION);
-        model.setCallEndedReason(CallEndedReason.CONFIG_ERROR_NO_VOICE_URL);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.CONFIG_ERROR_NO_VOICE_URL);
-        model.setCallEndedReason(CallEndedReason.MAX_REDIRECTS_ERROR);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.MAX_REDIRECTS_ERROR);
-        model.setCallEndedReason(CallEndedReason.PERCL_PROCESSING_ERROR);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.PERCL_PROCESSING_ERROR);
-        model.setCallEndedReason(CallEndedReason.INTERNAL_ERROR);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.INTERNAL_ERROR);
-        model.setCallEndedReason(CallEndedReason.GRPC_HANGUP);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.GRPC_HANGUP);
-        model.setCallEndedReason(CallEndedReason.MAX_DURATION);
-        Assert.assertEquals(model.getCallEndedReason(), CallEndedReason.MAX_DURATION);
+      model.setCallEndedReason(CallEndedReason.BUSY);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.BUSY);
+      model.setCallEndedReason(CallEndedReason.FAILED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.FAILED);
+      model.setCallEndedReason(CallEndedReason.NO_ANSWER);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.NO_ANSWER);
+      model.setCallEndedReason(CallEndedReason.CALL_CANCELED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.CALL_CANCELED);
+      model.setCallEndedReason(CallEndedReason.FAR_END_HANGUP);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.FAR_END_HANGUP);
+      model.setCallEndedReason(CallEndedReason.APP_HANGUP);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.APP_HANGUP);
+      model.setCallEndedReason(CallEndedReason.APP_REJECT);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.APP_REJECT);
+      model.setCallEndedReason(CallEndedReason.APP_NO_PERCL);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.APP_NO_PERCL);
+      model.setCallEndedReason(CallEndedReason.APP_INVALID_PERCL);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.APP_INVALID_PERCL);
+      model.setCallEndedReason(CallEndedReason.CONFERENCE_TERMINATED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.CONFERENCE_TERMINATED);
+      model.setCallEndedReason(CallEndedReason.CONFERENCE_EMPTIED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.CONFERENCE_EMPTIED);
+      model.setCallEndedReason(CallEndedReason.REMOVED_FROM_CONFERENCE);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.REMOVED_FROM_CONFERENCE);
+      model.setCallEndedReason(CallEndedReason.MACHINE_DETECTED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.MACHINE_DETECTED);
+      model.setCallEndedReason(CallEndedReason.WEBHOOK_FAILED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.WEBHOOK_FAILED);
+      model.setCallEndedReason(CallEndedReason.WEBHOOK_INVALID_RESPONSE);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.WEBHOOK_INVALID_RESPONSE);
+      model.setCallEndedReason(CallEndedReason.VOICE_DISABLED);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.VOICE_DISABLED);
+      model.setCallEndedReason(CallEndedReason.CONFIG_ERROR_NO_APPLICATION);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.CONFIG_ERROR_NO_APPLICATION);
+      model.setCallEndedReason(CallEndedReason.CONFIG_ERROR_NO_VOICE_URL);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.CONFIG_ERROR_NO_VOICE_URL);
+      model.setCallEndedReason(CallEndedReason.MAX_REDIRECTS_ERROR);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.MAX_REDIRECTS_ERROR);
+      model.setCallEndedReason(CallEndedReason.PERCL_PROCESSING_ERROR);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.PERCL_PROCESSING_ERROR);
+      model.setCallEndedReason(CallEndedReason.INTERNAL_ERROR);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.INTERNAL_ERROR);
+      model.setCallEndedReason(CallEndedReason.GRPC_HANGUP);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.GRPC_HANGUP);
+      model.setCallEndedReason(CallEndedReason.MAX_DURATION);
+      Assert.assertEquals(model.getCallEndedReason(),CallEndedReason.MAX_DURATION);
+      
     }
-
-    /** Test the property 'direction' */
+    /**
+     * Test the property 'direction'
+     */
     @Test
     public void directionTest() {
-        model.setDirection(CallDirection.INBOUND);
-        Assert.assertEquals(model.getDirection(), CallDirection.INBOUND);
-        model.setDirection(CallDirection.OUTBOUND_API);
-        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_API);
-        model.setDirection(CallDirection.OUTBOUND_DIAL);
-        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_DIAL);
+      model.setDirection(CallDirection.INBOUND);
+      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+      model.setDirection(CallDirection.OUTBOUND_API);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+      model.setDirection(CallDirection.OUTBOUND_DIAL);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+      
     }
-
-    /** Test the property 'conferenceId' */
+    /**
+     * Test the property 'conferenceId'
+     */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
     }
-
-    /** Test the property 'queueId' */
+    /**
+     * Test the property 'queueId'
+     */
     @Test
     public void queueIdTest() {
-
-        model.setQueueId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setCallEndedReason(CallEndedReason.BUSY);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      CallStatusWebhook test2 = new CallStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setCallEndedReason(CallEndedReason.BUSY);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setCallEndedReason(CallEndedReason.BUSY);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        CallStatusWebhook test2 = new CallStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setCallEndedReason(CallEndedReason.BUSY);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.RINGING);
+      test1.setCallEndedReason(CallEndedReason.FAILED);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      CallStatusWebhook test2 = new CallStatusWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setCallEndedReason(CallEndedReason.BUSY);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.RINGING);
-        test1.setCallEndedReason(CallEndedReason.FAILED);
-        test1.setDirection(CallDirection.OUTBOUND_API);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        CallStatusWebhook test2 = new CallStatusWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setCallEndedReason(CallEndedReason.BUSY);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS2");
-
-        test2.setQueueId("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setCallEndedReason(CallEndedReason.BUSY);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setCallEndedReason(CallEndedReason.BUSY);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setCallEndedReason(CallEndedReason.BUSY);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        CallStatusWebhook test2 = new CallStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setCallEndedReason(CallEndedReason.BUSY);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setCallEndedReason(CallEndedReason.BUSY);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      CallStatusWebhook test2 = new CallStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setCallEndedReason(CallEndedReason.BUSY);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setCallEndedReason(CallEndedReason.BUSY);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        CallStatusWebhook test2 = new CallStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setCallEndedReason(CallEndedReason.BUSY);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setCallEndedReason(CallEndedReason.BUSY);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      CallStatusWebhook test2 = new CallStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setCallEndedReason(CallEndedReason.BUSY);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.RINGING);
-        test1.setCallEndedReason(CallEndedReason.FAILED);
-        test1.setDirection(CallDirection.OUTBOUND_API);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        CallStatusWebhook test2 = new CallStatusWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setCallEndedReason(CallEndedReason.BUSY);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS2");
-
-        test2.setQueueId("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.RINGING);
+      test1.setCallEndedReason(CallEndedReason.FAILED);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      CallStatusWebhook test2 = new CallStatusWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setCallEndedReason(CallEndedReason.BUSY);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        CallStatusWebhook test1 = new CallStatusWebhook();
-
+      CallStatusWebhook test1 = new CallStatusWebhook();
+        
+        
         test1.setRequestType("TS");
-
+      
+        
+        
         test1.setCallId("TS");
-
+      
+        
+        
         test1.setAccountId("TS");
-
+      
+        
+        
         test1.setFrom("TS");
-
+      
+        
+        
         test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setCallEndedReason(CallEndedReason.BUSY);
-        test1.setDirection(CallDirection.INBOUND);
-
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setCallEndedReason(CallEndedReason.BUSY);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
         test1.setConferenceId("TS");
-
+      
+        
+        
         test1.setQueueId("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-        String json = "{ \"requestType\": \"callStatus\" }";
-        CallStatusWebhook webhookInstance = CallStatusWebhook.deserialize(json);
-        Assert.assertTrue(webhookInstance instanceof CallStatusWebhook);
+      String json = "{ \"requestType\": \"callStatus\" }";
+      CallStatusWebhook webhookInstance = CallStatusWebhook.deserialize(json);
+      Assert.assertTrue(webhookInstance instanceof CallStatusWebhook);
     }
-}
+    
+ }

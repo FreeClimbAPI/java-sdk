@@ -12,55 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** Completion result status. Possible values: success, no_context */
+/**
+ * Completion result status. Possible values: success, no_context
+ */
 @JsonAdapter(CompletionResultStatus.Adapter.class)
 public enum CompletionResultStatus {
-    SUCCESS("success"),
+  
+  SUCCESS("success"),
+  
+  NO_CONTEXT("no_context");
 
-    NO_CONTEXT("no_context");
+  private String value;
 
-    private String value;
+  CompletionResultStatus(String value) {
+    this.value = value;
+  }
 
-    CompletionResultStatus(String value) {
-        this.value = value;
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static CompletionResultStatus fromValue(String value) {
+    for (CompletionResultStatus b : CompletionResultStatus.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<CompletionResultStatus> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final CompletionResultStatus enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public CompletionResultStatus read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return CompletionResultStatus.fromValue(value);
     }
-
-    public static CompletionResultStatus fromValue(String value) {
-        for (CompletionResultStatus b : CompletionResultStatus.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<CompletionResultStatus> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final CompletionResultStatus enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public CompletionResultStatus read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return CompletionResultStatus.fromValue(value);
-        }
-    }
+  }
 }
+

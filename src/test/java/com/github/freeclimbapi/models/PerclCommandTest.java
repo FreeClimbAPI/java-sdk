@@ -10,114 +10,176 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for PerclCommand */
-public class PerclCommandTest {
-
-    private final PerclCommand model = new PerclCommand();
-
-    /** Test the property 'command' */
+/**
+ * Model tests for PerclCommand
+ */
+ public class PerclCommandTest {
+    
+    private final PerclCommand model = new PerclCommand(
+    );
+    
+    
+    /**
+     * Test the property 'command'
+     */
     @Test
-    public void commandTest() {}
+    public void commandTest() {
+      
+    }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        PerclCommand test1 = new PerclCommand();
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      PerclCommand test2 = new PerclCommand();
+        
+        
+      test2.setCommand("TS");
+      
 
-        test1.setCommand("TS");
-
-        PerclCommand test2 = new PerclCommand();
-
-        test2.setCommand("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        PerclCommand test1 = new PerclCommand();
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      PerclCommand test2 = new PerclCommand();
+        
+        
+      test2.setCommand("TS2");
+      
 
-        test1.setCommand("TS");
-
-        PerclCommand test2 = new PerclCommand();
-
-        test2.setCommand("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        PerclCommand test1 = new PerclCommand();
-
-        test1.setCommand("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        PerclCommand test1 = new PerclCommand();
-
-        test1.setCommand("TS");
-
-        PerclCommand test2 = new PerclCommand();
-
-        test2.setCommand("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      PerclCommand test2 = new PerclCommand();
+        
+        
+      test2.setCommand("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        PerclCommand test1 = new PerclCommand();
-
-        test1.setCommand("TS");
-
-        PerclCommand test2 = new PerclCommand();
-
-        test2.setCommand("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      PerclCommand test2 = new PerclCommand();
+        
+        
+      test2.setCommand("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        PerclCommand test1 = new PerclCommand();
-
-        test1.setCommand("TS");
-
-        PerclCommand test2 = new PerclCommand();
-
-        test2.setCommand("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      PerclCommand test1 = new PerclCommand();
+        
+        
+      test1.setCommand("TS");
+      
+      PerclCommand test2 = new PerclCommand();
+        
+        
+      test2.setCommand("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        PerclCommand test1 = new PerclCommand();
-
+      PerclCommand test1 = new PerclCommand();
+        
+        
         test1.setCommand("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
-}
+
+    
+ }

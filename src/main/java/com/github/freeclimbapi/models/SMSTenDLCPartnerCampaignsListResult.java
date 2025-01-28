@@ -12,312 +12,362 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import com.github.freeclimbapi.utils.*;
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
 import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.utils.*;
 
-/** SMSTenDLCPartnerCampaignsListResult */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * SMSTenDLCPartnerCampaignsListResult
+ */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SMSTenDLCPartnerCampaignsListResult implements Pagination {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_TOTAL = "total";
+  
+  
+  @SerializedName(SERIALIZED_NAME_TOTAL)
+  
+  private Integer total;
+
+  
+  public static final String SERIALIZED_NAME_START = "start";
+  
+  
+  @SerializedName(SERIALIZED_NAME_START)
+  
+  private Integer start;
+
+  
+  public static final String SERIALIZED_NAME_END = "end";
+  
+  
+  @SerializedName(SERIALIZED_NAME_END)
+  
+  private Integer end;
+
+  
+  public static final String SERIALIZED_NAME_PAGE = "page";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PAGE)
+  
+  private Integer page;
+
+  
+  public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
+  
+  
+  @SerializedName(SERIALIZED_NAME_NUM_PAGES)
+  
+  private Integer numPages;
+
+  
+  public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  
+  private Integer pageSize;
+
+  
+  public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
+  
+  
+  @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
+  
+  private String nextPageUri;
+
+  
+  public static final String SERIALIZED_NAME_PARTNER_CAMPAIGNS = "partnerCampaigns";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PARTNER_CAMPAIGNS)
+  
+  private List<SMSTenDLCPartnerCampaign> partnerCampaigns = null;
+
+
+  public SMSTenDLCPartnerCampaignsListResult() { 
+  }
+
+  public SMSTenDLCPartnerCampaignsListResult total(Integer total) {
+    
+    this.total = total;
+    return this;
+  }
+
+   /**
+   * Total amount of requested resource.
+   * @return total
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Total amount of requested resource.")
+
+  public Integer getTotal() {
+    return total;
+  }
+
+
+  public void setTotal(Integer total) {
+    this.total = total;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult start(Integer start) {
+    
+    this.start = start;
+    return this;
+  }
+
+   /**
+   * Resource index at start of current page
+   * @return start
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Resource index at start of current page")
+
+  public Integer getStart() {
+    return start;
+  }
+
+
+  public void setStart(Integer start) {
+    this.start = start;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult end(Integer end) {
+    
+    this.end = end;
+    return this;
+  }
+
+   /**
+   * Resource index at end of current page
+   * @return end
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Resource index at end of current page")
+
+  public Integer getEnd() {
+    return end;
+  }
+
+
+  public void setEnd(Integer end) {
+    this.end = end;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult page(Integer page) {
+    
+    this.page = page;
+    return this;
+  }
+
+   /**
+   * Current page
+   * @return page
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Current page")
+
+  public Integer getPage() {
+    return page;
+  }
+
+
+  public void setPage(Integer page) {
+    this.page = page;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult numPages(Integer numPages) {
+    
+    this.numPages = numPages;
+    return this;
+  }
+
+   /**
+   * Total number of pages
+   * @return numPages
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Total number of pages")
+
+  public Integer getNumPages() {
+    return numPages;
+  }
+
+
+  public void setNumPages(Integer numPages) {
+    this.numPages = numPages;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult pageSize(Integer pageSize) {
+    
+    this.pageSize = pageSize;
+    return this;
+  }
+
+   /**
+   * Number of items per page
+   * @return pageSize
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of items per page")
+
+  public Integer getPageSize() {
+    return pageSize;
+  }
+
+
+  public void setPageSize(Integer pageSize) {
+    this.pageSize = pageSize;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult nextPageUri(String nextPageUri) {
+    
+    this.nextPageUri = nextPageUri;
+    return this;
+  }
+
+   /**
+   * Uri to retrieve the next page of items
+   * @return nextPageUri
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Uri to retrieve the next page of items")
+
+  public String getNextPageUri() {
+    return nextPageUri;
+  }
+
+
+  public void setNextPageUri(String nextPageUri) {
+    this.nextPageUri = nextPageUri;
+  }
+
+
+  public SMSTenDLCPartnerCampaignsListResult partnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
+    
+    this.partnerCampaigns = partnerCampaigns;
+    return this;
+  }
+  public SMSTenDLCPartnerCampaignsListResult addPartnerCampaignsItem(SMSTenDLCPartnerCampaign partnerCampaignsItem) {
+    if (this.partnerCampaigns == null) {
+      this.partnerCampaigns = new ArrayList<SMSTenDLCPartnerCampaign>();
     }
+    this.partnerCampaigns.add(partnerCampaignsItem);
+    return this;
+  }
 
-    public static final String SERIALIZED_NAME_TOTAL = "total";
+   /**
+   * Get partnerCampaigns
+   * @return partnerCampaigns
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-    @SerializedName(SERIALIZED_NAME_TOTAL)
-    private Integer total;
+  public List<SMSTenDLCPartnerCampaign> getPartnerCampaigns() {
+    return partnerCampaigns;
+  }
 
-    public static final String SERIALIZED_NAME_START = "start";
 
-    @SerializedName(SERIALIZED_NAME_START)
-    private Integer start;
+  public void setPartnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
+    this.partnerCampaigns = partnerCampaigns;
+  }
 
-    public static final String SERIALIZED_NAME_END = "end";
 
-    @SerializedName(SERIALIZED_NAME_END)
-    private Integer end;
-
-    public static final String SERIALIZED_NAME_PAGE = "page";
-
-    @SerializedName(SERIALIZED_NAME_PAGE)
-    private Integer page;
-
-    public static final String SERIALIZED_NAME_NUM_PAGES = "numPages";
-
-    @SerializedName(SERIALIZED_NAME_NUM_PAGES)
-    private Integer numPages;
-
-    public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
-
-    @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
-    private Integer pageSize;
-
-    public static final String SERIALIZED_NAME_NEXT_PAGE_URI = "nextPageUri";
-
-    @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URI)
-    private String nextPageUri;
-
-    public static final String SERIALIZED_NAME_PARTNER_CAMPAIGNS = "partnerCampaigns";
-
-    @SerializedName(SERIALIZED_NAME_PARTNER_CAMPAIGNS)
-    private List<SMSTenDLCPartnerCampaign> partnerCampaigns = null;
-
-    public SMSTenDLCPartnerCampaignsListResult() {}
-
-    public SMSTenDLCPartnerCampaignsListResult total(Integer total) {
-
-        this.total = total;
-        return this;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    /**
-     * Total amount of requested resource.
-     *
-     * @return total
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Total amount of requested resource.")
-    public Integer getTotal() {
-        return total;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    SMSTenDLCPartnerCampaignsListResult smSTenDLCPartnerCampaignsListResult = (SMSTenDLCPartnerCampaignsListResult) o;
+    return Objects.equals(this.total, smSTenDLCPartnerCampaignsListResult.total) &&
+        Objects.equals(this.start, smSTenDLCPartnerCampaignsListResult.start) &&
+        Objects.equals(this.end, smSTenDLCPartnerCampaignsListResult.end) &&
+        Objects.equals(this.page, smSTenDLCPartnerCampaignsListResult.page) &&
+        Objects.equals(this.numPages, smSTenDLCPartnerCampaignsListResult.numPages) &&
+        Objects.equals(this.pageSize, smSTenDLCPartnerCampaignsListResult.pageSize) &&
+        Objects.equals(this.nextPageUri, smSTenDLCPartnerCampaignsListResult.nextPageUri) &&
+        Objects.equals(this.partnerCampaigns, smSTenDLCPartnerCampaignsListResult.partnerCampaigns);
+  }
 
-    public void setTotal(Integer total) {
-        this.total = total;
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(total, start, end, page, numPages, pageSize, nextPageUri, partnerCampaigns);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
     }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+  }
 
-    public SMSTenDLCPartnerCampaignsListResult start(Integer start) {
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class SMSTenDLCPartnerCampaignsListResult {\n");
+    sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    sb.append("    start: ").append(toIndentedString(start)).append("\n");
+    sb.append("    end: ").append(toIndentedString(end)).append("\n");
+    sb.append("    page: ").append(toIndentedString(page)).append("\n");
+    sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
+    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
+    sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
+    sb.append("    partnerCampaigns: ").append(toIndentedString(partnerCampaigns)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-        this.start = start;
-        return this;
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    /**
-     * Resource index at start of current page
-     *
-     * @return start
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Resource index at start of current page")
-    public Integer getStart() {
-        return start;
-    }
-
-    public void setStart(Integer start) {
-        this.start = start;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult end(Integer end) {
-
-        this.end = end;
-        return this;
-    }
-
-    /**
-     * Resource index at end of current page
-     *
-     * @return end
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Resource index at end of current page")
-    public Integer getEnd() {
-        return end;
-    }
-
-    public void setEnd(Integer end) {
-        this.end = end;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult page(Integer page) {
-
-        this.page = page;
-        return this;
-    }
-
-    /**
-     * Current page
-     *
-     * @return page
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Current page")
-    public Integer getPage() {
-        return page;
-    }
-
-    public void setPage(Integer page) {
-        this.page = page;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult numPages(Integer numPages) {
-
-        this.numPages = numPages;
-        return this;
-    }
-
-    /**
-     * Total number of pages
-     *
-     * @return numPages
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Total number of pages")
-    public Integer getNumPages() {
-        return numPages;
-    }
-
-    public void setNumPages(Integer numPages) {
-        this.numPages = numPages;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult pageSize(Integer pageSize) {
-
-        this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * Number of items per page
-     *
-     * @return pageSize
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Number of items per page")
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult nextPageUri(String nextPageUri) {
-
-        this.nextPageUri = nextPageUri;
-        return this;
-    }
-
-    /**
-     * Uri to retrieve the next page of items
-     *
-     * @return nextPageUri
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Uri to retrieve the next page of items")
-    public String getNextPageUri() {
-        return nextPageUri;
-    }
-
-    public void setNextPageUri(String nextPageUri) {
-        this.nextPageUri = nextPageUri;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult partnerCampaigns(
-            List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
-
-        this.partnerCampaigns = partnerCampaigns;
-        return this;
-    }
-
-    public SMSTenDLCPartnerCampaignsListResult addPartnerCampaignsItem(
-            SMSTenDLCPartnerCampaign partnerCampaignsItem) {
-        if (this.partnerCampaigns == null) {
-            this.partnerCampaigns = new ArrayList<SMSTenDLCPartnerCampaign>();
-        }
-        this.partnerCampaigns.add(partnerCampaignsItem);
-        return this;
-    }
-
-    /**
-     * Get partnerCampaigns
-     *
-     * @return partnerCampaigns
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public List<SMSTenDLCPartnerCampaign> getPartnerCampaigns() {
-        return partnerCampaigns;
-    }
-
-    public void setPartnerCampaigns(List<SMSTenDLCPartnerCampaign> partnerCampaigns) {
-        this.partnerCampaigns = partnerCampaigns;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        SMSTenDLCPartnerCampaignsListResult smSTenDLCPartnerCampaignsListResult =
-                (SMSTenDLCPartnerCampaignsListResult) o;
-        return Objects.equals(this.total, smSTenDLCPartnerCampaignsListResult.total)
-                && Objects.equals(this.start, smSTenDLCPartnerCampaignsListResult.start)
-                && Objects.equals(this.end, smSTenDLCPartnerCampaignsListResult.end)
-                && Objects.equals(this.page, smSTenDLCPartnerCampaignsListResult.page)
-                && Objects.equals(this.numPages, smSTenDLCPartnerCampaignsListResult.numPages)
-                && Objects.equals(this.pageSize, smSTenDLCPartnerCampaignsListResult.pageSize)
-                && Objects.equals(this.nextPageUri, smSTenDLCPartnerCampaignsListResult.nextPageUri)
-                && Objects.equals(
-                        this.partnerCampaigns,
-                        smSTenDLCPartnerCampaignsListResult.partnerCampaigns);
-    }
-
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                total, start, end, page, numPages, pageSize, nextPageUri, partnerCampaigns);
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class SMSTenDLCPartnerCampaignsListResult {\n");
-        sb.append("    total: ").append(toIndentedString(total)).append("\n");
-        sb.append("    start: ").append(toIndentedString(start)).append("\n");
-        sb.append("    end: ").append(toIndentedString(end)).append("\n");
-        sb.append("    page: ").append(toIndentedString(page)).append("\n");
-        sb.append("    numPages: ").append(toIndentedString(numPages)).append("\n");
-        sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
-        sb.append("    nextPageUri: ").append(toIndentedString(nextPageUri)).append("\n");
-        sb.append("    partnerCampaigns: ").append(toIndentedString(partnerCampaigns)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

@@ -12,281 +12,299 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.net.URI;
-import java.util.*;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;TranscribeUtterance&#x60; command transcribes the caller’s voice and returns
- * transcription of the audio and optionally returns the recording of the audio transcribed.
- * &#x60;TranscribeUtterance&#x60; is blocking and is a terminal command. As such, the actionUrl
- * property is required, and control of the Call picks up using the &#x60;PerCL&#x60; returned in
- * response of the &#x60;actionUrl&#x60;. Recording and Transcription information is returned in the
- * actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL
- * returned will not execute.
+ * The &#x60;TranscribeUtterance&#x60; command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  &#x60;TranscribeUtterance&#x60; is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the &#x60;PerCL&#x60; returned in response of the &#x60;actionUrl&#x60;. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.
  */
-@ApiModel(
-        description =
-                "The `TranscribeUtterance` command transcribes the caller’s voice and returns"
-                    + " transcription of the audio and optionally returns the recording of the"
-                    + " audio transcribed.  `TranscribeUtterance` is blocking and is a terminal"
-                    + " command. As such, the actionUrl property is required, and control of the"
-                    + " Call picks up using the `PerCL` returned in response of the `actionUrl`."
-                    + " Recording and Transcription information is returned in the actionUrl"
-                    + " request. If the reason this command ended was due to the call hanging up,"
-                    + " any PerCL returned will not execute.")
+@ApiModel(description = "The `TranscribeUtterance` command transcribes the caller’s voice and returns transcription of the audio and optionally returns the recording of the audio transcribed.  `TranscribeUtterance` is blocking and is a terminal command. As such, the actionUrl property is required, and control of the Call picks up using the `PerCL` returned in response of the `actionUrl`. Recording and Transcription information is returned in the actionUrl request. If the reason this command ended was due to the call hanging up, any PerCL returned will not execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TranscribeUtterance extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
+  private URI actionUrl;
+
+  
+  public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
+  private Boolean playBeep = false;
+
+  
+  public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
+  @SerializedName(SERIALIZED_NAME_RECORD)
+  
+  private TranscribeUtteranceRecord record;
+
+  
+  public static final String SERIALIZED_NAME_PRIVACY_FOR_LOGGING = "privacyForLogging";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_LOGGING)
+  
+  private Boolean privacyForLogging = false;
+
+  
+  public static final String SERIALIZED_NAME_PRIVACY_FOR_RECORDING = "privacyForRecording";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_RECORDING)
+  
+  private Boolean privacyForRecording = false;
+
+  
+  public static final String SERIALIZED_NAME_PROMPTS = "prompts";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PROMPTS)
+  
+  private List<PerclCommand> prompts = null;
+
+
+  public TranscribeUtterance() { 
+    this.command = this.getClass().getSimpleName();
+  }
+
+  public TranscribeUtterance actionUrl(URI actionUrl) {
+    
+    this.actionUrl = actionUrl;
+    return this;
+  }
+
+   /**
+   * Get actionUrl
+   * @return actionUrl
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public URI getActionUrl() {
+    return actionUrl;
+  }
+
+
+  public void setActionUrl(URI actionUrl) {
+    this.actionUrl = actionUrl;
+  }
+
+
+  public TranscribeUtterance playBeep(Boolean playBeep) {
+    
+    this.playBeep = playBeep;
+    return this;
+  }
+
+   /**
+   * Get playBeep
+   * @return playBeep
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getPlayBeep() {
+    return playBeep;
+  }
+
+
+  public void setPlayBeep(Boolean playBeep) {
+    this.playBeep = playBeep;
+  }
+
+
+  public TranscribeUtterance record(TranscribeUtteranceRecord record) {
+    
+    this.record = record;
+    return this;
+  }
+
+   /**
+   * Get record
+   * @return record
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public TranscribeUtteranceRecord getRecord() {
+    return record;
+  }
+
+
+  public void setRecord(TranscribeUtteranceRecord record) {
+    this.record = record;
+  }
+
+
+  public TranscribeUtterance privacyForLogging(Boolean privacyForLogging) {
+    
+    this.privacyForLogging = privacyForLogging;
+    return this;
+  }
+
+   /**
+   * Get privacyForLogging
+   * @return privacyForLogging
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getPrivacyForLogging() {
+    return privacyForLogging;
+  }
+
+
+  public void setPrivacyForLogging(Boolean privacyForLogging) {
+    this.privacyForLogging = privacyForLogging;
+  }
+
+
+  public TranscribeUtterance privacyForRecording(Boolean privacyForRecording) {
+    
+    this.privacyForRecording = privacyForRecording;
+    return this;
+  }
+
+   /**
+   * Get privacyForRecording
+   * @return privacyForRecording
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getPrivacyForRecording() {
+    return privacyForRecording;
+  }
+
+
+  public void setPrivacyForRecording(Boolean privacyForRecording) {
+    this.privacyForRecording = privacyForRecording;
+  }
+
+
+  public TranscribeUtterance prompts(List<PerclCommand> prompts) {
+    
+    this.prompts = prompts;
+    return this;
+  }
+  public TranscribeUtterance addPromptsItem(PerclCommand promptsItem) {
+    if (this.prompts == null) {
+      this.prompts = new ArrayList<PerclCommand>();
     }
+    this.prompts.add(promptsItem);
+    return this;
+  }
 
-    public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+   /**
+   * Get prompts
+   * @return prompts
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-    @SerializedName(SERIALIZED_NAME_ACTION_URL)
-    private URI actionUrl;
+  public List<PerclCommand> getPrompts() {
+    return prompts;
+  }
 
-    public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
 
-    @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-    private Boolean playBeep = false;
+  public void setPrompts(List<PerclCommand> prompts) {
+    this.prompts = prompts;
+  }
 
-    public static final String SERIALIZED_NAME_RECORD = "record";
 
-    @SerializedName(SERIALIZED_NAME_RECORD)
-    private TranscribeUtteranceRecord record;
-
-    public static final String SERIALIZED_NAME_PRIVACY_FOR_LOGGING = "privacyForLogging";
-
-    @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_LOGGING)
-    private Boolean privacyForLogging = false;
-
-    public static final String SERIALIZED_NAME_PRIVACY_FOR_RECORDING = "privacyForRecording";
-
-    @SerializedName(SERIALIZED_NAME_PRIVACY_FOR_RECORDING)
-    private Boolean privacyForRecording = false;
-
-    public static final String SERIALIZED_NAME_PROMPTS = "prompts";
-
-    @SerializedName(SERIALIZED_NAME_PROMPTS)
-    private List<PerclCommand> prompts = null;
-
-    public TranscribeUtterance() {
-        this.command = this.getClass().getSimpleName();
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public TranscribeUtterance actionUrl(URI actionUrl) {
-
-        this.actionUrl = actionUrl;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    TranscribeUtterance transcribeUtterance = (TranscribeUtterance) o;
+    return Objects.equals(this.actionUrl, transcribeUtterance.actionUrl) &&
+        Objects.equals(this.playBeep, transcribeUtterance.playBeep) &&
+        Objects.equals(this.record, transcribeUtterance.record) &&
+        Objects.equals(this.privacyForLogging, transcribeUtterance.privacyForLogging) &&
+        Objects.equals(this.privacyForRecording, transcribeUtterance.privacyForRecording) &&
+        Objects.equals(this.prompts, transcribeUtterance.prompts) &&
+        super.equals(o);
+  }
 
-    /**
-     * Get actionUrl
-     *
-     * @return actionUrl
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public URI getActionUrl() {
-        return actionUrl;
+  @Override
+  public int hashCode() {
+    return Objects.hash(actionUrl, playBeep, record, privacyForLogging, privacyForRecording, prompts, super.hashCode());
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TranscribeUtterance {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
+    sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
+    sb.append("    record: ").append(toIndentedString(record)).append("\n");
+    sb.append("    privacyForLogging: ").append(toIndentedString(privacyForLogging)).append("\n");
+    sb.append("    privacyForRecording: ").append(toIndentedString(privacyForRecording)).append("\n");
+    sb.append("    prompts: ").append(toIndentedString(prompts)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    attributes.put("actionUrl", () -> this.getActionUrl());
+    attributes.put("playBeep", () -> this.getPlayBeep());
+    attributes.put("record", () -> this.getRecord());
+    attributes.put("privacyForLogging", () -> this.getPrivacyForLogging());
+    attributes.put("privacyForRecording", () -> this.getPrivacyForRecording());
+    attributes.put("prompts", () -> this.getPrompts());
+    return attributes;
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public void setActionUrl(URI actionUrl) {
-        this.actionUrl = actionUrl;
-    }
-
-    public TranscribeUtterance playBeep(Boolean playBeep) {
-
-        this.playBeep = playBeep;
-        return this;
-    }
-
-    /**
-     * Get playBeep
-     *
-     * @return playBeep
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public Boolean getPlayBeep() {
-        return playBeep;
-    }
-
-    public void setPlayBeep(Boolean playBeep) {
-        this.playBeep = playBeep;
-    }
-
-    public TranscribeUtterance record(TranscribeUtteranceRecord record) {
-
-        this.record = record;
-        return this;
-    }
-
-    /**
-     * Get record
-     *
-     * @return record
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public TranscribeUtteranceRecord getRecord() {
-        return record;
-    }
-
-    public void setRecord(TranscribeUtteranceRecord record) {
-        this.record = record;
-    }
-
-    public TranscribeUtterance privacyForLogging(Boolean privacyForLogging) {
-
-        this.privacyForLogging = privacyForLogging;
-        return this;
-    }
-
-    /**
-     * Get privacyForLogging
-     *
-     * @return privacyForLogging
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public Boolean getPrivacyForLogging() {
-        return privacyForLogging;
-    }
-
-    public void setPrivacyForLogging(Boolean privacyForLogging) {
-        this.privacyForLogging = privacyForLogging;
-    }
-
-    public TranscribeUtterance privacyForRecording(Boolean privacyForRecording) {
-
-        this.privacyForRecording = privacyForRecording;
-        return this;
-    }
-
-    /**
-     * Get privacyForRecording
-     *
-     * @return privacyForRecording
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public Boolean getPrivacyForRecording() {
-        return privacyForRecording;
-    }
-
-    public void setPrivacyForRecording(Boolean privacyForRecording) {
-        this.privacyForRecording = privacyForRecording;
-    }
-
-    public TranscribeUtterance prompts(List<PerclCommand> prompts) {
-
-        this.prompts = prompts;
-        return this;
-    }
-
-    public TranscribeUtterance addPromptsItem(PerclCommand promptsItem) {
-        if (this.prompts == null) {
-            this.prompts = new ArrayList<PerclCommand>();
-        }
-        this.prompts.add(promptsItem);
-        return this;
-    }
-
-    /**
-     * Get prompts
-     *
-     * @return prompts
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public List<PerclCommand> getPrompts() {
-        return prompts;
-    }
-
-    public void setPrompts(List<PerclCommand> prompts) {
-        this.prompts = prompts;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        TranscribeUtterance transcribeUtterance = (TranscribeUtterance) o;
-        return Objects.equals(this.actionUrl, transcribeUtterance.actionUrl)
-                && Objects.equals(this.playBeep, transcribeUtterance.playBeep)
-                && Objects.equals(this.record, transcribeUtterance.record)
-                && Objects.equals(this.privacyForLogging, transcribeUtterance.privacyForLogging)
-                && Objects.equals(this.privacyForRecording, transcribeUtterance.privacyForRecording)
-                && Objects.equals(this.prompts, transcribeUtterance.prompts)
-                && super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                actionUrl,
-                playBeep,
-                record,
-                privacyForLogging,
-                privacyForRecording,
-                prompts,
-                super.hashCode());
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class TranscribeUtterance {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
-        sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
-        sb.append("    record: ").append(toIndentedString(record)).append("\n");
-        sb.append("    privacyForLogging: ")
-                .append(toIndentedString(privacyForLogging))
-                .append("\n");
-        sb.append("    privacyForRecording: ")
-                .append(toIndentedString(privacyForRecording))
-                .append("\n");
-        sb.append("    prompts: ").append(toIndentedString(prompts)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("actionUrl", () -> this.getActionUrl());
-        attributes.put("playBeep", () -> this.getPlayBeep());
-        attributes.put("record", () -> this.getRecord());
-        attributes.put("privacyForLogging", () -> this.getPrivacyForLogging());
-        attributes.put("privacyForRecording", () -> this.getPrivacyForRecording());
-        attributes.put("prompts", () -> this.getPrompts());
-        return attributes;
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

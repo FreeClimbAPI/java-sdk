@@ -12,76 +12,87 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import io.swagger.annotations.ApiModel;
-import java.util.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;StartRecordCall&#x60; command records the current call and returns the URL of a file
- * containing the audio recording when recording completes. &#x60;StartRecordCall&#x60; is
- * non-blocking. After recording of the current call begins, control of the call moves to the PerCL
- * command that follows &#x60;StartRecordCall&#x60; in the current PerCL script.
+ * The &#x60;StartRecordCall&#x60; command records the current call and returns the URL of a file containing the audio recording when recording completes. &#x60;StartRecordCall&#x60; is non-blocking. After recording of the current call begins, control of the call moves to the PerCL command that follows &#x60;StartRecordCall&#x60; in the current PerCL script.
  */
-@ApiModel(
-        description =
-                "The `StartRecordCall` command records the current call and returns the URL of a"
-                        + " file containing the audio recording when recording completes."
-                        + " `StartRecordCall` is non-blocking. After recording of the current call"
-                        + " begins, control of the call moves to the PerCL command that follows"
-                        + " `StartRecordCall` in the current PerCL script.")
+@ApiModel(description = "The `StartRecordCall` command records the current call and returns the URL of a file containing the audio recording when recording completes. `StartRecordCall` is non-blocking. After recording of the current call begins, control of the call moves to the PerCL command that follows `StartRecordCall` in the current PerCL script.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StartRecordCall extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
-    }
+  public static String getDiscriminatorValue() {
+    return null;
+  }
 
-    public StartRecordCall() {
-        this.command = this.getClass().getSimpleName();
-    }
+  public StartRecordCall() { 
+    this.command = this.getClass().getSimpleName();
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        return super.equals(o);
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    return super.equals(o);
+  }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode());
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(super.hashCode());
+  }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class StartRecordCall {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class StartRecordCall {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        return attributes;
-    }
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    return attributes;
+  }
 
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }

@@ -12,55 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** Gets or Sets MessageDirection */
+/**
+ * Gets or Sets MessageDirection
+ */
 @JsonAdapter(MessageDirection.Adapter.class)
 public enum MessageDirection {
-    INBOUND("inbound"),
+  
+  INBOUND("inbound"),
+  
+  OUTBOUND("outbound");
 
-    OUTBOUND("outbound");
+  private String value;
 
-    private String value;
+  MessageDirection(String value) {
+    this.value = value;
+  }
 
-    MessageDirection(String value) {
-        this.value = value;
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static MessageDirection fromValue(String value) {
+    for (MessageDirection b : MessageDirection.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<MessageDirection> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final MessageDirection enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public MessageDirection read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return MessageDirection.fromValue(value);
     }
-
-    public static MessageDirection fromValue(String value) {
-        for (MessageDirection b : MessageDirection.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<MessageDirection> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final MessageDirection enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public MessageDirection read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return MessageDirection.fromValue(value);
-        }
-    }
+  }
 }
+

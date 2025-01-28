@@ -12,106 +12,119 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** (Required for public company) stock exchange. */
+/**
+ * (Required for public company) stock exchange.
+ */
 @JsonAdapter(SMSTenDLCBrandStockExchange.Adapter.class)
 public enum SMSTenDLCBrandStockExchange {
-    NONE("NONE"),
+  
+  NONE("NONE"),
+  
+  NASDAQ("NASDAQ"),
+  
+  NYSE("NYSE"),
+  
+  AMEX("AMEX"),
+  
+  AMX("AMX"),
+  
+  ASX("ASX"),
+  
+  B3("B3"),
+  
+  BME("BME"),
+  
+  BSE("BSE"),
+  
+  FRA("FRA"),
+  
+  ICEX("ICEX"),
+  
+  JPX("JPX"),
+  
+  JSE("JSE"),
+  
+  KRX("KRX"),
+  
+  LON("LON"),
+  
+  NSE("NSE"),
+  
+  OMX("OMX"),
+  
+  SEHK("SEHK"),
+  
+  SGX("SGX"),
+  
+  SSE("SSE"),
+  
+  STO("STO"),
+  
+  SWX("SWX"),
+  
+  SZSE("SZSE"),
+  
+  TSX("TSX"),
+  
+  TWSE("TWSE"),
+  
+  VSE("VSE"),
+  
+  OTHER("OTHER");
 
-    NASDAQ("NASDAQ"),
+  private String value;
 
-    NYSE("NYSE"),
+  SMSTenDLCBrandStockExchange(String value) {
+    this.value = value;
+  }
 
-    AMEX("AMEX"),
+  public String getValue() {
+    return value;
+  }
 
-    AMX("AMX"),
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
 
-    ASX("ASX"),
-
-    B3("B3"),
-
-    BME("BME"),
-
-    BSE("BSE"),
-
-    FRA("FRA"),
-
-    ICEX("ICEX"),
-
-    JPX("JPX"),
-
-    JSE("JSE"),
-
-    KRX("KRX"),
-
-    LON("LON"),
-
-    NSE("NSE"),
-
-    OMX("OMX"),
-
-    SEHK("SEHK"),
-
-    SGX("SGX"),
-
-    SSE("SSE"),
-
-    STO("STO"),
-
-    SWX("SWX"),
-
-    SZSE("SZSE"),
-
-    TSX("TSX"),
-
-    TWSE("TWSE"),
-
-    VSE("VSE"),
-
-    OTHER("OTHER");
-
-    private String value;
-
-    SMSTenDLCBrandStockExchange(String value) {
-        this.value = value;
+  public static SMSTenDLCBrandStockExchange fromValue(String value) {
+    for (SMSTenDLCBrandStockExchange b : SMSTenDLCBrandStockExchange.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<SMSTenDLCBrandStockExchange> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandStockExchange enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public SMSTenDLCBrandStockExchange read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return SMSTenDLCBrandStockExchange.fromValue(value);
     }
-
-    public static SMSTenDLCBrandStockExchange fromValue(String value) {
-        for (SMSTenDLCBrandStockExchange b : SMSTenDLCBrandStockExchange.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<SMSTenDLCBrandStockExchange> {
-        @Override
-        public void write(
-                final JsonWriter jsonWriter, final SMSTenDLCBrandStockExchange enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public SMSTenDLCBrandStockExchange read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return SMSTenDLCBrandStockExchange.fromValue(value);
-        }
-    }
+  }
 }
+

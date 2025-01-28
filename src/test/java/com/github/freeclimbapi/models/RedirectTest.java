@@ -10,210 +10,254 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.net.URI;
-import java.util.*;
-import java.util.Map;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for Redirect */
-public class RedirectTest {
-
-    private final Redirect model = new Redirect();
-
-    /** Test the property 'actionUrl' */
+/**
+ * Model tests for Redirect
+ */
+ public class RedirectTest {
+    
+    private final Redirect model = new Redirect(
+    );
+    
+    
+    /**
+     * Test the property 'actionUrl'
+     */
     @Test
     public void actionUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setActionUrl(uri);
-            Assert.assertEquals(uri, model.getActionUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setActionUrl(uri);
+        Assert.assertEquals(uri, model.getActionUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Redirect test2 = new Redirect();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      Redirect test2 = new Redirect();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
+          e.printStackTrace();
+        };
 
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Redirect test2 = new Redirect();
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      Redirect test2 = new Redirect();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
+          e.printStackTrace();
+        };
 
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+          e.printStackTrace();
+        };
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Redirect test2 = new Redirect();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      Redirect test2 = new Redirect();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+          e.printStackTrace();
+        };
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Redirect test2 = new Redirect();
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      Redirect test2 = new Redirect();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Redirect test2 = new Redirect();
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setActionUrl(uri2);
+          e.printStackTrace();
+        };
+      Redirect test2 = new Redirect();
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setActionUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        Redirect test1 = new Redirect();
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setActionUrl(uri1);
+      Redirect test1 = new Redirect();
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setActionUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
+          e.printStackTrace();
+        };
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void commandTest() throws Exception {
-        Assert.assertEquals("Redirect", model.getCommand());
+      Assert.assertEquals("Redirect", model.getCommand());
     }
 
     @Test
     public void buildTest() throws Exception {
-
+        
+        
         try {
-            URI uri = new URI("TEST_STRING");
-            model.setActionUrl(uri);
-            Assert.assertEquals(uri, model.getActionUrl());
+          URI uri = new URI("TEST_STRING");
+          model.setActionUrl(uri);
+          Assert.assertEquals(uri, model.getActionUrl());
         } catch (Exception e) {
-            e.printStackTrace();
+          e.printStackTrace();
         }
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
+        
     }
-}
+    
+ }

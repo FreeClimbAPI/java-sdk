@@ -12,61 +12,71 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 /**
- * Direction of the Call. &#x60;inbound&#x60; for Calls into FreeClimb, &#x60;outboundAPI&#x60; for
- * Calls initiated via the REST API, &#x60;outboundDial&#x60; for Calls initiated by the
- * &#x60;OutDial&#x60; PerCL command.
+ * Direction of the Call. &#x60;inbound&#x60; for Calls into FreeClimb, &#x60;outboundAPI&#x60; for Calls initiated via the REST API,  &#x60;outboundDial&#x60; for Calls initiated by the &#x60;OutDial&#x60; PerCL command.
  */
 @JsonAdapter(CallDirection.Adapter.class)
 public enum CallDirection {
-    INBOUND("inbound"),
+  
+  INBOUND("inbound"),
+  
+  OUTBOUND_API("outboundAPI"),
+  
+  OUTBOUND_DIAL("outboundDial");
 
-    OUTBOUND_API("outboundAPI"),
+  private String value;
 
-    OUTBOUND_DIAL("outboundDial");
+  CallDirection(String value) {
+    this.value = value;
+  }
 
-    private String value;
+  public String getValue() {
+    return value;
+  }
 
-    CallDirection(String value) {
-        this.value = value;
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static CallDirection fromValue(String value) {
+    for (CallDirection b : CallDirection.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    return null;
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<CallDirection> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final CallDirection enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public CallDirection read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return CallDirection.fromValue(value);
     }
-
-    public static CallDirection fromValue(String value) {
-        for (CallDirection b : CallDirection.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        return null;
-    }
-
-    public static class Adapter extends TypeAdapter<CallDirection> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final CallDirection enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public CallDirection read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return CallDirection.fromValue(value);
-        }
-    }
+  }
 }
+

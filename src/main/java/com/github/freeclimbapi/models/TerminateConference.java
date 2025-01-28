@@ -12,76 +12,87 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import io.swagger.annotations.ApiModel;
-import java.util.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;TerminateConference&#x60; command terminates an existing Conference. Any active
- * participants are hung up on by FreeClimb. If this is not the desired behavior, use the
- * &#x60;RemoveFromConference&#x60; command to unbridge Calls that should not be hung up. Note: The
- * Call requesting TerminateConference must be on the same Conference for this command to execute.
+ * The &#x60;TerminateConference&#x60; command terminates an existing Conference. Any active participants are hung up on by FreeClimb. If this is not the desired behavior, use the &#x60;RemoveFromConference&#x60; command to unbridge Calls that should not be hung up. Note: The Call requesting TerminateConference must be on the same Conference for this command to execute.
  */
-@ApiModel(
-        description =
-                "The `TerminateConference` command terminates an existing Conference. Any active"
-                    + " participants are hung up on by FreeClimb. If this is not the desired"
-                    + " behavior, use the `RemoveFromConference` command to unbridge Calls that"
-                    + " should not be hung up. Note: The Call requesting TerminateConference must"
-                    + " be on the same Conference for this command to execute.")
+@ApiModel(description = "The `TerminateConference` command terminates an existing Conference. Any active participants are hung up on by FreeClimb. If this is not the desired behavior, use the `RemoveFromConference` command to unbridge Calls that should not be hung up. Note: The Call requesting TerminateConference must be on the same Conference for this command to execute.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TerminateConference extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
-    }
+  public static String getDiscriminatorValue() {
+    return null;
+  }
 
-    public TerminateConference() {
-        this.command = this.getClass().getSimpleName();
-    }
+  public TerminateConference() { 
+    this.command = this.getClass().getSimpleName();
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        return super.equals(o);
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    return super.equals(o);
+  }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode());
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(super.hashCode());
+  }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class TerminateConference {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TerminateConference {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        return attributes;
-    }
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    return attributes;
+  }
 
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }

@@ -10,134 +10,145 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for SMSTenDLCBrandRelationship */
-public class SMSTenDLCBrandRelationshipTest {
-
+/**
+ * Model tests for SMSTenDLCBrandRelationship
+ */
+ public class SMSTenDLCBrandRelationshipTest {
+    
+    
+    
     @Test
     public void testBASIC_ACCOUNTShouldWork() {
 
         SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.BASIC_ACCOUNT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
     }
 
-    @Test
+    @Test 
     public void testBASIC_ACCOUNTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandRelationship expectedValue = SMSTenDLCBrandRelationship.BASIC_ACCOUNT;
-        SMSTenDLCBrandRelationship calculatedValue =
-                SMSTenDLCBrandRelationship.fromValue("BASIC_ACCOUNT");
+        SMSTenDLCBrandRelationship calculatedValue = SMSTenDLCBrandRelationship.fromValue("BASIC_ACCOUNT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testBASIC_ACCOUNTShouldDeserializeToString() {
-        SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.BASIC_ACCOUNT;
-        String expectedValue = "BASIC_ACCOUNT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.BASIC_ACCOUNT;
+      String expectedValue = "BASIC_ACCOUNT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testSMALL_ACCOUNTShouldWork() {
 
         SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.SMALL_ACCOUNT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
     }
 
-    @Test
+    @Test 
     public void testSMALL_ACCOUNTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandRelationship expectedValue = SMSTenDLCBrandRelationship.SMALL_ACCOUNT;
-        SMSTenDLCBrandRelationship calculatedValue =
-                SMSTenDLCBrandRelationship.fromValue("SMALL_ACCOUNT");
+        SMSTenDLCBrandRelationship calculatedValue = SMSTenDLCBrandRelationship.fromValue("SMALL_ACCOUNT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testSMALL_ACCOUNTShouldDeserializeToString() {
-        SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.SMALL_ACCOUNT;
-        String expectedValue = "SMALL_ACCOUNT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.SMALL_ACCOUNT;
+      String expectedValue = "SMALL_ACCOUNT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testMEDIUM_ACCOUNTShouldWork() {
 
         SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
     }
 
-    @Test
+    @Test 
     public void testMEDIUM_ACCOUNTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandRelationship expectedValue = SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT;
-        SMSTenDLCBrandRelationship calculatedValue =
-                SMSTenDLCBrandRelationship.fromValue("MEDIUM_ACCOUNT");
+        SMSTenDLCBrandRelationship calculatedValue = SMSTenDLCBrandRelationship.fromValue("MEDIUM_ACCOUNT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testMEDIUM_ACCOUNTShouldDeserializeToString() {
-        SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT;
-        String expectedValue = "MEDIUM_ACCOUNT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.MEDIUM_ACCOUNT;
+      String expectedValue = "MEDIUM_ACCOUNT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testLARGE_ACCOUNTShouldWork() {
 
         SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.LARGE_ACCOUNT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
     }
 
-    @Test
+    @Test 
     public void testLARGE_ACCOUNTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandRelationship expectedValue = SMSTenDLCBrandRelationship.LARGE_ACCOUNT;
-        SMSTenDLCBrandRelationship calculatedValue =
-                SMSTenDLCBrandRelationship.fromValue("LARGE_ACCOUNT");
+        SMSTenDLCBrandRelationship calculatedValue = SMSTenDLCBrandRelationship.fromValue("LARGE_ACCOUNT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testLARGE_ACCOUNTShouldDeserializeToString() {
-        SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.LARGE_ACCOUNT;
-        String expectedValue = "LARGE_ACCOUNT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.LARGE_ACCOUNT;
+      String expectedValue = "LARGE_ACCOUNT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testKEY_ACCOUNTShouldWork() {
 
         SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.KEY_ACCOUNT;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandRelationship.class);
     }
 
-    @Test
+    @Test 
     public void testKEY_ACCOUNTShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandRelationship expectedValue = SMSTenDLCBrandRelationship.KEY_ACCOUNT;
-        SMSTenDLCBrandRelationship calculatedValue =
-                SMSTenDLCBrandRelationship.fromValue("KEY_ACCOUNT");
+        SMSTenDLCBrandRelationship calculatedValue = SMSTenDLCBrandRelationship.fromValue("KEY_ACCOUNT");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testKEY_ACCOUNTShouldDeserializeToString() {
-        SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.KEY_ACCOUNT;
-        String expectedValue = "KEY_ACCOUNT";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandRelationship test = SMSTenDLCBrandRelationship.KEY_ACCOUNT;
+      String expectedValue = "KEY_ACCOUNT";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

@@ -10,27 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for TranscribeTermReason */
-public class TranscribeTermReasonTest {
-
+/**
+ * Model tests for TranscribeTermReason
+ */
+ public class TranscribeTermReasonTest {
+    
+    
+    
     @Test
     public void testERRORShouldWork() {
 
         TranscribeTermReason test = TranscribeTermReason.ERROR;
-        Assert.assertEquals(test.getClass(), TranscribeTermReason.class);
+         Assert.assertEquals(test.getClass(), TranscribeTermReason.class);
     }
 
-    @Test
+    @Test 
     public void testERRORShouldSerializeToEnum() {
-
+    
         TranscribeTermReason expectedValue = TranscribeTermReason.ERROR;
         TranscribeTermReason calculatedValue = TranscribeTermReason.fromValue("error");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -38,22 +56,21 @@ public class TranscribeTermReasonTest {
 
     @Test
     public void testERRORShouldDeserializeToString() {
-        TranscribeTermReason test = TranscribeTermReason.ERROR;
-        String expectedValue = "error";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     TranscribeTermReason test = TranscribeTermReason.ERROR;
+      String expectedValue = "error";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testCOMPLETEDShouldWork() {
 
         TranscribeTermReason test = TranscribeTermReason.COMPLETED;
-        Assert.assertEquals(test.getClass(), TranscribeTermReason.class);
+         Assert.assertEquals(test.getClass(), TranscribeTermReason.class);
     }
 
-    @Test
+    @Test 
     public void testCOMPLETEDShouldSerializeToEnum() {
-
+    
         TranscribeTermReason expectedValue = TranscribeTermReason.COMPLETED;
         TranscribeTermReason calculatedValue = TranscribeTermReason.fromValue("completed");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -61,9 +78,11 @@ public class TranscribeTermReasonTest {
 
     @Test
     public void testCOMPLETEDShouldDeserializeToString() {
-        TranscribeTermReason test = TranscribeTermReason.COMPLETED;
-        String expectedValue = "completed";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     TranscribeTermReason test = TranscribeTermReason.COMPLETED;
+      String expectedValue = "completed";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

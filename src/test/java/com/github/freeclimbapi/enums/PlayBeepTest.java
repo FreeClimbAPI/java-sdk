@@ -10,27 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for PlayBeep */
-public class PlayBeepTest {
-
+/**
+ * Model tests for PlayBeep
+ */
+ public class PlayBeepTest {
+    
+    
+    
     @Test
     public void testALWAYSShouldWork() {
 
         PlayBeep test = PlayBeep.ALWAYS;
-        Assert.assertEquals(test.getClass(), PlayBeep.class);
+         Assert.assertEquals(test.getClass(), PlayBeep.class);
     }
 
-    @Test
+    @Test 
     public void testALWAYSShouldSerializeToEnum() {
-
+    
         PlayBeep expectedValue = PlayBeep.ALWAYS;
         PlayBeep calculatedValue = PlayBeep.fromValue("always");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -38,22 +56,21 @@ public class PlayBeepTest {
 
     @Test
     public void testALWAYSShouldDeserializeToString() {
-        PlayBeep test = PlayBeep.ALWAYS;
-        String expectedValue = "always";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     PlayBeep test = PlayBeep.ALWAYS;
+      String expectedValue = "always";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testNEVERShouldWork() {
 
         PlayBeep test = PlayBeep.NEVER;
-        Assert.assertEquals(test.getClass(), PlayBeep.class);
+         Assert.assertEquals(test.getClass(), PlayBeep.class);
     }
 
-    @Test
+    @Test 
     public void testNEVERShouldSerializeToEnum() {
-
+    
         PlayBeep expectedValue = PlayBeep.NEVER;
         PlayBeep calculatedValue = PlayBeep.fromValue("never");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -61,22 +78,21 @@ public class PlayBeepTest {
 
     @Test
     public void testNEVERShouldDeserializeToString() {
-        PlayBeep test = PlayBeep.NEVER;
-        String expectedValue = "never";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     PlayBeep test = PlayBeep.NEVER;
+      String expectedValue = "never";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testENTRY_ONLYShouldWork() {
 
         PlayBeep test = PlayBeep.ENTRY_ONLY;
-        Assert.assertEquals(test.getClass(), PlayBeep.class);
+         Assert.assertEquals(test.getClass(), PlayBeep.class);
     }
 
-    @Test
+    @Test 
     public void testENTRY_ONLYShouldSerializeToEnum() {
-
+    
         PlayBeep expectedValue = PlayBeep.ENTRY_ONLY;
         PlayBeep calculatedValue = PlayBeep.fromValue("entryOnly");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -84,22 +100,21 @@ public class PlayBeepTest {
 
     @Test
     public void testENTRY_ONLYShouldDeserializeToString() {
-        PlayBeep test = PlayBeep.ENTRY_ONLY;
-        String expectedValue = "entryOnly";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     PlayBeep test = PlayBeep.ENTRY_ONLY;
+      String expectedValue = "entryOnly";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testEXIT_ONLYShouldWork() {
 
         PlayBeep test = PlayBeep.EXIT_ONLY;
-        Assert.assertEquals(test.getClass(), PlayBeep.class);
+         Assert.assertEquals(test.getClass(), PlayBeep.class);
     }
 
-    @Test
+    @Test 
     public void testEXIT_ONLYShouldSerializeToEnum() {
-
+    
         PlayBeep expectedValue = PlayBeep.EXIT_ONLY;
         PlayBeep calculatedValue = PlayBeep.fromValue("exitOnly");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -107,9 +122,11 @@ public class PlayBeepTest {
 
     @Test
     public void testEXIT_ONLYShouldDeserializeToString() {
-        PlayBeep test = PlayBeep.EXIT_ONLY;
-        String expectedValue = "exitOnly";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     PlayBeep test = PlayBeep.EXIT_ONLY;
+      String expectedValue = "exitOnly";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

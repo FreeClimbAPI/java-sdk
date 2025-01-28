@@ -12,220 +12,224 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.net.URI;
-import java.util.*;
-import java.util.HashMap;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 /**
- * The &#x60;Enqueue&#x60; command adds the current Call to a call Queue. If the specified Queue
- * does not exist, it is created and then the Call is added to it. The default maximum length of the
- * queue is 100. This can be modified using the REST API.
+ * The &#x60;Enqueue&#x60; command adds the current Call to a call Queue. If the specified Queue does not exist, it is created and then the Call is added to it. The default maximum length of the queue is 100. This can be modified using the REST API.
  */
-@ApiModel(
-        description =
-                "The `Enqueue` command adds the current Call to a call Queue. If the specified"
-                    + " Queue does not exist, it is created and then the Call is added to it. The"
-                    + " default maximum length of the queue is 100. This can be modified using the"
-                    + " REST API.")
+@ApiModel(description = "The `Enqueue` command adds the current Call to a call Queue. If the specified Queue does not exist, it is created and then the Call is added to it. The default maximum length of the queue is 100. This can be modified using the REST API.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Enqueue extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
+  private URI actionUrl;
+
+  
+  public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
+  
+  private URI notificationUrl;
+
+  
+  public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
+  private String queueId;
+
+  
+  public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_WAIT_URL)
+  
+  private URI waitUrl;
+
+
+  public Enqueue() { 
+    this.command = this.getClass().getSimpleName();
+  }
+
+  public Enqueue actionUrl(URI actionUrl) {
+    
+    this.actionUrl = actionUrl;
+    return this;
+  }
+
+   /**
+   * A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the &#x60;Dequeue&#x60; command, the REST API (POST to Queue Member resource), or the caller hangs up.
+   * @return actionUrl
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the `Dequeue` command, the REST API (POST to Queue Member resource), or the caller hangs up.")
+
+  public URI getActionUrl() {
+    return actionUrl;
+  }
+
+
+  public void setActionUrl(URI actionUrl) {
+    this.actionUrl = actionUrl;
+  }
+
+
+  public Enqueue notificationUrl(URI notificationUrl) {
+    
+    this.notificationUrl = notificationUrl;
+    return this;
+  }
+
+   /**
+   * URL to be invoked when the call enters the queue. The request to the URL contains the standard request parameters.This is a notification only; any PerCL returned will be ignored.
+   * @return notificationUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "URL to be invoked when the call enters the queue. The request to the URL contains the standard request parameters.This is a notification only; any PerCL returned will be ignored.")
+
+  public URI getNotificationUrl() {
+    return notificationUrl;
+  }
+
+
+  public void setNotificationUrl(URI notificationUrl) {
+    this.notificationUrl = notificationUrl;
+  }
+
+
+  public Enqueue queueId(String queueId) {
+    
+    this.queueId = queueId;
+    return this;
+  }
+
+   /**
+   * ID of the Queue to which to add the Call. If the Queue does not exist, it will be created. The ID must start with QU followed by 40 hex characters.
+   * @return queueId
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "ID of the Queue to which to add the Call. If the Queue does not exist, it will be created. The ID must start with QU followed by 40 hex characters.")
+
+  public String getQueueId() {
+    return queueId;
+  }
+
+
+  public void setQueueId(String queueId) {
+    this.queueId = queueId;
+  }
+
+
+  public Enqueue waitUrl(URI waitUrl) {
+    
+    this.waitUrl = waitUrl;
+    return this;
+  }
+
+   /**
+   * A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the &#x60;Dequeue&#x60; command, the REST API (POST to Queue Member resource), or the caller hangs up.
+   * @return waitUrl
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the `Dequeue` command, the REST API (POST to Queue Member resource), or the caller hangs up.")
+
+  public URI getWaitUrl() {
+    return waitUrl;
+  }
+
+
+  public void setWaitUrl(URI waitUrl) {
+    this.waitUrl = waitUrl;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
-
-    @SerializedName(SERIALIZED_NAME_ACTION_URL)
-    private URI actionUrl;
-
-    public static final String SERIALIZED_NAME_NOTIFICATION_URL = "notificationUrl";
-
-    @SerializedName(SERIALIZED_NAME_NOTIFICATION_URL)
-    private URI notificationUrl;
-
-    public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
-
-    @SerializedName(SERIALIZED_NAME_QUEUE_ID)
-    private String queueId;
-
-    public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
-
-    @SerializedName(SERIALIZED_NAME_WAIT_URL)
-    private URI waitUrl;
-
-    public Enqueue() {
-        this.command = this.getClass().getSimpleName();
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    Enqueue enqueue = (Enqueue) o;
+    return Objects.equals(this.actionUrl, enqueue.actionUrl) &&
+        Objects.equals(this.notificationUrl, enqueue.notificationUrl) &&
+        Objects.equals(this.queueId, enqueue.queueId) &&
+        Objects.equals(this.waitUrl, enqueue.waitUrl) &&
+        super.equals(o);
+  }
 
-    public Enqueue actionUrl(URI actionUrl) {
+  @Override
+  public int hashCode() {
+    return Objects.hash(actionUrl, notificationUrl, queueId, waitUrl, super.hashCode());
+  }
 
-        this.actionUrl = actionUrl;
-        return this;
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Enqueue {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
+    sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
+    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
+    sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    attributes.put("actionUrl", () -> this.getActionUrl());
+    attributes.put("notificationUrl", () -> this.getNotificationUrl());
+    attributes.put("queueId", () -> this.getQueueId());
+    attributes.put("waitUrl", () -> this.getWaitUrl());
+    return attributes;
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    /**
-     * A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of
-     * the Call fails or when the call is dequeued via the &#x60;Dequeue&#x60; command, the REST API
-     * (POST to Queue Member resource), or the caller hangs up.
-     *
-     * @return actionUrl
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "A request is made to this URL when the Call leaves the Queue, which can occur"
-                        + " if enqueue of the Call fails or when the call is dequeued via the"
-                        + " `Dequeue` command, the REST API (POST to Queue Member resource), or the"
-                        + " caller hangs up.")
-    public URI getActionUrl() {
-        return actionUrl;
-    }
-
-    public void setActionUrl(URI actionUrl) {
-        this.actionUrl = actionUrl;
-    }
-
-    public Enqueue notificationUrl(URI notificationUrl) {
-
-        this.notificationUrl = notificationUrl;
-        return this;
-    }
-
-    /**
-     * URL to be invoked when the call enters the queue. The request to the URL contains the
-     * standard request parameters.This is a notification only; any PerCL returned will be ignored.
-     *
-     * @return notificationUrl
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "URL to be invoked when the call enters the queue. The request to the URL"
-                        + " contains the standard request parameters.This is a notification only;"
-                        + " any PerCL returned will be ignored.")
-    public URI getNotificationUrl() {
-        return notificationUrl;
-    }
-
-    public void setNotificationUrl(URI notificationUrl) {
-        this.notificationUrl = notificationUrl;
-    }
-
-    public Enqueue queueId(String queueId) {
-
-        this.queueId = queueId;
-        return this;
-    }
-
-    /**
-     * ID of the Queue to which to add the Call. If the Queue does not exist, it will be created.
-     * The ID must start with QU followed by 40 hex characters.
-     *
-     * @return queueId
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "ID of the Queue to which to add the Call. If the Queue does not exist, it will"
-                        + " be created. The ID must start with QU followed by 40 hex characters.")
-    public String getQueueId() {
-        return queueId;
-    }
-
-    public void setQueueId(String queueId) {
-        this.queueId = queueId;
-    }
-
-    public Enqueue waitUrl(URI waitUrl) {
-
-        this.waitUrl = waitUrl;
-        return this;
-    }
-
-    /**
-     * A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of
-     * the Call fails or when the call is dequeued via the &#x60;Dequeue&#x60; command, the REST API
-     * (POST to Queue Member resource), or the caller hangs up.
-     *
-     * @return waitUrl
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value =
-                    "A request is made to this URL when the Call leaves the Queue, which can occur"
-                        + " if enqueue of the Call fails or when the call is dequeued via the"
-                        + " `Dequeue` command, the REST API (POST to Queue Member resource), or the"
-                        + " caller hangs up.")
-    public URI getWaitUrl() {
-        return waitUrl;
-    }
-
-    public void setWaitUrl(URI waitUrl) {
-        this.waitUrl = waitUrl;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Enqueue enqueue = (Enqueue) o;
-        return Objects.equals(this.actionUrl, enqueue.actionUrl)
-                && Objects.equals(this.notificationUrl, enqueue.notificationUrl)
-                && Objects.equals(this.queueId, enqueue.queueId)
-                && Objects.equals(this.waitUrl, enqueue.waitUrl)
-                && super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(actionUrl, notificationUrl, queueId, waitUrl, super.hashCode());
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class Enqueue {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
-        sb.append("    notificationUrl: ").append(toIndentedString(notificationUrl)).append("\n");
-        sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
-        sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("actionUrl", () -> this.getActionUrl());
-        attributes.put("notificationUrl", () -> this.getNotificationUrl());
-        attributes.put("queueId", () -> this.getQueueId());
-        attributes.put("waitUrl", () -> this.getWaitUrl());
-        return attributes;
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

@@ -10,27 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for MessageDirection */
-public class MessageDirectionTest {
-
+/**
+ * Model tests for MessageDirection
+ */
+ public class MessageDirectionTest {
+    
+    
+    
     @Test
     public void testINBOUNDShouldWork() {
 
         MessageDirection test = MessageDirection.INBOUND;
-        Assert.assertEquals(test.getClass(), MessageDirection.class);
+         Assert.assertEquals(test.getClass(), MessageDirection.class);
     }
 
-    @Test
+    @Test 
     public void testINBOUNDShouldSerializeToEnum() {
-
+    
         MessageDirection expectedValue = MessageDirection.INBOUND;
         MessageDirection calculatedValue = MessageDirection.fromValue("inbound");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -38,22 +56,21 @@ public class MessageDirectionTest {
 
     @Test
     public void testINBOUNDShouldDeserializeToString() {
-        MessageDirection test = MessageDirection.INBOUND;
-        String expectedValue = "inbound";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     MessageDirection test = MessageDirection.INBOUND;
+      String expectedValue = "inbound";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testOUTBOUNDShouldWork() {
 
         MessageDirection test = MessageDirection.OUTBOUND;
-        Assert.assertEquals(test.getClass(), MessageDirection.class);
+         Assert.assertEquals(test.getClass(), MessageDirection.class);
     }
 
-    @Test
+    @Test 
     public void testOUTBOUNDShouldSerializeToEnum() {
-
+    
         MessageDirection expectedValue = MessageDirection.OUTBOUND;
         MessageDirection calculatedValue = MessageDirection.fromValue("outbound");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -61,9 +78,11 @@ public class MessageDirectionTest {
 
     @Test
     public void testOUTBOUNDShouldDeserializeToString() {
-        MessageDirection test = MessageDirection.OUTBOUND;
-        String expectedValue = "outbound";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     MessageDirection test = MessageDirection.OUTBOUND;
+      String expectedValue = "outbound";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

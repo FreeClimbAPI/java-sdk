@@ -10,27 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for QueueResultStatus */
-public class QueueResultStatusTest {
-
+/**
+ * Model tests for QueueResultStatus
+ */
+ public class QueueResultStatusTest {
+    
+    
+    
     @Test
     public void testQUEUE_FULLShouldWork() {
 
         QueueResultStatus test = QueueResultStatus.QUEUE_FULL;
-        Assert.assertEquals(test.getClass(), QueueResultStatus.class);
+         Assert.assertEquals(test.getClass(), QueueResultStatus.class);
     }
 
-    @Test
+    @Test 
     public void testQUEUE_FULLShouldSerializeToEnum() {
-
+    
         QueueResultStatus expectedValue = QueueResultStatus.QUEUE_FULL;
         QueueResultStatus calculatedValue = QueueResultStatus.fromValue("queueFull");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -38,22 +56,21 @@ public class QueueResultStatusTest {
 
     @Test
     public void testQUEUE_FULLShouldDeserializeToString() {
-        QueueResultStatus test = QueueResultStatus.QUEUE_FULL;
-        String expectedValue = "queueFull";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     QueueResultStatus test = QueueResultStatus.QUEUE_FULL;
+      String expectedValue = "queueFull";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testDEQUEUEDShouldWork() {
 
         QueueResultStatus test = QueueResultStatus.DEQUEUED;
-        Assert.assertEquals(test.getClass(), QueueResultStatus.class);
+         Assert.assertEquals(test.getClass(), QueueResultStatus.class);
     }
 
-    @Test
+    @Test 
     public void testDEQUEUEDShouldSerializeToEnum() {
-
+    
         QueueResultStatus expectedValue = QueueResultStatus.DEQUEUED;
         QueueResultStatus calculatedValue = QueueResultStatus.fromValue("dequeued");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -61,22 +78,21 @@ public class QueueResultStatusTest {
 
     @Test
     public void testDEQUEUEDShouldDeserializeToString() {
-        QueueResultStatus test = QueueResultStatus.DEQUEUED;
-        String expectedValue = "dequeued";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     QueueResultStatus test = QueueResultStatus.DEQUEUED;
+      String expectedValue = "dequeued";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testHANGUPShouldWork() {
 
         QueueResultStatus test = QueueResultStatus.HANGUP;
-        Assert.assertEquals(test.getClass(), QueueResultStatus.class);
+         Assert.assertEquals(test.getClass(), QueueResultStatus.class);
     }
 
-    @Test
+    @Test 
     public void testHANGUPShouldSerializeToEnum() {
-
+    
         QueueResultStatus expectedValue = QueueResultStatus.HANGUP;
         QueueResultStatus calculatedValue = QueueResultStatus.fromValue("hangup");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -84,22 +100,21 @@ public class QueueResultStatusTest {
 
     @Test
     public void testHANGUPShouldDeserializeToString() {
-        QueueResultStatus test = QueueResultStatus.HANGUP;
-        String expectedValue = "hangup";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     QueueResultStatus test = QueueResultStatus.HANGUP;
+      String expectedValue = "hangup";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testSYSTEM_ERRORShouldWork() {
 
         QueueResultStatus test = QueueResultStatus.SYSTEM_ERROR;
-        Assert.assertEquals(test.getClass(), QueueResultStatus.class);
+         Assert.assertEquals(test.getClass(), QueueResultStatus.class);
     }
 
-    @Test
+    @Test 
     public void testSYSTEM_ERRORShouldSerializeToEnum() {
-
+    
         QueueResultStatus expectedValue = QueueResultStatus.SYSTEM_ERROR;
         QueueResultStatus calculatedValue = QueueResultStatus.fromValue("systemError");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -107,9 +122,11 @@ public class QueueResultStatusTest {
 
     @Test
     public void testSYSTEM_ERRORShouldDeserializeToString() {
-        QueueResultStatus test = QueueResultStatus.SYSTEM_ERROR;
-        String expectedValue = "systemError";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     QueueResultStatus test = QueueResultStatus.SYSTEM_ERROR;
+      String expectedValue = "systemError";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

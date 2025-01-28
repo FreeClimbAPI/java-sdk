@@ -12,627 +12,658 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.JSON;
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.Arrays;
-import java.util.Objects;
-import org.openapitools.jackson.nullable.JsonNullable;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
 
 /**
- * The GetSpeech command has completed and its actionUrl is being invoked. A PerCL response is
- * expected, unless reason is hangup.
+ * The GetSpeech command has completed and its actionUrl is being invoked. A PerCL response is expected, unless reason is hangup.
  */
-@ApiModel(
-        description =
-                "The GetSpeech command has completed and its actionUrl is being invoked. A PerCL"
-                        + " response is expected, unless reason is hangup.")
+@ApiModel(description = "The GetSpeech command has completed and its actionUrl is being invoked. A PerCL response is expected, unless reason is hangup.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetSpeechWebhook extends Webhook {
-    public static GetSpeechWebhook deserialize(String payload) {
-        return (GetSpeechWebhook) (new JSON().getGson().fromJson(payload, Webhook.class));
+  public static GetSpeechWebhook deserialize(String payload) {
+    return (GetSpeechWebhook)(new JSON().getGson().fromJson(payload, Webhook.class));
+  }
+  public static String getDiscriminatorValue() {
+    return "getSpeech";
+  }
+  
+  public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
+  
+  
+  @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
+  
+  protected String requestType;
+
+  
+  public static final String SERIALIZED_NAME_CALL_ID = "callId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CALL_ID)
+  
+  private String callId;
+
+  
+  public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  
+  private String accountId;
+
+  
+  public static final String SERIALIZED_NAME_FROM = "from";
+  
+  
+  @SerializedName(SERIALIZED_NAME_FROM)
+  
+  private String from;
+
+  
+  public static final String SERIALIZED_NAME_TO = "to";
+  
+  
+  @SerializedName(SERIALIZED_NAME_TO)
+  
+  private String to;
+
+  
+  public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+  
+  private CallStatus callStatus;
+
+  
+  public static final String SERIALIZED_NAME_DIRECTION = "direction";
+  
+  
+  @SerializedName(SERIALIZED_NAME_DIRECTION)
+  
+  private CallDirection direction;
+
+  
+  public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
+  
+  private String conferenceId;
+
+  
+  public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_QUEUE_ID)
+  
+  private String queueId;
+
+  
+  public static final String SERIALIZED_NAME_REASON = "reason";
+  
+  
+  @SerializedName(SERIALIZED_NAME_REASON)
+  
+  private GetSpeechReason reason;
+
+  
+  public static final String SERIALIZED_NAME_RECOGNITION_RESULT = "recognitionResult";
+  
+  
+  @SerializedName(SERIALIZED_NAME_RECOGNITION_RESULT)
+  
+  private String recognitionResult;
+
+  
+  public static final String SERIALIZED_NAME_CONFIDENCE = "confidence";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CONFIDENCE)
+  
+  private Integer confidence;
+
+  
+  public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+  
+  private String parentCallId;
+
+  
+  public static final String SERIALIZED_NAME_COMPLETION_REASON = "completionReason";
+  
+  
+  @SerializedName(SERIALIZED_NAME_COMPLETION_REASON)
+  
+  private String completionReason;
+
+  
+  public static final String SERIALIZED_NAME_COMPLETION_CAUSE = "completionCause";
+  
+  
+  @SerializedName(SERIALIZED_NAME_COMPLETION_CAUSE)
+  
+  private String completionCause;
+
+  
+  public static final String SERIALIZED_NAME_MRCP_CODE = "mrcpCode";
+  
+  
+  @SerializedName(SERIALIZED_NAME_MRCP_CODE)
+  
+  private Integer mrcpCode;
+
+  
+  public static final String SERIALIZED_NAME_MRCP_DIAGNOSTIC = "mrcpDiagnostic";
+  
+  
+  @SerializedName(SERIALIZED_NAME_MRCP_DIAGNOSTIC)
+  
+  private String mrcpDiagnostic;
+
+
+  public GetSpeechWebhook() { 
+    this.requestType = this.getClass().getSimpleName();
+  }
+
+  public GetSpeechWebhook requestType(String requestType) {
+    
+    this.requestType = requestType;
+    return this;
+  }
+
+   /**
+   * Context or reason why this request is being made. Will be getSpeech - The GetSpeech command has completed and its actionUrl is being invoked.
+   * @return requestType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Context or reason why this request is being made. Will be getSpeech - The GetSpeech command has completed and its actionUrl is being invoked.")
+
+  public String getRequestType() {
+    return requestType;
+  }
+
+
+  public void setRequestType(String requestType) {
+    this.requestType = requestType;
+  }
+
+
+  public GetSpeechWebhook callId(String callId) {
+    
+    this.callId = callId;
+    return this;
+  }
+
+   /**
+   * Unique ID for this Call, generated by FreeClimb.
+   * @return callId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Unique ID for this Call, generated by FreeClimb.")
+
+  public String getCallId() {
+    return callId;
+  }
+
+
+  public void setCallId(String callId) {
+    this.callId = callId;
+  }
+
+
+  public GetSpeechWebhook accountId(String accountId) {
+    
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Account ID associated with your account.
+   * @return accountId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Account ID associated with your account.")
+
+  public String getAccountId() {
+    return accountId;
+  }
+
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+
+  public GetSpeechWebhook from(String from) {
+    
+    this.from = from;
+    return this;
+  }
+
+   /**
+   * Phone number of the party that initiated the Call (in E.164 format).
+   * @return from
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Phone number of the party that initiated the Call (in E.164 format).")
+
+  public String getFrom() {
+    return from;
+  }
+
+
+  public void setFrom(String from) {
+    this.from = from;
+  }
+
+
+  public GetSpeechWebhook to(String to) {
+    
+    this.to = to;
+    return this;
+  }
+
+   /**
+   * Phone number provisioned to you and to which this Call is directed (in E.164 format).
+   * @return to
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Phone number provisioned to you and to which this Call is directed (in E.164 format).")
+
+  public String getTo() {
+    return to;
+  }
+
+
+  public void setTo(String to) {
+    this.to = to;
+  }
+
+
+  public GetSpeechWebhook callStatus(CallStatus callStatus) {
+    
+    this.callStatus = callStatus;
+    return this;
+  }
+
+   /**
+   * Get callStatus
+   * @return callStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public CallStatus getCallStatus() {
+    return callStatus;
+  }
+
+
+  public void setCallStatus(CallStatus callStatus) {
+    this.callStatus = callStatus;
+  }
+
+
+  public GetSpeechWebhook direction(CallDirection direction) {
+    
+    this.direction = direction;
+    return this;
+  }
+
+   /**
+   * Get direction
+   * @return direction
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public CallDirection getDirection() {
+    return direction;
+  }
+
+
+  public void setDirection(CallDirection direction) {
+    this.direction = direction;
+  }
+
+
+  public GetSpeechWebhook conferenceId(String conferenceId) {
+    
+    this.conferenceId = conferenceId;
+    return this;
+  }
+
+   /**
+   * Unique ID of the Conference.
+   * @return conferenceId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Unique ID of the Conference.")
+
+  public String getConferenceId() {
+    return conferenceId;
+  }
+
+
+  public void setConferenceId(String conferenceId) {
+    this.conferenceId = conferenceId;
+  }
+
+
+  public GetSpeechWebhook queueId(String queueId) {
+    
+    this.queueId = queueId;
+    return this;
+  }
+
+   /**
+   * This is only populated if the request pertains to a Queue. Otherwise, it is set to null.
+   * @return queueId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This is only populated if the request pertains to a Queue. Otherwise, it is set to null.")
+
+  public String getQueueId() {
+    return queueId;
+  }
+
+
+  public void setQueueId(String queueId) {
+    this.queueId = queueId;
+  }
+
+
+  public GetSpeechWebhook reason(GetSpeechReason reason) {
+    
+    this.reason = reason;
+    return this;
+  }
+
+   /**
+   * Get reason
+   * @return reason
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GetSpeechReason getReason() {
+    return reason;
+  }
+
+
+  public void setReason(GetSpeechReason reason) {
+    this.reason = reason;
+  }
+
+
+  public GetSpeechWebhook recognitionResult(String recognitionResult) {
+    
+    this.recognitionResult = recognitionResult;
+    return this;
+  }
+
+   /**
+   * Semantic content (either a string if speech was recognized or a digit if a digit was input instead of speech) returned from the entry or tag that was recognized within the grammar. The content will be replaced by &#39;xxxxx&#39; when privacyMode is set to true. This field is populated only if the reason field is set to recognition or digit.
+   * @return recognitionResult
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Semantic content (either a string if speech was recognized or a digit if a digit was input instead of speech) returned from the entry or tag that was recognized within the grammar. The content will be replaced by 'xxxxx' when privacyMode is set to true. This field is populated only if the reason field is set to recognition or digit.")
+
+  public String getRecognitionResult() {
+    return recognitionResult;
+  }
+
+
+  public void setRecognitionResult(String recognitionResult) {
+    this.recognitionResult = recognitionResult;
+  }
+
+
+  public GetSpeechWebhook confidence(Integer confidence) {
+    
+    this.confidence = confidence;
+    return this;
+  }
+
+   /**
+   * Level of confidence in the obtained result. This is a value in the range 0 to 100 – with 0 being total lack of confidence and 100 being absolute certainty in the recognition. This field is populated only if the reason field is set to recognition.
+   * @return confidence
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Level of confidence in the obtained result. This is a value in the range 0 to 100 – with 0 being total lack of confidence and 100 being absolute certainty in the recognition. This field is populated only if the reason field is set to recognition.")
+
+  public Integer getConfidence() {
+    return confidence;
+  }
+
+
+  public void setConfidence(Integer confidence) {
+    this.confidence = confidence;
+  }
+
+
+  public GetSpeechWebhook parentCallId(String parentCallId) {
+    
+    this.parentCallId = parentCallId;
+    return this;
+  }
+
+   /**
+   * ID of the Call that created this leg (child call).
+   * @return parentCallId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "ID of the Call that created this leg (child call).")
+
+  public String getParentCallId() {
+    return parentCallId;
+  }
+
+
+  public void setParentCallId(String parentCallId) {
+    this.parentCallId = parentCallId;
+  }
+
+
+  public GetSpeechWebhook completionReason(String completionReason) {
+    
+    this.completionReason = completionReason;
+    return this;
+  }
+
+   /**
+   * Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.12 - speech recognition.
+   * @return completionReason
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.12 - speech recognition.")
+
+  public String getCompletionReason() {
+    return completionReason;
+  }
+
+
+  public void setCompletionReason(String completionReason) {
+    this.completionReason = completionReason;
+  }
+
+
+  public GetSpeechWebhook completionCause(String completionCause) {
+    
+    this.completionCause = completionCause;
+    return this;
+  }
+
+   /**
+   * Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.11 - speech recognition.
+   * @return completionCause
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.11 - speech recognition.")
+
+  public String getCompletionCause() {
+    return completionCause;
+  }
+
+
+  public void setCompletionCause(String completionCause) {
+    this.completionCause = completionCause;
+  }
+
+
+  public GetSpeechWebhook mrcpCode(Integer mrcpCode) {
+    
+    this.mrcpCode = mrcpCode;
+    return this;
+  }
+
+   /**
+   * Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2 specification.
+   * @return mrcpCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2 specification.")
+
+  public Integer getMrcpCode() {
+    return mrcpCode;
+  }
+
+
+  public void setMrcpCode(Integer mrcpCode) {
+    this.mrcpCode = mrcpCode;
+  }
+
+
+  public GetSpeechWebhook mrcpDiagnostic(String mrcpDiagnostic) {
+    
+    this.mrcpDiagnostic = mrcpDiagnostic;
+    return this;
+  }
+
+   /**
+   * Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2 specification.
+   * @return mrcpDiagnostic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2 specification.")
+
+  public String getMrcpDiagnostic() {
+    return mrcpDiagnostic;
+  }
+
+
+  public void setMrcpDiagnostic(String mrcpDiagnostic) {
+    this.mrcpDiagnostic = mrcpDiagnostic;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static String getDiscriminatorValue() {
-        return "getSpeech";
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    GetSpeechWebhook getSpeechWebhook = (GetSpeechWebhook) o;
+    return Objects.equals(this.requestType, getSpeechWebhook.requestType) &&
+        Objects.equals(this.callId, getSpeechWebhook.callId) &&
+        Objects.equals(this.accountId, getSpeechWebhook.accountId) &&
+        Objects.equals(this.from, getSpeechWebhook.from) &&
+        Objects.equals(this.to, getSpeechWebhook.to) &&
+        Objects.equals(this.callStatus, getSpeechWebhook.callStatus) &&
+        Objects.equals(this.direction, getSpeechWebhook.direction) &&
+        Objects.equals(this.conferenceId, getSpeechWebhook.conferenceId) &&
+        Objects.equals(this.queueId, getSpeechWebhook.queueId) &&
+        Objects.equals(this.reason, getSpeechWebhook.reason) &&
+        Objects.equals(this.recognitionResult, getSpeechWebhook.recognitionResult) &&
+        Objects.equals(this.confidence, getSpeechWebhook.confidence) &&
+        Objects.equals(this.parentCallId, getSpeechWebhook.parentCallId) &&
+        Objects.equals(this.completionReason, getSpeechWebhook.completionReason) &&
+        Objects.equals(this.completionCause, getSpeechWebhook.completionCause) &&
+        Objects.equals(this.mrcpCode, getSpeechWebhook.mrcpCode) &&
+        Objects.equals(this.mrcpDiagnostic, getSpeechWebhook.mrcpDiagnostic) &&
+        super.equals(o);
+  }
 
-    public static final String SERIALIZED_NAME_REQUEST_TYPE = "requestType";
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
 
-    @SerializedName(SERIALIZED_NAME_REQUEST_TYPE)
-    protected String requestType;
+  @Override
+  public int hashCode() {
+    return Objects.hash(requestType, callId, accountId, from, to, callStatus, direction, conferenceId, queueId, reason, recognitionResult, confidence, parentCallId, completionReason, completionCause, mrcpCode, mrcpDiagnostic, super.hashCode());
+  }
 
-    public static final String SERIALIZED_NAME_CALL_ID = "callId";
-
-    @SerializedName(SERIALIZED_NAME_CALL_ID)
-    private String callId;
-
-    public static final String SERIALIZED_NAME_ACCOUNT_ID = "accountId";
-
-    @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
-    private String accountId;
-
-    public static final String SERIALIZED_NAME_FROM = "from";
-
-    @SerializedName(SERIALIZED_NAME_FROM)
-    private String from;
-
-    public static final String SERIALIZED_NAME_TO = "to";
-
-    @SerializedName(SERIALIZED_NAME_TO)
-    private String to;
-
-    public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
-
-    @SerializedName(SERIALIZED_NAME_CALL_STATUS)
-    private CallStatus callStatus;
-
-    public static final String SERIALIZED_NAME_DIRECTION = "direction";
-
-    @SerializedName(SERIALIZED_NAME_DIRECTION)
-    private CallDirection direction;
-
-    public static final String SERIALIZED_NAME_CONFERENCE_ID = "conferenceId";
-
-    @SerializedName(SERIALIZED_NAME_CONFERENCE_ID)
-    private String conferenceId;
-
-    public static final String SERIALIZED_NAME_QUEUE_ID = "queueId";
-
-    @SerializedName(SERIALIZED_NAME_QUEUE_ID)
-    private String queueId;
-
-    public static final String SERIALIZED_NAME_REASON = "reason";
-
-    @SerializedName(SERIALIZED_NAME_REASON)
-    private GetSpeechReason reason;
-
-    public static final String SERIALIZED_NAME_RECOGNITION_RESULT = "recognitionResult";
-
-    @SerializedName(SERIALIZED_NAME_RECOGNITION_RESULT)
-    private String recognitionResult;
-
-    public static final String SERIALIZED_NAME_CONFIDENCE = "confidence";
-
-    @SerializedName(SERIALIZED_NAME_CONFIDENCE)
-    private Integer confidence;
-
-    public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
-
-    @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
-    private String parentCallId;
-
-    public static final String SERIALIZED_NAME_COMPLETION_REASON = "completionReason";
-
-    @SerializedName(SERIALIZED_NAME_COMPLETION_REASON)
-    private String completionReason;
-
-    public static final String SERIALIZED_NAME_COMPLETION_CAUSE = "completionCause";
-
-    @SerializedName(SERIALIZED_NAME_COMPLETION_CAUSE)
-    private String completionCause;
-
-    public static final String SERIALIZED_NAME_MRCP_CODE = "mrcpCode";
-
-    @SerializedName(SERIALIZED_NAME_MRCP_CODE)
-    private Integer mrcpCode;
-
-    public static final String SERIALIZED_NAME_MRCP_DIAGNOSTIC = "mrcpDiagnostic";
-
-    @SerializedName(SERIALIZED_NAME_MRCP_DIAGNOSTIC)
-    private String mrcpDiagnostic;
-
-    public GetSpeechWebhook() {
-        this.requestType = this.getClass().getSimpleName();
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
     }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+  }
 
-    public GetSpeechWebhook requestType(String requestType) {
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class GetSpeechWebhook {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
+    sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    to: ").append(toIndentedString(to)).append("\n");
+    sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+    sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
+    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    recognitionResult: ").append(toIndentedString(recognitionResult)).append("\n");
+    sb.append("    confidence: ").append(toIndentedString(confidence)).append("\n");
+    sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
+    sb.append("    completionReason: ").append(toIndentedString(completionReason)).append("\n");
+    sb.append("    completionCause: ").append(toIndentedString(completionCause)).append("\n");
+    sb.append("    mrcpCode: ").append(toIndentedString(mrcpCode)).append("\n");
+    sb.append("    mrcpDiagnostic: ").append(toIndentedString(mrcpDiagnostic)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-        this.requestType = requestType;
-        return this;
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    /**
-     * Context or reason why this request is being made. Will be getSpeech - The GetSpeech command
-     * has completed and its actionUrl is being invoked.
-     *
-     * @return requestType
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Context or reason why this request is being made. Will be getSpeech - The"
-                        + " GetSpeech command has completed and its actionUrl is being invoked.")
-    public String getRequestType() {
-        return requestType;
-    }
-
-    public void setRequestType(String requestType) {
-        this.requestType = requestType;
-    }
-
-    public GetSpeechWebhook callId(String callId) {
-
-        this.callId = callId;
-        return this;
-    }
-
-    /**
-     * Unique ID for this Call, generated by FreeClimb.
-     *
-     * @return callId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Unique ID for this Call, generated by FreeClimb.")
-    public String getCallId() {
-        return callId;
-    }
-
-    public void setCallId(String callId) {
-        this.callId = callId;
-    }
-
-    public GetSpeechWebhook accountId(String accountId) {
-
-        this.accountId = accountId;
-        return this;
-    }
-
-    /**
-     * Account ID associated with your account.
-     *
-     * @return accountId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Account ID associated with your account.")
-    public String getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
-    }
-
-    public GetSpeechWebhook from(String from) {
-
-        this.from = from;
-        return this;
-    }
-
-    /**
-     * Phone number of the party that initiated the Call (in E.164 format).
-     *
-     * @return from
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value = "Phone number of the party that initiated the Call (in E.164 format).")
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-    public GetSpeechWebhook to(String to) {
-
-        this.to = to;
-        return this;
-    }
-
-    /**
-     * Phone number provisioned to you and to which this Call is directed (in E.164 format).
-     *
-     * @return to
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Phone number provisioned to you and to which this Call is directed (in E.164"
-                            + " format).")
-    public String getTo() {
-        return to;
-    }
-
-    public void setTo(String to) {
-        this.to = to;
-    }
-
-    public GetSpeechWebhook callStatus(CallStatus callStatus) {
-
-        this.callStatus = callStatus;
-        return this;
-    }
-
-    /**
-     * Get callStatus
-     *
-     * @return callStatus
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public CallStatus getCallStatus() {
-        return callStatus;
-    }
-
-    public void setCallStatus(CallStatus callStatus) {
-        this.callStatus = callStatus;
-    }
-
-    public GetSpeechWebhook direction(CallDirection direction) {
-
-        this.direction = direction;
-        return this;
-    }
-
-    /**
-     * Get direction
-     *
-     * @return direction
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public CallDirection getDirection() {
-        return direction;
-    }
-
-    public void setDirection(CallDirection direction) {
-        this.direction = direction;
-    }
-
-    public GetSpeechWebhook conferenceId(String conferenceId) {
-
-        this.conferenceId = conferenceId;
-        return this;
-    }
-
-    /**
-     * Unique ID of the Conference.
-     *
-     * @return conferenceId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Unique ID of the Conference.")
-    public String getConferenceId() {
-        return conferenceId;
-    }
-
-    public void setConferenceId(String conferenceId) {
-        this.conferenceId = conferenceId;
-    }
-
-    public GetSpeechWebhook queueId(String queueId) {
-
-        this.queueId = queueId;
-        return this;
-    }
-
-    /**
-     * This is only populated if the request pertains to a Queue. Otherwise, it is set to null.
-     *
-     * @return queueId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "This is only populated if the request pertains to a Queue. Otherwise, it is"
-                            + " set to null.")
-    public String getQueueId() {
-        return queueId;
-    }
-
-    public void setQueueId(String queueId) {
-        this.queueId = queueId;
-    }
-
-    public GetSpeechWebhook reason(GetSpeechReason reason) {
-
-        this.reason = reason;
-        return this;
-    }
-
-    /**
-     * Get reason
-     *
-     * @return reason
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public GetSpeechReason getReason() {
-        return reason;
-    }
-
-    public void setReason(GetSpeechReason reason) {
-        this.reason = reason;
-    }
-
-    public GetSpeechWebhook recognitionResult(String recognitionResult) {
-
-        this.recognitionResult = recognitionResult;
-        return this;
-    }
-
-    /**
-     * Semantic content (either a string if speech was recognized or a digit if a digit was input
-     * instead of speech) returned from the entry or tag that was recognized within the grammar. The
-     * content will be replaced by &#39;xxxxx&#39; when privacyMode is set to true. This field is
-     * populated only if the reason field is set to recognition or digit.
-     *
-     * @return recognitionResult
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Semantic content (either a string if speech was recognized or a digit if a"
-                        + " digit was input instead of speech) returned from the entry or tag that"
-                        + " was recognized within the grammar. The content will be replaced by"
-                        + " 'xxxxx' when privacyMode is set to true. This field is populated only"
-                        + " if the reason field is set to recognition or digit.")
-    public String getRecognitionResult() {
-        return recognitionResult;
-    }
-
-    public void setRecognitionResult(String recognitionResult) {
-        this.recognitionResult = recognitionResult;
-    }
-
-    public GetSpeechWebhook confidence(Integer confidence) {
-
-        this.confidence = confidence;
-        return this;
-    }
-
-    /**
-     * Level of confidence in the obtained result. This is a value in the range 0 to 100 – with 0
-     * being total lack of confidence and 100 being absolute certainty in the recognition. This
-     * field is populated only if the reason field is set to recognition.
-     *
-     * @return confidence
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Level of confidence in the obtained result. This is a value in the range 0 to"
-                            + " 100 – with 0 being total lack of confidence and 100 being absolute"
-                            + " certainty in the recognition. This field is populated only if the"
-                            + " reason field is set to recognition.")
-    public Integer getConfidence() {
-        return confidence;
-    }
-
-    public void setConfidence(Integer confidence) {
-        this.confidence = confidence;
-    }
-
-    public GetSpeechWebhook parentCallId(String parentCallId) {
-
-        this.parentCallId = parentCallId;
-        return this;
-    }
-
-    /**
-     * ID of the Call that created this leg (child call).
-     *
-     * @return parentCallId
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "ID of the Call that created this leg (child call).")
-    public String getParentCallId() {
-        return parentCallId;
-    }
-
-    public void setParentCallId(String parentCallId) {
-        this.parentCallId = parentCallId;
-    }
-
-    public GetSpeechWebhook completionReason(String completionReason) {
-
-        this.completionReason = completionReason;
-        return this;
-    }
-
-    /**
-     * Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.12 - speech
-     * recognition.
-     *
-     * @return completionReason
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Advanced diagnostic information if reason was error. See RFC 6787 section"
-                            + " 9.4.12 - speech recognition.")
-    public String getCompletionReason() {
-        return completionReason;
-    }
-
-    public void setCompletionReason(String completionReason) {
-        this.completionReason = completionReason;
-    }
-
-    public GetSpeechWebhook completionCause(String completionCause) {
-
-        this.completionCause = completionCause;
-        return this;
-    }
-
-    /**
-     * Advanced diagnostic information if reason was error. See RFC 6787 section 9.4.11 - speech
-     * recognition.
-     *
-     * @return completionCause
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Advanced diagnostic information if reason was error. See RFC 6787 section"
-                            + " 9.4.11 - speech recognition.")
-    public String getCompletionCause() {
-        return completionCause;
-    }
-
-    public void setCompletionCause(String completionCause) {
-        this.completionCause = completionCause;
-    }
-
-    public GetSpeechWebhook mrcpCode(Integer mrcpCode) {
-
-        this.mrcpCode = mrcpCode;
-        return this;
-    }
-
-    /**
-     * Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2
-     * specification.
-     *
-     * @return mrcpCode
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Advanced diagnostic information if reason was error. See RFC 6787 section 5.4"
-                            + " - MRCPv2 specification.")
-    public Integer getMrcpCode() {
-        return mrcpCode;
-    }
-
-    public void setMrcpCode(Integer mrcpCode) {
-        this.mrcpCode = mrcpCode;
-    }
-
-    public GetSpeechWebhook mrcpDiagnostic(String mrcpDiagnostic) {
-
-        this.mrcpDiagnostic = mrcpDiagnostic;
-        return this;
-    }
-
-    /**
-     * Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2
-     * specification.
-     *
-     * @return mrcpDiagnostic
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Advanced diagnostic information if reason was error. See RFC 6787 section 5.4"
-                            + " - MRCPv2 specification.")
-    public String getMrcpDiagnostic() {
-        return mrcpDiagnostic;
-    }
-
-    public void setMrcpDiagnostic(String mrcpDiagnostic) {
-        this.mrcpDiagnostic = mrcpDiagnostic;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        GetSpeechWebhook getSpeechWebhook = (GetSpeechWebhook) o;
-        return Objects.equals(this.requestType, getSpeechWebhook.requestType)
-                && Objects.equals(this.callId, getSpeechWebhook.callId)
-                && Objects.equals(this.accountId, getSpeechWebhook.accountId)
-                && Objects.equals(this.from, getSpeechWebhook.from)
-                && Objects.equals(this.to, getSpeechWebhook.to)
-                && Objects.equals(this.callStatus, getSpeechWebhook.callStatus)
-                && Objects.equals(this.direction, getSpeechWebhook.direction)
-                && Objects.equals(this.conferenceId, getSpeechWebhook.conferenceId)
-                && Objects.equals(this.queueId, getSpeechWebhook.queueId)
-                && Objects.equals(this.reason, getSpeechWebhook.reason)
-                && Objects.equals(this.recognitionResult, getSpeechWebhook.recognitionResult)
-                && Objects.equals(this.confidence, getSpeechWebhook.confidence)
-                && Objects.equals(this.parentCallId, getSpeechWebhook.parentCallId)
-                && Objects.equals(this.completionReason, getSpeechWebhook.completionReason)
-                && Objects.equals(this.completionCause, getSpeechWebhook.completionCause)
-                && Objects.equals(this.mrcpCode, getSpeechWebhook.mrcpCode)
-                && Objects.equals(this.mrcpDiagnostic, getSpeechWebhook.mrcpDiagnostic)
-                && super.equals(o);
-    }
-
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                requestType,
-                callId,
-                accountId,
-                from,
-                to,
-                callStatus,
-                direction,
-                conferenceId,
-                queueId,
-                reason,
-                recognitionResult,
-                confidence,
-                parentCallId,
-                completionReason,
-                completionCause,
-                mrcpCode,
-                mrcpDiagnostic,
-                super.hashCode());
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class GetSpeechWebhook {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    requestType: ").append(toIndentedString(requestType)).append("\n");
-        sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
-        sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-        sb.append("    from: ").append(toIndentedString(from)).append("\n");
-        sb.append("    to: ").append(toIndentedString(to)).append("\n");
-        sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
-        sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
-        sb.append("    conferenceId: ").append(toIndentedString(conferenceId)).append("\n");
-        sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
-        sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
-        sb.append("    recognitionResult: ")
-                .append(toIndentedString(recognitionResult))
-                .append("\n");
-        sb.append("    confidence: ").append(toIndentedString(confidence)).append("\n");
-        sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
-        sb.append("    completionReason: ").append(toIndentedString(completionReason)).append("\n");
-        sb.append("    completionCause: ").append(toIndentedString(completionCause)).append("\n");
-        sb.append("    mrcpCode: ").append(toIndentedString(mrcpCode)).append("\n");
-        sb.append("    mrcpDiagnostic: ").append(toIndentedString(mrcpDiagnostic)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

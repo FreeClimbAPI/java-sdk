@@ -73,6 +73,7 @@ docs/MessageDeliveryWebhook.md
 docs/MessageDirection.md
 docs/MessageRequest.md
 docs/MessageResult.md
+docs/MessageResultAllOfTfn.md
 docs/MessageStatus.md
 docs/MessageStatusWebhook.md
 docs/MessagesList.md
@@ -132,6 +133,7 @@ docs/SetTalk.md
 docs/Sms.md
 docs/StartRecordCall.md
 docs/TFN.md
+docs/TFNCampaign.md
 docs/TerminateConference.md
 docs/TranscribeReason.md
 docs/TranscribeTermReason.md
@@ -230,6 +232,7 @@ src/main/java/com/github/freeclimbapi/MessageDeliveryWebhook.java
 src/main/java/com/github/freeclimbapi/MessageDirection.java
 src/main/java/com/github/freeclimbapi/MessageRequest.java
 src/main/java/com/github/freeclimbapi/MessageResult.java
+src/main/java/com/github/freeclimbapi/MessageResultAllOfTfn.java
 src/main/java/com/github/freeclimbapi/MessageStatus.java
 src/main/java/com/github/freeclimbapi/MessageStatusWebhook.java
 src/main/java/com/github/freeclimbapi/MessagesList.java
@@ -295,6 +298,7 @@ src/main/java/com/github/freeclimbapi/Sms.java
 src/main/java/com/github/freeclimbapi/StartRecordCall.java
 src/main/java/com/github/freeclimbapi/StringUtil.java
 src/main/java/com/github/freeclimbapi/TFN.java
+src/main/java/com/github/freeclimbapi/TFNCampaign.java
 src/main/java/com/github/freeclimbapi/TerminateConference.java
 src/main/java/com/github/freeclimbapi/TranscribeReason.java
 src/main/java/com/github/freeclimbapi/TranscribeTermReason.java
@@ -379,6 +383,7 @@ src/test/java/com/github/freeclimbapi/MakeCallRequestTest.java
 src/test/java/com/github/freeclimbapi/MessageDeliveryWebhookTest.java
 src/test/java/com/github/freeclimbapi/MessageDirectionTest.java
 src/test/java/com/github/freeclimbapi/MessageRequestTest.java
+src/test/java/com/github/freeclimbapi/MessageResultAllOfTfnTest.java
 src/test/java/com/github/freeclimbapi/MessageResultTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusWebhookTest.java
@@ -438,6 +443,7 @@ src/test/java/com/github/freeclimbapi/SetListenTest.java
 src/test/java/com/github/freeclimbapi/SetTalkTest.java
 src/test/java/com/github/freeclimbapi/SmsTest.java
 src/test/java/com/github/freeclimbapi/StartRecordCallTest.java
+src/test/java/com/github/freeclimbapi/TFNCampaignTest.java
 src/test/java/com/github/freeclimbapi/TFNTest.java
 src/test/java/com/github/freeclimbapi/TerminateConferenceTest.java
 src/test/java/com/github/freeclimbapi/TranscribeReasonTest.java

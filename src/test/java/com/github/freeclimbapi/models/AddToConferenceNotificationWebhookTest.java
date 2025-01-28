@@ -10,587 +10,822 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.net.URI;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for AddToConferenceNotificationWebhook */
-public class AddToConferenceNotificationWebhookTest {
-
-    private final AddToConferenceNotificationWebhook model =
-            new AddToConferenceNotificationWebhook();
-
-    /** Test the property 'requestType' */
+/**
+ * Model tests for AddToConferenceNotificationWebhook
+ */
+ public class AddToConferenceNotificationWebhookTest {
+    
+    private final AddToConferenceNotificationWebhook model = new AddToConferenceNotificationWebhook(
+    );
+    
+    
+    /**
+     * Test the property 'requestType'
+     */
     @Test
-    public void requestTypeTest() {}
-
-    /** Test the property 'callId' */
+    public void requestTypeTest() {
+      
+    }
+    /**
+     * Test the property 'callId'
+     */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
     }
-
-    /** Test the property 'accountId' */
+    /**
+     * Test the property 'accountId'
+     */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-
-    /** Test the property 'from' */
+    /**
+     * Test the property 'from'
+     */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-
-    /** Test the property 'to' */
+    /**
+     * Test the property 'to'
+     */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-
-    /** Test the property 'callStatus' */
+    /**
+     * Test the property 'callStatus'
+     */
     @Test
     public void callStatusTest() {
-        model.setCallStatus(CallStatus.QUEUED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.QUEUED);
-        model.setCallStatus(CallStatus.RINGING);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.RINGING);
-        model.setCallStatus(CallStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.IN_PROGRESS);
-        model.setCallStatus(CallStatus.CANCELED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.CANCELED);
-        model.setCallStatus(CallStatus.COMPLETED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.COMPLETED);
-        model.setCallStatus(CallStatus.FAILED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.FAILED);
-        model.setCallStatus(CallStatus.BUSY);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.BUSY);
-        model.setCallStatus(CallStatus.NO_ANSWER);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.NO_ANSWER);
+      model.setCallStatus(CallStatus.QUEUED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.QUEUED);
+      model.setCallStatus(CallStatus.RINGING);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.RINGING);
+      model.setCallStatus(CallStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.IN_PROGRESS);
+      model.setCallStatus(CallStatus.CANCELED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.CANCELED);
+      model.setCallStatus(CallStatus.COMPLETED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.COMPLETED);
+      model.setCallStatus(CallStatus.FAILED);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.FAILED);
+      model.setCallStatus(CallStatus.BUSY);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.BUSY);
+      model.setCallStatus(CallStatus.NO_ANSWER);
+      Assert.assertEquals(model.getCallStatus(),CallStatus.NO_ANSWER);
+      
     }
-
-    /** Test the property 'direction' */
+    /**
+     * Test the property 'direction'
+     */
     @Test
     public void directionTest() {
-        model.setDirection(CallDirection.INBOUND);
-        Assert.assertEquals(model.getDirection(), CallDirection.INBOUND);
-        model.setDirection(CallDirection.OUTBOUND_API);
-        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_API);
-        model.setDirection(CallDirection.OUTBOUND_DIAL);
-        Assert.assertEquals(model.getDirection(), CallDirection.OUTBOUND_DIAL);
+      model.setDirection(CallDirection.INBOUND);
+      Assert.assertEquals(model.getDirection(),CallDirection.INBOUND);
+      model.setDirection(CallDirection.OUTBOUND_API);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_API);
+      model.setDirection(CallDirection.OUTBOUND_DIAL);
+      Assert.assertEquals(model.getDirection(),CallDirection.OUTBOUND_DIAL);
+      
     }
-
-    /** Test the property 'conferenceId' */
+    /**
+     * Test the property 'conferenceId'
+     */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
     }
-
-    /** Test the property 'queueId' */
+    /**
+     * Test the property 'queueId'
+     */
     @Test
     public void queueIdTest() {
-
-        model.setQueueId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
+      model.setQueueId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getQueueId());
+      
+      
     }
-
-    /** Test the property 'status' */
+    /**
+     * Test the property 'status'
+     */
     @Test
     public void statusTest() {
-        model.setStatus(ConferenceStatus.EMPTY);
-        Assert.assertEquals(model.getStatus(), ConferenceStatus.EMPTY);
-        model.setStatus(ConferenceStatus.POPULATED);
-        Assert.assertEquals(model.getStatus(), ConferenceStatus.POPULATED);
-        model.setStatus(ConferenceStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getStatus(), ConferenceStatus.IN_PROGRESS);
-        model.setStatus(ConferenceStatus.TERMINATED);
-        Assert.assertEquals(model.getStatus(), ConferenceStatus.TERMINATED);
+      model.setStatus(ConferenceStatus.EMPTY);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.EMPTY);
+      model.setStatus(ConferenceStatus.POPULATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.POPULATED);
+      model.setStatus(ConferenceStatus.IN_PROGRESS);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.IN_PROGRESS);
+      model.setStatus(ConferenceStatus.TERMINATED);
+      Assert.assertEquals(model.getStatus(),ConferenceStatus.TERMINATED);
+      
     }
-
-    /** Test the property 'recordingUrl' */
+    /**
+     * Test the property 'recordingUrl'
+     */
     @Test
     public void recordingUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setRecordingUrl(uri);
-            Assert.assertEquals(uri, model.getRecordingUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setRecordingUrl(uri);
+        Assert.assertEquals(uri, model.getRecordingUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'recordingId' */
+    /**
+     * Test the property 'recordingId'
+     */
     @Test
     public void recordingIdTest() {
-
-        model.setRecordingId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRecordingId());
+      
+      
+      model.setRecordingId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRecordingId());
+      
+      
     }
-
-    /** Test the property 'recordingDurationSec' */
+    /**
+     * Test the property 'recordingDurationSec'
+     */
     @Test
     public void recordingDurationSecTest() {
-
-        model.setRecordingDurationSec(1);
-        Assert.assertEquals(1, (int) model.getRecordingDurationSec());
+      
+      model.setRecordingDurationSec(1);
+      Assert.assertEquals(1, (int) model.getRecordingDurationSec());
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-        AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        test2.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
+      test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
+          e.printStackTrace();
+        };
+        
+        
+      test2.setRecordingId("TS");
+      
+      test2.setRecordingDurationSec(1);
 
-        test2.setRecordingId("TS");
-
-        test2.setRecordingDurationSec(1);
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.RINGING);
-        test1.setDirection(CallDirection.OUTBOUND_API);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.POPULATED);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.RINGING);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.POPULATED);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-        AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS2");
-
-        test2.setQueueId("TS2");
-
-        test2.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
+      test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
+          e.printStackTrace();
+        };
+        
+        
+      test2.setRecordingId("TS2");
+      
+      test2.setRecordingDurationSec(0);
 
-        test2.setRecordingId("TS2");
-
-        test2.setRecordingDurationSec(0);
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-        AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        test2.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
+      test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setRecordingId("TS");
-
-        test2.setRecordingDurationSec(1);
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+          e.printStackTrace();
+        };
+        
+        
+      test2.setRecordingId("TS");
+      
+      test2.setRecordingDurationSec(1);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setDirection(CallDirection.INBOUND);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-        AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS");
-
-        test2.setQueueId("TS");
-
-        test2.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setQueueId("TS");
+      
+      test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setRecordingId("TS");
-
-        test2.setRecordingDurationSec(1);
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+        
+        
+      test2.setRecordingId("TS");
+      
+      test2.setRecordingDurationSec(1);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.RINGING);
-        test1.setDirection(CallDirection.OUTBOUND_API);
-
-        test1.setConferenceId("TS");
-
-        test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.POPULATED);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+      test1.setCallStatus(CallStatus.RINGING);
+      test1.setDirection(CallDirection.OUTBOUND_API);
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setQueueId("TS");
+      
+      test1.setStatus(ConferenceStatus.POPULATED);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test1.setRecordingId("TS");
-
-        test1.setRecordingDurationSec(1);
-        AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setCallStatus(CallStatus.QUEUED);
-        test2.setDirection(CallDirection.INBOUND);
-
-        test2.setConferenceId("TS2");
-
-        test2.setQueueId("TS2");
-
-        test2.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+        
+        
+      test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
+      AddToConferenceNotificationWebhook test2 = new AddToConferenceNotificationWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+      test2.setCallStatus(CallStatus.QUEUED);
+      test2.setDirection(CallDirection.INBOUND);
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setQueueId("TS2");
+      
+      test2.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
-        test2.setRecordingId("TS2");
-
-        test2.setRecordingDurationSec(0);
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+        
+        
+      test2.setRecordingId("TS2");
+      
+      test2.setRecordingDurationSec(0);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
-
+      AddToConferenceNotificationWebhook test1 = new AddToConferenceNotificationWebhook();
+        
+        
         test1.setRequestType("TS");
-
+      
+        
+        
         test1.setCallId("TS");
-
+      
+        
+        
         test1.setAccountId("TS");
-
+      
+        
+        
         test1.setFrom("TS");
-
+      
+        
+        
         test1.setTo("TS");
-
-        test1.setCallStatus(CallStatus.QUEUED);
-        test1.setDirection(CallDirection.INBOUND);
-
+      
+      test1.setCallStatus(CallStatus.QUEUED);
+      test1.setDirection(CallDirection.INBOUND);
+        
+        
         test1.setConferenceId("TS");
-
+      
+        
+        
         test1.setQueueId("TS");
-
-        test1.setStatus(ConferenceStatus.EMPTY);
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      
+      test1.setStatus(ConferenceStatus.EMPTY);
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-
+          e.printStackTrace();
+        };
+        
+        
         test1.setRecordingId("TS");
+      
+      test1.setRecordingDurationSec(1);
 
-        test1.setRecordingDurationSec(1);
-
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-        String json = "{ \"requestType\": \"addToConferenceNotification\" }";
-        AddToConferenceNotificationWebhook webhookInstance =
-                AddToConferenceNotificationWebhook.deserialize(json);
-        Assert.assertTrue(webhookInstance instanceof AddToConferenceNotificationWebhook);
+      String json = "{ \"requestType\": \"addToConferenceNotification\" }";
+      AddToConferenceNotificationWebhook webhookInstance = AddToConferenceNotificationWebhook.deserialize(json);
+      Assert.assertTrue(webhookInstance instanceof AddToConferenceNotificationWebhook);
     }
-}
+    
+ }

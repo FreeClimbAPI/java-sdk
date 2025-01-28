@@ -12,55 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** Gets or Sets MachineType */
+/**
+ * Gets or Sets MachineType
+ */
 @JsonAdapter(MachineType.Adapter.class)
 public enum MachineType {
-    ANSWERING_MACHINE("answering machine"),
+  
+  ANSWERING_MACHINE("answering machine"),
+  
+  FAX_MODEM("fax modem");
 
-    FAX_MODEM("fax modem");
+  private String value;
 
-    private String value;
+  MachineType(String value) {
+    this.value = value;
+  }
 
-    MachineType(String value) {
-        this.value = value;
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static MachineType fromValue(String value) {
+    for (MachineType b : MachineType.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<MachineType> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final MachineType enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public MachineType read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return MachineType.fromValue(value);
     }
-
-    public static MachineType fromValue(String value) {
-        for (MachineType b : MachineType.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<MachineType> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final MachineType enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public MachineType read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return MachineType.fromValue(value);
-        }
-    }
+  }
 }
+

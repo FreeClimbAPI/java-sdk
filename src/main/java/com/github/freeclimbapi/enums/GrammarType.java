@@ -12,60 +12,69 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 /**
- * The grammar file type to use for speech recognition. A value of &#39;URL&#39; indicates the
- * grammarFile attribute specifies a URL that points to the grammar file. A value of
- * &#x60;BUILTIN&#x60; indicates the grammarFile attribute specifies the name of one of the platform
- * built-in grammar files.
+ * The grammar file type to use for speech recognition. A value of &#39;URL&#39; indicates the grammarFile attribute specifies a URL that points to the grammar file. A value of &#x60;BUILTIN&#x60; indicates the grammarFile attribute specifies the name of one of the platform built-in grammar files.
  */
 @JsonAdapter(GrammarType.Adapter.class)
 public enum GrammarType {
-    URL("URL"),
+  
+  URL("URL"),
+  
+  BUILT_IN("BUILTIN");
 
-    BUILT_IN("BUILTIN");
+  private String value;
 
-    private String value;
+  GrammarType(String value) {
+    this.value = value;
+  }
 
-    GrammarType(String value) {
-        this.value = value;
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static GrammarType fromValue(String value) {
+    for (GrammarType b : GrammarType.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    return null;
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<GrammarType> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final GrammarType enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public GrammarType read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return GrammarType.fromValue(value);
     }
-
-    public static GrammarType fromValue(String value) {
-        for (GrammarType b : GrammarType.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        return null;
-    }
-
-    public static class Adapter extends TypeAdapter<GrammarType> {
-        @Override
-        public void write(final JsonWriter jsonWriter, final GrammarType enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public GrammarType read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return GrammarType.fromValue(value);
-        }
-    }
+  }
 }
+

@@ -10,790 +10,1067 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.net.URI;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for TranscribeWebhook */
-public class TranscribeWebhookTest {
-
-    private final TranscribeWebhook model = new TranscribeWebhook();
-
-    /** Test the property 'requestType' */
+/**
+ * Model tests for TranscribeWebhook
+ */
+ public class TranscribeWebhookTest {
+    
+    private final TranscribeWebhook model = new TranscribeWebhook(
+    );
+    
+    
+    /**
+     * Test the property 'requestType'
+     */
     @Test
-    public void requestTypeTest() {}
-
-    /** Test the property 'accountId' */
+    public void requestTypeTest() {
+      
+    }
+    /**
+     * Test the property 'accountId'
+     */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-
-    /** Test the property 'callId' */
+    /**
+     * Test the property 'callId'
+     */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
     }
-
-    /** Test the property 'from' */
+    /**
+     * Test the property 'from'
+     */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-
-    /** Test the property 'to' */
+    /**
+     * Test the property 'to'
+     */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-
-    /** Test the property 'recordingId' */
+    /**
+     * Test the property 'recordingId'
+     */
     @Test
     public void recordingIdTest() {
-
-        model.setRecordingId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRecordingId());
+      
+      
+      model.setRecordingId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRecordingId());
+      
+      
     }
-
-    /** Test the property 'recordingUrl' */
+    /**
+     * Test the property 'recordingUrl'
+     */
     @Test
     public void recordingUrlTest() {
-
-        try {
-            URI uri = new URI("TEST_STRING");
-            model.setRecordingUrl(uri);
-            Assert.assertEquals(uri, model.getRecordingUrl());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      
+      
+      try {
+        URI uri = new URI("TEST_STRING");
+        model.setRecordingUrl(uri);
+        Assert.assertEquals(uri, model.getRecordingUrl());
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      
     }
-
-    /** Test the property 'recordingSize' */
+    /**
+     * Test the property 'recordingSize'
+     */
     @Test
     public void recordingSizeTest() {
-
-        model.setRecordingSize(1);
-        Assert.assertEquals(1, (int) model.getRecordingSize());
+      
+      model.setRecordingSize(1);
+      Assert.assertEquals(1, (int) model.getRecordingSize());
     }
-
-    /** Test the property 'recordingFormat' */
+    /**
+     * Test the property 'recordingFormat'
+     */
     @Test
     public void recordingFormatTest() {
-
-        model.setRecordingFormat("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getRecordingFormat());
+      
+      
+      model.setRecordingFormat("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getRecordingFormat());
+      
+      
     }
-
-    /** Test the property 'recordingDurationMs' */
+    /**
+     * Test the property 'recordingDurationMs'
+     */
     @Test
     public void recordingDurationMsTest() {
-
-        model.setRecordingDurationMs(1);
-        Assert.assertEquals(1, (int) model.getRecordingDurationMs());
+      
+      model.setRecordingDurationMs(1);
+      Assert.assertEquals(1, (int) model.getRecordingDurationMs());
     }
-
-    /** Test the property 'termReason' */
+    /**
+     * Test the property 'termReason'
+     */
     @Test
     public void termReasonTest() {
-        model.setTermReason(TranscribeTermReason.ERROR);
-        Assert.assertEquals(model.getTermReason(), TranscribeTermReason.ERROR);
-        model.setTermReason(TranscribeTermReason.COMPLETED);
-        Assert.assertEquals(model.getTermReason(), TranscribeTermReason.COMPLETED);
+      model.setTermReason(TranscribeTermReason.ERROR);
+      Assert.assertEquals(model.getTermReason(),TranscribeTermReason.ERROR);
+      model.setTermReason(TranscribeTermReason.COMPLETED);
+      Assert.assertEquals(model.getTermReason(),TranscribeTermReason.COMPLETED);
+      
     }
-
-    /** Test the property 'recordTermReason' */
+    /**
+     * Test the property 'recordTermReason'
+     */
     @Test
     public void recordTermReasonTest() {
-        model.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-        Assert.assertEquals(model.getRecordTermReason(), RecordUtteranceTermReason.FINISH_KEY);
-        model.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
-        Assert.assertEquals(model.getRecordTermReason(), RecordUtteranceTermReason.TIMEOUT);
-        model.setRecordTermReason(RecordUtteranceTermReason.HANGUP);
-        Assert.assertEquals(model.getRecordTermReason(), RecordUtteranceTermReason.HANGUP);
-        model.setRecordTermReason(RecordUtteranceTermReason.MAX_LENGTH);
-        Assert.assertEquals(model.getRecordTermReason(), RecordUtteranceTermReason.MAX_LENGTH);
+      model.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+      Assert.assertEquals(model.getRecordTermReason(),RecordUtteranceTermReason.FINISH_KEY);
+      model.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
+      Assert.assertEquals(model.getRecordTermReason(),RecordUtteranceTermReason.TIMEOUT);
+      model.setRecordTermReason(RecordUtteranceTermReason.HANGUP);
+      Assert.assertEquals(model.getRecordTermReason(),RecordUtteranceTermReason.HANGUP);
+      model.setRecordTermReason(RecordUtteranceTermReason.MAX_LENGTH);
+      Assert.assertEquals(model.getRecordTermReason(),RecordUtteranceTermReason.MAX_LENGTH);
+      
     }
-
-    /** Test the property 'digit' */
+    /**
+     * Test the property 'digit'
+     */
     @Test
     public void digitTest() {
-
-        model.setDigit("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDigit());
+      
+      
+      model.setDigit("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDigit());
+      
+      
     }
-
-    /** Test the property 'privacyForLogging' */
+    /**
+     * Test the property 'privacyForLogging'
+     */
     @Test
     public void privacyForLoggingTest() {
-        model.setPrivacyForLogging(false);
-        Assert.assertEquals(false, model.getPrivacyForLogging());
+      model.setPrivacyForLogging(false);
+      Assert.assertEquals(false, model.getPrivacyForLogging());       
+      
     }
-
-    /** Test the property 'privacyForRecording' */
+    /**
+     * Test the property 'privacyForRecording'
+     */
     @Test
     public void privacyForRecordingTest() {
-        model.setPrivacyForRecording(false);
-        Assert.assertEquals(false, model.getPrivacyForRecording());
+      model.setPrivacyForRecording(false);
+      Assert.assertEquals(false, model.getPrivacyForRecording());       
+      
     }
-
-    /** Test the property 'bargeInReason' */
+    /**
+     * Test the property 'bargeInReason'
+     */
     @Test
     public void bargeInReasonTest() {
-        model.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        Assert.assertEquals(model.getBargeInReason(), BargeInReason.NO_BARGE_IN);
-        model.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
-        Assert.assertEquals(model.getBargeInReason(), BargeInReason.BARGE_IN_BY_DTMF);
-        model.setBargeInReason(BargeInReason.BARGE_IN_BY_ENERGY);
-        Assert.assertEquals(model.getBargeInReason(), BargeInReason.BARGE_IN_BY_ENERGY);
+      model.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      Assert.assertEquals(model.getBargeInReason(),BargeInReason.NO_BARGE_IN);
+      model.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
+      Assert.assertEquals(model.getBargeInReason(),BargeInReason.BARGE_IN_BY_DTMF);
+      model.setBargeInReason(BargeInReason.BARGE_IN_BY_ENERGY);
+      Assert.assertEquals(model.getBargeInReason(),BargeInReason.BARGE_IN_BY_ENERGY);
+      
     }
-
-    /** Test the property 'bargedInPromptNo' */
+    /**
+     * Test the property 'bargedInPromptNo'
+     */
     @Test
     public void bargedInPromptNoTest() {
-
-        model.setBargedInPromptNo(1);
-        Assert.assertEquals(1, (int) model.getBargedInPromptNo());
+      
+      model.setBargedInPromptNo(1);
+      Assert.assertEquals(1, (int) model.getBargedInPromptNo());
     }
-
-    /** Test the property 'bargedInPromptMs' */
+    /**
+     * Test the property 'bargedInPromptMs'
+     */
     @Test
     public void bargedInPromptMsTest() {
-
-        model.setBargedInPromptMs(1);
-        Assert.assertEquals(1, (int) model.getBargedInPromptMs());
+      
+      model.setBargedInPromptMs(1);
+      Assert.assertEquals(1, (int) model.getBargedInPromptMs());
     }
-
-    /** Test the property 'bargedInPromptLoopNo' */
+    /**
+     * Test the property 'bargedInPromptLoopNo'
+     */
     @Test
     public void bargedInPromptLoopNoTest() {
-
-        model.setBargedInPromptLoopNo(1);
-        Assert.assertEquals(1, (int) model.getBargedInPromptLoopNo());
+      
+      model.setBargedInPromptLoopNo(1);
+      Assert.assertEquals(1, (int) model.getBargedInPromptLoopNo());
     }
-
-    /** Test the property 'bargeInTimeMs' */
+    /**
+     * Test the property 'bargeInTimeMs'
+     */
     @Test
     public void bargeInTimeMsTest() {
-
-        model.setBargeInTimeMs(1);
-        Assert.assertEquals(1, (int) model.getBargeInTimeMs());
+      
+      model.setBargeInTimeMs(1);
+      Assert.assertEquals(1, (int) model.getBargeInTimeMs());
     }
-
-    /** Test the property 'transcript' */
+    /**
+     * Test the property 'transcript'
+     */
     @Test
     public void transcriptTest() {
-
-        model.setTranscript("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTranscript());
+      
+      
+      model.setTranscript("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTranscript());
+      
+      
     }
-
-    /** Test the property 'transcribeReason' */
+    /**
+     * Test the property 'transcribeReason'
+     */
     @Test
     public void transcribeReasonTest() {
-        model.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        Assert.assertEquals(model.getTranscribeReason(), TranscribeReason.INTERNAL_ERROR);
-        model.setTranscribeReason(TranscribeReason.HANGUP);
-        Assert.assertEquals(model.getTranscribeReason(), TranscribeReason.HANGUP);
-        model.setTranscribeReason(TranscribeReason.MAX_LENGTH);
-        Assert.assertEquals(model.getTranscribeReason(), TranscribeReason.MAX_LENGTH);
-        model.setTranscribeReason(TranscribeReason.DIGIT);
-        Assert.assertEquals(model.getTranscribeReason(), TranscribeReason.DIGIT);
-        model.setTranscribeReason(TranscribeReason.NO_INPUT);
-        Assert.assertEquals(model.getTranscribeReason(), TranscribeReason.NO_INPUT);
+      model.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      Assert.assertEquals(model.getTranscribeReason(),TranscribeReason.INTERNAL_ERROR);
+      model.setTranscribeReason(TranscribeReason.HANGUP);
+      Assert.assertEquals(model.getTranscribeReason(),TranscribeReason.HANGUP);
+      model.setTranscribeReason(TranscribeReason.MAX_LENGTH);
+      Assert.assertEquals(model.getTranscribeReason(),TranscribeReason.MAX_LENGTH);
+      model.setTranscribeReason(TranscribeReason.DIGIT);
+      Assert.assertEquals(model.getTranscribeReason(),TranscribeReason.DIGIT);
+      model.setTranscribeReason(TranscribeReason.NO_INPUT);
+      Assert.assertEquals(model.getTranscribeReason(),TranscribeReason.NO_INPUT);
+      
     }
-
-    /** Test the property 'transcriptionDurationMs' */
+    /**
+     * Test the property 'transcriptionDurationMs'
+     */
     @Test
     public void transcriptionDurationMsTest() {
-
-        model.setTranscriptionDurationMs(1);
-        Assert.assertEquals(1, (int) model.getTranscriptionDurationMs());
+      
+      model.setTranscriptionDurationMs(1);
+      Assert.assertEquals(1, (int) model.getTranscriptionDurationMs());
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.ERROR);
-        test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test1.setTranscriptionDurationMs(1);
-        TranscribeWebhook test2 = new TranscribeWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setRecordingId("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.ERROR);
+      test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test1.setTranscriptionDurationMs(1);
+      TranscribeWebhook test2 = new TranscribeWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setRecordingSize(1);
+          e.printStackTrace();
+        };
+      test2.setRecordingSize(1);
+        
+        
+      test2.setRecordingFormat("TS");
+      
+      test2.setRecordingDurationMs(1);
+      test2.setTermReason(TranscribeTermReason.ERROR);
+      test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test2.setDigit("TS");
+      
+      test2.setPrivacyForLogging(true);
+      test2.setPrivacyForRecording(true);
+      test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test2.setBargedInPromptNo(1);
+      test2.setBargedInPromptMs(1);
+      test2.setBargedInPromptLoopNo(1);
+      test2.setBargeInTimeMs(1);
+        
+        
+      test2.setTranscript("TS");
+      
+      test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test2.setTranscriptionDurationMs(1);
 
-        test2.setRecordingFormat("TS");
-
-        test2.setRecordingDurationMs(1);
-        test2.setTermReason(TranscribeTermReason.ERROR);
-        test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test2.setDigit("TS");
-
-        test2.setPrivacyForLogging(true);
-        test2.setPrivacyForRecording(true);
-        test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test2.setBargedInPromptNo(1);
-        test2.setBargedInPromptMs(1);
-        test2.setBargedInPromptLoopNo(1);
-        test2.setBargeInTimeMs(1);
-
-        test2.setTranscript("TS");
-
-        test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test2.setTranscriptionDurationMs(1);
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.COMPLETED);
-        test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.HANGUP);
-        test1.setTranscriptionDurationMs(1);
-        TranscribeWebhook test2 = new TranscribeWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setRecordingId("TS2");
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.COMPLETED);
+      test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.HANGUP);
+      test1.setTranscriptionDurationMs(1);
+      TranscribeWebhook test2 = new TranscribeWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setRecordingId("TS2");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setRecordingSize(0);
+          e.printStackTrace();
+        };
+      test2.setRecordingSize(0);
+        
+        
+      test2.setRecordingFormat("TS2");
+      
+      test2.setRecordingDurationMs(0);
+      test2.setTermReason(TranscribeTermReason.ERROR);
+      test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test2.setDigit("TS2");
+      
+      test2.setPrivacyForLogging(false);
+      test2.setPrivacyForRecording(false);
+      test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test2.setBargedInPromptNo(0);
+      test2.setBargedInPromptMs(0);
+      test2.setBargedInPromptLoopNo(0);
+      test2.setBargeInTimeMs(0);
+        
+        
+      test2.setTranscript("TS2");
+      
+      test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test2.setTranscriptionDurationMs(0);
 
-        test2.setRecordingFormat("TS2");
-
-        test2.setRecordingDurationMs(0);
-        test2.setTermReason(TranscribeTermReason.ERROR);
-        test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test2.setDigit("TS2");
-
-        test2.setPrivacyForLogging(false);
-        test2.setPrivacyForRecording(false);
-        test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test2.setBargedInPromptNo(0);
-        test2.setBargedInPromptMs(0);
-        test2.setBargedInPromptLoopNo(0);
-        test2.setBargeInTimeMs(0);
-
-        test2.setTranscript("TS2");
-
-        test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test2.setTranscriptionDurationMs(0);
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.ERROR);
-        test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test1.setTranscriptionDurationMs(1);
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.ERROR);
+      test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test1.setTranscriptionDurationMs(1);
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.ERROR);
-        test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test1.setTranscriptionDurationMs(1);
-        TranscribeWebhook test2 = new TranscribeWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setRecordingId("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.ERROR);
+      test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test1.setTranscriptionDurationMs(1);
+      TranscribeWebhook test2 = new TranscribeWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setRecordingSize(1);
-
-        test2.setRecordingFormat("TS");
-
-        test2.setRecordingDurationMs(1);
-        test2.setTermReason(TranscribeTermReason.ERROR);
-        test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test2.setDigit("TS");
-
-        test2.setPrivacyForLogging(true);
-        test2.setPrivacyForRecording(true);
-        test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test2.setBargedInPromptNo(1);
-        test2.setBargedInPromptMs(1);
-        test2.setBargedInPromptLoopNo(1);
-        test2.setBargeInTimeMs(1);
-
-        test2.setTranscript("TS");
-
-        test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test2.setTranscriptionDurationMs(1);
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+          e.printStackTrace();
+        };
+      test2.setRecordingSize(1);
+        
+        
+      test2.setRecordingFormat("TS");
+      
+      test2.setRecordingDurationMs(1);
+      test2.setTermReason(TranscribeTermReason.ERROR);
+      test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test2.setDigit("TS");
+      
+      test2.setPrivacyForLogging(true);
+      test2.setPrivacyForRecording(true);
+      test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test2.setBargedInPromptNo(1);
+      test2.setBargedInPromptMs(1);
+      test2.setBargedInPromptLoopNo(1);
+      test2.setBargeInTimeMs(1);
+        
+        
+      test2.setTranscript("TS");
+      
+      test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test2.setTranscriptionDurationMs(1);
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.ERROR);
-        test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test1.setTranscriptionDurationMs(1);
-        TranscribeWebhook test2 = new TranscribeWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setRecordingId("TS");
-
-        try {
-            URI uri2 = new URI("TEST_STRING");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.ERROR);
+      test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test1.setTranscriptionDurationMs(1);
+      TranscribeWebhook test2 = new TranscribeWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setRecordingSize(1);
-
-        test2.setRecordingFormat("TS");
-
-        test2.setRecordingDurationMs(1);
-        test2.setTermReason(TranscribeTermReason.ERROR);
-        test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test2.setDigit("TS");
-
-        test2.setPrivacyForLogging(true);
-        test2.setPrivacyForRecording(true);
-        test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test2.setBargedInPromptNo(1);
-        test2.setBargedInPromptMs(1);
-        test2.setBargedInPromptLoopNo(1);
-        test2.setBargeInTimeMs(1);
-
-        test2.setTranscript("TS");
-
-        test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test2.setTranscriptionDurationMs(1);
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      test2.setRecordingSize(1);
+        
+        
+      test2.setRecordingFormat("TS");
+      
+      test2.setRecordingDurationMs(1);
+      test2.setTermReason(TranscribeTermReason.ERROR);
+      test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test2.setDigit("TS");
+      
+      test2.setPrivacyForLogging(true);
+      test2.setPrivacyForRecording(true);
+      test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test2.setBargedInPromptNo(1);
+      test2.setBargedInPromptMs(1);
+      test2.setBargedInPromptLoopNo(1);
+      test2.setBargeInTimeMs(1);
+        
+        
+      test2.setTranscript("TS");
+      
+      test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test2.setTranscriptionDurationMs(1);
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setRecordingId("TS");
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
-        test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.COMPLETED);
-        test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
-
-        test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
-        test1.setTranscript("TS");
-
-        test1.setTranscribeReason(TranscribeReason.HANGUP);
-        test1.setTranscriptionDurationMs(1);
-        TranscribeWebhook test2 = new TranscribeWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setRecordingId("TS2");
-
-        try {
-            URI uri2 = new URI("TEST_STRING2");
-            test2.setRecordingUrl(uri2);
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
+      test1.setRecordingFormat("TS");
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.COMPLETED);
+      test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
+        
+        
+      test1.setDigit("TS");
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
+      test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.HANGUP);
+      test1.setTranscriptionDurationMs(1);
+      TranscribeWebhook test2 = new TranscribeWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setRecordingId("TS2");
+      
+        
+        
+         try {
+          URI uri2 = new URI("TEST_STRING2");
+          test2.setRecordingUrl(uri2);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test2.setRecordingSize(0);
-
-        test2.setRecordingFormat("TS2");
-
-        test2.setRecordingDurationMs(0);
-        test2.setTermReason(TranscribeTermReason.ERROR);
-        test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
-        test2.setDigit("TS2");
-
-        test2.setPrivacyForLogging(false);
-        test2.setPrivacyForRecording(false);
-        test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test2.setBargedInPromptNo(0);
-        test2.setBargedInPromptMs(0);
-        test2.setBargedInPromptLoopNo(0);
-        test2.setBargeInTimeMs(0);
-
-        test2.setTranscript("TS2");
-
-        test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test2.setTranscriptionDurationMs(0);
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+          e.printStackTrace();
+        };
+      test2.setRecordingSize(0);
+        
+        
+      test2.setRecordingFormat("TS2");
+      
+      test2.setRecordingDurationMs(0);
+      test2.setTermReason(TranscribeTermReason.ERROR);
+      test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
+      test2.setDigit("TS2");
+      
+      test2.setPrivacyForLogging(false);
+      test2.setPrivacyForRecording(false);
+      test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test2.setBargedInPromptNo(0);
+      test2.setBargedInPromptMs(0);
+      test2.setBargedInPromptLoopNo(0);
+      test2.setBargeInTimeMs(0);
+        
+        
+      test2.setTranscript("TS2");
+      
+      test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test2.setTranscriptionDurationMs(0);
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        TranscribeWebhook test1 = new TranscribeWebhook();
-
+      TranscribeWebhook test1 = new TranscribeWebhook();
+        
+        
         test1.setRequestType("TS");
-
+      
+        
+        
         test1.setAccountId("TS");
-
+      
+        
+        
         test1.setCallId("TS");
-
+      
+        
+        
         test1.setFrom("TS");
-
+      
+        
+        
         test1.setTo("TS");
-
+      
+        
+        
         test1.setRecordingId("TS");
-
-        try {
-            URI uri1 = new URI("TEST_STRING");
-            test1.setRecordingUrl(uri1);
+      
+        
+        
+         try {
+          URI uri1 = new URI("TEST_STRING");
+          test1.setRecordingUrl(uri1);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ;
-        test1.setRecordingSize(1);
-
+          e.printStackTrace();
+        };
+      test1.setRecordingSize(1);
+        
+        
         test1.setRecordingFormat("TS");
-
-        test1.setRecordingDurationMs(1);
-        test1.setTermReason(TranscribeTermReason.ERROR);
-        test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
-
+      
+      test1.setRecordingDurationMs(1);
+      test1.setTermReason(TranscribeTermReason.ERROR);
+      test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
+        
+        
         test1.setDigit("TS");
-
-        test1.setPrivacyForLogging(true);
-        test1.setPrivacyForRecording(true);
-        test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
-        test1.setBargedInPromptNo(1);
-        test1.setBargedInPromptMs(1);
-        test1.setBargedInPromptLoopNo(1);
-        test1.setBargeInTimeMs(1);
-
+      
+      test1.setPrivacyForLogging(true);
+      test1.setPrivacyForRecording(true);
+      test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+      test1.setBargedInPromptNo(1);
+      test1.setBargedInPromptMs(1);
+      test1.setBargedInPromptLoopNo(1);
+      test1.setBargeInTimeMs(1);
+        
+        
         test1.setTranscript("TS");
+      
+      test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+      test1.setTranscriptionDurationMs(1);
 
-        test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
-        test1.setTranscriptionDurationMs(1);
-
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-        String json = "{ \"requestType\": \"transcribe\" }";
-        TranscribeWebhook webhookInstance = TranscribeWebhook.deserialize(json);
-        Assert.assertTrue(webhookInstance instanceof TranscribeWebhook);
+      String json = "{ \"requestType\": \"transcribe\" }";
+      TranscribeWebhook webhookInstance = TranscribeWebhook.deserialize(json);
+      Assert.assertTrue(webhookInstance instanceof TranscribeWebhook);
     }
-}
+    
+ }

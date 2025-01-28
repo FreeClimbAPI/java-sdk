@@ -10,249 +10,422 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for CallControlWebhook */
-public class CallControlWebhookTest {
-
-    private final CallControlWebhook model = new CallControlWebhook();
-
-    /** Test the property 'requestType' */
+/**
+ * Model tests for CallControlWebhook
+ */
+ public class CallControlWebhookTest {
+    
+    private final CallControlWebhook model = new CallControlWebhook(
+    );
+    
+    
+    /**
+     * Test the property 'requestType'
+     */
     @Test
-    public void requestTypeTest() {}
-
-    /** Test the property 'callId' */
+    public void requestTypeTest() {
+      
+    }
+    /**
+     * Test the property 'callId'
+     */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
     }
-
-    /** Test the property 'accountId' */
+    /**
+     * Test the property 'accountId'
+     */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-
-    /** Test the property 'conferenceId' */
+    /**
+     * Test the property 'conferenceId'
+     */
     @Test
     public void conferenceIdTest() {
-
-        model.setConferenceId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
+      model.setConferenceId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getConferenceId());
+      
+      
     }
-
-    /** Test the property 'digits' */
+    /**
+     * Test the property 'digits'
+     */
     @Test
     public void digitsTest() {
-
-        model.setDigits("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDigits());
+      
+      
+      model.setDigits("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDigits());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      CallControlWebhook test2 = new CallControlWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setDigits("TS");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        CallControlWebhook test2 = new CallControlWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setConferenceId("TS");
-
-        test2.setDigits("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      CallControlWebhook test2 = new CallControlWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setDigits("TS2");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        CallControlWebhook test2 = new CallControlWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setConferenceId("TS2");
-
-        test2.setDigits("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        CallControlWebhook test2 = new CallControlWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setConferenceId("TS");
-
-        test2.setDigits("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      CallControlWebhook test2 = new CallControlWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setDigits("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        CallControlWebhook test2 = new CallControlWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setCallId("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setConferenceId("TS");
-
-        test2.setDigits("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      CallControlWebhook test2 = new CallControlWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setConferenceId("TS");
+      
+        
+        
+      test2.setDigits("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setCallId("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setConferenceId("TS");
-
-        test1.setDigits("TS");
-
-        CallControlWebhook test2 = new CallControlWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setConferenceId("TS2");
-
-        test2.setDigits("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setConferenceId("TS");
+      
+        
+        
+      test1.setDigits("TS");
+      
+      CallControlWebhook test2 = new CallControlWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setConferenceId("TS2");
+      
+        
+        
+      test2.setDigits("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        CallControlWebhook test1 = new CallControlWebhook();
-
+      CallControlWebhook test1 = new CallControlWebhook();
+        
+        
         test1.setRequestType("TS");
-
+      
+        
+        
         test1.setCallId("TS");
-
+      
+        
+        
         test1.setAccountId("TS");
-
+      
+        
+        
         test1.setConferenceId("TS");
-
+      
+        
+        
         test1.setDigits("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-        String json = "{ \"requestType\": \"callControl\" }";
-        CallControlWebhook webhookInstance = CallControlWebhook.deserialize(json);
-        Assert.assertTrue(webhookInstance instanceof CallControlWebhook);
+      String json = "{ \"requestType\": \"callControl\" }";
+      CallControlWebhook webhookInstance = CallControlWebhook.deserialize(json);
+      Assert.assertTrue(webhookInstance instanceof CallControlWebhook);
     }
-}
+    
+ }

@@ -10,27 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for CallStatus */
-public class CallStatusTest {
-
+/**
+ * Model tests for CallStatus
+ */
+ public class CallStatusTest {
+    
+    
+    
     @Test
     public void testQUEUEDShouldWork() {
 
         CallStatus test = CallStatus.QUEUED;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testQUEUEDShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.QUEUED;
         CallStatus calculatedValue = CallStatus.fromValue("queued");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -38,22 +56,21 @@ public class CallStatusTest {
 
     @Test
     public void testQUEUEDShouldDeserializeToString() {
-        CallStatus test = CallStatus.QUEUED;
-        String expectedValue = "queued";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.QUEUED;
+      String expectedValue = "queued";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testRINGINGShouldWork() {
 
         CallStatus test = CallStatus.RINGING;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testRINGINGShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.RINGING;
         CallStatus calculatedValue = CallStatus.fromValue("ringing");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -61,22 +78,21 @@ public class CallStatusTest {
 
     @Test
     public void testRINGINGShouldDeserializeToString() {
-        CallStatus test = CallStatus.RINGING;
-        String expectedValue = "ringing";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.RINGING;
+      String expectedValue = "ringing";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testIN_PROGRESSShouldWork() {
 
         CallStatus test = CallStatus.IN_PROGRESS;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testIN_PROGRESSShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.IN_PROGRESS;
         CallStatus calculatedValue = CallStatus.fromValue("inProgress");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -84,22 +100,21 @@ public class CallStatusTest {
 
     @Test
     public void testIN_PROGRESSShouldDeserializeToString() {
-        CallStatus test = CallStatus.IN_PROGRESS;
-        String expectedValue = "inProgress";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.IN_PROGRESS;
+      String expectedValue = "inProgress";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testCANCELEDShouldWork() {
 
         CallStatus test = CallStatus.CANCELED;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testCANCELEDShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.CANCELED;
         CallStatus calculatedValue = CallStatus.fromValue("canceled");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -107,22 +122,21 @@ public class CallStatusTest {
 
     @Test
     public void testCANCELEDShouldDeserializeToString() {
-        CallStatus test = CallStatus.CANCELED;
-        String expectedValue = "canceled";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.CANCELED;
+      String expectedValue = "canceled";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testCOMPLETEDShouldWork() {
 
         CallStatus test = CallStatus.COMPLETED;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testCOMPLETEDShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.COMPLETED;
         CallStatus calculatedValue = CallStatus.fromValue("completed");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -130,22 +144,21 @@ public class CallStatusTest {
 
     @Test
     public void testCOMPLETEDShouldDeserializeToString() {
-        CallStatus test = CallStatus.COMPLETED;
-        String expectedValue = "completed";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.COMPLETED;
+      String expectedValue = "completed";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testFAILEDShouldWork() {
 
         CallStatus test = CallStatus.FAILED;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testFAILEDShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.FAILED;
         CallStatus calculatedValue = CallStatus.fromValue("failed");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -153,22 +166,21 @@ public class CallStatusTest {
 
     @Test
     public void testFAILEDShouldDeserializeToString() {
-        CallStatus test = CallStatus.FAILED;
-        String expectedValue = "failed";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.FAILED;
+      String expectedValue = "failed";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testBUSYShouldWork() {
 
         CallStatus test = CallStatus.BUSY;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testBUSYShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.BUSY;
         CallStatus calculatedValue = CallStatus.fromValue("busy");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -176,22 +188,21 @@ public class CallStatusTest {
 
     @Test
     public void testBUSYShouldDeserializeToString() {
-        CallStatus test = CallStatus.BUSY;
-        String expectedValue = "busy";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.BUSY;
+      String expectedValue = "busy";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testNO_ANSWERShouldWork() {
 
         CallStatus test = CallStatus.NO_ANSWER;
-        Assert.assertEquals(test.getClass(), CallStatus.class);
+         Assert.assertEquals(test.getClass(), CallStatus.class);
     }
 
-    @Test
+    @Test 
     public void testNO_ANSWERShouldSerializeToEnum() {
-
+    
         CallStatus expectedValue = CallStatus.NO_ANSWER;
         CallStatus calculatedValue = CallStatus.fromValue("noAnswer");
         Assert.assertEquals(expectedValue, calculatedValue);
@@ -199,9 +210,11 @@ public class CallStatusTest {
 
     @Test
     public void testNO_ANSWERShouldDeserializeToString() {
-        CallStatus test = CallStatus.NO_ANSWER;
-        String expectedValue = "noAnswer";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     CallStatus test = CallStatus.NO_ANSWER;
+      String expectedValue = "noAnswer";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

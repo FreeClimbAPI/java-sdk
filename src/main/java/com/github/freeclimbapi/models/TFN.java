@@ -12,85 +12,113 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
-import java.util.Objects;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** TollFree Campaign details for this number */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * TollFree Campaign details for this number
+ */
 @ApiModel(description = "TollFree Campaign details for this number")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TFN {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
+  
+  
+  @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
+  
+  private String campaignId;
+
+
+  public TFN() { 
+  }
+
+  public TFN campaignId(String campaignId) {
+    
+    this.campaignId = campaignId;
+    return this;
+  }
+
+   /**
+   * alphanumeric identifier for the TollFree campaign associated with this number
+   * @return campaignId
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "alphanumeric identifier for the TollFree campaign associated with this number")
+
+  public String getCampaignId() {
+    return campaignId;
+  }
+
+
+  public void setCampaignId(String campaignId) {
+    this.campaignId = campaignId;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_CAMPAIGN_ID = "campaignId";
-
-    @SerializedName(SERIALIZED_NAME_CAMPAIGN_ID)
-    private String campaignId;
-
-    public TFN() {}
-
-    public TFN campaignId(String campaignId) {
-
-        this.campaignId = campaignId;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    TFN TFN = (TFN) o;
+    return Objects.equals(this.campaignId, TFN.campaignId);
+  }
 
-    /**
-     * alphanumeric identifier for the TollFree campaign associated with this number
-     *
-     * @return campaignId
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value = "alphanumeric identifier for the TollFree campaign associated with this number")
-    public String getCampaignId() {
-        return campaignId;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(campaignId);
+  }
 
-    public void setCampaignId(String campaignId) {
-        this.campaignId = campaignId;
-    }
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TFN {\n");
+    sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        TFN TFN = (TFN) o;
-        return Objects.equals(this.campaignId, TFN.campaignId);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(campaignId);
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class TFN {\n");
-        sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

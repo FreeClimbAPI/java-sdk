@@ -12,299 +12,303 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
+import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.net.URI;
-import java.util.*;
-import java.util.Arrays;
-import java.util.HashMap;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
+import java.util.HashMap;
 import java.util.concurrent.Callable;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * The &#x60;CreateConference&#x60; command does exactly what its name implies — it creates an
- * unpopulated Conference (one without any Participants). Once created, a Conference remains in
- * FreeClimb until explicitly terminated by a customer. Once a Conference has been terminated, it
- * can no longer be used.
+ * The &#x60;CreateConference&#x60; command does exactly what its name implies — it creates an unpopulated Conference (one without any Participants). Once created, a Conference remains in FreeClimb until explicitly terminated by a customer. Once a Conference has been terminated, it can no longer be used.
  */
-@ApiModel(
-        description =
-                "The `CreateConference` command does exactly what its name implies — it creates an"
-                    + " unpopulated Conference (one without any Participants). Once created, a"
-                    + " Conference remains in FreeClimb until explicitly terminated by a customer."
-                    + " Once a Conference has been terminated, it can no longer be used.")
+@ApiModel(description = "The `CreateConference` command does exactly what its name implies — it creates an unpopulated Conference (one without any Participants). Once created, a Conference remains in FreeClimb until explicitly terminated by a customer. Once a Conference has been terminated, it can no longer be used.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateConference extends PerclCommand {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ACTION_URL)
+  
+  private URI actionUrl;
+
+  
+  public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ALIAS)
+  
+  private Boolean alias;
+
+  
+  public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
+  private PlayBeep playBeep;
+
+  
+  public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
+  @SerializedName(SERIALIZED_NAME_RECORD)
+  
+  private Boolean record;
+
+  
+  public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+  
+  private URI statusCallbackUrl;
+
+  
+  public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_WAIT_URL)
+  
+  private URI waitUrl;
+
+
+  public CreateConference() { 
+    this.command = this.getClass().getSimpleName();
+  }
+
+  public CreateConference actionUrl(URI actionUrl) {
+    
+    this.actionUrl = actionUrl;
+    return this;
+  }
+
+   /**
+   *  This URL is invoked once the Conference is successfully created. Actions on the Conference, such as adding Participants, can be performed via the PerCL script returned in the response. 
+   * @return actionUrl
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = " This URL is invoked once the Conference is successfully created. Actions on the Conference, such as adding Participants, can be performed via the PerCL script returned in the response. ")
+
+  public URI getActionUrl() {
+    return actionUrl;
+  }
+
+
+  public void setActionUrl(URI actionUrl) {
+    this.actionUrl = actionUrl;
+  }
+
+
+  public CreateConference alias(Boolean alias) {
+    
+    this.alias = alias;
+    return this;
+  }
+
+   /**
+   * Descriptive name for the Conference. 
+   * @return alias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Descriptive name for the Conference. ")
+
+  public Boolean getAlias() {
+    return alias;
+  }
+
+
+  public void setAlias(Boolean alias) {
+    this.alias = alias;
+  }
+
+
+  public CreateConference playBeep(PlayBeep playBeep) {
+    
+    this.playBeep = playBeep;
+    return this;
+  }
+
+   /**
+   * Get playBeep
+   * @return playBeep
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PlayBeep getPlayBeep() {
+    return playBeep;
+  }
+
+
+  public void setPlayBeep(PlayBeep playBeep) {
+    this.playBeep = playBeep;
+  }
+
+
+  public CreateConference record(Boolean record) {
+    
+    this.record = record;
+    return this;
+  }
+
+   /**
+   * When set to &#x60;true&#x60;, the entire Conference is recorded. The &#x60;statusCallbackUrl&#x60; of the Conference will receive a &#x60;conferenceRecordingEnded&#x60; Webhook when the Conference transitions from the &#x60;inProgress&#x60; to empty state.
+   * @return record
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "When set to `true`, the entire Conference is recorded. The `statusCallbackUrl` of the Conference will receive a `conferenceRecordingEnded` Webhook when the Conference transitions from the `inProgress` to empty state.")
+
+  public Boolean getRecord() {
+    return record;
+  }
+
+
+  public void setRecord(Boolean record) {
+    this.record = record;
+  }
+
+
+  public CreateConference statusCallbackUrl(URI statusCallbackUrl) {
+    
+    this.statusCallbackUrl = statusCallbackUrl;
+    return this;
+  }
+
+   /**
+   * This URL is invoked when the status of the Conference changes or when a recording of the Conference has become available.
+   * @return statusCallbackUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This URL is invoked when the status of the Conference changes or when a recording of the Conference has become available.")
+
+  public URI getStatusCallbackUrl() {
+    return statusCallbackUrl;
+  }
+
+
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
+    this.statusCallbackUrl = statusCallbackUrl;
+  }
+
+
+  public CreateConference waitUrl(URI waitUrl) {
+    
+    this.waitUrl = waitUrl;
+    return this;
+  }
+
+   /**
+   * If specified, this URL provides the custom hold music for the Conference when it is in the populated state. This attribute is always fetched using HTTP GET and is fetched just once – when the Conference is created. The URL must be an audio file that is reachable and readable by FreeClimb.
+   * @return waitUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "If specified, this URL provides the custom hold music for the Conference when it is in the populated state. This attribute is always fetched using HTTP GET and is fetched just once – when the Conference is created. The URL must be an audio file that is reachable and readable by FreeClimb.")
+
+  public URI getWaitUrl() {
+    return waitUrl;
+  }
+
+
+  public void setWaitUrl(URI waitUrl) {
+    this.waitUrl = waitUrl;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_ACTION_URL = "actionUrl";
-
-    @SerializedName(SERIALIZED_NAME_ACTION_URL)
-    private URI actionUrl;
-
-    public static final String SERIALIZED_NAME_ALIAS = "alias";
-
-    @SerializedName(SERIALIZED_NAME_ALIAS)
-    private Boolean alias;
-
-    public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
-
-    @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-    private PlayBeep playBeep;
-
-    public static final String SERIALIZED_NAME_RECORD = "record";
-
-    @SerializedName(SERIALIZED_NAME_RECORD)
-    private Boolean record;
-
-    public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
-
-    @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-    private URI statusCallbackUrl;
-
-    public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
-
-    @SerializedName(SERIALIZED_NAME_WAIT_URL)
-    private URI waitUrl;
-
-    public CreateConference() {
-        this.command = this.getClass().getSimpleName();
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    CreateConference createConference = (CreateConference) o;
+    return Objects.equals(this.actionUrl, createConference.actionUrl) &&
+        Objects.equals(this.alias, createConference.alias) &&
+        Objects.equals(this.playBeep, createConference.playBeep) &&
+        Objects.equals(this.record, createConference.record) &&
+        Objects.equals(this.statusCallbackUrl, createConference.statusCallbackUrl) &&
+        Objects.equals(this.waitUrl, createConference.waitUrl) &&
+        super.equals(o);
+  }
 
-    public CreateConference actionUrl(URI actionUrl) {
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
 
-        this.actionUrl = actionUrl;
-        return this;
+  @Override
+  public int hashCode() {
+    return Objects.hash(actionUrl, alias, playBeep, record, statusCallbackUrl, waitUrl, super.hashCode());
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
     }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+  }
 
-    /**
-     * This URL is invoked once the Conference is successfully created. Actions on the Conference,
-     * such as adding Participants, can be performed via the PerCL script returned in the response.
-     *
-     * @return actionUrl
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(
-            required = true,
-            value =
-                    " This URL is invoked once the Conference is successfully created. Actions on"
-                        + " the Conference, such as adding Participants, can be performed via the"
-                        + " PerCL script returned in the response. ")
-    public URI getActionUrl() {
-        return actionUrl;
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class CreateConference {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
+    sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
+    sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
+    sb.append("    record: ").append(toIndentedString(record)).append("\n");
+    sb.append("    statusCallbackUrl: ").append(toIndentedString(statusCallbackUrl)).append("\n");
+    sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  @Override
+  public Map<String, Callable<Object>> attributeTypeMap() {
+    Map<String, Callable<Object>> attributes = new HashMap();
+    attributes.put("actionUrl", () -> this.getActionUrl());
+    attributes.put("alias", () -> this.getAlias());
+    attributes.put("playBeep", () -> this.getPlayBeep());
+    attributes.put("record", () -> this.getRecord());
+    attributes.put("statusCallbackUrl", () -> this.getStatusCallbackUrl());
+    attributes.put("waitUrl", () -> this.getWaitUrl());
+    return attributes;
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public void setActionUrl(URI actionUrl) {
-        this.actionUrl = actionUrl;
-    }
-
-    public CreateConference alias(Boolean alias) {
-
-        this.alias = alias;
-        return this;
-    }
-
-    /**
-     * Descriptive name for the Conference.
-     *
-     * @return alias
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Descriptive name for the Conference. ")
-    public Boolean getAlias() {
-        return alias;
-    }
-
-    public void setAlias(Boolean alias) {
-        this.alias = alias;
-    }
-
-    public CreateConference playBeep(PlayBeep playBeep) {
-
-        this.playBeep = playBeep;
-        return this;
-    }
-
-    /**
-     * Get playBeep
-     *
-     * @return playBeep
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public PlayBeep getPlayBeep() {
-        return playBeep;
-    }
-
-    public void setPlayBeep(PlayBeep playBeep) {
-        this.playBeep = playBeep;
-    }
-
-    public CreateConference record(Boolean record) {
-
-        this.record = record;
-        return this;
-    }
-
-    /**
-     * When set to &#x60;true&#x60;, the entire Conference is recorded. The
-     * &#x60;statusCallbackUrl&#x60; of the Conference will receive a
-     * &#x60;conferenceRecordingEnded&#x60; Webhook when the Conference transitions from the
-     * &#x60;inProgress&#x60; to empty state.
-     *
-     * @return record
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "When set to `true`, the entire Conference is recorded. The `statusCallbackUrl`"
-                        + " of the Conference will receive a `conferenceRecordingEnded` Webhook"
-                        + " when the Conference transitions from the `inProgress` to empty state.")
-    public Boolean getRecord() {
-        return record;
-    }
-
-    public void setRecord(Boolean record) {
-        this.record = record;
-    }
-
-    public CreateConference statusCallbackUrl(URI statusCallbackUrl) {
-
-        this.statusCallbackUrl = statusCallbackUrl;
-        return this;
-    }
-
-    /**
-     * This URL is invoked when the status of the Conference changes or when a recording of the
-     * Conference has become available.
-     *
-     * @return statusCallbackUrl
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "This URL is invoked when the status of the Conference changes or when a"
-                            + " recording of the Conference has become available.")
-    public URI getStatusCallbackUrl() {
-        return statusCallbackUrl;
-    }
-
-    public void setStatusCallbackUrl(URI statusCallbackUrl) {
-        this.statusCallbackUrl = statusCallbackUrl;
-    }
-
-    public CreateConference waitUrl(URI waitUrl) {
-
-        this.waitUrl = waitUrl;
-        return this;
-    }
-
-    /**
-     * If specified, this URL provides the custom hold music for the Conference when it is in the
-     * populated state. This attribute is always fetched using HTTP GET and is fetched just once –
-     * when the Conference is created. The URL must be an audio file that is reachable and readable
-     * by FreeClimb.
-     *
-     * @return waitUrl
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "If specified, this URL provides the custom hold music for the Conference when"
-                        + " it is in the populated state. This attribute is always fetched using"
-                        + " HTTP GET and is fetched just once – when the Conference is created. The"
-                        + " URL must be an audio file that is reachable and readable by FreeClimb.")
-    public URI getWaitUrl() {
-        return waitUrl;
-    }
-
-    public void setWaitUrl(URI waitUrl) {
-        this.waitUrl = waitUrl;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        CreateConference createConference = (CreateConference) o;
-        return Objects.equals(this.actionUrl, createConference.actionUrl)
-                && Objects.equals(this.alias, createConference.alias)
-                && Objects.equals(this.playBeep, createConference.playBeep)
-                && Objects.equals(this.record, createConference.record)
-                && Objects.equals(this.statusCallbackUrl, createConference.statusCallbackUrl)
-                && Objects.equals(this.waitUrl, createConference.waitUrl)
-                && super.equals(o);
-    }
-
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(
-                actionUrl, alias, playBeep, record, statusCallbackUrl, waitUrl, super.hashCode());
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class CreateConference {\n");
-        sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-        sb.append("    actionUrl: ").append(toIndentedString(actionUrl)).append("\n");
-        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
-        sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
-        sb.append("    record: ").append(toIndentedString(record)).append("\n");
-        sb.append("    statusCallbackUrl: ")
-                .append(toIndentedString(statusCallbackUrl))
-                .append("\n");
-        sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    @Override
-    public Map<String, Callable<Object>> attributeTypeMap() {
-        Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("actionUrl", () -> this.getActionUrl());
-        attributes.put("alias", () -> this.getAlias());
-        attributes.put("playBeep", () -> this.getPlayBeep());
-        attributes.put("record", () -> this.getRecord());
-        attributes.put("statusCallbackUrl", () -> this.getStatusCallbackUrl());
-        attributes.put("waitUrl", () -> this.getWaitUrl());
-        return attributes;
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

@@ -10,110 +10,123 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for SMSTenDLCBrandAltBusinessIdType */
-public class SMSTenDLCBrandAltBusinessIdTypeTest {
-
+/**
+ * Model tests for SMSTenDLCBrandAltBusinessIdType
+ */
+ public class SMSTenDLCBrandAltBusinessIdTypeTest {
+    
+    
+    
     @Test
     public void testNONEShouldWork() {
 
         SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.NONE;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
     }
 
-    @Test
+    @Test 
     public void testNONEShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandAltBusinessIdType expectedValue = SMSTenDLCBrandAltBusinessIdType.NONE;
-        SMSTenDLCBrandAltBusinessIdType calculatedValue =
-                SMSTenDLCBrandAltBusinessIdType.fromValue("NONE");
+        SMSTenDLCBrandAltBusinessIdType calculatedValue = SMSTenDLCBrandAltBusinessIdType.fromValue("NONE");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testNONEShouldDeserializeToString() {
-        SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.NONE;
-        String expectedValue = "NONE";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.NONE;
+      String expectedValue = "NONE";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testDUNSShouldWork() {
 
         SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.DUNS;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
     }
 
-    @Test
+    @Test 
     public void testDUNSShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandAltBusinessIdType expectedValue = SMSTenDLCBrandAltBusinessIdType.DUNS;
-        SMSTenDLCBrandAltBusinessIdType calculatedValue =
-                SMSTenDLCBrandAltBusinessIdType.fromValue("DUNS");
+        SMSTenDLCBrandAltBusinessIdType calculatedValue = SMSTenDLCBrandAltBusinessIdType.fromValue("DUNS");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testDUNSShouldDeserializeToString() {
-        SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.DUNS;
-        String expectedValue = "DUNS";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.DUNS;
+      String expectedValue = "DUNS";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testGIINShouldWork() {
 
         SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.GIIN;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
     }
 
-    @Test
+    @Test 
     public void testGIINShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandAltBusinessIdType expectedValue = SMSTenDLCBrandAltBusinessIdType.GIIN;
-        SMSTenDLCBrandAltBusinessIdType calculatedValue =
-                SMSTenDLCBrandAltBusinessIdType.fromValue("GIIN");
+        SMSTenDLCBrandAltBusinessIdType calculatedValue = SMSTenDLCBrandAltBusinessIdType.fromValue("GIIN");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testGIINShouldDeserializeToString() {
-        SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.GIIN;
-        String expectedValue = "GIIN";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.GIIN;
+      String expectedValue = "GIIN";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-
-    @Test
+        @Test
     public void testLEIShouldWork() {
 
         SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.LEI;
-        Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
+         Assert.assertEquals(test.getClass(), SMSTenDLCBrandAltBusinessIdType.class);
     }
 
-    @Test
+    @Test 
     public void testLEIShouldSerializeToEnum() {
-
+    
         SMSTenDLCBrandAltBusinessIdType expectedValue = SMSTenDLCBrandAltBusinessIdType.LEI;
-        SMSTenDLCBrandAltBusinessIdType calculatedValue =
-                SMSTenDLCBrandAltBusinessIdType.fromValue("LEI");
+        SMSTenDLCBrandAltBusinessIdType calculatedValue = SMSTenDLCBrandAltBusinessIdType.fromValue("LEI");
         Assert.assertEquals(expectedValue, calculatedValue);
     }
 
     @Test
     public void testLEIShouldDeserializeToString() {
-        SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.LEI;
-        String expectedValue = "LEI";
-        String calculatedValue = test.toString();
-        Assert.assertEquals(expectedValue, calculatedValue);
+     SMSTenDLCBrandAltBusinessIdType test = SMSTenDLCBrandAltBusinessIdType.LEI;
+      String expectedValue = "LEI";
+      String calculatedValue = test.toString();
+      Assert.assertEquals(expectedValue, calculatedValue);
     }
-}
+    
+    
+ }

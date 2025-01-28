@@ -12,227 +12,255 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
-import java.net.URI;
-import java.util.*;
-import java.util.Arrays;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
 import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** CreateConferenceRequest */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * CreateConferenceRequest
+ */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateConferenceRequest {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_ALIAS = "alias";
+  
+  
+  @SerializedName(SERIALIZED_NAME_ALIAS)
+  
+  private String alias;
+
+  
+  public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
+  
+  
+  @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
+  
+  private PlayBeep playBeep;
+
+  
+  public static final String SERIALIZED_NAME_RECORD = "record";
+  
+  
+  @SerializedName(SERIALIZED_NAME_RECORD)
+  
+  private Boolean record;
+
+  
+  public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_WAIT_URL)
+  
+  private URI waitUrl;
+
+  
+  public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
+  
+  
+  @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
+  
+  private URI statusCallbackUrl;
+
+
+  public CreateConferenceRequest() { 
+  }
+
+  public CreateConferenceRequest alias(String alias) {
+    
+    this.alias = alias;
+    return this;
+  }
+
+   /**
+   * A description for this Conference. Maximum 64 characters.
+   * @return alias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "A description for this Conference. Maximum 64 characters.")
+
+  public String getAlias() {
+    return alias;
+  }
+
+
+  public void setAlias(String alias) {
+    this.alias = alias;
+  }
+
+
+  public CreateConferenceRequest playBeep(PlayBeep playBeep) {
+    
+    this.playBeep = playBeep;
+    return this;
+  }
+
+   /**
+   * Get playBeep
+   * @return playBeep
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PlayBeep getPlayBeep() {
+    return playBeep;
+  }
+
+
+  public void setPlayBeep(PlayBeep playBeep) {
+    this.playBeep = playBeep;
+  }
+
+
+  public CreateConferenceRequest record(Boolean record) {
+    
+    this.record = record;
+    return this;
+  }
+
+   /**
+   * Setting to &#x60;true&#x60; records the entire Conference.
+   * @return record
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Setting to `true` records the entire Conference.")
+
+  public Boolean getRecord() {
+    return record;
+  }
+
+
+  public void setRecord(Boolean record) {
+    this.record = record;
+  }
+
+
+  public CreateConferenceRequest waitUrl(URI waitUrl) {
+    
+    this.waitUrl = waitUrl;
+    return this;
+  }
+
+   /**
+   * If specified, a URL for the audio file that provides custom hold music for the Conference when it is in the populated state. Otherwise, FreeClimb uses a system default audio file. This is always fetched using HTTP GET and is fetched just once &amp;mdash; when the Conference is created.
+   * @return waitUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "If specified, a URL for the audio file that provides custom hold music for the Conference when it is in the populated state. Otherwise, FreeClimb uses a system default audio file. This is always fetched using HTTP GET and is fetched just once &mdash; when the Conference is created.")
+
+  public URI getWaitUrl() {
+    return waitUrl;
+  }
+
+
+  public void setWaitUrl(URI waitUrl) {
+    this.waitUrl = waitUrl;
+  }
+
+
+  public CreateConferenceRequest statusCallbackUrl(URI statusCallbackUrl) {
+    
+    this.statusCallbackUrl = statusCallbackUrl;
+    return this;
+  }
+
+   /**
+   * This URL is invoked when the status of the Conference changes. For more information, see **statusCallbackUrl** (below).
+   * @return statusCallbackUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This URL is invoked when the status of the Conference changes. For more information, see **statusCallbackUrl** (below).")
+
+  public URI getStatusCallbackUrl() {
+    return statusCallbackUrl;
+  }
+
+
+  public void setStatusCallbackUrl(URI statusCallbackUrl) {
+    this.statusCallbackUrl = statusCallbackUrl;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_ALIAS = "alias";
-
-    @SerializedName(SERIALIZED_NAME_ALIAS)
-    private String alias;
-
-    public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
-
-    @SerializedName(SERIALIZED_NAME_PLAY_BEEP)
-    private PlayBeep playBeep;
-
-    public static final String SERIALIZED_NAME_RECORD = "record";
-
-    @SerializedName(SERIALIZED_NAME_RECORD)
-    private Boolean record;
-
-    public static final String SERIALIZED_NAME_WAIT_URL = "waitUrl";
-
-    @SerializedName(SERIALIZED_NAME_WAIT_URL)
-    private URI waitUrl;
-
-    public static final String SERIALIZED_NAME_STATUS_CALLBACK_URL = "statusCallbackUrl";
-
-    @SerializedName(SERIALIZED_NAME_STATUS_CALLBACK_URL)
-    private URI statusCallbackUrl;
-
-    public CreateConferenceRequest() {}
-
-    public CreateConferenceRequest alias(String alias) {
-
-        this.alias = alias;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    CreateConferenceRequest createConferenceRequest = (CreateConferenceRequest) o;
+    return Objects.equals(this.alias, createConferenceRequest.alias) &&
+        Objects.equals(this.playBeep, createConferenceRequest.playBeep) &&
+        Objects.equals(this.record, createConferenceRequest.record) &&
+        Objects.equals(this.waitUrl, createConferenceRequest.waitUrl) &&
+        Objects.equals(this.statusCallbackUrl, createConferenceRequest.statusCallbackUrl);
+  }
 
-    /**
-     * A description for this Conference. Maximum 64 characters.
-     *
-     * @return alias
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "A description for this Conference. Maximum 64 characters.")
-    public String getAlias() {
-        return alias;
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(alias, playBeep, record, waitUrl, statusCallbackUrl);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
     }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+  }
 
-    public void setAlias(String alias) {
-        this.alias = alias;
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class CreateConferenceRequest {\n");
+    sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
+    sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
+    sb.append("    record: ").append(toIndentedString(record)).append("\n");
+    sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
+    sb.append("    statusCallbackUrl: ").append(toIndentedString(statusCallbackUrl)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public CreateConferenceRequest playBeep(PlayBeep playBeep) {
-
-        this.playBeep = playBeep;
-        return this;
-    }
-
-    /**
-     * Get playBeep
-     *
-     * @return playBeep
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public PlayBeep getPlayBeep() {
-        return playBeep;
-    }
-
-    public void setPlayBeep(PlayBeep playBeep) {
-        this.playBeep = playBeep;
-    }
-
-    public CreateConferenceRequest record(Boolean record) {
-
-        this.record = record;
-        return this;
-    }
-
-    /**
-     * Setting to &#x60;true&#x60; records the entire Conference.
-     *
-     * @return record
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Setting to `true` records the entire Conference.")
-    public Boolean getRecord() {
-        return record;
-    }
-
-    public void setRecord(Boolean record) {
-        this.record = record;
-    }
-
-    public CreateConferenceRequest waitUrl(URI waitUrl) {
-
-        this.waitUrl = waitUrl;
-        return this;
-    }
-
-    /**
-     * If specified, a URL for the audio file that provides custom hold music for the Conference
-     * when it is in the populated state. Otherwise, FreeClimb uses a system default audio file.
-     * This is always fetched using HTTP GET and is fetched just once &amp;mdash; when the
-     * Conference is created.
-     *
-     * @return waitUrl
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "If specified, a URL for the audio file that provides custom hold music for the"
-                        + " Conference when it is in the populated state. Otherwise, FreeClimb uses"
-                        + " a system default audio file. This is always fetched using HTTP GET and"
-                        + " is fetched just once &mdash; when the Conference is created.")
-    public URI getWaitUrl() {
-        return waitUrl;
-    }
-
-    public void setWaitUrl(URI waitUrl) {
-        this.waitUrl = waitUrl;
-    }
-
-    public CreateConferenceRequest statusCallbackUrl(URI statusCallbackUrl) {
-
-        this.statusCallbackUrl = statusCallbackUrl;
-        return this;
-    }
-
-    /**
-     * This URL is invoked when the status of the Conference changes. For more information, see
-     * **statusCallbackUrl** (below).
-     *
-     * @return statusCallbackUrl
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "This URL is invoked when the status of the Conference changes. For more"
-                            + " information, see **statusCallbackUrl** (below).")
-    public URI getStatusCallbackUrl() {
-        return statusCallbackUrl;
-    }
-
-    public void setStatusCallbackUrl(URI statusCallbackUrl) {
-        this.statusCallbackUrl = statusCallbackUrl;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        CreateConferenceRequest createConferenceRequest = (CreateConferenceRequest) o;
-        return Objects.equals(this.alias, createConferenceRequest.alias)
-                && Objects.equals(this.playBeep, createConferenceRequest.playBeep)
-                && Objects.equals(this.record, createConferenceRequest.record)
-                && Objects.equals(this.waitUrl, createConferenceRequest.waitUrl)
-                && Objects.equals(
-                        this.statusCallbackUrl, createConferenceRequest.statusCallbackUrl);
-    }
-
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(alias, playBeep, record, waitUrl, statusCallbackUrl);
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class CreateConferenceRequest {\n");
-        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
-        sb.append("    playBeep: ").append(toIndentedString(playBeep)).append("\n");
-        sb.append("    record: ").append(toIndentedString(record)).append("\n");
-        sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
-        sb.append("    statusCallbackUrl: ")
-                .append(toIndentedString(statusCallbackUrl))
-                .append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }

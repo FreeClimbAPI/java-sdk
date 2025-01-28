@@ -12,60 +12,73 @@
 
 package com.github.freeclimbapi.enums;
 
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
-/** TCR assessment of the brand identification status. */
+/**
+ * TCR assessment of the brand identification status.
+ */
 @JsonAdapter(SMSTenDLCBrandIdentityStatus.Adapter.class)
 public enum SMSTenDLCBrandIdentityStatus {
-    SELF_DECLARED("SELF_DECLARED"),
+  
+  SELF_DECLARED("SELF_DECLARED"),
+  
+  UNVERIFIED("UNVERIFIED"),
+  
+  VERIFIED("VERIFIED"),
+  
+  VETTED_VERIFIED("VETTED_VERIFIED");
 
-    UNVERIFIED("UNVERIFIED"),
+  private String value;
 
-    VERIFIED("VERIFIED"),
+  SMSTenDLCBrandIdentityStatus(String value) {
+    this.value = value;
+  }
 
-    VETTED_VERIFIED("VETTED_VERIFIED");
+  public String getValue() {
+    return value;
+  }
 
-    private String value;
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
 
-    SMSTenDLCBrandIdentityStatus(String value) {
-        this.value = value;
+  public static SMSTenDLCBrandIdentityStatus fromValue(String value) {
+    for (SMSTenDLCBrandIdentityStatus b : SMSTenDLCBrandIdentityStatus.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
     }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
 
-    public String getValue() {
-        return value;
+  public static class Adapter extends TypeAdapter<SMSTenDLCBrandIdentityStatus> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final SMSTenDLCBrandIdentityStatus enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public String toString() {
-        return String.valueOf(value);
+    public SMSTenDLCBrandIdentityStatus read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return SMSTenDLCBrandIdentityStatus.fromValue(value);
     }
-
-    public static SMSTenDLCBrandIdentityStatus fromValue(String value) {
-        for (SMSTenDLCBrandIdentityStatus b : SMSTenDLCBrandIdentityStatus.values()) {
-            if (b.value.equals(value)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<SMSTenDLCBrandIdentityStatus> {
-        @Override
-        public void write(
-                final JsonWriter jsonWriter, final SMSTenDLCBrandIdentityStatus enumeration)
-                throws IOException {
-            jsonWriter.value(enumeration.getValue());
-        }
-
-        @Override
-        public SMSTenDLCBrandIdentityStatus read(final JsonReader jsonReader) throws IOException {
-            String value = jsonReader.nextString();
-            return SMSTenDLCBrandIdentityStatus.fromValue(value);
-        }
-    }
+  }
 }
+

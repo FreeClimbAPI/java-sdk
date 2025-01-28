@@ -10,460 +10,763 @@
  * Do not edit the class manually.
  */
 
+
 package com.github.freeclimbapi;
 
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.LocalDate;
+
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.File;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
-import java.util.*;
-import org.junit.Assert;
-import org.junit.Test;
 
-/** Model tests for MessageStatusWebhook */
-public class MessageStatusWebhookTest {
-
-    private final MessageStatusWebhook model = new MessageStatusWebhook();
-
-    /** Test the property 'requestType' */
+/**
+ * Model tests for MessageStatusWebhook
+ */
+ public class MessageStatusWebhookTest {
+    
+    private final MessageStatusWebhook model = new MessageStatusWebhook(
+    );
+    
+    
+    /**
+     * Test the property 'requestType'
+     */
     @Test
-    public void requestTypeTest() {}
-
-    /** Test the property 'accountId' */
+    public void requestTypeTest() {
+      
+    }
+    /**
+     * Test the property 'accountId'
+     */
     @Test
     public void accountIdTest() {
-
-        model.setAccountId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
+      model.setAccountId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getAccountId());
+      
+      
     }
-
-    /** Test the property 'messageId' */
+    /**
+     * Test the property 'messageId'
+     */
     @Test
     public void messageIdTest() {
-
-        model.setMessageId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getMessageId());
+      
+      
+      model.setMessageId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getMessageId());
+      
+      
     }
-
-    /** Test the property 'callId' */
+    /**
+     * Test the property 'callId'
+     */
     @Test
     public void callIdTest() {
-
-        model.setCallId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
+      model.setCallId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getCallId());
+      
+      
     }
-
-    /** Test the property 'from' */
+    /**
+     * Test the property 'from'
+     */
     @Test
     public void fromTest() {
-
-        model.setFrom("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
+      model.setFrom("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getFrom());
+      
+      
     }
-
-    /** Test the property 'to' */
+    /**
+     * Test the property 'to'
+     */
     @Test
     public void toTest() {
-
-        model.setTo("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
+      model.setTo("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getTo());
+      
+      
     }
-
-    /** Test the property 'text' */
+    /**
+     * Test the property 'text'
+     */
     @Test
     public void textTest() {
-
-        model.setText("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getText());
+      
+      
+      model.setText("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getText());
+      
+      
     }
-
-    /** Test the property 'direction' */
+    /**
+     * Test the property 'direction'
+     */
     @Test
     public void directionTest() {
-
-        model.setDirection("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getDirection());
+      
+      
+      model.setDirection("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getDirection());
+      
+      
     }
-
-    /** Test the property 'applicationId' */
+    /**
+     * Test the property 'applicationId'
+     */
     @Test
     public void applicationIdTest() {
-
-        model.setApplicationId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
+      
+      model.setApplicationId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getApplicationId());
+      
+      
     }
-
-    /** Test the property 'status' */
+    /**
+     * Test the property 'status'
+     */
     @Test
     public void statusTest() {
-        model.setStatus(MessageStatus.NEW);
-        Assert.assertEquals(model.getStatus(), MessageStatus.NEW);
-        model.setStatus(MessageStatus.QUEUED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.QUEUED);
-        model.setStatus(MessageStatus.REJECTED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.REJECTED);
-        model.setStatus(MessageStatus.SENDING);
-        Assert.assertEquals(model.getStatus(), MessageStatus.SENDING);
-        model.setStatus(MessageStatus.SENT);
-        Assert.assertEquals(model.getStatus(), MessageStatus.SENT);
-        model.setStatus(MessageStatus.FAILED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.FAILED);
-        model.setStatus(MessageStatus.RECEIVED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.RECEIVED);
-        model.setStatus(MessageStatus.UNDELIVERED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.UNDELIVERED);
-        model.setStatus(MessageStatus.EXPIRED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.EXPIRED);
-        model.setStatus(MessageStatus.DELETED);
-        Assert.assertEquals(model.getStatus(), MessageStatus.DELETED);
-        model.setStatus(MessageStatus.UNKNOWN);
-        Assert.assertEquals(model.getStatus(), MessageStatus.UNKNOWN);
+      model.setStatus(MessageStatus.NEW);
+      Assert.assertEquals(model.getStatus(),MessageStatus.NEW);
+      model.setStatus(MessageStatus.QUEUED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.QUEUED);
+      model.setStatus(MessageStatus.REJECTED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.REJECTED);
+      model.setStatus(MessageStatus.SENDING);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENDING);
+      model.setStatus(MessageStatus.SENT);
+      Assert.assertEquals(model.getStatus(),MessageStatus.SENT);
+      model.setStatus(MessageStatus.FAILED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.FAILED);
+      model.setStatus(MessageStatus.RECEIVED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.RECEIVED);
+      model.setStatus(MessageStatus.UNDELIVERED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNDELIVERED);
+      model.setStatus(MessageStatus.EXPIRED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.EXPIRED);
+      model.setStatus(MessageStatus.DELETED);
+      Assert.assertEquals(model.getStatus(),MessageStatus.DELETED);
+      model.setStatus(MessageStatus.UNKNOWN);
+      Assert.assertEquals(model.getStatus(),MessageStatus.UNKNOWN);
+      
     }
-
-    /** Test the property 'phoneNumberId' */
+    /**
+     * Test the property 'phoneNumberId'
+     */
     @Test
     public void phoneNumberIdTest() {
-
-        model.setPhoneNumberId("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
+      
+      
+      model.setPhoneNumberId("TEST_STRING");
+      Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
+      
+      
     }
 
-    /** Test the method 'equalsTrue' */
-    @Test
+      /**
+     * Test the method 'equalsTrue'
+     */
+
+     @Test
     public void equalsTrueTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      MessageStatusWebhook test2 = new MessageStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setApplicationId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setPhoneNumberId("TS");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.NEW);
-
-        test1.setPhoneNumberId("TS");
-
-        MessageStatusWebhook test2 = new MessageStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setMessageId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setText("TS");
-
-        test2.setDirection("TS");
-
-        test2.setApplicationId("TS");
-
-        test2.setStatus(MessageStatus.NEW);
-
-        test2.setPhoneNumberId("TS");
-
-        Assert.assertTrue(test1.equals(test2));
+      Assert.assertTrue(test1.equals(test2));
     }
 
-    /** Test the method 'equalsFalse' */
-    @Test
+    /**
+     * Test the method 'equalsFalse'
+     */
+
+     @Test
     public void equalsFalseTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.QUEUED);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      MessageStatusWebhook test2 = new MessageStatusWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setMessageId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setDirection("TS2");
+      
+        
+        
+      test2.setApplicationId("TS2");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
 
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.QUEUED);
-
-        test1.setPhoneNumberId("TS");
-
-        MessageStatusWebhook test2 = new MessageStatusWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setMessageId("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setText("TS2");
-
-        test2.setDirection("TS2");
-
-        test2.setApplicationId("TS2");
-
-        test2.setStatus(MessageStatus.NEW);
-
-        test2.setPhoneNumberId("TS2");
-
-        Assert.assertFalse(test1.equals(test2));
+      Assert.assertFalse(test1.equals(test2));
     }
+    
+    /**
+     * Test the method 'hashCodeType'
+     */
 
-    /** Test the method 'hashCodeType' */
-    @Test
+     @Test
     public void hashCodeTypeTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.NEW);
-
-        test1.setPhoneNumberId("TS");
-
-        int hashCode1 = test1.hashCode();
-        Assert.assertTrue(Integer.class.isInstance(hashCode1));
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      
+      int hashCode1 = test1.hashCode();
+      Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
 
-    /** Test the method 'toStringEquals' */
-    @Test
+    /**
+     * Test the method 'toStringEquals'
+     */
+
+     @Test
     public void toStringEqualsTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.NEW);
-
-        test1.setPhoneNumberId("TS");
-
-        MessageStatusWebhook test2 = new MessageStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setMessageId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setText("TS");
-
-        test2.setDirection("TS");
-
-        test2.setApplicationId("TS");
-
-        test2.setStatus(MessageStatus.NEW);
-
-        test2.setPhoneNumberId("TS");
-
-        String toString1 = test1.toString();
-        String toString2 = test2.toString();
-        Assert.assertEquals(toString1, toString2);
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      MessageStatusWebhook test2 = new MessageStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setApplicationId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setPhoneNumberId("TS");
+      
+        
+      String toString1 = test1.toString();
+      String toString2 = test2.toString();
+      Assert.assertEquals(toString1, toString2);
     }
 
-    /** Test the method 'hashCodeEqualsTrue' */
+    /**
+     * Test the method 'hashCodeEqualsTrue'
+     */
+
     @Test
     public void hashCodeEqualsTrueTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.NEW);
-
-        test1.setPhoneNumberId("TS");
-
-        MessageStatusWebhook test2 = new MessageStatusWebhook();
-
-        test2.setRequestType("TS");
-
-        test2.setAccountId("TS");
-
-        test2.setMessageId("TS");
-
-        test2.setCallId("TS");
-
-        test2.setFrom("TS");
-
-        test2.setTo("TS");
-
-        test2.setText("TS");
-
-        test2.setDirection("TS");
-
-        test2.setApplicationId("TS");
-
-        test2.setStatus(MessageStatus.NEW);
-
-        test2.setPhoneNumberId("TS");
-
-        Assert.assertEquals(test1.hashCode(), test2.hashCode());
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      MessageStatusWebhook test2 = new MessageStatusWebhook();
+        
+        
+      test2.setRequestType("TS");
+      
+        
+        
+      test2.setAccountId("TS");
+      
+        
+        
+      test2.setMessageId("TS");
+      
+        
+        
+      test2.setCallId("TS");
+      
+        
+        
+      test2.setFrom("TS");
+      
+        
+        
+      test2.setTo("TS");
+      
+        
+        
+      test2.setText("TS");
+      
+        
+        
+      test2.setDirection("TS");
+      
+        
+        
+      test2.setApplicationId("TS");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setPhoneNumberId("TS");
+      
+      Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'hashCodeEqualsFalse' */
+    /**
+     * Test the method 'hashCodeEqualsFalse'
+     */
+
     @Test
     public void hashCodeEqualsFalseTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
-
-        test1.setRequestType("TS");
-
-        test1.setAccountId("TS");
-
-        test1.setMessageId("TS");
-
-        test1.setCallId("TS");
-
-        test1.setFrom("TS");
-
-        test1.setTo("TS");
-
-        test1.setText("TS");
-
-        test1.setDirection("TS");
-
-        test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.QUEUED);
-
-        test1.setPhoneNumberId("TS");
-
-        MessageStatusWebhook test2 = new MessageStatusWebhook();
-
-        test2.setRequestType("TS2");
-
-        test2.setAccountId("TS2");
-
-        test2.setMessageId("TS2");
-
-        test2.setCallId("TS2");
-
-        test2.setFrom("TS2");
-
-        test2.setTo("TS2");
-
-        test2.setText("TS2");
-
-        test2.setDirection("TS2");
-
-        test2.setApplicationId("TS2");
-
-        test2.setStatus(MessageStatus.NEW);
-
-        test2.setPhoneNumberId("TS2");
-
-        Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
+      test1.setRequestType("TS");
+      
+        
+        
+      test1.setAccountId("TS");
+      
+        
+        
+      test1.setMessageId("TS");
+      
+        
+        
+      test1.setCallId("TS");
+      
+        
+        
+      test1.setFrom("TS");
+      
+        
+        
+      test1.setTo("TS");
+      
+        
+        
+      test1.setText("TS");
+      
+        
+        
+      test1.setDirection("TS");
+      
+        
+        
+      test1.setApplicationId("TS");
+      
+      test1.setStatus(MessageStatus.QUEUED);
+        
+        
+      test1.setPhoneNumberId("TS");
+      
+      MessageStatusWebhook test2 = new MessageStatusWebhook();
+        
+        
+      test2.setRequestType("TS2");
+      
+        
+        
+      test2.setAccountId("TS2");
+      
+        
+        
+      test2.setMessageId("TS2");
+      
+        
+        
+      test2.setCallId("TS2");
+      
+        
+        
+      test2.setFrom("TS2");
+      
+        
+        
+      test2.setTo("TS2");
+      
+        
+        
+      test2.setText("TS2");
+      
+        
+        
+      test2.setDirection("TS2");
+      
+        
+        
+      test2.setApplicationId("TS2");
+      
+      test2.setStatus(MessageStatus.NEW);
+        
+        
+      test2.setPhoneNumberId("TS2");
+      
+      Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
-    /** Test the method 'toStringType' */
-    @Test
+     /**
+     * Test the method 'toStringType'
+     */
+
+     @Test
     public void toStringTypeTest() {
-        MessageStatusWebhook test1 = new MessageStatusWebhook();
-
+      MessageStatusWebhook test1 = new MessageStatusWebhook();
+        
+        
         test1.setRequestType("TS");
-
+      
+        
+        
         test1.setAccountId("TS");
-
+      
+        
+        
         test1.setMessageId("TS");
-
+      
+        
+        
         test1.setCallId("TS");
-
+      
+        
+        
         test1.setFrom("TS");
-
+      
+        
+        
         test1.setTo("TS");
-
+      
+        
+        
         test1.setText("TS");
-
+      
+        
+        
         test1.setDirection("TS");
-
+      
+        
+        
         test1.setApplicationId("TS");
-
-        test1.setStatus(MessageStatus.NEW);
-
+      
+      test1.setStatus(MessageStatus.NEW);
+        
+        
         test1.setPhoneNumberId("TS");
+      
 
-        String toString1 = test1.toString();
-        Assert.assertTrue(String.class.isInstance(toString1));
+      String toString1 = test1.toString();
+      Assert.assertTrue(String.class.isInstance(toString1));
     }
 
     @Test
     public void deserializeTest() {
-        String json = "{ \"requestType\": \"messageStatus\" }";
-        MessageStatusWebhook webhookInstance = MessageStatusWebhook.deserialize(json);
-        Assert.assertTrue(webhookInstance instanceof MessageStatusWebhook);
+      String json = "{ \"requestType\": \"messageStatus\" }";
+      MessageStatusWebhook webhookInstance = MessageStatusWebhook.deserialize(json);
+      Assert.assertTrue(webhookInstance instanceof MessageStatusWebhook);
     }
-}
+    
+ }

@@ -12,109 +12,145 @@
 
 package com.github.freeclimbapi.models;
 
-import com.github.freeclimbapi.enums.*;
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
 import java.util.Objects;
+import java.util.Arrays;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import java.io.IOException;
+import java.util.*;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.google.gson.annotations.SerializedName;
+import java.util.List;
+import java.math.BigDecimal;
+import java.net.URI;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.github.freeclimbapi.enums.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.JSON;
 
-/** CompletionResult */
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+
+/**
+ * CompletionResult
+ */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CompletionResult {
-    public static String getDiscriminatorValue() {
-        return null;
+  public static String getDiscriminatorValue() {
+    return null;
+  }
+  
+  public static final String SERIALIZED_NAME_RESPONSE = "response";
+  
+  
+  @SerializedName(SERIALIZED_NAME_RESPONSE)
+  
+  private String response;
+
+  
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  
+  
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  
+  private CompletionResultStatus status;
+
+
+  public CompletionResult() { 
+  }
+
+  public CompletionResult response(String response) {
+    
+    this.response = response;
+    return this;
+  }
+
+   /**
+   * The generative response from the KnowledgeBase
+   * @return response
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The generative response from the KnowledgeBase")
+
+  public String getResponse() {
+    return response;
+  }
+
+
+  public void setResponse(String response) {
+    this.response = response;
+  }
+
+
+  public CompletionResult status(CompletionResultStatus status) {
+    
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public CompletionResultStatus getStatus() {
+    return status;
+  }
+
+
+  public void setStatus(CompletionResultStatus status) {
+    this.status = status;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public static final String SERIALIZED_NAME_RESPONSE = "response";
-
-    @SerializedName(SERIALIZED_NAME_RESPONSE)
-    private String response;
-
-    public static final String SERIALIZED_NAME_STATUS = "status";
-
-    @SerializedName(SERIALIZED_NAME_STATUS)
-    private CompletionResultStatus status;
-
-    public CompletionResult() {}
-
-    public CompletionResult response(String response) {
-
-        this.response = response;
-        return this;
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    CompletionResult completionResult = (CompletionResult) o;
+    return Objects.equals(this.response, completionResult.response) &&
+        Objects.equals(this.status, completionResult.status);
+  }
 
-    /**
-     * The generative response from the KnowledgeBase
-     *
-     * @return response
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "The generative response from the KnowledgeBase")
-    public String getResponse() {
-        return response;
+  @Override
+  public int hashCode() {
+    return Objects.hash(response, status);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class CompletionResult {\n");
+    sb.append("    response: ").append(toIndentedString(response)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public void setResponse(String response) {
-        this.response = response;
-    }
-
-    public CompletionResult status(CompletionResultStatus status) {
-
-        this.status = status;
-        return this;
-    }
-
-    /**
-     * Get status
-     *
-     * @return status
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public CompletionResultStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(CompletionResultStatus status) {
-        this.status = status;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        CompletionResult completionResult = (CompletionResult) o;
-        return Objects.equals(this.response, completionResult.response)
-                && Objects.equals(this.status, completionResult.status);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(response, status);
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("class CompletionResult {\n");
-        sb.append("    response: ").append(toIndentedString(response)).append("\n");
-        sb.append("    status: ").append(toIndentedString(status)).append("\n");
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * Convert the given object to string with each line indented by 4 spaces (except the first
-     * line).
-     */
-    private String toIndentedString(Object o) {
-        if (o == null) {
-            return "null";
-        }
-        return o.toString().replace("\n", "\n    ");
-    }
 }
