@@ -3,6 +3,8 @@ package com.github.freeclimbapi;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import java.util.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,14 +12,38 @@ public class PerclScriptBuildTest {
 
     private final PerclScript instance = new PerclScript();
 
-    public String expectedPerclJson =
-            "[{\"Pause\":{}},{\"SendDigits\":{}},{\"Pause\":{}},{\"GetDigits\":{\"prompts\":[{\"Play\":"
-                + "{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}}"
-                + ",{\"Pause\":{}},{\"Play\":{\"file\":\"https://123.com/press_any_key.wav\"}},{\"Pause\":{}}]}}]";
+    JSONObject getPerclCommand(String command, JSONObject value) {
+        JSONObject perclCommand = new JSONObject();
+        perclCommand.put(command, value);
+        return perclCommand;
+    }
+
+    JSONArray createExpectedPercl() {
+        JSONArray result = new JSONArray();
+        result.put(getPerclCommand("Pause", new JSONObject()));
+        result.put(getPerclCommand("SendDigits", new JSONObject()));
+        result.put(getPerclCommand("Pause", new JSONObject()));
+        JSONObject getDigits = new JSONObject();
+        JSONArray getDigitPrompts = new JSONArray();
+        JSONObject playValue = new JSONObject();
+        playValue.put("file", "https://123.com/press_any_key.wav");
+        getDigitPrompts.put(getPerclCommand("Play", playValue));
+        getDigitPrompts.put(getPerclCommand("Pause", new JSONObject()));
+        getDigitPrompts.put(getPerclCommand("Play", playValue));
+        getDigitPrompts.put(getPerclCommand("Pause", new JSONObject()));
+        getDigitPrompts.put(getPerclCommand("Play", playValue));
+        getDigitPrompts.put(getPerclCommand("Pause", new JSONObject()));
+        getDigits.put("prompts", getDigitPrompts);
+        result.put(getPerclCommand("GetDigits", getDigits));
+        return result;
+    }
+
+    public JSONArray expectedPerclJsonArray = createExpectedPercl();
+
+    public String expectedPerclJson = expectedPerclJsonArray.toString();
 
     @Test
     public void buildArrayListToJsonTest() throws Exception {
-        JSON jsonWriter = new JSON();
         Pause pause = new Pause();
         SendDigits sendDigits = new SendDigits();
         GetDigits digits = new GetDigits();
@@ -45,7 +71,6 @@ public class PerclScriptBuildTest {
 
     @Test
     public void buildLinkedListToJsonTest() throws Exception {
-        JSON jsonWriter = new JSON();
         Pause pause = new Pause();
         SendDigits sendDigits = new SendDigits();
         GetDigits digits = new GetDigits();
