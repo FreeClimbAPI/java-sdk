@@ -112,7 +112,7 @@ public class PlayEarlyMedia extends PerclCommand {
     @Override
     public Map<String, Callable<Object>> attributeTypeMap() {
         Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("_file", () -> this.getFile());
+        attributes.put("file", () -> this.getFile());
         return attributes;
     }
 

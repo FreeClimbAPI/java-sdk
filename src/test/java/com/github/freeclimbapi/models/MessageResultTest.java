@@ -179,6 +179,26 @@ public class MessageResultTest {
         Assert.assertEquals(testList, model.getMediaUrls());
     }
 
+    /** Test the property 'tfn' */
+    @Test
+    public void tfnTest() {}
+
+    /** Test the property 'phoneNumberId' */
+    @Test
+    public void phoneNumberIdTest() {
+
+        model.setPhoneNumberId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
+    }
+
+    /** Test the property 'applicationId' */
+    @Test
+    public void applicationIdTest() {
+
+        model.setApplicationId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getApplicationId());
+    }
+
     /** Test the method 'equalsTrue' */
     @Test
     public void equalsTrueTest() {
@@ -220,6 +240,11 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         MessageResult test2 = new MessageResult();
 
         test2.setUri("TS");
@@ -258,6 +283,10 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        test2.setPhoneNumberId("TS");
+
+        test2.setApplicationId("TS");
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -303,6 +332,11 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         MessageResult test2 = new MessageResult();
 
         test2.setUri("TS2");
@@ -341,6 +375,10 @@ public class MessageResultTest {
 
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
+
+        test2.setPhoneNumberId("TS2");
+
+        test2.setApplicationId("TS2");
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -387,6 +425,10 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
     }
@@ -432,6 +474,11 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         MessageResult test2 = new MessageResult();
 
         test2.setUri("TS");
@@ -470,6 +517,10 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        test2.setPhoneNumberId("TS");
+
+        test2.setApplicationId("TS");
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -517,6 +568,11 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         MessageResult test2 = new MessageResult();
 
         test2.setUri("TS");
@@ -555,6 +611,11 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        test2.setPhoneNumberId("TS");
+
+        test2.setApplicationId("TS");
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -599,6 +660,11 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
+
         MessageResult test2 = new MessageResult();
 
         test2.setUri("TS2");
@@ -637,6 +703,11 @@ public class MessageResultTest {
 
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
+
+        test2.setPhoneNumberId("TS2");
+
+        test2.setApplicationId("TS2");
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -681,6 +752,10 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        test1.setPhoneNumberId("TS");
+
+        test1.setApplicationId("TS");
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

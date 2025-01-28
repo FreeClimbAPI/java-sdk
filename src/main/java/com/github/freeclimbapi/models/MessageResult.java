@@ -111,6 +111,21 @@ public class MessageResult {
     @SerializedName(SERIALIZED_NAME_MEDIA_URLS)
     private List<URI> mediaUrls = null;
 
+    public static final String SERIALIZED_NAME_TFN = "tfn";
+
+    @SerializedName(SERIALIZED_NAME_TFN)
+    private MessageResultAllOfTfn tfn;
+
+    public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
+
+    @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
+    private String phoneNumberId;
+
+    public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
+
+    @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+    private String applicationId;
+
     public MessageResult() {}
 
     public MessageResult uri(String uri) {
@@ -469,6 +484,75 @@ public class MessageResult {
         this.mediaUrls = mediaUrls;
     }
 
+    public MessageResult tfn(MessageResultAllOfTfn tfn) {
+
+        this.tfn = tfn;
+        return this;
+    }
+
+    /**
+     * Get tfn
+     *
+     * @return tfn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public MessageResultAllOfTfn getTfn() {
+        return tfn;
+    }
+
+    public void setTfn(MessageResultAllOfTfn tfn) {
+        this.tfn = tfn;
+    }
+
+    public MessageResult phoneNumberId(String phoneNumberId) {
+
+        this.phoneNumberId = phoneNumberId;
+        return this;
+    }
+
+    /**
+     * String that uniquely identifies the phoneNumber resource used to send this Message
+     *
+     * @return phoneNumberId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "String that uniquely identifies the phoneNumber resource used to send this"
+                            + " Message")
+    public String getPhoneNumberId() {
+        return phoneNumberId;
+    }
+
+    public void setPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+    }
+
+    public MessageResult applicationId(String applicationId) {
+
+        this.applicationId = applicationId;
+        return this;
+    }
+
+    /**
+     * String that uniquely identifies the Application resource used to send this Message
+     *
+     * @return applicationId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "String that uniquely identifies the Application resource used to send this"
+                            + " Message")
+    public String getApplicationId() {
+        return applicationId;
+    }
+
+    public void setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -493,7 +577,10 @@ public class MessageResult {
                 && Objects.equals(this.brandId, messageResult.brandId)
                 && Objects.equals(this.campaignId, messageResult.campaignId)
                 && Objects.equals(this.segmentCount, messageResult.segmentCount)
-                && Objects.equals(this.mediaUrls, messageResult.mediaUrls);
+                && Objects.equals(this.mediaUrls, messageResult.mediaUrls)
+                && Objects.equals(this.tfn, messageResult.tfn)
+                && Objects.equals(this.phoneNumberId, messageResult.phoneNumberId)
+                && Objects.equals(this.applicationId, messageResult.applicationId);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -523,7 +610,10 @@ public class MessageResult {
                 brandId,
                 campaignId,
                 segmentCount,
-                mediaUrls);
+                mediaUrls,
+                tfn,
+                phoneNumberId,
+                applicationId);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -553,6 +643,9 @@ public class MessageResult {
         sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
         sb.append("    segmentCount: ").append(toIndentedString(segmentCount)).append("\n");
         sb.append("    mediaUrls: ").append(toIndentedString(mediaUrls)).append("\n");
+        sb.append("    tfn: ").append(toIndentedString(tfn)).append("\n");
+        sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
+        sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
         sb.append("}");
         return sb.toString();
     }

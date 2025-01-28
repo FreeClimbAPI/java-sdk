@@ -184,7 +184,7 @@ public class PlayTest {
         model.setPrivacyMode(false);
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("_file"), model.getFile());
+        Assert.assertEquals(attributes.get("file"), model.getFile());
         Assert.assertEquals(attributes.get("loop"), model.getLoop());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
     }

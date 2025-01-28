@@ -19,6 +19,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.Callable;
@@ -108,9 +109,10 @@ public class PerclCommand {
             if (key != "command" && value != null) {
                 if (value instanceof PerclCommand) {
                     commandValue.put(key, ((PerclCommand) value).build());
-                } else if (value.getClass().isArray()) {
+                } else if (value instanceof List) {
+                    Object[] valueArray = ((List) value).toArray();
                     ArrayList<Object> subList = new ArrayList<Object>();
-                    for (Object el : subList) {
+                    for (Object el : valueArray) {
                         if (el != null) {
                             if (el instanceof PerclCommand) {
                                 subList.add(((PerclCommand) el).build());

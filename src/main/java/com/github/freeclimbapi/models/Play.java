@@ -172,7 +172,7 @@ public class Play extends PerclCommand {
     @Override
     public Map<String, Callable<Object>> attributeTypeMap() {
         Map<String, Callable<Object>> attributes = new HashMap();
-        attributes.put("_file", () -> this.getFile());
+        attributes.put("file", () -> this.getFile());
         attributes.put("loop", () -> this.getLoop());
         attributes.put("privacyMode", () -> this.getPrivacyMode());
         return attributes;

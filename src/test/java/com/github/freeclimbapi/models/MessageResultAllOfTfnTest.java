@@ -15,33 +15,32 @@ package com.github.freeclimbapi;
 import com.github.freeclimbapi.enums.*;
 import com.github.freeclimbapi.models.*;
 import java.util.*;
-import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-/** Model tests for PlayEarlyMedia */
-public class PlayEarlyMediaTest {
+/** Model tests for MessageResultAllOfTfn */
+public class MessageResultAllOfTfnTest {
 
-    private final PlayEarlyMedia model = new PlayEarlyMedia();
+    private final MessageResultAllOfTfn model = new MessageResultAllOfTfn();
 
-    /** Test the property '_file' */
+    /** Test the property 'campaignId' */
     @Test
-    public void _fileTest() {
+    public void campaignIdTest() {
 
-        model.setFile("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFile());
+        model.setCampaignId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCampaignId());
     }
 
     /** Test the method 'equalsTrue' */
     @Test
     public void equalsTrueTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
-        PlayEarlyMedia test2 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
 
-        test2.setFile("TS");
+        test2.setCampaignId("TS");
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -49,13 +48,13 @@ public class PlayEarlyMediaTest {
     /** Test the method 'equalsFalse' */
     @Test
     public void equalsFalseTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
-        PlayEarlyMedia test2 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
 
-        test2.setFile("TS2");
+        test2.setCampaignId("TS2");
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -63,9 +62,9 @@ public class PlayEarlyMediaTest {
     /** Test the method 'hashCodeType' */
     @Test
     public void hashCodeTypeTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -74,13 +73,13 @@ public class PlayEarlyMediaTest {
     /** Test the method 'toStringEquals' */
     @Test
     public void toStringEqualsTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
-        PlayEarlyMedia test2 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
 
-        test2.setFile("TS");
+        test2.setCampaignId("TS");
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -90,13 +89,13 @@ public class PlayEarlyMediaTest {
     /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
-        PlayEarlyMedia test2 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
 
-        test2.setFile("TS");
+        test2.setCampaignId("TS");
 
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -104,13 +103,13 @@ public class PlayEarlyMediaTest {
     /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
-        PlayEarlyMedia test2 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test2 = new MessageResultAllOfTfn();
 
-        test2.setFile("TS2");
+        test2.setCampaignId("TS2");
 
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -118,27 +117,11 @@ public class PlayEarlyMediaTest {
     /** Test the method 'toStringType' */
     @Test
     public void toStringTypeTest() {
-        PlayEarlyMedia test1 = new PlayEarlyMedia();
+        MessageResultAllOfTfn test1 = new MessageResultAllOfTfn();
 
-        test1.setFile("TS");
+        test1.setCampaignId("TS");
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));
-    }
-
-    @Test
-    public void commandTest() throws Exception {
-        Assert.assertEquals("PlayEarlyMedia", model.getCommand());
-    }
-
-    @Test
-    public void buildTest() throws Exception {
-
-        model.setFile("TEST_STRING");
-        Assert.assertEquals("TEST_STRING", model.getFile());
-
-        Map<String, Map<String, Object>> build = model.build();
-        Map<String, Object> attributes = build.get(model.getCommand());
-        Assert.assertEquals(attributes.get("file"), model.getFile());
     }
 }
