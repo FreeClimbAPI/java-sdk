@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="6.1.1"></a>
+
+## [6.1.1] - 2025-01-08
+
+### Changed
+
+- Convert MessageResultsAllOfTfn to existing TFN model and make SDK updates per latest spec changes
+
 <a name="6.1.0"></a>
 
 ## [6.1.0] - 2025-01-08
