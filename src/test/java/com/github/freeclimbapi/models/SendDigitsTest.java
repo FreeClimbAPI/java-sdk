@@ -55,12 +55,15 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
+
         SendDigits test2 = new SendDigits();
 
         test2.setDigits("TS");
 
         test2.setPauseMs(1);
+
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -74,12 +77,15 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
+
         SendDigits test2 = new SendDigits();
 
         test2.setDigits("TS2");
 
         test2.setPauseMs(0);
+
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -93,6 +99,7 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -107,12 +114,15 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
+
         SendDigits test2 = new SendDigits();
 
         test2.setDigits("TS");
 
         test2.setPauseMs(1);
+
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -128,13 +138,17 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
+
         SendDigits test2 = new SendDigits();
 
         test2.setDigits("TS");
 
         test2.setPauseMs(1);
+
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -146,13 +160,17 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
+
         SendDigits test2 = new SendDigits();
 
         test2.setDigits("TS2");
 
         test2.setPauseMs(0);
+
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -164,6 +182,7 @@ public class SendDigitsTest {
         test1.setDigits("TS");
 
         test1.setPauseMs(1);
+
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

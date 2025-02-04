@@ -63,15 +63,24 @@ public class CapabilitiesTest {
     public void equalsTrueTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
+
         Capabilities test2 = new Capabilities();
         test2.setVoice(true);
+
         test2.setSms(true);
+
         test2.setTollFree(true);
+
         test2.setTenDLC(true);
+
         test2.setShortCode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -82,15 +91,24 @@ public class CapabilitiesTest {
     public void equalsFalseTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
+
         Capabilities test2 = new Capabilities();
         test2.setVoice(false);
+
         test2.setSms(false);
+
         test2.setTollFree(false);
+
         test2.setTenDLC(false);
+
         test2.setShortCode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -101,9 +119,13 @@ public class CapabilitiesTest {
     public void hashCodeTypeTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
 
         int hashCode1 = test1.hashCode();
@@ -115,15 +137,24 @@ public class CapabilitiesTest {
     public void toStringEqualsTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
+
         Capabilities test2 = new Capabilities();
         test2.setVoice(true);
+
         test2.setSms(true);
+
         test2.setTollFree(true);
+
         test2.setTenDLC(true);
+
         test2.setShortCode(true);
 
         String toString1 = test1.toString();
@@ -136,16 +167,26 @@ public class CapabilitiesTest {
     public void hashCodeEqualsTrueTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
+
         Capabilities test2 = new Capabilities();
         test2.setVoice(true);
+
         test2.setSms(true);
+
         test2.setTollFree(true);
+
         test2.setTenDLC(true);
+
         test2.setShortCode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -154,16 +195,26 @@ public class CapabilitiesTest {
     public void hashCodeEqualsFalseTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
+
         Capabilities test2 = new Capabilities();
         test2.setVoice(false);
+
         test2.setSms(false);
+
         test2.setTollFree(false);
+
         test2.setTenDLC(false);
+
         test2.setShortCode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -172,9 +223,13 @@ public class CapabilitiesTest {
     public void toStringTypeTest() {
         Capabilities test1 = new Capabilities();
         test1.setVoice(true);
+
         test1.setSms(true);
+
         test1.setTollFree(true);
+
         test1.setTenDLC(true);
+
         test1.setShortCode(true);
 
         String toString1 = test1.toString();

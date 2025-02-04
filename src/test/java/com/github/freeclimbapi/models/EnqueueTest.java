@@ -102,6 +102,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Enqueue test2 = new Enqueue();
 
         try {
@@ -163,6 +164,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Enqueue test2 = new Enqueue();
 
         try {
@@ -259,6 +261,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Enqueue test2 = new Enqueue();
 
         try {
@@ -322,6 +325,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Enqueue test2 = new Enqueue();
 
         try {
@@ -349,6 +353,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -382,6 +387,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Enqueue test2 = new Enqueue();
 
         try {
@@ -409,6 +415,7 @@ public class EnqueueTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

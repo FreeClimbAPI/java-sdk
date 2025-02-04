@@ -103,8 +103,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -122,6 +125,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -131,8 +135,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setAlias(true);
+
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -166,8 +173,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
 
         try {
@@ -185,6 +195,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -194,8 +205,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setAlias(false);
+
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
 
         try {
@@ -229,8 +243,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -265,8 +282,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -284,6 +304,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -293,8 +314,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setAlias(true);
+
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -330,8 +354,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -349,6 +376,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -358,8 +386,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setAlias(true);
+
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -377,6 +408,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -392,8 +424,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
 
         try {
@@ -411,6 +446,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -420,8 +456,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setAlias(false);
+
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
 
         try {
@@ -439,6 +478,7 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -454,8 +494,11 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setAlias(true);
+
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {

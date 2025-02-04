@@ -37,6 +37,7 @@ public class UpdateCallRequestTest {
     public void equalsTrueTest() {
         UpdateCallRequest test1 = new UpdateCallRequest();
         test1.setStatus(UpdateCallRequestStatus.CANCELED);
+
         UpdateCallRequest test2 = new UpdateCallRequest();
         test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
@@ -48,6 +49,7 @@ public class UpdateCallRequestTest {
     public void equalsFalseTest() {
         UpdateCallRequest test1 = new UpdateCallRequest();
         test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+
         UpdateCallRequest test2 = new UpdateCallRequest();
         test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
@@ -69,6 +71,7 @@ public class UpdateCallRequestTest {
     public void toStringEqualsTest() {
         UpdateCallRequest test1 = new UpdateCallRequest();
         test1.setStatus(UpdateCallRequestStatus.CANCELED);
+
         UpdateCallRequest test2 = new UpdateCallRequest();
         test2.setStatus(UpdateCallRequestStatus.CANCELED);
 
@@ -82,8 +85,10 @@ public class UpdateCallRequestTest {
     public void hashCodeEqualsTrueTest() {
         UpdateCallRequest test1 = new UpdateCallRequest();
         test1.setStatus(UpdateCallRequestStatus.CANCELED);
+
         UpdateCallRequest test2 = new UpdateCallRequest();
         test2.setStatus(UpdateCallRequestStatus.CANCELED);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -92,8 +97,10 @@ public class UpdateCallRequestTest {
     public void hashCodeEqualsFalseTest() {
         UpdateCallRequest test1 = new UpdateCallRequest();
         test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+
         UpdateCallRequest test2 = new UpdateCallRequest();
         test2.setStatus(UpdateCallRequestStatus.CANCELED);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

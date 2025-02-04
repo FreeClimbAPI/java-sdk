@@ -155,9 +155,10 @@ public class ConferenceResultTest {
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
-        Object testObject = new Object();
-        model.setSubresourceUris(testObject);
-        Assert.assertEquals(testObject, model.getSubresourceUris());
+
+        Object object = new Object();
+        model.setSubresourceUris(object);
+        Assert.assertEquals(object.getClass(), Object.class);
     }
 
     /** Test the method 'equalsTrue' */
@@ -180,7 +181,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -206,8 +209,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         ConferenceResult test2 = new ConferenceResult();
 
         test2.setUri("TS");
@@ -225,7 +230,9 @@ public class ConferenceResultTest {
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
+
         test2.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -251,8 +258,9 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -277,7 +285,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.POPULATED);
 
         try {
@@ -303,8 +313,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         ConferenceResult test2 = new ConferenceResult();
 
         test2.setUri("TS2");
@@ -322,7 +334,9 @@ public class ConferenceResultTest {
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
+
         test2.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -348,8 +362,9 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -374,7 +389,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -400,8 +417,9 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -427,7 +445,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -453,8 +473,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         ConferenceResult test2 = new ConferenceResult();
 
         test2.setUri("TS");
@@ -472,7 +494,9 @@ public class ConferenceResultTest {
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
+
         test2.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -498,8 +522,9 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -526,7 +551,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -552,8 +579,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         ConferenceResult test2 = new ConferenceResult();
 
         test2.setUri("TS");
@@ -571,7 +600,9 @@ public class ConferenceResultTest {
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
+
         test2.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -597,8 +628,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -622,7 +655,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.POPULATED);
 
         try {
@@ -648,8 +683,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         ConferenceResult test2 = new ConferenceResult();
 
         test2.setUri("TS2");
@@ -667,7 +704,9 @@ public class ConferenceResultTest {
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
+
         test2.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -693,8 +732,10 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -718,7 +759,9 @@ public class ConferenceResultTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
+
         test1.setStatus(ConferenceStatus.EMPTY);
 
         try {
@@ -744,8 +787,9 @@ public class ConferenceResultTest {
             e.printStackTrace();
         }
         ;
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

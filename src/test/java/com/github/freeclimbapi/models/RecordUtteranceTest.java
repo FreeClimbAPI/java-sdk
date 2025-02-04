@@ -95,14 +95,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
+
         RecordUtterance test2 = new RecordUtterance();
 
         try {
@@ -112,13 +117,17 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setSilenceTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setMaxLengthSec(1);
+
         test2.setPlayBeep(true);
+
         test2.setAutoStart(true);
+
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -136,14 +145,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
+
         RecordUtterance test2 = new RecordUtterance();
 
         try {
@@ -153,13 +167,17 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setSilenceTimeoutMs(0);
 
         test2.setFinishOnKey("TS2");
 
         test2.setMaxLengthSec(0);
+
         test2.setPlayBeep(false);
+
         test2.setAutoStart(false);
+
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -177,13 +195,17 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -202,14 +224,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
+
         RecordUtterance test2 = new RecordUtterance();
 
         try {
@@ -219,13 +246,17 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setSilenceTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setMaxLengthSec(1);
+
         test2.setPlayBeep(true);
+
         test2.setAutoStart(true);
+
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -245,14 +276,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
+
         RecordUtterance test2 = new RecordUtterance();
 
         try {
@@ -262,14 +298,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setSilenceTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setMaxLengthSec(1);
+
         test2.setPlayBeep(true);
+
         test2.setAutoStart(true);
+
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -285,14 +326,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
+
         RecordUtterance test2 = new RecordUtterance();
 
         try {
@@ -302,14 +348,19 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setSilenceTimeoutMs(0);
 
         test2.setFinishOnKey("TS2");
 
         test2.setMaxLengthSec(0);
+
         test2.setPlayBeep(false);
+
         test2.setAutoStart(false);
+
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -325,13 +376,17 @@ public class RecordUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setSilenceTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setMaxLengthSec(1);
+
         test1.setPlayBeep(true);
+
         test1.setAutoStart(true);
+
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

@@ -65,7 +65,9 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
+
         Say test2 = new Say();
 
         test2.setText("TS");
@@ -73,6 +75,7 @@ public class SayTest {
         test2.setLanguage("TS");
 
         test2.setLoop(1);
+
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -88,7 +91,9 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
+
         Say test2 = new Say();
 
         test2.setText("TS2");
@@ -96,6 +101,7 @@ public class SayTest {
         test2.setLanguage("TS2");
 
         test2.setLoop(0);
+
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -111,6 +117,7 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -127,7 +134,9 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
+
         Say test2 = new Say();
 
         test2.setText("TS");
@@ -135,6 +144,7 @@ public class SayTest {
         test2.setLanguage("TS");
 
         test2.setLoop(1);
+
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -152,7 +162,9 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
+
         Say test2 = new Say();
 
         test2.setText("TS");
@@ -160,7 +172,9 @@ public class SayTest {
         test2.setLanguage("TS");
 
         test2.setLoop(1);
+
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -174,7 +188,9 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
+
         Say test2 = new Say();
 
         test2.setText("TS2");
@@ -182,7 +198,9 @@ public class SayTest {
         test2.setLanguage("TS2");
 
         test2.setLoop(0);
+
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -196,6 +214,7 @@ public class SayTest {
         test1.setLanguage("TS");
 
         test1.setLoop(1);
+
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

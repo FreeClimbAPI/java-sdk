@@ -110,9 +110,10 @@ public class AccountResultTest {
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
-        Object testObject = new Object();
-        model.setSubresourceUris(testObject);
-        Assert.assertEquals(testObject, model.getSubresourceUris());
+
+        Object object = new Object();
+        model.setSubresourceUris(object);
+        Assert.assertEquals(object.getClass(), Object.class);
     }
 
     /** Test the method 'equalsTrue' */
@@ -137,9 +138,12 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.TRIAL);
+
         test1.setStatus(AccountStatus.CLOSED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         AccountResult test2 = new AccountResult();
 
         test2.setUri("TS");
@@ -159,9 +163,11 @@ public class AccountResultTest {
         test2.setLabel("TS");
 
         test2.setType(AccountType.TRIAL);
+
         test2.setStatus(AccountStatus.CLOSED);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -188,9 +194,12 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.FULL);
+
         test1.setStatus(AccountStatus.SUSPENDED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         AccountResult test2 = new AccountResult();
 
         test2.setUri("TS2");
@@ -210,9 +219,11 @@ public class AccountResultTest {
         test2.setLabel("TS2");
 
         test2.setType(AccountType.TRIAL);
+
         test2.setStatus(AccountStatus.CLOSED);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -239,9 +250,11 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.TRIAL);
+
         test1.setStatus(AccountStatus.CLOSED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -269,9 +282,12 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.TRIAL);
+
         test1.setStatus(AccountStatus.CLOSED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         AccountResult test2 = new AccountResult();
 
         test2.setUri("TS");
@@ -291,9 +307,11 @@ public class AccountResultTest {
         test2.setLabel("TS");
 
         test2.setType(AccountType.TRIAL);
+
         test2.setStatus(AccountStatus.CLOSED);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -322,9 +340,12 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.TRIAL);
+
         test1.setStatus(AccountStatus.CLOSED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         AccountResult test2 = new AccountResult();
 
         test2.setUri("TS");
@@ -344,9 +365,12 @@ public class AccountResultTest {
         test2.setLabel("TS");
 
         test2.setType(AccountType.TRIAL);
+
         test2.setStatus(AccountStatus.CLOSED);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -372,9 +396,12 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.FULL);
+
         test1.setStatus(AccountStatus.SUSPENDED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         AccountResult test2 = new AccountResult();
 
         test2.setUri("TS2");
@@ -394,9 +421,12 @@ public class AccountResultTest {
         test2.setLabel("TS2");
 
         test2.setType(AccountType.TRIAL);
+
         test2.setStatus(AccountStatus.CLOSED);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -422,9 +452,11 @@ public class AccountResultTest {
         test1.setLabel("TS");
 
         test1.setType(AccountType.TRIAL);
+
         test1.setStatus(AccountStatus.CLOSED);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

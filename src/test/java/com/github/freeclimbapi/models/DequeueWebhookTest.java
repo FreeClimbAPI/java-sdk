@@ -139,6 +139,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -148,6 +149,7 @@ public class DequeueWebhookTest {
         test1.setQueueResult("TS");
 
         test1.setQueueTime(1);
+
         DequeueWebhook test2 = new DequeueWebhook();
 
         test2.setRequestType("TS");
@@ -161,6 +163,7 @@ public class DequeueWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -190,6 +193,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -199,6 +203,7 @@ public class DequeueWebhookTest {
         test1.setQueueResult("TS");
 
         test1.setQueueTime(1);
+
         DequeueWebhook test2 = new DequeueWebhook();
 
         test2.setRequestType("TS2");
@@ -212,6 +217,7 @@ public class DequeueWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -241,6 +247,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -271,6 +278,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -280,6 +288,7 @@ public class DequeueWebhookTest {
         test1.setQueueResult("TS");
 
         test1.setQueueTime(1);
+
         DequeueWebhook test2 = new DequeueWebhook();
 
         test2.setRequestType("TS");
@@ -293,6 +302,7 @@ public class DequeueWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -324,6 +334,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -333,6 +344,7 @@ public class DequeueWebhookTest {
         test1.setQueueResult("TS");
 
         test1.setQueueTime(1);
+
         DequeueWebhook test2 = new DequeueWebhook();
 
         test2.setRequestType("TS");
@@ -346,6 +358,7 @@ public class DequeueWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -355,6 +368,7 @@ public class DequeueWebhookTest {
         test2.setQueueResult("TS");
 
         test2.setQueueTime(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -374,6 +388,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -383,6 +398,7 @@ public class DequeueWebhookTest {
         test1.setQueueResult("TS");
 
         test1.setQueueTime(1);
+
         DequeueWebhook test2 = new DequeueWebhook();
 
         test2.setRequestType("TS2");
@@ -396,6 +412,7 @@ public class DequeueWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -405,6 +422,7 @@ public class DequeueWebhookTest {
         test2.setQueueResult("TS2");
 
         test2.setQueueTime(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -424,6 +442,7 @@ public class DequeueWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");

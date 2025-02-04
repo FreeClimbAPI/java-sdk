@@ -164,6 +164,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationRequest test2 = new ApplicationRequest();
 
         test2.setAlias("TS");
@@ -273,6 +274,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationRequest test2 = new ApplicationRequest();
 
         test2.setAlias("TS2");
@@ -441,6 +443,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationRequest test2 = new ApplicationRequest();
 
         test2.setAlias("TS");
@@ -552,6 +555,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationRequest test2 = new ApplicationRequest();
 
         test2.setAlias("TS");
@@ -603,6 +607,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -660,6 +665,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationRequest test2 = new ApplicationRequest();
 
         test2.setAlias("TS2");
@@ -711,6 +717,7 @@ public class ApplicationRequestTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

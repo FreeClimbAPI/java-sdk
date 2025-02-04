@@ -96,10 +96,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void equalsTrueTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -108,10 +113,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         test1.setPartnerCampaigns(testList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -127,10 +137,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void equalsFalseTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -139,10 +154,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         test1.setPartnerCampaigns(testList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -158,10 +178,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void hashCodeTypeTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -178,10 +203,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void toStringEqualsTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -190,10 +220,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         test1.setPartnerCampaigns(testList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -211,10 +246,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void hashCodeEqualsTrueTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -223,10 +263,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         test1.setPartnerCampaigns(testList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -241,10 +286,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void hashCodeEqualsFalseTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -253,10 +303,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
         test1.setPartnerCampaigns(testList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -271,10 +326,15 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
     public void toStringTypeTest() {
         SMSTenDLCPartnerCampaignsListResult test1 = new SMSTenDLCPartnerCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");

@@ -47,6 +47,7 @@ public class QueueRequestTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         QueueRequest test2 = new QueueRequest();
 
         test2.setAlias("TS");
@@ -64,6 +65,7 @@ public class QueueRequestTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         QueueRequest test2 = new QueueRequest();
 
         test2.setAlias("TS2");
@@ -94,6 +96,7 @@ public class QueueRequestTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         QueueRequest test2 = new QueueRequest();
 
         test2.setAlias("TS");
@@ -113,11 +116,13 @@ public class QueueRequestTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         QueueRequest test2 = new QueueRequest();
 
         test2.setAlias("TS");
 
         test2.setMaxSize(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -129,11 +134,13 @@ public class QueueRequestTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         QueueRequest test2 = new QueueRequest();
 
         test2.setAlias("TS2");
 
         test2.setMaxSize(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

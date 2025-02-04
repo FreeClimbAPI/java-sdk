@@ -50,6 +50,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Redirect test2 = new Redirect();
 
         try {
@@ -75,6 +76,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Redirect test2 = new Redirect();
 
         try {
@@ -117,6 +119,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Redirect test2 = new Redirect();
 
         try {
@@ -144,6 +147,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Redirect test2 = new Redirect();
 
         try {
@@ -153,6 +157,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -168,6 +173,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Redirect test2 = new Redirect();
 
         try {
@@ -177,6 +183,7 @@ public class RedirectTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

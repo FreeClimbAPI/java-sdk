@@ -48,6 +48,7 @@ public class CompletionResultTest {
         test1.setResponse("TS");
 
         test1.setStatus(CompletionResultStatus.SUCCESS);
+
         CompletionResult test2 = new CompletionResult();
 
         test2.setResponse("TS");
@@ -65,6 +66,7 @@ public class CompletionResultTest {
         test1.setResponse("TS");
 
         test1.setStatus(CompletionResultStatus.NO_CONTEXT);
+
         CompletionResult test2 = new CompletionResult();
 
         test2.setResponse("TS2");
@@ -95,6 +97,7 @@ public class CompletionResultTest {
         test1.setResponse("TS");
 
         test1.setStatus(CompletionResultStatus.SUCCESS);
+
         CompletionResult test2 = new CompletionResult();
 
         test2.setResponse("TS");
@@ -114,11 +117,13 @@ public class CompletionResultTest {
         test1.setResponse("TS");
 
         test1.setStatus(CompletionResultStatus.SUCCESS);
+
         CompletionResult test2 = new CompletionResult();
 
         test2.setResponse("TS");
 
         test2.setStatus(CompletionResultStatus.SUCCESS);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -130,11 +135,13 @@ public class CompletionResultTest {
         test1.setResponse("TS");
 
         test1.setStatus(CompletionResultStatus.NO_CONTEXT);
+
         CompletionResult test2 = new CompletionResult();
 
         test2.setResponse("TS2");
 
         test2.setStatus(CompletionResultStatus.SUCCESS);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

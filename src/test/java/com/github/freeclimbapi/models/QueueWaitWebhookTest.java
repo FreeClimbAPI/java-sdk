@@ -147,6 +147,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -156,7 +157,9 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
+
         QueueWaitWebhook test2 = new QueueWaitWebhook();
 
         test2.setRequestType("TS");
@@ -170,6 +173,7 @@ public class QueueWaitWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -179,6 +183,7 @@ public class QueueWaitWebhookTest {
         test2.setQueuePosition("TS");
 
         test2.setQueueTime(1);
+
         test2.setCurrentQueueSize(1);
 
         Assert.assertTrue(test1.equals(test2));
@@ -200,6 +205,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -209,7 +215,9 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
+
         QueueWaitWebhook test2 = new QueueWaitWebhook();
 
         test2.setRequestType("TS2");
@@ -223,6 +231,7 @@ public class QueueWaitWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -232,6 +241,7 @@ public class QueueWaitWebhookTest {
         test2.setQueuePosition("TS2");
 
         test2.setQueueTime(0);
+
         test2.setCurrentQueueSize(0);
 
         Assert.assertFalse(test1.equals(test2));
@@ -253,6 +263,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -262,6 +273,7 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
 
         int hashCode1 = test1.hashCode();
@@ -284,6 +296,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -293,7 +306,9 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
+
         QueueWaitWebhook test2 = new QueueWaitWebhook();
 
         test2.setRequestType("TS");
@@ -307,6 +322,7 @@ public class QueueWaitWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -316,6 +332,7 @@ public class QueueWaitWebhookTest {
         test2.setQueuePosition("TS");
 
         test2.setQueueTime(1);
+
         test2.setCurrentQueueSize(1);
 
         String toString1 = test1.toString();
@@ -339,6 +356,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -348,7 +366,9 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
+
         QueueWaitWebhook test2 = new QueueWaitWebhook();
 
         test2.setRequestType("TS");
@@ -362,6 +382,7 @@ public class QueueWaitWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -371,7 +392,9 @@ public class QueueWaitWebhookTest {
         test2.setQueuePosition("TS");
 
         test2.setQueueTime(1);
+
         test2.setCurrentQueueSize(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -391,6 +414,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -400,7 +424,9 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
+
         QueueWaitWebhook test2 = new QueueWaitWebhook();
 
         test2.setRequestType("TS2");
@@ -414,6 +440,7 @@ public class QueueWaitWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -423,7 +450,9 @@ public class QueueWaitWebhookTest {
         test2.setQueuePosition("TS2");
 
         test2.setQueueTime(0);
+
         test2.setCurrentQueueSize(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -443,6 +472,7 @@ public class QueueWaitWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -452,6 +482,7 @@ public class QueueWaitWebhookTest {
         test1.setQueuePosition("TS");
 
         test1.setQueueTime(1);
+
         test1.setCurrentQueueSize(1);
 
         String toString1 = test1.toString();

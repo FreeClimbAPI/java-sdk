@@ -315,8 +315,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -329,13 +332,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -365,7 +376,9 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
 
         test2.setAccountId("TS");
@@ -377,8 +390,11 @@ public class SMSTenDLCCampaignTest {
         test2.setResellerId("TS");
 
         test2.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setAutoRenewal(true);
+
         test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -391,13 +407,21 @@ public class SMSTenDLCCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -427,6 +451,7 @@ public class SMSTenDLCCampaignTest {
         test2.setReferenceId("TS");
 
         test2.setMock(true);
+
         test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 
         Assert.assertTrue(test1.equals(test2));
@@ -446,8 +471,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.EXPIRED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -460,13 +488,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -496,7 +532,9 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
 
         test2.setAccountId("TS2");
@@ -508,8 +546,11 @@ public class SMSTenDLCCampaignTest {
         test2.setResellerId("TS2");
 
         test2.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setAutoRenewal(false);
+
         test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setBrandId("TS2");
@@ -522,13 +563,21 @@ public class SMSTenDLCCampaignTest {
         test2.setDescription("TS2");
 
         test2.setEmbeddedLink(false);
+
         test2.setEmbeddedPhone(false);
+
         test2.setAffiliateMarketing(false);
+
         test2.setNumberPool(false);
+
         test2.setAgeGated(false);
+
         test2.setDirectLending(false);
+
         test2.setSubscriberOptin(false);
+
         test2.setSubscriberOptout(false);
+
         test2.setSubscriberHelp(false);
 
         test2.setSample1("TS2");
@@ -558,6 +607,7 @@ public class SMSTenDLCCampaignTest {
         test2.setReferenceId("TS2");
 
         test2.setMock(false);
+
         test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
 
         Assert.assertFalse(test1.equals(test2));
@@ -577,8 +627,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -591,13 +644,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -627,6 +688,7 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 
         int hashCode1 = test1.hashCode();
@@ -647,8 +709,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -661,13 +726,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -697,7 +770,9 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
 
         test2.setAccountId("TS");
@@ -709,8 +784,11 @@ public class SMSTenDLCCampaignTest {
         test2.setResellerId("TS");
 
         test2.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setAutoRenewal(true);
+
         test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -723,13 +801,21 @@ public class SMSTenDLCCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -759,6 +845,7 @@ public class SMSTenDLCCampaignTest {
         test2.setReferenceId("TS");
 
         test2.setMock(true);
+
         test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 
         String toString1 = test1.toString();
@@ -780,8 +867,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -794,13 +884,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -830,7 +928,9 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
 
         test2.setAccountId("TS");
@@ -842,8 +942,11 @@ public class SMSTenDLCCampaignTest {
         test2.setResellerId("TS");
 
         test2.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setAutoRenewal(true);
+
         test2.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -856,13 +959,21 @@ public class SMSTenDLCCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -892,7 +1003,9 @@ public class SMSTenDLCCampaignTest {
         test2.setReferenceId("TS");
 
         test2.setMock(true);
+
         test2.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -910,8 +1023,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.EXPIRED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -924,13 +1040,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -960,7 +1084,9 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
+
         SMSTenDLCCampaign test2 = new SMSTenDLCCampaign();
 
         test2.setAccountId("TS2");
@@ -972,8 +1098,11 @@ public class SMSTenDLCCampaignTest {
         test2.setResellerId("TS2");
 
         test2.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setAutoRenewal(false);
+
         test2.setBilledDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setBrandId("TS2");
@@ -986,13 +1115,21 @@ public class SMSTenDLCCampaignTest {
         test2.setDescription("TS2");
 
         test2.setEmbeddedLink(false);
+
         test2.setEmbeddedPhone(false);
+
         test2.setAffiliateMarketing(false);
+
         test2.setNumberPool(false);
+
         test2.setAgeGated(false);
+
         test2.setDirectLending(false);
+
         test2.setSubscriberOptin(false);
+
         test2.setSubscriberOptout(false);
+
         test2.setSubscriberHelp(false);
 
         test2.setSample1("TS2");
@@ -1022,7 +1159,9 @@ public class SMSTenDLCCampaignTest {
         test2.setReferenceId("TS2");
 
         test2.setMock(false);
+
         test2.setNextRenewalOrExpirationDate(LocalDate.parse("2001-01-01"));
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -1040,8 +1179,11 @@ public class SMSTenDLCCampaignTest {
         test1.setResellerId("TS");
 
         test1.setStatus(SMSTenDLCCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setAutoRenewal(true);
+
         test1.setBilledDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -1054,13 +1196,21 @@ public class SMSTenDLCCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -1090,6 +1240,7 @@ public class SMSTenDLCCampaignTest {
         test1.setReferenceId("TS");
 
         test1.setMock(true);
+
         test1.setNextRenewalOrExpirationDate(LocalDate.parse("2000-01-01"));
 
         String toString1 = test1.toString();

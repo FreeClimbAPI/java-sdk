@@ -403,9 +403,13 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         SMSTenDLCBrand test2 = new SMSTenDLCBrand();
 
         test2.setAccountId("TS");
@@ -458,8 +462,11 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap2 = testMap;
         test2.setOptionalAttributes(testMap);
+
         test2.setMock(true);
+
         test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         Assert.assertTrue(test1.equals(test2));
@@ -520,9 +527,13 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.UNVERIFIED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         SMSTenDLCBrand test2 = new SMSTenDLCBrand();
 
         test2.setAccountId("TS2");
@@ -574,9 +585,12 @@ public class SMSTenDLCBrandTest {
         test2.setReferenceId("TS2");
 
         Map<String, Object> testMap2 = new HashMap();
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setMock(false);
+
         test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         Assert.assertFalse(test1.equals(test2));
@@ -637,8 +651,11 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         int hashCode1 = test1.hashCode();
@@ -700,9 +717,13 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         SMSTenDLCBrand test2 = new SMSTenDLCBrand();
 
         test2.setAccountId("TS");
@@ -754,9 +775,12 @@ public class SMSTenDLCBrandTest {
         test2.setReferenceId("TS");
 
         Map<String, Object> testMap2 = testMap;
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setMock(true);
+
         test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         String toString1 = test1.toString();
@@ -819,9 +843,13 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         SMSTenDLCBrand test2 = new SMSTenDLCBrand();
 
         test2.setAccountId("TS");
@@ -873,10 +901,14 @@ public class SMSTenDLCBrandTest {
         test2.setReferenceId("TS");
 
         Map<String, Object> testMap2 = testMap;
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setMock(true);
+
         test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -935,9 +967,13 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.UNVERIFIED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         SMSTenDLCBrand test2 = new SMSTenDLCBrand();
 
         test2.setAccountId("TS2");
@@ -989,10 +1025,14 @@ public class SMSTenDLCBrandTest {
         test2.setReferenceId("TS2");
 
         Map<String, Object> testMap2 = new HashMap();
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setMock(false);
+
         test2.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -1051,8 +1091,11 @@ public class SMSTenDLCBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setMock(true);
+
         test1.setIdentityStatus(SMSTenDLCBrandIdentityStatus.SELF_DECLARED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         String toString1 = test1.toString();

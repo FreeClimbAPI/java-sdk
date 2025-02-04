@@ -242,6 +242,7 @@ public class SMSTenDLCPartnerCampaignTest {
     /** Test the property 'brand' */
     @Test
     public void brandTest() {
+
         SMSTenDLCPartnerCampaignBrand object = new SMSTenDLCPartnerCampaignBrand();
         model.setBrand(object);
         Assert.assertEquals(object.getClass(), SMSTenDLCPartnerCampaignBrand.class);
@@ -257,6 +258,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -266,13 +268,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -299,9 +309,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
+
         SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
 
         test2.setAccountId("TS");
@@ -309,6 +320,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setCampaignId("TS");
 
         test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -318,13 +330,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -351,9 +371,9 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test2.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject2 =
-                SMSTenDLCPartnerCampaignBrandobject;
-        test2.setBrand(SMSTenDLCPartnerCampaignBrandobject2);
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject2 =
+                testSMSTenDLCPartnerCampaignBrandObject;
+        test2.setBrand(testSMSTenDLCPartnerCampaignBrandObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -368,6 +388,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.EXPIRED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -377,13 +398,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -410,9 +439,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
+
         SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
 
         test2.setAccountId("TS2");
@@ -420,6 +450,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setCampaignId("TS2");
 
         test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setBrandId("TS2");
@@ -429,13 +460,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setDescription("TS2");
 
         test2.setEmbeddedLink(false);
+
         test2.setEmbeddedPhone(false);
+
         test2.setAffiliateMarketing(false);
+
         test2.setNumberPool(false);
+
         test2.setAgeGated(false);
+
         test2.setDirectLending(false);
+
         test2.setSubscriberOptin(false);
+
         test2.setSubscriberOptout(false);
+
         test2.setSubscriberHelp(false);
 
         test2.setSample1("TS2");
@@ -462,9 +501,9 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test2.setOptoutMessage("TS2");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject2 =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject2 =
                 new SMSTenDLCPartnerCampaignBrand();
-        test2.setBrand(SMSTenDLCPartnerCampaignBrandobject2);
+        test2.setBrand(testSMSTenDLCPartnerCampaignBrandObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -479,6 +518,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -488,13 +528,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -521,9 +569,9 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -539,6 +587,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -548,13 +597,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -581,9 +638,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
+
         SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
 
         test2.setAccountId("TS");
@@ -591,6 +649,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setCampaignId("TS");
 
         test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -600,13 +659,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -633,9 +700,9 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test2.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject2 =
-                SMSTenDLCPartnerCampaignBrandobject;
-        test2.setBrand(SMSTenDLCPartnerCampaignBrandobject2);
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject2 =
+                testSMSTenDLCPartnerCampaignBrandObject;
+        test2.setBrand(testSMSTenDLCPartnerCampaignBrandObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -652,6 +719,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -661,13 +729,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -694,9 +770,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
+
         SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
 
         test2.setAccountId("TS");
@@ -704,6 +781,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setCampaignId("TS");
 
         test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setBrandId("TS");
@@ -713,13 +791,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setDescription("TS");
 
         test2.setEmbeddedLink(true);
+
         test2.setEmbeddedPhone(true);
+
         test2.setAffiliateMarketing(true);
+
         test2.setNumberPool(true);
+
         test2.setAgeGated(true);
+
         test2.setDirectLending(true);
+
         test2.setSubscriberOptin(true);
+
         test2.setSubscriberOptout(true);
+
         test2.setSubscriberHelp(true);
 
         test2.setSample1("TS");
@@ -746,9 +832,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test2.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject2 =
-                SMSTenDLCPartnerCampaignBrandobject;
-        test2.setBrand(SMSTenDLCPartnerCampaignBrandobject2);
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject2 =
+                testSMSTenDLCPartnerCampaignBrandObject;
+        test2.setBrand(testSMSTenDLCPartnerCampaignBrandObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -762,6 +849,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.EXPIRED);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -771,13 +859,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -804,9 +900,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
+
         SMSTenDLCPartnerCampaign test2 = new SMSTenDLCPartnerCampaign();
 
         test2.setAccountId("TS2");
@@ -814,6 +911,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setCampaignId("TS2");
 
         test2.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test2.setCreateDate(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setBrandId("TS2");
@@ -823,13 +921,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test2.setDescription("TS2");
 
         test2.setEmbeddedLink(false);
+
         test2.setEmbeddedPhone(false);
+
         test2.setAffiliateMarketing(false);
+
         test2.setNumberPool(false);
+
         test2.setAgeGated(false);
+
         test2.setDirectLending(false);
+
         test2.setSubscriberOptin(false);
+
         test2.setSubscriberOptout(false);
+
         test2.setSubscriberHelp(false);
 
         test2.setSample1("TS2");
@@ -856,9 +962,10 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test2.setOptoutMessage("TS2");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject2 =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject2 =
                 new SMSTenDLCPartnerCampaignBrand();
-        test2.setBrand(SMSTenDLCPartnerCampaignBrandobject2);
+        test2.setBrand(testSMSTenDLCPartnerCampaignBrandObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -872,6 +979,7 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setCampaignId("TS");
 
         test1.setStatus(SMSTenDLCPartnerCampaignStatus.ACTIVE);
+
         test1.setCreateDate(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setBrandId("TS");
@@ -881,13 +989,21 @@ public class SMSTenDLCPartnerCampaignTest {
         test1.setDescription("TS");
 
         test1.setEmbeddedLink(true);
+
         test1.setEmbeddedPhone(true);
+
         test1.setAffiliateMarketing(true);
+
         test1.setNumberPool(true);
+
         test1.setAgeGated(true);
+
         test1.setDirectLending(true);
+
         test1.setSubscriberOptin(true);
+
         test1.setSubscriberOptout(true);
+
         test1.setSubscriberHelp(true);
 
         test1.setSample1("TS");
@@ -914,9 +1030,9 @@ public class SMSTenDLCPartnerCampaignTest {
 
         test1.setOptoutMessage("TS");
 
-        SMSTenDLCPartnerCampaignBrand SMSTenDLCPartnerCampaignBrandobject =
+        SMSTenDLCPartnerCampaignBrand testSMSTenDLCPartnerCampaignBrandObject =
                 new SMSTenDLCPartnerCampaignBrand();
-        test1.setBrand(SMSTenDLCPartnerCampaignBrandobject);
+        test1.setBrand(testSMSTenDLCPartnerCampaignBrandObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

@@ -101,6 +101,7 @@ public class GetSpeechTest {
     /** Test the property 'confidenceThreshold' */
     @Test
     public void confidenceThresholdTest() {
+
         model.setConfidenceThreshold(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getConfidenceThreshold());
     }
@@ -108,6 +109,7 @@ public class GetSpeechTest {
     /** Test the property 'sensitivityLevel' */
     @Test
     public void sensitivityLevelTest() {
+
         model.setSensitivityLevel(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSensitivityLevel());
     }
@@ -147,6 +149,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.URL);
 
         test1.setGrammarFile("TS");
@@ -154,13 +157,19 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
+
         GetSpeech test2 = new GetSpeech();
 
         try {
@@ -170,6 +179,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test2.setGrammarType(GrammarType.URL);
 
         test2.setGrammarFile("TS");
@@ -177,12 +187,17 @@ public class GetSpeechTest {
         test2.setGrammarRule("TS");
 
         test2.setPlayBeep(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setNoInputTimeoutMs(1);
+
         test2.setRecognitionTimeoutMs(1);
+
         test2.setSpeechCompleteTimeoutMs(1);
+
         test2.setSpeechIncompleteTimeoutMs(1);
+
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -200,6 +215,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.BUILT_IN);
 
         test1.setGrammarFile("TS");
@@ -207,13 +223,19 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
+
         GetSpeech test2 = new GetSpeech();
 
         try {
@@ -223,6 +245,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test2.setGrammarType(GrammarType.URL);
 
         test2.setGrammarFile("TS2");
@@ -230,12 +253,17 @@ public class GetSpeechTest {
         test2.setGrammarRule("TS2");
 
         test2.setPlayBeep(false);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         test2.setNoInputTimeoutMs(0);
+
         test2.setRecognitionTimeoutMs(0);
+
         test2.setSpeechCompleteTimeoutMs(0);
+
         test2.setSpeechIncompleteTimeoutMs(0);
+
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -253,6 +281,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.URL);
 
         test1.setGrammarFile("TS");
@@ -260,12 +289,17 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -284,6 +318,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.URL);
 
         test1.setGrammarFile("TS");
@@ -291,13 +326,19 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
+
         GetSpeech test2 = new GetSpeech();
 
         try {
@@ -307,6 +348,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test2.setGrammarType(GrammarType.URL);
 
         test2.setGrammarFile("TS");
@@ -314,12 +356,17 @@ public class GetSpeechTest {
         test2.setGrammarRule("TS");
 
         test2.setPlayBeep(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setNoInputTimeoutMs(1);
+
         test2.setRecognitionTimeoutMs(1);
+
         test2.setSpeechCompleteTimeoutMs(1);
+
         test2.setSpeechIncompleteTimeoutMs(1);
+
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -339,6 +386,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.URL);
 
         test1.setGrammarFile("TS");
@@ -346,13 +394,19 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
+
         GetSpeech test2 = new GetSpeech();
 
         try {
@@ -362,6 +416,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test2.setGrammarType(GrammarType.URL);
 
         test2.setGrammarFile("TS");
@@ -369,13 +424,19 @@ public class GetSpeechTest {
         test2.setGrammarRule("TS");
 
         test2.setPlayBeep(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setNoInputTimeoutMs(1);
+
         test2.setRecognitionTimeoutMs(1);
+
         test2.setSpeechCompleteTimeoutMs(1);
+
         test2.setSpeechIncompleteTimeoutMs(1);
+
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -391,6 +452,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.BUILT_IN);
 
         test1.setGrammarFile("TS");
@@ -398,13 +460,19 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
+
         GetSpeech test2 = new GetSpeech();
 
         try {
@@ -414,6 +482,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test2.setGrammarType(GrammarType.URL);
 
         test2.setGrammarFile("TS2");
@@ -421,13 +490,19 @@ public class GetSpeechTest {
         test2.setGrammarRule("TS2");
 
         test2.setPlayBeep(false);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         test2.setNoInputTimeoutMs(0);
+
         test2.setRecognitionTimeoutMs(0);
+
         test2.setSpeechCompleteTimeoutMs(0);
+
         test2.setSpeechIncompleteTimeoutMs(0);
+
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -443,6 +518,7 @@ public class GetSpeechTest {
             e.printStackTrace();
         }
         ;
+
         test1.setGrammarType(GrammarType.URL);
 
         test1.setGrammarFile("TS");
@@ -450,12 +526,17 @@ public class GetSpeechTest {
         test1.setGrammarRule("TS");
 
         test1.setPlayBeep(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setNoInputTimeoutMs(1);
+
         test1.setRecognitionTimeoutMs(1);
+
         test1.setSpeechCompleteTimeoutMs(1);
+
         test1.setSpeechIncompleteTimeoutMs(1);
+
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

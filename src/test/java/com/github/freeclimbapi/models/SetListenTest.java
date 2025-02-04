@@ -36,6 +36,7 @@ public class SetListenTest {
     public void equalsTrueTest() {
         SetListen test1 = new SetListen();
         test1.setListen(true);
+
         SetListen test2 = new SetListen();
         test2.setListen(true);
 
@@ -47,6 +48,7 @@ public class SetListenTest {
     public void equalsFalseTest() {
         SetListen test1 = new SetListen();
         test1.setListen(true);
+
         SetListen test2 = new SetListen();
         test2.setListen(false);
 
@@ -68,6 +70,7 @@ public class SetListenTest {
     public void toStringEqualsTest() {
         SetListen test1 = new SetListen();
         test1.setListen(true);
+
         SetListen test2 = new SetListen();
         test2.setListen(true);
 
@@ -81,8 +84,10 @@ public class SetListenTest {
     public void hashCodeEqualsTrueTest() {
         SetListen test1 = new SetListen();
         test1.setListen(true);
+
         SetListen test2 = new SetListen();
         test2.setListen(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -91,8 +96,10 @@ public class SetListenTest {
     public void hashCodeEqualsFalseTest() {
         SetListen test1 = new SetListen();
         test1.setListen(true);
+
         SetListen test2 = new SetListen();
         test2.setListen(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

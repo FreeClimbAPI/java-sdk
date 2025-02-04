@@ -51,11 +51,16 @@ public class TranscribeUtteranceRecordTest {
     public void equalsTrueTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
+
         TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
         test2.setSaveRecording(true);
+
         test2.setMaxLengthSec(1);
+
         test2.setRcrdTerminationSilenceTimeMs(1);
 
         Assert.assertTrue(test1.equals(test2));
@@ -66,11 +71,16 @@ public class TranscribeUtteranceRecordTest {
     public void equalsFalseTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
+
         TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
         test2.setSaveRecording(false);
+
         test2.setMaxLengthSec(0);
+
         test2.setRcrdTerminationSilenceTimeMs(0);
 
         Assert.assertFalse(test1.equals(test2));
@@ -81,7 +91,9 @@ public class TranscribeUtteranceRecordTest {
     public void hashCodeTypeTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
 
         int hashCode1 = test1.hashCode();
@@ -93,11 +105,16 @@ public class TranscribeUtteranceRecordTest {
     public void toStringEqualsTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
+
         TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
         test2.setSaveRecording(true);
+
         test2.setMaxLengthSec(1);
+
         test2.setRcrdTerminationSilenceTimeMs(1);
 
         String toString1 = test1.toString();
@@ -110,12 +127,18 @@ public class TranscribeUtteranceRecordTest {
     public void hashCodeEqualsTrueTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
+
         TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
         test2.setSaveRecording(true);
+
         test2.setMaxLengthSec(1);
+
         test2.setRcrdTerminationSilenceTimeMs(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -124,12 +147,18 @@ public class TranscribeUtteranceRecordTest {
     public void hashCodeEqualsFalseTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
+
         TranscribeUtteranceRecord test2 = new TranscribeUtteranceRecord();
         test2.setSaveRecording(false);
+
         test2.setMaxLengthSec(0);
+
         test2.setRcrdTerminationSilenceTimeMs(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -138,7 +167,9 @@ public class TranscribeUtteranceRecordTest {
     public void toStringTypeTest() {
         TranscribeUtteranceRecord test1 = new TranscribeUtteranceRecord();
         test1.setSaveRecording(true);
+
         test1.setMaxLengthSec(1);
+
         test1.setRcrdTerminationSilenceTimeMs(1);
 
         String toString1 = test1.toString();

@@ -36,6 +36,7 @@ public class SetDTMFPassThroughTest {
     public void equalsTrueTest() {
         SetDTMFPassThrough test1 = new SetDTMFPassThrough();
         test1.setDtmfPassThrough(true);
+
         SetDTMFPassThrough test2 = new SetDTMFPassThrough();
         test2.setDtmfPassThrough(true);
 
@@ -47,6 +48,7 @@ public class SetDTMFPassThroughTest {
     public void equalsFalseTest() {
         SetDTMFPassThrough test1 = new SetDTMFPassThrough();
         test1.setDtmfPassThrough(true);
+
         SetDTMFPassThrough test2 = new SetDTMFPassThrough();
         test2.setDtmfPassThrough(false);
 
@@ -68,6 +70,7 @@ public class SetDTMFPassThroughTest {
     public void toStringEqualsTest() {
         SetDTMFPassThrough test1 = new SetDTMFPassThrough();
         test1.setDtmfPassThrough(true);
+
         SetDTMFPassThrough test2 = new SetDTMFPassThrough();
         test2.setDtmfPassThrough(true);
 
@@ -81,8 +84,10 @@ public class SetDTMFPassThroughTest {
     public void hashCodeEqualsTrueTest() {
         SetDTMFPassThrough test1 = new SetDTMFPassThrough();
         test1.setDtmfPassThrough(true);
+
         SetDTMFPassThrough test2 = new SetDTMFPassThrough();
         test2.setDtmfPassThrough(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -91,8 +96,10 @@ public class SetDTMFPassThroughTest {
     public void hashCodeEqualsFalseTest() {
         SetDTMFPassThrough test1 = new SetDTMFPassThrough();
         test1.setDtmfPassThrough(true);
+
         SetDTMFPassThrough test2 = new SetDTMFPassThrough();
         test2.setDtmfPassThrough(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

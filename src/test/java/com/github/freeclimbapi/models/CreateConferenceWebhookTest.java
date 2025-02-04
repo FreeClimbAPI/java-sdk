@@ -166,6 +166,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -185,6 +186,7 @@ public class CreateConferenceWebhookTest {
         test1.setRecordingId("TS");
 
         test1.setRecordingDurationSec(1);
+
         CreateConferenceWebhook test2 = new CreateConferenceWebhook();
 
         test2.setRequestType("TS");
@@ -198,6 +200,7 @@ public class CreateConferenceWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -237,6 +240,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -256,6 +260,7 @@ public class CreateConferenceWebhookTest {
         test1.setRecordingId("TS");
 
         test1.setRecordingDurationSec(1);
+
         CreateConferenceWebhook test2 = new CreateConferenceWebhook();
 
         test2.setRequestType("TS2");
@@ -269,6 +274,7 @@ public class CreateConferenceWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -308,6 +314,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -348,6 +355,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -367,6 +375,7 @@ public class CreateConferenceWebhookTest {
         test1.setRecordingId("TS");
 
         test1.setRecordingDurationSec(1);
+
         CreateConferenceWebhook test2 = new CreateConferenceWebhook();
 
         test2.setRequestType("TS");
@@ -380,6 +389,7 @@ public class CreateConferenceWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -421,6 +431,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -440,6 +451,7 @@ public class CreateConferenceWebhookTest {
         test1.setRecordingId("TS");
 
         test1.setRecordingDurationSec(1);
+
         CreateConferenceWebhook test2 = new CreateConferenceWebhook();
 
         test2.setRequestType("TS");
@@ -453,6 +465,7 @@ public class CreateConferenceWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -472,6 +485,7 @@ public class CreateConferenceWebhookTest {
         test2.setRecordingId("TS");
 
         test2.setRecordingDurationSec(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -491,6 +505,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -510,6 +525,7 @@ public class CreateConferenceWebhookTest {
         test1.setRecordingId("TS");
 
         test1.setRecordingDurationSec(1);
+
         CreateConferenceWebhook test2 = new CreateConferenceWebhook();
 
         test2.setRequestType("TS2");
@@ -523,6 +539,7 @@ public class CreateConferenceWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -542,6 +559,7 @@ public class CreateConferenceWebhookTest {
         test2.setRecordingId("TS2");
 
         test2.setRecordingDurationSec(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -561,6 +579,7 @@ public class CreateConferenceWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");

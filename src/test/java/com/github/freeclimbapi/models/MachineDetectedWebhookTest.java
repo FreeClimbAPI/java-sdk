@@ -140,6 +140,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -149,6 +150,7 @@ public class MachineDetectedWebhookTest {
         test1.setParentCallId("TS");
 
         test1.setMachineType(MachineType.ANSWERING_MACHINE);
+
         MachineDetectedWebhook test2 = new MachineDetectedWebhook();
 
         test2.setRequestType("TS");
@@ -162,6 +164,7 @@ public class MachineDetectedWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -191,6 +194,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -200,6 +204,7 @@ public class MachineDetectedWebhookTest {
         test1.setParentCallId("TS");
 
         test1.setMachineType(MachineType.FAX_MODEM);
+
         MachineDetectedWebhook test2 = new MachineDetectedWebhook();
 
         test2.setRequestType("TS2");
@@ -213,6 +218,7 @@ public class MachineDetectedWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -242,6 +248,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -272,6 +279,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -281,6 +289,7 @@ public class MachineDetectedWebhookTest {
         test1.setParentCallId("TS");
 
         test1.setMachineType(MachineType.ANSWERING_MACHINE);
+
         MachineDetectedWebhook test2 = new MachineDetectedWebhook();
 
         test2.setRequestType("TS");
@@ -294,6 +303,7 @@ public class MachineDetectedWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -325,6 +335,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -334,6 +345,7 @@ public class MachineDetectedWebhookTest {
         test1.setParentCallId("TS");
 
         test1.setMachineType(MachineType.ANSWERING_MACHINE);
+
         MachineDetectedWebhook test2 = new MachineDetectedWebhook();
 
         test2.setRequestType("TS");
@@ -347,6 +359,7 @@ public class MachineDetectedWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -356,6 +369,7 @@ public class MachineDetectedWebhookTest {
         test2.setParentCallId("TS");
 
         test2.setMachineType(MachineType.ANSWERING_MACHINE);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -375,6 +389,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -384,6 +399,7 @@ public class MachineDetectedWebhookTest {
         test1.setParentCallId("TS");
 
         test1.setMachineType(MachineType.FAX_MODEM);
+
         MachineDetectedWebhook test2 = new MachineDetectedWebhook();
 
         test2.setRequestType("TS2");
@@ -397,6 +413,7 @@ public class MachineDetectedWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -406,6 +423,7 @@ public class MachineDetectedWebhookTest {
         test2.setParentCallId("TS2");
 
         test2.setMachineType(MachineType.ANSWERING_MACHINE);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -425,6 +443,7 @@ public class MachineDetectedWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");

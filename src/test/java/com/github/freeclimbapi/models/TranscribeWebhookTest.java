@@ -247,28 +247,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.ERROR);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test1.setTranscriptionDurationMs(1);
+
         TranscribeWebhook test2 = new TranscribeWebhook();
 
         test2.setRequestType("TS");
@@ -290,27 +301,37 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test2.setRecordingSize(1);
 
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationMs(1);
+
         test2.setTermReason(TranscribeTermReason.ERROR);
+
         test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setDigit("TS");
 
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test2.setBargedInPromptNo(1);
+
         test2.setBargedInPromptMs(1);
+
         test2.setBargedInPromptLoopNo(1);
+
         test2.setBargeInTimeMs(1);
 
         test2.setTranscript("TS");
 
         test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test2.setTranscriptionDurationMs(1);
 
         Assert.assertTrue(test1.equals(test2));
@@ -340,28 +361,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.COMPLETED);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.HANGUP);
+
         test1.setTranscriptionDurationMs(1);
+
         TranscribeWebhook test2 = new TranscribeWebhook();
 
         test2.setRequestType("TS2");
@@ -383,27 +415,37 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test2.setRecordingSize(0);
 
         test2.setRecordingFormat("TS2");
 
         test2.setRecordingDurationMs(0);
+
         test2.setTermReason(TranscribeTermReason.ERROR);
+
         test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setDigit("TS2");
 
         test2.setPrivacyForLogging(false);
+
         test2.setPrivacyForRecording(false);
+
         test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test2.setBargedInPromptNo(0);
+
         test2.setBargedInPromptMs(0);
+
         test2.setBargedInPromptLoopNo(0);
+
         test2.setBargeInTimeMs(0);
 
         test2.setTranscript("TS2");
 
         test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test2.setTranscriptionDurationMs(0);
 
         Assert.assertFalse(test1.equals(test2));
@@ -433,27 +475,37 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.ERROR);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test1.setTranscriptionDurationMs(1);
 
         int hashCode1 = test1.hashCode();
@@ -484,28 +536,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.ERROR);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test1.setTranscriptionDurationMs(1);
+
         TranscribeWebhook test2 = new TranscribeWebhook();
 
         test2.setRequestType("TS");
@@ -527,27 +590,37 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test2.setRecordingSize(1);
 
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationMs(1);
+
         test2.setTermReason(TranscribeTermReason.ERROR);
+
         test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setDigit("TS");
 
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test2.setBargedInPromptNo(1);
+
         test2.setBargedInPromptMs(1);
+
         test2.setBargedInPromptLoopNo(1);
+
         test2.setBargeInTimeMs(1);
 
         test2.setTranscript("TS");
 
         test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test2.setTranscriptionDurationMs(1);
 
         String toString1 = test1.toString();
@@ -579,28 +652,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.ERROR);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test1.setTranscriptionDurationMs(1);
+
         TranscribeWebhook test2 = new TranscribeWebhook();
 
         test2.setRequestType("TS");
@@ -622,28 +706,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test2.setRecordingSize(1);
 
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationMs(1);
+
         test2.setTermReason(TranscribeTermReason.ERROR);
+
         test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setDigit("TS");
 
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test2.setBargedInPromptNo(1);
+
         test2.setBargedInPromptMs(1);
+
         test2.setBargedInPromptLoopNo(1);
+
         test2.setBargeInTimeMs(1);
 
         test2.setTranscript("TS");
 
         test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test2.setTranscriptionDurationMs(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -671,28 +766,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.COMPLETED);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.TIMEOUT);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.BARGE_IN_BY_DTMF);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.HANGUP);
+
         test1.setTranscriptionDurationMs(1);
+
         TranscribeWebhook test2 = new TranscribeWebhook();
 
         test2.setRequestType("TS2");
@@ -714,28 +820,39 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test2.setRecordingSize(0);
 
         test2.setRecordingFormat("TS2");
 
         test2.setRecordingDurationMs(0);
+
         test2.setTermReason(TranscribeTermReason.ERROR);
+
         test2.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setDigit("TS2");
 
         test2.setPrivacyForLogging(false);
+
         test2.setPrivacyForRecording(false);
+
         test2.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test2.setBargedInPromptNo(0);
+
         test2.setBargedInPromptMs(0);
+
         test2.setBargedInPromptLoopNo(0);
+
         test2.setBargeInTimeMs(0);
 
         test2.setTranscript("TS2");
 
         test2.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test2.setTranscriptionDurationMs(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -763,27 +880,37 @@ public class TranscribeWebhookTest {
             e.printStackTrace();
         }
         ;
+
         test1.setRecordingSize(1);
 
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationMs(1);
+
         test1.setTermReason(TranscribeTermReason.ERROR);
+
         test1.setRecordTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setDigit("TS");
 
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         test1.setBargeInReason(BargeInReason.NO_BARGE_IN);
+
         test1.setBargedInPromptNo(1);
+
         test1.setBargedInPromptMs(1);
+
         test1.setBargedInPromptLoopNo(1);
+
         test1.setBargeInTimeMs(1);
 
         test1.setTranscript("TS");
 
         test1.setTranscribeReason(TranscribeReason.INTERNAL_ERROR);
+
         test1.setTranscriptionDurationMs(1);
 
         String toString1 = test1.toString();

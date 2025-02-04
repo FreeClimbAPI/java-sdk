@@ -50,6 +50,7 @@ public class TranscribeUtteranceTest {
     /** Test the property 'record' */
     @Test
     public void recordTest() {
+
         TranscribeUtteranceRecord object = new TranscribeUtteranceRecord();
         model.setRecord(object);
         Assert.assertEquals(object.getClass(), TranscribeUtteranceRecord.class);
@@ -90,11 +91,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         TranscribeUtterance test2 = new TranscribeUtterance();
@@ -106,12 +113,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 =
-                TranscribeUtteranceRecordobject;
-        test2.setRecord(TranscribeUtteranceRecordobject2);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject2 =
+                testTranscribeUtteranceRecordObject;
+        test2.setRecord(testTranscribeUtteranceRecordObject2);
+
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
 
@@ -130,11 +142,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         TranscribeUtterance test2 = new TranscribeUtterance();
@@ -146,12 +164,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setPlayBeep(false);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 =
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject2 =
                 new TranscribeUtteranceRecord();
-        test2.setRecord(TranscribeUtteranceRecordobject2);
+        test2.setRecord(testTranscribeUtteranceRecordObject2);
+
         test2.setPrivacyForLogging(false);
+
         test2.setPrivacyForRecording(false);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
 
@@ -170,11 +193,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
 
@@ -194,11 +223,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         TranscribeUtterance test2 = new TranscribeUtterance();
@@ -210,12 +245,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 =
-                TranscribeUtteranceRecordobject;
-        test2.setRecord(TranscribeUtteranceRecordobject2);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject2 =
+                testTranscribeUtteranceRecordObject;
+        test2.setRecord(testTranscribeUtteranceRecordObject2);
+
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
 
@@ -236,11 +276,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         TranscribeUtterance test2 = new TranscribeUtterance();
@@ -252,12 +298,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 =
-                TranscribeUtteranceRecordobject;
-        test2.setRecord(TranscribeUtteranceRecordobject2);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject2 =
+                testTranscribeUtteranceRecordObject;
+        test2.setRecord(testTranscribeUtteranceRecordObject2);
+
         test2.setPrivacyForLogging(true);
+
         test2.setPrivacyForRecording(true);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -275,11 +326,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         TranscribeUtterance test2 = new TranscribeUtterance();
@@ -291,12 +348,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setPlayBeep(false);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject2 =
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject2 =
                 new TranscribeUtteranceRecord();
-        test2.setRecord(TranscribeUtteranceRecordobject2);
+        test2.setRecord(testTranscribeUtteranceRecordObject2);
+
         test2.setPrivacyForLogging(false);
+
         test2.setPrivacyForRecording(false);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -314,11 +376,17 @@ public class TranscribeUtteranceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setPlayBeep(true);
-        TranscribeUtteranceRecord TranscribeUtteranceRecordobject = new TranscribeUtteranceRecord();
-        test1.setRecord(TranscribeUtteranceRecordobject);
+
+        TranscribeUtteranceRecord testTranscribeUtteranceRecordObject =
+                new TranscribeUtteranceRecord();
+        test1.setRecord(testTranscribeUtteranceRecordObject);
+
         test1.setPrivacyForLogging(true);
+
         test1.setPrivacyForRecording(true);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
 

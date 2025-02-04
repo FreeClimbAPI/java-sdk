@@ -73,7 +73,6 @@ docs/MessageDeliveryWebhook.md
 docs/MessageDirection.md
 docs/MessageRequest.md
 docs/MessageResult.md
-docs/MessageResultAllOfTfn.md
 docs/MessageStatus.md
 docs/MessageStatusWebhook.md
 docs/MessagesList.md
@@ -232,7 +231,6 @@ src/main/java/com/github/freeclimbapi/MessageDeliveryWebhook.java
 src/main/java/com/github/freeclimbapi/MessageDirection.java
 src/main/java/com/github/freeclimbapi/MessageRequest.java
 src/main/java/com/github/freeclimbapi/MessageResult.java
-src/main/java/com/github/freeclimbapi/MessageResultAllOfTfn.java
 src/main/java/com/github/freeclimbapi/MessageStatus.java
 src/main/java/com/github/freeclimbapi/MessageStatusWebhook.java
 src/main/java/com/github/freeclimbapi/MessagesList.java
@@ -383,7 +381,6 @@ src/test/java/com/github/freeclimbapi/MakeCallRequestTest.java
 src/test/java/com/github/freeclimbapi/MessageDeliveryWebhookTest.java
 src/test/java/com/github/freeclimbapi/MessageDirectionTest.java
 src/test/java/com/github/freeclimbapi/MessageRequestTest.java
-src/test/java/com/github/freeclimbapi/MessageResultAllOfTfnTest.java
 src/test/java/com/github/freeclimbapi/MessageResultTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusWebhookTest.java

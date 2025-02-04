@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **campaignId** | **String** | The unique identifier for the campaign associated with the message |  [optional]
 **segmentCount** | **BigDecimal** | The number of segments into which the message was split |  [optional]
 **mediaUrls** | **List&lt;URI&gt;** | an array of HTTP URLs which were attached this this message |  [optional]
-**tfn** | [**MessageResultAllOfTfn**](MessageResultAllOfTfn.md) |  |  [optional]
+**tfn** | [**TFN**](TFN.md) |  |  [optional]
 **phoneNumberId** | **String** | String that uniquely identifies the phoneNumber resource used to send this Message |  [optional]
 **applicationId** | **String** | String that uniquely identifies the Application resource used to send this Message |  [optional]
 

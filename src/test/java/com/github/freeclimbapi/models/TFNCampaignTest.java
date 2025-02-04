@@ -129,6 +129,7 @@ public class TFNCampaignTest {
         test1.setDateUpdatedISO("TS");
 
         test1.setRevision(1);
+
         TFNCampaign test2 = new TFNCampaign();
 
         test2.setAccountId("TS");
@@ -174,6 +175,7 @@ public class TFNCampaignTest {
         test1.setDateUpdatedISO("TS");
 
         test1.setRevision(1);
+
         TFNCampaign test2 = new TFNCampaign();
 
         test2.setAccountId("TS2");
@@ -246,6 +248,7 @@ public class TFNCampaignTest {
         test1.setDateUpdatedISO("TS");
 
         test1.setRevision(1);
+
         TFNCampaign test2 = new TFNCampaign();
 
         test2.setAccountId("TS");
@@ -293,6 +296,7 @@ public class TFNCampaignTest {
         test1.setDateUpdatedISO("TS");
 
         test1.setRevision(1);
+
         TFNCampaign test2 = new TFNCampaign();
 
         test2.setAccountId("TS");
@@ -312,6 +316,7 @@ public class TFNCampaignTest {
         test2.setDateUpdatedISO("TS");
 
         test2.setRevision(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -337,6 +342,7 @@ public class TFNCampaignTest {
         test1.setDateUpdatedISO("TS");
 
         test1.setRevision(1);
+
         TFNCampaign test2 = new TFNCampaign();
 
         test2.setAccountId("TS2");
@@ -356,6 +362,7 @@ public class TFNCampaignTest {
         test2.setDateUpdatedISO("TS2");
 
         test2.setRevision(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

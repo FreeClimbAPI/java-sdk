@@ -169,8 +169,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
+
         OutDial test2 = new OutDial();
 
         try {
@@ -212,7 +215,9 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test2.setTimeout(1);
+
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -262,8 +267,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
+
         OutDial test2 = new OutDial();
 
         try {
@@ -305,7 +313,9 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test2.setTimeout(0);
+
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -355,7 +365,9 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -406,8 +418,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
+
         OutDial test2 = new OutDial();
 
         try {
@@ -449,7 +464,9 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test2.setTimeout(1);
+
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -501,8 +518,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
+
         OutDial test2 = new OutDial();
 
         try {
@@ -544,8 +564,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test2.setTimeout(1);
+
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -593,8 +616,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
+
         OutDial test2 = new OutDial();
 
         try {
@@ -636,8 +662,11 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test2.setTimeout(0);
+
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -685,7 +714,9 @@ public class OutDialTest {
             e.printStackTrace();
         }
         ;
+
         test1.setTimeout(1);
+
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

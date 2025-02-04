@@ -115,17 +115,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
+
         GetDigits test2 = new GetDigits();
 
         try {
@@ -135,14 +141,19 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test2.setDigitTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setFlushBuffer(true);
+
         test2.setInitialTimeoutMs(1);
+
         test2.setMaxDigits(1);
+
         test2.setMinDigits(1);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setPrivacyMode(true);
@@ -162,17 +173,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
+
         GetDigits test2 = new GetDigits();
 
         try {
@@ -182,14 +199,19 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test2.setDigitTimeoutMs(0);
 
         test2.setFinishOnKey("TS2");
 
         test2.setFlushBuffer(false);
+
         test2.setInitialTimeoutMs(0);
+
         test2.setMaxDigits(0);
+
         test2.setMinDigits(0);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         test2.setPrivacyMode(false);
@@ -209,14 +231,19 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
@@ -237,17 +264,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
+
         GetDigits test2 = new GetDigits();
 
         try {
@@ -257,14 +290,19 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test2.setDigitTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setFlushBuffer(true);
+
         test2.setInitialTimeoutMs(1);
+
         test2.setMaxDigits(1);
+
         test2.setMinDigits(1);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setPrivacyMode(true);
@@ -286,17 +324,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
+
         GetDigits test2 = new GetDigits();
 
         try {
@@ -306,17 +350,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test2.setDigitTimeoutMs(1);
 
         test2.setFinishOnKey("TS");
 
         test2.setFlushBuffer(true);
+
         test2.setInitialTimeoutMs(1);
+
         test2.setMaxDigits(1);
+
         test2.setMinDigits(1);
+
         List<PerclCommand> testList2 = testList;
         test2.setPrompts(testList2);
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -332,17 +382,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);
+
         GetDigits test2 = new GetDigits();
 
         try {
@@ -352,17 +408,23 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test2.setDigitTimeoutMs(0);
 
         test2.setFinishOnKey("TS2");
 
         test2.setFlushBuffer(false);
+
         test2.setInitialTimeoutMs(0);
+
         test2.setMaxDigits(0);
+
         test2.setMinDigits(0);
+
         List<PerclCommand> testList2 = null;
         test2.setPrompts(testList2);
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -378,14 +440,19 @@ public class GetDigitsTest {
             e.printStackTrace();
         }
         ;
+
         test1.setDigitTimeoutMs(1);
 
         test1.setFinishOnKey("TS");
 
         test1.setFlushBuffer(true);
+
         test1.setInitialTimeoutMs(1);
+
         test1.setMaxDigits(1);
+
         test1.setMinDigits(1);
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setPrompts(testList);
         test1.setPrivacyMode(true);

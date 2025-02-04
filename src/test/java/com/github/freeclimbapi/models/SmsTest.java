@@ -80,6 +80,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Sms test2 = new Sms();
 
         test2.setTo("TS");
@@ -117,6 +118,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Sms test2 = new Sms();
 
         test2.setTo("TS2");
@@ -177,6 +179,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Sms test2 = new Sms();
 
         test2.setTo("TS");
@@ -216,6 +219,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Sms test2 = new Sms();
 
         test2.setTo("TS");
@@ -231,6 +235,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -252,6 +257,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Sms test2 = new Sms();
 
         test2.setTo("TS2");
@@ -267,6 +273,7 @@ public class SmsTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

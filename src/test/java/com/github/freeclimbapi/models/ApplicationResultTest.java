@@ -224,6 +224,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationResult test2 = new ApplicationResult();
 
         test2.setUri("TS");
@@ -357,6 +358,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationResult test2 = new ApplicationResult();
 
         test2.setUri("TS2");
@@ -561,6 +563,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationResult test2 = new ApplicationResult();
 
         test2.setUri("TS");
@@ -696,6 +699,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationResult test2 = new ApplicationResult();
 
         test2.setUri("TS");
@@ -759,6 +763,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -828,6 +833,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         ApplicationResult test2 = new ApplicationResult();
 
         test2.setUri("TS2");
@@ -891,6 +897,7 @@ public class ApplicationResultTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

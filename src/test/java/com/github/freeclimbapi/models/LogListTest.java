@@ -95,10 +95,15 @@ public class LogListTest {
     public void equalsTrueTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -107,10 +112,15 @@ public class LogListTest {
         test1.setLogs(testList);
         LogList test2 = new LogList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -126,10 +136,15 @@ public class LogListTest {
     public void equalsFalseTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -138,10 +153,15 @@ public class LogListTest {
         test1.setLogs(testList);
         LogList test2 = new LogList();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -157,10 +177,15 @@ public class LogListTest {
     public void hashCodeTypeTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -177,10 +202,15 @@ public class LogListTest {
     public void toStringEqualsTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -189,10 +219,15 @@ public class LogListTest {
         test1.setLogs(testList);
         LogList test2 = new LogList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -210,10 +245,15 @@ public class LogListTest {
     public void hashCodeEqualsTrueTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -222,10 +262,15 @@ public class LogListTest {
         test1.setLogs(testList);
         LogList test2 = new LogList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -240,10 +285,15 @@ public class LogListTest {
     public void hashCodeEqualsFalseTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -252,10 +302,15 @@ public class LogListTest {
         test1.setLogs(testList);
         LogList test2 = new LogList();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -270,10 +325,15 @@ public class LogListTest {
     public void toStringTypeTest() {
         LogList test1 = new LogList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");

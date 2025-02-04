@@ -86,6 +86,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -103,11 +104,13 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         CreateConferenceRequest test2 = new CreateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -137,6 +140,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
 
         try {
@@ -154,11 +158,13 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         CreateConferenceRequest test2 = new CreateConferenceRequest();
 
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
 
         try {
@@ -188,6 +194,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -218,6 +225,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -235,11 +243,13 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         CreateConferenceRequest test2 = new CreateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -271,6 +281,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {
@@ -288,11 +299,13 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         CreateConferenceRequest test2 = new CreateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(true);
 
         try {
@@ -310,6 +323,7 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -321,6 +335,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setRecord(true);
 
         try {
@@ -338,11 +353,13 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         CreateConferenceRequest test2 = new CreateConferenceRequest();
 
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setRecord(false);
 
         try {
@@ -360,6 +377,7 @@ public class CreateConferenceRequestTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -371,6 +389,7 @@ public class CreateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setRecord(true);
 
         try {

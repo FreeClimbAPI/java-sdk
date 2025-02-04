@@ -61,12 +61,15 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
         UpdateConferenceRequest test2 = new UpdateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
         Assert.assertTrue(test1.equals(test2));
@@ -80,12 +83,15 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+
         UpdateConferenceRequest test2 = new UpdateConferenceRequest();
 
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
         Assert.assertFalse(test1.equals(test2));
@@ -99,6 +105,7 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
         int hashCode1 = test1.hashCode();
@@ -113,12 +120,15 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
         UpdateConferenceRequest test2 = new UpdateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
         String toString1 = test1.toString();
@@ -134,13 +144,17 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
         UpdateConferenceRequest test2 = new UpdateConferenceRequest();
 
         test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -152,13 +166,17 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
+
         test1.setStatus(UpdateConferenceRequestStatus.TERMINATED);
+
         UpdateConferenceRequest test2 = new UpdateConferenceRequest();
 
         test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
+
         test2.setStatus(UpdateConferenceRequestStatus.EMPTY);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -170,6 +188,7 @@ public class UpdateConferenceRequestTest {
         test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
+
         test1.setStatus(UpdateConferenceRequestStatus.EMPTY);
 
         String toString1 = test1.toString();
