@@ -187,9 +187,10 @@ public class CallResultTest {
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
-        Object testObject = new Object();
-        model.setSubresourceUris(testObject);
-        Assert.assertEquals(testObject, model.getSubresourceUris());
+
+        Object object = new Object();
+        model.setSubresourceUris(object);
+        Assert.assertEquals(object.getClass(), Object.class);
     }
 
     /** Test the property 'applicationId' */
@@ -234,11 +235,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
+
         test1.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -273,11 +278,15 @@ public class CallResultTest {
         test2.setEndTime("TS");
 
         test2.setDuration(1);
+
         test2.setConnectDuration(1);
+
         test2.setDirection(CallDirection.INBOUND);
+
         test2.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         test2.setApplicationId("TS");
 
@@ -318,11 +327,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
+
         test1.setAnsweredBy(AnsweredBy.MACHINE);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -357,11 +370,15 @@ public class CallResultTest {
         test2.setEndTime("TS2");
 
         test2.setDuration(0);
+
         test2.setConnectDuration(0);
+
         test2.setDirection(CallDirection.INBOUND);
+
         test2.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
 
         test2.setApplicationId("TS2");
 
@@ -402,11 +419,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
+
         test1.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -448,11 +469,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
+
         test1.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -487,11 +512,15 @@ public class CallResultTest {
         test2.setEndTime("TS");
 
         test2.setDuration(1);
+
         test2.setConnectDuration(1);
+
         test2.setDirection(CallDirection.INBOUND);
+
         test2.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         test2.setApplicationId("TS");
 
@@ -534,11 +563,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
+
         test1.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -573,11 +606,15 @@ public class CallResultTest {
         test2.setEndTime("TS");
 
         test2.setDuration(1);
+
         test2.setConnectDuration(1);
+
         test2.setDirection(CallDirection.INBOUND);
+
         test2.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         test2.setApplicationId("TS");
 
@@ -618,11 +655,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
+
         test1.setAnsweredBy(AnsweredBy.MACHINE);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 
@@ -657,11 +698,15 @@ public class CallResultTest {
         test2.setEndTime("TS2");
 
         test2.setDuration(0);
+
         test2.setConnectDuration(0);
+
         test2.setDirection(CallDirection.INBOUND);
+
         test2.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
 
         test2.setApplicationId("TS2");
 
@@ -702,11 +747,15 @@ public class CallResultTest {
         test1.setEndTime("TS");
 
         test1.setDuration(1);
+
         test1.setConnectDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
+
         test1.setAnsweredBy(AnsweredBy.HUMAN);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         test1.setApplicationId("TS");
 

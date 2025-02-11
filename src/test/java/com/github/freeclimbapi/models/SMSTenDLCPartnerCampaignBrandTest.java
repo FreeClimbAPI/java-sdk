@@ -137,7 +137,9 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
+
         SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
         test2.setAccountId("TS");
@@ -158,6 +160,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap2 = testMap;
         test2.setOptionalAttributes(testMap);
+
         test2.setEvpVettingScore(1);
 
         Assert.assertTrue(test1.equals(test2));
@@ -186,7 +189,9 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
+
         SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
         test2.setAccountId("TS2");
@@ -206,7 +211,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         test2.setWebsite("TS2");
 
         Map<String, Object> testMap2 = new HashMap();
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setEvpVettingScore(0);
 
         Assert.assertFalse(test1.equals(test2));
@@ -235,6 +241,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
 
         int hashCode1 = test1.hashCode();
@@ -264,7 +271,9 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
+
         SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
         test2.setAccountId("TS");
@@ -284,7 +293,8 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         test2.setWebsite("TS");
 
         Map<String, Object> testMap2 = testMap;
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setEvpVettingScore(1);
 
         String toString1 = test1.toString();
@@ -315,7 +325,9 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
+
         SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
         test2.setAccountId("TS");
@@ -335,8 +347,10 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         test2.setWebsite("TS");
 
         Map<String, Object> testMap2 = testMap;
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setEvpVettingScore(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -363,7 +377,9 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
+
         SMSTenDLCPartnerCampaignBrand test2 = new SMSTenDLCPartnerCampaignBrand();
 
         test2.setAccountId("TS2");
@@ -383,8 +399,10 @@ public class SMSTenDLCPartnerCampaignBrandTest {
         test2.setWebsite("TS2");
 
         Map<String, Object> testMap2 = new HashMap();
-        test2.setOptionalAttributes(testMap2);
+        test2.setOptionalAttributes(testMap);
+
         test2.setEvpVettingScore(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -411,6 +429,7 @@ public class SMSTenDLCPartnerCampaignBrandTest {
 
         Map<String, Object> testMap = new HashMap();
         test1.setOptionalAttributes(testMap);
+
         test1.setEvpVettingScore(1);
 
         String toString1 = test1.toString();

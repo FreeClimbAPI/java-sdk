@@ -37,6 +37,7 @@ public class PauseTest {
     public void equalsTrueTest() {
         Pause test1 = new Pause();
         test1.setLength(1);
+
         Pause test2 = new Pause();
         test2.setLength(1);
 
@@ -48,6 +49,7 @@ public class PauseTest {
     public void equalsFalseTest() {
         Pause test1 = new Pause();
         test1.setLength(1);
+
         Pause test2 = new Pause();
         test2.setLength(0);
 
@@ -69,6 +71,7 @@ public class PauseTest {
     public void toStringEqualsTest() {
         Pause test1 = new Pause();
         test1.setLength(1);
+
         Pause test2 = new Pause();
         test2.setLength(1);
 
@@ -82,8 +85,10 @@ public class PauseTest {
     public void hashCodeEqualsTrueTest() {
         Pause test1 = new Pause();
         test1.setLength(1);
+
         Pause test2 = new Pause();
         test2.setLength(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -92,8 +97,10 @@ public class PauseTest {
     public void hashCodeEqualsFalseTest() {
         Pause test1 = new Pause();
         test1.setLength(1);
+
         Pause test2 = new Pause();
         test2.setLength(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

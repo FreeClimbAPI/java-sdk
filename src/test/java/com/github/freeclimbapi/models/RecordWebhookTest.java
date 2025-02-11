@@ -197,6 +197,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -218,11 +219,13 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setParentCallId("TS");
 
         test1.setPrivacyMode(true);
+
         RecordWebhook test2 = new RecordWebhook();
 
         test2.setRequestType("TS");
@@ -236,6 +239,7 @@ public class RecordWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -257,6 +261,7 @@ public class RecordWebhookTest {
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationSec(1);
+
         test2.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setParentCallId("TS");
@@ -282,6 +287,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -303,11 +309,13 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.TIMEOUT);
 
         test1.setParentCallId("TS");
 
         test1.setPrivacyMode(true);
+
         RecordWebhook test2 = new RecordWebhook();
 
         test2.setRequestType("TS2");
@@ -321,6 +329,7 @@ public class RecordWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -342,6 +351,7 @@ public class RecordWebhookTest {
         test2.setRecordingFormat("TS2");
 
         test2.setRecordingDurationSec(0);
+
         test2.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setParentCallId("TS2");
@@ -367,6 +377,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -388,6 +399,7 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setParentCallId("TS");
@@ -414,6 +426,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -435,11 +448,13 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setParentCallId("TS");
 
         test1.setPrivacyMode(true);
+
         RecordWebhook test2 = new RecordWebhook();
 
         test2.setRequestType("TS");
@@ -453,6 +468,7 @@ public class RecordWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -474,6 +490,7 @@ public class RecordWebhookTest {
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationSec(1);
+
         test2.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setParentCallId("TS");
@@ -501,6 +518,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -522,11 +540,13 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setParentCallId("TS");
 
         test1.setPrivacyMode(true);
+
         RecordWebhook test2 = new RecordWebhook();
 
         test2.setRequestType("TS");
@@ -540,6 +560,7 @@ public class RecordWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -561,11 +582,13 @@ public class RecordWebhookTest {
         test2.setRecordingFormat("TS");
 
         test2.setRecordingDurationSec(1);
+
         test2.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setParentCallId("TS");
 
         test2.setPrivacyMode(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -585,6 +608,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -606,11 +630,13 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.TIMEOUT);
 
         test1.setParentCallId("TS");
 
         test1.setPrivacyMode(true);
+
         RecordWebhook test2 = new RecordWebhook();
 
         test2.setRequestType("TS2");
@@ -624,6 +650,7 @@ public class RecordWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -645,11 +672,13 @@ public class RecordWebhookTest {
         test2.setRecordingFormat("TS2");
 
         test2.setRecordingDurationSec(0);
+
         test2.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test2.setParentCallId("TS2");
 
         test2.setPrivacyMode(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -669,6 +698,7 @@ public class RecordWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -690,6 +720,7 @@ public class RecordWebhookTest {
         test1.setRecordingFormat("TS");
 
         test1.setRecordingDurationSec(1);
+
         test1.setTermReason(RecordUtteranceTermReason.FINISH_KEY);
 
         test1.setParentCallId("TS");

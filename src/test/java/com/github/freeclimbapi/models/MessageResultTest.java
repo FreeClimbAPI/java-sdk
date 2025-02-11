@@ -166,6 +166,7 @@ public class MessageResultTest {
     /** Test the property 'segmentCount' */
     @Test
     public void segmentCountTest() {
+
         model.setSegmentCount(new BigDecimal(1.0));
         Assert.assertEquals(new BigDecimal(1.0), model.getSegmentCount());
     }
@@ -181,7 +182,12 @@ public class MessageResultTest {
 
     /** Test the property 'tfn' */
     @Test
-    public void tfnTest() {}
+    public void tfnTest() {
+
+        TFN object = new TFN();
+        model.setTfn(object);
+        Assert.assertEquals(object.getClass(), TFN.class);
+    }
 
     /** Test the property 'phoneNumberId' */
     @Test
@@ -241,6 +247,9 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         test1.setPhoneNumberId("TS");
 
         test1.setApplicationId("TS");
@@ -283,6 +292,9 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
 
         test2.setPhoneNumberId("TS");
 
@@ -333,6 +345,9 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         test1.setPhoneNumberId("TS");
 
         test1.setApplicationId("TS");
@@ -375,6 +390,9 @@ public class MessageResultTest {
 
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
+
+        TFN testTFNObject2 = new TFN();
+        test2.setTfn(testTFNObject2);
 
         test2.setPhoneNumberId("TS2");
 
@@ -424,6 +442,9 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
 
         test1.setPhoneNumberId("TS");
 
@@ -475,6 +496,9 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         test1.setPhoneNumberId("TS");
 
         test1.setApplicationId("TS");
@@ -517,6 +541,9 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
 
         test2.setPhoneNumberId("TS");
 
@@ -569,6 +596,9 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         test1.setPhoneNumberId("TS");
 
         test1.setApplicationId("TS");
@@ -611,6 +641,9 @@ public class MessageResultTest {
 
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
 
         test2.setPhoneNumberId("TS");
 
@@ -661,6 +694,9 @@ public class MessageResultTest {
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         test1.setPhoneNumberId("TS");
 
         test1.setApplicationId("TS");
@@ -703,6 +739,9 @@ public class MessageResultTest {
 
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
+
+        TFN testTFNObject2 = new TFN();
+        test2.setTfn(testTFNObject2);
 
         test2.setPhoneNumberId("TS2");
 
@@ -752,6 +791,9 @@ public class MessageResultTest {
 
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
 
         test1.setPhoneNumberId("TS");
 

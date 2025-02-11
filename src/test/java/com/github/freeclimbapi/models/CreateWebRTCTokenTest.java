@@ -57,6 +57,7 @@ public class CreateWebRTCTokenTest {
         test1.setFrom("TS");
 
         test1.setUses(1);
+
         CreateWebRTCToken test2 = new CreateWebRTCToken();
 
         test2.setTo("TS");
@@ -78,6 +79,7 @@ public class CreateWebRTCTokenTest {
         test1.setFrom("TS");
 
         test1.setUses(1);
+
         CreateWebRTCToken test2 = new CreateWebRTCToken();
 
         test2.setTo("TS2");
@@ -114,6 +116,7 @@ public class CreateWebRTCTokenTest {
         test1.setFrom("TS");
 
         test1.setUses(1);
+
         CreateWebRTCToken test2 = new CreateWebRTCToken();
 
         test2.setTo("TS");
@@ -137,6 +140,7 @@ public class CreateWebRTCTokenTest {
         test1.setFrom("TS");
 
         test1.setUses(1);
+
         CreateWebRTCToken test2 = new CreateWebRTCToken();
 
         test2.setTo("TS");
@@ -144,6 +148,7 @@ public class CreateWebRTCTokenTest {
         test2.setFrom("TS");
 
         test2.setUses(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -157,6 +162,7 @@ public class CreateWebRTCTokenTest {
         test1.setFrom("TS");
 
         test1.setUses(1);
+
         CreateWebRTCToken test2 = new CreateWebRTCToken();
 
         test2.setTo("TS2");
@@ -164,6 +170,7 @@ public class CreateWebRTCTokenTest {
         test2.setFrom("TS2");
 
         test2.setUses(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

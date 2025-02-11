@@ -95,10 +95,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void equalsTrueTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -107,10 +112,15 @@ public class SMSTollFreeCampaignsListResultTest {
         test1.setBrands(testList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -126,10 +136,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void equalsFalseTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -138,10 +153,15 @@ public class SMSTollFreeCampaignsListResultTest {
         test1.setBrands(testList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -157,10 +177,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void hashCodeTypeTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -177,10 +202,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void toStringEqualsTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -189,10 +219,15 @@ public class SMSTollFreeCampaignsListResultTest {
         test1.setBrands(testList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -210,10 +245,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void hashCodeEqualsTrueTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -222,10 +262,15 @@ public class SMSTollFreeCampaignsListResultTest {
         test1.setBrands(testList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -240,10 +285,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void hashCodeEqualsFalseTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -252,10 +302,15 @@ public class SMSTollFreeCampaignsListResultTest {
         test1.setBrands(testList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -270,10 +325,15 @@ public class SMSTollFreeCampaignsListResultTest {
     public void toStringTypeTest() {
         SMSTollFreeCampaignsListResult test1 = new SMSTollFreeCampaignsListResult();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");

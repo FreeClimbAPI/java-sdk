@@ -95,10 +95,15 @@ public class ConferenceParticipantListTest {
     public void equalsTrueTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -107,10 +112,15 @@ public class ConferenceParticipantListTest {
         test1.setParticipants(testList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -126,10 +136,15 @@ public class ConferenceParticipantListTest {
     public void equalsFalseTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -138,10 +153,15 @@ public class ConferenceParticipantListTest {
         test1.setParticipants(testList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -157,10 +177,15 @@ public class ConferenceParticipantListTest {
     public void hashCodeTypeTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -177,10 +202,15 @@ public class ConferenceParticipantListTest {
     public void toStringEqualsTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -189,10 +219,15 @@ public class ConferenceParticipantListTest {
         test1.setParticipants(testList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -210,10 +245,15 @@ public class ConferenceParticipantListTest {
     public void hashCodeEqualsTrueTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -222,10 +262,15 @@ public class ConferenceParticipantListTest {
         test1.setParticipants(testList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
+
         test2.setStart(1);
+
         test2.setEnd(1);
+
         test2.setPage(1);
+
         test2.setNumPages(1);
+
         test2.setPageSize(1);
 
         test2.setNextPageUri("TS");
@@ -240,10 +285,15 @@ public class ConferenceParticipantListTest {
     public void hashCodeEqualsFalseTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");
@@ -252,10 +302,15 @@ public class ConferenceParticipantListTest {
         test1.setParticipants(testList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(0);
+
         test2.setStart(0);
+
         test2.setEnd(0);
+
         test2.setPage(0);
+
         test2.setNumPages(0);
+
         test2.setPageSize(0);
 
         test2.setNextPageUri("TS2");
@@ -270,10 +325,15 @@ public class ConferenceParticipantListTest {
     public void toStringTypeTest() {
         ConferenceParticipantList test1 = new ConferenceParticipantList();
         test1.setTotal(1);
+
         test1.setStart(1);
+
         test1.setEnd(1);
+
         test1.setPage(1);
+
         test1.setNumPages(1);
+
         test1.setPageSize(1);
 
         test1.setNextPageUri("TS");

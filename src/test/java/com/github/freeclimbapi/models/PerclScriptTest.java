@@ -40,9 +40,11 @@ public class PerclScriptTest {
     @Test
     public void equalsTrueTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
         PerclScript test2 = new PerclScript();
+
         List<PerclCommand> testList2 = testList;
         test2.setCommands(testList2);
 
@@ -53,9 +55,11 @@ public class PerclScriptTest {
     @Test
     public void equalsFalseTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
         PerclScript test2 = new PerclScript();
+
         List<PerclCommand> testList2 = null;
         test2.setCommands(testList2);
 
@@ -66,6 +70,7 @@ public class PerclScriptTest {
     @Test
     public void hashCodeTypeTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
 
@@ -77,9 +82,11 @@ public class PerclScriptTest {
     @Test
     public void toStringEqualsTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
         PerclScript test2 = new PerclScript();
+
         List<PerclCommand> testList2 = testList;
         test2.setCommands(testList2);
 
@@ -92,9 +99,11 @@ public class PerclScriptTest {
     @Test
     public void hashCodeEqualsTrueTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
         PerclScript test2 = new PerclScript();
+
         List<PerclCommand> testList2 = testList;
         test2.setCommands(testList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -104,9 +113,11 @@ public class PerclScriptTest {
     @Test
     public void hashCodeEqualsFalseTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
         PerclScript test2 = new PerclScript();
+
         List<PerclCommand> testList2 = null;
         test2.setCommands(testList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -116,6 +127,7 @@ public class PerclScriptTest {
     @Test
     public void toStringTypeTest() {
         PerclScript test1 = new PerclScript();
+
         List<PerclCommand> testList = new ArrayList<PerclCommand>();
         test1.setCommands(testList);
 

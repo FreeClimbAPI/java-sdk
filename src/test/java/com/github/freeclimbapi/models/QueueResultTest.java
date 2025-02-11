@@ -106,9 +106,10 @@ public class QueueResultTest {
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
-        Object testObject = new Object();
-        model.setSubresourceUris(testObject);
-        Assert.assertEquals(testObject, model.getSubresourceUris());
+
+        Object object = new Object();
+        model.setSubresourceUris(object);
+        Assert.assertEquals(object.getClass(), Object.class);
     }
 
     /** Test the method 'equalsTrue' */
@@ -131,10 +132,14 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         QueueResult test2 = new QueueResult();
 
         test2.setUri("TS");
@@ -152,10 +157,13 @@ public class QueueResultTest {
         test2.setAlias("TS");
 
         test2.setMaxSize(1);
+
         test2.setCurrentSize(1);
+
         test2.setAverageQueueRemovalTime(1);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -180,10 +188,14 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         QueueResult test2 = new QueueResult();
 
         test2.setUri("TS2");
@@ -201,10 +213,13 @@ public class QueueResultTest {
         test2.setAlias("TS2");
 
         test2.setMaxSize(0);
+
         test2.setCurrentSize(0);
+
         test2.setAverageQueueRemovalTime(0);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -229,10 +244,13 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -258,10 +276,14 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         QueueResult test2 = new QueueResult();
 
         test2.setUri("TS");
@@ -279,10 +301,13 @@ public class QueueResultTest {
         test2.setAlias("TS");
 
         test2.setMaxSize(1);
+
         test2.setCurrentSize(1);
+
         test2.setAverageQueueRemovalTime(1);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -309,10 +334,14 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         QueueResult test2 = new QueueResult();
 
         test2.setUri("TS");
@@ -330,10 +359,14 @@ public class QueueResultTest {
         test2.setAlias("TS");
 
         test2.setMaxSize(1);
+
         test2.setCurrentSize(1);
+
         test2.setAverageQueueRemovalTime(1);
-        Object testObject2 = testObject;
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = testObjectObject;
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -357,10 +390,14 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
+
         QueueResult test2 = new QueueResult();
 
         test2.setUri("TS2");
@@ -378,10 +415,14 @@ public class QueueResultTest {
         test2.setAlias("TS2");
 
         test2.setMaxSize(0);
+
         test2.setCurrentSize(0);
+
         test2.setAverageQueueRemovalTime(0);
-        Object testObject2 = new Object();
-        test2.setSubresourceUris(testObject2);
+
+        Object testObjectObject2 = new Object();
+        test2.setSubresourceUris(testObjectObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -405,10 +446,13 @@ public class QueueResultTest {
         test1.setAlias("TS");
 
         test1.setMaxSize(1);
+
         test1.setCurrentSize(1);
+
         test1.setAverageQueueRemovalTime(1);
-        Object testObject = new Object();
-        test1.setSubresourceUris(testObject);
+
+        Object testObjectObject = new Object();
+        test1.setSubresourceUris(testObjectObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

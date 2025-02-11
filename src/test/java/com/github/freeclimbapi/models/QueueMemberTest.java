@@ -73,6 +73,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -84,6 +85,7 @@ public class QueueMemberTest {
         test2.setCallId("TS");
 
         test2.setWaitTime(1);
+
         test2.setPosition(1);
 
         test2.setDateEnqueued("TS");
@@ -101,6 +103,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -112,6 +115,7 @@ public class QueueMemberTest {
         test2.setCallId("TS2");
 
         test2.setWaitTime(0);
+
         test2.setPosition(0);
 
         test2.setDateEnqueued("TS2");
@@ -129,6 +133,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -147,6 +152,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -158,6 +164,7 @@ public class QueueMemberTest {
         test2.setCallId("TS");
 
         test2.setWaitTime(1);
+
         test2.setPosition(1);
 
         test2.setDateEnqueued("TS");
@@ -177,6 +184,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -188,6 +196,7 @@ public class QueueMemberTest {
         test2.setCallId("TS");
 
         test2.setWaitTime(1);
+
         test2.setPosition(1);
 
         test2.setDateEnqueued("TS");
@@ -205,6 +214,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");
@@ -216,6 +226,7 @@ public class QueueMemberTest {
         test2.setCallId("TS2");
 
         test2.setWaitTime(0);
+
         test2.setPosition(0);
 
         test2.setDateEnqueued("TS2");
@@ -233,6 +244,7 @@ public class QueueMemberTest {
         test1.setCallId("TS");
 
         test1.setWaitTime(1);
+
         test1.setPosition(1);
 
         test1.setDateEnqueued("TS");

@@ -140,6 +140,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -149,9 +150,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
+
         AddToConference test2 = new AddToConference();
         test2.setAllowCallControl(true);
 
@@ -174,6 +179,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setListen(true);
 
         try {
@@ -183,8 +189,11 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setStartConfOnEnter(true);
+
         test2.setTalk(true);
+
         test2.setDtmfPassThrough(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -215,6 +224,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -224,9 +234,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
+
         AddToConference test2 = new AddToConference();
         test2.setAllowCallControl(false);
 
@@ -249,6 +263,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setListen(false);
 
         try {
@@ -258,8 +273,11 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setStartConfOnEnter(false);
+
         test2.setTalk(false);
+
         test2.setDtmfPassThrough(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -290,6 +308,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -299,8 +318,11 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
 
         int hashCode1 = test1.hashCode();
@@ -332,6 +354,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -341,9 +364,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
+
         AddToConference test2 = new AddToConference();
         test2.setAllowCallControl(true);
 
@@ -366,6 +393,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setListen(true);
 
         try {
@@ -375,8 +403,11 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setStartConfOnEnter(true);
+
         test2.setTalk(true);
+
         test2.setDtmfPassThrough(true);
 
         String toString1 = test1.toString();
@@ -409,6 +440,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -418,9 +450,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
+
         AddToConference test2 = new AddToConference();
         test2.setAllowCallControl(true);
 
@@ -443,6 +479,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setListen(true);
 
         try {
@@ -452,9 +489,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setStartConfOnEnter(true);
+
         test2.setTalk(true);
+
         test2.setDtmfPassThrough(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -483,6 +524,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -492,9 +534,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
+
         AddToConference test2 = new AddToConference();
         test2.setAllowCallControl(false);
 
@@ -517,6 +563,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setListen(false);
 
         try {
@@ -526,9 +573,13 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test2.setStartConfOnEnter(false);
+
         test2.setTalk(false);
+
         test2.setDtmfPassThrough(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -557,6 +608,7 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setListen(true);
 
         try {
@@ -566,8 +618,11 @@ public class AddToConferenceTest {
             e.printStackTrace();
         }
         ;
+
         test1.setStartConfOnEnter(true);
+
         test1.setTalk(true);
+
         test1.setDtmfPassThrough(true);
 
         String toString1 = test1.toString();

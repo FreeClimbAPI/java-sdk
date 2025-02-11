@@ -26,6 +26,7 @@ public class AvailableNumberTest {
     /** Test the property 'capabilities' */
     @Test
     public void capabilitiesTest() {
+
         Capabilities object = new Capabilities();
         model.setCapabilities(object);
         Assert.assertEquals(object.getClass(), Capabilities.class);
@@ -81,14 +82,16 @@ public class AvailableNumberTest {
     @Test
     public void equalsTrueTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -96,14 +99,16 @@ public class AvailableNumberTest {
         test1.setCountry("TS");
 
         AvailableNumber test2 = new AvailableNumber();
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
@@ -117,14 +122,16 @@ public class AvailableNumberTest {
     @Test
     public void equalsFalseTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -132,14 +139,16 @@ public class AvailableNumberTest {
         test1.setCountry("TS");
 
         AvailableNumber test2 = new AvailableNumber();
-        Capabilities Capabilitiesobject2 = new Capabilities();
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = new Capabilities();
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
 
         test2.setVoiceEnabled(false);
+
         test2.setSmsEnabled(false);
 
         test2.setRegion("TS2");
@@ -153,14 +162,16 @@ public class AvailableNumberTest {
     @Test
     public void hashCodeTypeTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -175,14 +186,16 @@ public class AvailableNumberTest {
     @Test
     public void toStringEqualsTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -190,14 +203,16 @@ public class AvailableNumberTest {
         test1.setCountry("TS");
 
         AvailableNumber test2 = new AvailableNumber();
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
@@ -213,14 +228,16 @@ public class AvailableNumberTest {
     @Test
     public void hashCodeEqualsTrueTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -228,14 +245,16 @@ public class AvailableNumberTest {
         test1.setCountry("TS");
 
         AvailableNumber test2 = new AvailableNumber();
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
@@ -249,14 +268,16 @@ public class AvailableNumberTest {
     @Test
     public void hashCodeEqualsFalseTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
@@ -264,14 +285,16 @@ public class AvailableNumberTest {
         test1.setCountry("TS");
 
         AvailableNumber test2 = new AvailableNumber();
-        Capabilities Capabilitiesobject2 = new Capabilities();
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = new Capabilities();
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
 
         test2.setVoiceEnabled(false);
+
         test2.setSmsEnabled(false);
 
         test2.setRegion("TS2");
@@ -285,14 +308,16 @@ public class AvailableNumberTest {
     @Test
     public void toStringTypeTest() {
         AvailableNumber test1 = new AvailableNumber();
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
 
         test1.setRegion("TS");

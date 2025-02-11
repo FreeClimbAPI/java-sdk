@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>6.1.0</version>
+    <version>6.1.1</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>
@@ -209,7 +209,7 @@
                   <!-- no need to specify files, inferred automatically, but you can if you want -->
                   <!-- apply a specific flavor of google-java-format and reflow long strings -->
                   <googleJavaFormat>
-                    <version>1.17.0</version>
+                    <version>1.19.2</version>
                     <style>AOSP</style>
                     <reflowLongStrings>true</reflowLongStrings>
                   </googleJavaFormat>

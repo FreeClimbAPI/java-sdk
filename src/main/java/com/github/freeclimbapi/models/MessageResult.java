@@ -114,7 +114,7 @@ public class MessageResult {
     public static final String SERIALIZED_NAME_TFN = "tfn";
 
     @SerializedName(SERIALIZED_NAME_TFN)
-    private MessageResultAllOfTfn tfn;
+    private TFN tfn;
 
     public static final String SERIALIZED_NAME_PHONE_NUMBER_ID = "phoneNumberId";
 
@@ -484,7 +484,7 @@ public class MessageResult {
         this.mediaUrls = mediaUrls;
     }
 
-    public MessageResult tfn(MessageResultAllOfTfn tfn) {
+    public MessageResult tfn(TFN tfn) {
 
         this.tfn = tfn;
         return this;
@@ -497,11 +497,11 @@ public class MessageResult {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(value = "")
-    public MessageResultAllOfTfn getTfn() {
+    public TFN getTfn() {
         return tfn;
     }
 
-    public void setTfn(MessageResultAllOfTfn tfn) {
+    public void setTfn(TFN tfn) {
         this.tfn = tfn;
     }
 

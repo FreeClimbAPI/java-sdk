@@ -130,6 +130,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
         MessageRequest test2 = new MessageRequest();
@@ -155,6 +156,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
 
@@ -187,6 +189,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
         MessageRequest test2 = new MessageRequest();
@@ -212,6 +215,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
 
@@ -244,6 +248,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 
@@ -277,6 +282,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
         MessageRequest test2 = new MessageRequest();
@@ -302,6 +308,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
 
@@ -336,6 +343,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
         MessageRequest test2 = new MessageRequest();
@@ -361,6 +369,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList2 = testList;
         test2.setMediaUrls(testList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -392,6 +401,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
         MessageRequest test2 = new MessageRequest();
@@ -417,6 +427,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList2 = null;
         test2.setMediaUrls(testList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -448,6 +459,7 @@ public class MessageRequestTest {
             e.printStackTrace();
         }
         ;
+
         List<URI> testList = new ArrayList<URI>();
         test1.setMediaUrls(testList);
 

@@ -50,11 +50,16 @@ public class UpdateConferenceParticipantRequestTest {
     public void equalsTrueTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
+
         UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
         test2.setTalk(true);
+
         test2.setListen(true);
+
         test2.setDtmfPassThrough(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -65,11 +70,16 @@ public class UpdateConferenceParticipantRequestTest {
     public void equalsFalseTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
+
         UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
         test2.setTalk(false);
+
         test2.setListen(false);
+
         test2.setDtmfPassThrough(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -80,7 +90,9 @@ public class UpdateConferenceParticipantRequestTest {
     public void hashCodeTypeTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
 
         int hashCode1 = test1.hashCode();
@@ -92,11 +104,16 @@ public class UpdateConferenceParticipantRequestTest {
     public void toStringEqualsTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
+
         UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
         test2.setTalk(true);
+
         test2.setListen(true);
+
         test2.setDtmfPassThrough(true);
 
         String toString1 = test1.toString();
@@ -109,12 +126,18 @@ public class UpdateConferenceParticipantRequestTest {
     public void hashCodeEqualsTrueTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
+
         UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
         test2.setTalk(true);
+
         test2.setListen(true);
+
         test2.setDtmfPassThrough(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -123,12 +146,18 @@ public class UpdateConferenceParticipantRequestTest {
     public void hashCodeEqualsFalseTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
+
         UpdateConferenceParticipantRequest test2 = new UpdateConferenceParticipantRequest();
         test2.setTalk(false);
+
         test2.setListen(false);
+
         test2.setDtmfPassThrough(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -137,7 +166,9 @@ public class UpdateConferenceParticipantRequestTest {
     public void toStringTypeTest() {
         UpdateConferenceParticipantRequest test1 = new UpdateConferenceParticipantRequest();
         test1.setTalk(true);
+
         test1.setListen(true);
+
         test1.setDtmfPassThrough(true);
 
         String toString1 = test1.toString();

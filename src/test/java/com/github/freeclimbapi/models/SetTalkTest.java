@@ -36,6 +36,7 @@ public class SetTalkTest {
     public void equalsTrueTest() {
         SetTalk test1 = new SetTalk();
         test1.setTalk(true);
+
         SetTalk test2 = new SetTalk();
         test2.setTalk(true);
 
@@ -47,6 +48,7 @@ public class SetTalkTest {
     public void equalsFalseTest() {
         SetTalk test1 = new SetTalk();
         test1.setTalk(true);
+
         SetTalk test2 = new SetTalk();
         test2.setTalk(false);
 
@@ -68,6 +70,7 @@ public class SetTalkTest {
     public void toStringEqualsTest() {
         SetTalk test1 = new SetTalk();
         test1.setTalk(true);
+
         SetTalk test2 = new SetTalk();
         test2.setTalk(true);
 
@@ -81,8 +84,10 @@ public class SetTalkTest {
     public void hashCodeEqualsTrueTest() {
         SetTalk test1 = new SetTalk();
         test1.setTalk(true);
+
         SetTalk test2 = new SetTalk();
         test2.setTalk(true);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -91,8 +96,10 @@ public class SetTalkTest {
     public void hashCodeEqualsFalseTest() {
         SetTalk test1 = new SetTalk();
         test1.setTalk(true);
+
         SetTalk test2 = new SetTalk();
         test2.setTalk(false);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

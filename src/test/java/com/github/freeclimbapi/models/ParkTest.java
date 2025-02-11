@@ -92,6 +92,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Park test2 = new Park();
 
         try {
@@ -149,6 +150,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Park test2 = new Park();
 
         try {
@@ -239,6 +241,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Park test2 = new Park();
 
         try {
@@ -298,6 +301,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Park test2 = new Park();
 
         try {
@@ -323,6 +327,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -354,6 +359,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Park test2 = new Park();
 
         try {
@@ -379,6 +385,7 @@ public class ParkTest {
             e.printStackTrace();
         }
         ;
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

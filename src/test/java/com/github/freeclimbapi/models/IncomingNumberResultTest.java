@@ -58,6 +58,7 @@ public class IncomingNumberResultTest {
     /** Test the property 'capabilities' */
     @Test
     public void capabilitiesTest() {
+
         Capabilities object = new Capabilities();
         model.setCapabilities(object);
         Assert.assertEquals(object.getClass(), Capabilities.class);
@@ -151,6 +152,7 @@ public class IncomingNumberResultTest {
     /** Test the property 'tfn' */
     @Test
     public void tfnTest() {
+
         TFN object = new TFN();
         model.setTfn(object);
         Assert.assertEquals(object.getClass(), TFN.class);
@@ -168,8 +170,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -188,10 +191,14 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         IncomingNumberResult test2 = new IncomingNumberResult();
 
         test2.setUri("TS");
@@ -201,8 +208,9 @@ public class IncomingNumberResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
@@ -221,10 +229,13 @@ public class IncomingNumberResultTest {
         test2.setCountry("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
+
         test2.setOffnet(true);
-        TFN TFNobject2 = TFNobject;
-        test2.setTfn(TFNobject2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -241,8 +252,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -261,10 +273,14 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         IncomingNumberResult test2 = new IncomingNumberResult();
 
         test2.setUri("TS2");
@@ -274,8 +290,9 @@ public class IncomingNumberResultTest {
         test2.setDateUpdated("TS2");
 
         test2.setRevision(0);
-        Capabilities Capabilitiesobject2 = new Capabilities();
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = new Capabilities();
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS2");
 
@@ -294,10 +311,13 @@ public class IncomingNumberResultTest {
         test2.setCountry("TS2");
 
         test2.setVoiceEnabled(false);
+
         test2.setSmsEnabled(false);
+
         test2.setOffnet(false);
-        TFN TFNobject2 = new TFN();
-        test2.setTfn(TFNobject2);
+
+        TFN testTFNObject2 = new TFN();
+        test2.setTfn(testTFNObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -314,8 +334,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -334,10 +355,13 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -355,8 +379,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -375,10 +400,14 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         IncomingNumberResult test2 = new IncomingNumberResult();
 
         test2.setUri("TS");
@@ -388,8 +417,9 @@ public class IncomingNumberResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
@@ -408,10 +438,13 @@ public class IncomingNumberResultTest {
         test2.setCountry("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
+
         test2.setOffnet(true);
-        TFN TFNobject2 = TFNobject;
-        test2.setTfn(TFNobject2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -430,8 +463,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -450,10 +484,14 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         IncomingNumberResult test2 = new IncomingNumberResult();
 
         test2.setUri("TS");
@@ -463,8 +501,9 @@ public class IncomingNumberResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
-        Capabilities Capabilitiesobject2 = Capabilitiesobject;
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = testCapabilitiesObject;
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS");
 
@@ -483,10 +522,14 @@ public class IncomingNumberResultTest {
         test2.setCountry("TS");
 
         test2.setVoiceEnabled(true);
+
         test2.setSmsEnabled(true);
+
         test2.setOffnet(true);
-        TFN TFNobject2 = TFNobject;
-        test2.setTfn(TFNobject2);
+
+        TFN testTFNObject2 = testTFNObject;
+        test2.setTfn(testTFNObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -502,8 +545,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -522,10 +566,14 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
+
         IncomingNumberResult test2 = new IncomingNumberResult();
 
         test2.setUri("TS2");
@@ -535,8 +583,9 @@ public class IncomingNumberResultTest {
         test2.setDateUpdated("TS2");
 
         test2.setRevision(0);
-        Capabilities Capabilitiesobject2 = new Capabilities();
-        test2.setCapabilities(Capabilitiesobject2);
+
+        Capabilities testCapabilitiesObject2 = new Capabilities();
+        test2.setCapabilities(testCapabilitiesObject2);
 
         test2.setCampaignId("TS2");
 
@@ -555,10 +604,14 @@ public class IncomingNumberResultTest {
         test2.setCountry("TS2");
 
         test2.setVoiceEnabled(false);
+
         test2.setSmsEnabled(false);
+
         test2.setOffnet(false);
-        TFN TFNobject2 = new TFN();
-        test2.setTfn(TFNobject2);
+
+        TFN testTFNObject2 = new TFN();
+        test2.setTfn(testTFNObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -574,8 +627,9 @@ public class IncomingNumberResultTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
-        Capabilities Capabilitiesobject = new Capabilities();
-        test1.setCapabilities(Capabilitiesobject);
+
+        Capabilities testCapabilitiesObject = new Capabilities();
+        test1.setCapabilities(testCapabilitiesObject);
 
         test1.setCampaignId("TS");
 
@@ -594,10 +648,13 @@ public class IncomingNumberResultTest {
         test1.setCountry("TS");
 
         test1.setVoiceEnabled(true);
+
         test1.setSmsEnabled(true);
+
         test1.setOffnet(true);
-        TFN TFNobject = new TFN();
-        test1.setTfn(TFNobject);
+
+        TFN testTFNObject = new TFN();
+        test1.setTfn(testTFNObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

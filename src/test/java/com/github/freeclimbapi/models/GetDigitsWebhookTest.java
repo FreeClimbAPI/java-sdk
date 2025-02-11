@@ -152,6 +152,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -177,6 +178,7 @@ public class GetDigitsWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -208,6 +210,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -233,6 +236,7 @@ public class GetDigitsWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -264,6 +268,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -296,6 +301,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -321,6 +327,7 @@ public class GetDigitsWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -354,6 +361,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -379,6 +387,7 @@ public class GetDigitsWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -410,6 +419,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -435,6 +445,7 @@ public class GetDigitsWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -466,6 +477,7 @@ public class GetDigitsWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");

@@ -145,6 +145,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -152,7 +153,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test1.setQueueTime(1);
+
         RemoveFromQueueNotificationWebhook test2 = new RemoveFromQueueNotificationWebhook();
 
         test2.setRequestType("TS");
@@ -166,6 +169,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -173,6 +177,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setQueueId("TS");
 
         test2.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test2.setQueueTime(1);
 
         Assert.assertTrue(test1.equals(test2));
@@ -194,6 +199,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -201,7 +207,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.DEQUEUED);
+
         test1.setQueueTime(1);
+
         RemoveFromQueueNotificationWebhook test2 = new RemoveFromQueueNotificationWebhook();
 
         test2.setRequestType("TS2");
@@ -215,6 +223,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -222,6 +231,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setQueueId("TS2");
 
         test2.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test2.setQueueTime(0);
 
         Assert.assertFalse(test1.equals(test2));
@@ -243,6 +253,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -250,6 +261,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test1.setQueueTime(1);
 
         int hashCode1 = test1.hashCode();
@@ -272,6 +284,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -279,7 +292,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test1.setQueueTime(1);
+
         RemoveFromQueueNotificationWebhook test2 = new RemoveFromQueueNotificationWebhook();
 
         test2.setRequestType("TS");
@@ -293,6 +308,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -300,6 +316,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setQueueId("TS");
 
         test2.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test2.setQueueTime(1);
 
         String toString1 = test1.toString();
@@ -323,6 +340,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -330,7 +348,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test1.setQueueTime(1);
+
         RemoveFromQueueNotificationWebhook test2 = new RemoveFromQueueNotificationWebhook();
 
         test2.setRequestType("TS");
@@ -344,6 +364,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setTo("TS");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS");
@@ -351,7 +372,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setQueueId("TS");
 
         test2.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test2.setQueueTime(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -371,6 +394,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.RINGING);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setConferenceId("TS");
@@ -378,7 +402,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.DEQUEUED);
+
         test1.setQueueTime(1);
+
         RemoveFromQueueNotificationWebhook test2 = new RemoveFromQueueNotificationWebhook();
 
         test2.setRequestType("TS2");
@@ -392,6 +418,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setTo("TS2");
 
         test2.setCallStatus(CallStatus.QUEUED);
+
         test2.setDirection(CallDirection.INBOUND);
 
         test2.setConferenceId("TS2");
@@ -399,7 +426,9 @@ public class RemoveFromQueueNotificationWebhookTest {
         test2.setQueueId("TS2");
 
         test2.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test2.setQueueTime(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -419,6 +448,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setTo("TS");
 
         test1.setCallStatus(CallStatus.QUEUED);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setConferenceId("TS");
@@ -426,6 +456,7 @@ public class RemoveFromQueueNotificationWebhookTest {
         test1.setQueueId("TS");
 
         test1.setQueueResult(QueueResultStatus.QUEUE_FULL);
+
         test1.setQueueTime(1);
 
         String toString1 = test1.toString();

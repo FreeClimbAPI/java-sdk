@@ -109,6 +109,7 @@ public class SMSTollFreeCampaignTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
+
         SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
 
         test2.setAccountId("TS");
@@ -146,6 +147,7 @@ public class SMSTollFreeCampaignTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
+
         SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
 
         test2.setAccountId("TS2");
@@ -206,6 +208,7 @@ public class SMSTollFreeCampaignTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
+
         SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
 
         test2.setAccountId("TS");
@@ -245,6 +248,7 @@ public class SMSTollFreeCampaignTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
+
         SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
 
         test2.setAccountId("TS");
@@ -260,6 +264,7 @@ public class SMSTollFreeCampaignTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -281,6 +286,7 @@ public class SMSTollFreeCampaignTest {
         test1.setDateUpdated("TS");
 
         test1.setRevision(1);
+
         SMSTollFreeCampaign test2 = new SMSTollFreeCampaign();
 
         test2.setAccountId("TS2");
@@ -296,6 +302,7 @@ public class SMSTollFreeCampaignTest {
         test2.setDateUpdated("TS2");
 
         test2.setRevision(0);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 

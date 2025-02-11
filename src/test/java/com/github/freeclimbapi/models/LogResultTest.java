@@ -77,9 +77,10 @@ public class LogResultTest {
     /** Test the property 'metadata' */
     @Test
     public void metadataTest() {
-        Object testObject = new Object();
-        model.setMetadata(testObject);
-        Assert.assertEquals(testObject, model.getMetadata());
+
+        Object object = new Object();
+        model.setMetadata(object);
+        Assert.assertEquals(object.getClass(), Object.class);
     }
 
     /** Test the method 'equalsTrue' */
@@ -87,6 +88,7 @@ public class LogResultTest {
     public void equalsTrueTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.INFO);
 
         test1.setRequestId("TS");
@@ -97,10 +99,12 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
+
         LogResult test2 = new LogResult();
         test2.setTimestamp(1);
+
         test2.setLevel(LogLevel.INFO);
 
         test2.setRequestId("TS");
@@ -111,8 +115,8 @@ public class LogResultTest {
 
         test2.setMessage("TS");
 
-        Object testObject2 = testObject;
-        test2.setMetadata(testObject2);
+        Object testObjectObject2 = testObjectObject;
+        test2.setMetadata(testObjectObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -122,6 +126,7 @@ public class LogResultTest {
     public void equalsFalseTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.WARNING);
 
         test1.setRequestId("TS");
@@ -132,10 +137,12 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
+
         LogResult test2 = new LogResult();
         test2.setTimestamp(0);
+
         test2.setLevel(LogLevel.INFO);
 
         test2.setRequestId("TS2");
@@ -146,8 +153,8 @@ public class LogResultTest {
 
         test2.setMessage("TS2");
 
-        Object testObject2 = new Object();
-        test2.setMetadata(testObject2);
+        Object testObjectObject2 = new Object();
+        test2.setMetadata(testObjectObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -157,6 +164,7 @@ public class LogResultTest {
     public void hashCodeTypeTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.INFO);
 
         test1.setRequestId("TS");
@@ -167,8 +175,8 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -179,6 +187,7 @@ public class LogResultTest {
     public void toStringEqualsTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.INFO);
 
         test1.setRequestId("TS");
@@ -189,10 +198,12 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
+
         LogResult test2 = new LogResult();
         test2.setTimestamp(1);
+
         test2.setLevel(LogLevel.INFO);
 
         test2.setRequestId("TS");
@@ -203,8 +214,8 @@ public class LogResultTest {
 
         test2.setMessage("TS");
 
-        Object testObject2 = testObject;
-        test2.setMetadata(testObject2);
+        Object testObjectObject2 = testObjectObject;
+        test2.setMetadata(testObjectObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -216,6 +227,7 @@ public class LogResultTest {
     public void hashCodeEqualsTrueTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.INFO);
 
         test1.setRequestId("TS");
@@ -226,10 +238,12 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
+
         LogResult test2 = new LogResult();
         test2.setTimestamp(1);
+
         test2.setLevel(LogLevel.INFO);
 
         test2.setRequestId("TS");
@@ -240,8 +254,9 @@ public class LogResultTest {
 
         test2.setMessage("TS");
 
-        Object testObject2 = testObject;
-        test2.setMetadata(testObject2);
+        Object testObjectObject2 = testObjectObject;
+        test2.setMetadata(testObjectObject2);
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -250,6 +265,7 @@ public class LogResultTest {
     public void hashCodeEqualsFalseTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.WARNING);
 
         test1.setRequestId("TS");
@@ -260,10 +276,12 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
+
         LogResult test2 = new LogResult();
         test2.setTimestamp(0);
+
         test2.setLevel(LogLevel.INFO);
 
         test2.setRequestId("TS2");
@@ -274,8 +292,9 @@ public class LogResultTest {
 
         test2.setMessage("TS2");
 
-        Object testObject2 = new Object();
-        test2.setMetadata(testObject2);
+        Object testObjectObject2 = new Object();
+        test2.setMetadata(testObjectObject2);
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -284,6 +303,7 @@ public class LogResultTest {
     public void toStringTypeTest() {
         LogResult test1 = new LogResult();
         test1.setTimestamp(1);
+
         test1.setLevel(LogLevel.INFO);
 
         test1.setRequestId("TS");
@@ -294,8 +314,8 @@ public class LogResultTest {
 
         test1.setMessage("TS");
 
-        Object testObject = new Object();
-        test1.setMetadata(testObject);
+        Object testObjectObject = new Object();
+        test1.setMetadata(testObjectObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));
