@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>6.1.1</version>
+    <version>6.1.2</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>

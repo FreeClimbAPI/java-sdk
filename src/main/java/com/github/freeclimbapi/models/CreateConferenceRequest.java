@@ -159,8 +159,9 @@ public class CreateConferenceRequest {
      *
      * @return statusCallbackUrl
      */
-    @javax.annotation.Nullable
+    @javax.annotation.Nonnull
     @ApiModelProperty(
+            required = true,
             value =
                     "This URL is invoked when the status of the Conference changes. For more"
                             + " information, see **statusCallbackUrl** (below).")
