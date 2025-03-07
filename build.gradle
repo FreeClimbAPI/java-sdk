@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.github.freeclimbapi'
-version = '6.1.1'
+version = '6.1.2'
 
 buildscript {
     repositories {
@@ -119,7 +119,7 @@ dependencies {
     implementation "jakarta.annotation:jakarta.annotation-api:$jakarta_annotation_version"
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:3.12.4'
-    implementation 'org.json:json:20171018'
+    implementation 'org.json:json:20231013'
 }
 
 javadoc {
