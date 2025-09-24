@@ -8,13 +8,16 @@ Method | HTTP request | Description
 [**createAConference**](DefaultApi.md#createAConference) | **POST** /Accounts/{accountId}/Conferences | Create a Conference
 [**createAQueue**](DefaultApi.md#createAQueue) | **POST** /Accounts/{accountId}/Queues | Create a Queue
 [**createAnApplication**](DefaultApi.md#createAnApplication) | **POST** /Accounts/{accountId}/Applications | Create an application
+[**createExport**](DefaultApi.md#createExport) | **POST** /Accounts/{accountId}/Exports | Create an Export
 [**createKnowledgeBaseCompletion**](DefaultApi.md#createKnowledgeBaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 [**deleteARecording**](DefaultApi.md#deleteARecording) | **DELETE** /Accounts/{accountId}/Recordings/{recordingId} | Delete a Recording
 [**deleteAnApplication**](DefaultApi.md#deleteAnApplication) | **DELETE** /Accounts/{accountId}/Applications/{applicationId} | Delete an application
+[**deleteAnExport**](DefaultApi.md#deleteAnExport) | **DELETE** /Accounts/{accountId}/Exports/{exportId} | Delete an Export
 [**deleteAnIncomingNumber**](DefaultApi.md#deleteAnIncomingNumber) | **DELETE** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Delete an Incoming Number
 [**dequeueAMember**](DefaultApi.md#dequeueAMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/{callId} | Dequeue a Member
 [**dequeueHeadMember**](DefaultApi.md#dequeueHeadMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Dequeue Head Member
 [**downloadARecordingFile**](DefaultApi.md#downloadARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Download | Download a Recording File
+[**downloadAnExport**](DefaultApi.md#downloadAnExport) | **GET** /Accounts/{accountId}/Exports/{exportId}/Download | Download an Export
 [**filterLogs**](DefaultApi.md#filterLogs) | **POST** /Accounts/{accountId}/Logs | Filter Logs
 [**getACall**](DefaultApi.md#getACall) | **GET** /Accounts/{accountId}/Calls/{callId} | Get a Call
 [**getAConference**](DefaultApi.md#getAConference) | **GET** /Accounts/{accountId}/Conferences/{conferenceId} | Get a Conference
@@ -24,6 +27,7 @@ Method | HTTP request | Description
 [**getARecording**](DefaultApi.md#getARecording) | **GET** /Accounts/{accountId}/Recordings/{recordingId} | Get a Recording
 [**getAnAccount**](DefaultApi.md#getAnAccount) | **GET** /Accounts/{accountId} | Get an Account
 [**getAnApplication**](DefaultApi.md#getAnApplication) | **GET** /Accounts/{accountId}/Applications/{applicationId} | Get an Application
+[**getAnExport**](DefaultApi.md#getAnExport) | **GET** /Accounts/{accountId}/Exports/{exportId} | Get an Export
 [**getAnIncomingNumber**](DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 [**getAnSmsMessage**](DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
 [**getHeadMember**](DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
@@ -44,6 +48,7 @@ Method | HTTP request | Description
 [**listCalls**](DefaultApi.md#listCalls) | **GET** /Accounts/{accountId}/Calls | List Calls
 [**listConferenceRecordings**](DefaultApi.md#listConferenceRecordings) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Recordings | List Conference Recordings
 [**listConferences**](DefaultApi.md#listConferences) | **GET** /Accounts/{accountId}/Conferences | List Conferences
+[**listExports**](DefaultApi.md#listExports) | **GET** /Accounts/{accountId}/Exports | List Exports
 [**listIncomingNumbers**](DefaultApi.md#listIncomingNumbers) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers | List Incoming Numbers
 [**listMembers**](DefaultApi.md#listMembers) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members | List Members
 [**listParticipants**](DefaultApi.md#listParticipants) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Participants | List Participants
@@ -331,6 +336,73 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Application successfuly created |  -  |
 
+<a name="createExport"></a>
+# **createExport**
+> ExportResult createExport(exportRequest)
+
+Create an Export
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    ExportRequest exportRequest = new ExportRequest(resourceType={  }, format={  }, output={  }, query={  }); // ExportRequest | A JSON object containing export creation parameters
+    try {
+      ExportResult result = apiInstance.createExport(exportRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#createExport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportRequest** | [**ExportRequest**](ExportRequest.md)| A JSON object containing export creation parameters | [optional]
+
+
+### Return type
+
+[**ExportResult**](ExportResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Export successfully created |  -  |
+
 <a name="createKnowledgeBaseCompletion"></a>
 # **createKnowledgeBaseCompletion**
 > CompletionResult createKnowledgeBaseCompletion(knowledgeBaseId, completionRequest)
@@ -534,6 +606,73 @@ null (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | Successful application deletion |  -  |
+
+<a name="deleteAnExport"></a>
+# **deleteAnExport**
+> deleteAnExport(exportId)
+
+Delete an Export
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String exportId = "exportId_example"; // String | A string that uniquely identifies this export resource.
+
+    try {
+      apiInstance.deleteAnExport(exportId);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#deleteAnExport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportId** | **String**| A string that uniquely identifies this export resource. |
+
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Successful Export deletion |  -  |
 
 <a name="deleteAnIncomingNumber"></a>
 # **deleteAnIncomingNumber**
@@ -808,6 +947,74 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Download a Recording file represented with audio/x-wav mime-type |  -  |
+
+<a name="downloadAnExport"></a>
+# **downloadAnExport**
+> String downloadAnExport(exportId)
+
+Download an Export
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String exportId = "exportId_example"; // String | A string that uniquely identifies this export resource.
+
+    try {
+      String result = apiInstance.downloadAnExport(exportId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#downloadAnExport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportId** | **String**| A string that uniquely identifies this export resource. |
+
+
+### Return type
+
+**String**
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Export Details |  -  |
 
 <a name="filterLogs"></a>
 # **filterLogs**
@@ -1420,6 +1627,74 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Application Details |  -  |
+
+<a name="getAnExport"></a>
+# **getAnExport**
+> ExportResult getAnExport(exportId)
+
+Get an Export
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String exportId = "exportId_example"; // String | A string that uniquely identifies this export resource.
+
+    try {
+      ExportResult result = apiInstance.getAnExport(exportId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getAnExport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportId** | **String**| A string that uniquely identifies this export resource. |
+
+
+### Return type
+
+[**ExportResult**](ExportResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Export Details |  -  |
 
 <a name="getAnIncomingNumber"></a>
 # **getAnIncomingNumber**
@@ -2594,7 +2869,7 @@ Name | Type | Description  | Notes
 
 <a name="listCalls"></a>
 # **listCalls**
-> CallList listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId)
+> CallList listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax)
 
 List Calls
 
@@ -2633,8 +2908,12 @@ public class Example {
     String parentCallId = "parentCallId_example"; // String | Only show Calls spawned by the call with this ID.
 
     List<String> applicationId = new List<String>(); // List<String> | Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications.
+    Integer riskScoreMin = 56; // Integer | The minimum riskScore that should be included in the list.
+
+    Integer riskScoreMax = 56; // Integer | The maximum riskScore that should be included in the list.
+
     try {
-      CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId);
+      CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listCalls");
@@ -2659,6 +2938,8 @@ Name | Type | Description  | Notes
  **endTime** | **String**| Only show Calls that ended at or before this time, given as YYYY-MM- DD hh:mm:ss. | [optional]
  **parentCallId** | **String**| Only show Calls spawned by the call with this ID. | [optional]
  **applicationId** | [**List&lt;String&gt;**](String.md)| Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. | [optional]
+ **riskScoreMin** | **Integer**| The minimum riskScore that should be included in the list. | [optional]
+ **riskScoreMax** | **Integer**| The maximum riskScore that should be included in the list. | [optional]
 
 
 ### Return type
@@ -2829,6 +3110,76 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | List of Conferences |  -  |
+
+<a name="listExports"></a>
+# **listExports**
+> ExportList listExports(status, cursor)
+
+List Exports
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    ExportStatus status = new ExportStatus(); // ExportStatus | Status of export
+    String cursor = "cursor_example"; // String | Used to reference pages of a list of exports
+
+    try {
+      ExportList result = apiInstance.listExports(status, cursor);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#listExports");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | [**ExportStatus**](.md)| Status of export | [optional] [enum: intaking, queued, inProgress, completed, failed, deleted]
+ **cursor** | **String**| Used to reference pages of a list of exports | [optional]
+
+
+### Return type
+
+[**ExportList**](ExportList.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful retrieved export list |  -  |
 
 <a name="listIncomingNumbers"></a>
 # **listIncomingNumbers**

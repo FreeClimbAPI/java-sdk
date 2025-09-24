@@ -51,7 +51,7 @@ public class CreateConference extends PerclCommand {
     public static final String SERIALIZED_NAME_ALIAS = "alias";
 
     @SerializedName(SERIALIZED_NAME_ALIAS)
-    private Boolean alias;
+    private String alias;
 
     public static final String SERIALIZED_NAME_PLAY_BEEP = "playBeep";
 
@@ -72,6 +72,11 @@ public class CreateConference extends PerclCommand {
 
     @SerializedName(SERIALIZED_NAME_WAIT_URL)
     private URI waitUrl;
+
+    public static final String SERIALIZED_NAME_PARENT_CALL_ID = "parentCallId";
+
+    @SerializedName(SERIALIZED_NAME_PARENT_CALL_ID)
+    private String parentCallId;
 
     public CreateConference() {
         this.command = this.getClass().getSimpleName();
@@ -104,7 +109,7 @@ public class CreateConference extends PerclCommand {
         this.actionUrl = actionUrl;
     }
 
-    public CreateConference alias(Boolean alias) {
+    public CreateConference alias(String alias) {
 
         this.alias = alias;
         return this;
@@ -117,11 +122,11 @@ public class CreateConference extends PerclCommand {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(value = "Descriptive name for the Conference. ")
-    public Boolean getAlias() {
+    public String getAlias() {
         return alias;
     }
 
-    public void setAlias(Boolean alias) {
+    public void setAlias(String alias) {
         this.alias = alias;
     }
 
@@ -228,6 +233,27 @@ public class CreateConference extends PerclCommand {
         this.waitUrl = waitUrl;
     }
 
+    public CreateConference parentCallId(String parentCallId) {
+
+        this.parentCallId = parentCallId;
+        return this;
+    }
+
+    /**
+     * ID of the Call that created this leg (child call).
+     *
+     * @return parentCallId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "ID of the Call that created this leg (child call).")
+    public String getParentCallId() {
+        return parentCallId;
+    }
+
+    public void setParentCallId(String parentCallId) {
+        this.parentCallId = parentCallId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -243,6 +269,7 @@ public class CreateConference extends PerclCommand {
                 && Objects.equals(this.record, createConference.record)
                 && Objects.equals(this.statusCallbackUrl, createConference.statusCallbackUrl)
                 && Objects.equals(this.waitUrl, createConference.waitUrl)
+                && Objects.equals(this.parentCallId, createConference.parentCallId)
                 && super.equals(o);
     }
 
@@ -258,7 +285,14 @@ public class CreateConference extends PerclCommand {
     @Override
     public int hashCode() {
         return Objects.hash(
-                actionUrl, alias, playBeep, record, statusCallbackUrl, waitUrl, super.hashCode());
+                actionUrl,
+                alias,
+                playBeep,
+                record,
+                statusCallbackUrl,
+                waitUrl,
+                parentCallId,
+                super.hashCode());
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -281,6 +315,7 @@ public class CreateConference extends PerclCommand {
                 .append(toIndentedString(statusCallbackUrl))
                 .append("\n");
         sb.append("    waitUrl: ").append(toIndentedString(waitUrl)).append("\n");
+        sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
         sb.append("}");
         return sb.toString();
     }
@@ -294,6 +329,7 @@ public class CreateConference extends PerclCommand {
         attributes.put("record", () -> this.getRecord());
         attributes.put("statusCallbackUrl", () -> this.getStatusCallbackUrl());
         attributes.put("waitUrl", () -> this.getWaitUrl());
+        attributes.put("parentCallId", () -> this.getParentCallId());
         return attributes;
     }
 

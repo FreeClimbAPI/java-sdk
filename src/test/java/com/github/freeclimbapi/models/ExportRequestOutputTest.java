@@ -18,28 +18,26 @@ import java.util.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-/** Model tests for UpdateCallRequest */
-public class UpdateCallRequestTest {
+/** Model tests for ExportRequestOutput */
+public class ExportRequestOutputTest {
 
-    private final UpdateCallRequest model = new UpdateCallRequest();
+    private final ExportRequestOutput model = new ExportRequestOutput();
 
-    /** Test the property 'status' */
+    /** Test the property 'type' */
     @Test
-    public void statusTest() {
-        model.setStatus(UpdateCallRequestStatus.CANCELED);
-        Assert.assertEquals(model.getStatus(), UpdateCallRequestStatus.CANCELED);
-        model.setStatus(UpdateCallRequestStatus.COMPLETED);
-        Assert.assertEquals(model.getStatus(), UpdateCallRequestStatus.COMPLETED);
+    public void typeTest() {
+        model.setType(ExportOutputType.CSV);
+        Assert.assertEquals(model.getType(), ExportOutputType.CSV);
     }
 
     /** Test the method 'equalsTrue' */
     @Test
     public void equalsTrueTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test1 = new ExportRequestOutput();
+        test1.setType(ExportOutputType.CSV);
 
-        UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test2 = new ExportRequestOutput();
+        test2.setType(ExportOutputType.CSV);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -47,12 +45,12 @@ public class UpdateCallRequestTest {
     /** Test the method 'equalsFalse' */
     @Test
     public void equalsFalseTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
+        ExportRequestOutput test1 = new ExportRequestOutput();
 
-        test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+        test1.setType(null);
 
-        UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test2 = new ExportRequestOutput();
+        test2.setType(ExportOutputType.CSV);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -60,8 +58,8 @@ public class UpdateCallRequestTest {
     /** Test the method 'hashCodeType' */
     @Test
     public void hashCodeTypeTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test1 = new ExportRequestOutput();
+        test1.setType(ExportOutputType.CSV);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -70,11 +68,11 @@ public class UpdateCallRequestTest {
     /** Test the method 'toStringEquals' */
     @Test
     public void toStringEqualsTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test1 = new ExportRequestOutput();
+        test1.setType(ExportOutputType.CSV);
 
-        UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test2 = new ExportRequestOutput();
+        test2.setType(ExportOutputType.CSV);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -84,11 +82,11 @@ public class UpdateCallRequestTest {
     /** Test the method 'hashCodeEqualsTrue' */
     @Test
     public void hashCodeEqualsTrueTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test1 = new ExportRequestOutput();
+        test1.setType(ExportOutputType.CSV);
 
-        UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test2 = new ExportRequestOutput();
+        test2.setType(ExportOutputType.CSV);
 
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -96,12 +94,12 @@ public class UpdateCallRequestTest {
     /** Test the method 'hashCodeEqualsFalse' */
     @Test
     public void hashCodeEqualsFalseTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
+        ExportRequestOutput test1 = new ExportRequestOutput();
 
-        test1.setStatus(UpdateCallRequestStatus.COMPLETED);
+        test1.setType(null);
 
-        UpdateCallRequest test2 = new UpdateCallRequest();
-        test2.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test2 = new ExportRequestOutput();
+        test2.setType(ExportOutputType.CSV);
 
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -109,8 +107,8 @@ public class UpdateCallRequestTest {
     /** Test the method 'toStringType' */
     @Test
     public void toStringTypeTest() {
-        UpdateCallRequest test1 = new UpdateCallRequest();
-        test1.setStatus(UpdateCallRequestStatus.CANCELED);
+        ExportRequestOutput test1 = new ExportRequestOutput();
+        test1.setType(ExportOutputType.CSV);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

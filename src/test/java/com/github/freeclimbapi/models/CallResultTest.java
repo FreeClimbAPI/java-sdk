@@ -103,25 +103,25 @@ public class CallResultTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumberId());
     }
 
-    /** Test the property 'callStatus' */
+    /** Test the property 'status' */
     @Test
-    public void callStatusTest() {
-        model.setCallStatus(CallStatus.QUEUED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.QUEUED);
-        model.setCallStatus(CallStatus.RINGING);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.RINGING);
-        model.setCallStatus(CallStatus.IN_PROGRESS);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.IN_PROGRESS);
-        model.setCallStatus(CallStatus.CANCELED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.CANCELED);
-        model.setCallStatus(CallStatus.COMPLETED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.COMPLETED);
-        model.setCallStatus(CallStatus.FAILED);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.FAILED);
-        model.setCallStatus(CallStatus.BUSY);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.BUSY);
-        model.setCallStatus(CallStatus.NO_ANSWER);
-        Assert.assertEquals(model.getCallStatus(), CallStatus.NO_ANSWER);
+    public void statusTest() {
+        model.setStatus(CallStatus.QUEUED);
+        Assert.assertEquals(model.getStatus(), CallStatus.QUEUED);
+        model.setStatus(CallStatus.RINGING);
+        Assert.assertEquals(model.getStatus(), CallStatus.RINGING);
+        model.setStatus(CallStatus.IN_PROGRESS);
+        Assert.assertEquals(model.getStatus(), CallStatus.IN_PROGRESS);
+        model.setStatus(CallStatus.CANCELED);
+        Assert.assertEquals(model.getStatus(), CallStatus.CANCELED);
+        model.setStatus(CallStatus.COMPLETED);
+        Assert.assertEquals(model.getStatus(), CallStatus.COMPLETED);
+        model.setStatus(CallStatus.FAILED);
+        Assert.assertEquals(model.getStatus(), CallStatus.FAILED);
+        model.setStatus(CallStatus.BUSY);
+        Assert.assertEquals(model.getStatus(), CallStatus.BUSY);
+        model.setStatus(CallStatus.NO_ANSWER);
+        Assert.assertEquals(model.getStatus(), CallStatus.NO_ANSWER);
     }
 
     /** Test the property 'startTime' */
@@ -226,7 +226,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setStatus(CallStatus.QUEUED);
 
         test1.setStartTime("TS");
 
@@ -269,7 +269,7 @@ public class CallResultTest {
 
         test2.setPhoneNumberId("TS");
 
-        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setStatus(CallStatus.QUEUED);
 
         test2.setStartTime("TS");
 
@@ -318,7 +318,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.RINGING);
+        test1.setStatus(CallStatus.RINGING);
 
         test1.setStartTime("TS");
 
@@ -361,7 +361,7 @@ public class CallResultTest {
 
         test2.setPhoneNumberId("TS2");
 
-        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setStatus(CallStatus.QUEUED);
 
         test2.setStartTime("TS2");
 
@@ -410,7 +410,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setStatus(CallStatus.QUEUED);
 
         test1.setStartTime("TS");
 
@@ -460,7 +460,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setStatus(CallStatus.QUEUED);
 
         test1.setStartTime("TS");
 
@@ -503,7 +503,7 @@ public class CallResultTest {
 
         test2.setPhoneNumberId("TS");
 
-        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setStatus(CallStatus.QUEUED);
 
         test2.setStartTime("TS");
 
@@ -554,7 +554,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setStatus(CallStatus.QUEUED);
 
         test1.setStartTime("TS");
 
@@ -597,7 +597,7 @@ public class CallResultTest {
 
         test2.setPhoneNumberId("TS");
 
-        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setStatus(CallStatus.QUEUED);
 
         test2.setStartTime("TS");
 
@@ -646,7 +646,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.RINGING);
+        test1.setStatus(CallStatus.RINGING);
 
         test1.setStartTime("TS");
 
@@ -689,7 +689,7 @@ public class CallResultTest {
 
         test2.setPhoneNumberId("TS2");
 
-        test2.setCallStatus(CallStatus.QUEUED);
+        test2.setStatus(CallStatus.QUEUED);
 
         test2.setStartTime("TS2");
 
@@ -738,7 +738,7 @@ public class CallResultTest {
 
         test1.setPhoneNumberId("TS");
 
-        test1.setCallStatus(CallStatus.QUEUED);
+        test1.setStatus(CallStatus.QUEUED);
 
         test1.setStartTime("TS");
 

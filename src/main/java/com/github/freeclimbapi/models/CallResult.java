@@ -77,10 +77,10 @@ public class CallResult {
     @SerializedName(SERIALIZED_NAME_PHONE_NUMBER_ID)
     private String phoneNumberId;
 
-    public static final String SERIALIZED_NAME_CALL_STATUS = "callStatus";
+    public static final String SERIALIZED_NAME_STATUS = "status";
 
-    @SerializedName(SERIALIZED_NAME_CALL_STATUS)
-    private CallStatus callStatus;
+    @SerializedName(SERIALIZED_NAME_STATUS)
+    private CallStatus status;
 
     public static final String SERIALIZED_NAME_START_TIME = "startTime";
 
@@ -357,25 +357,25 @@ public class CallResult {
         this.phoneNumberId = phoneNumberId;
     }
 
-    public CallResult callStatus(CallStatus callStatus) {
+    public CallResult status(CallStatus status) {
 
-        this.callStatus = callStatus;
+        this.status = status;
         return this;
     }
 
     /**
-     * Get callStatus
+     * Get status
      *
-     * @return callStatus
+     * @return status
      */
     @javax.annotation.Nullable
     @ApiModelProperty(value = "")
-    public CallStatus getCallStatus() {
-        return callStatus;
+    public CallStatus getStatus() {
+        return status;
     }
 
-    public void setCallStatus(CallStatus callStatus) {
-        this.callStatus = callStatus;
+    public void setStatus(CallStatus status) {
+        this.status = status;
     }
 
     public CallResult startTime(String startTime) {
@@ -612,7 +612,7 @@ public class CallResult {
                 && Objects.equals(this.from, callResult.from)
                 && Objects.equals(this.to, callResult.to)
                 && Objects.equals(this.phoneNumberId, callResult.phoneNumberId)
-                && Objects.equals(this.callStatus, callResult.callStatus)
+                && Objects.equals(this.status, callResult.status)
                 && Objects.equals(this.startTime, callResult.startTime)
                 && Objects.equals(this.connectTime, callResult.connectTime)
                 && Objects.equals(this.endTime, callResult.endTime)
@@ -646,7 +646,7 @@ public class CallResult {
                 from,
                 to,
                 phoneNumberId,
-                callStatus,
+                status,
                 startTime,
                 connectTime,
                 endTime,
@@ -679,7 +679,7 @@ public class CallResult {
         sb.append("    from: ").append(toIndentedString(from)).append("\n");
         sb.append("    to: ").append(toIndentedString(to)).append("\n");
         sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
-        sb.append("    callStatus: ").append(toIndentedString(callStatus)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
         sb.append("    connectTime: ").append(toIndentedString(connectTime)).append("\n");
         sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
