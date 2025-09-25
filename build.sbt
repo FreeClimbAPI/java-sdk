@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.github.freeclimbapi",
     name := "freeclimb-java-client",
-    version := "6.1.2",
+    version := "6.2.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),
@@ -13,7 +13,7 @@ lazy val root = (project in file(".")).
       "com.squareup.okhttp3" % "okhttp" % "4.9.3",
       "com.squareup.okhttp3" % "logging-interceptor" % "4.9.3",
       "com.google.code.gson" % "gson" % "2.8.9",
-      "org.apache.commons" % "commons-lang3" % "3.12.0",
+      "org.apache.commons" % "commons-lang3" % "3.18.0",
       "org.openapitools" % "jackson-databind-nullable" % "0.2.2",
       "org.threeten" % "threetenbp" % "1.6.0" % "compile",
       "io.gsonfire" % "gson-fire" % "1.8.5" % "compile",

@@ -665,6 +665,150 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for createExport
+     *
+     * @param exportRequest A JSON object containing export creation parameters (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export successfully created </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createExportCall(ExportRequest exportRequest, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = exportRequest;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Exports"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createExportValidateBeforeCall(
+            ExportRequest exportRequest, final ApiCallback _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = createExportCall(exportRequest, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Create an Export
+     *
+     * @param exportRequest A JSON object containing export creation parameters (optional)
+     * @return ExportResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export successfully created </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ExportResult createExport(ExportRequest exportRequest) throws ApiException {
+        ApiResponse<ExportResult> localVarResp = createExportWithHttpInfo(exportRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create an Export
+     *
+     * @param exportRequest A JSON object containing export creation parameters (optional)
+     * @return ApiResponse&lt;ExportResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export successfully created </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<ExportResult> createExportWithHttpInfo(ExportRequest exportRequest)
+            throws ApiException {
+        okhttp3.Call localVarCall = createExportValidateBeforeCall(exportRequest, null);
+        Type localVarReturnType = new TypeToken<ExportResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create an Export (asynchronously)
+     *
+     * @param exportRequest A JSON object containing export creation parameters (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export successfully created </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createExportAsync(
+            ExportRequest exportRequest, final ApiCallback<ExportResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = createExportValidateBeforeCall(exportRequest, _callback);
+        Type localVarReturnType = new TypeToken<ExportResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for createKnowledgeBaseCompletion
      *
      * @param knowledgeBaseId A string that uniquely identifies the KnowledgeBase resource.
@@ -1138,6 +1282,155 @@ public class DefaultApi {
             String applicationId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = deleteAnApplicationValidateBeforeCall(applicationId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for deleteAnExport
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 204 </td><td> Successful Export deletion </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call deleteAnExportCall(String exportId, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Exports/{exportId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "exportId" + "\\}",
+                                localVarApiClient.escapeString(exportId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {};
+
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "DELETE",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteAnExportValidateBeforeCall(
+            String exportId, final ApiCallback _callback) throws ApiException {
+
+        // verify the required parameter 'exportId' is set
+        if (exportId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'exportId' when calling deleteAnExport(Async)");
+        }
+
+        okhttp3.Call localVarCall = deleteAnExportCall(exportId, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Delete an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 204 </td><td> Successful Export deletion </td><td>  -  </td></tr>
+     * </table>
+     */
+    public void deleteAnExport(String exportId) throws ApiException {
+        deleteAnExportWithHttpInfo(exportId);
+    }
+
+    /**
+     * Delete an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 204 </td><td> Successful Export deletion </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<Void> deleteAnExportWithHttpInfo(String exportId) throws ApiException {
+        okhttp3.Call localVarCall = deleteAnExportValidateBeforeCall(exportId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete an Export (asynchronously)
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 204 </td><td> Successful Export deletion </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call deleteAnExportAsync(String exportId, final ApiCallback<Void> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = deleteAnExportValidateBeforeCall(exportId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
@@ -1770,6 +2063,159 @@ public class DefaultApi {
         okhttp3.Call localVarCall =
                 downloadARecordingFileValidateBeforeCall(recordingId, _callback);
         Type localVarReturnType = new TypeToken<File>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for downloadAnExport
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call downloadAnExportCall(String exportId, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Exports/{exportId}/Download"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "exportId" + "\\}",
+                                localVarApiClient.escapeString(exportId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"text/csv"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "GET",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call downloadAnExportValidateBeforeCall(
+            String exportId, final ApiCallback _callback) throws ApiException {
+
+        // verify the required parameter 'exportId' is set
+        if (exportId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'exportId' when calling"
+                            + " downloadAnExport(Async)");
+        }
+
+        okhttp3.Call localVarCall = downloadAnExportCall(exportId, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Download an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public String downloadAnExport(String exportId) throws ApiException {
+        ApiResponse<String> localVarResp = downloadAnExportWithHttpInfo(exportId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<String> downloadAnExportWithHttpInfo(String exportId) throws ApiException {
+        okhttp3.Call localVarCall = downloadAnExportValidateBeforeCall(exportId, null);
+        Type localVarReturnType = new TypeToken<String>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download an Export (asynchronously)
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call downloadAnExportAsync(String exportId, final ApiCallback<String> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = downloadAnExportValidateBeforeCall(exportId, _callback);
+        Type localVarReturnType = new TypeToken<String>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3171,6 +3617,158 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = getAnApplicationValidateBeforeCall(applicationId, _callback);
         Type localVarReturnType = new TypeToken<ApplicationResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for getAnExport
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getAnExportCall(String exportId, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Exports/{exportId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "exportId" + "\\}",
+                                localVarApiClient.escapeString(exportId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "GET",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getAnExportValidateBeforeCall(String exportId, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'exportId' is set
+        if (exportId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'exportId' when calling getAnExport(Async)");
+        }
+
+        okhttp3.Call localVarCall = getAnExportCall(exportId, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Get an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @return ExportResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ExportResult getAnExport(String exportId) throws ApiException {
+        ApiResponse<ExportResult> localVarResp = getAnExportWithHttpInfo(exportId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get an Export
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @return ApiResponse&lt;ExportResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<ExportResult> getAnExportWithHttpInfo(String exportId) throws ApiException {
+        okhttp3.Call localVarCall = getAnExportValidateBeforeCall(exportId, null);
+        Type localVarReturnType = new TypeToken<ExportResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get an Export (asynchronously)
+     *
+     * @param exportId A string that uniquely identifies this export resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Export Details </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getAnExportAsync(String exportId, final ApiCallback<ExportResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = getAnExportValidateBeforeCall(exportId, _callback);
+        Type localVarReturnType = new TypeToken<ExportResult>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -5959,6 +6557,8 @@ public class DefaultApi {
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
      * @param applicationId Only show calls belonging to the given applicationId. This parameter can
      *     be repeated to return calls from multiple Applications. (optional)
+     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
+     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -5977,6 +6577,8 @@ public class DefaultApi {
             String endTime,
             String parentCallId,
             List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax,
             final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
@@ -6042,6 +6644,16 @@ public class DefaultApi {
                     localVarApiClient.parameterToPairs("multi", "applicationId", applicationId));
         }
 
+        if (riskScoreMin != null) {
+            localVarQueryParams.addAll(
+                    localVarApiClient.parameterToPair("riskScoreMin", riskScoreMin));
+        }
+
+        if (riskScoreMax != null) {
+            localVarQueryParams.addAll(
+                    localVarApiClient.parameterToPair("riskScoreMax", riskScoreMax));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -6083,6 +6695,8 @@ public class DefaultApi {
             String endTime,
             String parentCallId,
             List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax,
             final ApiCallback _callback)
             throws ApiException {
 
@@ -6096,6 +6710,8 @@ public class DefaultApi {
                         endTime,
                         parentCallId,
                         applicationId,
+                        riskScoreMin,
+                        riskScoreMax,
                         _callback);
         return localVarCall;
     }
@@ -6117,6 +6733,8 @@ public class DefaultApi {
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
      * @param applicationId Only show calls belonging to the given applicationId. This parameter can
      *     be repeated to return calls from multiple Applications. (optional)
+     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
+     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
      * @return CallList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -6134,11 +6752,22 @@ public class DefaultApi {
             String startTime,
             String endTime,
             String parentCallId,
-            List<String> applicationId)
+            List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax)
             throws ApiException {
         ApiResponse<CallList> localVarResp =
                 listCallsWithHttpInfo(
-                        active, to, from, status, startTime, endTime, parentCallId, applicationId);
+                        active,
+                        to,
+                        from,
+                        status,
+                        startTime,
+                        endTime,
+                        parentCallId,
+                        applicationId,
+                        riskScoreMin,
+                        riskScoreMax);
         return localVarResp.getData();
     }
 
@@ -6159,6 +6788,8 @@ public class DefaultApi {
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
      * @param applicationId Only show calls belonging to the given applicationId. This parameter can
      *     be repeated to return calls from multiple Applications. (optional)
+     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
+     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
      * @return ApiResponse&lt;CallList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -6176,7 +6807,9 @@ public class DefaultApi {
             String startTime,
             String endTime,
             String parentCallId,
-            List<String> applicationId)
+            List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax)
             throws ApiException {
         okhttp3.Call localVarCall =
                 listCallsValidateBeforeCall(
@@ -6188,6 +6821,8 @@ public class DefaultApi {
                         endTime,
                         parentCallId,
                         applicationId,
+                        riskScoreMin,
+                        riskScoreMax,
                         null);
         Type localVarReturnType = new TypeToken<CallList>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6210,6 +6845,8 @@ public class DefaultApi {
      * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
      * @param applicationId Only show calls belonging to the given applicationId. This parameter can
      *     be repeated to return calls from multiple Applications. (optional)
+     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
+     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -6229,6 +6866,8 @@ public class DefaultApi {
             String endTime,
             String parentCallId,
             List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax,
             final ApiCallback<CallList> _callback)
             throws ApiException {
 
@@ -6242,6 +6881,8 @@ public class DefaultApi {
                         endTime,
                         parentCallId,
                         applicationId,
+                        riskScoreMin,
+                        riskScoreMax,
                         _callback);
         Type localVarReturnType = new TypeToken<CallList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -6644,6 +7285,163 @@ public class DefaultApi {
                 listConferencesValidateBeforeCall(
                         status, alias, dateCreated, dateUpdated, _callback);
         Type localVarReturnType = new TypeToken<ConferenceList>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for listExports
+     *
+     * @param status Status of export (optional)
+     * @param cursor Used to reference pages of a list of exports (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Successful retrieved export list </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call listExportsCall(
+            ExportStatus status, String cursor, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Exports"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (status != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("status", status));
+        }
+
+        if (cursor != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("cursor", cursor));
+        }
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "GET",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call listExportsValidateBeforeCall(
+            ExportStatus status, String cursor, final ApiCallback _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = listExportsCall(status, cursor, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * List Exports
+     *
+     * @param status Status of export (optional)
+     * @param cursor Used to reference pages of a list of exports (optional)
+     * @return ExportList
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Successful retrieved export list </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ExportList listExports(ExportStatus status, String cursor) throws ApiException {
+        ApiResponse<ExportList> localVarResp = listExportsWithHttpInfo(status, cursor);
+        return localVarResp.getData();
+    }
+
+    /**
+     * List Exports
+     *
+     * @param status Status of export (optional)
+     * @param cursor Used to reference pages of a list of exports (optional)
+     * @return ApiResponse&lt;ExportList&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Successful retrieved export list </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<ExportList> listExportsWithHttpInfo(ExportStatus status, String cursor)
+            throws ApiException {
+        okhttp3.Call localVarCall = listExportsValidateBeforeCall(status, cursor, null);
+        Type localVarReturnType = new TypeToken<ExportList>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List Exports (asynchronously)
+     *
+     * @param status Status of export (optional)
+     * @param cursor Used to reference pages of a list of exports (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Successful retrieved export list </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call listExportsAsync(
+            ExportStatus status, String cursor, final ApiCallback<ExportList> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = listExportsValidateBeforeCall(status, cursor, _callback);
+        Type localVarReturnType = new TypeToken<ExportList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

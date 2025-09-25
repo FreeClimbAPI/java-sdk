@@ -101,6 +101,21 @@ public class DefaultApiTest {
     }
 
     /**
+     * Create an Export
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void createExportTest() throws ApiException {
+
+        ExportRequest exportRequest = exportRequestExportRequestTestValue();
+
+        ExportResult response = this.apiInstance.createExport(exportRequest);
+        // TODO: test validations
+        assertEquals(response.getClass(), ExportResult.class);
+    }
+
+    /**
      * Query the knowledge base
      *
      * @throws ApiException if the Api call fails
@@ -144,6 +159,21 @@ public class DefaultApiTest {
         String applicationId = applicationIdStringTestValue();
 
         this.apiInstance.deleteAnApplication(applicationId);
+        // TODO: test validations
+
+    }
+
+    /**
+     * Delete an Export
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteAnExportTest() throws ApiException {
+
+        String exportId = exportIdStringTestValue();
+
+        this.apiInstance.deleteAnExport(exportId);
         // TODO: test validations
 
     }
@@ -208,6 +238,21 @@ public class DefaultApiTest {
         File response = this.apiInstance.downloadARecordingFile(recordingId);
         // TODO: test validations
         assertEquals(response.getClass(), File.class);
+    }
+
+    /**
+     * Download an Export
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void downloadAnExportTest() throws ApiException {
+
+        String exportId = exportIdStringTestValue();
+
+        String response = this.apiInstance.downloadAnExport(exportId);
+        // TODO: test validations
+        assertEquals(response.getClass(), String.class);
     }
 
     /**
@@ -346,6 +391,21 @@ public class DefaultApiTest {
         ApplicationResult response = this.apiInstance.getAnApplication(applicationId);
         // TODO: test validations
         assertEquals(response.getClass(), ApplicationResult.class);
+    }
+
+    /**
+     * Get an Export
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAnExportTest() throws ApiException {
+
+        String exportId = exportIdStringTestValue();
+
+        ExportResult response = this.apiInstance.getAnExport(exportId);
+        // TODO: test validations
+        assertEquals(response.getClass(), ExportResult.class);
     }
 
     /**
@@ -654,9 +714,22 @@ public class DefaultApiTest {
 
         List<String> applicationId = applicationIdTestArray();
 
+        Integer riskScoreMin = riskScoreMinIntegerTestValue();
+
+        Integer riskScoreMax = riskScoreMaxIntegerTestValue();
+
         CallList response =
                 this.apiInstance.listCalls(
-                        active, to, from, status, startTime, endTime, parentCallId, applicationId);
+                        active,
+                        to,
+                        from,
+                        status,
+                        startTime,
+                        endTime,
+                        parentCallId,
+                        applicationId,
+                        riskScoreMin,
+                        riskScoreMax);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
     }
@@ -701,6 +774,23 @@ public class DefaultApiTest {
                 this.apiInstance.listConferences(status, alias, dateCreated, dateUpdated);
         // TODO: test validations
         assertEquals(response.getClass(), ConferenceList.class);
+    }
+
+    /**
+     * List Exports
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listExportsTest() throws ApiException {
+
+        ExportStatus status = statusExportStatusTestValue();
+
+        String cursor = cursorStringTestValue();
+
+        ExportList response = this.apiInstance.listExports(status, cursor);
+        // TODO: test validations
+        assertEquals(response.getClass(), ExportList.class);
     }
 
     /**
@@ -1312,9 +1402,22 @@ public class DefaultApiTest {
 
         List<String> applicationId = applicationIdTestArray();
 
+        Integer riskScoreMin = riskScoreMinIntegerTestValue();
+
+        Integer riskScoreMax = riskScoreMaxIntegerTestValue();
+
         CallList response =
                 this.apiInstance.listCalls(
-                        active, to, from, status, startTime, endTime, parentCallId, applicationId);
+                        active,
+                        to,
+                        from,
+                        status,
+                        startTime,
+                        endTime,
+                        parentCallId,
+                        applicationId,
+                        riskScoreMin,
+                        riskScoreMax);
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Calls".replaceAll("\\{" + "accountId" + "\\}", "MOCK");
         response.setNextPageUri(localVarNextPageUri + "?cursor=1");
@@ -1370,6 +1473,26 @@ public class DefaultApiTest {
         response.setNextPageUri(localVarNextPageUri + "?cursor=1");
         ConferenceList nextPageResponse = this.apiInstance.getNextPage(response);
         assertEquals(nextPageResponse.getClass(), ConferenceList.class);
+    }
+
+    /**
+     * Get Next Page for List Exports
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void listExportsGetNextPageTest() throws ApiException {
+
+        ExportStatus status = statusExportStatusTestValue();
+
+        String cursor = cursorStringTestValue();
+
+        ExportList response = this.apiInstance.listExports(status, cursor);
+        String localVarNextPageUri =
+                "/Accounts/{accountId}/Exports".replaceAll("\\{" + "accountId" + "\\}", "MOCK");
+        response.setNextPageUri(localVarNextPageUri + "?cursor=1");
+        ExportList nextPageResponse = this.apiInstance.getNextPage(response);
+        assertEquals(nextPageResponse.getClass(), ExportList.class);
     }
 
     /**
@@ -1889,5 +2012,42 @@ public class DefaultApiTest {
             System.out.println("Invalid URI: " + e.getMessage());
             return null;
         }
+    }
+
+    private ExportRequest exportRequestExportRequestTestValue() {
+        ExportRequest request = new ExportRequest();
+        ExportRequestOutput output = new ExportRequestOutput();
+        List<String> format = new ArrayList<String>();
+        format.add("id");
+        format.add("from");
+        format.add("to");
+        format.add("text");
+        output.setType(ExportOutputType.CSV);
+        request.setResourceType(ExportResourceType.MESSAGES);
+        request.setOutput(output);
+        request.setFormat(format);
+        request.setQuery(new Object());
+        return request;
+    }
+
+    private String exportIdStringTestValue() {
+        return "TEST_EXPORT_ID";
+    }
+
+    private Integer riskScoreMinIntegerTestValue() {
+        return 10;
+    }
+
+    private Integer riskScoreMaxIntegerTestValue() {
+        return 90;
+    }
+
+    private String cursorStringTestValue() {
+        return "TEST_CURSOR_VALUE";
+    }
+
+    private ExportStatus statusExportStatusTestValue() {
+        ExportStatus status = ExportStatus.COMPLETED;
+        return status;
     }
 }

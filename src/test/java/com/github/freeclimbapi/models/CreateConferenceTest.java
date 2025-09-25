@@ -41,8 +41,9 @@ public class CreateConferenceTest {
     /** Test the property 'alias' */
     @Test
     public void aliasTest() {
-        model.setAlias(false);
-        Assert.assertEquals(false, model.getAlias());
+
+        model.setAlias("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAlias());
     }
 
     /** Test the property 'playBeep' */
@@ -91,6 +92,14 @@ public class CreateConferenceTest {
         }
     }
 
+    /** Test the property 'parentCallId' */
+    @Test
+    public void parentCallIdTest() {
+
+        model.setParentCallId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getParentCallId());
+    }
+
     /** Test the method 'equalsTrue' */
     @Test
     public void equalsTrueTest() {
@@ -104,7 +113,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -126,6 +135,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test1.setParentCallId("TS");
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -136,7 +147,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test2.setAlias(true);
+        test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -158,6 +169,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test2.setParentCallId("TS");
+
         Assert.assertTrue(test1.equals(test2));
     }
 
@@ -174,7 +187,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
 
@@ -196,6 +209,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test1.setParentCallId("TS");
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -206,7 +221,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test2.setAlias(false);
+        test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -228,6 +243,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test2.setParentCallId("TS2");
+
         Assert.assertFalse(test1.equals(test2));
     }
 
@@ -244,7 +261,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -265,6 +282,8 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
+        test1.setParentCallId("TS");
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -283,7 +302,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -305,6 +324,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test1.setParentCallId("TS");
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -315,7 +336,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test2.setAlias(true);
+        test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -336,6 +357,8 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
+        test2.setParentCallId("TS");
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -355,7 +378,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -377,6 +400,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test1.setParentCallId("TS");
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -387,7 +412,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test2.setAlias(true);
+        test2.setAlias("TS");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -409,6 +434,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test2.setParentCallId("TS");
+
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -425,7 +452,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.NEVER);
 
@@ -447,6 +474,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test1.setParentCallId("TS");
+
         CreateConference test2 = new CreateConference();
 
         try {
@@ -457,7 +486,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test2.setAlias(false);
+        test2.setAlias("TS2");
 
         test2.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -479,6 +508,8 @@ public class CreateConferenceTest {
         }
         ;
 
+        test2.setParentCallId("TS2");
+
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -495,7 +526,7 @@ public class CreateConferenceTest {
         }
         ;
 
-        test1.setAlias(true);
+        test1.setAlias("TS");
 
         test1.setPlayBeep(PlayBeep.ALWAYS);
 
@@ -516,6 +547,8 @@ public class CreateConferenceTest {
             e.printStackTrace();
         }
         ;
+
+        test1.setParentCallId("TS");
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));
@@ -536,7 +569,10 @@ public class CreateConferenceTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        model.setAlias(false);
+
+        model.setAlias("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAlias());
+
         model.setRecord(false);
 
         try {
@@ -554,6 +590,10 @@ public class CreateConferenceTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        model.setParentCallId("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getParentCallId());
+
         Map<String, Map<String, Object>> build = model.build();
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("actionUrl"), model.getActionUrl());
@@ -562,5 +602,6 @@ public class CreateConferenceTest {
         Assert.assertEquals(attributes.get("record"), model.getRecord());
         Assert.assertEquals(attributes.get("statusCallbackUrl"), model.getStatusCallbackUrl());
         Assert.assertEquals(attributes.get("waitUrl"), model.getWaitUrl());
+        Assert.assertEquals(attributes.get("parentCallId"), model.getParentCallId());
     }
 }

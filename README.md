@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>6.1.2</version>
+  <version>6.2.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:6.1.2"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:6.2.0"
      implementation("com.squareup.okhttp3:okhttp:4.9.3")
      implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-6.1.2.jar`
+* `target/freeclimb-java-client-6.2.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -147,13 +147,16 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**createAConference**](docs/DefaultApi.md#createAConference) | **POST** /Accounts/{accountId}/Conferences | Create a Conference
 *DefaultApi* | [**createAQueue**](docs/DefaultApi.md#createAQueue) | **POST** /Accounts/{accountId}/Queues | Create a Queue
 *DefaultApi* | [**createAnApplication**](docs/DefaultApi.md#createAnApplication) | **POST** /Accounts/{accountId}/Applications | Create an application
+*DefaultApi* | [**createExport**](docs/DefaultApi.md#createExport) | **POST** /Accounts/{accountId}/Exports | Create an Export
 *DefaultApi* | [**createKnowledgeBaseCompletion**](docs/DefaultApi.md#createKnowledgeBaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 *DefaultApi* | [**deleteARecording**](docs/DefaultApi.md#deleteARecording) | **DELETE** /Accounts/{accountId}/Recordings/{recordingId} | Delete a Recording
 *DefaultApi* | [**deleteAnApplication**](docs/DefaultApi.md#deleteAnApplication) | **DELETE** /Accounts/{accountId}/Applications/{applicationId} | Delete an application
+*DefaultApi* | [**deleteAnExport**](docs/DefaultApi.md#deleteAnExport) | **DELETE** /Accounts/{accountId}/Exports/{exportId} | Delete an Export
 *DefaultApi* | [**deleteAnIncomingNumber**](docs/DefaultApi.md#deleteAnIncomingNumber) | **DELETE** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Delete an Incoming Number
 *DefaultApi* | [**dequeueAMember**](docs/DefaultApi.md#dequeueAMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/{callId} | Dequeue a Member
 *DefaultApi* | [**dequeueHeadMember**](docs/DefaultApi.md#dequeueHeadMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Dequeue Head Member
 *DefaultApi* | [**downloadARecordingFile**](docs/DefaultApi.md#downloadARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Download | Download a Recording File
+*DefaultApi* | [**downloadAnExport**](docs/DefaultApi.md#downloadAnExport) | **GET** /Accounts/{accountId}/Exports/{exportId}/Download | Download an Export
 *DefaultApi* | [**filterLogs**](docs/DefaultApi.md#filterLogs) | **POST** /Accounts/{accountId}/Logs | Filter Logs
 *DefaultApi* | [**getACall**](docs/DefaultApi.md#getACall) | **GET** /Accounts/{accountId}/Calls/{callId} | Get a Call
 *DefaultApi* | [**getAConference**](docs/DefaultApi.md#getAConference) | **GET** /Accounts/{accountId}/Conferences/{conferenceId} | Get a Conference
@@ -163,6 +166,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**getARecording**](docs/DefaultApi.md#getARecording) | **GET** /Accounts/{accountId}/Recordings/{recordingId} | Get a Recording
 *DefaultApi* | [**getAnAccount**](docs/DefaultApi.md#getAnAccount) | **GET** /Accounts/{accountId} | Get an Account
 *DefaultApi* | [**getAnApplication**](docs/DefaultApi.md#getAnApplication) | **GET** /Accounts/{accountId}/Applications/{applicationId} | Get an Application
+*DefaultApi* | [**getAnExport**](docs/DefaultApi.md#getAnExport) | **GET** /Accounts/{accountId}/Exports/{exportId} | Get an Export
 *DefaultApi* | [**getAnIncomingNumber**](docs/DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 *DefaultApi* | [**getAnSmsMessage**](docs/DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
 *DefaultApi* | [**getHeadMember**](docs/DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
@@ -183,6 +187,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**listCalls**](docs/DefaultApi.md#listCalls) | **GET** /Accounts/{accountId}/Calls | List Calls
 *DefaultApi* | [**listConferenceRecordings**](docs/DefaultApi.md#listConferenceRecordings) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Recordings | List Conference Recordings
 *DefaultApi* | [**listConferences**](docs/DefaultApi.md#listConferences) | **GET** /Accounts/{accountId}/Conferences | List Conferences
+*DefaultApi* | [**listExports**](docs/DefaultApi.md#listExports) | **GET** /Accounts/{accountId}/Exports | List Exports
 *DefaultApi* | [**listIncomingNumbers**](docs/DefaultApi.md#listIncomingNumbers) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers | List Incoming Numbers
 *DefaultApi* | [**listMembers**](docs/DefaultApi.md#listMembers) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members | List Members
 *DefaultApi* | [**listParticipants**](docs/DefaultApi.md#listParticipants) | **GET** /Accounts/{accountId}/Conferences/{conferenceId}/Participants | List Participants
@@ -244,6 +249,14 @@ Class | Method | HTTP request | Description
  - [Dequeue](docs/Dequeue.md)
  - [DequeueWebhook](docs/DequeueWebhook.md)
  - [Enqueue](docs/Enqueue.md)
+ - [ExportList](docs/ExportList.md)
+ - [ExportOutputType](docs/ExportOutputType.md)
+ - [ExportRequest](docs/ExportRequest.md)
+ - [ExportRequestOutput](docs/ExportRequestOutput.md)
+ - [ExportResourceType](docs/ExportResourceType.md)
+ - [ExportResult](docs/ExportResult.md)
+ - [ExportResultOutput](docs/ExportResultOutput.md)
+ - [ExportStatus](docs/ExportStatus.md)
  - [FilterLogsRequest](docs/FilterLogsRequest.md)
  - [GetDigits](docs/GetDigits.md)
  - [GetDigitsReason](docs/GetDigitsReason.md)
