@@ -42,16 +42,6 @@ public class AvailableNumber {
     @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
     private String phoneNumber;
 
-    public static final String SERIALIZED_NAME_VOICE_ENABLED = "voiceEnabled";
-
-    @SerializedName(SERIALIZED_NAME_VOICE_ENABLED)
-    private Boolean voiceEnabled;
-
-    public static final String SERIALIZED_NAME_SMS_ENABLED = "smsEnabled";
-
-    @SerializedName(SERIALIZED_NAME_SMS_ENABLED)
-    private Boolean smsEnabled;
-
     public static final String SERIALIZED_NAME_REGION = "region";
 
     @SerializedName(SERIALIZED_NAME_REGION)
@@ -130,53 +120,6 @@ public class AvailableNumber {
         this.phoneNumber = phoneNumber;
     }
 
-    public AvailableNumber voiceEnabled(Boolean voiceEnabled) {
-
-        this.voiceEnabled = voiceEnabled;
-        return this;
-    }
-
-    /**
-     * Typically set to true for all numbers.
-     *
-     * @return voiceEnabled
-     * @deprecated
-     */
-    @Deprecated
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "Typically set to true for all numbers.")
-    public Boolean getVoiceEnabled() {
-        return voiceEnabled;
-    }
-
-    public void setVoiceEnabled(Boolean voiceEnabled) {
-        this.voiceEnabled = voiceEnabled;
-    }
-
-    public AvailableNumber smsEnabled(Boolean smsEnabled) {
-
-        this.smsEnabled = smsEnabled;
-        return this;
-    }
-
-    /**
-     * Indicates whether the phone number can send and receive SMS messages.
-     *
-     * @return smsEnabled
-     * @deprecated
-     */
-    @Deprecated
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value = "Indicates whether the phone number can send and receive SMS messages.")
-    public Boolean getSmsEnabled() {
-        return smsEnabled;
-    }
-
-    public void setSmsEnabled(Boolean smsEnabled) {
-        this.smsEnabled = smsEnabled;
-    }
-
     public AvailableNumber region(String region) {
 
         this.region = region;
@@ -231,8 +174,6 @@ public class AvailableNumber {
         return Objects.equals(this.capabilities, availableNumber.capabilities)
                 && Objects.equals(this.campaignId, availableNumber.campaignId)
                 && Objects.equals(this.phoneNumber, availableNumber.phoneNumber)
-                && Objects.equals(this.voiceEnabled, availableNumber.voiceEnabled)
-                && Objects.equals(this.smsEnabled, availableNumber.smsEnabled)
                 && Objects.equals(this.region, availableNumber.region)
                 && Objects.equals(this.country, availableNumber.country);
     }
@@ -248,8 +189,7 @@ public class AvailableNumber {
 
     @Override
     public int hashCode() {
-        return Objects.hash(
-                capabilities, campaignId, phoneNumber, voiceEnabled, smsEnabled, region, country);
+        return Objects.hash(capabilities, campaignId, phoneNumber, region, country);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -266,8 +206,6 @@ public class AvailableNumber {
         sb.append("    capabilities: ").append(toIndentedString(capabilities)).append("\n");
         sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
         sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-        sb.append("    voiceEnabled: ").append(toIndentedString(voiceEnabled)).append("\n");
-        sb.append("    smsEnabled: ").append(toIndentedString(smsEnabled)).append("\n");
         sb.append("    region: ").append(toIndentedString(region)).append("\n");
         sb.append("    country: ").append(toIndentedString(country)).append("\n");
         sb.append("}");

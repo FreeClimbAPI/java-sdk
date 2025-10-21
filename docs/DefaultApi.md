@@ -8,12 +8,14 @@ Method | HTTP request | Description
 [**createAConference**](DefaultApi.md#createAConference) | **POST** /Accounts/{accountId}/Conferences | Create a Conference
 [**createAQueue**](DefaultApi.md#createAQueue) | **POST** /Accounts/{accountId}/Queues | Create a Queue
 [**createAnApplication**](DefaultApi.md#createAnApplication) | **POST** /Accounts/{accountId}/Applications | Create an application
+[**createBlob**](DefaultApi.md#createBlob) | **POST** /Accounts/{accountId}/Blobs | Create a Blob
 [**createExport**](DefaultApi.md#createExport) | **POST** /Accounts/{accountId}/Exports | Create an Export
 [**createKnowledgeBaseCompletion**](DefaultApi.md#createKnowledgeBaseCompletion) | **POST** /Accounts/{accountId}/KnowledgeBases/{knowledgeBaseId}/Completion | Query the knowledge base
 [**deleteARecording**](DefaultApi.md#deleteARecording) | **DELETE** /Accounts/{accountId}/Recordings/{recordingId} | Delete a Recording
 [**deleteAnApplication**](DefaultApi.md#deleteAnApplication) | **DELETE** /Accounts/{accountId}/Applications/{applicationId} | Delete an application
 [**deleteAnExport**](DefaultApi.md#deleteAnExport) | **DELETE** /Accounts/{accountId}/Exports/{exportId} | Delete an Export
 [**deleteAnIncomingNumber**](DefaultApi.md#deleteAnIncomingNumber) | **DELETE** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Delete an Incoming Number
+[**deleteBlob**](DefaultApi.md#deleteBlob) | **DELETE** /Accounts/{accountId}/Blobs/{blobId} | Delete Blob
 [**dequeueAMember**](DefaultApi.md#dequeueAMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/{callId} | Dequeue a Member
 [**dequeueHeadMember**](DefaultApi.md#dequeueHeadMember) | **POST** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Dequeue Head Member
 [**downloadARecordingFile**](DefaultApi.md#downloadARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Download | Download a Recording File
@@ -30,6 +32,7 @@ Method | HTTP request | Description
 [**getAnExport**](DefaultApi.md#getAnExport) | **GET** /Accounts/{accountId}/Exports/{exportId} | Get an Export
 [**getAnIncomingNumber**](DefaultApi.md#getAnIncomingNumber) | **GET** /Accounts/{accountId}/IncomingPhoneNumbers/{phoneNumberId} | Get an Incoming Number
 [**getAnSmsMessage**](DefaultApi.md#getAnSmsMessage) | **GET** /Accounts/{accountId}/Messages/{messageId} | Get an SMS Message
+[**getBlob**](DefaultApi.md#getBlob) | **GET** /Accounts/{accountId}/Blobs/{blobId} | Get Blob
 [**getHeadMember**](DefaultApi.md#getHeadMember) | **GET** /Accounts/{accountId}/Queues/{queueId}/Members/Front | Get Head Member
 [**getTenDLCSmsBrand**](DefaultApi.md#getTenDLCSmsBrand) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands/{brandId} | Get a 10DLC SMS Brand
 [**getTenDLCSmsBrands**](DefaultApi.md#getTenDLCSmsBrands) | **GET** /Accounts/{accountId}/Messages/10DLC/Brands | Get list of SMS 10DLC Brands
@@ -43,6 +46,7 @@ Method | HTTP request | Description
 [**listAllAccountLogs**](DefaultApi.md#listAllAccountLogs) | **GET** /Accounts/{accountId}/Logs | List All Account Logs
 [**listApplications**](DefaultApi.md#listApplications) | **GET** /Accounts/{accountId}/Applications | List applications
 [**listAvailableNumbers**](DefaultApi.md#listAvailableNumbers) | **GET** /AvailablePhoneNumbers | List available numbers
+[**listBlobs**](DefaultApi.md#listBlobs) | **GET** /Accounts/{accountId}/Blobs | List Blobs belonging to an account.
 [**listCallLogs**](DefaultApi.md#listCallLogs) | **GET** /Accounts/{accountId}/Calls/{callId}/Logs | List Call Logs
 [**listCallRecordings**](DefaultApi.md#listCallRecordings) | **GET** /Accounts/{accountId}/Calls/{callId}/Recordings | List Call Recordings
 [**listCalls**](DefaultApi.md#listCalls) | **GET** /Accounts/{accountId}/Calls | List Calls
@@ -56,7 +60,9 @@ Method | HTTP request | Description
 [**listSmsMessages**](DefaultApi.md#listSmsMessages) | **GET** /Accounts/{accountId}/Messages | List SMS Messages
 [**makeACall**](DefaultApi.md#makeACall) | **POST** /Accounts/{accountId}/Calls | Make a Call
 [**makeAWebrtcJwt**](DefaultApi.md#makeAWebrtcJwt) | **POST** /Accounts/{accountId}/Calls/WebRTC/Token | Make a JWT for WebRTC calling
+[**modifyBlob**](DefaultApi.md#modifyBlob) | **PATCH** /Accounts/{accountId}/Blobs/{blobId} | Modify Blob
 [**removeAParticipant**](DefaultApi.md#removeAParticipant) | **DELETE** /Accounts/{accountId}/Conferences/{conferenceId}/Participants/{callId} | Remove a Participant
+[**replaceBlob**](DefaultApi.md#replaceBlob) | **PUT** /Accounts/{accountId}/Blobs/{blobId} | Replace Blob
 [**sendAnSmsMessage**](DefaultApi.md#sendAnSmsMessage) | **POST** /Accounts/{accountId}/Messages | Send an SMS Message
 [**streamARecordingFile**](DefaultApi.md#streamARecordingFile) | **GET** /Accounts/{accountId}/Recordings/{recordingId}/Stream | Stream a Recording File
 [**updateAConference**](DefaultApi.md#updateAConference) | **POST** /Accounts/{accountId}/Conferences/{conferenceId} | Update a Conference
@@ -335,6 +341,80 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Application successfuly created |  -  |
+
+<a name="createBlob"></a>
+# **createBlob**
+> BlobResult createBlob(createBlobRequest)
+
+Create a Blob
+
+Create a new Blob belonging to the requesting account.
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    CreateBlobRequest createBlobRequest = new CreateBlobRequest(alias={ Custom identifier for this blob that is unique for the owning account. It will be set to the blobId by default if not provided. }, expiresAt={ An RFC3339 timestamp with millisecond resolution. This timestamp defines the time at which this blob will delete itself. It must not be more than 48 hours in the future and will default to 9 hours in the future if not provided. }, blob={  }); // CreateBlobRequest | An object defining a new blob. A request body must be provided but the blob may be empty.
+    try {
+      BlobResult result = apiInstance.createBlob(createBlobRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#createBlob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createBlobRequest** | [**CreateBlobRequest**](CreateBlobRequest.md)| An object defining a new blob. A request body must be provided but the blob may be empty. |
+
+
+### Return type
+
+[**BlobResult**](BlobResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Successful creation of a new blob. |  -  |
+**400** | Generic platform bad request. |  -  |
+**409** | A blob with the provided alias already exists oln the requesting account and so this new blob is rejected as there cannot be duplicate alises. |  -  |
+**413** | The blob exceeded one of the size limits. Either it itself is too large or it would push the total sum of all blobs over the account&#39;s limit. |  -  |
+**422** | Generic platform unprocessible entity response. |  -  |
+**500** | Generic platform internal error. |  -  |
 
 <a name="createExport"></a>
 # **createExport**
@@ -741,6 +821,83 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | Successful Incoming Number deletion. |  -  |
 
+<a name="deleteBlob"></a>
+# **deleteBlob**
+> BlobResult deleteBlob(blobId, key)
+
+Delete Blob
+
+Deletes a blob or specific keys from a blob. If no keys are specified in the request body, the entire blob is deleted (returns 204). If specific keys are provided, only those keys are removed and the remaining blob is returned (returns 200).
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String blobId = "blobId_example"; // String | String that uniquely identifies this Blob resource.
+
+    List<String> key = new List<String>(); // List<String> | key within blob to remove
+    try {
+      BlobResult result = apiInstance.deleteBlob(blobId, key);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#deleteBlob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blobId** | **String**| String that uniquely identifies this Blob resource. |
+ **key** | [**List&lt;String&gt;**](String.md)| key within blob to remove | [optional]
+
+
+### Return type
+
+[**BlobResult**](BlobResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Blob keys deleted successfully, remaining blob returned. |  -  |
+**204** | Successful operation |  -  |
+**404** | Generic platform not found error. |  -  |
+**422** | Generic platform unprocessible entity response. |  -  |
+**500** | Generic platform internal error. |  -  |
+**504** | gateway timeout error |  -  |
+
 <a name="dequeueAMember"></a>
 # **dequeueAMember**
 > QueueMember dequeueAMember(queueId, callId)
@@ -941,12 +1098,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: audio/x-wav
+ - **Accept**: audio/wav
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Download a Recording file represented with audio/x-wav mime-type |  -  |
+**200** | Download a Recording file represented with audio/wav mime-type |  -  |
 
 <a name="downloadAnExport"></a>
 # **downloadAnExport**
@@ -1831,6 +1988,79 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | The specific SMS message that’s been processed by FreeClimb |  -  |
+
+<a name="getBlob"></a>
+# **getBlob**
+> BlobResult getBlob(blobId)
+
+Get Blob
+
+Retrieves a specified blob
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String blobId = "blobId_example"; // String | String that uniquely identifies this Blob resource.
+
+    try {
+      BlobResult result = apiInstance.getBlob(blobId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getBlob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blobId** | **String**| String that uniquely identifies this Blob resource. |
+
+
+### Return type
+
+[**BlobResult**](BlobResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Retrieve a Blob. |  -  |
+**404** | Generic platform not found error. |  -  |
+**500** | Generic platform internal error. |  -  |
+**504** | gateway timeout error |  -  |
 
 <a name="getHeadMember"></a>
 # **getHeadMember**
@@ -2728,6 +2958,82 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Available Numbers List |  -  |
 
+<a name="listBlobs"></a>
+# **listBlobs**
+> BlobListResponse listBlobs(alias, cursor)
+
+List Blobs belonging to an account.
+
+List Blobs belonging to an account. Results are returned in paginated lists mirroring other listing features in the API.
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String alias = "alias_example"; // String | Filter blobs by alias
+
+    String cursor = "cursor_example"; // String | Used to reference pages of a list of blobs
+
+    try {
+      BlobListResponse result = apiInstance.listBlobs(alias, cursor);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#listBlobs");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alias** | **String**| Filter blobs by alias | [optional]
+ **cursor** | **String**| Used to reference pages of a list of blobs | [optional]
+
+
+### Return type
+
+[**BlobListResponse**](BlobListResponse.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Single page of blob list results. |  -  |
+**400** | Generic platform bad request. |  -  |
+**500** | Generic platform internal error. |  -  |
+**504** | gateway timeout error |  -  |
+
 <a name="listCallLogs"></a>
 # **listCallLogs**
 > LogList listCallLogs(callId)
@@ -3183,7 +3489,7 @@ Name | Type | Description  | Notes
 
 <a name="listIncomingNumbers"></a>
 # **listIncomingNumbers**
-> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet)
+> IncomingNumberList listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet)
 
 List Incoming Numbers
 
@@ -3220,10 +3526,6 @@ public class Example {
 
     Boolean hasApplication = false; // Boolean | Indication of whether the phone number has an application linked to it.
 
-    Boolean voiceEnabled = true; // Boolean | Indicates whether the phone number can handle Calls. Typically set to true for all numbers.
-
-    Boolean smsEnabled = true; // Boolean | Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers.
-
     Boolean hasCampaign = true; // Boolean | Indication of whether the phone number has a campaign associated with it
 
     Boolean capabilitiesVoice = true; // Boolean | 
@@ -3241,7 +3543,7 @@ public class Example {
     Boolean offnet = true; // Boolean | Indication of whether the phone number was registered as an offnet number. This field will be rendered only for requests to the IncomingPhone number resource.
 
     try {
-      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, voiceEnabled, smsEnabled, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
+      IncomingNumberList result = apiInstance.listIncomingNumbers(phoneNumber, alias, region, country, applicationId, hasApplication, hasCampaign, capabilitiesVoice, capabilitiesSms, capabilitiesTollFree, capabilitiesTenDLC, capabilitiesShortCode, tfnCampaignId, offnet);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listIncomingNumbers");
@@ -3264,8 +3566,6 @@ Name | Type | Description  | Notes
  **country** | **String**| Country of this phone number. | [optional]
  **applicationId** | **String**| ID of the Application that FreeClimb should contact if a Call or SMS arrives for this phone number or a Call from this number is placed. An incoming phone number is not useful until associated with an applicationId. | [optional]
  **hasApplication** | **Boolean**| Indication of whether the phone number has an application linked to it. | [optional] [default to false]
- **voiceEnabled** | **Boolean**| Indicates whether the phone number can handle Calls. Typically set to true for all numbers. | [optional] [default to true]
- **smsEnabled** | **Boolean**| Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. | [optional] [default to true]
  **hasCampaign** | **Boolean**| Indication of whether the phone number has a campaign associated with it | [optional]
  **capabilitiesVoice** | **Boolean**|  | [optional]
  **capabilitiesSms** | **Boolean**|  | [optional]
@@ -3735,6 +4035,82 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | The created JWT |  -  |
 
+<a name="modifyBlob"></a>
+# **modifyBlob**
+> BlobResult modifyBlob(blobId, modifyBlobRequest)
+
+Modify Blob
+
+Modifys a pre existing blob by either adding new fields, or modifying existing fields
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String blobId = "blobId_example"; // String | String that uniquely identifies this Blob resource.
+
+    ModifyBlobRequest modifyBlobRequest = new ModifyBlobRequest(blob={  }, alias={ Custom identifier for this blob that is unique for the owning account. It will be set to the blobId by default if not provided. }); // ModifyBlobRequest | Request body to specify keys to modify. Or new keys to add onto the already existing blob
+    try {
+      BlobResult result = apiInstance.modifyBlob(blobId, modifyBlobRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#modifyBlob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blobId** | **String**| String that uniquely identifies this Blob resource. |
+ **modifyBlobRequest** | [**ModifyBlobRequest**](ModifyBlobRequest.md)| Request body to specify keys to modify. Or new keys to add onto the already existing blob |
+
+
+### Return type
+
+[**BlobResult**](BlobResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Blob keys successfully modified, updated blob returned. |  -  |
+**404** | Generic platform not found error. |  -  |
+**409** | Generic platform status conflict error. |  -  |
+**413** | Generic platform status request entity too large. |  -  |
+**500** | Generic platform internal error. |  -  |
+
 <a name="removeAParticipant"></a>
 # **removeAParticipant**
 > removeAParticipant(conferenceId, callId)
@@ -3804,6 +4180,82 @@ null (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | Successfully deleted conference participant |  -  |
+
+<a name="replaceBlob"></a>
+# **replaceBlob**
+> BlobResult replaceBlob(blobId, replaceBlobRequest)
+
+Replace Blob
+
+Replaces the blob content with the provided values.
+
+### Example
+```java
+// Import classes:
+import com.github.freeclimbapi.ApiClient;
+import com.github.freeclimbapi.ApiException;
+import com.github.freeclimbapi.Configuration;
+import com.github.freeclimbapi.auth.*;
+import com.github.freeclimbapi.models.*;
+import com.github.freeclimbapi.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
+    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setApiKey("YOUR_API_KEY");
+    
+    
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    
+    String blobId = "blobId_example"; // String | String that uniquely identifies this Blob resource.
+
+    ReplaceBlobRequest replaceBlobRequest = new ReplaceBlobRequest(blob={  }); // ReplaceBlobRequest | JSON object containing blob key the contents of which will be used to override the enitre blob contents.
+    try {
+      BlobResult result = apiInstance.replaceBlob(blobId, replaceBlobRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#replaceBlob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blobId** | **String**| String that uniquely identifies this Blob resource. |
+ **replaceBlobRequest** | [**ReplaceBlobRequest**](ReplaceBlobRequest.md)| JSON object containing blob key the contents of which will be used to override the enitre blob contents. |
+
+
+### Return type
+
+[**BlobResult**](BlobResult.md)
+
+### Authorization
+
+[fc](../README.md#fc)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Replaces all keys in blob with those provided. |  -  |
+**404** | Generic platform not found error. |  -  |
+**409** | Generic platform status conflict error. |  -  |
+**413** | Generic platform status request entity too large. |  -  |
+**500** | Generic platform internal error. |  -  |
 
 <a name="sendAnSmsMessage"></a>
 # **sendAnSmsMessage**
@@ -3933,12 +4385,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: audio/x-wav
+ - **Accept**: audio/wav
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Streaming a Recording represented with audio/x-wav mime-type |  -  |
+**200** | Streaming a Recording represented with audio/wav mime-type |  -  |
 
 <a name="updateAConference"></a>
 # **updateAConference**

@@ -1,0 +1,16 @@
+
+
+# SayNeuralEngineParameters
+
+The parameters to use for the TTS. The complete list of valid values for the parameters attribute is shown below.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**voice** | **String** | The voice to use for the TTS. The complete list of valid values for the voice attribute is shown below. |  [optional]
+**textType** | **SayNeuralTextType** |  |  [optional]
+**language** | **String** | The language to use for the TTS. The complete list of valid values for the language attribute is shown below. |  [optional]
+
+
+

@@ -131,8 +131,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
         MessageRequest test2 = new MessageRequest();
 
         test2.setUri("TS");
@@ -157,8 +157,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
         MessageRequest test2 = new MessageRequest();
 
         test2.setUri("TS2");
@@ -216,8 +216,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList2 = null;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = null;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -249,8 +249,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -283,8 +283,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
         MessageRequest test2 = new MessageRequest();
 
         test2.setUri("TS");
@@ -309,8 +309,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -344,8 +344,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
         MessageRequest test2 = new MessageRequest();
 
         test2.setUri("TS");
@@ -370,8 +370,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -402,8 +402,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
         MessageRequest test2 = new MessageRequest();
 
         test2.setUri("TS2");
@@ -428,8 +428,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList2 = null;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = null;
+        test2.setMediaUrls(testsetMediaUrlsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -460,8 +460,8 @@ public class MessageRequestTest {
         }
         ;
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

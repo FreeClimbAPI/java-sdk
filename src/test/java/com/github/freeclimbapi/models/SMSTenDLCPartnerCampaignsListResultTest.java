@@ -109,8 +109,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
 
@@ -126,8 +127,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList2 = testList;
-        test2.setPartnerCampaigns(testList2);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList2 = testsetPartnerCampaignsList;
+        test2.setPartnerCampaigns(testsetPartnerCampaignsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -150,8 +151,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(0);
 
@@ -167,8 +169,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test2.setNextPageUri("TS2");
 
-        List<SMSTenDLCPartnerCampaign> testList2 = null;
-        test2.setPartnerCampaigns(testList2);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList2 = null;
+        test2.setPartnerCampaigns(testsetPartnerCampaignsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -191,8 +193,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -216,8 +219,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
 
@@ -233,8 +237,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList2 = testList;
-        test2.setPartnerCampaigns(testList2);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList2 = testsetPartnerCampaignsList;
+        test2.setPartnerCampaigns(testsetPartnerCampaignsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -259,8 +263,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(1);
 
@@ -276,8 +281,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList2 = testList;
-        test2.setPartnerCampaigns(testList2);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList2 = testsetPartnerCampaignsList;
+        test2.setPartnerCampaigns(testsetPartnerCampaignsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -299,8 +304,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
         SMSTenDLCPartnerCampaignsListResult test2 = new SMSTenDLCPartnerCampaignsListResult();
         test2.setTotal(0);
 
@@ -316,8 +322,8 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test2.setNextPageUri("TS2");
 
-        List<SMSTenDLCPartnerCampaign> testList2 = null;
-        test2.setPartnerCampaigns(testList2);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList2 = null;
+        test2.setPartnerCampaigns(testsetPartnerCampaignsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -339,8 +345,9 @@ public class SMSTenDLCPartnerCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTenDLCPartnerCampaign> testList = new ArrayList<SMSTenDLCPartnerCampaign>();
-        test1.setPartnerCampaigns(testList);
+        List<SMSTenDLCPartnerCampaign> testsetPartnerCampaignsList =
+                new ArrayList<SMSTenDLCPartnerCampaign>();
+        test1.setPartnerCampaigns(testsetPartnerCampaignsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

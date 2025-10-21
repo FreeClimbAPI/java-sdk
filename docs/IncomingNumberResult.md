@@ -20,8 +20,6 @@ Name | Type | Description | Notes
 **alias** | **String** | Description for this phone number. Typically the conventionally-formatted version of the phone number. |  [optional]
 **region** | **String** | State or province of this phone number. |  [optional]
 **country** | **String** | Country of this phone number. |  [optional]
-**voiceEnabled** | **Boolean** | Indicates whether the phone number can handle Calls. Typically set to true for all numbers. |  [optional]
-**smsEnabled** | **Boolean** | Indication of whether the phone number can handle sending and receiving SMS messages. Typically set to true for all numbers. |  [optional]
 **offnet** | **Boolean** | The offnet field is a boolean representing whether the number is offnet registered or not. This field will be rendered only for requests to the IncomingPhone number resource. |  [optional]
 **tfn** | [**TFN**](TFN.md) |  |  [optional]
 

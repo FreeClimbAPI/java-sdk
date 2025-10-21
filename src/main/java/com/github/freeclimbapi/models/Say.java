@@ -47,11 +47,6 @@ public class Say extends PerclCommand {
     @SerializedName(SERIALIZED_NAME_TEXT)
     private String text;
 
-    public static final String SERIALIZED_NAME_LANGUAGE = "language";
-
-    @SerializedName(SERIALIZED_NAME_LANGUAGE)
-    private String language;
-
     public static final String SERIALIZED_NAME_LOOP = "loop";
 
     @SerializedName(SERIALIZED_NAME_LOOP)
@@ -61,6 +56,16 @@ public class Say extends PerclCommand {
 
     @SerializedName(SERIALIZED_NAME_PRIVACY_MODE)
     private Boolean privacyMode;
+
+    public static final String SERIALIZED_NAME_ENGINE = "engine";
+
+    @SerializedName(SERIALIZED_NAME_ENGINE)
+    private SayStandardEngine engine;
+
+    public static final String SERIALIZED_NAME_LANGUAGE = "language";
+
+    @SerializedName(SERIALIZED_NAME_LANGUAGE)
+    private String language;
 
     public Say() {
         this.command = this.getClass().getSimpleName();
@@ -91,33 +96,6 @@ public class Say extends PerclCommand {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public Say language(String language) {
-
-        this.language = language;
-        return this;
-    }
-
-    /**
-     * Language and (by implication) the locale to use. This implies the accent and pronunciations
-     * to be usde for the TTS. The complete list of valid values for the language attribute is shown
-     * below.
-     *
-     * @return language
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Language and (by implication) the locale to use. This implies the accent and"
-                            + " pronunciations to be usde for the TTS. The complete list of valid"
-                            + " values for the language attribute is shown below.")
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
     }
 
     public Say loop(Integer loop) {
@@ -170,6 +148,54 @@ public class Say extends PerclCommand {
         this.privacyMode = privacyMode;
     }
 
+    public Say engine(SayStandardEngine engine) {
+
+        this.engine = engine;
+        return this;
+    }
+
+    /**
+     * Get engine
+     *
+     * @return engine
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public SayStandardEngine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(SayStandardEngine engine) {
+        this.engine = engine;
+    }
+
+    public Say language(String language) {
+
+        this.language = language;
+        return this;
+    }
+
+    /**
+     * Language and (by implication) the locale to use. This implies the accent and pronunciations
+     * to be usde for the TTS. The complete list of valid values for the language attribute is shown
+     * below.
+     *
+     * @return language
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Language and (by implication) the locale to use. This implies the accent and"
+                            + " pronunciations to be usde for the TTS. The complete list of valid"
+                            + " values for the language attribute is shown below.")
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -180,15 +206,16 @@ public class Say extends PerclCommand {
         }
         Say say = (Say) o;
         return Objects.equals(this.text, say.text)
-                && Objects.equals(this.language, say.language)
                 && Objects.equals(this.loop, say.loop)
                 && Objects.equals(this.privacyMode, say.privacyMode)
+                && Objects.equals(this.engine, say.engine)
+                && Objects.equals(this.language, say.language)
                 && super.equals(o);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(text, language, loop, privacyMode, super.hashCode());
+        return Objects.hash(text, loop, privacyMode, engine, language, super.hashCode());
     }
 
     @Override
@@ -197,9 +224,10 @@ public class Say extends PerclCommand {
         sb.append("class Say {\n");
         sb.append("    ").append(toIndentedString(super.toString())).append("\n");
         sb.append("    text: ").append(toIndentedString(text)).append("\n");
-        sb.append("    language: ").append(toIndentedString(language)).append("\n");
         sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
         sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
+        sb.append("    engine: ").append(toIndentedString(engine)).append("\n");
+        sb.append("    language: ").append(toIndentedString(language)).append("\n");
         sb.append("}");
         return sb.toString();
     }
@@ -208,9 +236,10 @@ public class Say extends PerclCommand {
     public Map<String, Callable<Object>> attributeTypeMap() {
         Map<String, Callable<Object>> attributes = new HashMap();
         attributes.put("text", () -> this.getText());
-        attributes.put("language", () -> this.getLanguage());
         attributes.put("loop", () -> this.getLoop());
         attributes.put("privacyMode", () -> this.getPrivacyMode());
+        attributes.put("engine", () -> this.getEngine());
+        attributes.put("language", () -> this.getLanguage());
         return attributes;
     }
 

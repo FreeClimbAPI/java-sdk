@@ -108,8 +108,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
 
@@ -125,8 +126,8 @@ public class ConferenceParticipantListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList2 = testList;
-        test2.setParticipants(testList2);
+        List<ConferenceParticipantResult> testsetParticipantsList2 = testsetParticipantsList;
+        test2.setParticipants(testsetParticipantsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +150,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(0);
 
@@ -166,8 +168,8 @@ public class ConferenceParticipantListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<ConferenceParticipantResult> testList2 = null;
-        test2.setParticipants(testList2);
+        List<ConferenceParticipantResult> testsetParticipantsList2 = null;
+        test2.setParticipants(testsetParticipantsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +192,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +218,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
 
@@ -232,8 +236,8 @@ public class ConferenceParticipantListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList2 = testList;
-        test2.setParticipants(testList2);
+        List<ConferenceParticipantResult> testsetParticipantsList2 = testsetParticipantsList;
+        test2.setParticipants(testsetParticipantsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +262,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(1);
 
@@ -275,8 +280,8 @@ public class ConferenceParticipantListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList2 = testList;
-        test2.setParticipants(testList2);
+        List<ConferenceParticipantResult> testsetParticipantsList2 = testsetParticipantsList;
+        test2.setParticipants(testsetParticipantsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +303,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
         ConferenceParticipantList test2 = new ConferenceParticipantList();
         test2.setTotal(0);
 
@@ -315,8 +321,8 @@ public class ConferenceParticipantListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<ConferenceParticipantResult> testList2 = null;
-        test2.setParticipants(testList2);
+        List<ConferenceParticipantResult> testsetParticipantsList2 = null;
+        test2.setParticipants(testsetParticipantsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +344,9 @@ public class ConferenceParticipantListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ConferenceParticipantResult> testList = new ArrayList<ConferenceParticipantResult>();
-        test1.setParticipants(testList);
+        List<ConferenceParticipantResult> testsetParticipantsList =
+                new ArrayList<ConferenceParticipantResult>();
+        test1.setParticipants(testsetParticipantsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

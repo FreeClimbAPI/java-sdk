@@ -160,8 +160,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -189,8 +189,8 @@ public class ExportResultTest {
         Object testObjectObject2 = testObjectObject;
         test2.setQuery(testObjectObject2);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportResultOutput testExportResultOutputObject2 = testExportResultOutputObject;
         test2.setOutput(testExportResultOutputObject2);
@@ -224,8 +224,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -253,8 +253,8 @@ public class ExportResultTest {
         Object testObjectObject2 = new Object();
         test2.setQuery(testObjectObject2);
 
-        List<String> testList2 = null;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = null;
+        test2.setFormat(testsetFormatList2);
 
         ExportResultOutput testExportResultOutputObject2 = new ExportResultOutput();
         test2.setOutput(testExportResultOutputObject2);
@@ -288,8 +288,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -324,8 +324,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -353,8 +353,8 @@ public class ExportResultTest {
         Object testObjectObject2 = testObjectObject;
         test2.setQuery(testObjectObject2);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportResultOutput testExportResultOutputObject2 = testExportResultOutputObject;
         test2.setOutput(testExportResultOutputObject2);
@@ -390,8 +390,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -419,8 +419,8 @@ public class ExportResultTest {
         Object testObjectObject2 = testObjectObject;
         test2.setQuery(testObjectObject2);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportResultOutput testExportResultOutputObject2 = testExportResultOutputObject;
         test2.setOutput(testExportResultOutputObject2);
@@ -454,8 +454,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);
@@ -483,8 +483,8 @@ public class ExportResultTest {
         Object testObjectObject2 = new Object();
         test2.setQuery(testObjectObject2);
 
-        List<String> testList2 = null;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = null;
+        test2.setFormat(testsetFormatList2);
 
         ExportResultOutput testExportResultOutputObject2 = new ExportResultOutput();
         test2.setOutput(testExportResultOutputObject2);
@@ -518,8 +518,8 @@ public class ExportResultTest {
         Object testObjectObject = new Object();
         test1.setQuery(testObjectObject);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportResultOutput testExportResultOutputObject = new ExportResultOutput();
         test1.setOutput(testExportResultOutputObject);

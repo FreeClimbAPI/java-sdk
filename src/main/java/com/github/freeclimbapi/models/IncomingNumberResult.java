@@ -92,16 +92,6 @@ public class IncomingNumberResult {
     @SerializedName(SERIALIZED_NAME_COUNTRY)
     private String country;
 
-    public static final String SERIALIZED_NAME_VOICE_ENABLED = "voiceEnabled";
-
-    @SerializedName(SERIALIZED_NAME_VOICE_ENABLED)
-    private Boolean voiceEnabled;
-
-    public static final String SERIALIZED_NAME_SMS_ENABLED = "smsEnabled";
-
-    @SerializedName(SERIALIZED_NAME_SMS_ENABLED)
-    private Boolean smsEnabled;
-
     public static final String SERIALIZED_NAME_OFFNET = "offnet";
 
     @SerializedName(SERIALIZED_NAME_OFFNET)
@@ -409,59 +399,6 @@ public class IncomingNumberResult {
         this.country = country;
     }
 
-    public IncomingNumberResult voiceEnabled(Boolean voiceEnabled) {
-
-        this.voiceEnabled = voiceEnabled;
-        return this;
-    }
-
-    /**
-     * Indicates whether the phone number can handle Calls. Typically set to true for all numbers.
-     *
-     * @return voiceEnabled
-     * @deprecated
-     */
-    @Deprecated
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Indicates whether the phone number can handle Calls. Typically set to true for"
-                            + " all numbers.")
-    public Boolean getVoiceEnabled() {
-        return voiceEnabled;
-    }
-
-    public void setVoiceEnabled(Boolean voiceEnabled) {
-        this.voiceEnabled = voiceEnabled;
-    }
-
-    public IncomingNumberResult smsEnabled(Boolean smsEnabled) {
-
-        this.smsEnabled = smsEnabled;
-        return this;
-    }
-
-    /**
-     * Indication of whether the phone number can handle sending and receiving SMS messages.
-     * Typically set to true for all numbers.
-     *
-     * @return smsEnabled
-     * @deprecated
-     */
-    @Deprecated
-    @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "Indication of whether the phone number can handle sending and receiving SMS"
-                            + " messages. Typically set to true for all numbers.")
-    public Boolean getSmsEnabled() {
-        return smsEnabled;
-    }
-
-    public void setSmsEnabled(Boolean smsEnabled) {
-        this.smsEnabled = smsEnabled;
-    }
-
     public IncomingNumberResult offnet(Boolean offnet) {
 
         this.offnet = offnet;
@@ -531,8 +468,6 @@ public class IncomingNumberResult {
                 && Objects.equals(this.alias, incomingNumberResult.alias)
                 && Objects.equals(this.region, incomingNumberResult.region)
                 && Objects.equals(this.country, incomingNumberResult.country)
-                && Objects.equals(this.voiceEnabled, incomingNumberResult.voiceEnabled)
-                && Objects.equals(this.smsEnabled, incomingNumberResult.smsEnabled)
                 && Objects.equals(this.offnet, incomingNumberResult.offnet)
                 && Objects.equals(this.tfn, incomingNumberResult.tfn);
     }
@@ -562,8 +497,6 @@ public class IncomingNumberResult {
                 alias,
                 region,
                 country,
-                voiceEnabled,
-                smsEnabled,
                 offnet,
                 tfn);
     }
@@ -592,8 +525,6 @@ public class IncomingNumberResult {
         sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
         sb.append("    region: ").append(toIndentedString(region)).append("\n");
         sb.append("    country: ").append(toIndentedString(country)).append("\n");
-        sb.append("    voiceEnabled: ").append(toIndentedString(voiceEnabled)).append("\n");
-        sb.append("    smsEnabled: ").append(toIndentedString(smsEnabled)).append("\n");
         sb.append("    offnet: ").append(toIndentedString(offnet)).append("\n");
         sb.append("    tfn: ").append(toIndentedString(tfn)).append("\n");
         sb.append("}");

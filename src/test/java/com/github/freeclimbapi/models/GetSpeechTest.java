@@ -158,8 +158,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -188,8 +188,8 @@ public class GetSpeechTest {
 
         test2.setPlayBeep(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setNoInputTimeoutMs(1);
 
         test2.setRecognitionTimeoutMs(1);
@@ -224,8 +224,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -254,8 +254,8 @@ public class GetSpeechTest {
 
         test2.setPlayBeep(false);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
         test2.setNoInputTimeoutMs(0);
 
         test2.setRecognitionTimeoutMs(0);
@@ -290,8 +290,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -327,8 +327,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -357,8 +357,8 @@ public class GetSpeechTest {
 
         test2.setPlayBeep(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setNoInputTimeoutMs(1);
 
         test2.setRecognitionTimeoutMs(1);
@@ -395,8 +395,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -425,8 +425,8 @@ public class GetSpeechTest {
 
         test2.setPlayBeep(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setNoInputTimeoutMs(1);
 
         test2.setRecognitionTimeoutMs(1);
@@ -461,8 +461,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);
@@ -491,8 +491,8 @@ public class GetSpeechTest {
 
         test2.setPlayBeep(false);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
         test2.setNoInputTimeoutMs(0);
 
         test2.setRecognitionTimeoutMs(0);
@@ -527,8 +527,8 @@ public class GetSpeechTest {
 
         test1.setPlayBeep(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setNoInputTimeoutMs(1);
 
         test1.setRecognitionTimeoutMs(1);

@@ -108,8 +108,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
         QueueMemberList test2 = new QueueMemberList();
         test2.setTotal(1);
 
@@ -125,8 +125,8 @@ public class QueueMemberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<QueueMember> testList2 = testList;
-        test2.setQueueMembers(testList2);
+        List<QueueMember> testsetQueueMembersList2 = testsetQueueMembersList;
+        test2.setQueueMembers(testsetQueueMembersList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +149,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
         QueueMemberList test2 = new QueueMemberList();
         test2.setTotal(0);
 
@@ -166,8 +166,8 @@ public class QueueMemberListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<QueueMember> testList2 = null;
-        test2.setQueueMembers(testList2);
+        List<QueueMember> testsetQueueMembersList2 = null;
+        test2.setQueueMembers(testsetQueueMembersList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +215,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
         QueueMemberList test2 = new QueueMemberList();
         test2.setTotal(1);
 
@@ -232,8 +232,8 @@ public class QueueMemberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<QueueMember> testList2 = testList;
-        test2.setQueueMembers(testList2);
+        List<QueueMember> testsetQueueMembersList2 = testsetQueueMembersList;
+        test2.setQueueMembers(testsetQueueMembersList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +258,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
         QueueMemberList test2 = new QueueMemberList();
         test2.setTotal(1);
 
@@ -275,8 +275,8 @@ public class QueueMemberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<QueueMember> testList2 = testList;
-        test2.setQueueMembers(testList2);
+        List<QueueMember> testsetQueueMembersList2 = testsetQueueMembersList;
+        test2.setQueueMembers(testsetQueueMembersList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +298,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
         QueueMemberList test2 = new QueueMemberList();
         test2.setTotal(0);
 
@@ -315,8 +315,8 @@ public class QueueMemberListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<QueueMember> testList2 = null;
-        test2.setQueueMembers(testList2);
+        List<QueueMember> testsetQueueMembersList2 = null;
+        test2.setQueueMembers(testsetQueueMembersList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +338,8 @@ public class QueueMemberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<QueueMember> testList = new ArrayList<QueueMember>();
-        test1.setQueueMembers(testList);
+        List<QueueMember> testsetQueueMembersList = new ArrayList<QueueMember>();
+        test1.setQueueMembers(testsetQueueMembersList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

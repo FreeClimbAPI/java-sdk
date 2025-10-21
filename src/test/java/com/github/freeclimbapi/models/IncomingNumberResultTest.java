@@ -128,20 +128,6 @@ public class IncomingNumberResultTest {
         Assert.assertEquals("TEST_STRING", model.getCountry());
     }
 
-    /** Test the property 'voiceEnabled' */
-    @Test
-    public void voiceEnabledTest() {
-        model.setVoiceEnabled(false);
-        Assert.assertEquals(false, model.getVoiceEnabled());
-    }
-
-    /** Test the property 'smsEnabled' */
-    @Test
-    public void smsEnabledTest() {
-        model.setSmsEnabled(false);
-        Assert.assertEquals(false, model.getSmsEnabled());
-    }
-
     /** Test the property 'offnet' */
     @Test
     public void offnetTest() {
@@ -190,10 +176,6 @@ public class IncomingNumberResultTest {
 
         test1.setCountry("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setOffnet(true);
 
         TFN testTFNObject = new TFN();
@@ -227,10 +209,6 @@ public class IncomingNumberResultTest {
         test2.setRegion("TS");
 
         test2.setCountry("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setOffnet(true);
 
@@ -272,10 +250,6 @@ public class IncomingNumberResultTest {
 
         test1.setCountry("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setOffnet(true);
 
         TFN testTFNObject = new TFN();
@@ -309,10 +283,6 @@ public class IncomingNumberResultTest {
         test2.setRegion("TS2");
 
         test2.setCountry("TS2");
-
-        test2.setVoiceEnabled(false);
-
-        test2.setSmsEnabled(false);
 
         test2.setOffnet(false);
 
@@ -353,10 +323,6 @@ public class IncomingNumberResultTest {
         test1.setRegion("TS");
 
         test1.setCountry("TS");
-
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
 
         test1.setOffnet(true);
 
@@ -399,10 +365,6 @@ public class IncomingNumberResultTest {
 
         test1.setCountry("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setOffnet(true);
 
         TFN testTFNObject = new TFN();
@@ -436,10 +398,6 @@ public class IncomingNumberResultTest {
         test2.setRegion("TS");
 
         test2.setCountry("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setOffnet(true);
 
@@ -483,10 +441,6 @@ public class IncomingNumberResultTest {
 
         test1.setCountry("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setOffnet(true);
 
         TFN testTFNObject = new TFN();
@@ -520,10 +474,6 @@ public class IncomingNumberResultTest {
         test2.setRegion("TS");
 
         test2.setCountry("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setOffnet(true);
 
@@ -565,10 +515,6 @@ public class IncomingNumberResultTest {
 
         test1.setCountry("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setOffnet(true);
 
         TFN testTFNObject = new TFN();
@@ -602,10 +548,6 @@ public class IncomingNumberResultTest {
         test2.setRegion("TS2");
 
         test2.setCountry("TS2");
-
-        test2.setVoiceEnabled(false);
-
-        test2.setSmsEnabled(false);
 
         test2.setOffnet(false);
 
@@ -646,10 +588,6 @@ public class IncomingNumberResultTest {
         test1.setRegion("TS");
 
         test1.setCountry("TS");
-
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
 
         test1.setOffnet(true);
 
