@@ -153,6 +153,7 @@ docs/SayStandard.md
 docs/SayStandardContentType.md
 docs/SayStandardCulture.md
 docs/SayStandardEngine.md
+docs/SayStandardEngineParameters.md
 docs/SayStandardVoice.md
 docs/SendDigits.md
 docs/SetDTMFPassThrough.md
@@ -343,6 +344,7 @@ src/main/java/com/github/freeclimbapi/SayStandard.java
 src/main/java/com/github/freeclimbapi/SayStandardContentType.java
 src/main/java/com/github/freeclimbapi/SayStandardCulture.java
 src/main/java/com/github/freeclimbapi/SayStandardEngine.java
+src/main/java/com/github/freeclimbapi/SayStandardEngineParameters.java
 src/main/java/com/github/freeclimbapi/SayStandardVoice.java
 src/main/java/com/github/freeclimbapi/SendDigits.java
 src/main/java/com/github/freeclimbapi/ServerConfiguration.java
@@ -517,6 +519,7 @@ src/test/java/com/github/freeclimbapi/SayNeuralTest.java
 src/test/java/com/github/freeclimbapi/SayNeuralTextTypeTest.java
 src/test/java/com/github/freeclimbapi/SayStandardContentTypeTest.java
 src/test/java/com/github/freeclimbapi/SayStandardCultureTest.java
+src/test/java/com/github/freeclimbapi/SayStandardEngineParametersTest.java
 src/test/java/com/github/freeclimbapi/SayStandardEngineTest.java
 src/test/java/com/github/freeclimbapi/SayStandardTest.java
 src/test/java/com/github/freeclimbapi/SayStandardVoiceTest.java

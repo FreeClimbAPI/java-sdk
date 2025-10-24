@@ -39,20 +39,10 @@ public class SayStandardEngine {
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name = "freeclimb.standard";
 
-    public static final String SERIALIZED_NAME_VOICE = "Voice";
+    public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
 
-    @SerializedName(SERIALIZED_NAME_VOICE)
-    private SayStandardVoice voice;
-
-    public static final String SERIALIZED_NAME_CULTURE = "Culture";
-
-    @SerializedName(SERIALIZED_NAME_CULTURE)
-    private SayStandardCulture culture;
-
-    public static final String SERIALIZED_NAME_CONTENT_TYPE = "Content-Type";
-
-    @SerializedName(SERIALIZED_NAME_CONTENT_TYPE)
-    private SayStandardContentType contentType;
+    @SerializedName(SERIALIZED_NAME_PARAMETERS)
+    private SayStandardEngineParameters parameters;
 
     public SayStandardEngine() {}
 
@@ -81,67 +71,25 @@ public class SayStandardEngine {
         this.name = name;
     }
 
-    public SayStandardEngine voice(SayStandardVoice voice) {
+    public SayStandardEngine parameters(SayStandardEngineParameters parameters) {
 
-        this.voice = voice;
+        this.parameters = parameters;
         return this;
     }
 
     /**
-     * Get voice
+     * Get parameters
      *
-     * @return voice
+     * @return parameters
      */
     @javax.annotation.Nullable
     @ApiModelProperty(value = "")
-    public SayStandardVoice getVoice() {
-        return voice;
+    public SayStandardEngineParameters getParameters() {
+        return parameters;
     }
 
-    public void setVoice(SayStandardVoice voice) {
-        this.voice = voice;
-    }
-
-    public SayStandardEngine culture(SayStandardCulture culture) {
-
-        this.culture = culture;
-        return this;
-    }
-
-    /**
-     * Get culture
-     *
-     * @return culture
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public SayStandardCulture getCulture() {
-        return culture;
-    }
-
-    public void setCulture(SayStandardCulture culture) {
-        this.culture = culture;
-    }
-
-    public SayStandardEngine contentType(SayStandardContentType contentType) {
-
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Get contentType
-     *
-     * @return contentType
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public SayStandardContentType getContentType() {
-        return contentType;
-    }
-
-    public void setContentType(SayStandardContentType contentType) {
-        this.contentType = contentType;
+    public void setParameters(SayStandardEngineParameters parameters) {
+        this.parameters = parameters;
     }
 
     @Override
@@ -154,14 +102,12 @@ public class SayStandardEngine {
         }
         SayStandardEngine sayStandardEngine = (SayStandardEngine) o;
         return Objects.equals(this.name, sayStandardEngine.name)
-                && Objects.equals(this.voice, sayStandardEngine.voice)
-                && Objects.equals(this.culture, sayStandardEngine.culture)
-                && Objects.equals(this.contentType, sayStandardEngine.contentType);
+                && Objects.equals(this.parameters, sayStandardEngine.parameters);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, voice, culture, contentType);
+        return Objects.hash(name, parameters);
     }
 
     @Override
@@ -169,9 +115,7 @@ public class SayStandardEngine {
         StringBuilder sb = new StringBuilder();
         sb.append("class SayStandardEngine {\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
-        sb.append("    voice: ").append(toIndentedString(voice)).append("\n");
-        sb.append("    culture: ").append(toIndentedString(culture)).append("\n");
-        sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+        sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
         sb.append("}");
         return sb.toString();
     }

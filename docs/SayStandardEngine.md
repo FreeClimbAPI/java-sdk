@@ -9,9 +9,7 @@ Language and (by implication) the locale to use. This implies the accent and pro
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The name of the TTS engine to use. Set to &#x60;freeclimb.standard&#x60; for to use the standard freeclimb TTS engine. |  [optional]
-**voice** | **SayStandardVoice** |  |  [optional]
-**culture** | **SayStandardCulture** |  |  [optional]
-**contentType** | **SayStandardContentType** |  |  [optional]
+**parameters** | [**SayStandardEngineParameters**](SayStandardEngineParameters.md) |  |  [optional]
 
 
 

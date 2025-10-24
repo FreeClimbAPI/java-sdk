@@ -33,7 +33,12 @@ public class SayNeuralEngineTest {
 
     /** Test the property 'parameters' */
     @Test
-    public void parametersTest() {}
+    public void parametersTest() {
+
+        SayNeuralEngineParameters object = new SayNeuralEngineParameters();
+        model.setParameters(object);
+        Assert.assertEquals(object.getClass(), SayNeuralEngineParameters.class);
+    }
 
     /** Test the method 'equalsTrue' */
     @Test
@@ -42,9 +47,17 @@ public class SayNeuralEngineTest {
 
         test1.setName("TS");
 
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
+
         SayNeuralEngine test2 = new SayNeuralEngine();
 
         test2.setName("TS");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject2 =
+                testSayNeuralEngineParametersObject;
+        test2.setParameters(testSayNeuralEngineParametersObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -56,9 +69,17 @@ public class SayNeuralEngineTest {
 
         test1.setName("TS");
 
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
+
         SayNeuralEngine test2 = new SayNeuralEngine();
 
         test2.setName("TS2");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject2 =
+                new SayNeuralEngineParameters();
+        test2.setParameters(testSayNeuralEngineParametersObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -69,6 +90,10 @@ public class SayNeuralEngineTest {
         SayNeuralEngine test1 = new SayNeuralEngine();
 
         test1.setName("TS");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -81,9 +106,17 @@ public class SayNeuralEngineTest {
 
         test1.setName("TS");
 
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
+
         SayNeuralEngine test2 = new SayNeuralEngine();
 
         test2.setName("TS");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject2 =
+                testSayNeuralEngineParametersObject;
+        test2.setParameters(testSayNeuralEngineParametersObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -97,9 +130,17 @@ public class SayNeuralEngineTest {
 
         test1.setName("TS");
 
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
+
         SayNeuralEngine test2 = new SayNeuralEngine();
 
         test2.setName("TS");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject2 =
+                testSayNeuralEngineParametersObject;
+        test2.setParameters(testSayNeuralEngineParametersObject2);
 
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -111,9 +152,17 @@ public class SayNeuralEngineTest {
 
         test1.setName("TS");
 
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
+
         SayNeuralEngine test2 = new SayNeuralEngine();
 
         test2.setName("TS2");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject2 =
+                new SayNeuralEngineParameters();
+        test2.setParameters(testSayNeuralEngineParametersObject2);
 
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -124,6 +173,10 @@ public class SayNeuralEngineTest {
         SayNeuralEngine test1 = new SayNeuralEngine();
 
         test1.setName("TS");
+
+        SayNeuralEngineParameters testSayNeuralEngineParametersObject =
+                new SayNeuralEngineParameters();
+        test1.setParameters(testSayNeuralEngineParametersObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

@@ -31,127 +31,13 @@ public class SayStandardEngineTest {
         Assert.assertEquals("TEST_STRING", model.getName());
     }
 
-    /** Test the property 'voice' */
+    /** Test the property 'parameters' */
     @Test
-    public void voiceTest() {
-        model.setVoice(SayStandardVoice.HERENA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HERENA);
-        model.setVoice(SayStandardVoice.HELLE);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HELLE);
-        model.setVoice(SayStandardVoice.HEDDA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEDDA);
-        model.setVoice(SayStandardVoice.HAYLEY);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HAYLEY);
-        model.setVoice(SayStandardVoice.HEATHER);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEATHER);
-        model.setVoice(SayStandardVoice.HAZEL);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HAZEL);
-        model.setVoice(SayStandardVoice.HEERA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEERA);
-        model.setVoice(SayStandardVoice.HELEN);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HELEN);
-        model.setVoice(SayStandardVoice.ZIRA_PRO);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.ZIRA_PRO);
-        model.setVoice(SayStandardVoice.HELENA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HELENA);
-        model.setVoice(SayStandardVoice.HILDA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HILDA);
-        model.setVoice(SayStandardVoice.HEIDI);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEIDI);
-        model.setVoice(SayStandardVoice.HARMONIE);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HARMONIE);
-        model.setVoice(SayStandardVoice.HORTENSE);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HORTENSE);
-        model.setVoice(SayStandardVoice.LUCIA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.LUCIA);
-        model.setVoice(SayStandardVoice.HARKUA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HARKUA);
-        model.setVoice(SayStandardVoice.HEAMI);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEAMI);
-        model.setVoice(SayStandardVoice.HULDA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HULDA);
-        model.setVoice(SayStandardVoice.HANNA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HANNA);
-        model.setVoice(SayStandardVoice.PAULINA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.PAULINA);
-        model.setVoice(SayStandardVoice.HELOSIA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HELOSIA);
-        model.setVoice(SayStandardVoice.HELIA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HELIA);
-        model.setVoice(SayStandardVoice.ELENA);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.ELENA);
-        model.setVoice(SayStandardVoice.HEDVIG);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HEDVIG);
-        model.setVoice(SayStandardVoice.HUN_YEE);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HUN_YEE);
-        model.setVoice(SayStandardVoice.HAN_HAN);
-        Assert.assertEquals(model.getVoice(), SayStandardVoice.HAN_HAN);
-    }
+    public void parametersTest() {
 
-    /** Test the property 'culture' */
-    @Test
-    public void cultureTest() {
-        model.setCulture(SayStandardCulture.CA_ES);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.CA_ES);
-        model.setCulture(SayStandardCulture.DA_DK);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.DA_DK);
-        model.setCulture(SayStandardCulture.DE_DE);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.DE_DE);
-        model.setCulture(SayStandardCulture.EN_AU);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.EN_AU);
-        model.setCulture(SayStandardCulture.EN_CA);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.EN_CA);
-        model.setCulture(SayStandardCulture.EN_GB);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.EN_GB);
-        model.setCulture(SayStandardCulture.EN_IN);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.EN_IN);
-        model.setCulture(SayStandardCulture.EN_US);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.EN_US);
-        model.setCulture(SayStandardCulture.ES_ES);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.ES_ES);
-        model.setCulture(SayStandardCulture.ES_MX);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.ES_MX);
-        model.setCulture(SayStandardCulture.FI_FI);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.FI_FI);
-        model.setCulture(SayStandardCulture.FR_CA);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.FR_CA);
-        model.setCulture(SayStandardCulture.FR_FR);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.FR_FR);
-        model.setCulture(SayStandardCulture.IT_IT);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.IT_IT);
-        model.setCulture(SayStandardCulture.JA_JP);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.JA_JP);
-        model.setCulture(SayStandardCulture.KO_KR);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.KO_KR);
-        model.setCulture(SayStandardCulture.NB_NO);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.NB_NO);
-        model.setCulture(SayStandardCulture.NL_NL);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.NL_NL);
-        model.setCulture(SayStandardCulture.PL_PL);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.PL_PL);
-        model.setCulture(SayStandardCulture.PT_BR);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.PT_BR);
-        model.setCulture(SayStandardCulture.PT_PT);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.PT_PT);
-        model.setCulture(SayStandardCulture.RU_RU);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.RU_RU);
-        model.setCulture(SayStandardCulture.SV_SE);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.SV_SE);
-        model.setCulture(SayStandardCulture.ZH_CN);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.ZH_CN);
-        model.setCulture(SayStandardCulture.ZH_HK);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.ZH_HK);
-        model.setCulture(SayStandardCulture.ZH_TW);
-        Assert.assertEquals(model.getCulture(), SayStandardCulture.ZH_TW);
-    }
-
-    /** Test the property 'contentType' */
-    @Test
-    public void contentTypeTest() {
-        model.setContentType(SayStandardContentType.TEXT_PLAIN);
-        Assert.assertEquals(model.getContentType(), SayStandardContentType.TEXT_PLAIN);
-        model.setContentType(SayStandardContentType.APPLICATION_SSML_XML);
-        Assert.assertEquals(model.getContentType(), SayStandardContentType.APPLICATION_SSML_XML);
+        SayStandardEngineParameters object = new SayStandardEngineParameters();
+        model.setParameters(object);
+        Assert.assertEquals(object.getClass(), SayStandardEngineParameters.class);
     }
 
     /** Test the method 'equalsTrue' */
@@ -161,21 +47,17 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HERENA);
-
-        test1.setCulture(SayStandardCulture.CA_ES);
-
-        test1.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         SayStandardEngine test2 = new SayStandardEngine();
 
         test2.setName("TS");
 
-        test2.setVoice(SayStandardVoice.HERENA);
-
-        test2.setCulture(SayStandardCulture.CA_ES);
-
-        test2.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject2 =
+                testSayStandardEngineParametersObject;
+        test2.setParameters(testSayStandardEngineParametersObject2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -187,21 +69,17 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HELLE);
-
-        test1.setCulture(SayStandardCulture.DA_DK);
-
-        test1.setContentType(SayStandardContentType.APPLICATION_SSML_XML);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         SayStandardEngine test2 = new SayStandardEngine();
 
         test2.setName("TS2");
 
-        test2.setVoice(SayStandardVoice.HERENA);
-
-        test2.setCulture(SayStandardCulture.CA_ES);
-
-        test2.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject2 =
+                new SayStandardEngineParameters();
+        test2.setParameters(testSayStandardEngineParametersObject2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -213,11 +91,9 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HERENA);
-
-        test1.setCulture(SayStandardCulture.CA_ES);
-
-        test1.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -230,21 +106,17 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HERENA);
-
-        test1.setCulture(SayStandardCulture.CA_ES);
-
-        test1.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         SayStandardEngine test2 = new SayStandardEngine();
 
         test2.setName("TS");
 
-        test2.setVoice(SayStandardVoice.HERENA);
-
-        test2.setCulture(SayStandardCulture.CA_ES);
-
-        test2.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject2 =
+                testSayStandardEngineParametersObject;
+        test2.setParameters(testSayStandardEngineParametersObject2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,21 +130,17 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HERENA);
-
-        test1.setCulture(SayStandardCulture.CA_ES);
-
-        test1.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         SayStandardEngine test2 = new SayStandardEngine();
 
         test2.setName("TS");
 
-        test2.setVoice(SayStandardVoice.HERENA);
-
-        test2.setCulture(SayStandardCulture.CA_ES);
-
-        test2.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject2 =
+                testSayStandardEngineParametersObject;
+        test2.setParameters(testSayStandardEngineParametersObject2);
 
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
@@ -284,21 +152,17 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HELLE);
-
-        test1.setCulture(SayStandardCulture.DA_DK);
-
-        test1.setContentType(SayStandardContentType.APPLICATION_SSML_XML);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         SayStandardEngine test2 = new SayStandardEngine();
 
         test2.setName("TS2");
 
-        test2.setVoice(SayStandardVoice.HERENA);
-
-        test2.setCulture(SayStandardCulture.CA_ES);
-
-        test2.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject2 =
+                new SayStandardEngineParameters();
+        test2.setParameters(testSayStandardEngineParametersObject2);
 
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
@@ -310,11 +174,9 @@ public class SayStandardEngineTest {
 
         test1.setName("TS");
 
-        test1.setVoice(SayStandardVoice.HERENA);
-
-        test1.setCulture(SayStandardCulture.CA_ES);
-
-        test1.setContentType(SayStandardContentType.TEXT_PLAIN);
+        SayStandardEngineParameters testSayStandardEngineParametersObject =
+                new SayStandardEngineParameters();
+        test1.setParameters(testSayStandardEngineParametersObject);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));
