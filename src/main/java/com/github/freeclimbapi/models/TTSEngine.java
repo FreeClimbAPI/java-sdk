@@ -14,22 +14,15 @@ package com.github.freeclimbapi.models;
 
 import com.github.freeclimbapi.enums.*;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
-/**
- * Language and (by implication) the locale to use. This implies the accent and pronunciations to be
- * usde for the TTS. The complete list of valid values for the language attribute is shown below.
- */
-@ApiModel(
-        description =
-                "Language and (by implication) the locale to use. This implies the accent and"
-                    + " pronunciations to be usde for the TTS. The complete list of valid values"
-                    + " for the language attribute is shown below.")
+/** TTSEngine */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class SayStandardEngine {
+public class TTSEngine {
     public static String getDiscriminatorValue() {
         return null;
     }
@@ -37,58 +30,66 @@ public class SayStandardEngine {
     public static final String SERIALIZED_NAME_NAME = "name";
 
     @SerializedName(SERIALIZED_NAME_NAME)
-    private String name = "freeclimb.standard";
+    private TTSEngineName name;
 
     public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
 
     @SerializedName(SERIALIZED_NAME_PARAMETERS)
-    private SayStandardEngineParameters parameters;
+    private Map<String, Object> parameters = null;
 
-    public SayStandardEngine() {}
+    public TTSEngine() {}
 
-    public SayStandardEngine name(String name) {
+    public TTSEngine name(TTSEngineName name) {
 
         this.name = name;
         return this;
     }
 
     /**
-     * The name of the TTS engine to use. Set to &#x60;freeclimb.standard&#x60; for to use the
-     * standard freeclimb TTS engine.
+     * Get name
      *
      * @return name
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "The name of the TTS engine to use. Set to `freeclimb.standard` for to use the"
-                            + " standard freeclimb TTS engine.")
-    public String getName() {
+    @ApiModelProperty(value = "")
+    public TTSEngineName getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(TTSEngineName name) {
         this.name = name;
     }
 
-    public SayStandardEngine parameters(SayStandardEngineParameters parameters) {
+    public TTSEngine parameters(Map<String, Object> parameters) {
 
         this.parameters = parameters;
         return this;
     }
 
+    public TTSEngine putparametersItem(String key, Object parametersItem) {
+        if (this.parameters == null) {
+            this.parameters = new HashMap<>();
+        }
+        this.parameters.put(key, parametersItem);
+        return this;
+    }
+
     /**
-     * Get parameters
+     * Parameters for the TTS engine. The parameters are specific to the engine and are documented
+     * in the engine&#39;s documentation.
      *
      * @return parameters
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public SayStandardEngineParameters getParameters() {
+    @ApiModelProperty(
+            value =
+                    "Parameters for the TTS engine. The parameters are specific to the engine and"
+                            + " are documented in the engine's documentation.")
+    public Map<String, Object> getParameters() {
         return parameters;
     }
 
-    public void setParameters(SayStandardEngineParameters parameters) {
+    public void setParameters(Map<String, Object> parameters) {
         this.parameters = parameters;
     }
 
@@ -100,9 +101,9 @@ public class SayStandardEngine {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        SayStandardEngine sayStandardEngine = (SayStandardEngine) o;
-        return Objects.equals(this.name, sayStandardEngine.name)
-                && Objects.equals(this.parameters, sayStandardEngine.parameters);
+        TTSEngine ttSEngine = (TTSEngine) o;
+        return Objects.equals(this.name, ttSEngine.name)
+                && Objects.equals(this.parameters, ttSEngine.parameters);
     }
 
     @Override
@@ -113,7 +114,7 @@ public class SayStandardEngine {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class SayStandardEngine {\n");
+        sb.append("class TTSEngine {\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    parameters: ").append(toIndentedString(parameters)).append("\n");
         sb.append("}");

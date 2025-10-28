@@ -224,9 +224,7 @@ public class DefaultApiTest {
 
         String blobId = blobIdStringTestValue();
 
-        List<String> key = keyTestArray();
-
-        BlobResult response = this.apiInstance.deleteBlob(blobId, key);
+        BlobResult response = this.apiInstance.deleteBlob(blobId);
         // TODO: test validations
         assertEquals(response.getClass(), BlobResult.class);
     }
@@ -724,11 +722,7 @@ public class DefaultApiTest {
     @Test
     public void listBlobsTest() throws ApiException {
 
-        String alias = aliasStringTestValue();
-
-        String cursor = cursorStringTestValue();
-
-        BlobListResponse response = this.apiInstance.listBlobs(alias, cursor);
+        BlobListResponse response = this.apiInstance.listBlobs();
         // TODO: test validations
         assertEquals(response.getClass(), BlobListResponse.class);
     }
@@ -1473,11 +1467,7 @@ public class DefaultApiTest {
     @Test
     public void listBlobsGetNextPageTest() throws ApiException {
 
-        String alias = aliasStringTestValue();
-
-        String cursor = cursorStringTestValue();
-
-        BlobListResponse response = this.apiInstance.listBlobs(alias, cursor);
+        BlobListResponse response = this.apiInstance.listBlobs();
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Blobs"
                         .replaceAll(

@@ -1766,7 +1766,6 @@ public class DefaultApi {
      * Build call for deleteBlob
      *
      * @param blobId String that uniquely identifies this Blob resource. (required)
-     * @param key key within blob to remove (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1781,7 +1780,7 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public okhttp3.Call deleteBlobCall(String blobId, List<String> key, final ApiCallback _callback)
+    public okhttp3.Call deleteBlobCall(String blobId, final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
 
@@ -1815,11 +1814,6 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (key != null) {
-            localVarCollectionQueryParams.addAll(
-                    localVarApiClient.parameterToPairs("multi", "key", key));
-        }
-
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1852,8 +1846,8 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteBlobValidateBeforeCall(
-            String blobId, List<String> key, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call deleteBlobValidateBeforeCall(String blobId, final ApiCallback _callback)
+            throws ApiException {
 
         // verify the required parameter 'blobId' is set
         if (blobId == null) {
@@ -1861,7 +1855,7 @@ public class DefaultApi {
                     "Missing the required parameter 'blobId' when calling deleteBlob(Async)");
         }
 
-        okhttp3.Call localVarCall = deleteBlobCall(blobId, key, _callback);
+        okhttp3.Call localVarCall = deleteBlobCall(blobId, _callback);
         return localVarCall;
     }
 
@@ -1871,7 +1865,6 @@ public class DefaultApi {
      * those keys are removed and the remaining blob is returned (returns 200).
      *
      * @param blobId String that uniquely identifies this Blob resource. (required)
-     * @param key key within blob to remove (optional)
      * @return BlobResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -1886,8 +1879,8 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public BlobResult deleteBlob(String blobId, List<String> key) throws ApiException {
-        ApiResponse<BlobResult> localVarResp = deleteBlobWithHttpInfo(blobId, key);
+    public BlobResult deleteBlob(String blobId) throws ApiException {
+        ApiResponse<BlobResult> localVarResp = deleteBlobWithHttpInfo(blobId);
         return localVarResp.getData();
     }
 
@@ -1897,7 +1890,6 @@ public class DefaultApi {
      * those keys are removed and the remaining blob is returned (returns 200).
      *
      * @param blobId String that uniquely identifies this Blob resource. (required)
-     * @param key key within blob to remove (optional)
      * @return ApiResponse&lt;BlobResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -1912,9 +1904,8 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public ApiResponse<BlobResult> deleteBlobWithHttpInfo(String blobId, List<String> key)
-            throws ApiException {
-        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, key, null);
+    public ApiResponse<BlobResult> deleteBlobWithHttpInfo(String blobId) throws ApiException {
+        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, null);
         Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1925,7 +1916,6 @@ public class DefaultApi {
      * provided, only those keys are removed and the remaining blob is returned (returns 200).
      *
      * @param blobId String that uniquely identifies this Blob resource. (required)
-     * @param key key within blob to remove (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -1941,11 +1931,10 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public okhttp3.Call deleteBlobAsync(
-            String blobId, List<String> key, final ApiCallback<BlobResult> _callback)
+    public okhttp3.Call deleteBlobAsync(String blobId, final ApiCallback<BlobResult> _callback)
             throws ApiException {
 
-        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, key, _callback);
+        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, _callback);
         Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -6749,8 +6738,6 @@ public class DefaultApi {
     /**
      * Build call for listBlobs
      *
-     * @param alias Filter blobs by alias (optional)
-     * @param cursor Used to reference pages of a list of blobs (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -6763,8 +6750,7 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public okhttp3.Call listBlobsCall(String alias, String cursor, final ApiCallback _callback)
-            throws ApiException {
+    public okhttp3.Call listBlobsCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -6793,14 +6779,6 @@ public class DefaultApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (alias != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("alias", alias));
-        }
-
-        if (cursor != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("cursor", cursor));
-        }
 
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
@@ -6834,10 +6812,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listBlobsValidateBeforeCall(
-            String alias, String cursor, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listBlobsValidateBeforeCall(final ApiCallback _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = listBlobsCall(alias, cursor, _callback);
+        okhttp3.Call localVarCall = listBlobsCall(_callback);
         return localVarCall;
     }
 
@@ -6845,8 +6823,6 @@ public class DefaultApi {
      * List Blobs belonging to an account. List Blobs belonging to an account. Results are returned
      * in paginated lists mirroring other listing features in the API.
      *
-     * @param alias Filter blobs by alias (optional)
-     * @param cursor Used to reference pages of a list of blobs (optional)
      * @return BlobListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -6859,8 +6835,8 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public BlobListResponse listBlobs(String alias, String cursor) throws ApiException {
-        ApiResponse<BlobListResponse> localVarResp = listBlobsWithHttpInfo(alias, cursor);
+    public BlobListResponse listBlobs() throws ApiException {
+        ApiResponse<BlobListResponse> localVarResp = listBlobsWithHttpInfo();
         return localVarResp.getData();
     }
 
@@ -6868,8 +6844,6 @@ public class DefaultApi {
      * List Blobs belonging to an account. List Blobs belonging to an account. Results are returned
      * in paginated lists mirroring other listing features in the API.
      *
-     * @param alias Filter blobs by alias (optional)
-     * @param cursor Used to reference pages of a list of blobs (optional)
      * @return ApiResponse&lt;BlobListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -6882,9 +6856,8 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public ApiResponse<BlobListResponse> listBlobsWithHttpInfo(String alias, String cursor)
-            throws ApiException {
-        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(alias, cursor, null);
+    public ApiResponse<BlobListResponse> listBlobsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<BlobListResponse>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -6893,8 +6866,6 @@ public class DefaultApi {
      * List Blobs belonging to an account. (asynchronously) List Blobs belonging to an account.
      * Results are returned in paginated lists mirroring other listing features in the API.
      *
-     * @param alias Filter blobs by alias (optional)
-     * @param cursor Used to reference pages of a list of blobs (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -6908,11 +6879,10 @@ public class DefaultApi {
      * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
      * </table>
      */
-    public okhttp3.Call listBlobsAsync(
-            String alias, String cursor, final ApiCallback<BlobListResponse> _callback)
+    public okhttp3.Call listBlobsAsync(final ApiCallback<BlobListResponse> _callback)
             throws ApiException {
 
-        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(alias, cursor, _callback);
+        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<BlobListResponse>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

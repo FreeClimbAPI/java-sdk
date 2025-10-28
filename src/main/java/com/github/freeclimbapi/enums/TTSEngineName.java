@@ -20,66 +20,20 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /**
- * The voice to use for the TTS. The complete list of valid values for the voice attribute is shown
- * below.
+ * The engine to use for the TTS. The complete list of valid values for the engine attribute is
+ * shown below.
  */
-@JsonAdapter(SayStandardVoice.Adapter.class)
-public enum SayStandardVoice {
-    HERENA("Herena"),
+@JsonAdapter(TTSEngineName.Adapter.class)
+public enum TTSEngineName {
+    FREECLIMB_STANDARD("freeclimb.standard"),
 
-    HELLE("Helle"),
+    FREECLIMB_NEURAL("freeclimb.neural"),
 
-    HEDDA("Hedda"),
-
-    HAYLEY("Hayley"),
-
-    HEATHER("Heather"),
-
-    HAZEL("Hazel"),
-
-    HEERA("Heera"),
-
-    HELEN("Helen"),
-
-    ZIRA_PRO("ZiraPro"),
-
-    HELENA("Helena"),
-
-    HILDA("Hilda"),
-
-    HEIDI("Heidi"),
-
-    HARMONIE("Harmonie"),
-
-    HORTENSE("Hortense"),
-
-    LUCIA("Lucia"),
-
-    HARKUA("Harkua"),
-
-    HEAMI("Heami"),
-
-    HULDA("Hulda"),
-
-    HANNA("Hanna"),
-
-    PAULINA("Paulina"),
-
-    HELOSIA("Helosia"),
-
-    HELIA("Helia"),
-
-    ELENA("Elena"),
-
-    HEDVIG("Hedvig"),
-
-    HUN_YEE("HunYee"),
-
-    HAN_HAN("HanHan");
+    ELEVEN_LABS("ElevenLabs");
 
     private String value;
 
-    SayStandardVoice(String value) {
+    TTSEngineName(String value) {
         this.value = value;
     }
 
@@ -92,8 +46,8 @@ public enum SayStandardVoice {
         return String.valueOf(value);
     }
 
-    public static SayStandardVoice fromValue(String value) {
-        for (SayStandardVoice b : SayStandardVoice.values()) {
+    public static TTSEngineName fromValue(String value) {
+        for (TTSEngineName b : TTSEngineName.values()) {
             if (b.value.equals(value)) {
                 return b;
             }
@@ -101,17 +55,17 @@ public enum SayStandardVoice {
         throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
 
-    public static class Adapter extends TypeAdapter<SayStandardVoice> {
+    public static class Adapter extends TypeAdapter<TTSEngineName> {
         @Override
-        public void write(final JsonWriter jsonWriter, final SayStandardVoice enumeration)
+        public void write(final JsonWriter jsonWriter, final TTSEngineName enumeration)
                 throws IOException {
             jsonWriter.value(enumeration.getValue());
         }
 
         @Override
-        public SayStandardVoice read(final JsonReader jsonReader) throws IOException {
+        public TTSEngineName read(final JsonReader jsonReader) throws IOException {
             String value = jsonReader.nextString();
-            return SayStandardVoice.fromValue(value);
+            return TTSEngineName.fromValue(value);
         }
     }
 }

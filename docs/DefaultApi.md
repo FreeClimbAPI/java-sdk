@@ -823,7 +823,7 @@ null (empty response body)
 
 <a name="deleteBlob"></a>
 # **deleteBlob**
-> BlobResult deleteBlob(blobId, key)
+> BlobResult deleteBlob(blobId)
 
 Delete Blob
 
@@ -852,9 +852,8 @@ public class Example {
     
     String blobId = "blobId_example"; // String | String that uniquely identifies this Blob resource.
 
-    List<String> key = new List<String>(); // List<String> | key within blob to remove
     try {
-      BlobResult result = apiInstance.deleteBlob(blobId, key);
+      BlobResult result = apiInstance.deleteBlob(blobId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#deleteBlob");
@@ -872,7 +871,6 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blobId** | **String**| String that uniquely identifies this Blob resource. |
- **key** | [**List&lt;String&gt;**](String.md)| key within blob to remove | [optional]
 
 
 ### Return type
@@ -2960,7 +2958,7 @@ Name | Type | Description  | Notes
 
 <a name="listBlobs"></a>
 # **listBlobs**
-> BlobListResponse listBlobs(alias, cursor)
+> BlobListResponse listBlobs()
 
 List Blobs belonging to an account.
 
@@ -2987,12 +2985,8 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
-    String alias = "alias_example"; // String | Filter blobs by alias
-
-    String cursor = "cursor_example"; // String | Used to reference pages of a list of blobs
-
     try {
-      BlobListResponse result = apiInstance.listBlobs(alias, cursor);
+      BlobListResponse result = apiInstance.listBlobs();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listBlobs");
@@ -3007,10 +3001,6 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **alias** | **String**| Filter blobs by alias | [optional]
- **cursor** | **String**| Used to reference pages of a list of blobs | [optional]
 
 
 ### Return type
