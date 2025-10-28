@@ -33,7 +33,7 @@ public class DefaultApiTest {
     public void setup() {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://127.0.0.1:4010");
-        defaultClient.setAccountId("AC2d721074c7265c419cf76a82722854a3c0d595be");
+        defaultClient.setAccountId("AC0123456789abcdefABCDEF0123456789abcdef00");
         defaultClient.setApiKey("YOUR_API_KEY");
         this.apiInstance = new DefaultApi(defaultClient);
     }
