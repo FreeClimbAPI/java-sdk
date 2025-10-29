@@ -101,6 +101,12 @@ if(hasProperty('target') && target == 'android') {
        mainClass = System.getProperty('mainClass')
        classpath = sourceSets.main.runtimeClasspath
     }
+
+    task copyDependencies(type: Copy) {
+        from configurations.runtimeClasspath
+        into "$buildDir/lib"
+    }
+    tasks.build.dependsOn(copyDependencies)
 }
 
 ext {
