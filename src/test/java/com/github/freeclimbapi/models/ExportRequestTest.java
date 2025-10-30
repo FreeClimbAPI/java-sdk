@@ -67,8 +67,8 @@ public class ExportRequestTest {
         ExportRequest test1 = new ExportRequest();
         test1.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -79,8 +79,8 @@ public class ExportRequestTest {
         ExportRequest test2 = new ExportRequest();
         test2.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportRequestOutput testExportRequestOutputObject2 = testExportRequestOutputObject;
         test2.setOutput(testExportRequestOutputObject2);
@@ -98,8 +98,8 @@ public class ExportRequestTest {
 
         test1.setResourceType(ExportResourceType.CALLS);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -110,8 +110,8 @@ public class ExportRequestTest {
         ExportRequest test2 = new ExportRequest();
         test2.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList2 = null;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = null;
+        test2.setFormat(testsetFormatList2);
 
         ExportRequestOutput testExportRequestOutputObject2 = new ExportRequestOutput();
         test2.setOutput(testExportRequestOutputObject2);
@@ -128,8 +128,8 @@ public class ExportRequestTest {
         ExportRequest test1 = new ExportRequest();
         test1.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -147,8 +147,8 @@ public class ExportRequestTest {
         ExportRequest test1 = new ExportRequest();
         test1.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -159,8 +159,8 @@ public class ExportRequestTest {
         ExportRequest test2 = new ExportRequest();
         test2.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportRequestOutput testExportRequestOutputObject2 = testExportRequestOutputObject;
         test2.setOutput(testExportRequestOutputObject2);
@@ -179,8 +179,8 @@ public class ExportRequestTest {
         ExportRequest test1 = new ExportRequest();
         test1.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -191,8 +191,8 @@ public class ExportRequestTest {
         ExportRequest test2 = new ExportRequest();
         test2.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList2 = testList;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = testsetFormatList;
+        test2.setFormat(testsetFormatList2);
 
         ExportRequestOutput testExportRequestOutputObject2 = testExportRequestOutputObject;
         test2.setOutput(testExportRequestOutputObject2);
@@ -210,8 +210,8 @@ public class ExportRequestTest {
 
         test1.setResourceType(ExportResourceType.CALLS);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);
@@ -222,8 +222,8 @@ public class ExportRequestTest {
         ExportRequest test2 = new ExportRequest();
         test2.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList2 = null;
-        test2.setFormat(testList2);
+        List<String> testsetFormatList2 = null;
+        test2.setFormat(testsetFormatList2);
 
         ExportRequestOutput testExportRequestOutputObject2 = new ExportRequestOutput();
         test2.setOutput(testExportRequestOutputObject2);
@@ -240,8 +240,8 @@ public class ExportRequestTest {
         ExportRequest test1 = new ExportRequest();
         test1.setResourceType(ExportResourceType.MESSAGES);
 
-        List<String> testList = new ArrayList<String>();
-        test1.setFormat(testList);
+        List<String> testsetFormatList = new ArrayList<String>();
+        test1.setFormat(testsetFormatList);
 
         ExportRequestOutput testExportRequestOutputObject = new ExportRequestOutput();
         test1.setOutput(testExportRequestOutputObject);

@@ -102,8 +102,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         TranscribeUtterance test2 = new TranscribeUtterance();
 
         try {
@@ -124,8 +124,8 @@ public class TranscribeUtteranceTest {
 
         test2.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -153,8 +153,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         TranscribeUtterance test2 = new TranscribeUtterance();
 
         try {
@@ -175,8 +175,8 @@ public class TranscribeUtteranceTest {
 
         test2.setPrivacyForRecording(false);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -204,8 +204,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -234,8 +234,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         TranscribeUtterance test2 = new TranscribeUtterance();
 
         try {
@@ -256,8 +256,8 @@ public class TranscribeUtteranceTest {
 
         test2.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -287,8 +287,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         TranscribeUtterance test2 = new TranscribeUtterance();
 
         try {
@@ -309,8 +309,8 @@ public class TranscribeUtteranceTest {
 
         test2.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -337,8 +337,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         TranscribeUtterance test2 = new TranscribeUtterance();
 
         try {
@@ -359,8 +359,8 @@ public class TranscribeUtteranceTest {
 
         test2.setPrivacyForRecording(false);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -387,8 +387,8 @@ public class TranscribeUtteranceTest {
 
         test1.setPrivacyForRecording(true);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

@@ -108,8 +108,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
         ExportList test2 = new ExportList();
         test2.setTotal(1);
 
@@ -125,8 +125,8 @@ public class ExportListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ExportResult> testList2 = testList;
-        test2.setExports(testList2);
+        List<ExportResult> testsetExportsList2 = testsetExportsList;
+        test2.setExports(testsetExportsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +149,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
         ExportList test2 = new ExportList();
         test2.setTotal(0);
 
@@ -166,8 +166,8 @@ public class ExportListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<ExportResult> testList2 = null;
-        test2.setExports(testList2);
+        List<ExportResult> testsetExportsList2 = null;
+        test2.setExports(testsetExportsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +215,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
         ExportList test2 = new ExportList();
         test2.setTotal(1);
 
@@ -232,8 +232,8 @@ public class ExportListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ExportResult> testList2 = testList;
-        test2.setExports(testList2);
+        List<ExportResult> testsetExportsList2 = testsetExportsList;
+        test2.setExports(testsetExportsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +258,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
         ExportList test2 = new ExportList();
         test2.setTotal(1);
 
@@ -275,8 +275,8 @@ public class ExportListTest {
 
         test2.setNextPageUri("TS");
 
-        List<ExportResult> testList2 = testList;
-        test2.setExports(testList2);
+        List<ExportResult> testsetExportsList2 = testsetExportsList;
+        test2.setExports(testsetExportsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +298,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
         ExportList test2 = new ExportList();
         test2.setTotal(0);
 
@@ -315,8 +315,8 @@ public class ExportListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<ExportResult> testList2 = null;
-        test2.setExports(testList2);
+        List<ExportResult> testsetExportsList2 = null;
+        test2.setExports(testsetExportsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +338,8 @@ public class ExportListTest {
 
         test1.setNextPageUri("TS");
 
-        List<ExportResult> testList = new ArrayList<ExportResult>();
-        test1.setExports(testList);
+        List<ExportResult> testsetExportsList = new ArrayList<ExportResult>();
+        test1.setExports(testsetExportsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

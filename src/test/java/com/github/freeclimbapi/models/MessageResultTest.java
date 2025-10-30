@@ -244,8 +244,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -290,8 +290,8 @@ public class MessageResultTest {
 
         test2.setCampaignId("TS");
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         TFN testTFNObject2 = testTFNObject;
         test2.setTfn(testTFNObject2);
@@ -342,8 +342,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -388,8 +388,8 @@ public class MessageResultTest {
 
         test2.setCampaignId("TS2");
 
-        List<URI> testList2 = null;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = null;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         TFN testTFNObject2 = new TFN();
         test2.setTfn(testTFNObject2);
@@ -440,8 +440,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -493,8 +493,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -539,8 +539,8 @@ public class MessageResultTest {
 
         test2.setCampaignId("TS");
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         TFN testTFNObject2 = testTFNObject;
         test2.setTfn(testTFNObject2);
@@ -593,8 +593,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -639,8 +639,8 @@ public class MessageResultTest {
 
         test2.setCampaignId("TS");
 
-        List<URI> testList2 = testList;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = testsetMediaUrlsList;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         TFN testTFNObject2 = testTFNObject;
         test2.setTfn(testTFNObject2);
@@ -691,8 +691,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);
@@ -737,8 +737,8 @@ public class MessageResultTest {
 
         test2.setCampaignId("TS2");
 
-        List<URI> testList2 = null;
-        test2.setMediaUrls(testList2);
+        List<URI> testsetMediaUrlsList2 = null;
+        test2.setMediaUrls(testsetMediaUrlsList2);
 
         TFN testTFNObject2 = new TFN();
         test2.setTfn(testTFNObject2);
@@ -789,8 +789,8 @@ public class MessageResultTest {
 
         test1.setCampaignId("TS");
 
-        List<URI> testList = new ArrayList<URI>();
-        test1.setMediaUrls(testList);
+        List<URI> testsetMediaUrlsList = new ArrayList<URI>();
+        test1.setMediaUrls(testsetMediaUrlsList);
 
         TFN testTFNObject = new TFN();
         test1.setTfn(testTFNObject);

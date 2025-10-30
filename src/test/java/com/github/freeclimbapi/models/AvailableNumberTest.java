@@ -48,20 +48,6 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
     }
 
-    /** Test the property 'voiceEnabled' */
-    @Test
-    public void voiceEnabledTest() {
-        model.setVoiceEnabled(false);
-        Assert.assertEquals(false, model.getVoiceEnabled());
-    }
-
-    /** Test the property 'smsEnabled' */
-    @Test
-    public void smsEnabledTest() {
-        model.setSmsEnabled(false);
-        Assert.assertEquals(false, model.getSmsEnabled());
-    }
-
     /** Test the property 'region' */
     @Test
     public void regionTest() {
@@ -90,10 +76,6 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -106,10 +88,6 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
 
@@ -130,10 +108,6 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -146,10 +120,6 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
-
-        test2.setVoiceEnabled(false);
-
-        test2.setSmsEnabled(false);
 
         test2.setRegion("TS2");
 
@@ -169,10 +139,6 @@ public class AvailableNumberTest {
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
-
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
 
@@ -194,10 +160,6 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -210,10 +172,6 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
 
@@ -236,10 +194,6 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -252,10 +206,6 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
-
-        test2.setVoiceEnabled(true);
-
-        test2.setSmsEnabled(true);
 
         test2.setRegion("TS");
 
@@ -276,10 +226,6 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
-
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -292,10 +238,6 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
-
-        test2.setVoiceEnabled(false);
-
-        test2.setSmsEnabled(false);
 
         test2.setRegion("TS2");
 
@@ -315,10 +257,6 @@ public class AvailableNumberTest {
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
-
-        test1.setVoiceEnabled(true);
-
-        test1.setSmsEnabled(true);
 
         test1.setRegion("TS");
 

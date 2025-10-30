@@ -108,8 +108,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
         IncomingNumberList test2 = new IncomingNumberList();
         test2.setTotal(1);
 
@@ -125,8 +126,9 @@ public class IncomingNumberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList2 = testList;
-        test2.setIncomingPhoneNumbers(testList2);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList2 =
+                testsetIncomingPhoneNumbersList;
+        test2.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +151,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
         IncomingNumberList test2 = new IncomingNumberList();
         test2.setTotal(0);
 
@@ -166,8 +169,8 @@ public class IncomingNumberListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<IncomingNumberResult> testList2 = null;
-        test2.setIncomingPhoneNumbers(testList2);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList2 = null;
+        test2.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +193,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +219,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
         IncomingNumberList test2 = new IncomingNumberList();
         test2.setTotal(1);
 
@@ -232,8 +237,9 @@ public class IncomingNumberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList2 = testList;
-        test2.setIncomingPhoneNumbers(testList2);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList2 =
+                testsetIncomingPhoneNumbersList;
+        test2.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +264,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
         IncomingNumberList test2 = new IncomingNumberList();
         test2.setTotal(1);
 
@@ -275,8 +282,9 @@ public class IncomingNumberListTest {
 
         test2.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList2 = testList;
-        test2.setIncomingPhoneNumbers(testList2);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList2 =
+                testsetIncomingPhoneNumbersList;
+        test2.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +306,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
         IncomingNumberList test2 = new IncomingNumberList();
         test2.setTotal(0);
 
@@ -315,8 +324,8 @@ public class IncomingNumberListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<IncomingNumberResult> testList2 = null;
-        test2.setIncomingPhoneNumbers(testList2);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList2 = null;
+        test2.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +347,9 @@ public class IncomingNumberListTest {
 
         test1.setNextPageUri("TS");
 
-        List<IncomingNumberResult> testList = new ArrayList<IncomingNumberResult>();
-        test1.setIncomingPhoneNumbers(testList);
+        List<IncomingNumberResult> testsetIncomingPhoneNumbersList =
+                new ArrayList<IncomingNumberResult>();
+        test1.setIncomingPhoneNumbers(testsetIncomingPhoneNumbersList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

@@ -108,8 +108,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
         MessagesList test2 = new MessagesList();
         test2.setTotal(1);
 
@@ -125,8 +125,8 @@ public class MessagesListTest {
 
         test2.setNextPageUri("TS");
 
-        List<MessageResult> testList2 = testList;
-        test2.setMessages(testList2);
+        List<MessageResult> testsetMessagesList2 = testsetMessagesList;
+        test2.setMessages(testsetMessagesList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +149,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
         MessagesList test2 = new MessagesList();
         test2.setTotal(0);
 
@@ -166,8 +166,8 @@ public class MessagesListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<MessageResult> testList2 = null;
-        test2.setMessages(testList2);
+        List<MessageResult> testsetMessagesList2 = null;
+        test2.setMessages(testsetMessagesList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +215,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
         MessagesList test2 = new MessagesList();
         test2.setTotal(1);
 
@@ -232,8 +232,8 @@ public class MessagesListTest {
 
         test2.setNextPageUri("TS");
 
-        List<MessageResult> testList2 = testList;
-        test2.setMessages(testList2);
+        List<MessageResult> testsetMessagesList2 = testsetMessagesList;
+        test2.setMessages(testsetMessagesList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +258,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
         MessagesList test2 = new MessagesList();
         test2.setTotal(1);
 
@@ -275,8 +275,8 @@ public class MessagesListTest {
 
         test2.setNextPageUri("TS");
 
-        List<MessageResult> testList2 = testList;
-        test2.setMessages(testList2);
+        List<MessageResult> testsetMessagesList2 = testsetMessagesList;
+        test2.setMessages(testsetMessagesList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +298,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
         MessagesList test2 = new MessagesList();
         test2.setTotal(0);
 
@@ -315,8 +315,8 @@ public class MessagesListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<MessageResult> testList2 = null;
-        test2.setMessages(testList2);
+        List<MessageResult> testsetMessagesList2 = null;
+        test2.setMessages(testsetMessagesList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +338,8 @@ public class MessagesListTest {
 
         test1.setNextPageUri("TS");
 
-        List<MessageResult> testList = new ArrayList<MessageResult>();
-        test1.setMessages(testList);
+        List<MessageResult> testsetMessagesList = new ArrayList<MessageResult>();
+        test1.setMessages(testsetMessagesList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

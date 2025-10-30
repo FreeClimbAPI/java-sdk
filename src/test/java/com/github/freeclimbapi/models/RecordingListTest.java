@@ -108,8 +108,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
         RecordingList test2 = new RecordingList();
         test2.setTotal(1);
 
@@ -125,8 +125,8 @@ public class RecordingListTest {
 
         test2.setNextPageUri("TS");
 
-        List<RecordingResult> testList2 = testList;
-        test2.setRecordings(testList2);
+        List<RecordingResult> testsetRecordingsList2 = testsetRecordingsList;
+        test2.setRecordings(testsetRecordingsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +149,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
         RecordingList test2 = new RecordingList();
         test2.setTotal(0);
 
@@ -166,8 +166,8 @@ public class RecordingListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<RecordingResult> testList2 = null;
-        test2.setRecordings(testList2);
+        List<RecordingResult> testsetRecordingsList2 = null;
+        test2.setRecordings(testsetRecordingsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +215,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
         RecordingList test2 = new RecordingList();
         test2.setTotal(1);
 
@@ -232,8 +232,8 @@ public class RecordingListTest {
 
         test2.setNextPageUri("TS");
 
-        List<RecordingResult> testList2 = testList;
-        test2.setRecordings(testList2);
+        List<RecordingResult> testsetRecordingsList2 = testsetRecordingsList;
+        test2.setRecordings(testsetRecordingsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +258,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
         RecordingList test2 = new RecordingList();
         test2.setTotal(1);
 
@@ -275,8 +275,8 @@ public class RecordingListTest {
 
         test2.setNextPageUri("TS");
 
-        List<RecordingResult> testList2 = testList;
-        test2.setRecordings(testList2);
+        List<RecordingResult> testsetRecordingsList2 = testsetRecordingsList;
+        test2.setRecordings(testsetRecordingsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +298,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
         RecordingList test2 = new RecordingList();
         test2.setTotal(0);
 
@@ -315,8 +315,8 @@ public class RecordingListTest {
 
         test2.setNextPageUri("TS2");
 
-        List<RecordingResult> testList2 = null;
-        test2.setRecordings(testList2);
+        List<RecordingResult> testsetRecordingsList2 = null;
+        test2.setRecordings(testsetRecordingsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +338,8 @@ public class RecordingListTest {
 
         test1.setNextPageUri("TS");
 
-        List<RecordingResult> testList = new ArrayList<RecordingResult>();
-        test1.setRecordings(testList);
+        List<RecordingResult> testsetRecordingsList = new ArrayList<RecordingResult>();
+        test1.setRecordings(testsetRecordingsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));

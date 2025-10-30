@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'com.github.freeclimbapi'
-version = '6.2.0'
+version = '6.3.0'
 
 buildscript {
     repositories {
@@ -101,6 +101,12 @@ if(hasProperty('target') && target == 'android') {
        mainClass = System.getProperty('mainClass')
        classpath = sourceSets.main.runtimeClasspath
     }
+
+    task copyDependencies(type: Copy) {
+        from configurations.runtimeClasspath
+        into "$buildDir/lib"
+    }
+    tasks.build.dependsOn(copyDependencies)
 }
 
 ext {

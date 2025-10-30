@@ -19,6 +19,8 @@ docs/ApplicationResult.md
 docs/AvailableNumber.md
 docs/AvailableNumberList.md
 docs/BargeInReason.md
+docs/BlobListResponse.md
+docs/BlobResult.md
 docs/BuyIncomingNumberRequest.md
 docs/CallControlWebhook.md
 docs/CallDirection.md
@@ -38,6 +40,7 @@ docs/ConferenceRecordingStatusWebhook.md
 docs/ConferenceResult.md
 docs/ConferenceStatus.md
 docs/ConferenceStatusWebhook.md
+docs/CreateBlobRequest.md
 docs/CreateConference.md
 docs/CreateConferenceRequest.md
 docs/CreateConferenceWebhook.md
@@ -84,6 +87,7 @@ docs/MessageResult.md
 docs/MessageStatus.md
 docs/MessageStatusWebhook.md
 docs/MessagesList.md
+docs/ModifyBlobRequest.md
 docs/MutableResourceModel.md
 docs/OutDial.md
 docs/OutDialApiConnectWebhook.md
@@ -94,6 +98,7 @@ docs/Park.md
 docs/Pause.md
 docs/PerclCommand.md
 docs/PerclScript.md
+docs/PlatformError.md
 docs/Play.md
 docs/PlayBeep.md
 docs/PlayEarlyMedia.md
@@ -114,6 +119,7 @@ docs/RedirectWebhook.md
 docs/Reject.md
 docs/RemoveFromConference.md
 docs/RemoveFromQueueNotificationWebhook.md
+docs/ReplaceBlobRequest.md
 docs/RequestType.md
 docs/SMSTenDLCBrand.md
 docs/SMSTenDLCBrandAltBusinessIdType.md
@@ -141,6 +147,8 @@ docs/Sms.md
 docs/StartRecordCall.md
 docs/TFN.md
 docs/TFNCampaign.md
+docs/TTSEngine.md
+docs/TTSEngineName.md
 docs/TerminateConference.md
 docs/TranscribeReason.md
 docs/TranscribeTermReason.md
@@ -182,6 +190,8 @@ src/main/java/com/github/freeclimbapi/ApplicationResult.java
 src/main/java/com/github/freeclimbapi/AvailableNumber.java
 src/main/java/com/github/freeclimbapi/AvailableNumberList.java
 src/main/java/com/github/freeclimbapi/BargeInReason.java
+src/main/java/com/github/freeclimbapi/BlobListResponse.java
+src/main/java/com/github/freeclimbapi/BlobResult.java
 src/main/java/com/github/freeclimbapi/BuyIncomingNumberRequest.java
 src/main/java/com/github/freeclimbapi/CallControlWebhook.java
 src/main/java/com/github/freeclimbapi/CallDirection.java
@@ -202,6 +212,7 @@ src/main/java/com/github/freeclimbapi/ConferenceResult.java
 src/main/java/com/github/freeclimbapi/ConferenceStatus.java
 src/main/java/com/github/freeclimbapi/ConferenceStatusWebhook.java
 src/main/java/com/github/freeclimbapi/Configuration.java
+src/main/java/com/github/freeclimbapi/CreateBlobRequest.java
 src/main/java/com/github/freeclimbapi/CreateConference.java
 src/main/java/com/github/freeclimbapi/CreateConferenceRequest.java
 src/main/java/com/github/freeclimbapi/CreateConferenceWebhook.java
@@ -250,6 +261,7 @@ src/main/java/com/github/freeclimbapi/MessageResult.java
 src/main/java/com/github/freeclimbapi/MessageStatus.java
 src/main/java/com/github/freeclimbapi/MessageStatusWebhook.java
 src/main/java/com/github/freeclimbapi/MessagesList.java
+src/main/java/com/github/freeclimbapi/ModifyBlobRequest.java
 src/main/java/com/github/freeclimbapi/MutableResourceModel.java
 src/main/java/com/github/freeclimbapi/OutDial.java
 src/main/java/com/github/freeclimbapi/OutDialApiConnectWebhook.java
@@ -261,6 +273,7 @@ src/main/java/com/github/freeclimbapi/Park.java
 src/main/java/com/github/freeclimbapi/Pause.java
 src/main/java/com/github/freeclimbapi/PerclCommand.java
 src/main/java/com/github/freeclimbapi/PerclScript.java
+src/main/java/com/github/freeclimbapi/PlatformError.java
 src/main/java/com/github/freeclimbapi/Play.java
 src/main/java/com/github/freeclimbapi/PlayBeep.java
 src/main/java/com/github/freeclimbapi/PlayEarlyMedia.java
@@ -283,6 +296,7 @@ src/main/java/com/github/freeclimbapi/RedirectWebhook.java
 src/main/java/com/github/freeclimbapi/Reject.java
 src/main/java/com/github/freeclimbapi/RemoveFromConference.java
 src/main/java/com/github/freeclimbapi/RemoveFromQueueNotificationWebhook.java
+src/main/java/com/github/freeclimbapi/ReplaceBlobRequest.java
 src/main/java/com/github/freeclimbapi/RequestType.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCBrand.java
 src/main/java/com/github/freeclimbapi/SMSTenDLCBrandAltBusinessIdType.java
@@ -313,6 +327,8 @@ src/main/java/com/github/freeclimbapi/StartRecordCall.java
 src/main/java/com/github/freeclimbapi/StringUtil.java
 src/main/java/com/github/freeclimbapi/TFN.java
 src/main/java/com/github/freeclimbapi/TFNCampaign.java
+src/main/java/com/github/freeclimbapi/TTSEngine.java
+src/main/java/com/github/freeclimbapi/TTSEngineName.java
 src/main/java/com/github/freeclimbapi/TerminateConference.java
 src/main/java/com/github/freeclimbapi/TranscribeReason.java
 src/main/java/com/github/freeclimbapi/TranscribeTermReason.java
@@ -344,6 +360,8 @@ src/test/java/com/github/freeclimbapi/ApplicationResultTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberListTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberTest.java
 src/test/java/com/github/freeclimbapi/BargeInReasonTest.java
+src/test/java/com/github/freeclimbapi/BlobListResponseTest.java
+src/test/java/com/github/freeclimbapi/BlobResultTest.java
 src/test/java/com/github/freeclimbapi/BuyIncomingNumberRequestTest.java
 src/test/java/com/github/freeclimbapi/CallControlWebhookTest.java
 src/test/java/com/github/freeclimbapi/CallDirectionTest.java
@@ -363,6 +381,7 @@ src/test/java/com/github/freeclimbapi/ConferenceRecordingStatusWebhookTest.java
 src/test/java/com/github/freeclimbapi/ConferenceResultTest.java
 src/test/java/com/github/freeclimbapi/ConferenceStatusTest.java
 src/test/java/com/github/freeclimbapi/ConferenceStatusWebhookTest.java
+src/test/java/com/github/freeclimbapi/CreateBlobRequestTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceRequestTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceTest.java
 src/test/java/com/github/freeclimbapi/CreateConferenceWebhookTest.java
@@ -409,6 +428,7 @@ src/test/java/com/github/freeclimbapi/MessageResultTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusTest.java
 src/test/java/com/github/freeclimbapi/MessageStatusWebhookTest.java
 src/test/java/com/github/freeclimbapi/MessagesListTest.java
+src/test/java/com/github/freeclimbapi/ModifyBlobRequestTest.java
 src/test/java/com/github/freeclimbapi/MutableResourceModelTest.java
 src/test/java/com/github/freeclimbapi/OutDialApiConnectWebhookTest.java
 src/test/java/com/github/freeclimbapi/OutDialConnectWebhookTest.java
@@ -419,6 +439,7 @@ src/test/java/com/github/freeclimbapi/ParkTest.java
 src/test/java/com/github/freeclimbapi/PauseTest.java
 src/test/java/com/github/freeclimbapi/PerclCommandTest.java
 src/test/java/com/github/freeclimbapi/PerclScriptTest.java
+src/test/java/com/github/freeclimbapi/PlatformErrorTest.java
 src/test/java/com/github/freeclimbapi/PlayBeepTest.java
 src/test/java/com/github/freeclimbapi/PlayEarlyMediaTest.java
 src/test/java/com/github/freeclimbapi/PlayTest.java
@@ -439,6 +460,7 @@ src/test/java/com/github/freeclimbapi/RedirectWebhookTest.java
 src/test/java/com/github/freeclimbapi/RejectTest.java
 src/test/java/com/github/freeclimbapi/RemoveFromConferenceTest.java
 src/test/java/com/github/freeclimbapi/RemoveFromQueueNotificationWebhookTest.java
+src/test/java/com/github/freeclimbapi/ReplaceBlobRequestTest.java
 src/test/java/com/github/freeclimbapi/RequestTypeTest.java
 src/test/java/com/github/freeclimbapi/SMSTenDLCBrandAltBusinessIdTypeTest.java
 src/test/java/com/github/freeclimbapi/SMSTenDLCBrandEntityTypeTest.java
@@ -466,6 +488,8 @@ src/test/java/com/github/freeclimbapi/SmsTest.java
 src/test/java/com/github/freeclimbapi/StartRecordCallTest.java
 src/test/java/com/github/freeclimbapi/TFNCampaignTest.java
 src/test/java/com/github/freeclimbapi/TFNTest.java
+src/test/java/com/github/freeclimbapi/TTSEngineNameTest.java
+src/test/java/com/github/freeclimbapi/TTSEngineTest.java
 src/test/java/com/github/freeclimbapi/TerminateConferenceTest.java
 src/test/java/com/github/freeclimbapi/TranscribeReasonTest.java
 src/test/java/com/github/freeclimbapi/TranscribeTermReasonTest.java

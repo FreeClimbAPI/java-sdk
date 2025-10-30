@@ -40,6 +40,15 @@ public class SayTest {
         Assert.assertEquals("TEST_STRING", model.getLanguage());
     }
 
+    /** Test the property 'engine' */
+    @Test
+    public void engineTest() {
+
+        TTSEngine object = new TTSEngine();
+        model.setEngine(object);
+        Assert.assertEquals(object.getClass(), TTSEngine.class);
+    }
+
     /** Test the property 'loop' */
     @Test
     public void loopTest() {
@@ -64,6 +73,9 @@ public class SayTest {
 
         test1.setLanguage("TS");
 
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
+
         test1.setLoop(1);
 
         test1.setPrivacyMode(true);
@@ -73,6 +85,9 @@ public class SayTest {
         test2.setText("TS");
 
         test2.setLanguage("TS");
+
+        TTSEngine testTTSEngineObject2 = testTTSEngineObject;
+        test2.setEngine(testTTSEngineObject2);
 
         test2.setLoop(1);
 
@@ -90,6 +105,9 @@ public class SayTest {
 
         test1.setLanguage("TS");
 
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
+
         test1.setLoop(1);
 
         test1.setPrivacyMode(true);
@@ -99,6 +117,9 @@ public class SayTest {
         test2.setText("TS2");
 
         test2.setLanguage("TS2");
+
+        TTSEngine testTTSEngineObject2 = new TTSEngine();
+        test2.setEngine(testTTSEngineObject2);
 
         test2.setLoop(0);
 
@@ -115,6 +136,9 @@ public class SayTest {
         test1.setText("TS");
 
         test1.setLanguage("TS");
+
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
 
         test1.setLoop(1);
 
@@ -133,6 +157,9 @@ public class SayTest {
 
         test1.setLanguage("TS");
 
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
+
         test1.setLoop(1);
 
         test1.setPrivacyMode(true);
@@ -142,6 +169,9 @@ public class SayTest {
         test2.setText("TS");
 
         test2.setLanguage("TS");
+
+        TTSEngine testTTSEngineObject2 = testTTSEngineObject;
+        test2.setEngine(testTTSEngineObject2);
 
         test2.setLoop(1);
 
@@ -161,6 +191,9 @@ public class SayTest {
 
         test1.setLanguage("TS");
 
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
+
         test1.setLoop(1);
 
         test1.setPrivacyMode(true);
@@ -170,6 +203,9 @@ public class SayTest {
         test2.setText("TS");
 
         test2.setLanguage("TS");
+
+        TTSEngine testTTSEngineObject2 = testTTSEngineObject;
+        test2.setEngine(testTTSEngineObject2);
 
         test2.setLoop(1);
 
@@ -187,6 +223,9 @@ public class SayTest {
 
         test1.setLanguage("TS");
 
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
+
         test1.setLoop(1);
 
         test1.setPrivacyMode(true);
@@ -196,6 +235,9 @@ public class SayTest {
         test2.setText("TS2");
 
         test2.setLanguage("TS2");
+
+        TTSEngine testTTSEngineObject2 = new TTSEngine();
+        test2.setEngine(testTTSEngineObject2);
 
         test2.setLoop(0);
 
@@ -212,6 +254,9 @@ public class SayTest {
         test1.setText("TS");
 
         test1.setLanguage("TS");
+
+        TTSEngine testTTSEngineObject = new TTSEngine();
+        test1.setEngine(testTTSEngineObject);
 
         test1.setLoop(1);
 
@@ -240,6 +285,7 @@ public class SayTest {
         Map<String, Object> attributes = build.get(model.getCommand());
         Assert.assertEquals(attributes.get("text"), model.getText());
         Assert.assertEquals(attributes.get("language"), model.getLanguage());
+        Assert.assertEquals(attributes.get("engine"), model.getEngine());
         Assert.assertEquals(attributes.get("loop"), model.getLoop());
         Assert.assertEquals(attributes.get("privacyMode"), model.getPrivacyMode());
     }

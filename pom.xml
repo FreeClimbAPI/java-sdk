@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>6.2.0</version>
+    <version>6.3.0</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>
@@ -16,8 +16,8 @@
 
     <licenses>
         <license>
-            <name>Unlicense</name>
-            <url>http://unlicense.org</url>
+            <name>MIT</name>
+            <url>https://mit-license.org/</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

@@ -665,6 +665,181 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for createBlob
+     *
+     * @param createBlobRequest An object defining a new blob. A request body must be provided but
+     *     the blob may be empty. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 201 </td><td> Successful creation of a new blob. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> A blob with the provided alias already exists oln the requesting account and so this new blob is rejected as there cannot be duplicate alises. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> The blob exceeded one of the size limits. Either it itself is too large or it would push the total sum of all blobs over the account&#39;s limit. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createBlobCall(
+            CreateBlobRequest createBlobRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = createBlobRequest;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createBlobValidateBeforeCall(
+            CreateBlobRequest createBlobRequest, final ApiCallback _callback) throws ApiException {
+
+        // verify the required parameter 'createBlobRequest' is set
+        if (createBlobRequest == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'createBlobRequest' when calling"
+                            + " createBlob(Async)");
+        }
+
+        okhttp3.Call localVarCall = createBlobCall(createBlobRequest, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Create a Blob Create a new Blob belonging to the requesting account.
+     *
+     * @param createBlobRequest An object defining a new blob. A request body must be provided but
+     *     the blob may be empty. (required)
+     * @return BlobResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 201 </td><td> Successful creation of a new blob. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> A blob with the provided alias already exists oln the requesting account and so this new blob is rejected as there cannot be duplicate alises. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> The blob exceeded one of the size limits. Either it itself is too large or it would push the total sum of all blobs over the account&#39;s limit. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobResult createBlob(CreateBlobRequest createBlobRequest) throws ApiException {
+        ApiResponse<BlobResult> localVarResp = createBlobWithHttpInfo(createBlobRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a Blob Create a new Blob belonging to the requesting account.
+     *
+     * @param createBlobRequest An object defining a new blob. A request body must be provided but
+     *     the blob may be empty. (required)
+     * @return ApiResponse&lt;BlobResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 201 </td><td> Successful creation of a new blob. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> A blob with the provided alias already exists oln the requesting account and so this new blob is rejected as there cannot be duplicate alises. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> The blob exceeded one of the size limits. Either it itself is too large or it would push the total sum of all blobs over the account&#39;s limit. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobResult> createBlobWithHttpInfo(CreateBlobRequest createBlobRequest)
+            throws ApiException {
+        okhttp3.Call localVarCall = createBlobValidateBeforeCall(createBlobRequest, null);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a Blob (asynchronously) Create a new Blob belonging to the requesting account.
+     *
+     * @param createBlobRequest An object defining a new blob. A request body must be provided but
+     *     the blob may be empty. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 201 </td><td> Successful creation of a new blob. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> A blob with the provided alias already exists oln the requesting account and so this new blob is rejected as there cannot be duplicate alises. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> The blob exceeded one of the size limits. Either it itself is too large or it would push the total sum of all blobs over the account&#39;s limit. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createBlobAsync(
+            CreateBlobRequest createBlobRequest, final ApiCallback<BlobResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = createBlobValidateBeforeCall(createBlobRequest, _callback);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for createExport
      *
      * @param exportRequest A JSON object containing export creation parameters (optional)
@@ -1588,6 +1763,184 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for deleteBlob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys deleted successfully, remaining blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 204 </td><td> Successful operation </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call deleteBlobCall(String blobId, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs/{blobId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "blobId" + "\\}",
+                                localVarApiClient.escapeString(blobId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "DELETE",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteBlobValidateBeforeCall(String blobId, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'blobId' is set
+        if (blobId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'blobId' when calling deleteBlob(Async)");
+        }
+
+        okhttp3.Call localVarCall = deleteBlobCall(blobId, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Delete Blob Deletes a blob or specific keys from a blob. If no keys are specified in the
+     * request body, the entire blob is deleted (returns 204). If specific keys are provided, only
+     * those keys are removed and the remaining blob is returned (returns 200).
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @return BlobResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys deleted successfully, remaining blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 204 </td><td> Successful operation </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobResult deleteBlob(String blobId) throws ApiException {
+        ApiResponse<BlobResult> localVarResp = deleteBlobWithHttpInfo(blobId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Delete Blob Deletes a blob or specific keys from a blob. If no keys are specified in the
+     * request body, the entire blob is deleted (returns 204). If specific keys are provided, only
+     * those keys are removed and the remaining blob is returned (returns 200).
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @return ApiResponse&lt;BlobResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys deleted successfully, remaining blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 204 </td><td> Successful operation </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobResult> deleteBlobWithHttpInfo(String blobId) throws ApiException {
+        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, null);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Delete Blob (asynchronously) Deletes a blob or specific keys from a blob. If no keys are
+     * specified in the request body, the entire blob is deleted (returns 204). If specific keys are
+     * provided, only those keys are removed and the remaining blob is returned (returns 200).
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys deleted successfully, remaining blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 204 </td><td> Successful operation </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 422 </td><td> Generic platform unprocessible entity response. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call deleteBlobAsync(String blobId, final ApiCallback<BlobResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = deleteBlobValidateBeforeCall(blobId, _callback);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for dequeueAMember
      *
      * @param queueId String that uniquely identifies the Queue that the Member belongs to.
@@ -1922,7 +2275,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Download a Recording file represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call downloadARecordingFileCall(String recordingId, final ApiCallback _callback)
@@ -1959,7 +2312,7 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"audio/x-wav"};
+        final String[] localVarAccepts = {"audio/wav"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
@@ -2015,7 +2368,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Download a Recording file represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public File downloadARecordingFile(String recordingId) throws ApiException {
@@ -2033,7 +2386,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Download a Recording file represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public ApiResponse<File> downloadARecordingFileWithHttpInfo(String recordingId)
@@ -2054,7 +2407,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Download a Recording file represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Download a Recording file represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call downloadARecordingFileAsync(
@@ -4079,6 +4432,170 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = getAnSmsMessageValidateBeforeCall(messageId, _callback);
         Type localVarReturnType = new TypeToken<MessageResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Build call for getBlob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Retrieve a Blob. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getBlobCall(String blobId, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs/{blobId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "blobId" + "\\}",
+                                localVarApiClient.escapeString(blobId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "GET",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getBlobValidateBeforeCall(String blobId, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'blobId' is set
+        if (blobId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'blobId' when calling getBlob(Async)");
+        }
+
+        okhttp3.Call localVarCall = getBlobCall(blobId, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Get Blob Retrieves a specified blob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @return BlobResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Retrieve a Blob. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobResult getBlob(String blobId) throws ApiException {
+        ApiResponse<BlobResult> localVarResp = getBlobWithHttpInfo(blobId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Blob Retrieves a specified blob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @return ApiResponse&lt;BlobResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Retrieve a Blob. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobResult> getBlobWithHttpInfo(String blobId) throws ApiException {
+        okhttp3.Call localVarCall = getBlobValidateBeforeCall(blobId, null);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Blob (asynchronously) Retrieves a specified blob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Retrieve a Blob. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getBlobAsync(String blobId, final ApiCallback<BlobResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = getBlobValidateBeforeCall(blobId, _callback);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -6219,6 +6736,159 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for listBlobs
+     *
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Single page of blob list results. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call listBlobsCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {};
+
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "GET",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call listBlobsValidateBeforeCall(final ApiCallback _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = listBlobsCall(_callback);
+        return localVarCall;
+    }
+
+    /**
+     * List Blobs belonging to an account. List Blobs belonging to an account. Results are returned
+     * in paginated lists mirroring other listing features in the API.
+     *
+     * @return BlobListResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Single page of blob list results. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobListResponse listBlobs() throws ApiException {
+        ApiResponse<BlobListResponse> localVarResp = listBlobsWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * List Blobs belonging to an account. List Blobs belonging to an account. Results are returned
+     * in paginated lists mirroring other listing features in the API.
+     *
+     * @return ApiResponse&lt;BlobListResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Single page of blob list results. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobListResponse> listBlobsWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<BlobListResponse>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List Blobs belonging to an account. (asynchronously) List Blobs belonging to an account.
+     * Results are returned in paginated lists mirroring other listing features in the API.
+     *
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Single page of blob list results. </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Generic platform bad request. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * <tr><td> 504 </td><td> gateway timeout error </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call listBlobsAsync(final ApiCallback<BlobListResponse> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = listBlobsValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<BlobListResponse>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for listCallLogs
      *
      * @param callId String that uniquely identifies this call resource. (required)
@@ -7460,10 +8130,6 @@ public class DefaultApi {
      *     number is not useful until associated with an applicationId. (optional)
      * @param hasApplication Indication of whether the phone number has an application linked to it.
      *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
      * @param hasCampaign Indication of whether the phone number has a campaign associated with it
      *     (optional)
      * @param capabilitiesVoice (optional)
@@ -7491,8 +8157,6 @@ public class DefaultApi {
             String country,
             String applicationId,
             Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
             Boolean hasCampaign,
             Boolean capabilitiesVoice,
             Boolean capabilitiesSms,
@@ -7557,15 +8221,6 @@ public class DefaultApi {
         if (hasApplication != null) {
             localVarQueryParams.addAll(
                     localVarApiClient.parameterToPair("hasApplication", hasApplication));
-        }
-
-        if (voiceEnabled != null) {
-            localVarQueryParams.addAll(
-                    localVarApiClient.parameterToPair("voiceEnabled", voiceEnabled));
-        }
-
-        if (smsEnabled != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("smsEnabled", smsEnabled));
         }
 
         if (hasCampaign != null) {
@@ -7648,8 +8303,6 @@ public class DefaultApi {
             String country,
             String applicationId,
             Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
             Boolean hasCampaign,
             Boolean capabilitiesVoice,
             Boolean capabilitiesSms,
@@ -7669,8 +8322,6 @@ public class DefaultApi {
                         country,
                         applicationId,
                         hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
                         hasCampaign,
                         capabilitiesVoice,
                         capabilitiesSms,
@@ -7697,10 +8348,6 @@ public class DefaultApi {
      *     number is not useful until associated with an applicationId. (optional)
      * @param hasApplication Indication of whether the phone number has an application linked to it.
      *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
      * @param hasCampaign Indication of whether the phone number has a campaign associated with it
      *     (optional)
      * @param capabilitiesVoice (optional)
@@ -7728,8 +8375,6 @@ public class DefaultApi {
             String country,
             String applicationId,
             Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
             Boolean hasCampaign,
             Boolean capabilitiesVoice,
             Boolean capabilitiesSms,
@@ -7747,8 +8392,6 @@ public class DefaultApi {
                         country,
                         applicationId,
                         hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
                         hasCampaign,
                         capabilitiesVoice,
                         capabilitiesSms,
@@ -7774,10 +8417,6 @@ public class DefaultApi {
      *     number is not useful until associated with an applicationId. (optional)
      * @param hasApplication Indication of whether the phone number has an application linked to it.
      *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
      * @param hasCampaign Indication of whether the phone number has a campaign associated with it
      *     (optional)
      * @param capabilitiesVoice (optional)
@@ -7805,8 +8444,6 @@ public class DefaultApi {
             String country,
             String applicationId,
             Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
             Boolean hasCampaign,
             Boolean capabilitiesVoice,
             Boolean capabilitiesSms,
@@ -7824,8 +8461,6 @@ public class DefaultApi {
                         country,
                         applicationId,
                         hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
                         hasCampaign,
                         capabilitiesVoice,
                         capabilitiesSms,
@@ -7853,10 +8488,6 @@ public class DefaultApi {
      *     number is not useful until associated with an applicationId. (optional)
      * @param hasApplication Indication of whether the phone number has an application linked to it.
      *     (optional, default to false)
-     * @param voiceEnabled Indicates whether the phone number can handle Calls. Typically set to
-     *     true for all numbers. (optional, default to true)
-     * @param smsEnabled Indication of whether the phone number can handle sending and receiving SMS
-     *     messages. Typically set to true for all numbers. (optional, default to true)
      * @param hasCampaign Indication of whether the phone number has a campaign associated with it
      *     (optional)
      * @param capabilitiesVoice (optional)
@@ -7885,8 +8516,6 @@ public class DefaultApi {
             String country,
             String applicationId,
             Boolean hasApplication,
-            Boolean voiceEnabled,
-            Boolean smsEnabled,
             Boolean hasCampaign,
             Boolean capabilitiesVoice,
             Boolean capabilitiesSms,
@@ -7906,8 +8535,6 @@ public class DefaultApi {
                         country,
                         applicationId,
                         hasApplication,
-                        voiceEnabled,
-                        smsEnabled,
                         hasCampaign,
                         capabilitiesVoice,
                         capabilitiesSms,
@@ -9055,6 +9682,199 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for modifyBlob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param modifyBlobRequest Request body to specify keys to modify. Or new keys to add onto the
+     *     already existing blob (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys successfully modified, updated blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call modifyBlobCall(
+            String blobId, ModifyBlobRequest modifyBlobRequest, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = modifyBlobRequest;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs/{blobId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "blobId" + "\\}",
+                                localVarApiClient.escapeString(blobId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "PATCH",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call modifyBlobValidateBeforeCall(
+            String blobId, ModifyBlobRequest modifyBlobRequest, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'blobId' is set
+        if (blobId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'blobId' when calling modifyBlob(Async)");
+        }
+
+        // verify the required parameter 'modifyBlobRequest' is set
+        if (modifyBlobRequest == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'modifyBlobRequest' when calling"
+                            + " modifyBlob(Async)");
+        }
+
+        okhttp3.Call localVarCall = modifyBlobCall(blobId, modifyBlobRequest, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Modify Blob Modifys a pre existing blob by either adding new fields, or modifying existing
+     * fields
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param modifyBlobRequest Request body to specify keys to modify. Or new keys to add onto the
+     *     already existing blob (required)
+     * @return BlobResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys successfully modified, updated blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobResult modifyBlob(String blobId, ModifyBlobRequest modifyBlobRequest)
+            throws ApiException {
+        ApiResponse<BlobResult> localVarResp = modifyBlobWithHttpInfo(blobId, modifyBlobRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Modify Blob Modifys a pre existing blob by either adding new fields, or modifying existing
+     * fields
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param modifyBlobRequest Request body to specify keys to modify. Or new keys to add onto the
+     *     already existing blob (required)
+     * @return ApiResponse&lt;BlobResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys successfully modified, updated blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobResult> modifyBlobWithHttpInfo(
+            String blobId, ModifyBlobRequest modifyBlobRequest) throws ApiException {
+        okhttp3.Call localVarCall = modifyBlobValidateBeforeCall(blobId, modifyBlobRequest, null);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Modify Blob (asynchronously) Modifys a pre existing blob by either adding new fields, or
+     * modifying existing fields
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param modifyBlobRequest Request body to specify keys to modify. Or new keys to add onto the
+     *     already existing blob (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Blob keys successfully modified, updated blob returned. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call modifyBlobAsync(
+            String blobId,
+            ModifyBlobRequest modifyBlobRequest,
+            final ApiCallback<BlobResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                modifyBlobValidateBeforeCall(blobId, modifyBlobRequest, _callback);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for removeAParticipant
      *
      * @param conferenceId ID of the conference this participant is in. (required)
@@ -9223,6 +10043,196 @@ public class DefaultApi {
     }
 
     /**
+     * Build call for replaceBlob
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param replaceBlobRequest JSON object containing blob key the contents of which will be used
+     *     to override the enitre blob contents. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Replaces all keys in blob with those provided. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call replaceBlobCall(
+            String blobId, ReplaceBlobRequest replaceBlobRequest, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = replaceBlobRequest;
+
+        // create path and map variables
+        String localVarPath =
+                "/Accounts/{accountId}/Blobs/{blobId}"
+                        .replaceAll(
+                                "\\{" + "accountId" + "\\}",
+                                localVarApiClient.escapeString(accountId.toString()))
+                        .replaceAll(
+                                "\\{" + "blobId" + "\\}",
+                                localVarApiClient.escapeString(blobId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        } else {
+            localVarHeaderParams.put("Content-Type", "");
+        }
+
+        String[] localVarAuthNames = new String[] {"fc"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "PUT",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call replaceBlobValidateBeforeCall(
+            String blobId, ReplaceBlobRequest replaceBlobRequest, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'blobId' is set
+        if (blobId == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'blobId' when calling replaceBlob(Async)");
+        }
+
+        // verify the required parameter 'replaceBlobRequest' is set
+        if (replaceBlobRequest == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'replaceBlobRequest' when calling"
+                            + " replaceBlob(Async)");
+        }
+
+        okhttp3.Call localVarCall = replaceBlobCall(blobId, replaceBlobRequest, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * Replace Blob Replaces the blob content with the provided values.
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param replaceBlobRequest JSON object containing blob key the contents of which will be used
+     *     to override the enitre blob contents. (required)
+     * @return BlobResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Replaces all keys in blob with those provided. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public BlobResult replaceBlob(String blobId, ReplaceBlobRequest replaceBlobRequest)
+            throws ApiException {
+        ApiResponse<BlobResult> localVarResp = replaceBlobWithHttpInfo(blobId, replaceBlobRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Replace Blob Replaces the blob content with the provided values.
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param replaceBlobRequest JSON object containing blob key the contents of which will be used
+     *     to override the enitre blob contents. (required)
+     * @return ApiResponse&lt;BlobResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Replaces all keys in blob with those provided. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<BlobResult> replaceBlobWithHttpInfo(
+            String blobId, ReplaceBlobRequest replaceBlobRequest) throws ApiException {
+        okhttp3.Call localVarCall = replaceBlobValidateBeforeCall(blobId, replaceBlobRequest, null);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Replace Blob (asynchronously) Replaces the blob content with the provided values.
+     *
+     * @param blobId String that uniquely identifies this Blob resource. (required)
+     * @param replaceBlobRequest JSON object containing blob key the contents of which will be used
+     *     to override the enitre blob contents. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Replaces all keys in blob with those provided. </td><td>  -  </td></tr>
+     * <tr><td> 404 </td><td> Generic platform not found error. </td><td>  -  </td></tr>
+     * <tr><td> 409 </td><td> Generic platform status conflict error. </td><td>  -  </td></tr>
+     * <tr><td> 413 </td><td> Generic platform status request entity too large. </td><td>  -  </td></tr>
+     * <tr><td> 500 </td><td> Generic platform internal error. </td><td>  -  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call replaceBlobAsync(
+            String blobId,
+            ReplaceBlobRequest replaceBlobRequest,
+            final ApiCallback<BlobResult> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                replaceBlobValidateBeforeCall(blobId, replaceBlobRequest, _callback);
+        Type localVarReturnType = new TypeToken<BlobResult>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+
+    /**
      * Build call for sendAnSmsMessage
      *
      * @param messageRequest Details to create a message (required)
@@ -9383,7 +10393,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call streamARecordingFileCall(String recordingId, final ApiCallback _callback)
@@ -9420,7 +10430,7 @@ public class DefaultApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {"audio/x-wav"};
+        final String[] localVarAccepts = {"audio/wav"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
@@ -9476,7 +10486,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public File streamARecordingFile(String recordingId) throws ApiException {
@@ -9494,7 +10504,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public ApiResponse<File> streamARecordingFileWithHttpInfo(String recordingId)
@@ -9515,7 +10525,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/x-wav mime-type </td><td>  -  </td></tr>
+     * <tr><td> 200 </td><td> Streaming a Recording represented with audio/wav mime-type </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call streamARecordingFileAsync(

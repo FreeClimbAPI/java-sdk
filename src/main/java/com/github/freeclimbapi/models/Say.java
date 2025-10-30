@@ -52,6 +52,11 @@ public class Say extends PerclCommand {
     @SerializedName(SERIALIZED_NAME_LANGUAGE)
     private String language;
 
+    public static final String SERIALIZED_NAME_ENGINE = "engine";
+
+    @SerializedName(SERIALIZED_NAME_ENGINE)
+    private TTSEngine engine;
+
     public static final String SERIALIZED_NAME_LOOP = "loop";
 
     @SerializedName(SERIALIZED_NAME_LOOP)
@@ -120,6 +125,27 @@ public class Say extends PerclCommand {
         this.language = language;
     }
 
+    public Say engine(TTSEngine engine) {
+
+        this.engine = engine;
+        return this;
+    }
+
+    /**
+     * Get engine
+     *
+     * @return engine
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public TTSEngine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(TTSEngine engine) {
+        this.engine = engine;
+    }
+
     public Say loop(Integer loop) {
 
         this.loop = loop;
@@ -181,6 +207,7 @@ public class Say extends PerclCommand {
         Say say = (Say) o;
         return Objects.equals(this.text, say.text)
                 && Objects.equals(this.language, say.language)
+                && Objects.equals(this.engine, say.engine)
                 && Objects.equals(this.loop, say.loop)
                 && Objects.equals(this.privacyMode, say.privacyMode)
                 && super.equals(o);
@@ -188,7 +215,7 @@ public class Say extends PerclCommand {
 
     @Override
     public int hashCode() {
-        return Objects.hash(text, language, loop, privacyMode, super.hashCode());
+        return Objects.hash(text, language, engine, loop, privacyMode, super.hashCode());
     }
 
     @Override
@@ -198,6 +225,7 @@ public class Say extends PerclCommand {
         sb.append("    ").append(toIndentedString(super.toString())).append("\n");
         sb.append("    text: ").append(toIndentedString(text)).append("\n");
         sb.append("    language: ").append(toIndentedString(language)).append("\n");
+        sb.append("    engine: ").append(toIndentedString(engine)).append("\n");
         sb.append("    loop: ").append(toIndentedString(loop)).append("\n");
         sb.append("    privacyMode: ").append(toIndentedString(privacyMode)).append("\n");
         sb.append("}");
@@ -209,6 +237,7 @@ public class Say extends PerclCommand {
         Map<String, Callable<Object>> attributes = new HashMap();
         attributes.put("text", () -> this.getText());
         attributes.put("language", () -> this.getLanguage());
+        attributes.put("engine", () -> this.getEngine());
         attributes.put("loop", () -> this.getLoop());
         attributes.put("privacyMode", () -> this.getPrivacyMode());
         return attributes;

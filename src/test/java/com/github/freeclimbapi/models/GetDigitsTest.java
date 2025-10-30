@@ -128,8 +128,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         GetDigits test2 = new GetDigits();
@@ -154,8 +154,8 @@ public class GetDigitsTest {
 
         test2.setMinDigits(1);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setPrivacyMode(true);
 
         Assert.assertTrue(test1.equals(test2));
@@ -186,8 +186,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         GetDigits test2 = new GetDigits();
@@ -212,8 +212,8 @@ public class GetDigitsTest {
 
         test2.setMinDigits(0);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
         test2.setPrivacyMode(false);
 
         Assert.assertFalse(test1.equals(test2));
@@ -244,8 +244,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         int hashCode1 = test1.hashCode();
@@ -277,8 +277,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         GetDigits test2 = new GetDigits();
@@ -303,8 +303,8 @@ public class GetDigitsTest {
 
         test2.setMinDigits(1);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setPrivacyMode(true);
 
         String toString1 = test1.toString();
@@ -337,8 +337,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         GetDigits test2 = new GetDigits();
@@ -363,8 +363,8 @@ public class GetDigitsTest {
 
         test2.setMinDigits(1);
 
-        List<PerclCommand> testList2 = testList;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = testsetPromptsList;
+        test2.setPrompts(testsetPromptsList2);
         test2.setPrivacyMode(true);
 
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
@@ -395,8 +395,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         GetDigits test2 = new GetDigits();
@@ -421,8 +421,8 @@ public class GetDigitsTest {
 
         test2.setMinDigits(0);
 
-        List<PerclCommand> testList2 = null;
-        test2.setPrompts(testList2);
+        List<PerclCommand> testsetPromptsList2 = null;
+        test2.setPrompts(testsetPromptsList2);
         test2.setPrivacyMode(false);
 
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
@@ -453,8 +453,8 @@ public class GetDigitsTest {
 
         test1.setMinDigits(1);
 
-        List<PerclCommand> testList = new ArrayList<PerclCommand>();
-        test1.setPrompts(testList);
+        List<PerclCommand> testsetPromptsList = new ArrayList<PerclCommand>();
+        test1.setPrompts(testsetPromptsList);
         test1.setPrivacyMode(true);
 
         String toString1 = test1.toString();

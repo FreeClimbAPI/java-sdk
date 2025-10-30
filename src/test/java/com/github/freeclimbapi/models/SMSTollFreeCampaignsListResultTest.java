@@ -108,8 +108,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
 
@@ -125,8 +125,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList2 = testList;
-        test2.setBrands(testList2);
+        List<SMSTollFreeCampaign> testsetBrandsList2 = testsetBrandsList;
+        test2.setBrands(testsetBrandsList2);
 
         Assert.assertTrue(test1.equals(test2));
     }
@@ -149,8 +149,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(0);
 
@@ -166,8 +166,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test2.setNextPageUri("TS2");
 
-        List<SMSTollFreeCampaign> testList2 = null;
-        test2.setBrands(testList2);
+        List<SMSTollFreeCampaign> testsetBrandsList2 = null;
+        test2.setBrands(testsetBrandsList2);
 
         Assert.assertFalse(test1.equals(test2));
     }
@@ -190,8 +190,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
 
         int hashCode1 = test1.hashCode();
         Assert.assertTrue(Integer.class.isInstance(hashCode1));
@@ -215,8 +215,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
 
@@ -232,8 +232,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList2 = testList;
-        test2.setBrands(testList2);
+        List<SMSTollFreeCampaign> testsetBrandsList2 = testsetBrandsList;
+        test2.setBrands(testsetBrandsList2);
 
         String toString1 = test1.toString();
         String toString2 = test2.toString();
@@ -258,8 +258,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(1);
 
@@ -275,8 +275,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test2.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList2 = testList;
-        test2.setBrands(testList2);
+        List<SMSTollFreeCampaign> testsetBrandsList2 = testsetBrandsList;
+        test2.setBrands(testsetBrandsList2);
         Assert.assertEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -298,8 +298,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
         SMSTollFreeCampaignsListResult test2 = new SMSTollFreeCampaignsListResult();
         test2.setTotal(0);
 
@@ -315,8 +315,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test2.setNextPageUri("TS2");
 
-        List<SMSTollFreeCampaign> testList2 = null;
-        test2.setBrands(testList2);
+        List<SMSTollFreeCampaign> testsetBrandsList2 = null;
+        test2.setBrands(testsetBrandsList2);
         Assert.assertNotEquals(test1.hashCode(), test2.hashCode());
     }
 
@@ -338,8 +338,8 @@ public class SMSTollFreeCampaignsListResultTest {
 
         test1.setNextPageUri("TS");
 
-        List<SMSTollFreeCampaign> testList = new ArrayList<SMSTollFreeCampaign>();
-        test1.setBrands(testList);
+        List<SMSTollFreeCampaign> testsetBrandsList = new ArrayList<SMSTollFreeCampaign>();
+        test1.setBrands(testsetBrandsList);
 
         String toString1 = test1.toString();
         Assert.assertTrue(String.class.isInstance(toString1));
