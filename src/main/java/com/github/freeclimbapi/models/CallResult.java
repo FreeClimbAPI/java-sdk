@@ -107,6 +107,11 @@ public class CallResult {
     @SerializedName(SERIALIZED_NAME_CONNECT_DURATION)
     private Integer connectDuration;
 
+    public static final String SERIALIZED_NAME_AUDIO_STREAM_DURATION = "audioStreamDuration";
+
+    @SerializedName(SERIALIZED_NAME_AUDIO_STREAM_DURATION)
+    private Integer audioStreamDuration;
+
     public static final String SERIALIZED_NAME_DIRECTION = "direction";
 
     @SerializedName(SERIALIZED_NAME_DIRECTION)
@@ -505,6 +510,31 @@ public class CallResult {
         this.connectDuration = connectDuration;
     }
 
+    public CallResult audioStreamDuration(Integer audioStreamDuration) {
+
+        this.audioStreamDuration = audioStreamDuration;
+        return this;
+    }
+
+    /**
+     * Length of time that the Call used the audio stream in seconds. This value is empty or zero
+     * when the Call did not use the audio stream.
+     *
+     * @return audioStreamDuration
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Length of time that the Call used the audio stream in seconds. This value is"
+                            + " empty or zero when the Call did not use the audio stream.")
+    public Integer getAudioStreamDuration() {
+        return audioStreamDuration;
+    }
+
+    public void setAudioStreamDuration(Integer audioStreamDuration) {
+        this.audioStreamDuration = audioStreamDuration;
+    }
+
     public CallResult direction(CallDirection direction) {
 
         this.direction = direction;
@@ -618,6 +648,7 @@ public class CallResult {
                 && Objects.equals(this.endTime, callResult.endTime)
                 && Objects.equals(this.duration, callResult.duration)
                 && Objects.equals(this.connectDuration, callResult.connectDuration)
+                && Objects.equals(this.audioStreamDuration, callResult.audioStreamDuration)
                 && Objects.equals(this.direction, callResult.direction)
                 && Objects.equals(this.answeredBy, callResult.answeredBy)
                 && Objects.equals(this.subresourceUris, callResult.subresourceUris)
@@ -652,6 +683,7 @@ public class CallResult {
                 endTime,
                 duration,
                 connectDuration,
+                audioStreamDuration,
                 direction,
                 answeredBy,
                 subresourceUris,
@@ -685,6 +717,9 @@ public class CallResult {
         sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
         sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
         sb.append("    connectDuration: ").append(toIndentedString(connectDuration)).append("\n");
+        sb.append("    audioStreamDuration: ")
+                .append(toIndentedString(audioStreamDuration))
+                .append("\n");
         sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
         sb.append("    answeredBy: ").append(toIndentedString(answeredBy)).append("\n");
         sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");

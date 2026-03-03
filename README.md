@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.freeclimbapi</groupId>
   <artifactId>freeclimb-java-client</artifactId>
-  <version>6.3.0</version>
+  <version>6.2.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,9 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.freeclimbapi:freeclimb-java-client:6.3.0"
+     implementation "com.github.freeclimbapi:freeclimb-java-client:6.2.1"
+     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
   }
 ```
 
@@ -70,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/freeclimb-java-client-6.3.0.jar`
+* `target/freeclimb-java-client-6.2.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -93,7 +95,7 @@ public class Example {
     // Configure API client
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://www.freeclimb.com/apiserver");
-    defaultClient.setAccountId("YOUR_ACCOUNT_ID");
+    defaultClient.setAccountId("AC0123456789abcdefABCDEF0123456789abcdef00");
     defaultClient.setApiKey("YOUR_API_KEY");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);

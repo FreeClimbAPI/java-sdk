@@ -5,7 +5,7 @@
     <artifactId>freeclimb-java-client</artifactId>
     <packaging>jar</packaging>
     <name>freeclimb-java-client</name>
-    <version>6.3.0</version>
+    <version>6.2.1</version>
     <url>https://github.com/freeclimbapi/java-sdk</url>
     <description>FreeClimb Java Client</description>
     <scm>
@@ -16,8 +16,8 @@
 
     <licenses>
         <license>
-            <name>MIT</name>
-            <url>https://mit-license.org/</url>
+            <name>Unlicense</name>
+            <url>http://unlicense.org</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -209,7 +209,7 @@
                   <!-- no need to specify files, inferred automatically, but you can if you want -->
                   <!-- apply a specific flavor of google-java-format and reflow long strings -->
                   <googleJavaFormat>
-                    <version>1.19.2</version>
+                    <version>1.34.0</version>
                     <style>AOSP</style>
                     <reflowLongStrings>true</reflowLongStrings>
                   </googleJavaFormat>
@@ -343,6 +343,6 @@
         <org-json-version>20231013</org-json-version>
         <junit-version>4.13.2</junit-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spotless.version>2.43.0</spotless.version>
+        <spotless.version>3.2.1</spotless.version>
     </properties>
 </project>

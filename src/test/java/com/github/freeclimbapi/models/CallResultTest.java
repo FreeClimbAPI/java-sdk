@@ -164,6 +164,14 @@ public class CallResultTest {
         Assert.assertEquals(1, (int) model.getConnectDuration());
     }
 
+    /** Test the property 'audioStreamDuration' */
+    @Test
+    public void audioStreamDurationTest() {
+
+        model.setAudioStreamDuration(1);
+        Assert.assertEquals(1, (int) model.getAudioStreamDuration());
+    }
+
     /** Test the property 'direction' */
     @Test
     public void directionTest() {
@@ -238,6 +246,8 @@ public class CallResultTest {
 
         test1.setConnectDuration(1);
 
+        test1.setAudioStreamDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
@@ -280,6 +290,8 @@ public class CallResultTest {
         test2.setDuration(1);
 
         test2.setConnectDuration(1);
+
+        test2.setAudioStreamDuration(1);
 
         test2.setDirection(CallDirection.INBOUND);
 
@@ -330,6 +342,8 @@ public class CallResultTest {
 
         test1.setConnectDuration(1);
 
+        test1.setAudioStreamDuration(1);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setAnsweredBy(AnsweredBy.MACHINE);
@@ -372,6 +386,8 @@ public class CallResultTest {
         test2.setDuration(0);
 
         test2.setConnectDuration(0);
+
+        test2.setAudioStreamDuration(0);
 
         test2.setDirection(CallDirection.INBOUND);
 
@@ -421,6 +437,8 @@ public class CallResultTest {
         test1.setDuration(1);
 
         test1.setConnectDuration(1);
+
+        test1.setAudioStreamDuration(1);
 
         test1.setDirection(CallDirection.INBOUND);
 
@@ -472,6 +490,8 @@ public class CallResultTest {
 
         test1.setConnectDuration(1);
 
+        test1.setAudioStreamDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
@@ -514,6 +534,8 @@ public class CallResultTest {
         test2.setDuration(1);
 
         test2.setConnectDuration(1);
+
+        test2.setAudioStreamDuration(1);
 
         test2.setDirection(CallDirection.INBOUND);
 
@@ -566,6 +588,8 @@ public class CallResultTest {
 
         test1.setConnectDuration(1);
 
+        test1.setAudioStreamDuration(1);
+
         test1.setDirection(CallDirection.INBOUND);
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
@@ -608,6 +632,8 @@ public class CallResultTest {
         test2.setDuration(1);
 
         test2.setConnectDuration(1);
+
+        test2.setAudioStreamDuration(1);
 
         test2.setDirection(CallDirection.INBOUND);
 
@@ -658,6 +684,8 @@ public class CallResultTest {
 
         test1.setConnectDuration(1);
 
+        test1.setAudioStreamDuration(1);
+
         test1.setDirection(CallDirection.OUTBOUND_API);
 
         test1.setAnsweredBy(AnsweredBy.MACHINE);
@@ -700,6 +728,8 @@ public class CallResultTest {
         test2.setDuration(0);
 
         test2.setConnectDuration(0);
+
+        test2.setAudioStreamDuration(0);
 
         test2.setDirection(CallDirection.INBOUND);
 
@@ -749,6 +779,8 @@ public class CallResultTest {
         test1.setDuration(1);
 
         test1.setConnectDuration(1);
+
+        test1.setAudioStreamDuration(1);
 
         test1.setDirection(CallDirection.INBOUND);
 

@@ -754,7 +754,12 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
-        RecordingList response = this.apiInstance.listCallRecordings(callId, dateCreated);
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
+        RecordingList response =
+                this.apiInstance.listCallRecordings(callId, dateCreated, startTime, endTime);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingList.class);
     }
@@ -766,6 +771,8 @@ public class DefaultApiTest {
      */
     @Test
     public void listCallsTest() throws ApiException {
+
+        Boolean usedAudioStream = usedAudioStreamBooleanTestValue();
 
         Boolean active = activeBooleanTestValue();
 
@@ -789,6 +796,7 @@ public class DefaultApiTest {
 
         CallList response =
                 this.apiInstance.listCalls(
+                        usedAudioStream,
                         active,
                         to,
                         from,
@@ -817,8 +825,13 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
         RecordingList response =
-                this.apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
+                this.apiInstance.listConferenceRecordings(
+                        conferenceId, callId, dateCreated, startTime, endTime);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingList.class);
     }
@@ -969,7 +982,13 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
-        RecordingList response = this.apiInstance.listRecordings(callId, conferenceId, dateCreated);
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
+        RecordingList response =
+                this.apiInstance.listRecordings(
+                        callId, conferenceId, dateCreated, startTime, endTime);
         // TODO: test validations
         assertEquals(response.getClass(), RecordingList.class);
     }
@@ -1514,7 +1533,12 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
-        RecordingList response = this.apiInstance.listCallRecordings(callId, dateCreated);
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
+        RecordingList response =
+                this.apiInstance.listCallRecordings(callId, dateCreated, startTime, endTime);
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Calls/{callId}/Recordings"
                         .replaceAll(
@@ -1535,6 +1559,8 @@ public class DefaultApiTest {
      */
     @Test
     public void listCallsGetNextPageTest() throws ApiException {
+
+        Boolean usedAudioStream = usedAudioStreamBooleanTestValue();
 
         Boolean active = activeBooleanTestValue();
 
@@ -1558,6 +1584,7 @@ public class DefaultApiTest {
 
         CallList response =
                 this.apiInstance.listCalls(
+                        usedAudioStream,
                         active,
                         to,
                         from,
@@ -1592,8 +1619,13 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
         RecordingList response =
-                this.apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
+                this.apiInstance.listConferenceRecordings(
+                        conferenceId, callId, dateCreated, startTime, endTime);
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Conferences/{conferenceId}/Recordings"
                         .replaceAll(
@@ -1789,7 +1821,13 @@ public class DefaultApiTest {
 
         String dateCreated = dateCreatedStringTestValue();
 
-        RecordingList response = this.apiInstance.listRecordings(callId, conferenceId, dateCreated);
+        String startTime = startTimeStringTestValue();
+
+        String endTime = endTimeStringTestValue();
+
+        RecordingList response =
+                this.apiInstance.listRecordings(
+                        callId, conferenceId, dateCreated, startTime, endTime);
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Recordings"
                         .replaceAll(
@@ -2256,5 +2294,9 @@ public class DefaultApiTest {
         ReplaceBlobRequest request = new ReplaceBlobRequest();
         request.setBlob(new Object());
         return request;
+    }
+
+    private Boolean usedAudioStreamBooleanTestValue() {
+        return true;
     }
 }
