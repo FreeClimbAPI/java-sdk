@@ -78,6 +78,11 @@ public class QueueResult {
     @SerializedName(SERIALIZED_NAME_AVERAGE_QUEUE_REMOVAL_TIME)
     private Integer averageQueueRemovalTime;
 
+    public static final String SERIALIZED_NAME_AVERAGE_WAIT_TIME = "averageWaitTime";
+
+    @SerializedName(SERIALIZED_NAME_AVERAGE_WAIT_TIME)
+    private Integer averageWaitTime;
+
     public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
 
     @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
@@ -313,6 +318,27 @@ public class QueueResult {
         this.averageQueueRemovalTime = averageQueueRemovalTime;
     }
 
+    public QueueResult averageWaitTime(Integer averageWaitTime) {
+
+        this.averageWaitTime = averageWaitTime;
+        return this;
+    }
+
+    /**
+     * The average wait time (in seconds) of all Calls in the Queue.
+     *
+     * @return averageWaitTime
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "The average wait time (in seconds) of all Calls in the Queue.")
+    public Integer getAverageWaitTime() {
+        return averageWaitTime;
+    }
+
+    public void setAverageWaitTime(Integer averageWaitTime) {
+        this.averageWaitTime = averageWaitTime;
+    }
+
     public QueueResult subresourceUris(Object subresourceUris) {
 
         this.subresourceUris = subresourceUris;
@@ -353,6 +379,7 @@ public class QueueResult {
                 && Objects.equals(this.maxSize, queueResult.maxSize)
                 && Objects.equals(this.currentSize, queueResult.currentSize)
                 && Objects.equals(this.averageQueueRemovalTime, queueResult.averageQueueRemovalTime)
+                && Objects.equals(this.averageWaitTime, queueResult.averageWaitTime)
                 && Objects.equals(this.subresourceUris, queueResult.subresourceUris);
     }
 
@@ -378,6 +405,7 @@ public class QueueResult {
                 maxSize,
                 currentSize,
                 averageQueueRemovalTime,
+                averageWaitTime,
                 subresourceUris);
     }
 
@@ -404,6 +432,7 @@ public class QueueResult {
         sb.append("    averageQueueRemovalTime: ")
                 .append(toIndentedString(averageQueueRemovalTime))
                 .append("\n");
+        sb.append("    averageWaitTime: ").append(toIndentedString(averageWaitTime)).append("\n");
         sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");
         sb.append("}");
         return sb.toString();

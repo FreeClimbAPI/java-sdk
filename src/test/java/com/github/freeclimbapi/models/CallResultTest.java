@@ -17,6 +17,7 @@ import com.github.freeclimbapi.models.*;
 import java.util.*;
 import org.junit.Assert;
 import org.junit.Test;
+import org.threeten.bp.OffsetDateTime;
 
 /** Model tests for CallResult */
 public class CallResultTest {
@@ -53,6 +54,22 @@ public class CallResultTest {
 
         model.setRevision(1);
         Assert.assertEquals(1, (int) model.getRevision());
+    }
+
+    /** Test the property 'dateCreatedISO' */
+    @Test
+    public void dateCreatedISOTest() {
+        model.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        Assert.assertEquals(
+                OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getDateCreatedISO());
+    }
+
+    /** Test the property 'dateUpdatedISO' */
+    @Test
+    public void dateUpdatedISOTest() {
+        model.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        Assert.assertEquals(
+                OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getDateUpdatedISO());
     }
 
     /** Test the property 'callId' */
@@ -132,6 +149,13 @@ public class CallResultTest {
         Assert.assertEquals("TEST_STRING", model.getStartTime());
     }
 
+    /** Test the property 'startTimeISO' */
+    @Test
+    public void startTimeISOTest() {
+        model.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getStartTimeISO());
+    }
+
     /** Test the property 'connectTime' */
     @Test
     public void connectTimeTest() {
@@ -140,12 +164,27 @@ public class CallResultTest {
         Assert.assertEquals("TEST_STRING", model.getConnectTime());
     }
 
+    /** Test the property 'connectTimeISO' */
+    @Test
+    public void connectTimeISOTest() {
+        model.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        Assert.assertEquals(
+                OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getConnectTimeISO());
+    }
+
     /** Test the property 'endTime' */
     @Test
     public void endTimeTest() {
 
         model.setEndTime("TEST_STRING");
         Assert.assertEquals("TEST_STRING", model.getEndTime());
+    }
+
+    /** Test the property 'endTimeISO' */
+    @Test
+    public void endTimeISOTest() {
+        model.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+        Assert.assertEquals(OffsetDateTime.parse("2022-07-05T15:17:05Z"), model.getEndTimeISO());
     }
 
     /** Test the property 'duration' */
@@ -192,13 +231,28 @@ public class CallResultTest {
         Assert.assertEquals(model.getAnsweredBy(), AnsweredBy.MACHINE);
     }
 
+    /** Test the property 'callerName' */
+    @Test
+    public void callerNameTest() {
+
+        model.setCallerName("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getCallerName());
+    }
+
+    /** Test the property 'webRTC' */
+    @Test
+    public void webRTCTest() {
+        model.setWebRTC(false);
+        Assert.assertEquals(false, model.getWebRTC());
+    }
+
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
 
-        Object object = new Object();
+        CallResultAllOfSubresourceUris object = new CallResultAllOfSubresourceUris();
         model.setSubresourceUris(object);
-        Assert.assertEquals(object.getClass(), Object.class);
+        Assert.assertEquals(object.getClass(), CallResultAllOfSubresourceUris.class);
     }
 
     /** Test the property 'applicationId' */
@@ -222,6 +276,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -238,9 +296,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -252,8 +316,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -266,6 +335,10 @@ public class CallResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
+
+        test2.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test2.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setCallId("TS");
 
@@ -283,9 +356,15 @@ public class CallResultTest {
 
         test2.setStartTime("TS");
 
+        test2.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setConnectTime("TS");
 
+        test2.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setEndTime("TS");
+
+        test2.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setDuration(1);
 
@@ -297,8 +376,13 @@ public class CallResultTest {
 
         test2.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject2 = testObjectObject;
-        test2.setSubresourceUris(testObjectObject2);
+        test2.setCallerName("TS");
+
+        test2.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject2 =
+                testCallResultAllOfSubresourceUrisObject;
+        test2.setSubresourceUris(testCallResultAllOfSubresourceUrisObject2);
 
         test2.setApplicationId("TS");
 
@@ -318,6 +402,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -334,9 +422,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -348,8 +442,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.MACHINE);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -362,6 +461,10 @@ public class CallResultTest {
         test2.setDateUpdated("TS2");
 
         test2.setRevision(0);
+
+        test2.setDateCreatedISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
+        test2.setDateUpdatedISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setCallId("TS2");
 
@@ -379,9 +482,15 @@ public class CallResultTest {
 
         test2.setStartTime("TS2");
 
+        test2.setStartTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setConnectTime("TS2");
 
+        test2.setConnectTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setEndTime("TS2");
+
+        test2.setEndTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setDuration(0);
 
@@ -393,8 +502,13 @@ public class CallResultTest {
 
         test2.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject2 = new Object();
-        test2.setSubresourceUris(testObjectObject2);
+        test2.setCallerName("TS2");
+
+        test2.setWebRTC(false);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject2 =
+                new CallResultAllOfSubresourceUris();
+        test2.setSubresourceUris(testCallResultAllOfSubresourceUrisObject2);
 
         test2.setApplicationId("TS2");
 
@@ -414,6 +528,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -430,9 +548,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -444,8 +568,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -466,6 +595,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -482,9 +615,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -496,8 +635,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -510,6 +654,10 @@ public class CallResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
+
+        test2.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test2.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setCallId("TS");
 
@@ -527,9 +675,15 @@ public class CallResultTest {
 
         test2.setStartTime("TS");
 
+        test2.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setConnectTime("TS");
 
+        test2.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setEndTime("TS");
+
+        test2.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setDuration(1);
 
@@ -541,8 +695,13 @@ public class CallResultTest {
 
         test2.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject2 = testObjectObject;
-        test2.setSubresourceUris(testObjectObject2);
+        test2.setCallerName("TS");
+
+        test2.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject2 =
+                testCallResultAllOfSubresourceUrisObject;
+        test2.setSubresourceUris(testCallResultAllOfSubresourceUrisObject2);
 
         test2.setApplicationId("TS");
 
@@ -564,6 +723,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -580,9 +743,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -594,8 +763,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -608,6 +782,10 @@ public class CallResultTest {
         test2.setDateUpdated("TS");
 
         test2.setRevision(1);
+
+        test2.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test2.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setCallId("TS");
 
@@ -625,9 +803,15 @@ public class CallResultTest {
 
         test2.setStartTime("TS");
 
+        test2.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setConnectTime("TS");
 
+        test2.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test2.setEndTime("TS");
+
+        test2.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test2.setDuration(1);
 
@@ -639,8 +823,13 @@ public class CallResultTest {
 
         test2.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject2 = testObjectObject;
-        test2.setSubresourceUris(testObjectObject2);
+        test2.setCallerName("TS");
+
+        test2.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject2 =
+                testCallResultAllOfSubresourceUrisObject;
+        test2.setSubresourceUris(testCallResultAllOfSubresourceUrisObject2);
 
         test2.setApplicationId("TS");
 
@@ -660,6 +849,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -676,9 +869,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -690,8 +889,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.MACHINE);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 
@@ -704,6 +908,10 @@ public class CallResultTest {
         test2.setDateUpdated("TS2");
 
         test2.setRevision(0);
+
+        test2.setDateCreatedISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
+        test2.setDateUpdatedISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setCallId("TS2");
 
@@ -721,9 +929,15 @@ public class CallResultTest {
 
         test2.setStartTime("TS2");
 
+        test2.setStartTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setConnectTime("TS2");
 
+        test2.setConnectTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
+
         test2.setEndTime("TS2");
+
+        test2.setEndTimeISO(OffsetDateTime.parse("2024-07-05T15:17:05Z"));
 
         test2.setDuration(0);
 
@@ -735,8 +949,13 @@ public class CallResultTest {
 
         test2.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject2 = new Object();
-        test2.setSubresourceUris(testObjectObject2);
+        test2.setCallerName("TS2");
+
+        test2.setWebRTC(false);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject2 =
+                new CallResultAllOfSubresourceUris();
+        test2.setSubresourceUris(testCallResultAllOfSubresourceUrisObject2);
 
         test2.setApplicationId("TS2");
 
@@ -756,6 +975,10 @@ public class CallResultTest {
 
         test1.setRevision(1);
 
+        test1.setDateCreatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
+        test1.setDateUpdatedISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setCallId("TS");
 
         test1.setParentCallId("TS");
@@ -772,9 +995,15 @@ public class CallResultTest {
 
         test1.setStartTime("TS");
 
+        test1.setStartTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setConnectTime("TS");
 
+        test1.setConnectTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
+
         test1.setEndTime("TS");
+
+        test1.setEndTimeISO(OffsetDateTime.parse("2022-07-05T15:17:05Z"));
 
         test1.setDuration(1);
 
@@ -786,8 +1015,13 @@ public class CallResultTest {
 
         test1.setAnsweredBy(AnsweredBy.HUMAN);
 
-        Object testObjectObject = new Object();
-        test1.setSubresourceUris(testObjectObject);
+        test1.setCallerName("TS");
+
+        test1.setWebRTC(true);
+
+        CallResultAllOfSubresourceUris testCallResultAllOfSubresourceUrisObject =
+                new CallResultAllOfSubresourceUris();
+        test1.setSubresourceUris(testCallResultAllOfSubresourceUrisObject);
 
         test1.setApplicationId("TS");
 

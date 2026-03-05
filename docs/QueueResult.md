@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **maxSize** | **Integer** | The maximum number of Calls permitted in the Queue. Default is 100. Maximum is 1000. |  [optional]
 **currentSize** | **Integer** | Count of Calls currently in the Queue. |  [optional]
 **averageQueueRemovalTime** | **Integer** | The average amount of time (in seconds) for a call to be removed from the queue. |  [optional]
+**averageWaitTime** | **Integer** | The average wait time (in seconds) of all Calls in the Queue. |  [optional]
 **subresourceUris** | **Object** | List of subresources for this Queue (which includes Queue members). |  [optional]
 
 

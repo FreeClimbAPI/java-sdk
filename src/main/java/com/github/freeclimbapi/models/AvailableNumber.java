@@ -42,6 +42,11 @@ public class AvailableNumber {
     @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
     private String phoneNumber;
 
+    public static final String SERIALIZED_NAME_ALIAS = "alias";
+
+    @SerializedName(SERIALIZED_NAME_ALIAS)
+    private String alias;
+
     public static final String SERIALIZED_NAME_REGION = "region";
 
     @SerializedName(SERIALIZED_NAME_REGION)
@@ -120,6 +125,27 @@ public class AvailableNumber {
         this.phoneNumber = phoneNumber;
     }
 
+    public AvailableNumber alias(String alias) {
+
+        this.alias = alias;
+        return this;
+    }
+
+    /**
+     * A nicely-formatted version of the phone number.
+     *
+     * @return alias
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "A nicely-formatted version of the phone number.")
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
     public AvailableNumber region(String region) {
 
         this.region = region;
@@ -174,6 +200,7 @@ public class AvailableNumber {
         return Objects.equals(this.capabilities, availableNumber.capabilities)
                 && Objects.equals(this.campaignId, availableNumber.campaignId)
                 && Objects.equals(this.phoneNumber, availableNumber.phoneNumber)
+                && Objects.equals(this.alias, availableNumber.alias)
                 && Objects.equals(this.region, availableNumber.region)
                 && Objects.equals(this.country, availableNumber.country);
     }
@@ -189,7 +216,7 @@ public class AvailableNumber {
 
     @Override
     public int hashCode() {
-        return Objects.hash(capabilities, campaignId, phoneNumber, region, country);
+        return Objects.hash(capabilities, campaignId, phoneNumber, alias, region, country);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -206,6 +233,7 @@ public class AvailableNumber {
         sb.append("    capabilities: ").append(toIndentedString(capabilities)).append("\n");
         sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
         sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+        sb.append("    alias: ").append(toIndentedString(alias)).append("\n");
         sb.append("    region: ").append(toIndentedString(region)).append("\n");
         sb.append("    country: ").append(toIndentedString(country)).append("\n");
         sb.append("}");

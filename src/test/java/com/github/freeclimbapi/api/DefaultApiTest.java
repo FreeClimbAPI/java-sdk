@@ -794,6 +794,8 @@ public class DefaultApiTest {
 
         Integer riskScoreMax = riskScoreMaxIntegerTestValue();
 
+        Boolean webRTC = webRTCBooleanTestValue();
+
         CallList response =
                 this.apiInstance.listCalls(
                         usedAudioStream,
@@ -806,7 +808,8 @@ public class DefaultApiTest {
                         parentCallId,
                         applicationId,
                         riskScoreMin,
-                        riskScoreMax);
+                        riskScoreMax,
+                        webRTC);
         // TODO: test validations
         assertEquals(response.getClass(), CallList.class);
     }
@@ -1582,6 +1585,8 @@ public class DefaultApiTest {
 
         Integer riskScoreMax = riskScoreMaxIntegerTestValue();
 
+        Boolean webRTC = webRTCBooleanTestValue();
+
         CallList response =
                 this.apiInstance.listCalls(
                         usedAudioStream,
@@ -1594,7 +1599,8 @@ public class DefaultApiTest {
                         parentCallId,
                         applicationId,
                         riskScoreMin,
-                        riskScoreMax);
+                        riskScoreMax,
+                        webRTC);
         String localVarNextPageUri =
                 "/Accounts/{accountId}/Calls"
                         .replaceAll(
@@ -2297,6 +2303,10 @@ public class DefaultApiTest {
     }
 
     private Boolean usedAudioStreamBooleanTestValue() {
+        return true;
+    }
+
+    private Boolean webRTCBooleanTestValue() {
         return true;
     }
 }

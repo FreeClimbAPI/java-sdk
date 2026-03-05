@@ -27,6 +27,7 @@ docs/CallDirection.md
 docs/CallEndedReason.md
 docs/CallList.md
 docs/CallResult.md
+docs/CallResultAllOfSubresourceUris.md
 docs/CallStatus.md
 docs/CallStatusWebhook.md
 docs/Capabilities.md
@@ -198,6 +199,7 @@ src/main/java/com/github/freeclimbapi/CallDirection.java
 src/main/java/com/github/freeclimbapi/CallEndedReason.java
 src/main/java/com/github/freeclimbapi/CallList.java
 src/main/java/com/github/freeclimbapi/CallResult.java
+src/main/java/com/github/freeclimbapi/CallResultAllOfSubresourceUris.java
 src/main/java/com/github/freeclimbapi/CallStatus.java
 src/main/java/com/github/freeclimbapi/CallStatusWebhook.java
 src/main/java/com/github/freeclimbapi/Capabilities.java
@@ -367,6 +369,7 @@ src/test/java/com/github/freeclimbapi/CallControlWebhookTest.java
 src/test/java/com/github/freeclimbapi/CallDirectionTest.java
 src/test/java/com/github/freeclimbapi/CallEndedReasonTest.java
 src/test/java/com/github/freeclimbapi/CallListTest.java
+src/test/java/com/github/freeclimbapi/CallResultAllOfSubresourceUrisTest.java
 src/test/java/com/github/freeclimbapi/CallResultTest.java
 src/test/java/com/github/freeclimbapi/CallStatusTest.java
 src/test/java/com/github/freeclimbapi/CallStatusWebhookTest.java

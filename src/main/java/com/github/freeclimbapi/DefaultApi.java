@@ -7275,6 +7275,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7296,6 +7297,7 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
@@ -7376,6 +7378,10 @@ public class DefaultApi {
                     localVarApiClient.parameterToPair("riskScoreMax", riskScoreMax));
         }
 
+        if (webRTC != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("webRTC", webRTC));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -7420,6 +7426,7 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback _callback)
             throws ApiException {
 
@@ -7436,6 +7443,7 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
+                        webRTC,
                         _callback);
         return localVarCall;
     }
@@ -7461,6 +7469,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @return CallList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7481,7 +7490,8 @@ public class DefaultApi {
             String parentCallId,
             List<String> applicationId,
             Integer riskScoreMin,
-            Integer riskScoreMax)
+            Integer riskScoreMax,
+            Boolean webRTC)
             throws ApiException {
         ApiResponse<CallList> localVarResp =
                 listCallsWithHttpInfo(
@@ -7495,7 +7505,8 @@ public class DefaultApi {
                         parentCallId,
                         applicationId,
                         riskScoreMin,
-                        riskScoreMax);
+                        riskScoreMax,
+                        webRTC);
         return localVarResp.getData();
     }
 
@@ -7520,6 +7531,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @return ApiResponse&lt;CallList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7540,7 +7552,8 @@ public class DefaultApi {
             String parentCallId,
             List<String> applicationId,
             Integer riskScoreMin,
-            Integer riskScoreMax)
+            Integer riskScoreMax,
+            Boolean webRTC)
             throws ApiException {
         okhttp3.Call localVarCall =
                 listCallsValidateBeforeCall(
@@ -7555,6 +7568,7 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
+                        webRTC,
                         null);
         Type localVarReturnType = new TypeToken<CallList>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7581,6 +7595,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -7603,6 +7618,7 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback<CallList> _callback)
             throws ApiException {
 
@@ -7619,6 +7635,7 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
+                        webRTC,
                         _callback);
         Type localVarReturnType = new TypeToken<CallList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);

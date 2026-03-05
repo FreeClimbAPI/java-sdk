@@ -19,6 +19,7 @@ import java.util.*;
 import java.util.Arrays;
 import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
+import org.threeten.bp.OffsetDateTime;
 
 /** CallResult */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -46,6 +47,16 @@ public class CallResult {
 
     @SerializedName(SERIALIZED_NAME_REVISION)
     private Integer revision;
+
+    public static final String SERIALIZED_NAME_DATE_CREATED_I_S_O = "dateCreatedISO";
+
+    @SerializedName(SERIALIZED_NAME_DATE_CREATED_I_S_O)
+    private OffsetDateTime dateCreatedISO;
+
+    public static final String SERIALIZED_NAME_DATE_UPDATED_I_S_O = "dateUpdatedISO";
+
+    @SerializedName(SERIALIZED_NAME_DATE_UPDATED_I_S_O)
+    private OffsetDateTime dateUpdatedISO;
 
     public static final String SERIALIZED_NAME_CALL_ID = "callId";
 
@@ -87,15 +98,30 @@ public class CallResult {
     @SerializedName(SERIALIZED_NAME_START_TIME)
     private String startTime;
 
+    public static final String SERIALIZED_NAME_START_TIME_I_S_O = "startTimeISO";
+
+    @SerializedName(SERIALIZED_NAME_START_TIME_I_S_O)
+    private OffsetDateTime startTimeISO;
+
     public static final String SERIALIZED_NAME_CONNECT_TIME = "connectTime";
 
     @SerializedName(SERIALIZED_NAME_CONNECT_TIME)
     private String connectTime;
 
+    public static final String SERIALIZED_NAME_CONNECT_TIME_I_S_O = "connectTimeISO";
+
+    @SerializedName(SERIALIZED_NAME_CONNECT_TIME_I_S_O)
+    private OffsetDateTime connectTimeISO;
+
     public static final String SERIALIZED_NAME_END_TIME = "endTime";
 
     @SerializedName(SERIALIZED_NAME_END_TIME)
     private String endTime;
+
+    public static final String SERIALIZED_NAME_END_TIME_I_S_O = "endTimeISO";
+
+    @SerializedName(SERIALIZED_NAME_END_TIME_I_S_O)
+    private OffsetDateTime endTimeISO;
 
     public static final String SERIALIZED_NAME_DURATION = "duration";
 
@@ -122,10 +148,20 @@ public class CallResult {
     @SerializedName(SERIALIZED_NAME_ANSWERED_BY)
     private AnsweredBy answeredBy;
 
+    public static final String SERIALIZED_NAME_CALLER_NAME = "callerName";
+
+    @SerializedName(SERIALIZED_NAME_CALLER_NAME)
+    private String callerName;
+
+    public static final String SERIALIZED_NAME_WEB_R_T_C = "webRTC";
+
+    @SerializedName(SERIALIZED_NAME_WEB_R_T_C)
+    private Boolean webRTC;
+
     public static final String SERIALIZED_NAME_SUBRESOURCE_URIS = "subresourceUris";
 
     @SerializedName(SERIALIZED_NAME_SUBRESOURCE_URIS)
-    private Object subresourceUris;
+    private CallResultAllOfSubresourceUris subresourceUris;
 
     public static final String SERIALIZED_NAME_APPLICATION_ID = "applicationId";
 
@@ -228,6 +264,55 @@ public class CallResult {
 
     public void setRevision(Integer revision) {
         this.revision = revision;
+    }
+
+    public CallResult dateCreatedISO(OffsetDateTime dateCreatedISO) {
+
+        this.dateCreatedISO = dateCreatedISO;
+        return this;
+    }
+
+    /**
+     * The date that this resource was created in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z).
+     *
+     * @return dateCreatedISO
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was created in ISO 8601 format (e.g.,"
+                            + " 2022-01-01T00:00:00.000Z).")
+    public OffsetDateTime getDateCreatedISO() {
+        return dateCreatedISO;
+    }
+
+    public void setDateCreatedISO(OffsetDateTime dateCreatedISO) {
+        this.dateCreatedISO = dateCreatedISO;
+    }
+
+    public CallResult dateUpdatedISO(OffsetDateTime dateUpdatedISO) {
+
+        this.dateUpdatedISO = dateUpdatedISO;
+        return this;
+    }
+
+    /**
+     * The date that this resource was last updated in ISO 8601 format (e.g.,
+     * 2022-01-01T00:00:00.000Z).
+     *
+     * @return dateUpdatedISO
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "The date that this resource was last updated in ISO 8601 format (e.g.,"
+                            + " 2022-01-01T00:00:00.000Z).")
+    public OffsetDateTime getDateUpdatedISO() {
+        return dateUpdatedISO;
+    }
+
+    public void setDateUpdatedISO(OffsetDateTime dateUpdatedISO) {
+        this.dateUpdatedISO = dateUpdatedISO;
     }
 
     public CallResult callId(String callId) {
@@ -408,6 +493,31 @@ public class CallResult {
         this.startTime = startTime;
     }
 
+    public CallResult startTimeISO(OffsetDateTime startTimeISO) {
+
+        this.startTimeISO = startTimeISO;
+        return this;
+    }
+
+    /**
+     * Start time of the Call in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z). Empty if the Call
+     * has not yet been dialed.
+     *
+     * @return startTimeISO
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Start time of the Call in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z)."
+                            + " Empty if the Call has not yet been dialed.")
+    public OffsetDateTime getStartTimeISO() {
+        return startTimeISO;
+    }
+
+    public void setStartTimeISO(OffsetDateTime startTimeISO) {
+        this.startTimeISO = startTimeISO;
+    }
+
     public CallResult connectTime(String connectTime) {
 
         this.connectTime = connectTime;
@@ -433,6 +543,31 @@ public class CallResult {
         this.connectTime = connectTime;
     }
 
+    public CallResult connectTimeISO(OffsetDateTime connectTimeISO) {
+
+        this.connectTimeISO = connectTimeISO;
+        return this;
+    }
+
+    /**
+     * Time the Call was answered in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z). Empty if the
+     * Call has not yet been dialed.
+     *
+     * @return connectTimeISO
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "Time the Call was answered in ISO 8601 format (e.g.,"
+                        + " 2022-01-01T00:00:00.000Z). Empty if the Call has not yet been dialed.")
+    public OffsetDateTime getConnectTimeISO() {
+        return connectTimeISO;
+    }
+
+    public void setConnectTimeISO(OffsetDateTime connectTimeISO) {
+        this.connectTimeISO = connectTimeISO;
+    }
+
     public CallResult endTime(String endTime) {
 
         this.endTime = endTime;
@@ -456,6 +591,31 @@ public class CallResult {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public CallResult endTimeISO(OffsetDateTime endTimeISO) {
+
+        this.endTimeISO = endTimeISO;
+        return this;
+    }
+
+    /**
+     * End time of the Call in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z). Empty if the Call
+     * did not complete successfully.
+     *
+     * @return endTimeISO
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value =
+                    "End time of the Call in ISO 8601 format (e.g., 2022-01-01T00:00:00.000Z)."
+                            + " Empty if the Call did not complete successfully.")
+    public OffsetDateTime getEndTimeISO() {
+        return endTimeISO;
+    }
+
+    public void setEndTimeISO(OffsetDateTime endTimeISO) {
+        this.endTimeISO = endTimeISO;
     }
 
     public CallResult duration(Integer duration) {
@@ -577,28 +737,66 @@ public class CallResult {
         this.answeredBy = answeredBy;
     }
 
-    public CallResult subresourceUris(Object subresourceUris) {
+    public CallResult callerName(String callerName) {
+
+        this.callerName = callerName;
+        return this;
+    }
+
+    /**
+     * The caller ID name (CNAM) for this Call. Empty if unavailable.
+     *
+     * @return callerName
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "The caller ID name (CNAM) for this Call. Empty if unavailable.")
+    public String getCallerName() {
+        return callerName;
+    }
+
+    public void setCallerName(String callerName) {
+        this.callerName = callerName;
+    }
+
+    public CallResult webRTC(Boolean webRTC) {
+
+        this.webRTC = webRTC;
+        return this;
+    }
+
+    /**
+     * Indicates whether this Call was initiated via WebRTC.
+     *
+     * @return webRTC
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "Indicates whether this Call was initiated via WebRTC.")
+    public Boolean getWebRTC() {
+        return webRTC;
+    }
+
+    public void setWebRTC(Boolean webRTC) {
+        this.webRTC = webRTC;
+    }
+
+    public CallResult subresourceUris(CallResultAllOfSubresourceUris subresourceUris) {
 
         this.subresourceUris = subresourceUris;
         return this;
     }
 
     /**
-     * The list of subresources for this Call. These include things like logs and recordings
-     * associated with the Call.
+     * Get subresourceUris
      *
      * @return subresourceUris
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(
-            value =
-                    "The list of subresources for this Call. These include things like logs and"
-                            + " recordings associated with the Call.")
-    public Object getSubresourceUris() {
+    @ApiModelProperty(value = "")
+    public CallResultAllOfSubresourceUris getSubresourceUris() {
         return subresourceUris;
     }
 
-    public void setSubresourceUris(Object subresourceUris) {
+    public void setSubresourceUris(CallResultAllOfSubresourceUris subresourceUris) {
         this.subresourceUris = subresourceUris;
     }
 
@@ -636,6 +834,8 @@ public class CallResult {
                 && Objects.equals(this.dateCreated, callResult.dateCreated)
                 && Objects.equals(this.dateUpdated, callResult.dateUpdated)
                 && Objects.equals(this.revision, callResult.revision)
+                && Objects.equals(this.dateCreatedISO, callResult.dateCreatedISO)
+                && Objects.equals(this.dateUpdatedISO, callResult.dateUpdatedISO)
                 && Objects.equals(this.callId, callResult.callId)
                 && Objects.equals(this.parentCallId, callResult.parentCallId)
                 && Objects.equals(this.accountId, callResult.accountId)
@@ -644,13 +844,18 @@ public class CallResult {
                 && Objects.equals(this.phoneNumberId, callResult.phoneNumberId)
                 && Objects.equals(this.status, callResult.status)
                 && Objects.equals(this.startTime, callResult.startTime)
+                && Objects.equals(this.startTimeISO, callResult.startTimeISO)
                 && Objects.equals(this.connectTime, callResult.connectTime)
+                && Objects.equals(this.connectTimeISO, callResult.connectTimeISO)
                 && Objects.equals(this.endTime, callResult.endTime)
+                && Objects.equals(this.endTimeISO, callResult.endTimeISO)
                 && Objects.equals(this.duration, callResult.duration)
                 && Objects.equals(this.connectDuration, callResult.connectDuration)
                 && Objects.equals(this.audioStreamDuration, callResult.audioStreamDuration)
                 && Objects.equals(this.direction, callResult.direction)
                 && Objects.equals(this.answeredBy, callResult.answeredBy)
+                && Objects.equals(this.callerName, callResult.callerName)
+                && Objects.equals(this.webRTC, callResult.webRTC)
                 && Objects.equals(this.subresourceUris, callResult.subresourceUris)
                 && Objects.equals(this.applicationId, callResult.applicationId);
     }
@@ -671,6 +876,8 @@ public class CallResult {
                 dateCreated,
                 dateUpdated,
                 revision,
+                dateCreatedISO,
+                dateUpdatedISO,
                 callId,
                 parentCallId,
                 accountId,
@@ -679,13 +886,18 @@ public class CallResult {
                 phoneNumberId,
                 status,
                 startTime,
+                startTimeISO,
                 connectTime,
+                connectTimeISO,
                 endTime,
+                endTimeISO,
                 duration,
                 connectDuration,
                 audioStreamDuration,
                 direction,
                 answeredBy,
+                callerName,
+                webRTC,
                 subresourceUris,
                 applicationId);
     }
@@ -705,6 +917,8 @@ public class CallResult {
         sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
         sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
         sb.append("    revision: ").append(toIndentedString(revision)).append("\n");
+        sb.append("    dateCreatedISO: ").append(toIndentedString(dateCreatedISO)).append("\n");
+        sb.append("    dateUpdatedISO: ").append(toIndentedString(dateUpdatedISO)).append("\n");
         sb.append("    callId: ").append(toIndentedString(callId)).append("\n");
         sb.append("    parentCallId: ").append(toIndentedString(parentCallId)).append("\n");
         sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
@@ -713,8 +927,11 @@ public class CallResult {
         sb.append("    phoneNumberId: ").append(toIndentedString(phoneNumberId)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
+        sb.append("    startTimeISO: ").append(toIndentedString(startTimeISO)).append("\n");
         sb.append("    connectTime: ").append(toIndentedString(connectTime)).append("\n");
+        sb.append("    connectTimeISO: ").append(toIndentedString(connectTimeISO)).append("\n");
         sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
+        sb.append("    endTimeISO: ").append(toIndentedString(endTimeISO)).append("\n");
         sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
         sb.append("    connectDuration: ").append(toIndentedString(connectDuration)).append("\n");
         sb.append("    audioStreamDuration: ")
@@ -722,6 +939,8 @@ public class CallResult {
                 .append("\n");
         sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
         sb.append("    answeredBy: ").append(toIndentedString(answeredBy)).append("\n");
+        sb.append("    callerName: ").append(toIndentedString(callerName)).append("\n");
+        sb.append("    webRTC: ").append(toIndentedString(webRTC)).append("\n");
         sb.append("    subresourceUris: ").append(toIndentedString(subresourceUris)).append("\n");
         sb.append("    applicationId: ").append(toIndentedString(applicationId)).append("\n");
         sb.append("}");

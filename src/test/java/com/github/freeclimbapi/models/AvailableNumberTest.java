@@ -48,6 +48,14 @@ public class AvailableNumberTest {
         Assert.assertEquals("TEST_STRING", model.getPhoneNumber());
     }
 
+    /** Test the property 'alias' */
+    @Test
+    public void aliasTest() {
+
+        model.setAlias("TEST_STRING");
+        Assert.assertEquals("TEST_STRING", model.getAlias());
+    }
+
     /** Test the property 'region' */
     @Test
     public void regionTest() {
@@ -76,6 +84,8 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
+        test1.setAlias("TS");
+
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -88,6 +98,8 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
+
+        test2.setAlias("TS");
 
         test2.setRegion("TS");
 
@@ -108,6 +120,8 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
+        test1.setAlias("TS");
+
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -120,6 +134,8 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
+
+        test2.setAlias("TS2");
 
         test2.setRegion("TS2");
 
@@ -139,6 +155,8 @@ public class AvailableNumberTest {
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
+
+        test1.setAlias("TS");
 
         test1.setRegion("TS");
 
@@ -160,6 +178,8 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
+        test1.setAlias("TS");
+
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -172,6 +192,8 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
+
+        test2.setAlias("TS");
 
         test2.setRegion("TS");
 
@@ -194,6 +216,8 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
+        test1.setAlias("TS");
+
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -206,6 +230,8 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS");
 
         test2.setPhoneNumber("TS");
+
+        test2.setAlias("TS");
 
         test2.setRegion("TS");
 
@@ -226,6 +252,8 @@ public class AvailableNumberTest {
 
         test1.setPhoneNumber("TS");
 
+        test1.setAlias("TS");
+
         test1.setRegion("TS");
 
         test1.setCountry("TS");
@@ -238,6 +266,8 @@ public class AvailableNumberTest {
         test2.setCampaignId("TS2");
 
         test2.setPhoneNumber("TS2");
+
+        test2.setAlias("TS2");
 
         test2.setRegion("TS2");
 
@@ -257,6 +287,8 @@ public class AvailableNumberTest {
         test1.setCampaignId("TS");
 
         test1.setPhoneNumber("TS");
+
+        test1.setAlias("TS");
 
         test1.setRegion("TS");
 

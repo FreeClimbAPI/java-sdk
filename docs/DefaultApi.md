@@ -3171,7 +3171,7 @@ Name | Type | Description  | Notes
 
 <a name="listCalls"></a>
 # **listCalls**
-> CallList listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax)
+> CallList listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax, webRTC)
 
 List Calls
 
@@ -3216,8 +3216,10 @@ public class Example {
 
     Integer riskScoreMax = 56; // Integer | The maximum riskScore that should be included in the list.
 
+    Boolean webRTC = false; // Boolean | Only show Calls that were originated via WebRTC.
+
     try {
-      CallList result = apiInstance.listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax);
+      CallList result = apiInstance.listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax, webRTC);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listCalls");
@@ -3245,6 +3247,7 @@ Name | Type | Description  | Notes
  **applicationId** | [**List&lt;String&gt;**](String.md)| Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. | [optional]
  **riskScoreMin** | **Integer**| The minimum riskScore that should be included in the list. | [optional]
  **riskScoreMax** | **Integer**| The maximum riskScore that should be included in the list. | [optional]
+ **webRTC** | **Boolean**| Only show Calls that were originated via WebRTC. | [optional] [default to false]
 
 
 ### Return type
