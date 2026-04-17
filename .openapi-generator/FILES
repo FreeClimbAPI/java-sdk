@@ -16,6 +16,8 @@ docs/AnsweredBy.md
 docs/ApplicationList.md
 docs/ApplicationRequest.md
 docs/ApplicationResult.md
+docs/AudioStream.md
+docs/AudioStreamWebhook.md
 docs/AvailableNumber.md
 docs/AvailableNumberList.md
 docs/BargeInReason.md
@@ -188,6 +190,8 @@ src/main/java/com/github/freeclimbapi/ApiResponse.java
 src/main/java/com/github/freeclimbapi/ApplicationList.java
 src/main/java/com/github/freeclimbapi/ApplicationRequest.java
 src/main/java/com/github/freeclimbapi/ApplicationResult.java
+src/main/java/com/github/freeclimbapi/AudioStream.java
+src/main/java/com/github/freeclimbapi/AudioStreamWebhook.java
 src/main/java/com/github/freeclimbapi/AvailableNumber.java
 src/main/java/com/github/freeclimbapi/AvailableNumberList.java
 src/main/java/com/github/freeclimbapi/BargeInReason.java
@@ -359,6 +363,8 @@ src/test/java/com/github/freeclimbapi/AnsweredByTest.java
 src/test/java/com/github/freeclimbapi/ApplicationListTest.java
 src/test/java/com/github/freeclimbapi/ApplicationRequestTest.java
 src/test/java/com/github/freeclimbapi/ApplicationResultTest.java
+src/test/java/com/github/freeclimbapi/AudioStreamTest.java
+src/test/java/com/github/freeclimbapi/AudioStreamWebhookTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberListTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberTest.java
 src/test/java/com/github/freeclimbapi/BargeInReasonTest.java

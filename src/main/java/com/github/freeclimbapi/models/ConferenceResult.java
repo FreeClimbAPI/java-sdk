@@ -266,12 +266,16 @@ public class ConferenceResult {
     }
 
     /**
-     * Get playBeep
+     * Setting that controls when a beep is played. One of: always, never, entryOnly, exitOnly.
+     * Defaults to always.
      *
      * @return playBeep
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @ApiModelProperty(
+            value =
+                    "Setting that controls when a beep is played. One of: always, never, entryOnly,"
+                            + " exitOnly. Defaults to always.")
     public PlayBeep getPlayBeep() {
         return playBeep;
     }

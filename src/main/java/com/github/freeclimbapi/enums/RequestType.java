@@ -48,6 +48,8 @@ public enum RequestType {
 
     ADD_TO_QUEUE_NOTIFICATION("addToQueueNotification"),
 
+    AUDIO_STREAM("audioStream"),
+
     REMOVE_FROM_QUEUE_NOTIFICATION("removeFromQueueNotification"),
 
     CALL_STATUS("callStatus"),
