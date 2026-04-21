@@ -381,7 +381,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     * <tr><td> 201 </td><td> Successfuly created queue </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call createAQueueCall(QueueRequest queueRequest, final ApiCallback _callback)
@@ -463,7 +463,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     * <tr><td> 201 </td><td> Successfuly created queue </td><td>  -  </td></tr>
      * </table>
      */
     public QueueResult createAQueue(QueueRequest queueRequest) throws ApiException {
@@ -481,7 +481,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     * <tr><td> 201 </td><td> Successfuly created queue </td><td>  -  </td></tr>
      * </table>
      */
     public ApiResponse<QueueResult> createAQueueWithHttpInfo(QueueRequest queueRequest)
@@ -502,7 +502,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successfuly created queue </td><td>  -  </td></tr>
+     * <tr><td> 201 </td><td> Successfuly created queue </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call createAQueueAsync(
@@ -7046,6 +7046,10 @@ public class DefaultApi {
      * @param callId String that uniquely identifies this call resource. (required)
      * @param dateCreated Only show recordings created on the specified date, in the form
      *     *YYYY-MM-DD*. (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7056,7 +7060,12 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listCallRecordingsCall(
-            String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -7094,6 +7103,14 @@ public class DefaultApi {
                     localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
+        if (startTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startTime", startTime));
+        }
+
+        if (endTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endTime", endTime));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -7127,7 +7144,12 @@ public class DefaultApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call listCallRecordingsValidateBeforeCall(
-            String callId, String dateCreated, final ApiCallback _callback) throws ApiException {
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
+            throws ApiException {
 
         // verify the required parameter 'callId' is set
         if (callId == null) {
@@ -7136,7 +7158,8 @@ public class DefaultApi {
                             + " listCallRecordings(Async)");
         }
 
-        okhttp3.Call localVarCall = listCallRecordingsCall(callId, dateCreated, _callback);
+        okhttp3.Call localVarCall =
+                listCallRecordingsCall(callId, dateCreated, startTime, endTime, _callback);
         return localVarCall;
     }
 
@@ -7146,6 +7169,10 @@ public class DefaultApi {
      * @param callId String that uniquely identifies this call resource. (required)
      * @param dateCreated Only show recordings created on the specified date, in the form
      *     *YYYY-MM-DD*. (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return RecordingList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7155,9 +7182,11 @@ public class DefaultApi {
      * <tr><td> 200 </td><td> List of recordings for a call </td><td>  -  </td></tr>
      * </table>
      */
-    public RecordingList listCallRecordings(String callId, String dateCreated) throws ApiException {
+    public RecordingList listCallRecordings(
+            String callId, String dateCreated, String startTime, String endTime)
+            throws ApiException {
         ApiResponse<RecordingList> localVarResp =
-                listCallRecordingsWithHttpInfo(callId, dateCreated);
+                listCallRecordingsWithHttpInfo(callId, dateCreated, startTime, endTime);
         return localVarResp.getData();
     }
 
@@ -7167,6 +7196,10 @@ public class DefaultApi {
      * @param callId String that uniquely identifies this call resource. (required)
      * @param dateCreated Only show recordings created on the specified date, in the form
      *     *YYYY-MM-DD*. (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7177,8 +7210,10 @@ public class DefaultApi {
      * </table>
      */
     public ApiResponse<RecordingList> listCallRecordingsWithHttpInfo(
-            String callId, String dateCreated) throws ApiException {
-        okhttp3.Call localVarCall = listCallRecordingsValidateBeforeCall(callId, dateCreated, null);
+            String callId, String dateCreated, String startTime, String endTime)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                listCallRecordingsValidateBeforeCall(callId, dateCreated, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -7189,6 +7224,10 @@ public class DefaultApi {
      * @param callId String that uniquely identifies this call resource. (required)
      * @param dateCreated Only show recordings created on the specified date, in the form
      *     *YYYY-MM-DD*. (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -7200,11 +7239,16 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listCallRecordingsAsync(
-            String callId, String dateCreated, final ApiCallback<RecordingList> _callback)
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback<RecordingList> _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
-                listCallRecordingsValidateBeforeCall(callId, dateCreated, _callback);
+                listCallRecordingsValidateBeforeCall(
+                        callId, dateCreated, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -7213,6 +7257,8 @@ public class DefaultApi {
     /**
      * Build call for listCalls
      *
+     * @param usedAudioStream If usedAudioStream is set to true then all calls that have a
+     *     audioStreamDuration &gt; 0 will be returned (optional, default to false)
      * @param active If active is set to true then all calls of the nature queued, ringing,
      *     inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
@@ -7229,6 +7275,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7239,6 +7286,7 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listCallsCall(
+            Boolean usedAudioStream,
             Boolean active,
             String to,
             String from,
@@ -7249,6 +7297,7 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
@@ -7279,6 +7328,11 @@ public class DefaultApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (usedAudioStream != null) {
+            localVarQueryParams.addAll(
+                    localVarApiClient.parameterToPair("usedAudioStream", usedAudioStream));
+        }
 
         if (active != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("active", active));
@@ -7324,6 +7378,10 @@ public class DefaultApi {
                     localVarApiClient.parameterToPair("riskScoreMax", riskScoreMax));
         }
 
+        if (webRTC != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("webRTC", webRTC));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -7357,6 +7415,7 @@ public class DefaultApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call listCallsValidateBeforeCall(
+            Boolean usedAudioStream,
             Boolean active,
             String to,
             String from,
@@ -7367,11 +7426,13 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
                 listCallsCall(
+                        usedAudioStream,
                         active,
                         to,
                         from,
@@ -7382,6 +7443,7 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
+                        webRTC,
                         _callback);
         return localVarCall;
     }
@@ -7389,6 +7451,8 @@ public class DefaultApi {
     /**
      * List Calls
      *
+     * @param usedAudioStream If usedAudioStream is set to true then all calls that have a
+     *     audioStreamDuration &gt; 0 will be returned (optional, default to false)
      * @param active If active is set to true then all calls of the nature queued, ringing,
      *     inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
@@ -7405,6 +7469,7 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @return CallList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7415,6 +7480,7 @@ public class DefaultApi {
      * </table>
      */
     public CallList listCalls(
+            Boolean usedAudioStream,
             Boolean active,
             String to,
             String from,
@@ -7424,65 +7490,12 @@ public class DefaultApi {
             String parentCallId,
             List<String> applicationId,
             Integer riskScoreMin,
-            Integer riskScoreMax)
+            Integer riskScoreMax,
+            Boolean webRTC)
             throws ApiException {
         ApiResponse<CallList> localVarResp =
                 listCallsWithHttpInfo(
-                        active,
-                        to,
-                        from,
-                        status,
-                        startTime,
-                        endTime,
-                        parentCallId,
-                        applicationId,
-                        riskScoreMin,
-                        riskScoreMax);
-        return localVarResp.getData();
-    }
-
-    /**
-     * List Calls
-     *
-     * @param active If active is set to true then all calls of the nature queued, ringing,
-     *     inProgress are returned in the query. (optional, default to false)
-     * @param to Only show Calls to this phone number. (optional)
-     * @param from Only show Calls from this phone number. (optional)
-     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
-     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
-     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
-     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
-     *     hh:mm:ss. (optional)
-     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
-     *     hh:mm:ss. (optional)
-     * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
-     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
-     *     be repeated to return calls from multiple Applications. (optional)
-     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
-     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
-     * @return ApiResponse&lt;CallList&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-     *     response body
-     * @http.response.details
-     *     <table summary="Response Details" border="1">
-     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
-     * </table>
-     */
-    public ApiResponse<CallList> listCallsWithHttpInfo(
-            Boolean active,
-            String to,
-            String from,
-            CallStatus status,
-            String startTime,
-            String endTime,
-            String parentCallId,
-            List<String> applicationId,
-            Integer riskScoreMin,
-            Integer riskScoreMax)
-            throws ApiException {
-        okhttp3.Call localVarCall =
-                listCallsValidateBeforeCall(
+                        usedAudioStream,
                         active,
                         to,
                         from,
@@ -7493,14 +7506,15 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
-                        null);
-        Type localVarReturnType = new TypeToken<CallList>() {}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+                        webRTC);
+        return localVarResp.getData();
     }
 
     /**
-     * List Calls (asynchronously)
+     * List Calls
      *
+     * @param usedAudioStream If usedAudioStream is set to true then all calls that have a
+     *     audioStreamDuration &gt; 0 will be returned (optional, default to false)
      * @param active If active is set to true then all calls of the nature queued, ringing,
      *     inProgress are returned in the query. (optional, default to false)
      * @param to Only show Calls to this phone number. (optional)
@@ -7517,6 +7531,71 @@ public class DefaultApi {
      *     be repeated to return calls from multiple Applications. (optional)
      * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
      * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
+     * @return ApiResponse&lt;CallList&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td> Successful retrieved call list </td><td>  -  </td></tr>
+     * </table>
+     */
+    public ApiResponse<CallList> listCallsWithHttpInfo(
+            Boolean usedAudioStream,
+            Boolean active,
+            String to,
+            String from,
+            CallStatus status,
+            String startTime,
+            String endTime,
+            String parentCallId,
+            List<String> applicationId,
+            Integer riskScoreMin,
+            Integer riskScoreMax,
+            Boolean webRTC)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                listCallsValidateBeforeCall(
+                        usedAudioStream,
+                        active,
+                        to,
+                        from,
+                        status,
+                        startTime,
+                        endTime,
+                        parentCallId,
+                        applicationId,
+                        riskScoreMin,
+                        riskScoreMax,
+                        webRTC,
+                        null);
+        Type localVarReturnType = new TypeToken<CallList>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * List Calls (asynchronously)
+     *
+     * @param usedAudioStream If usedAudioStream is set to true then all calls that have a
+     *     audioStreamDuration &gt; 0 will be returned (optional, default to false)
+     * @param active If active is set to true then all calls of the nature queued, ringing,
+     *     inProgress are returned in the query. (optional, default to false)
+     * @param to Only show Calls to this phone number. (optional)
+     * @param from Only show Calls from this phone number. (optional)
+     * @param status Only show Calls currently in this status. May be &#x60;queued&#x60;,
+     *     &#x60;ringing&#x60;, &#x60;inProgress&#x60;, &#x60;canceled&#x60;, &#x60;completed&#x60;,
+     *     &#x60;failed&#x60;, &#x60;busy&#x60;, or &#x60;noAnswer&#x60;. (optional)
+     * @param startTime Only show Calls that started at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Calls that ended at or before this time, given as YYYY-MM- DD
+     *     hh:mm:ss. (optional)
+     * @param parentCallId Only show Calls spawned by the call with this ID. (optional)
+     * @param applicationId Only show calls belonging to the given applicationId. This parameter can
+     *     be repeated to return calls from multiple Applications. (optional)
+     * @param riskScoreMin The minimum riskScore that should be included in the list. (optional)
+     * @param riskScoreMax The maximum riskScore that should be included in the list. (optional)
+     * @param webRTC Only show Calls that were originated via WebRTC. (optional, default to false)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -7528,6 +7607,7 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listCallsAsync(
+            Boolean usedAudioStream,
             Boolean active,
             String to,
             String from,
@@ -7538,11 +7618,13 @@ public class DefaultApi {
             List<String> applicationId,
             Integer riskScoreMin,
             Integer riskScoreMax,
+            Boolean webRTC,
             final ApiCallback<CallList> _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
                 listCallsValidateBeforeCall(
+                        usedAudioStream,
                         active,
                         to,
                         from,
@@ -7553,6 +7635,7 @@ public class DefaultApi {
                         applicationId,
                         riskScoreMin,
                         riskScoreMax,
+                        webRTC,
                         _callback);
         Type localVarReturnType = new TypeToken<CallList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -7566,6 +7649,10 @@ public class DefaultApi {
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -7576,7 +7663,12 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listConferenceRecordingsCall(
-            String conferenceId, String callId, String dateCreated, final ApiCallback _callback)
+            String conferenceId,
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
 
@@ -7619,6 +7711,14 @@ public class DefaultApi {
                     localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
+        if (startTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startTime", startTime));
+        }
+
+        if (endTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endTime", endTime));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -7652,7 +7752,12 @@ public class DefaultApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call listConferenceRecordingsValidateBeforeCall(
-            String conferenceId, String callId, String dateCreated, final ApiCallback _callback)
+            String conferenceId,
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
             throws ApiException {
 
         // verify the required parameter 'conferenceId' is set
@@ -7663,7 +7768,8 @@ public class DefaultApi {
         }
 
         okhttp3.Call localVarCall =
-                listConferenceRecordingsCall(conferenceId, callId, dateCreated, _callback);
+                listConferenceRecordingsCall(
+                        conferenceId, callId, dateCreated, startTime, endTime, _callback);
         return localVarCall;
     }
 
@@ -7674,6 +7780,10 @@ public class DefaultApi {
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return RecordingList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7684,9 +7794,15 @@ public class DefaultApi {
      * </table>
      */
     public RecordingList listConferenceRecordings(
-            String conferenceId, String callId, String dateCreated) throws ApiException {
+            String conferenceId,
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime)
+            throws ApiException {
         ApiResponse<RecordingList> localVarResp =
-                listConferenceRecordingsWithHttpInfo(conferenceId, callId, dateCreated);
+                listConferenceRecordingsWithHttpInfo(
+                        conferenceId, callId, dateCreated, startTime, endTime);
         return localVarResp.getData();
     }
 
@@ -7697,6 +7813,10 @@ public class DefaultApi {
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -7707,9 +7827,15 @@ public class DefaultApi {
      * </table>
      */
     public ApiResponse<RecordingList> listConferenceRecordingsWithHttpInfo(
-            String conferenceId, String callId, String dateCreated) throws ApiException {
+            String conferenceId,
+            String callId,
+            String dateCreated,
+            String startTime,
+            String endTime)
+            throws ApiException {
         okhttp3.Call localVarCall =
-                listConferenceRecordingsValidateBeforeCall(conferenceId, callId, dateCreated, null);
+                listConferenceRecordingsValidateBeforeCall(
+                        conferenceId, callId, dateCreated, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -7721,6 +7847,10 @@ public class DefaultApi {
      * @param callId Show only Recordings made during the Call with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -7735,12 +7865,14 @@ public class DefaultApi {
             String conferenceId,
             String callId,
             String dateCreated,
+            String startTime,
+            String endTime,
             final ApiCallback<RecordingList> _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
                 listConferenceRecordingsValidateBeforeCall(
-                        conferenceId, callId, dateCreated, _callback);
+                        conferenceId, callId, dateCreated, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -8916,6 +9048,10 @@ public class DefaultApi {
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -8926,7 +9062,12 @@ public class DefaultApi {
      * </table>
      */
     public okhttp3.Call listRecordingsCall(
-            String callId, String conferenceId, String dateCreated, final ApiCallback _callback)
+            String callId,
+            String conferenceId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
 
@@ -8971,6 +9112,14 @@ public class DefaultApi {
                     localVarApiClient.parameterToPair("dateCreated", dateCreated));
         }
 
+        if (startTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("startTime", startTime));
+        }
+
+        if (endTime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endTime", endTime));
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -9004,11 +9153,17 @@ public class DefaultApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call listRecordingsValidateBeforeCall(
-            String callId, String conferenceId, String dateCreated, final ApiCallback _callback)
+            String callId,
+            String conferenceId,
+            String dateCreated,
+            String startTime,
+            String endTime,
+            final ApiCallback _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
-                listRecordingsCall(callId, conferenceId, dateCreated, _callback);
+                listRecordingsCall(
+                        callId, conferenceId, dateCreated, startTime, endTime, _callback);
         return localVarCall;
     }
 
@@ -9019,6 +9174,10 @@ public class DefaultApi {
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return RecordingList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -9028,10 +9187,15 @@ public class DefaultApi {
      * <tr><td> 200 </td><td> List of Recordings </td><td>  -  </td></tr>
      * </table>
      */
-    public RecordingList listRecordings(String callId, String conferenceId, String dateCreated)
+    public RecordingList listRecordings(
+            String callId,
+            String conferenceId,
+            String dateCreated,
+            String startTime,
+            String endTime)
             throws ApiException {
         ApiResponse<RecordingList> localVarResp =
-                listRecordingsWithHttpInfo(callId, conferenceId, dateCreated);
+                listRecordingsWithHttpInfo(callId, conferenceId, dateCreated, startTime, endTime);
         return localVarResp.getData();
     }
 
@@ -9042,6 +9206,10 @@ public class DefaultApi {
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @return ApiResponse&lt;RecordingList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -9052,9 +9220,15 @@ public class DefaultApi {
      * </table>
      */
     public ApiResponse<RecordingList> listRecordingsWithHttpInfo(
-            String callId, String conferenceId, String dateCreated) throws ApiException {
+            String callId,
+            String conferenceId,
+            String dateCreated,
+            String startTime,
+            String endTime)
+            throws ApiException {
         okhttp3.Call localVarCall =
-                listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, null);
+                listRecordingsValidateBeforeCall(
+                        callId, conferenceId, dateCreated, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -9066,6 +9240,10 @@ public class DefaultApi {
      * @param conferenceId Show only Recordings made during the conference with this ID. (optional)
      * @param dateCreated Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
      *     (optional)
+     * @param startTime Only show Recordings created at or after this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
+     * @param endTime Only show Recordings created at or before this time, given as YYYY-MM-DD
+     *     hh:mm:ss. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -9080,11 +9258,14 @@ public class DefaultApi {
             String callId,
             String conferenceId,
             String dateCreated,
+            String startTime,
+            String endTime,
             final ApiCallback<RecordingList> _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
-                listRecordingsValidateBeforeCall(callId, conferenceId, dateCreated, _callback);
+                listRecordingsValidateBeforeCall(
+                        callId, conferenceId, dateCreated, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<RecordingList>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

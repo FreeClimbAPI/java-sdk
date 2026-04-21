@@ -103,6 +103,14 @@ public class QueueResultTest {
         Assert.assertEquals(1, (int) model.getAverageQueueRemovalTime());
     }
 
+    /** Test the property 'averageWaitTime' */
+    @Test
+    public void averageWaitTimeTest() {
+
+        model.setAverageWaitTime(1);
+        Assert.assertEquals(1, (int) model.getAverageWaitTime());
+    }
+
     /** Test the property 'subresourceUris' */
     @Test
     public void subresourceUrisTest() {
@@ -137,6 +145,8 @@ public class QueueResultTest {
 
         test1.setAverageQueueRemovalTime(1);
 
+        test1.setAverageWaitTime(1);
+
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
 
@@ -161,6 +171,8 @@ public class QueueResultTest {
         test2.setCurrentSize(1);
 
         test2.setAverageQueueRemovalTime(1);
+
+        test2.setAverageWaitTime(1);
 
         Object testObjectObject2 = testObjectObject;
         test2.setSubresourceUris(testObjectObject2);
@@ -193,6 +205,8 @@ public class QueueResultTest {
 
         test1.setAverageQueueRemovalTime(1);
 
+        test1.setAverageWaitTime(1);
+
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
 
@@ -217,6 +231,8 @@ public class QueueResultTest {
         test2.setCurrentSize(0);
 
         test2.setAverageQueueRemovalTime(0);
+
+        test2.setAverageWaitTime(0);
 
         Object testObjectObject2 = new Object();
         test2.setSubresourceUris(testObjectObject2);
@@ -248,6 +264,8 @@ public class QueueResultTest {
         test1.setCurrentSize(1);
 
         test1.setAverageQueueRemovalTime(1);
+
+        test1.setAverageWaitTime(1);
 
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
@@ -281,6 +299,8 @@ public class QueueResultTest {
 
         test1.setAverageQueueRemovalTime(1);
 
+        test1.setAverageWaitTime(1);
+
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
 
@@ -305,6 +325,8 @@ public class QueueResultTest {
         test2.setCurrentSize(1);
 
         test2.setAverageQueueRemovalTime(1);
+
+        test2.setAverageWaitTime(1);
 
         Object testObjectObject2 = testObjectObject;
         test2.setSubresourceUris(testObjectObject2);
@@ -339,6 +361,8 @@ public class QueueResultTest {
 
         test1.setAverageQueueRemovalTime(1);
 
+        test1.setAverageWaitTime(1);
+
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
 
@@ -363,6 +387,8 @@ public class QueueResultTest {
         test2.setCurrentSize(1);
 
         test2.setAverageQueueRemovalTime(1);
+
+        test2.setAverageWaitTime(1);
 
         Object testObjectObject2 = testObjectObject;
         test2.setSubresourceUris(testObjectObject2);
@@ -395,6 +421,8 @@ public class QueueResultTest {
 
         test1.setAverageQueueRemovalTime(1);
 
+        test1.setAverageWaitTime(1);
+
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);
 
@@ -419,6 +447,8 @@ public class QueueResultTest {
         test2.setCurrentSize(0);
 
         test2.setAverageQueueRemovalTime(0);
+
+        test2.setAverageWaitTime(0);
 
         Object testObjectObject2 = new Object();
         test2.setSubresourceUris(testObjectObject2);
@@ -450,6 +480,8 @@ public class QueueResultTest {
         test1.setCurrentSize(1);
 
         test1.setAverageQueueRemovalTime(1);
+
+        test1.setAverageWaitTime(1);
 
         Object testObjectObject = new Object();
         test1.setSubresourceUris(testObjectObject);

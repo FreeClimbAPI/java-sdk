@@ -127,6 +127,46 @@ public class JSON {
                                     }
                                 })
                         .registerTypeSelector(
+                                AudioStream.class,
+                                new TypeSelector<AudioStream>() {
+                                    @Override
+                                    public Class<? extends AudioStream> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (AudioStream.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    AudioStream.getDiscriminatorValue(),
+                                                    AudioStream.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "AudioStream", AudioStream.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "command"));
+                                    }
+                                })
+                        .registerTypeSelector(
+                                AudioStreamWebhook.class,
+                                new TypeSelector<AudioStreamWebhook>() {
+                                    @Override
+                                    public Class<? extends AudioStreamWebhook> getClassForElement(
+                                            JsonElement readElement) {
+                                        Map<String, Class> classByDiscriminatorValue =
+                                                new HashMap<String, Class>();
+                                        if (AudioStreamWebhook.getDiscriminatorValue() != null) {
+                                            classByDiscriminatorValue.put(
+                                                    AudioStreamWebhook.getDiscriminatorValue(),
+                                                    AudioStreamWebhook.class);
+                                        }
+                                        classByDiscriminatorValue.put(
+                                                "AudioStreamWebhook", AudioStreamWebhook.class);
+                                        return getClassByDiscriminator(
+                                                classByDiscriminatorValue,
+                                                getDiscriminatorValue(readElement, "requestType"));
+                                    }
+                                })
+                        .registerTypeSelector(
                                 CallControlWebhook.class,
                                 new TypeSelector<CallControlWebhook>() {
                                     @Override
@@ -640,6 +680,8 @@ public class JSON {
                                         classByDiscriminatorValue.put(
                                                 "AddToConference", AddToConference.class);
                                         classByDiscriminatorValue.put(
+                                                "AudioStream", AudioStream.class);
+                                        classByDiscriminatorValue.put(
                                                 "CreateConference", CreateConference.class);
                                         classByDiscriminatorValue.put("Dequeue", Dequeue.class);
                                         classByDiscriminatorValue.put("Enqueue", Enqueue.class);
@@ -1109,6 +1151,8 @@ public class JSON {
                                         classByDiscriminatorValue.put(
                                                 "addToQueueNotification",
                                                 AddToQueueNotificationWebhook.class);
+                                        classByDiscriminatorValue.put(
+                                                "audioStream", AudioStreamWebhook.class);
                                         classByDiscriminatorValue.put(
                                                 "callControl", CallControlWebhook.class);
                                         classByDiscriminatorValue.put(

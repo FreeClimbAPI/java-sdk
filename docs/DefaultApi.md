@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfuly created queue |  -  |
+**201** | Successfuly created queue |  -  |
 
 <a name="createAnApplication"></a>
 # **createAnApplication**
@@ -3094,7 +3094,7 @@ Name | Type | Description  | Notes
 
 <a name="listCallRecordings"></a>
 # **listCallRecordings**
-> RecordingList listCallRecordings(callId, dateCreated)
+> RecordingList listCallRecordings(callId, dateCreated, startTime, endTime)
 
 List Call Recordings
 
@@ -3123,8 +3123,12 @@ public class Example {
 
     String dateCreated = "dateCreated_example"; // String | Only show recordings created on the specified date, in the form *YYYY-MM-DD*.
 
+    String startTime = "startTime_example"; // String | Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss.
+
+    String endTime = "endTime_example"; // String | Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss.
+
     try {
-      RecordingList result = apiInstance.listCallRecordings(callId, dateCreated);
+      RecordingList result = apiInstance.listCallRecordings(callId, dateCreated, startTime, endTime);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listCallRecordings");
@@ -3143,6 +3147,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **callId** | **String**| String that uniquely identifies this call resource. |
  **dateCreated** | **String**| Only show recordings created on the specified date, in the form *YYYY-MM-DD*. | [optional]
+ **startTime** | **String**| Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
+ **endTime** | **String**| Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
 
 
 ### Return type
@@ -3165,7 +3171,7 @@ Name | Type | Description  | Notes
 
 <a name="listCalls"></a>
 # **listCalls**
-> CallList listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax)
+> CallList listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax, webRTC)
 
 List Calls
 
@@ -3190,6 +3196,8 @@ public class Example {
     
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     
+    Boolean usedAudioStream = false; // Boolean | If usedAudioStream is set to true then all calls that have a audioStreamDuration > 0 will be returned 
+
     Boolean active = false; // Boolean | If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query.
 
     String to = "to_example"; // String | Only show Calls to this phone number.
@@ -3208,8 +3216,10 @@ public class Example {
 
     Integer riskScoreMax = 56; // Integer | The maximum riskScore that should be included in the list.
 
+    Boolean webRTC = false; // Boolean | Only show Calls that were originated via WebRTC.
+
     try {
-      CallList result = apiInstance.listCalls(active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax);
+      CallList result = apiInstance.listCalls(usedAudioStream, active, to, from, status, startTime, endTime, parentCallId, applicationId, riskScoreMin, riskScoreMax, webRTC);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listCalls");
@@ -3226,6 +3236,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **usedAudioStream** | **Boolean**| If usedAudioStream is set to true then all calls that have a audioStreamDuration &gt; 0 will be returned  | [optional] [default to false]
  **active** | **Boolean**| If active is set to true then all calls of the nature queued, ringing, inProgress are returned in the query. | [optional] [default to false]
  **to** | **String**| Only show Calls to this phone number. | [optional]
  **from** | **String**| Only show Calls from this phone number. | [optional]
@@ -3236,6 +3247,7 @@ Name | Type | Description  | Notes
  **applicationId** | [**List&lt;String&gt;**](String.md)| Only show calls belonging to the given applicationId. This parameter can be repeated to return calls from multiple Applications. | [optional]
  **riskScoreMin** | **Integer**| The minimum riskScore that should be included in the list. | [optional]
  **riskScoreMax** | **Integer**| The maximum riskScore that should be included in the list. | [optional]
+ **webRTC** | **Boolean**| Only show Calls that were originated via WebRTC. | [optional] [default to false]
 
 
 ### Return type
@@ -3258,7 +3270,7 @@ Name | Type | Description  | Notes
 
 <a name="listConferenceRecordings"></a>
 # **listConferenceRecordings**
-> RecordingList listConferenceRecordings(conferenceId, callId, dateCreated)
+> RecordingList listConferenceRecordings(conferenceId, callId, dateCreated, startTime, endTime)
 
 List Conference Recordings
 
@@ -3289,8 +3301,12 @@ public class Example {
 
     String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
 
+    String startTime = "startTime_example"; // String | Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss.
+
+    String endTime = "endTime_example"; // String | Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss.
+
     try {
-      RecordingList result = apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated);
+      RecordingList result = apiInstance.listConferenceRecordings(conferenceId, callId, dateCreated, startTime, endTime);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listConferenceRecordings");
@@ -3310,6 +3326,8 @@ Name | Type | Description  | Notes
  **conferenceId** | **String**| Show only Recordings made during the conference with this ID. |
  **callId** | **String**| Show only Recordings made during the Call with this ID. | [optional]
  **dateCreated** | **String**| Only show Recordings created on this date, formatted as *YYYY-MM-DD*. | [optional]
+ **startTime** | **String**| Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
+ **endTime** | **String**| Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
 
 
 ### Return type
@@ -3731,7 +3749,7 @@ Name | Type | Description  | Notes
 
 <a name="listRecordings"></a>
 # **listRecordings**
-> RecordingList listRecordings(callId, conferenceId, dateCreated)
+> RecordingList listRecordings(callId, conferenceId, dateCreated, startTime, endTime)
 
 List Recordings
 
@@ -3762,8 +3780,12 @@ public class Example {
 
     String dateCreated = "dateCreated_example"; // String | Only show Recordings created on this date, formatted as *YYYY-MM-DD*.
 
+    String startTime = "startTime_example"; // String | Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss.
+
+    String endTime = "endTime_example"; // String | Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss.
+
     try {
-      RecordingList result = apiInstance.listRecordings(callId, conferenceId, dateCreated);
+      RecordingList result = apiInstance.listRecordings(callId, conferenceId, dateCreated, startTime, endTime);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#listRecordings");
@@ -3783,6 +3805,8 @@ Name | Type | Description  | Notes
  **callId** | **String**| Show only Recordings made during the Call with this ID. | [optional]
  **conferenceId** | **String**| Show only Recordings made during the conference with this ID. | [optional]
  **dateCreated** | **String**| Only show Recordings created on this date, formatted as *YYYY-MM-DD*. | [optional]
+ **startTime** | **String**| Only show Recordings created at or after this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
+ **endTime** | **String**| Only show Recordings created at or before this time, given as YYYY-MM-DD hh:mm:ss. | [optional]
 
 
 ### Return type

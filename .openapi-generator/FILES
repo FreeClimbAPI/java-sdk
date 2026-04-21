@@ -16,6 +16,8 @@ docs/AnsweredBy.md
 docs/ApplicationList.md
 docs/ApplicationRequest.md
 docs/ApplicationResult.md
+docs/AudioStream.md
+docs/AudioStreamWebhook.md
 docs/AvailableNumber.md
 docs/AvailableNumberList.md
 docs/BargeInReason.md
@@ -27,6 +29,7 @@ docs/CallDirection.md
 docs/CallEndedReason.md
 docs/CallList.md
 docs/CallResult.md
+docs/CallResultAllOfSubresourceUris.md
 docs/CallStatus.md
 docs/CallStatusWebhook.md
 docs/Capabilities.md
@@ -187,6 +190,8 @@ src/main/java/com/github/freeclimbapi/ApiResponse.java
 src/main/java/com/github/freeclimbapi/ApplicationList.java
 src/main/java/com/github/freeclimbapi/ApplicationRequest.java
 src/main/java/com/github/freeclimbapi/ApplicationResult.java
+src/main/java/com/github/freeclimbapi/AudioStream.java
+src/main/java/com/github/freeclimbapi/AudioStreamWebhook.java
 src/main/java/com/github/freeclimbapi/AvailableNumber.java
 src/main/java/com/github/freeclimbapi/AvailableNumberList.java
 src/main/java/com/github/freeclimbapi/BargeInReason.java
@@ -198,6 +203,7 @@ src/main/java/com/github/freeclimbapi/CallDirection.java
 src/main/java/com/github/freeclimbapi/CallEndedReason.java
 src/main/java/com/github/freeclimbapi/CallList.java
 src/main/java/com/github/freeclimbapi/CallResult.java
+src/main/java/com/github/freeclimbapi/CallResultAllOfSubresourceUris.java
 src/main/java/com/github/freeclimbapi/CallStatus.java
 src/main/java/com/github/freeclimbapi/CallStatusWebhook.java
 src/main/java/com/github/freeclimbapi/Capabilities.java
@@ -357,6 +363,8 @@ src/test/java/com/github/freeclimbapi/AnsweredByTest.java
 src/test/java/com/github/freeclimbapi/ApplicationListTest.java
 src/test/java/com/github/freeclimbapi/ApplicationRequestTest.java
 src/test/java/com/github/freeclimbapi/ApplicationResultTest.java
+src/test/java/com/github/freeclimbapi/AudioStreamTest.java
+src/test/java/com/github/freeclimbapi/AudioStreamWebhookTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberListTest.java
 src/test/java/com/github/freeclimbapi/AvailableNumberTest.java
 src/test/java/com/github/freeclimbapi/BargeInReasonTest.java
@@ -367,6 +375,7 @@ src/test/java/com/github/freeclimbapi/CallControlWebhookTest.java
 src/test/java/com/github/freeclimbapi/CallDirectionTest.java
 src/test/java/com/github/freeclimbapi/CallEndedReasonTest.java
 src/test/java/com/github/freeclimbapi/CallListTest.java
+src/test/java/com/github/freeclimbapi/CallResultAllOfSubresourceUrisTest.java
 src/test/java/com/github/freeclimbapi/CallResultTest.java
 src/test/java/com/github/freeclimbapi/CallStatusTest.java
 src/test/java/com/github/freeclimbapi/CallStatusWebhookTest.java

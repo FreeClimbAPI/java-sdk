@@ -321,6 +321,29 @@ public class RequestTypeTest {
     }
 
     @Test
+    public void testAUDIO_STREAMShouldWork() {
+
+        RequestType test = RequestType.AUDIO_STREAM;
+        Assert.assertEquals(test.getClass(), RequestType.class);
+    }
+
+    @Test
+    public void testAUDIO_STREAMShouldSerializeToEnum() {
+
+        RequestType expectedValue = RequestType.AUDIO_STREAM;
+        RequestType calculatedValue = RequestType.fromValue("audioStream");
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
+    public void testAUDIO_STREAMShouldDeserializeToString() {
+        RequestType test = RequestType.AUDIO_STREAM;
+        String expectedValue = "audioStream";
+        String calculatedValue = test.toString();
+        Assert.assertEquals(expectedValue, calculatedValue);
+    }
+
+    @Test
     public void testREMOVE_FROM_QUEUE_NOTIFICATIONShouldWork() {
 
         RequestType test = RequestType.REMOVE_FROM_QUEUE_NOTIFICATION;
