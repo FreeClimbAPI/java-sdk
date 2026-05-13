@@ -9573,7 +9573,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     * <tr><td> 202 </td><td> Call that was created </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call makeACallCall(MakeCallRequest makeCallRequest, final ApiCallback _callback)
@@ -9655,7 +9655,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     * <tr><td> 202 </td><td> Call that was created </td><td>  -  </td></tr>
      * </table>
      */
     public CallResult makeACall(MakeCallRequest makeCallRequest) throws ApiException {
@@ -9673,7 +9673,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     * <tr><td> 202 </td><td> Call that was created </td><td>  -  </td></tr>
      * </table>
      */
     public ApiResponse<CallResult> makeACallWithHttpInfo(MakeCallRequest makeCallRequest)
@@ -9694,7 +9694,7 @@ public class DefaultApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td> Call that was created </td><td>  -  </td></tr>
+     * <tr><td> 202 </td><td> Call that was created </td><td>  -  </td></tr>
      * </table>
      */
     public okhttp3.Call makeACallAsync(
