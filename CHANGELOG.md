@@ -9,6 +9,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 None
 
+<a name="6.4.1"></a>
+
+## [6.4.1] - 2026-05-12
+
+### Changed
+
+- Response status code for Make A Call should be 202 instead of 200
+
 <a name="6.4.0"></a>
 
 ## [6.4.0] - 2026-04-06
