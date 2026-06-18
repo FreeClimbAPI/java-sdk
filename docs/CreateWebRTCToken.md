@@ -12,4 +12,16 @@ Name | Type | Description | Notes
 **uses** | **Integer** | number of times this token may be used for a WebRTC call | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CreateWebRTCToken;
+
+String json = "{\"to\":\"string\",\"from\":\"string\",\"uses\":0}";
+
+// create an instance of CreateWebRTCToken from a JSON string
+CreateWebRTCToken createWebRTCToken = new JSON().getGson().fromJson(json, CreateWebRTCToken.class);
+```
+
 

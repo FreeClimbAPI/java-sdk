@@ -45,6 +45,7 @@ public class FilterLogsRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "2020-06-22T19:42:53.376Z < timestamp < 2020-06-23T19:42:53.376Z",
             required = true,
             value =
                     "The filter query for retrieving logs. See **Performance Query Language**"

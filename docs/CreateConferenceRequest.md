@@ -14,4 +14,16 @@ Name | Type | Description | Notes
 **statusCallbackUrl** | **URI** | This URL is invoked when the status of the Conference changes. For more information, see **statusCallbackUrl** (below). | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CreateConferenceRequest;
+
+String json = "{\"alias\":\"Customer Conference\",\"playBeep\":\"always\",\"record\":false,\"waitUrl\":\"https://www.myapp.com/waitMusic\",\"statusCallbackUrl\":\"https://www.myapp.com/conferenceStatus\"}";
+
+// create an instance of CreateConferenceRequest from a JSON string
+CreateConferenceRequest createConferenceRequest = new JSON().getGson().fromJson(json, CreateConferenceRequest.class);
+```
+
 

@@ -90,7 +90,7 @@ public class ExportRequest {
      * @return format
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @ApiModelProperty(example = "[\"messageId\",\"dateUpdated\",\"status\"]", value = "")
     public List<String> getFormat() {
         return format;
     }
@@ -132,7 +132,7 @@ public class ExportRequest {
      * @return query
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @ApiModelProperty(example = "{\"direction\":\"inbound\"}", value = "")
     public Object getQuery() {
         return query;
     }

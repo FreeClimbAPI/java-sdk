@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.OutDial;
+
+String json = "{\"command\":\"OutDial\",\"actionUrl\":\"https://www.example.com\",\"callConnectUrl\":\"https://www.example.com\",\"callingNumber\":\"string\",\"destination\":\"string\",\"ifMachine\":\"redirect\",\"ifMachineUrl\":\"https://www.example.com\",\"sendDigits\":\"string\",\"statusCallbackUrl\":\"https://www.example.com\",\"timeout\":0,\"privacyMode\":false}";
+
+// create an instance of OutDial from a JSON string
+OutDial outDial = new JSON().getGson().fromJson(json, OutDial.class);
+```
+
 

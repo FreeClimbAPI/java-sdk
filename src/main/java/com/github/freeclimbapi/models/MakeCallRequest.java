@@ -93,6 +93,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "+12025551234",
             required = true,
             value =
                     "Phone number to use as the caller ID. This can be: (a) The To or From number"
@@ -118,7 +119,10 @@ public class MakeCallRequest {
      * @return to
      */
     @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "Phone number to place the Call to.")
+    @ApiModelProperty(
+            example = "+13035559876",
+            required = true,
+            value = "Phone number to place the Call to.")
     public String getTo() {
         return to;
     }
@@ -148,6 +152,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "AP0123456789abcdefABCDEF0123456789abcdef03",
             value =
                     "Required if no `parentCallId` or `callConnectUrl` has been provided. ID of the"
                         + " application FreeClimb should use to handle this phone call. FreeClimb"
@@ -185,6 +190,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "1234#",
             value =
                     "String of digits to dial after connecting to the number. It can include digits"
                         + " `0-9`, `*`, and `#`, and allows embedding a pause between the output of"
@@ -214,6 +220,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "redirect",
             value =
                     "Specifies how FreeClimb should handle this Call if an answering machine"
                             + " answers it.")
@@ -241,6 +248,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/ifMachine",
             value =
                     "This attribute specifies a URL to which FreeClimb will make a POST request"
                         + " when an answering machine or a fax machine is detected. This URL is"
@@ -270,6 +278,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "30",
             value =
                     "Number of seconds that FreeClimb should allow the phone to ring before"
                         + " assuming there is no answer. Default is 30 seconds. Maximum allowed"
@@ -305,6 +314,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "CA0123456789abcdefABCDEF0123456789abcdef04",
             value =
                     "Required if no `applicationId` or `callConnectUrl` has been provided. The ID"
                         + " of the parent Call in the case that this new Call is meant to be"
@@ -340,6 +350,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "false",
             value =
                     "Activate privacy mode in order to obscure log data that can potentially expose"
                             + " private information.")
@@ -366,6 +377,7 @@ public class MakeCallRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/callConnect",
             value =
                     "The URL that FreeClimb should use to handle this phone call. If an"
                         + " applicationId or parentCallId have already been provided, this"

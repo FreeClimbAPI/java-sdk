@@ -22,4 +22,16 @@ Name | Type | Description | Notes
 **currentQueueSize** | **Integer** | Current number of enqueued Calls in this Queue. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.QueueWaitWebhook;
+
+String json = "{\"requestType\":\"queueWait\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"queuePosition\":\"string\",\"queueTime\":0,\"currentQueueSize\":0}";
+
+// create an instance of QueueWaitWebhook from a JSON string
+QueueWaitWebhook queueWaitWebhook = new JSON().getGson().fromJson(json, QueueWaitWebhook.class);
+```
+
 

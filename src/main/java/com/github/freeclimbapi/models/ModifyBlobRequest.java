@@ -49,7 +49,10 @@ public class ModifyBlobRequest {
      * @return blob
      */
     @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @ApiModelProperty(
+            example = "{\"firstName\":\"John\",\"lastName\":\"Doe\"}",
+            required = true,
+            value = "")
     public Object getBlob() {
         return blob;
     }
@@ -72,6 +75,7 @@ public class ModifyBlobRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "customer-profile",
             value =
                     "Custom identifier for this blob that is unique for the owning account. It will"
                             + " be set to the blobId by default if not provided.")

@@ -12,4 +12,16 @@ Name | Type | Description | Notes
 **applicationId** | **String** | ID of the application that should handle phone calls to the number. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.BuyIncomingNumberRequest;
+
+String json = "{\"phoneNumber\":\"+12025551234\",\"alias\":\"Main Office Line\",\"applicationId\":\"AP0123456789abcdefABCDEF0123456789abcdef03\"}";
+
+// create an instance of BuyIncomingNumberRequest from a JSON string
+BuyIncomingNumberRequest buyIncomingNumberRequest = new JSON().getGson().fromJson(json, BuyIncomingNumberRequest.class);
+```
+
 

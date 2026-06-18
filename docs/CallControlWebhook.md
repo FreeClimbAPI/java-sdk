@@ -15,4 +15,16 @@ Name | Type | Description | Notes
 **digits** | **String** | String of digits entered by the participant. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CallControlWebhook;
+
+String json = "{\"requestType\":\"callControl\",\"callId\":\"string\",\"accountId\":\"string\",\"conferenceId\":\"string\",\"digits\":\"string\"}";
+
+// create an instance of CallControlWebhook from a JSON string
+CallControlWebhook callControlWebhook = new JSON().getGson().fromJson(json, CallControlWebhook.class);
+```
+
 

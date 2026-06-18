@@ -67,7 +67,9 @@ public class CreateConferenceRequest {
      * @return alias
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "A description for this Conference. Maximum 64 characters.")
+    @ApiModelProperty(
+            example = "Customer Conference",
+            value = "A description for this Conference. Maximum 64 characters.")
     public String getAlias() {
         return alias;
     }
@@ -109,7 +111,7 @@ public class CreateConferenceRequest {
      * @return record
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Setting to `true` records the entire Conference.")
+    @ApiModelProperty(example = "false", value = "Setting to `true` records the entire Conference.")
     public Boolean getRecord() {
         return record;
     }
@@ -134,6 +136,7 @@ public class CreateConferenceRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/waitMusic",
             value =
                     "If specified, a URL for the audio file that provides custom hold music for the"
                         + " Conference when it is in the populated state. Otherwise, FreeClimb uses"
@@ -161,6 +164,7 @@ public class CreateConferenceRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "https://www.myapp.com/conferenceStatus",
             required = true,
             value =
                     "This URL is invoked when the status of the Conference changes. For more"

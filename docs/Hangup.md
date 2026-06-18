@@ -11,4 +11,16 @@ Name | Type | Description | Notes
 **reason** | **String** | The user defined reason for the hangup. In general, applications should use a set of enumerated values that are predefined to cover all exit points of the Call flows for the given application. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Hangup;
+
+String json = "{\"command\":\"Hangup\",\"reason\":\"string\"}";
+
+// create an instance of Hangup from a JSON string
+Hangup hangup = new JSON().getGson().fromJson(json, Hangup.class);
+```
+
 

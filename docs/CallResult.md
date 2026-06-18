@@ -37,4 +37,16 @@ Name | Type | Description | Notes
 **applicationId** | **String** | ApplicationId associated with the Call. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CallResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"dateCreatedISO\":\"2022-01-01T00:00:00Z\",\"dateUpdatedISO\":\"2022-01-01T00:00:00Z\",\"callId\":\"string\",\"parentCallId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"phoneNumberId\":\"string\",\"status\":\"queued\",\"startTime\":\"string\",\"startTimeISO\":\"2022-01-01T00:00:00Z\",\"connectTime\":\"string\",\"connectTimeISO\":\"2022-01-01T00:00:00Z\",\"endTime\":\"string\",\"endTimeISO\":\"2022-01-01T00:00:00Z\",\"duration\":0,\"connectDuration\":0,\"audioStreamDuration\":0,\"direction\":\"inbound\",\"answeredBy\":\"human\",\"callerName\":\"string\",\"webRTC\":false,\"subresourceUris\":{\"logs\":\"string\",\"recordings\":\"string\"},\"applicationId\":\"string\"}";
+
+// create an instance of CallResult from a JSON string
+CallResult callResult = new JSON().getGson().fromJson(json, CallResult.class);
+```
+
 

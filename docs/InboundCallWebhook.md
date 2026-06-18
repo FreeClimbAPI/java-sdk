@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **parentCallId** | **String** |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.InboundCallWebhook;
+
+String json = "{\"requestType\":\"inboundCall\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"parentCallId\":\"string\"}";
+
+// create an instance of InboundCallWebhook from a JSON string
+InboundCallWebhook inboundCallWebhook = new JSON().getGson().fromJson(json, InboundCallWebhook.class);
+```
+
 

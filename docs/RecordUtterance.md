@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RecordUtterance;
+
+String json = "{\"command\":\"RecordUtterance\",\"actionUrl\":\"https://www.example.com\",\"silenceTimeoutMs\":0,\"finishOnKey\":\"string\",\"maxLengthSec\":0,\"playBeep\":false,\"autoStart\":false,\"privacyMode\":false}";
+
+// create an instance of RecordUtterance from a JSON string
+RecordUtterance recordUtterance = new JSON().getGson().fromJson(json, RecordUtterance.class);
+```
+
 

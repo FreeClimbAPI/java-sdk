@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **uri** | **String** | The URI for this resource, relative to the API base URL |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MessageDeliveryWebhook;
+
+String json = "{\"requestType\":\"messageDelivery\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"text\":\"string\",\"direction\":\"string\",\"applicationId\":\"string\",\"status\":\"string\",\"phoneNumberId\":\"string\",\"uri\":\"string\"}";
+
+// create an instance of MessageDeliveryWebhook from a JSON string
+MessageDeliveryWebhook messageDeliveryWebhook = new JSON().getGson().fromJson(json, MessageDeliveryWebhook.class);
+```
+
 

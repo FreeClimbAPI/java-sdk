@@ -56,6 +56,7 @@ public class BuyIncomingNumberRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "+12025551234",
             required = true,
             value =
                     "Phone number to purchase in E.164 format (as returned in the list of Available"
@@ -80,7 +81,9 @@ public class BuyIncomingNumberRequest {
      * @return alias
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Description for this new incoming phone number (max 64 characters).")
+    @ApiModelProperty(
+            example = "Main Office Line",
+            value = "Description for this new incoming phone number (max 64 characters).")
     public String getAlias() {
         return alias;
     }
@@ -101,7 +104,9 @@ public class BuyIncomingNumberRequest {
      * @return applicationId
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "ID of the application that should handle phone calls to the number.")
+    @ApiModelProperty(
+            example = "AP0123456789abcdefABCDEF0123456789abcdef03",
+            value = "ID of the application that should handle phone calls to the number.")
     public String getApplicationId() {
         return applicationId;
     }

@@ -14,4 +14,16 @@ Name | Type | Description | Notes
 **notificationUrl** | **URI** | When the message changes status, this URL will be invoked using HTTP POST with the messageStatus parameters. This is a notification only; any PerCL returned will be ignored. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Sms;
+
+String json = "{\"command\":\"Sms\",\"to\":\"string\",\"from\":\"string\",\"text\":\"string\",\"notificationUrl\":\"https://www.example.com\"}";
+
+// create an instance of Sms from a JSON string
+Sms sms = new JSON().getGson().fromJson(json, Sms.class);
+```
+
 

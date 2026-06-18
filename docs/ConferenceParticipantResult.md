@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **startConfOnEnter** | **Boolean** | True if this Participant joining the Conference caused the Conference to start (status &#x3D; inProgress). False otherwise. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.ConferenceParticipantResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"conferenceId\":\"string\",\"callId\":\"string\",\"talk\":false,\"listen\":false,\"dtmfPassThrough\":false,\"startConfOnEnter\":false}";
+
+// create an instance of ConferenceParticipantResult from a JSON string
+ConferenceParticipantResult conferenceParticipantResult = new JSON().getGson().fromJson(json, ConferenceParticipantResult.class);
+```
+
 

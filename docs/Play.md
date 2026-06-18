@@ -13,4 +13,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Play;
+
+String json = "{\"command\":\"Play\",\"file\":\"string\",\"loop\":0,\"privacyMode\":false}";
+
+// create an instance of Play from a JSON string
+Play play = new JSON().getGson().fromJson(json, Play.class);
+```
+
 

@@ -18,4 +18,16 @@ Name | Type | Description | Notes
 **conferenceId** | **String** | ID of the Conference that was recorded. If a Call was recorded, this value is empty and the callId property is populated. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RecordingResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"recordingId\":\"string\",\"accountId\":\"string\",\"callId\":\"string\",\"durationSec\":0,\"conferenceId\":\"string\"}";
+
+// create an instance of RecordingResult from a JSON string
+RecordingResult recordingResult = new JSON().getGson().fromJson(json, RecordingResult.class);
+```
+
 

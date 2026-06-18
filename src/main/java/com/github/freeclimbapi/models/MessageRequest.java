@@ -187,6 +187,7 @@ public class MessageRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "+12025551234",
             required = true,
             value =
                     "Phone number to use as the sender. This must be an incoming phone number that"
@@ -212,6 +213,7 @@ public class MessageRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "+13035559876",
             required = true,
             value = "Phone number to receive the message. Must be within FreeClimb's service area.")
     public String getTo() {
@@ -236,6 +238,7 @@ public class MessageRequest {
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(
+            example = "Hello from FreeClimb!",
             required = true,
             value =
                     "Text contained in the message (maximum 160 characters).   **Note:** For text,"
@@ -262,6 +265,7 @@ public class MessageRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/messageStatus",
             value =
                     "When the Message changes status, this URL is invoked using HTTP POST with the"
                         + " messageStatus parameters.  **Note:** This is a notification only; any"
@@ -296,6 +300,7 @@ public class MessageRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "[\"https://www.myapp.com/image.jpg\"]",
             value =
                     "an array of HTTP URLs which are to be used as attachments to the message. This"
                         + " will force the message into being an MMS message and must be done using"

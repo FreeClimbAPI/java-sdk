@@ -13,4 +13,16 @@ Name | Type | Description | Notes
 **revision** | **Integer** | Revision count for the resource. This count is set to 1 on creation and is incremented every time it is updated. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MutableResourceModel;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0}";
+
+// create an instance of MutableResourceModel from a JSON string
+MutableResourceModel mutableResourceModel = new JSON().getGson().fromJson(json, MutableResourceModel.class);
+```
+
 

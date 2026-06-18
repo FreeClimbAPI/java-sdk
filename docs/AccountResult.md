@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **subresourceUris** | **Object** | The list of subresources for this account. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AccountResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"apiKey\":\"string\",\"alias\":\"string\",\"label\":\"string\",\"type\":\"trial\",\"status\":\"closed\"}";
+
+// create an instance of AccountResult from a JSON string
+AccountResult accountResult = new JSON().getGson().fromJson(json, AccountResult.class);
+```
+
 

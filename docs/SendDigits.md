@@ -13,4 +13,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.SendDigits;
+
+String json = "{\"command\":\"SendDigits\",\"digits\":\"string\",\"pauseMs\":0,\"privacyMode\":false}";
+
+// create an instance of SendDigits from a JSON string
+SendDigits sendDigits = new JSON().getGson().fromJson(json, SendDigits.class);
+```
+
 

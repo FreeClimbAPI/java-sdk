@@ -18,4 +18,16 @@ Name | Type | Description | Notes
 **mediaUrls** | **List&lt;URI&gt;** | an array of HTTP URLs which are to be used as attachments to the message. This will force the message into being an MMS message and must be done using a from number which is MMS capabile. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MessageRequest;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"from\":\"+12025551234\",\"to\":\"+13035559876\",\"text\":\"Hello from FreeClimb!\",\"notificationUrl\":\"https://www.myapp.com/messageStatus\",\"mediaUrls\":[\"https://www.myapp.com/image.jpg\"]}";
+
+// create an instance of MessageRequest from a JSON string
+MessageRequest messageRequest = new JSON().getGson().fromJson(json, MessageRequest.class);
+```
+
 

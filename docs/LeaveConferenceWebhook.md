@@ -19,4 +19,16 @@ Name | Type | Description | Notes
 **queueId** | **String** | This is only populated if the request pertains to a Queue. Otherwise, it is set to null. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.LeaveConferenceWebhook;
+
+String json = "{\"requestType\":\"leaveConference\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\"}";
+
+// create an instance of LeaveConferenceWebhook from a JSON string
+LeaveConferenceWebhook leaveConferenceWebhook = new JSON().getGson().fromJson(json, LeaveConferenceWebhook.class);
+```
+
 

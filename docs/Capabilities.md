@@ -15,4 +15,16 @@ Name | Type | Description | Notes
 **shortCode** | **Boolean** | Indicates that a number is a short code and can be used for short code messaging | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Capabilities;
+
+String json = "{\"voice\":false,\"sms\":false,\"tollFree\":false,\"tenDLC\":false,\"shortCode\":false}";
+
+// create an instance of Capabilities from a JSON string
+Capabilities capabilities = new JSON().getGson().fromJson(json, Capabilities.class);
+```
+
 

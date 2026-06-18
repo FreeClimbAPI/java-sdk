@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **dtmfPassThrough** | **Boolean** | If &#x60;true&#x60;, the Participant joins the Conference with dtmfPassThrough privileges. This may be modified later via the REST API or &#x60;SetDTMFPassThrough&#x60; PerCL command.  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AddToConference;
+
+String json = "{\"command\":\"AddToConference\",\"allowCallControl\":false,\"callControlSequence\":\"string\",\"callControlUrl\":\"https://www.example.com\",\"conferenceId\":\"string\",\"leaveConferenceUrl\":\"https://www.example.com\",\"listen\":false,\"notificationUrl\":\"https://www.example.com\",\"startConfOnEnter\":false,\"talk\":false,\"dtmfPassThrough\":false}";
+
+// create an instance of AddToConference from a JSON string
+AddToConference addToConference = new JSON().getGson().fromJson(json, AddToConference.class);
+```
+
 

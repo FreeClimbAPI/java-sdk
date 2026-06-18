@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **blob** | **Object** | Blob content |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.BlobResult;
+
+String json = "{\"blobId\":\"BL0123456789abcdefABCDEF0123456789abcdef02\",\"accountId\":\"AC0123456789abcdefABCDEF0123456789abcdef01\",\"alias\":\"string\",\"revision\":0,\"dateCreated\":\"2022-01-01T00:00:00Z\",\"dateUpdated\":\"2022-01-01T00:00:00Z\",\"expiresAt\":\"2022-01-01T00:00:00Z\"}";
+
+// create an instance of BlobResult from a JSON string
+BlobResult blobResult = new JSON().getGson().fromJson(json, BlobResult.class);
+```
+
 

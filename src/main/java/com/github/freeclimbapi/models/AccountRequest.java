@@ -49,7 +49,7 @@ public class AccountRequest {
      * @return alias
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Description for this account.")
+    @ApiModelProperty(example = "My Account", value = "Description for this account.")
     public String getAlias() {
         return alias;
     }
@@ -70,7 +70,7 @@ public class AccountRequest {
      * @return label
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Group to which this account belongs.")
+    @ApiModelProperty(example = "My Label", value = "Group to which this account belongs.")
     public String getLabel() {
         return label;
     }

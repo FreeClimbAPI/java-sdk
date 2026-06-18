@@ -13,4 +13,16 @@ Name | Type | Description | Notes
 **notificationUrl** | **URI** | URL to be invoked when the Call is parked. The request to the URL contains the standard request parameters. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Park;
+
+String json = "{\"command\":\"Park\",\"waitUrl\":\"https://www.example.com\",\"actionUrl\":\"https://www.example.com\",\"notificationUrl\":\"https://www.example.com\"}";
+
+// create an instance of Park from a JSON string
+Park park = new JSON().getGson().fromJson(json, Park.class);
+```
+
 
