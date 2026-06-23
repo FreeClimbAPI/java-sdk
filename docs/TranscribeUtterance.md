@@ -16,4 +16,16 @@ Name | Type | Description | Notes
 **prompts** | [**List&lt;PerclCommand&gt;**](PerclCommand.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.TranscribeUtterance;
+
+String json = "{\"command\":\"TranscribeUtterance\",\"actionUrl\":\"https://www.example.com\",\"playBeep\":false,\"record\":{\"saveRecording\":false,\"maxLengthSec\":60,\"rcrdTerminationSilenceTimeMs\":0},\"privacyForLogging\":false,\"privacyForRecording\":false,\"prompts\":[{\"command\":\"string\"}]}";
+
+// create an instance of TranscribeUtterance from a JSON string
+TranscribeUtterance transcribeUtterance = new JSON().getGson().fromJson(json, TranscribeUtterance.class);
+```
+
 

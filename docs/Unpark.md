@@ -10,4 +10,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Unpark;
+
+String json = "{\"command\":\"Unpark\"}";
+
+// create an instance of Unpark from a JSON string
+Unpark unpark = new JSON().getGson().fromJson(json, Unpark.class);
+```
+
 

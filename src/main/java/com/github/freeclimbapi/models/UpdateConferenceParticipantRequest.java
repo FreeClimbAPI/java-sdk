@@ -56,6 +56,7 @@ public class UpdateConferenceParticipantRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "true",
             value =
                     "(Optional) Default is `true`. Setting to `false` mutes the Participant."
                             + " FreeClimb returns an error and ignores any other value.")
@@ -81,6 +82,7 @@ public class UpdateConferenceParticipantRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "true",
             value =
                     "(Optional) Default is `true`. Setting to `false` silences the Conference for"
                             + " this Participant. FreeClimb returns an error and ignores any other"
@@ -107,6 +109,7 @@ public class UpdateConferenceParticipantRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "true",
             value =
                     "(Optional) Default is `true`. Setting to `false` mutes dtmf audio for this"
                         + " Participant. FreeClimb returns an error and ignores any other value.")

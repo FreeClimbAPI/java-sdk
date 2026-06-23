@@ -24,4 +24,16 @@ Name | Type | Description | Notes
 **tfn** | [**TFN**](TFN.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.IncomingNumberResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"capabilities\":{\"voice\":false,\"sms\":false,\"tollFree\":false,\"tenDLC\":false,\"shortCode\":false},\"campaignId\":\"string\",\"phoneNumberId\":\"string\",\"accountId\":\"string\",\"applicationId\":\"string\",\"phoneNumber\":\"string\",\"alias\":\"string\",\"region\":\"string\",\"country\":\"string\",\"offnet\":false,\"tfn\":{\"campaignId\":\"string\"}}";
+
+// create an instance of IncomingNumberResult from a JSON string
+IncomingNumberResult incomingNumberResult = new JSON().getGson().fromJson(json, IncomingNumberResult.class);
+```
+
 

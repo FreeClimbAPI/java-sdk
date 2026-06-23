@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **queueMembers** | [**List&lt;QueueMember&gt;**](QueueMember.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.QueueMemberList;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"queueMembers\":[{\"uri\":\"string\",\"callId\":\"string\",\"waitTime\":0,\"position\":0,\"dateEnqueued\":\"string\"}]}";
+
+// create an instance of QueueMemberList from a JSON string
+QueueMemberList queueMemberList = new JSON().getGson().fromJson(json, QueueMemberList.class);
+```
+
 

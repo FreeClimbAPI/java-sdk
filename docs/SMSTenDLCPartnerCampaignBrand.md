@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **evpVettingScore** | **Integer** | External vetting score. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.SMSTenDLCPartnerCampaignBrand;
+
+String json = "{\"accountId\":\"string\",\"brandId\":\"string\",\"firstName\":\"John\",\"lastName\":\"Doe\",\"displayName\":\"ABC Mobile\",\"companyName\":\"ABC Inc.\",\"phone\":\"+12024567890\",\"email\":\"string\",\"website\":\"http://www.abcmobile.com\",\"evpVettingScore\":0}";
+
+// create an instance of SMSTenDLCPartnerCampaignBrand from a JSON string
+SMSTenDLCPartnerCampaignBrand smSTenDLCPartnerCampaignBrand = new JSON().getGson().fromJson(json, SMSTenDLCPartnerCampaignBrand.class);
+```
+
 

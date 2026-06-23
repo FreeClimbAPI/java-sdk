@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **parentCallId** | **String** | ID of the Call that created this leg (child call). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.OutDialConnectWebhook;
+
+String json = "{\"requestType\":\"outDialConnect\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"parentCallId\":\"string\"}";
+
+// create an instance of OutDialConnectWebhook from a JSON string
+OutDialConnectWebhook outDialConnectWebhook = new JSON().getGson().fromJson(json, OutDialConnectWebhook.class);
+```
+
 

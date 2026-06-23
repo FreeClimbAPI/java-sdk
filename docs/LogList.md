@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **logs** | [**List&lt;LogResult&gt;**](LogResult.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.LogList;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"logs\":[{\"timestamp\":0,\"level\":\"info\",\"requestId\":\"string\",\"accountId\":\"string\",\"callId\":\"string\",\"message\":\"string\"}]}";
+
+// create an instance of LogList from a JSON string
+LogList logList = new JSON().getGson().fromJson(json, LogList.class);
+```
+
 

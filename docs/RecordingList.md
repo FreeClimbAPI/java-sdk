@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **recordings** | [**List&lt;RecordingResult&gt;**](RecordingResult.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RecordingList;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"recordings\":[{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"recordingId\":\"string\",\"accountId\":\"string\",\"callId\":\"string\",\"durationSec\":0,\"conferenceId\":\"string\"}]}";
+
+// create an instance of RecordingList from a JSON string
+RecordingList recordingList = new JSON().getGson().fromJson(json, RecordingList.class);
+```
+
 

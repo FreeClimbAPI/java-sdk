@@ -16,4 +16,16 @@ Name | Type | Description | Notes
 **nextPageUri** | **String** | Uri to retrieve the next page of items |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.PaginationModel;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\"}";
+
+// create an instance of PaginationModel from a JSON string
+PaginationModel paginationModel = new JSON().getGson().fromJson(json, PaginationModel.class);
+```
+
 

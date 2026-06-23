@@ -16,4 +16,16 @@ Name | Type | Description | Notes
 **metadata** | **Object** | JSON document containing metadata about the event. Some log messages may include request and response header content in this field. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.LogResult;
+
+String json = "{\"timestamp\":0,\"level\":\"info\",\"requestId\":\"string\",\"accountId\":\"string\",\"callId\":\"string\",\"message\":\"string\"}";
+
+// create an instance of LogResult from a JSON string
+LogResult logResult = new JSON().getGson().fromJson(json, LogResult.class);
+```
+
 

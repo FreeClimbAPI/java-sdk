@@ -56,7 +56,9 @@ public class UpdateConferenceRequest {
      * @return alias
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Description for this conference. Maximum 64 characters.")
+    @ApiModelProperty(
+            example = "Customer Conference",
+            value = "Description for this conference. Maximum 64 characters.")
     public String getAlias() {
         return alias;
     }

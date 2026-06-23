@@ -14,4 +14,16 @@ Name | Type | Description | Notes
 **dateEnqueued** | **String** | Date that the Member was enqueued (GMT), given in RFC 1123 format (e.g., Mon, 15 Jun 2009 20:45:30 GMT). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.QueueMember;
+
+String json = "{\"uri\":\"string\",\"callId\":\"string\",\"waitTime\":0,\"position\":0,\"dateEnqueued\":\"string\"}";
+
+// create an instance of QueueMember from a JSON string
+QueueMember queueMember = new JSON().getGson().fromJson(json, QueueMember.class);
+```
+
 

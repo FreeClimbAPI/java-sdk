@@ -16,4 +16,16 @@ Name | Type | Description | Notes
 **revision** | **Integer** |  | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.SMSTollFreeCampaign;
+
+String json = "{\"accountId\":\"string\",\"campaignId\":\"string\",\"useCase\":\"string\",\"registrationStatus\":\"UNREGISTERED\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0}";
+
+// create an instance of SMSTollFreeCampaign from a JSON string
+SMSTollFreeCampaign smSTollFreeCampaign = new JSON().getGson().fromJson(json, SMSTollFreeCampaign.class);
+```
+
 

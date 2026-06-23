@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **parentCallId** | **String** | ID of the Call that created this leg (child call). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CreateConference;
+
+String json = "{\"command\":\"CreateConference\",\"actionUrl\":\"https://www.example.com\",\"alias\":\"string\",\"playBeep\":\"always\",\"record\":false,\"statusCallbackUrl\":\"https://www.example.com\",\"waitUrl\":\"https://www.example.com\",\"parentCallId\":\"string\"}";
+
+// create an instance of CreateConference from a JSON string
+CreateConference createConference = new JSON().getGson().fromJson(json, CreateConference.class);
+```
+
 

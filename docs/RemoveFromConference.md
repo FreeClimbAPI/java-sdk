@@ -10,4 +10,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RemoveFromConference;
+
+String json = "{\"command\":\"RemoveFromConference\"}";
+
+// create an instance of RemoveFromConference from a JSON string
+RemoveFromConference removeFromConference = new JSON().getGson().fromJson(json, RemoveFromConference.class);
+```
+
 

@@ -14,4 +14,16 @@ Name | Type | Description | Notes
 **waitUrl** | **URI** | A request is made to this URL when the Call leaves the Queue, which can occur if enqueue of the Call fails or when the call is dequeued via the &#x60;Dequeue&#x60; command, the REST API (POST to Queue Member resource), or the caller hangs up. | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Enqueue;
+
+String json = "{\"command\":\"Enqueue\",\"actionUrl\":\"https://www.example.com\",\"notificationUrl\":\"https://www.example.com\",\"queueId\":\"string\",\"waitUrl\":\"https://www.example.com\"}";
+
+// create an instance of Enqueue from a JSON string
+Enqueue enqueue = new JSON().getGson().fromJson(json, Enqueue.class);
+```
+
 

@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **availablePhoneNumbers** | [**List&lt;AvailableNumber&gt;**](AvailableNumber.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AvailableNumberList;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"availablePhoneNumbers\":[{\"capabilities\":{\"voice\":false,\"sms\":false,\"tollFree\":false,\"tenDLC\":false,\"shortCode\":false},\"campaignId\":\"string\",\"phoneNumber\":\"string\",\"alias\":\"string\",\"region\":\"string\",\"country\":\"string\"}]}";
+
+// create an instance of AvailableNumberList from a JSON string
+AvailableNumberList availableNumberList = new JSON().getGson().fromJson(json, AvailableNumberList.class);
+```
+
 

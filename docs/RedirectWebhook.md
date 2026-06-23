@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **parentCallId** | **String** | ID of Call that created this leg (child call). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RedirectWebhook;
+
+String json = "{\"requestType\":\"redirect\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"parentCallId\":\"string\"}";
+
+// create an instance of RedirectWebhook from a JSON string
+RedirectWebhook redirectWebhook = new JSON().getGson().fromJson(json, RedirectWebhook.class);
+```
+
 

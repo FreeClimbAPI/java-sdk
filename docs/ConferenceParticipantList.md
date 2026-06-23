@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **participants** | [**List&lt;ConferenceParticipantResult&gt;**](ConferenceParticipantResult.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.ConferenceParticipantList;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"participants\":[{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"conferenceId\":\"string\",\"callId\":\"string\",\"talk\":false,\"listen\":false,\"dtmfPassThrough\":false,\"startConfOnEnter\":false}]}";
+
+// create an instance of ConferenceParticipantList from a JSON string
+ConferenceParticipantList conferenceParticipantList = new JSON().getGson().fromJson(json, ConferenceParticipantList.class);
+```
+
 

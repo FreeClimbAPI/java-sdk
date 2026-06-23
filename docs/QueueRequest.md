@@ -11,4 +11,16 @@ Name | Type | Description | Notes
 **maxSize** | **Integer** | Maximum number of calls this queue can hold. Default is 100. Maximum is 1000. **Note:** Reducing the maxSize of a Queue causes the Queue to reject incoming requests until it shrinks below the new value of maxSize. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.QueueRequest;
+
+String json = "{\"alias\":\"Support Queue\",\"maxSize\":100}";
+
+// create an instance of QueueRequest from a JSON string
+QueueRequest queueRequest = new JSON().getGson().fromJson(json, QueueRequest.class);
+```
+
 

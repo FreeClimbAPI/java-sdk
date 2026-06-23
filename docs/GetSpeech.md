@@ -23,4 +23,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter privacyMode will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.GetSpeech;
+
+String json = "{\"command\":\"GetSpeech\",\"actionUrl\":\"https://www.example.com\",\"grammarType\":\"URL\",\"grammarFile\":\"string\",\"grammarRule\":\"string\",\"playBeep\":false,\"prompts\":[{\"command\":\"string\"}],\"noInputTimeoutMs\":0,\"recognitionTimeoutMs\":0,\"confidenceThreshold\":0,\"sensitivityLevel\":0,\"speechCompleteTimeoutMs\":0,\"speechIncompleteTimeoutMs\":0,\"privacyMode\":false}";
+
+// create an instance of GetSpeech from a JSON string
+GetSpeech getSpeech = new JSON().getGson().fromJson(json, GetSpeech.class);
+```
+
 

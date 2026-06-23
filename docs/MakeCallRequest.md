@@ -19,4 +19,16 @@ Name | Type | Description | Notes
 **callConnectUrl** | **URI** | The URL that FreeClimb should use to handle this phone call. If an applicationId or parentCallId have already been provided, this callConnectUrl attribute will be used as a replacement of the callConnectUrl originally assigned in the application or parent call. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MakeCallRequest;
+
+String json = "{\"from\":\"+12025551234\",\"to\":\"+13035559876\",\"applicationId\":\"AP0123456789abcdefABCDEF0123456789abcdef03\",\"sendDigits\":\"1234#\",\"ifMachine\":\"redirect\",\"ifMachineUrl\":\"https://www.myapp.com/ifMachine\",\"timeout\":30,\"parentCallId\":\"CA0123456789abcdefABCDEF0123456789abcdef04\",\"privacyMode\":false,\"callConnectUrl\":\"https://www.myapp.com/callConnect\"}";
+
+// create an instance of MakeCallRequest from a JSON string
+MakeCallRequest makeCallRequest = new JSON().getGson().fromJson(json, MakeCallRequest.class);
+```
+
 

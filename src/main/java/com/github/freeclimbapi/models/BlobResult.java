@@ -81,7 +81,7 @@ public class BlobResult {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
-            example = "BL88615a9b4ca7e9aad57d9057773fc74268b9caf7",
+            example = "BL0123456789abcdefABCDEF0123456789abcdef02",
             value = "Identifier which can be used to reference this blob in future interations.")
     public String getBlobId() {
         return blobId;
@@ -103,7 +103,7 @@ public class BlobResult {
      * @return accountId
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(example = "AC0534faec6b32da45f36166674d65b3903f784141", value = "")
+    @ApiModelProperty(example = "AC0123456789abcdefABCDEF0123456789abcdef01", value = "")
     public String getAccountId() {
         return accountId;
     }

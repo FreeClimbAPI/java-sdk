@@ -12,4 +12,16 @@ Name | Type | Description | Notes
 **dtmfPassThrough** | **Boolean** | (Optional) Default is &#x60;true&#x60;. Setting to &#x60;false&#x60; mutes dtmf audio for this Participant. FreeClimb returns an error and ignores any other value. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.UpdateConferenceParticipantRequest;
+
+String json = "{\"talk\":true,\"listen\":true,\"dtmfPassThrough\":true}";
+
+// create an instance of UpdateConferenceParticipantRequest from a JSON string
+UpdateConferenceParticipantRequest updateConferenceParticipantRequest = new JSON().getGson().fromJson(json, UpdateConferenceParticipantRequest.class);
+```
+
 

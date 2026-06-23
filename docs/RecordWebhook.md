@@ -27,4 +27,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | If true then it indicates the recording will only be available for download for two minutes prior to it being deleted. This is to minimize risk of anyone else getting access to the url and attempting to access it. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RecordWebhook;
+
+String json = "{\"requestType\":\"record\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"recordingId\":\"string\",\"recordingUrl\":\"https://www.example.com\",\"recordingSize\":\"string\",\"recordingFormat\":\"string\",\"recordingDurationSec\":0,\"termReason\":\"finishKey\",\"parentCallId\":\"string\",\"privacyMode\":false}";
+
+// create an instance of RecordWebhook from a JSON string
+RecordWebhook recordWebhook = new JSON().getGson().fromJson(json, RecordWebhook.class);
+```
+
 

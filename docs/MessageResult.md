@@ -28,4 +28,16 @@ Name | Type | Description | Notes
 **applicationId** | **String** | String that uniquely identifies the Application resource used to send this Message |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MessageResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"messageId\":\"string\",\"status\":\"new\",\"from\":\"string\",\"to\":\"string\",\"text\":\"string\",\"direction\":\"string\",\"notificationUrl\":\"https://www.example.com\",\"brandId\":\"string\",\"campaignId\":\"string\",\"segmentCount\":0,\"mediaUrls\":[\"https://www.example.com\"],\"tfn\":{\"campaignId\":\"string\"},\"phoneNumberId\":\"string\",\"applicationId\":\"string\"}";
+
+// create an instance of MessageResult from a JSON string
+MessageResult messageResult = new JSON().getGson().fromJson(json, MessageResult.class);
+```
+
 

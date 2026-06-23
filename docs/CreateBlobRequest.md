@@ -12,4 +12,16 @@ Name | Type | Description | Notes
 **blob** | **Object** |  | 
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CreateBlobRequest;
+
+String json = "{\"alias\":\"customer-profile\",\"expiresAt\":\"2006-01-02T15:04:05.000Z\",\"blob\":{\"firstName\":\"John\",\"lastName\":\"Doe\"}}";
+
+// create an instance of CreateBlobRequest from a JSON string
+CreateBlobRequest createBlobRequest = new JSON().getGson().fromJson(json, CreateBlobRequest.class);
+```
+
 

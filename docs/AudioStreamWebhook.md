@@ -19,4 +19,16 @@ Name | Type | Description | Notes
 **queueId** | **String** | This is only populated if the request pertains to a Queue. Otherwise, it is set to null. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AudioStreamWebhook;
+
+String json = "{\"requestType\":\"audioStream\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\"}";
+
+// create an instance of AudioStreamWebhook from a JSON string
+AudioStreamWebhook audioStreamWebhook = new JSON().getGson().fromJson(json, AudioStreamWebhook.class);
+```
+
 

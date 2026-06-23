@@ -21,4 +21,16 @@ Name | Type | Description | Notes
 **machineType** | **MachineType** |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MachineDetectedWebhook;
+
+String json = "{\"requestType\":\"machineDetected\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"parentCallId\":\"string\",\"machineType\":\"answering machine\"}";
+
+// create an instance of MachineDetectedWebhook from a JSON string
+MachineDetectedWebhook machineDetectedWebhook = new JSON().getGson().fromJson(json, MachineDetectedWebhook.class);
+```
+
 

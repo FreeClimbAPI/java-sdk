@@ -17,4 +17,16 @@ Name | Type | Description | Notes
 **brands** | [**List&lt;SMSTollFreeCampaign&gt;**](SMSTollFreeCampaign.md) |  |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.SMSTollFreeCampaignsListResult;
+
+String json = "{\"total\":0,\"start\":0,\"end\":0,\"page\":0,\"numPages\":0,\"pageSize\":0,\"nextPageUri\":\"string\",\"brands\":[{\"accountId\":\"string\",\"campaignId\":\"string\",\"useCase\":\"string\",\"registrationStatus\":\"UNREGISTERED\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0}]}";
+
+// create an instance of SMSTollFreeCampaignsListResult from a JSON string
+SMSTollFreeCampaignsListResult smSTollFreeCampaignsListResult = new JSON().getGson().fromJson(json, SMSTollFreeCampaignsListResult.class);
+```
+
 

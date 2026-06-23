@@ -10,4 +10,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.StartRecordCall;
+
+String json = "{\"command\":\"StartRecordCall\"}";
+
+// create an instance of StartRecordCall from a JSON string
+StartRecordCall startRecordCall = new JSON().getGson().fromJson(json, StartRecordCall.class);
+```
+
 

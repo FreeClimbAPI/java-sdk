@@ -22,4 +22,16 @@ Name | Type | Description | Notes
 **parentCallId** | **String** | ID of the Call that created this leg (child call). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.GetDigitsWebhook;
+
+String json = "{\"requestType\":\"getDigits\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"digits\":\"string\",\"reason\":\"finishKey\",\"parentCallId\":\"string\"}";
+
+// create an instance of GetDigitsWebhook from a JSON string
+GetDigitsWebhook getDigitsWebhook = new JSON().getGson().fromJson(json, GetDigitsWebhook.class);
+```
+
 

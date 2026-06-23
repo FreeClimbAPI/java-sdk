@@ -32,4 +32,16 @@ Name | Type | Description | Notes
 **transcriptionDurationMs** | **Integer** | The duration of the audio being transcribed in milliseconds |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.TranscribeWebhook;
+
+String json = "{\"requestType\":\"transcribe\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"recordingId\":\"string\",\"recordingUrl\":\"https://www.example.com\",\"recordingSize\":0,\"recordingFormat\":\"string\",\"recordingDurationMs\":0,\"termReason\":\"error\",\"recordTermReason\":\"finishKey\",\"digit\":\"string\",\"privacyForLogging\":false,\"privacyForRecording\":false,\"bargeInReason\":\"noBargeIn\",\"bargedInPromptNo\":0,\"bargedInPromptMs\":0,\"bargedInPromptLoopNo\":0,\"bargeInTimeMs\":0,\"transcript\":\"string\",\"transcribeReason\":\"internalError\",\"transcriptionDurationMs\":0}";
+
+// create an instance of TranscribeWebhook from a JSON string
+TranscribeWebhook transcribeWebhook = new JSON().getGson().fromJson(json, TranscribeWebhook.class);
+```
+
 

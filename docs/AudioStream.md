@@ -15,4 +15,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Enables audio redaction with full call recording while gRPC session is running and blocks logging of any DTMFs received by FreeClimb. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AudioStream;
+
+String json = "{\"command\":\"AudioStream\",\"location\":\"https://www.example.com\",\"actionUrl\":\"https://www.example.com\",\"contentType\":\"string\",\"metaData\":[\"string\"],\"privacyMode\":false}";
+
+// create an instance of AudioStream from a JSON string
+AudioStream audioStream = new JSON().getGson().fromJson(json, AudioStream.class);
+```
+
 

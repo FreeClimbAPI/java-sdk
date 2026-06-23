@@ -21,4 +21,16 @@ Name | Type | Description | Notes
 **queueTime** | **Integer** | Time (in seconds) the Call spent in the Queue. This is only available if the Call was actually enqueued. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.RemoveFromQueueNotificationWebhook;
+
+String json = "{\"requestType\":\"removeFromQueueNotification\",\"accountId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"queueResult\":\"queueFull\",\"queueTime\":0}";
+
+// create an instance of RemoveFromQueueNotificationWebhook from a JSON string
+RemoveFromQueueNotificationWebhook removeFromQueueNotificationWebhook = new JSON().getGson().fromJson(json, RemoveFromQueueNotificationWebhook.class);
+```
+
 

@@ -19,4 +19,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.GetDigits;
+
+String json = "{\"command\":\"GetDigits\",\"actionUrl\":\"https://www.example.com\",\"digitTimeoutMs\":0,\"finishOnKey\":\"string\",\"flushBuffer\":false,\"initialTimeoutMs\":0,\"maxDigits\":0,\"minDigits\":0,\"prompts\":[{\"command\":\"string\"}],\"privacyMode\":false}";
+
+// create an instance of GetDigits from a JSON string
+GetDigits getDigits = new JSON().getGson().fromJson(json, GetDigits.class);
+```
+
 

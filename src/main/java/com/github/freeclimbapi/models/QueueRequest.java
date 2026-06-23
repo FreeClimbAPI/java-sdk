@@ -49,7 +49,9 @@ public class QueueRequest {
      * @return alias
      */
     @javax.annotation.Nullable
-    @ApiModelProperty(value = "Description for this Queue. Max length is 64 characters.")
+    @ApiModelProperty(
+            example = "Support Queue",
+            value = "Description for this Queue. Max length is 64 characters.")
     public String getAlias() {
         return alias;
     }
@@ -73,6 +75,7 @@ public class QueueRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "100",
             value =
                     "Maximum number of calls this queue can hold. Default is 100. Maximum is 1000."
                         + " **Note:** Reducing the maxSize of a Queue causes the Queue to reject"

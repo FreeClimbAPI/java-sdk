@@ -21,4 +21,16 @@ Name | Type | Description | Notes
 **phoneNumberId** | **String** | ID of the destination phone number. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.MessageStatusWebhook;
+
+String json = "{\"requestType\":\"messageStatus\",\"accountId\":\"string\",\"messageId\":\"string\",\"callId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"text\":\"string\",\"direction\":\"string\",\"applicationId\":\"string\",\"status\":\"new\",\"phoneNumberId\":\"string\"}";
+
+// create an instance of MessageStatusWebhook from a JSON string
+MessageStatusWebhook messageStatusWebhook = new JSON().getGson().fromJson(json, MessageStatusWebhook.class);
+```
+
 

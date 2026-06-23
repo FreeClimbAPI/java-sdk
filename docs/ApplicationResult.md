@@ -22,4 +22,16 @@ Name | Type | Description | Notes
 **smsFallbackUrl** | **URI** | The URL that FreeClimb will request if it times out waiting for a response from the smsUrl. Used for inbound SMS only. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.ApplicationResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"applicationId\":\"string\",\"alias\":\"string\",\"voiceUrl\":\"https://www.example.com\",\"voiceFallbackUrl\":\"https://www.example.com\",\"callConnectUrl\":\"https://www.example.com\",\"statusCallbackUrl\":\"https://www.example.com\",\"smsUrl\":\"https://www.example.com\",\"smsFallbackUrl\":\"https://www.example.com\"}";
+
+// create an instance of ApplicationResult from a JSON string
+ApplicationResult applicationResult = new JSON().getGson().fromJson(json, ApplicationResult.class);
+```
+
 

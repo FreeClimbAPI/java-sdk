@@ -15,4 +15,16 @@ Name | Type | Description | Notes
 **country** | **String** | The country of this phone number. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.AvailableNumber;
+
+String json = "{\"capabilities\":{\"voice\":false,\"sms\":false,\"tollFree\":false,\"tenDLC\":false,\"shortCode\":false},\"campaignId\":\"string\",\"phoneNumber\":\"string\",\"alias\":\"string\",\"region\":\"string\",\"country\":\"string\"}";
+
+// create an instance of AvailableNumber from a JSON string
+AvailableNumber availableNumber = new JSON().getGson().fromJson(json, AvailableNumber.class);
+```
+
 

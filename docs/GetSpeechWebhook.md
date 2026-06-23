@@ -27,4 +27,16 @@ Name | Type | Description | Notes
 **mrcpDiagnostic** | **String** | Advanced diagnostic information if reason was error. See RFC 6787 section 5.4 - MRCPv2 specification. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.GetSpeechWebhook;
+
+String json = "{\"requestType\":\"getSpeech\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"reason\":\"error\",\"recognitionResult\":\"string\",\"confidence\":0,\"parentCallId\":\"string\",\"completionReason\":\"string\",\"completionCause\":\"string\",\"mrcpCode\":0,\"mrcpDiagnostic\":\"string\"}";
+
+// create an instance of GetSpeechWebhook from a JSON string
+GetSpeechWebhook getSpeechWebhook = new JSON().getGson().fromJson(json, GetSpeechWebhook.class);
+```
+
 

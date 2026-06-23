@@ -10,4 +10,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Dequeue;
+
+String json = "{\"command\":\"Dequeue\"}";
+
+// create an instance of Dequeue from a JSON string
+Dequeue dequeue = new JSON().getGson().fromJson(json, Dequeue.class);
+```
+
 

@@ -23,4 +23,16 @@ Name | Type | Description | Notes
 **subresourceUris** | **Object** | The list of subresources for this Conference. This includes participants and/or recordings. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.ConferenceResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"conferenceId\":\"string\",\"accountId\":\"string\",\"alias\":\"string\",\"record\":false,\"status\":\"empty\",\"waitUrl\":\"https://www.example.com\",\"actionUrl\":\"https://www.example.com\",\"statusCallbackUrl\":\"https://www.example.com\"}";
+
+// create an instance of ConferenceResult from a JSON string
+ConferenceResult conferenceResult = new JSON().getGson().fromJson(json, ConferenceResult.class);
+```
+
 

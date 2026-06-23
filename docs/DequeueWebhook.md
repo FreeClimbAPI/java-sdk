@@ -21,4 +21,16 @@ Name | Type | Description | Notes
 **queueTime** | **Integer** | Time (in seconds) the call spent in the Queue. This is only available if the Call was actually enqueued. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.DequeueWebhook;
+
+String json = "{\"requestType\":\"dequeue\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"queueResult\":\"string\",\"queueTime\":0}";
+
+// create an instance of DequeueWebhook from a JSON string
+DequeueWebhook dequeueWebhook = new JSON().getGson().fromJson(json, DequeueWebhook.class);
+```
+
 

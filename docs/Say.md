@@ -15,4 +15,16 @@ Name | Type | Description | Notes
 **privacyMode** | **Boolean** | Parameter &#x60;privacyMode&#x60; will not log the &#x60;text&#x60; as required by PCI compliance. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.Say;
+
+String json = "{\"command\":\"Say\",\"text\":\"string\",\"language\":\"string\",\"engine\":{\"name\":\"freeclimb.standard\"},\"loop\":1,\"privacyMode\":false}";
+
+// create an instance of Say from a JSON string
+Say say = new JSON().getGson().fromJson(json, Say.class);
+```
+
 

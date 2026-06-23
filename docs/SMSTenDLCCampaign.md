@@ -45,4 +45,16 @@ Name | Type | Description | Notes
 **nextRenewalOrExpirationDate** | **LocalDate** | When the campaign would be due for its next renew/bill date. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.SMSTenDLCCampaign;
+
+String json = "{\"campaignId\":\"CX56XX4\",\"accountId\":\"AC0123456789abcdefABCDEF0123456789abcdef05\",\"cspId\":\"SX56XX4\",\"brandId\":\"BX56XX4\",\"usecase\":\"2FA\",\"description\":\"mock campaign.\",\"subUsecases\":[],\"resellerId\":null,\"sample1\":\"Your verification code from FreeClimb is 000000. It expires in 10 minutes.\",\"sample2\":null,\"sample3\":null,\"sample4\":null,\"sample5\":null,\"messageFlow\":null,\"helpMessage\":null,\"referenceId\":null,\"status\":\"EXPIRED\",\"mock\":true,\"autoRenewal\":false,\"embeddedLink\":false,\"embeddedPhone\":false,\"affiliateMarketing\":false,\"numberPool\":false,\"ageGated\":false,\"directLending\":false,\"subscriberOptin\":true,\"subscriberOptout\":false,\"subscriberHelp\":true,\"createDate\":\"2022-07-05T15:17:05Z\",\"billedDate\":\"2022-07-05T00:00:00Z\",\"nextRenewalOrExpirationDate\":null}";
+
+// create an instance of SMSTenDLCCampaign from a JSON string
+SMSTenDLCCampaign smSTenDLCCampaign = new JSON().getGson().fromJson(json, SMSTenDLCCampaign.class);
+```
+
 

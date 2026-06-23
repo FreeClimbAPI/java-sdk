@@ -44,7 +44,10 @@ public class ReplaceBlobRequest {
      * @return blob
      */
     @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @ApiModelProperty(
+            example = "{\"firstName\":\"John\",\"lastName\":\"Doe\"}",
+            required = true,
+            value = "")
     public Object getBlob() {
         return blob;
     }

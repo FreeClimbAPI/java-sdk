@@ -23,4 +23,16 @@ Name | Type | Description | Notes
 **recordingDurationSec** | **Integer** | The duration of the recorded audio rounded up to the nearest second (in seconds). Populated only if a Recording exists and the Conference was emptied. Present only if statusCallbackUrl is being invoked. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CreateConferenceWebhook;
+
+String json = "{\"requestType\":\"createConference\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\",\"status\":\"empty\",\"recordingUrl\":\"https://www.example.com\",\"recordingId\":\"string\",\"recordingDurationSec\":0}";
+
+// create an instance of CreateConferenceWebhook from a JSON string
+CreateConferenceWebhook createConferenceWebhook = new JSON().getGson().fromJson(json, CreateConferenceWebhook.class);
+```
+
 

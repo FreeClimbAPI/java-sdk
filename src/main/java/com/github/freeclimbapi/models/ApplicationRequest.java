@@ -78,6 +78,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "Customer Support Line",
             value =
                     "A human readable description of the application, with maximum length 64"
                             + " characters.")
@@ -103,6 +104,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/voice",
             value =
                     "The URL that FreeClimb will request when an inbound call arrives on a phone"
                             + " number assigned to this application. Used only for inbound calls.")
@@ -128,6 +130,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/voiceFallback",
             value =
                     "The URL that FreeClimb will request if it times out waiting for a response"
                         + " from the voiceUrl. Used for inbound calls only. Note: A PerCL response"
@@ -155,6 +158,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/callConnect",
             value =
                     "The URL that FreeClimb will request when an outbound call request is complete."
                         + " Used for outbound calls only.  Note: A PerCL response is expected if"
@@ -182,6 +186,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/status",
             value =
                     "The URL that FreeClimb will request to pass call status (such as call ended)"
                             + " to the application.  Note: This is a notification only; any PerCL"
@@ -208,6 +213,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/sms",
             value =
                     "The URL that FreeClimb will request when a phone number assigned to this"
                             + " application receives an incoming SMS message. Used for inbound SMS"
@@ -234,6 +240,7 @@ public class ApplicationRequest {
      */
     @javax.annotation.Nullable
     @ApiModelProperty(
+            example = "https://www.myapp.com/smsFallback",
             value =
                     "The URL that FreeClimb will request if it times out waiting for a response"
                         + " from the smsUrl. Used for inbound SMS only.  Note: Any PerCL returned"

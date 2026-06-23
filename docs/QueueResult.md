@@ -21,4 +21,16 @@ Name | Type | Description | Notes
 **subresourceUris** | **Object** | List of subresources for this Queue (which includes Queue members). |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.QueueResult;
+
+String json = "{\"uri\":\"string\",\"dateCreated\":\"string\",\"dateUpdated\":\"string\",\"revision\":0,\"accountId\":\"string\",\"queueId\":\"string\",\"alias\":\"string\",\"maxSize\":0,\"currentSize\":0,\"averageQueueRemovalTime\":0,\"averageWaitTime\":0}";
+
+// create an instance of QueueResult from a JSON string
+QueueResult queueResult = new JSON().getGson().fromJson(json, QueueResult.class);
+```
+
 

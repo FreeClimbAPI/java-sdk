@@ -44,7 +44,10 @@ public class CompletionRequest {
      * @return query
      */
     @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "Question to ask the Knowledge Base")
+    @ApiModelProperty(
+            example = "What are your business hours?",
+            required = true,
+            value = "Question to ask the Knowledge Base")
     public String getQuery() {
         return query;
     }

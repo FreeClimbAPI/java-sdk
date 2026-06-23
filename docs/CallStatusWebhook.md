@@ -20,4 +20,16 @@ Name | Type | Description | Notes
 **queueId** | **String** | This is only populated if the request pertains to a Queue. Otherwise, it is set to null. |  [optional]
 
 
+## Example
+
+```java
+import com.github.freeclimbapi.JSON;
+import com.github.freeclimbapi.models.CallStatusWebhook;
+
+String json = "{\"requestType\":\"callStatus\",\"callId\":\"string\",\"accountId\":\"string\",\"from\":\"string\",\"to\":\"string\",\"callStatus\":\"queued\",\"callEndedReason\":\"busy\",\"direction\":\"inbound\",\"conferenceId\":\"string\",\"queueId\":\"string\"}";
+
+// create an instance of CallStatusWebhook from a JSON string
+CallStatusWebhook callStatusWebhook = new JSON().getGson().fromJson(json, CallStatusWebhook.class);
+```
+
 
